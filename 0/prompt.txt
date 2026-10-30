@@ -1,0 +1,8 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.3, config and key check: step 1.2 passed. Now build `paperghosts/config.py` and `make keys`, item 2 of your order.
+- Do a shape check, plus one cheap authenticated call for each service in `BUILD-PLAN.md` section 3. The unused keys get present or empty only.
+- Print the name, OK, FAIL or EMPTY, and a reason. Never a value.
+- Add a test that fails if any value, or any 6-character slice of one, reaches stdout, stderr or an exception message.
+- Also un-ignore `data/counts/` (small per-year JSON), so Phase 2A can diff reproduced counts in git, and extend the gitignore test to cover it.
+Include the `make keys` output in your reply, then commit.
+</cross-session-message>

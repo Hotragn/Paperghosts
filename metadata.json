@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M653V1AE6C72NB5WNA66XGJ3",
+  "strategy": "manual-commit",
+  "branch": "phase-1-scaffold",
+  "checkpoints_count": 1,
+  "files_touched": [
+    ".gitignore",
+    "Docs/ARCHITECTURE.md",
+    "README.md",
+    "paperghosts/config.py",
+    "pyproject.toml",
+    "scripts/check_keys.py",
+    "tests/test_check_keys.py",
+    "tests/test_config.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 46,
+    "cache_creation_tokens": 117849,
+    "cache_read_tokens": 5859588,
+    "output_tokens": 99357,
+    "api_call_count": 21
+  }
+}
