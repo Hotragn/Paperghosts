@@ -3,10 +3,10 @@
   "source": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a/faro_1964.tar.gz",
   "bytes_read": 1243230,
   "dataset_revision": "77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a",
-  "lexicon_version": "v1",
-  "code_version": "404315384762",
-  "started_at": "2026-10-30T06:41:25+00:00",
-  "finished_at": "2026-10-30T06:41:25+00:00",
+  "lexicon_version": "v2",
+  "code_version": "2d6ff0faaf81",
+  "started_at": "2026-10-30T16:49:36+00:00",
+  "finished_at": "2026-10-30T16:49:37+00:00",
   "seconds": 0.9,
   "attempt": 1,
   "articles": 2678,
@@ -19,7 +19,7 @@
   "output_sha256": {
     "candidates": "cc4d22d1d55af9fa45e1d901ae097dab2ce00030e12f3e8bbdd9cce9c06ac109",
     "samples": "50ef1b30a70db3cff6cb17cb42898d5d039bd7797733e129d17deb7edb3ae715",
-    "counts": "4d8025dc0883076fd247dd5ef9450e1a39b3631e2be0ef95f994b589c38c5cbe"
+    "counts": "110e1b8c91602bd7c7e0cf752b14398c4ed8d333d91ed399642c3c402ffe37f5"
   },
-  "peak_rss_bytes": 94650368
+  "peak_rss_bytes": 96206848
 }

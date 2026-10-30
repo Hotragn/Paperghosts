@@ -1,23 +1,25 @@
 {
   "year": 1801,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 846,
   "articles": 9243,
-  "candidates": 22,
-  "near_miss": 261,
+  "candidates": 35,
+  "near_miss": 248,
   "by_term": {
     "ghost": 1,
     "goblin": 3,
     "haunt": 10,
     "phantom": 3,
-    "spectre": 6
+    "spectre": 6,
+    "spirit+medium": 13
   },
   "only_by_term": {
     "ghost": 1,
     "goblin": 2,
     "haunt": 9,
     "phantom": 3,
-    "spectre": 6
+    "spectre": 6,
+    "spirit+medium": 13
   },
   "by_state": {
     "Delaware": {
@@ -38,7 +40,7 @@
     "Virginia": {
       "pages": 578,
       "articles": 4940,
-      "candidates": 14
+      "candidates": 27
     },
     "unknown": {
       "pages": 1,

@@ -1,46 +1,52 @@
 {
   "year": 1809,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 2467,
   "articles": 38144,
-  "candidates": 120,
-  "near_miss": 1576,
+  "candidates": 148,
+  "near_miss": 1548,
   "by_term": {
     "apparition": 1,
     "ghost": 28,
     "goblin": 3,
     "haunt": 24,
     "phantom": 32,
-    "spectre": 40
+    "seance": 2,
+    "spectre": 40,
+    "spirit+medium": 26,
+    "spirit_phrase": 1
   },
   "only_by_term": {
     "apparition": 1,
     "ghost": 25,
     "goblin": 2,
     "haunt": 19,
-    "phantom": 29,
-    "spectre": 38
+    "phantom": 28,
+    "seance": 2,
+    "spectre": 38,
+    "spirit+medium": 25,
+    "spirit_phrase": 1
   },
   "by_state": {
     "Delaware": {
       "pages": 100,
       "articles": 1300,
-      "candidates": 18
+      "candidates": 21
     },
     "Maine": {
       "pages": 199,
       "articles": 4732,
-      "candidates": 11
+      "candidates": 13
     },
     "Rhode Island": {
       "pages": 146,
       "articles": 2228,
-      "candidates": 13
+      "candidates": 15
     },
     "Virginia": {
       "pages": 2014,
       "articles": 29695,
-      "candidates": 78
+      "candidates": 99
     },
     "unknown": {
       "pages": 8,

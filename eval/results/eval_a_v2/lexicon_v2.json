@@ -1,0 +1,457 @@
+{
+ "generated_at": "2026-10-30T17:15:46+00:00",
+ "checks": {
+  "years": 180,
+  "code_versions": [
+   "2d6ff0faaf81"
+  ],
+  "lexicon_versions": [
+   "v2"
+  ],
+  "v1_candidates": 1050459,
+  "v2_candidates": 1236122,
+  "v1_candidates_lost": 0,
+  "added": 185663,
+  "added_holding_an_old_term": 0
+ },
+ "rules": {
+  "new": [
+   "spiritualism",
+   "seance",
+   "spirit_phrase",
+   "ouija",
+   "spirit+medium"
+  ],
+  "candidates": {
+   "ghost": 452510,
+   "apparition": 33796,
+   "spectre": 76552,
+   "phantom": 96701,
+   "haunt": 401005,
+   "spook": 29378,
+   "wraith": 3642,
+   "poltergeist": 177,
+   "banshee": 4485,
+   "goblin": 45199,
+   "knocking": 2864,
+   "rapping": 9431,
+   "spiritualism": 74516,
+   "seance": 34206,
+   "spirit_phrase": 42186,
+   "ouija": 6389,
+   "spirit+medium": 79374
+  },
+  "only": {
+   "ghost": 374801,
+   "apparition": 21820,
+   "spectre": 55778,
+   "phantom": 79588,
+   "haunt": 348624,
+   "spook": 16016,
+   "wraith": 2163,
+   "poltergeist": 64,
+   "banshee": 3611,
+   "goblin": 38770,
+   "knocking": 2080,
+   "rapping": 6160,
+   "spiritualism": 54411,
+   "seance": 21656,
+   "spirit_phrase": 24537,
+   "ouija": 5124,
+   "spirit+medium": 57676
+  },
+  "added_holding": {
+   "spiritualism": 68183,
+   "seance": 30466,
+   "spirit_phrase": 35695,
+   "ouija": 5855,
+   "spirit+medium": 72856
+  },
+  "added_holding_only_it": {
+   "spiritualism": 54411,
+   "seance": 21656,
+   "spirit_phrase": 24537,
+   "ouija": 5124,
+   "spirit+medium": 57676
+  }
+ },
+ "added": {
+  "seed": "eval A v2 added",
+  "sample": 200,
+  "judged": 200,
+  "first_reading": {
+   "no": 169,
+   "report": 10,
+   "close": 21
+  },
+  "negatives_rejudged": 17,
+  "negatives_agreed": 17,
+  "read_in_full": {
+   "report -> report": 10,
+   "close -> report": 3,
+   "close -> no": 18,
+   "no -> no": 7,
+   "no -> report": 1
+  },
+  "count": 14,
+  "n": 200,
+  "share": 0.07,
+  "low": 0.04215178292291873,
+  "high": 0.11405578216683726,
+  "implied": 12996,
+  "implied_low": 7826,
+  "implied_high": 21176,
+  "by_rule": {
+   "spiritualism": {
+    "added": 68183,
+    "n": 82,
+    "no_report": false,
+    "count": 8,
+    "share": 0.0975609756097561,
+    "low": 0.05026808709378501,
+    "high": 0.18087392330676672,
+    "implied": 6652,
+    "implied_low": 3427,
+    "implied_high": 12333,
+    "marginal": {
+     "count": 4,
+     "n": 200,
+     "share": 0.02,
+     "low": 0.007804300176394188,
+     "high": 0.050287865505193874,
+     "implied": 3713,
+     "implied_low": 1449,
+     "implied_high": 9337
+    },
+    "only": {
+     "added": 54411,
+     "count": 4,
+     "n": 64,
+     "share": 0.0625,
+     "low": 0.024570803674792932,
+     "high": 0.14997696642496888,
+     "implied": 3401,
+     "implied_low": 1337,
+     "implied_high": 8160
+    }
+   },
+   "seance": {
+    "added": 30466,
+    "n": 38,
+    "no_report": false,
+    "count": 4,
+    "share": 0.10526315789473684,
+    "low": 0.041701897932665793,
+    "high": 0.24130831200194466,
+    "implied": 3207,
+    "implied_low": 1270,
+    "implied_high": 7352,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 21656,
+     "count": 2,
+     "n": 28,
+     "share": 0.07142857142857142,
+     "low": 0.019811647447770794,
+     "high": 0.2264573842591786,
+     "implied": 1547,
+     "implied_low": 429,
+     "implied_high": 4904
+    }
+   },
+   "spirit_phrase": {
+    "added": 35695,
+    "n": 37,
+    "no_report": false,
+    "count": 4,
+    "share": 0.10810810810810811,
+    "low": 0.04285120520506268,
+    "high": 0.24708846415167163,
+    "implied": 3859,
+    "implied_low": 1530,
+    "implied_high": 8820,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 24537,
+     "count": 2,
+     "n": 24,
+     "share": 0.08333333333333333,
+     "low": 0.023158327842973503,
+     "high": 0.258492152014506,
+     "implied": 2045,
+     "implied_low": 568,
+     "implied_high": 6343
+    }
+   },
+   "ouija": {
+    "added": 5855,
+    "n": 6,
+    "no_report": true,
+    "count": 0,
+    "share": 0.0,
+    "low": 0.0,
+    "high": 0.3903430336530645,
+    "implied": 0,
+    "implied_low": 0,
+    "implied_high": 2285,
+    "marginal": {
+     "count": 0,
+     "n": 200,
+     "share": 0.0,
+     "low": 0.0,
+     "high": 0.018846005918320894,
+     "implied": 0,
+     "implied_low": 0,
+     "implied_high": 3499
+    },
+    "only": {
+     "added": 5124,
+     "count": 0,
+     "n": 3,
+     "share": 0.0,
+     "low": 0.0,
+     "high": 0.5615060804490177,
+     "implied": 0,
+     "implied_low": 0,
+     "implied_high": 2877
+    }
+   },
+   "spirit+medium": {
+    "added": 72856,
+    "n": 67,
+    "no_report": false,
+    "count": 3,
+    "share": 0.04477611940298507,
+    "low": 0.015343696938151803,
+    "high": 0.12358032510539321,
+    "implied": 3262,
+    "implied_low": 1118,
+    "implied_high": 9004,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 57676,
+     "count": 2,
+     "n": 57,
+     "share": 0.03508771929824561,
+     "low": 0.009675461353255768,
+     "high": 0.11921003804189491,
+     "implied": 2024,
+     "implied_low": 558,
+     "implied_high": 6876
+    }
+   }
+  },
+  "reports": [
+   {
+    "article_id": "17_1857-07-29_pna_sn83025667_00280777808_1857072901_0724.json",
+    "year": 1857,
+    "date": "1857-07-29",
+    "paper": "The Middlebury register. [volume] (Middlebury, Vt.) 1850-1882",
+    "terms": [
+     "spirit+medium"
+    ],
+    "note": "1857, Middlebury: the paper's reporter attends a ten-cent s\u00e9ance at Union Hall where a spirit named Judd speaks through a trance medium from Massachusetts, and sums up the speech. Told mockingly, but as having happened."
+   },
+   {
+    "article_id": "1_1857-04-02_p1_sn83025802_00295862026_1857040201_0270.json",
+    "year": 1857,
+    "date": "1857-04-02",
+    "paper": "The Carolina Spartan. [volume] (Spartanburg, S.C.) 1852-1896",
+    "terms": [
+     "spirit_phrase"
+    ],
+    "note": "Borderline. 1857: the end of the Picaud ('real Monte Cristo') narrative, printed as true. The dying Allut tells his confessor he has 'seen and spoken with a soul separated from its body', though the priest doubts it. A claimed meeting with the dead, in a story whose truth is doubtful."
+   },
+   {
+    "article_id": "1_1859-08-11_p1_sn82014511_no_reel_1859081101_0001.json",
+    "year": 1859,
+    "date": "1859-08-11",
+    "paper": null,
+    "terms": [
+     "spirit+medium"
+    ],
+    "note": "1859, Plymouth, Mass.: at a spiritualist convention its president says Washington's and Lafayette's spirits went through a Masonic rehearsal in his presence, and that a medium's warning saved Louis Napoleon from an assassin. Claimed manifestations, told in a news report."
+   },
+   {
+    "article_id": "2_1869-10-23_p1_sn84026005_00280776403_1869102301_0548.json",
+    "year": 1869,
+    "date": "1869-10-23",
+    "paper": "The Petroleum Centre daily record. [volume] (Petroleum Center, Pa.) 1868-1873",
+    "terms": [
+     "spirit_phrase"
+    ],
+    "note": "1869, Muskingum County, Ohio: a spiritualist family say the spirit world has told them each will inherit $50,000 from a Jersey City estate, and one has gone to claim it. A claimed spirit message, like eval A's 1878 medium."
+   },
+   {
+    "article_id": "2_1873-09-01_pna_sn87062253_00271765186_1873090101_0288.json",
+    "year": 1873,
+    "date": "1873-09-01",
+    "paper": "Delaware Republican. (Wilmington, Del.) 1843-1874",
+    "terms": [
+     "spiritualism"
+    ],
+    "note": "1873, Wilmington: an account of a spiritualists' excursion whose circle materialized spirits: a Quaker lady's dead brother, a young woman dead of consumption with two wreaths, and Owen Lovejoy among others. A s\u00e9ance told as having happened."
+   },
+   {
+    "article_id": "4_1875-03-29_pna_sn84022473_00280777559_1875032901_0300.json",
+    "year": 1875,
+    "date": "1875-03-29",
+    "paper": "The Rutland daily globe. [volume] (Rutland, Vt.) 1873-1877",
+    "terms": [
+     "seance",
+     "spirit+medium",
+     "spiritualism"
+    ],
+    "note": "1875, Rutland: a letter describes the Thursday's s\u00e9ance at the Eddys' in Chittenden, where fourteen spirits materialized in a lighted room and some spoke. A s\u00e9ance told as having happened, with its phenomena."
+   },
+   {
+    "article_id": "1_1895-05-24_pna_sn97071028_00416152664_1895052401_0955.json",
+    "year": 1895,
+    "date": "1895-05-24",
+    "paper": "The Lebanon express. (Lebanon, Linn County, Or.) 1887-1898",
+    "terms": [
+     "spiritualism"
+    ],
+    "note": "1895, Waterloo, Oregon: a letter describes the Sunday's spiritualist meeting at Yew Park, where a man spoke under the control of Sitting Bull's spirit, more 'incarnations' followed, and a woman claimed to see children and old men in the audience. Trance control and spirit-seeing told as having happened, like 2-035."
+   },
+   {
+    "article_id": "4_1898-01-12_pna_sn82015104_00280768790_1898011201_0105.json",
+    "year": 1898,
+    "date": "1898-01-12",
+    "paper": "The record-union. [volume] (Sacramento, Calif.) 1891-1903",
+    "terms": [
+     "seance"
+    ],
+    "note": "1898, Sacramento: John Slater's test s\u00e9ance of the night before, with its 'manifestations': the reading of sealed ballots and answers to sitters. A medium's s\u00e9ance told as having happened, with its phenomena."
+   },
+   {
+    "article_id": "3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json",
+    "year": 1907,
+    "date": "1907-02-23",
+    "paper": "The daily silver state. [volume] (Winnemucca, Nev.) 1903-1907",
+    "terms": [
+     "spiritualism"
+    ],
+    "note": "Borderline. 1907, Winnemucca: an editorial on psychical research reports that members of the Society for Psychical Research claim the dead Professor Hodgson has communicated with them, as he promised. A claimed communication from a named dead person, told within a general essay."
+   },
+   {
+    "article_id": "15_1920-07-19_p1_sn85025007_00415664175_1920071901_0261.json",
+    "year": 1920,
+    "date": "1920-07-19",
+    "paper": "Alexandria gazette. [volume] (Alexandria, D.C.) 1834-1974",
+    "terms": [
+     "spiritualism"
+    ],
+    "note": "1920, Trenton: an officer of the First Spiritualist Church says Abraham Lincoln's spirit sent a message that Cox will be elected. A claimed spirit message, like 4-021."
+   },
+   {
+    "article_id": "12_1922-04-14_p2_sn85042243_00212478854_1922041401_0708.json",
+    "year": 1922,
+    "date": "1922-04-14",
+    "paper": "The Bismarck tribune.",
+    "terms": [
+     "seance",
+     "spiritualism"
+    ],
+    "note": "1922, New York: Conan Doyle, landing for his tour, says he has many times spoken with his dead son Kingsley at s\u00e9ances. A first-person claim of communication with a named dead person."
+   },
+   {
+    "article_id": "11_1923-10-20_p26_sn84026749_00222254048_1923102001_0082.json",
+    "year": 1923,
+    "date": "1923-10-20",
+    "paper": "The Washington times.",
+    "terms": [
+     "seance"
+    ],
+    "note": "1923: a review of the records of Victor Hugo's table-turning s\u00e9ances on Jersey, where the spirits of Aeschylus, Shakespeare and others are said to have dictated verses with Charles Hugo at the table. Particular s\u00e9ances, told as having happened."
+   },
+   {
+    "article_id": "4_1923-02-02_p21_sn83045462_00280657256_1923020201_0533.json",
+    "year": 1923,
+    "date": "1923-02-02",
+    "paper": "Evening star.",
+    "terms": [
+     "spirit_phrase",
+     "spiritualism"
+    ],
+    "note": "1923, Washington: Rev. G. Vale Owen lectures that he has been in direct communication with his dead father, mother and daughter Ruby, and gives instances of their return and of their messages. A first-person claim of communication with named dead, like the 1919 Curran report (decision 30)."
+   },
+   {
+    "article_id": "26_1924-08-30_pna_sn84024055_00332898048_1924083001_0370.json",
+    "year": 1924,
+    "date": "1924-08-30",
+    "paper": "The broad ax. [volume] (Salt Lake City, Utah) 1895-19??",
+    "terms": [
+     "spirit_phrase",
+     "spiritualism"
+    ],
+    "note": "1924, Chicago, in a Salt Lake City paper: the writer goes to a spiritualist meeting where, in the dark, a voice sounds and the chief woman passes on a message from the spirit land. A s\u00e9ance told mockingly, but as having happened."
+   }
+  ]
+ },
+ "recall_in_sample": {
+  "v1_screened": 38900,
+  "v2_candidates_among_them": 17,
+  "v1_reports": 4,
+  "caught": {
+   "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json": [
+    "ouija",
+    "spirit+medium"
+   ],
+   "3_1856-10-29_pna_sn85026466_0020219798A_1856102901_1069.json": [
+    "spirit_phrase",
+    "spiritualism"
+   ],
+   "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json": [
+    "spirit+medium",
+    "spirit_phrase",
+    "spiritualism"
+   ]
+  },
+  "missed": {
+   "count": 1,
+   "n": 38883,
+   "share": 2.571818018157035e-05,
+   "low": 4.539787958317767e-06,
+   "high": 0.0001456806917630284,
+   "implied": 9492,
+   "implied_low": 1676,
+   "implied_high": 53768
+  },
+  "recall": {
+   "point": 0.8398082829851149,
+   "at_least": {
+    "low": 0.32375801785938874,
+    "point": 0.48065295083550663,
+    "high": 0.639070691611119
+   }
+  }
+ }
+}

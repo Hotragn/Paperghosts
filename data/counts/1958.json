@@ -1,10 +1,10 @@
 {
   "year": 1958,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 45977,
   "articles": 593931,
-  "candidates": 1144,
-  "near_miss": 5830,
+  "candidates": 1183,
+  "near_miss": 5801,
   "by_term": {
     "apparition": 34,
     "banshee": 6,
@@ -12,23 +12,33 @@
     "goblin": 55,
     "haunt": 258,
     "knocking": 2,
+    "ouija": 8,
     "phantom": 117,
     "poltergeist": 7,
     "rapping": 4,
+    "seance": 2,
     "spectre": 63,
+    "spirit+medium": 16,
+    "spirit_phrase": 14,
+    "spiritualism": 6,
     "spook": 66
   },
   "only_by_term": {
     "apparition": 33,
     "banshee": 5,
-    "ghost": 542,
+    "ghost": 540,
     "goblin": 41,
     "haunt": 239,
     "knocking": 2,
+    "ouija": 7,
     "phantom": 112,
     "poltergeist": 4,
-    "rapping": 3,
+    "rapping": 2,
+    "seance": 1,
     "spectre": 60,
+    "spirit+medium": 14,
+    "spirit_phrase": 9,
+    "spiritualism": 6,
     "spook": 52
   },
   "by_state": {
@@ -40,7 +50,7 @@
     "Arizona": {
       "pages": 678,
       "articles": 4742,
-      "candidates": 1
+      "candidates": 3
     },
     "Arkansas": {
       "pages": 795,
@@ -50,12 +60,12 @@
     "Delaware": {
       "pages": 1042,
       "articles": 16028,
-      "candidates": 26
+      "candidates": 27
     },
     "District of Columbia": {
       "pages": 20827,
       "articles": 250974,
-      "candidates": 563
+      "candidates": 586
     },
     "Florida": {
       "pages": 3472,
@@ -85,7 +95,7 @@
     "Mississippi": {
       "pages": 761,
       "articles": 10715,
-      "candidates": 41
+      "candidates": 42
     },
     "Missouri": {
       "pages": 10,
@@ -95,7 +105,7 @@
     "Montana": {
       "pages": 1318,
       "articles": 18584,
-      "candidates": 18
+      "candidates": 20
     },
     "Nebraska": {
       "pages": 4,
@@ -105,17 +115,17 @@
     "North Carolina": {
       "pages": 1181,
       "articles": 17163,
-      "candidates": 32
+      "candidates": 34
     },
     "Ohio": {
       "pages": 3574,
       "articles": 57553,
-      "candidates": 108
+      "candidates": 111
     },
     "Pennsylvania": {
       "pages": 636,
       "articles": 13940,
-      "candidates": 14
+      "candidates": 15
     },
     "South Carolina": {
       "pages": 2,
@@ -135,7 +145,7 @@
     "unknown": {
       "pages": 5545,
       "articles": 55948,
-      "candidates": 105
+      "candidates": 109
     }
   }
 }

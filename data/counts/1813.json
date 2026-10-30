@@ -1,29 +1,35 @@
 {
   "year": 1813,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 2552,
   "articles": 43944,
-  "candidates": 76,
-  "near_miss": 1632,
+  "candidates": 95,
+  "near_miss": 1613,
   "by_term": {
     "ghost": 23,
     "haunt": 22,
     "phantom": 19,
     "rapping": 1,
-    "spectre": 12
+    "seance": 2,
+    "spectre": 12,
+    "spirit+medium": 16,
+    "spirit_phrase": 1
   },
   "only_by_term": {
     "ghost": 23,
     "haunt": 21,
     "phantom": 19,
     "rapping": 1,
-    "spectre": 11
+    "seance": 2,
+    "spectre": 11,
+    "spirit+medium": 16,
+    "spirit_phrase": 1
   },
   "by_state": {
     "Maine": {
       "pages": 185,
       "articles": 4362,
-      "candidates": 6
+      "candidates": 7
     },
     "Rhode Island": {
       "pages": 208,
@@ -33,7 +39,7 @@
     "Virginia": {
       "pages": 2055,
       "articles": 34865,
-      "candidates": 64
+      "candidates": 82
     },
     "West Virginia": {
       "pages": 97,

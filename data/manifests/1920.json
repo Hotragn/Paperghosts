@@ -3,23 +3,23 @@
   "source": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a/faro_1920.tar.gz",
   "bytes_read": 5845464570,
   "dataset_revision": "77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a",
-  "lexicon_version": "v1",
-  "code_version": "404315384762",
-  "started_at": "2026-10-30T06:19:25+00:00",
-  "finished_at": "2026-10-30T06:27:01+00:00",
-  "seconds": 455.8,
+  "lexicon_version": "v2",
+  "code_version": "2d6ff0faaf81",
+  "started_at": "2026-10-30T16:27:11+00:00",
+  "finished_at": "2026-10-30T16:35:25+00:00",
+  "seconds": 493.9,
   "attempt": 1,
   "articles": 7586075,
-  "candidates": 16884,
+  "candidates": 22609,
   "output_bytes": {
-    "candidates": 17305381,
-    "samples": 2954405,
-    "counts": 5366
+    "candidates": 21944695,
+    "samples": 2959520,
+    "counts": 5603
   },
   "output_sha256": {
-    "candidates": "fc5e29c8612a7fec19583f27290fa705926df505085ca07ccd5482a1a55f1b49",
-    "samples": "ee0cd4918d914a2e1b34b5843b172c32bd331c064306859461a8f350e5e80658",
-    "counts": "f184eaf6f53d1ed87185355bd80c6cef1812be829417992b7d8ddc16a0b3bd38"
+    "candidates": "2f671922112601e5fb9346748c198e43ac1c50218abb9ad7889ff5ca36139ce9",
+    "samples": "45f5f4eabdd4e69fb92ede10690006029b1931ee3d227a82bc926266116fe0d0",
+    "counts": "14767f6a73d7e69a41935cdcb9fcb3a72fcf634d052098d92ef2817ce567799b"
   },
-  "peak_rss_bytes": 505954304
+  "peak_rss_bytes": 528302080
 }

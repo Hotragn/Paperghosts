@@ -1,10 +1,10 @@
 {
   "year": 1903,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 303211,
   "articles": 7183303,
-  "candidates": 19017,
-  "near_miss": 113116,
+  "candidates": 21940,
+  "near_miss": 110284,
   "by_term": {
     "apparition": 635,
     "banshee": 81,
@@ -12,30 +12,40 @@
     "goblin": 865,
     "haunt": 7670,
     "knocking": 46,
+    "ouija": 31,
     "phantom": 1218,
     "rapping": 90,
+    "seance": 804,
     "spectre": 1190,
+    "spirit+medium": 800,
+    "spirit_phrase": 695,
+    "spiritualism": 1423,
     "spook": 434,
     "wraith": 48
   },
   "only_by_term": {
-    "apparition": 469,
+    "apparition": 454,
     "banshee": 55,
-    "ghost": 7309,
-    "goblin": 785,
-    "haunt": 6736,
+    "ghost": 7164,
+    "goblin": 783,
+    "haunt": 6700,
     "knocking": 40,
-    "phantom": 974,
-    "rapping": 74,
-    "spectre": 875,
-    "spook": 207,
+    "ouija": 17,
+    "phantom": 967,
+    "rapping": 55,
+    "seance": 549,
+    "spectre": 871,
+    "spirit+medium": 521,
+    "spirit_phrase": 428,
+    "spiritualism": 1016,
+    "spook": 190,
     "wraith": 35
   },
   "by_state": {
     "Alabama": {
       "pages": 4217,
       "articles": 130023,
-      "candidates": 305
+      "candidates": 339
     },
     "Alaska": {
       "pages": 1170,
@@ -45,177 +55,177 @@
     "Arizona": {
       "pages": 4668,
       "articles": 91839,
-      "candidates": 163
+      "candidates": 191
     },
     "Arkansas": {
       "pages": 2847,
       "articles": 54012,
-      "candidates": 132
+      "candidates": 146
     },
     "California": {
       "pages": 2471,
       "articles": 27452,
-      "candidates": 73
+      "candidates": 125
     },
     "Colorado": {
       "pages": 4818,
       "articles": 117672,
-      "candidates": 265
+      "candidates": 300
     },
     "Connecticut": {
       "pages": 4024,
       "articles": 97521,
-      "candidates": 362
+      "candidates": 392
     },
     "Delaware": {
       "pages": 1487,
       "articles": 44372,
-      "candidates": 108
+      "candidates": 122
     },
     "District of Columbia": {
       "pages": 12046,
       "articles": 323251,
-      "candidates": 1042
+      "candidates": 1273
     },
     "Florida": {
       "pages": 998,
       "articles": 22312,
-      "candidates": 53
+      "candidates": 58
     },
     "Georgia": {
       "pages": 8169,
       "articles": 243308,
-      "candidates": 599
+      "candidates": 642
     },
     "Hawaii": {
       "pages": 10332,
       "articles": 174237,
-      "candidates": 340
+      "candidates": 436
     },
     "Idaho": {
       "pages": 4919,
       "articles": 91142,
-      "candidates": 326
+      "candidates": 341
     },
     "Illinois": {
       "pages": 3500,
       "articles": 80521,
-      "candidates": 175
+      "candidates": 244
     },
     "Indiana": {
       "pages": 4843,
       "articles": 147641,
-      "candidates": 549
+      "candidates": 657
     },
     "Iowa": {
       "pages": 9649,
       "articles": 298307,
-      "candidates": 546
+      "candidates": 761
     },
     "Kansas": {
       "pages": 11624,
       "articles": 329446,
-      "candidates": 898
+      "candidates": 1049
     },
     "Kentucky": {
       "pages": 3044,
       "articles": 65221,
-      "candidates": 111
+      "candidates": 119
     },
     "Louisiana": {
       "pages": 3227,
       "articles": 72707,
-      "candidates": 208
+      "candidates": 226
     },
     "Maine": {
       "pages": 4208,
       "articles": 141943,
-      "candidates": 303
+      "candidates": 357
     },
     "Maryland": {
       "pages": 5295,
       "articles": 122327,
-      "candidates": 373
+      "candidates": 398
     },
     "Michigan": {
       "pages": 2675,
       "articles": 58156,
-      "candidates": 154
+      "candidates": 182
     },
     "Minnesota": {
       "pages": 19545,
       "articles": 451390,
-      "candidates": 1499
+      "candidates": 1816
     },
     "Mississippi": {
       "pages": 5229,
       "articles": 124181,
-      "candidates": 267
+      "candidates": 292
     },
     "Missouri": {
       "pages": 8702,
       "articles": 216787,
-      "candidates": 520
+      "candidates": 621
     },
     "Montana": {
       "pages": 3079,
       "articles": 67104,
-      "candidates": 190
+      "candidates": 206
     },
     "Nebraska": {
       "pages": 3330,
       "articles": 80005,
-      "candidates": 212
+      "candidates": 243
     },
     "Nevada": {
       "pages": 4793,
       "articles": 77878,
-      "candidates": 177
+      "candidates": 195
     },
     "New Jersey": {
       "pages": 2514,
       "articles": 67856,
-      "candidates": 194
+      "candidates": 205
     },
     "New Mexico": {
       "pages": 4878,
       "articles": 134413,
-      "candidates": 205
+      "candidates": 219
     },
     "New York": {
       "pages": 8513,
       "articles": 213399,
-      "candidates": 873
+      "candidates": 976
     },
     "North Carolina": {
       "pages": 6327,
       "articles": 130386,
-      "candidates": 323
+      "candidates": 351
     },
     "North Dakota": {
       "pages": 4816,
       "articles": 103613,
-      "candidates": 265
+      "candidates": 285
     },
     "Ohio": {
       "pages": 2157,
       "articles": 58771,
-      "candidates": 117
+      "candidates": 134
     },
     "Oklahoma": {
       "pages": 6711,
       "articles": 159373,
-      "candidates": 201
+      "candidates": 221
     },
     "Oregon": {
       "pages": 6487,
       "articles": 129845,
-      "candidates": 280
+      "candidates": 310
     },
     "Pennsylvania": {
       "pages": 3700,
       "articles": 88767,
-      "candidates": 306
+      "candidates": 341
     },
     "Puerto Rico": {
       "pages": 4628,
@@ -225,62 +235,62 @@
     "Rhode Island": {
       "pages": 3502,
       "articles": 96366,
-      "candidates": 247
+      "candidates": 289
     },
     "South Carolina": {
       "pages": 5953,
       "articles": 129537,
-      "candidates": 492
+      "candidates": 551
     },
     "South Dakota": {
       "pages": 4537,
       "articles": 102702,
-      "candidates": 367
+      "candidates": 407
     },
     "Tennessee": {
       "pages": 1798,
       "articles": 38549,
-      "candidates": 142
+      "candidates": 146
     },
     "Texas": {
       "pages": 5291,
       "articles": 93053,
-      "candidates": 128
+      "candidates": 152
     },
     "Utah": {
       "pages": 6790,
       "articles": 182275,
-      "candidates": 648
+      "candidates": 753
     },
     "Vermont": {
       "pages": 6919,
       "articles": 152861,
-      "candidates": 378
+      "candidates": 464
     },
     "Virginia": {
       "pages": 8836,
       "articles": 263836,
-      "candidates": 681
+      "candidates": 738
     },
     "Washington": {
       "pages": 8639,
       "articles": 190399,
-      "candidates": 357
+      "candidates": 404
     },
     "West Virginia": {
       "pages": 7119,
       "articles": 144652,
-      "candidates": 284
+      "candidates": 307
     },
     "Wisconsin": {
       "pages": 7789,
       "articles": 187846,
-      "candidates": 696
+      "candidates": 771
     },
     "unknown": {
       "pages": 30398,
       "articles": 676724,
-      "candidates": 1844
+      "candidates": 2146
     }
   }
 }

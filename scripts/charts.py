@@ -327,7 +327,7 @@ def draw_all(report, out):
             compact,
         )
     )
-    composition = report["composition"].get("categories")
+    composition = report.get("composition", {}).get("categories")
     if composition:
         rows = sorted(composition.items(), key=lambda kv: -kv[1]["share"])
         made.append(
@@ -347,9 +347,9 @@ def draw_all(report, out):
                 intervals=[(c["low"] * 100, c["high"] * 100) for _, c in rows],
             )
         )
-    screen = report["recall"].get("screen", {})
+    screen = report.get("recall", {}).get("screen", {})
     # the screen's bounds, once judged, supersede the 300-article ones (decision 30)
-    recall = report["recall"] | {
+    recall = report.get("recall", {}) | {
         p: screen[p] for p in ("near_miss", "random") if p in screen
     }
     if composition and all("share" in recall[p] for p in ("near_miss", "random")):

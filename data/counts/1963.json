@@ -1,33 +1,43 @@
 {
   "year": 1963,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 51600,
   "articles": 553445,
-  "candidates": 1227,
-  "near_miss": 5955,
+  "candidates": 1285,
+  "near_miss": 5900,
   "by_term": {
     "apparition": 5,
     "banshee": 7,
     "ghost": 581,
     "goblin": 64,
     "haunt": 409,
+    "ouija": 2,
     "phantom": 92,
     "poltergeist": 4,
     "rapping": 4,
+    "seance": 9,
     "spectre": 59,
+    "spirit+medium": 18,
+    "spirit_phrase": 9,
+    "spiritualism": 26,
     "spook": 98,
     "wraith": 1
   },
   "only_by_term": {
     "apparition": 5,
     "banshee": 7,
-    "ghost": 516,
+    "ghost": 513,
     "goblin": 57,
     "haunt": 351,
+    "ouija": 2,
     "phantom": 87,
     "poltergeist": 3,
     "rapping": 3,
+    "seance": 7,
     "spectre": 46,
+    "spirit+medium": 17,
+    "spirit_phrase": 7,
+    "spiritualism": 23,
     "spook": 69,
     "wraith": 1
   },
@@ -35,12 +45,12 @@
     "Alaska": {
       "pages": 1870,
       "articles": 17844,
-      "candidates": 25
+      "candidates": 26
     },
     "Arizona": {
       "pages": 1163,
       "articles": 6186,
-      "candidates": 9
+      "candidates": 11
     },
     "Delaware": {
       "pages": 943,
@@ -50,7 +60,7 @@
     "District of Columbia": {
       "pages": 26637,
       "articles": 269925,
-      "candidates": 660
+      "candidates": 701
     },
     "Florida": {
       "pages": 155,
@@ -80,7 +90,7 @@
     "Mississippi": {
       "pages": 2033,
       "articles": 33754,
-      "candidates": 49
+      "candidates": 52
     },
     "Missouri": {
       "pages": 195,
@@ -100,7 +110,7 @@
     "Ohio": {
       "pages": 508,
       "articles": 5620,
-      "candidates": 2
+      "candidates": 3
     },
     "Virginia": {
       "pages": 1614,
@@ -115,7 +125,7 @@
     "unknown": {
       "pages": 11873,
       "articles": 119051,
-      "candidates": 255
+      "candidates": 265
     }
   }
 }

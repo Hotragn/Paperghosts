@@ -266,4 +266,90 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Together they match 17 articles: about 161,000 more candidates (+15%), and they catch 3 of the 4 reports. About 18% of what they add are reports (6–41%), against 3.5% for v1.
   - Left out: materialize, which matched 7 articles and no report. No term catches the 1918 scout's "spirits".
   - Cost: a full re-read takes 118.6 min and 340.4 GB of downloads (decision 25). The reader's job would grow to about 1.21 million candidates.
+  - The EM accepted it as step 2A.8. Decision 31 has the re-read and what it measured.
 - `eval_a.json` now records `/usr/share/dict/words`'s sha256 (`be41ad97963bf8da…`) and its 235,976 words, so the OCR-quality figure can be checked on another machine.
+
+**31. Lexicon v2 is run. Its spiritualist rules add 185,663 candidates (+17.7%), and 7.0% of them are ghost reports. Its recall is about 84%, but that figure is in-sample.**
+- The rules (`lexicon.py`, version v2), each recorded by name in a candidate's `terms`, so any one of them can be dropped by filtering, without a re-read:
+  - `spiritualism`: spiritualism, spiritualist(s), spiritualistic
+  - `seance`: séance(s)
+  - `spirit_phrase`: spirit world, land, control, communication, manifestation, message, photograph, circle or medium; control of or by spirits; disembodied; spirits of the dead or departed
+  - `ouija`: ouija, planchette
+  - `spirit+medium`: spirit(s) and medium(s) anywhere in one article
+- v1's terms come first in the pattern, so where a v1 term and a new one match at the same place, v1's term is the one recorded.
+- v1 is kept. Its candidates and samples were moved, not deleted, to `data/archive/lexicon-v1/`, with copies of its counts and manifests.
+  - `make eval-v1` runs eval A on that archive and reproduces `eval_a.json` and its charts byte for byte, apart from `generated_at`. So eval A's composition, recall and screen stay the record of v1, and no hand judgment was redone.
+  - `make eval` now writes v2's EDA to `eval_a_v2.json` and six charts in `eval_a_v2/`. It then writes the comparison with v1 to `eval_a_v2/lexicon_v2.json`, and the judged sample to `added.json` (`scripts/lexicon_v2.py`).
+- The re-read covered all 180 years at four processes, 14:49–16:50Z (120.6 min) for 340.4 GB:
+  - every year finished at the first attempt
+  - peak memory was 551 MB (1919)
+- Checks:
+  - All 180 manifests share one code version, `2d6ff0faaf81`, and lexicon v2.
+  - v1 ⊆ v2: all 1,050,459 v1 candidates are still candidates, and none of the 185,663 added holds a v1 term.
+  - 1850 reproduces. With its candidates file moved aside, a rerun wrote all three outputs byte-identical, with the sha256 its manifest records.
+  - Disk: the v1 archive and the v2 outputs take 4.1 GB, within the 10 GB budget, and 36 GiB are free.
+- v2's EDA:
+  - 1,236,122 candidates (3,338 per million, against v1's 2,837) and 6,695,792 near-miss articles.
+  - 91,301 reprint clusters hold 30.3% of candidates, which leaves 952,591 distinct stories.
+  - 32.0% of candidates have no batch path, and 93.0% of those are on reels whose batch is known. That leaves 27,817 candidates on 1,258 reels for loc.gov, against v1's 25,595 (decision 29, scratch `reels.py`).
+- The 200: 200 added candidates drawn at random (seed "eval A v2 added"), judged with decision 30's protocol:
+  - **Reading:** four reading agents read 50 each, split by seed. Their first reading was 169 no, 21 close calls and 10 reports.
+  - **Blind check:** I re-judged a seeded 10% of their negatives (17, seed "eval A v2 added check") from the same text, without their notes, and agreed on all 17 (81.6–100%).
+  - **Full reading:** I read every close call and report in full.
+  - **Beyond decision 30's protocol:** I also read in full the 8 negatives outside the blind check that the agents' notes called near. The ninth was in the blind check.
+  - **Outcome:** all 10 of the agents' reports stand. 3 of the close calls are reports and 18 are not, and 1 of the near negatives is a report. In `added.json`, `rejudged` is "sample" for the blind check and "full" for an article I read in full.
+- **14 of the 200 are reports: 7.0% (4.2–11.4%), so v2 gains about 13,000 (7,830–21,200).**
+  - That is twice v1's 3.5% (decision 27).
+  - 2 of the 14 are borderline. Without them, 12 (6.0%, 3.5–10.2%) give about 11,100 (6,430–18,900).
+
+  | Rule | Candidates | Added | Added holding only it | In the 200 | Reports | Rate (95%) | Reports among the added |
+  |---|---|---|---|---|---|---|---|
+  | spiritualism | 74,516 | 68,183 | 54,411 | 82 | 8 | 9.8% (5.0–18.1%) | ~6,650 (3,430–12,330) |
+  | seance | 34,206 | 30,466 | 21,656 | 38 | 4 | 10.5% (4.2–24.1%) | ~3,210 (1,270–7,350) |
+  | spirit_phrase | 42,186 | 35,695 | 24,537 | 37 | 4 | 10.8% (4.3–24.7%) | ~3,860 (1,530–8,820) |
+  | spirit+medium | 79,374 | 72,856 | 57,676 | 67 | 3 | 4.5% (1.5–12.4%) | ~3,260 (1,120–9,000) |
+  | ouija | 6,389 | 5,855 | 5,124 | 6 | 0 | 0% (0–39.0%) | at most 2,290 |
+
+  - A candidate can hold several rules, so the rows overlap. "Added holding only it" is what dropping that rule alone takes away.
+  - **ouija is flagged:** no report in its 6. Dropping it is the EM's call. It would take 5,124 candidates away by filtering.
+- **Marginal yield**, which the EM asked for to decide which rules to keep. It counts the reports in the 200 that one rule catches and no other term catches, so it is what dropping that rule alone would lose. No rule was tuned or narrowed on the 200.
+
+  | Rule | Reports only it catches, of the 200 | Reports among the added that only it catches | Sampled articles holding only it | Their rate (95%), of the added holding only it |
+  |---|---|---|---|---|
+  | spiritualism | 4: 2.0% (0.78–5.0%) | ~3,710 (1,450–9,340) | 64 | 6.3% (2.5–15.0%) of 54,411 |
+  | seance | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 28 | 7.1% (2.0–22.6%) of 21,656 |
+  | spirit_phrase | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 24 | 8.3% (2.3–25.9%) of 24,537 |
+  | spirit+medium | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 57 | 3.5% (0.97–11.9%) of 57,676 |
+  | ouija | 0: 0% (0–1.9%) | at most 3,500 | 3 | 0% (0–56.2%) of 5,124 |
+
+  - 10 of the 14 reports hold a single rule. Each of the other 4 holds two or more: 1875's Eddys, 1922's Conan Doyle, 1923's Vale Owen and 1924's Chicago meeting.
+  - Two of the single-rule reports are the borderline ones: Allut (spirit_phrase) and Hodgson (spiritualism). Without them, spirit_phrase alone catches 1 and spiritualism alone catches 3.
+  - In 2A.7's screen, spirit+medium caught no report that another rule missed. Here it alone catches two: 1857's Middlebury trance medium and 1859's Plymouth convention.
+  - spirit+medium is also the largest rule, with the lowest precision. Its candidates holding no other rule are reports at 3.5%, the same rate as v1's candidates.
+  - `lexicon_v2.json` gives each rule's `marginal` (over the 200) and `only` (over its sampled articles holding only it).
+- The 14 reports:
+  - 1857, Middlebury: a spirit called Judd speaks through a trance medium at Union Hall.
+  - Borderline, 1857: in the Picaud ("real Monte Cristo") narrative, printed as true, the dying Allut says he has seen and spoken with a soul separated from its body.
+  - 1859, Plymouth: a spiritualist convention's president says the spirits of Washington and Lafayette held a Masonic rehearsal in his presence.
+  - 1869, Muskingum County: a family say the spirit world told them they will inherit $50,000 each.
+  - 1873, Wilmington: a spiritualists' excursion whose circle materialized the dead.
+  - 1875, Rutland: fourteen spirits materialize at the Eddys'.
+  - 1895, Waterloo, Oregon: a speaker at a meeting is controlled by Sitting Bull's spirit.
+  - 1898, Sacramento: John Slater's test séance.
+  - Borderline, 1907: an editorial reports the claim that the dead Professor Hodgson has communicated, as he promised.
+  - 1920, Trenton: Lincoln's spirit predicts that Cox will be elected.
+  - 1922: Conan Doyle has spoken with his dead son at séances.
+  - 1923: a review of the records of Victor Hugo's table-turning séances.
+  - 1923, Washington: Rev. G. Vale Owen lectures on his messages from his dead parents and daughter.
+  - 1924, Chicago: a voice in a darkened spiritualist meeting.
+- Interpretation calls, for the EM to overrule:
+  - A first-person claim of communication with a named dead person counts, in a lecture or an interview too, like decision 30's 1919 Curran report. This covers Vale Owen and Conan Doyle.
+  - Jokes told as news don't count: a "shade" questioned about a lawsuit, automatic writing that names the Devil. Neither do hypnotic clairvoyance or a trance prophecy with no spirit.
+  - The two borderline kinds go to `POLICY.md`: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay.
+- Recall, in-sample. v1's screen (decision 30) was read again with v2:
+  - v2 makes 17 of its 38,900 articles candidates. They include 3 of its 4 reports, from 1856, 1898 and 1919. The 1918 scout's "spirits" is still missed.
+  - **Missed:** 1 in 38,883, so 0.0026% (0.00045–0.015%), or about 9,500 (1,680–53,800) of 369,077,791 non-candidates.
+  - **Recall:** the reports in v1's candidates (about 36,800) and those v2 adds (about 13,000), over those plus the missed, give **84%**. With the most misses the interval allows, it is at least 48%, and across the found reports' interval that floor runs from 32% to 64%.
+  - Without the 2 borderline reports among the 200, recall is 83%, and at least 47%.
+  - **Caveat:** v2's rules were chosen from this screen's misses, so it catches them by construction, and the 84% is optimistic. 2C's eval B gives the independent figure with the reader's screen of the random reservoirs. Decision 30's caveat also stands: the screen sees only reports that hold a flag word or a near-miss term.
+- Cost: no money, only machine time and 340.4 GB of downloads. The reader's job grows from 1,050,459 candidates to 1,236,122 (+17.7%). The Tinker credit check weighs that before the full pass.
