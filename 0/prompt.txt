@@ -1,0 +1,9 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+One more change before the full run, so the year skip works as a proper cache (the owner suggested this). I reviewed 20c668e and b3a4fe8, and they're good.
+
+1. **Pin the input.** Build the file URLs and the listing from dataset revision `77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a` (last modified 2025-03-26) instead of `main`, and record the revision in each manifest. The revision, lexicon version and code version then form a complete cache key, and the input can't change under a cached year.
+2. **Check by content.** Record each output's sha256 in the manifest, and skip only when the hashes match. A size check misses a damaged file. The 1850 reproduction check can compare the hashes as well.
+3. **Don't cache the tarballs locally.** 340 GB won't fit in 26 GB free, and a full re-read costs about 75 minutes and nothing else.
+
+Add these to the same change, with a test for the hash mismatch, then continue with 2A.4 as sent.
+</cross-session-message>
