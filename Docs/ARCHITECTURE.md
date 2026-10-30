@@ -79,18 +79,19 @@ Temporal runs only on the owner's machine, through the CLI dev server. The live 
 ## 3. Data flow, step by step
 
 ### 3.1 Ingest (`IngestArchiveWorkflow`)
-- **Input:** a list of years, all 180 by default.
+- **Input:** a list of years, all 180 by default, read from the dataset's 2025-03-26 commit (`77e27fa6`), not `main`.
 - **Output per year, under `data/`:**
   - `candidates/{year}.jsonl.zst`: articles that hit the lexicon, with the matched terms, page metadata and scan location
   - `counts/{year}.json`: pages, articles and candidates, broken down by state and by term
-  - `samples/{year}.jsonl.zst`: a reservoir sample of non-candidates, plus a near-miss pool (articles with words like "knocking", "strange noises" or "spirits" but no ghost term). Both feed the recall measurement.
-  - `manifests/{year}.json`: source URL, bytes read, lexicon version, code version, start and finish times
+  - `samples/{year}.jsonl.zst`: seeded reservoir samples of 2,000 non-candidates and 2,000 articles from the near-miss pool (articles with words like "knocking", "strange noises" or "spirits" but no ghost term). Both feed the recall measurement.
+  - `manifests/{year}.json`: source URL, dataset revision, bytes read, lexicon and code versions, start and finish times, and each output's size and sha256
 - **One activity per year file:** stream, gunzip, and read tar members one at a time. The tarball never touches the disk.
   - Heartbeats carry progress (members done, bytes read).
   - Retry policy: exponential backoff with a bounded number of attempts.
 - **Idempotent:**
-  - Outputs are written to a temporary file and renamed when complete.
-  - A year whose manifest matches the current lexicon and code versions is skipped.
+  - Outputs are written to a partial file named for its process, and renamed when complete.
+  - A year is skipped when its manifest matches the cache key (dataset revision, lexicon version, code version) and every output on disk has the sha256 the manifest records.
+  - An attempt stops at its next heartbeat, before it writes anything, once it is cancelled or its worker is gone.
   - A killed worker re-runs only unfinished years. The year in flight restarts from its beginning, because a gzip stream can't seek. The kill-test write-up says so.
 - **Concurrency:** bounded, starting from what Phase 1 measures for download speed and parse speed on this machine (10 cores).
 - **Disk:** about 35 GB is free, so all ingest outputs together must stay under 10 GB, measured and reported.
@@ -164,7 +165,7 @@ Pydantic models in the Python package are the single source of truth. Atlas JSON
 **`reports`:** one document per story.
 - `_id`, plus `primary_article_id`
 - `printings[]`: article ID, LCCN, paper title, publication place, state, date, scan location, `bbox_list`, crop URLs
-- `headline`, `text` (the OCR of the primary printing), `date` (earliest printing), `year`, `month_day`
+- `headline` and `text` (the OCR of the primary printing, untouched), `display_headline` (the headline without the masthead lines that lead it), `date` (earliest printing), `year`, `month_day`
 - `kind` (always `report` in this collection)
 - `fields`: each is `{value, quote, verified, score}`:
   - `place`

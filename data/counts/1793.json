@@ -1,0 +1,17 @@
+{
+  "year": 1793,
+  "lexicon_version": "v1",
+  "pages": 8,
+  "articles": 56,
+  "candidates": 0,
+  "near_miss": 1,
+  "by_term": {},
+  "only_by_term": {},
+  "by_state": {
+    "West Virginia": {
+      "pages": 8,
+      "articles": 56,
+      "candidates": 0
+    }
+  }
+}

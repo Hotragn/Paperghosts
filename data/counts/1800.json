@@ -1,0 +1,41 @@
+{
+  "year": 1800,
+  "lexicon_version": "v1",
+  "pages": 348,
+  "articles": 4370,
+  "candidates": 9,
+  "near_miss": 79,
+  "by_term": {
+    "apparition": 2,
+    "haunt": 2,
+    "phantom": 5,
+    "wraith": 1
+  },
+  "only_by_term": {
+    "apparition": 1,
+    "haunt": 2,
+    "phantom": 5
+  },
+  "by_state": {
+    "Delaware": {
+      "pages": 8,
+      "articles": 82,
+      "candidates": 0
+    },
+    "Maine": {
+      "pages": 201,
+      "articles": 2834,
+      "candidates": 8
+    },
+    "Virginia": {
+      "pages": 136,
+      "articles": 1409,
+      "candidates": 1
+    },
+    "unknown": {
+      "pages": 3,
+      "articles": 45,
+      "candidates": 0
+    }
+  }
+}

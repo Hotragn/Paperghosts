@@ -1,0 +1,37 @@
+{
+  "year": 1799,
+  "lexicon_version": "v1",
+  "pages": 201,
+  "articles": 2700,
+  "candidates": 9,
+  "near_miss": 65,
+  "by_term": {
+    "goblin": 1,
+    "haunt": 3,
+    "phantom": 2,
+    "spectre": 3
+  },
+  "only_by_term": {
+    "goblin": 1,
+    "haunt": 3,
+    "phantom": 2,
+    "spectre": 3
+  },
+  "by_state": {
+    "Maine": {
+      "pages": 139,
+      "articles": 1852,
+      "candidates": 6
+    },
+    "Virginia": {
+      "pages": 32,
+      "articles": 502,
+      "candidates": 1
+    },
+    "unknown": {
+      "pages": 30,
+      "articles": 346,
+      "candidates": 2
+    }
+  }
+}

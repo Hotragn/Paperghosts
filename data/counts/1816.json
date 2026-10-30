@@ -1,0 +1,46 @@
+{
+  "year": 1816,
+  "lexicon_version": "v1",
+  "pages": 2514,
+  "articles": 52956,
+  "candidates": 73,
+  "near_miss": 1326,
+  "by_term": {
+    "apparition": 5,
+    "ghost": 29,
+    "goblin": 1,
+    "haunt": 18,
+    "phantom": 15,
+    "spectre": 11
+  },
+  "only_by_term": {
+    "apparition": 2,
+    "ghost": 24,
+    "goblin": 1,
+    "haunt": 16,
+    "phantom": 15,
+    "spectre": 9
+  },
+  "by_state": {
+    "Maine": {
+      "pages": 210,
+      "articles": 4506,
+      "candidates": 5
+    },
+    "Rhode Island": {
+      "pages": 200,
+      "articles": 3195,
+      "candidates": 3
+    },
+    "Virginia": {
+      "pages": 2097,
+      "articles": 45107,
+      "candidates": 65
+    },
+    "unknown": {
+      "pages": 7,
+      "articles": 148,
+      "candidates": 0
+    }
+  }
+}

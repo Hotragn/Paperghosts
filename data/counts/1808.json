@@ -1,0 +1,43 @@
+{
+  "year": 1808,
+  "lexicon_version": "v1",
+  "pages": 2543,
+  "articles": 36886,
+  "candidates": 73,
+  "near_miss": 1776,
+  "by_term": {
+    "apparition": 1,
+    "ghost": 25,
+    "haunt": 21,
+    "phantom": 23,
+    "spectre": 7
+  },
+  "only_by_term": {
+    "ghost": 23,
+    "haunt": 20,
+    "phantom": 21,
+    "spectre": 6
+  },
+  "by_state": {
+    "Maine": {
+      "pages": 207,
+      "articles": 4827,
+      "candidates": 11
+    },
+    "Virginia": {
+      "pages": 2037,
+      "articles": 29008,
+      "candidates": 59
+    },
+    "West Virginia": {
+      "pages": 298,
+      "articles": 3036,
+      "candidates": 3
+    },
+    "unknown": {
+      "pages": 1,
+      "articles": 15,
+      "candidates": 0
+    }
+  }
+}

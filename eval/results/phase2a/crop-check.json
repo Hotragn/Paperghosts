@@ -1,0 +1,1549 @@
+[
+ {
+  "year": 1770,
+  "article_id": "4_1770-12-24_pna_sn83021193_00517172169_1770122401_0055.json",
+  "paper": "The Massachusetts spy. [volume] (Boston [Mass.]) 1770-1772",
+  "date": "1770-12-24",
+  "service": "service:ndnp:mb:batch_mb_artemis_ver01:data:sn83021193:00517172169:1770122401:0055",
+  "batch": "mb_artemis_ver01",
+  "boxes": 2,
+  "display_headline": "SKETCH of MORAL and POLITICAL\nMAP of u r 0 Z.\nBy mr.. MosER, Envy fran the Ele6tor PaIanne to\nHanover.",
+  "first_lines": [
+   "TIME motley creation of Peter, called the Great, int",
+   "tators of all Europe, but not RufIians country NJ",
+   "taught to bear the produce of Southern climates to vaPd",
+   "life and to neglect its own vigorous offspring htOry, b",
+   "mathematics geography general balance OF trade IN Ct",
+   "human intrepdity, lavery, favage glare of wealth pr",
+   "w E D N, el",
+   "Private induRy public proAigacy fate abroad"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mb:batch_mb_artemis_ver01:data:sn83021193:00517172169:1770122401:0055/243,884,1653,358/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mb:batch_mb_artemis_ver01:data:sn83021193:00517172169:1770122401:0055/230,1274,1790,3732/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "5de6ff019d910d2000f7ce3a.jpg",
+   "7f386d5b42e58877c9473683.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "headline and body as the OCR has them; the body's box takes in the first letters of the next column"
+ },
+ {
+  "year": 1796,
+  "article_id": "15_1796-09-22_pna_sn84038410_01000424529_1796092201_0172.json",
+  "paper": "The Potowmac guardian, and Berkeley advertiser. [volume] (Shepherdstown, Va. [W. Va.]) 1790-1798",
+  "date": "1796-09-22",
+  "service": "service:ndnp:wvu:batch_wvu_zarley_ver02:data:sn84038410:01000424529:1796092201:0172",
+  "batch": "wvu_zarley_ver02",
+  "boxes": 4,
+  "display_headline": "e. r1ts - g. 70 IA\n& /: 3 \"a\nd AAS.xlsed e\nSEAT OF THE MUSE S.",
+  "first_lines": [
+   "ALL THE \" ONl \" s q LII 4 EN-",
+   ".---<G-s,~--",
+   "TT7HE Worlds Lottery, take it through,",
+   "4 The blanks are many, prizes few,",
+   "The ltririHE. when with hopes e'ate,",
+   "lie tries he loci: r married fate,",
+   "Expecting lcenes of future b!ls,",
+   "Thinking that lie has drawn in Mif:,"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_zarley_ver02:data:sn84038410:01000424529:1796092201:0172/473,200,704,236/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_zarley_ver02:data:sn84038410:01000424529:1796092201:0172/543,468,564,45/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_zarley_ver02:data:sn84038410:01000424529:1796092201:0172/593,599,473,38/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_zarley_ver02:data:sn84038410:01000424529:1796092201:0172/466,619,708,1991/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "7f528d9b66c44a83d04d298a.jpg",
+   "7c2190c1caed91eb75e48207.jpg",
+   "6e869d275a15959dd2e56196.jpg",
+   "279176523d820d0ffb485d8a.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "ornament, section head, title and poem in order, after the reissued-batch fallback (ver01 to ver02); the ornament's OCR is junk in the headline"
+ },
+ {
+  "year": 1799,
+  "article_id": "5_1799-04-01_p4_sn83045634_00332895059_1799040101_0197.json",
+  "paper": "The gazette.",
+  "date": "1799-04-01",
+  "service": "service:ndnp:me:batch_me_bangor_ver02:data:sn83045634:00332895059:1799040101:0197",
+  "batch": "me_bangor_ver02",
+  "boxes": 3,
+  "display_headline": "M.EeMany,\nThe Cattle Spectre.",
+  "first_lines": [
+   "For fale Pt Js\"lIs Book t1Roye-pTice as ctsl",
+   "TBs o7yiag Il TIE F-5e s tl celebrated Dramatic 70.",
+   "aaaaes qvritfsH !y he aufJor IF T5e A1oak:",
+   "OSMCND, in attempting to aiTaIinate his elder bro",
+   "ther Reginald, has murdered his filter in law Evelina",
+   "with whom he was in love. Reginald and bis infant",
+   "daughter Angela, are believed to have periihed alo",
+   "but Omonds eward, Kenric, has prevailed on his maf-"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_bangor_ver02:data:sn83045634:00332895059:1799040101:0197/627,5098,550,144/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_bangor_ver02:data:sn83045634:00332895059:1799040101:0197/478,5288,842,103/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_bangor_ver02:data:sn83045634:00332895059:1799040101:0197/302,5410,1187,1540/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "c93e61dde5d0242187970637.jpg",
+   "d679ae9cd76dcded3bb78c99.jpg",
+   "fc8a589b093f3396a39e8075.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1803,
+  "article_id": "3_1803-07-01_pna_sn84024011_00414216006_1803070101_0525.json",
+  "paper": "Alexandria advertiser and commercial intelligencer. [volume] (Alexandria [Va.]) 1800-1803",
+  "date": "1803-07-01",
+  "service": "service:ndnp:vi:batch_vi_flyingsquirrels_ver03:data:sn84024011:00414216006:1803070101:0525",
+  "batch": "vi_flyingsquirrels_ver03",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "- 4",
+   "dent, who in his executive capacity, and",
+   "particularly in his foreign relations, is the",
+   "great representative of the whole people",
+   "Of the United States, and of the particu-",
+   "Ter Ratcs, or members of the conledera-",
+   "ton. Ii thefe three branches, with ia",
+   "dietary, in the appointment OF which tie"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_flyingsquirrels_ver03:data:sn84024011:00414216006:1803070101:0525/1737,426,1447,6865/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "70b44ca3abaad1997898411c.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "starts mid-sentence where AmericanStories split the article, and the crop starts on the same line"
+ },
+ {
+  "year": 1806,
+  "article_id": "30_1806-04-12_pna_sn84024012_00414216043_1806041201_0414.json",
+  "paper": "Alexandria daily advertiser. [volume] (Alexandria [Va.]) 1803-1808",
+  "date": "1806-04-12",
+  "service": "service:ndnp:vi:batch_vi_flyingsquirrels_ver03:data:sn84024012:00414216043:1806041201:0414",
+  "batch": "vi_flyingsquirrels_ver03",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "further particulars apply to the subscriber on ii.",
+   "premises, or to- Dr.. Jo6n B,saaygb, Dunra.",
+   "William Bronaugh.",
+   "Stafford county, .sIA March. ass4x",
+   "NEW PLAYS,",
+   "Fer Ss!e BY RosrRr GRAY, BuEte'kr,",
+   ".King Street.",
+   "The Ocean Spectre, An entire new, grand Melo Drama"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_flyingsquirrels_ver03:data:sn84024012:00414216043:1806041201:0414/4808,3272,1347,3449/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "7272378d544705b29a9d2892.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "one box joins the end of one advertisement and the next, as the OCR does"
+ },
+ {
+  "year": 1810,
+  "article_id": "16_1810-04-27_pna_sn84024710_00414184236_1810042701_0141.json",
+  "paper": "Virginia Argus. [volume] (Richmond, Va.) 1796-1816",
+  "date": "1810-04-27",
+  "service": "service:ndnp:vi:batch_vi_otters_ver02:data:sn84024710:00414184236:1810042701:0141",
+  "batch": "vi_otters_ver02",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "publican and very niable man.",
+   "+ STANLEY GRIswoLB. Esq. late Sena-",
+   "tor OF tue Ualted 5 ates froal the state OF",
+   "Ohio, has been appointed by,tae same a",
+   "Judge Of the llIiHois territory.",
+   "For THE VIRGINIA ARGUS.",
+   "To the Hon. JOHN RANDOLPH.",
+   "SIR,"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_otters_ver02:data:sn84024710:00414184236:1810042701:0141/2172,1735,946,5557/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "63f7a1d98115aa9fb981cf47.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1813,
+  "article_id": "3_1813-12-09_pna_sn84024710_00414184261_1813120901_0393.json",
+  "paper": "Virginia Argus. [volume] (Richmond, Va.) 1796-1816",
+  "date": "1813-12-09",
+  "service": "service:ndnp:vi:batch_vi_naturals_ver01:data:sn84024710:00414184261:1813120901:0393",
+  "batch": "vi_naturals_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "which forms attribute of ma onal soyereientv s",
+   "submitted to the discretion of Congress without any Ii",
+   "mitaticD Whatever That no limitation necessary",
+   "Thought the proceedings of Congress the last three",
+   "years fully demonstrated.",
+   "He had doubt that at the time of giving this unli",
+   "mtee power To Csfgress, to declare &C. the fra",
+   "mers OF the conttosR had their attention drawn TO"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_naturals_ver01:data:sn84024710:00414184261:1813120901:0393/2653,1394,1229,6389/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "d7adc399e6dc4fb377d85cd0.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1817,
+  "article_id": "20_1817-07-29_pna_sn84024735_0041418392A_1817072901_0101.json",
+  "paper": "Richmond enquirer. [volume] (Richmond, Va.) 1815-1867",
+  "date": "1817-07-29",
+  "service": "service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:0041418392A:1817072901:0101",
+  "batch": "vi_mudhens_ver02",
+  "boxes": 2,
+  "display_headline": "lCemn,nication.l",
+  "first_lines": [
+   "Al the same place where century a",
+   "go, woods and trees obstructed your eye",
+   "sight. there stands nova fl ur;shing town!",
+   "Where the deer. swift as lightning, tried",
+   "to eva lie the Indians dart, there drives",
+   "now q carriage, with The splen5or ofthe",
+   "times, and instead Of the humble squaw,",
+   "YOU see proud beauty with all her"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:0041418392A:1817072901:0101/4366,2685,362,46/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:0041418392A:1817072901:0101/3914,2743,911,950/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "14d5689de2a349a772d26590.jpg",
+   "799b5f7880f967630cdb0953.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1820,
+  "article_id": "6_1820-08-01_pna_sn84024735_00414183955_1820080101_0105.json",
+  "paper": "Richmond enquirer. [volume] (Richmond, Va.) 1815-1867",
+  "date": "1820-08-01",
+  "service": "service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:00414183955:1820080101:0105",
+  "batch": "vi_mudhens_ver02",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "instance he lnvest.gatet-nOt merely must the",
+   "J.ivuiry cAteud TO Tbs or that iiiusirious house",
+   "with which she was connected, but all the",
+   "private history of all those exalted ind vidnai.",
+   "10 Whom, she was related, might, The did not",
+   "say must be forced into The conflict. Then,",
+   "tire house must give him leave TO say, II would",
+   "have another such session as had been known"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:00414183955:1820080101:0105/191,521,946,6256/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "229e9abd3b0a1ac3712d049c.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1824,
+  "article_id": "16_1824-06-08_pna_sn85027015_00393348793_1824060801_0748.json",
+  "paper": "The Virginian. [volume] (Lynchburg [Va.]) 1822-1829",
+  "date": "1824-06-08",
+  "service": "service:ndnp:vi:batch_vi_dartmoor_ver03:data:sn85027015:00393348793:1824060801:0748",
+  "batch": "vi_dartmoor_ver03",
+  "boxes": 2,
+  "display_headline": "From ne Trenton Emporium.\nIt's ALL, MOONSllINE..",
+  "first_lines": [
+   "/ When | wns hoy, aud lived with ny",
+   "srandmnthef Mt \" lilo\" grove. femembcr",
+   "once walking out with h.i among the tree",
+   "that sheltered oir green from tie summer",
+   "! -un unr mpnnleht evening. We hah mol",
+   "| gone far. heiofc The old Indy perceived",
+   "! something on th. ground ihat appeared",
+   "! like Il whiie handkerchief, and ~ she sloup."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_dartmoor_ver03:data:sn85027015:00393348793:1824060801:0748/3190,697,583,81/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_dartmoor_ver03:data:sn85027015:00393348793:1824060801:0748/3042,777,736,2364/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "f6e5785de0278ddc95f572c4.jpg",
+   "80dd55b230338535a0e12869.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the headline box clips the first letter of IT'S, and line ends are cut as in the OCR"
+ },
+ {
+  "year": 1827,
+  "article_id": "9_1827-01-26_pna_sn83045110_00414184558_1827012601_0018.json",
+  "paper": "Constitutional Whig. [volume] (Richmond, Va.) 1824-1832",
+  "date": "1827-01-26",
+  "service": "service:ndnp:vi:batch_vi_naturals_ver01:data:sn83045110:00414184558:1827012601:0018",
+  "batch": "vi_naturals_ver01",
+  "boxes": 3,
+  "display_headline": "from he Saturday Eee,ing Pest.\non EETRoSpECTtoN",
+  "first_lines": [
+   "Gives TO Tire mind tl,at precious ailt Cnn,.n,.",
+   "Bat the retrospect presents Il vicious course",
+   "i'is is the min'' haunted by the fend Rruorso",
+   "/\" '\"Ar retrospective view of past conduct is some,",
+   "times productive Of pleasure, md Sometimes of ain",
+   "III vic\". the past through the medium of retrospcc,;o",
+   "we md that we havc pursued that steady cou,sc",
+   "M\"'ch uStce ana duty point Gu\" an inv ard self approba"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_naturals_ver01:data:sn83045110:00414184558:1827012601:0018/4044,620,694,107/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_naturals_ver01:data:sn83045110:00414184558:1827012601:0018/4004,739,741,93/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_naturals_ver01:data:sn83045110:00414184558:1827012601:0018/3839,759,1150,6285/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "467c310fecfe468af5ded9c2.jpg",
+   "580cd354319229af6deb4324.jpg",
+   "e8371be00b711f0028b43f3c.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "overlapping boxes repeat two lines of the poem"
+ },
+ {
+  "year": 1831,
+  "article_id": "5_1831-02-23_p1_sn87062070_0039334295A_1831022301_0194.json",
+  "paper": "The Arkansas advocate.",
+  "date": "1831-02-23",
+  "service": "service:ndnp:arhi:batch_arhi_elvis_ver01:data:sn87062070:0039334295A:1831022301:0194",
+  "batch": "arhi_elvis_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "who had summoned me to visit him, had com-",
+   "mitted series of forgeTies, for the last eighteen",
+   "months, to a great amount, and with so much lsecfecyand dexterlty,as 10 have, till then,escap- led detection; and had, for the last few months,",
+   "been enjoying the produce of his skiliul vIlany",
+   "Ill the style witnessed-pa passing himself of. in",
+   "the circles where he associated, under tie as- sumed name of aloucester.' The immediate",
+   "cause of hs arrest Has forging the acceptaBce ] of an eminent mercantile hnnse to q bil! Of exs",
+   "change for El5. Poor fellow. it was short"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:arhi:batch_arhi_elvis_ver01:data:sn87062070:0039334295A:1831022301:0194/3128,808,1010,5339/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "7fd190e2d79681146426b579.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1834,
+  "article_id": "19_1834-08-23_pna_sn82016416_00271744730_1834082301_0228.json",
+  "paper": "Richmond palladium. [volume] (Richmond, Wayne County, Ind.) 1831-1837",
+  "date": "1834-08-23",
+  "service": "service:ndnp:in:batch_in_indianapolisolympians_ver02:data:sn82016416:00271744730:1834082301:0228",
+  "batch": "in_indianapolisolympians_ver02",
+  "boxes": 2,
+  "display_headline": "THE DEATHwATcH",
+  "first_lines": [
+   "This little insect--alas. how little he knew",
+   "The srouble he made-has been the means o.",
+   "making many a face torn pale, many strong",
+   "arm hang down. many timex set knee totter.",
+   "Let those who hare been frightened out Of their",
+   "wits o. who have had their wits frightened out Of",
+   "them by it, read the following prose account oft",
+   "fr.,m Wallis, with Few lines of poetry from"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_indianapolisolympians_ver02:data:sn82016416:00271744730:1834082301:0228/3912,968,462,47/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_indianapolisolympians_ver02:data:sn82016416:00271744730:1834082301:0228/3726,1032,823,1785/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "e1617333dbadf72eca7b5d2a.jpg",
+   "ed340d31dd6ea654340cbb78.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1838,
+  "article_id": "3_1838-10-03_pna_sn83025661_00415628882_1838100301_0009.json",
+  "paper": "Vermont telegraph. [volume] (Brandon [Vt.]) 1828-1843",
+  "date": "1838-10-03",
+  "service": "service:ndnp:vtu:batch_vtu_fennal_ver01:data:sn83025661:00415628882:1838100301:0009",
+  "batch": "vtu_fennal_ver01",
+  "boxes": 2,
+  "display_headline": "GENERAL INTELLIGENCE.",
+  "first_lines": [
+   "POWER OF CoNsclENCE.-W When",
+   "Smith, the bar-keeper, and accomplice of",
+   "Mrs. Doyle, in the murder of the unfor-",
+   "tunate sailor in Girod street, surrendered",
+   "himself to the police, he confessed that he",
+   "had been forced to give himself up by the",
+   "terrors of guilty conscience. Ever",
+   "since fled from the house, said he, the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vtu:batch_vtu_fennal_ver01:data:sn83025661:00415628882:1838100301:0009/2238,4255,862,87/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vtu:batch_vtu_fennal_ver01:data:sn83025661:00415628882:1838100301:0009/2174,4391,1005,4142/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "c7bbd87c707faa4d55ee577c.jpg",
+   "7274a25b5397537377c879bc.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1841,
+  "article_id": "5_1841-04-16_pna_sn86086342_00202196895_1841041601_0369.json",
+  "paper": "North American. [volume] (Swanton, Vt.) 1839-1841",
+  "date": "1841-04-16",
+  "service": "service:ndnp:vtu:batch_vtu_fairbanks_ver02:data:sn86086342:00202196895:1841041601:0369",
+  "batch": "vtu_fairbanks_ver02",
+  "boxes": 2,
+  "display_headline": "",
+  "first_lines": [
+   "sons ard Of ihirgs.\"",
+   "II Is IN Your part Or obligation NJ do",
+   "ty,\" adds the same pentiG. IN his hsiei os",
+   "Jolly 1882, TO the bishops II Poland \" Il il",
+   "on your part an obligation og dniv a.",
+   "watch with the utmost care, lest evi. mind.",
+   "ed men, propas a,ing false doctrines, spread",
+   "among your hocks the contagiou al demon"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vtu:batch_vtu_fairbanks_ver02:data:sn86086342:00202196895:1841041601:0369/1745,918,1120,77/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vtu:batch_vtu_fairbanks_ver02:data:sn86086342:00202196895:1841041601:0369/1859,1053,833,3962/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "5d7b83130ef69ca1411c60f2.jpg",
+   "595ead13ff323ae653e2e502.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "box 1 is the paper's own dateline, which the display headline drops"
+ },
+ {
+  "year": 1845,
+  "article_id": "4_1845-01-01_pna_sn83030213_00206530212_1845010101_0213.json",
+  "paper": "New-York daily tribune. [volume] (New-York [N.Y.]) 1842-1866",
+  "date": "1845-01-01",
+  "service": "service:ndnp:dlc:batch_dlc_gritty_ver02:data:sn83030213:00206530212:1845010101:0213",
+  "batch": "dlc_gritty_ver02",
+  "boxes": 2,
+  "display_headline": "(THE CARRIER pIscoURsErI TO HIMSELF,",
+  "first_lines": [
+   "(THE CARRIER DIscoURsETu TO IIlNlsELF3",
+   "Beseemeh me i, weary life Newsman-anoher term",
+   "the Sun and have uudgcd this dirty Garth high mis-",
+   "carrying lgh!-both with the eward-Light Car",
+   "still TITS the last midnight the year. and have",
+   "nough WEAKNESS and poverty for the and promises OF",
+   "much toll and watching for the time Yet, as 1r",
+   "bune, Roman knight, still bear bravey-and"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_gritty_ver02:data:sn83030213:00206530212:1845010101:0213/1231,3074,876,53/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_gritty_ver02:data:sn83030213:00206530212:1845010101:0213/1126,3022,1063,5454/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "188d6ac94d1960c2474beff4.jpg",
+   "1acebd53eea28073aa91b86c.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "after the reissued-batch fallback (ver01 to ver02); overlapping boxes repeat the title"
+ },
+ {
+  "year": 1848,
+  "article_id": "9_1848-03-04_p1_sn82015050_00280763366_1848030401_0157.json",
+  "paper": "The examiner. [volume] (Louisville, Ky.) 1847-1849",
+  "date": "1848-03-04",
+  "service": "service:ndnp:kyu:batch_kyu_albatross_ver01:data:sn82015050:00280763366:1848030401:0157",
+  "batch": "kyu_albatross_ver01",
+  "boxes": 2,
+  "display_headline": ", ohm O. Fee.",
+  "first_lines": [
+   "The day will be when Kentucky will be proud",
+   "Of this honest, single-miDded minister oil God.",
+   "Born among US, he dared, in a dark hour,",
+   "to speak out in ali things pertaining to the ad-",
+   "vancement of true religion. For a time he had",
+   "TO suffer. For long season, hot and angry",
+   "reproaches fell thick upon him, and even the",
+   "brethren\" avoided him. There is a change"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:kyu:batch_kyu_albatross_ver01:data:sn82015050:00280763366:1848030401:0157/3126,2902,268,35/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:kyu:batch_kyu_albatross_ver01:data:sn82015050:00280763366:1848030401:0157/2866,2956,795,4067/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "b0dd3eaffb76819a6bcab3cd.jpg",
+   "0ed338e03459aa30a6b034cc.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1852,
+  "article_id": "18_1852-01-22_pna_sn84024649_00393347946_1852012201_0348.json",
+  "paper": "Lynchburg Virginian. [volume] (Lynchburg [Va.]) 1829-185?",
+  "date": "1852-01-22",
+  "service": "service:ndnp:vi:batch_vi_exmoor_ver01:data:sn84024649:00393347946:1852012201:0348",
+  "batch": "vi_exmoor_ver01",
+  "boxes": 2,
+  "display_headline": "To DciinaueDl ssmbscrjl,crs.",
+  "first_lines": [
+   "We do not suppose that subscribers",
+   "who habltualIy neglect TO pay for theft",
+   "pnpers can be moved by any thing 10 tho",
+   "way ol persuasion or reagon,--Short Of",
+   "legal process. which printers. Inc kin1est",
+   "hearted race ofmen in the world, disliket \"a",
+   "employ except in the last resort, there",
+   "seems TO he no means o. rcncliny ,hs"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_exmoor_ver01:data:sn84024649:00393347946:1852012201:0348/4565,3010,531,39/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_exmoor_ver01:data:sn84024649:00393347946:1852012201:0348/4521,3053,635,3137/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "248baf9dcd3faaf9dbc9cbd2.jpg",
+   "1d001a308e04bc763dddae9b.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1855,
+  "article_id": "7_1855-06-13_p1_sn83030313_0027174321A_1855061301_1270.json",
+  "paper": "The New York herald. [volume] (New York [N.Y.]) 1840-1920",
+  "date": "1855-06-13",
+  "service": "service:ndnp:dlc:batch_dlc_laceflower_ver01:data:sn83030313:0027174321A:1855061301:1270",
+  "batch": "dlc_laceflower_ver01",
+  "boxes": 2,
+  "display_headline": "'ssg for the Hst-the Graceful Has |,",
+  "first_lines": [
+   "Song for the Hat-the Graceful Hasl",
+   "So rich in its gloss and form",
+   "Lho q bes teous wreath 10 slows in the sun,",
+   "Like helmet in the storm.",
+   "What . finished air il gives the brow",
+   "what grace words sing",
+   "Ms curve WA caught from the white swans neck,",
+   "And It's sweep from the eagles wing."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_laceflower_ver01:data:sn83030313:0027174321A:1855061301:1270/146,428,742,42/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_laceflower_ver01:data:sn83030313:0027174321A:1855061301:1270/125,435,810,497/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "4546b718baf17b66aa6a52bd.jpg",
+   "8aac39229bae705d070dc157.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "overlapping boxes repeat the title"
+ },
+ {
+  "year": 1859,
+  "article_id": "6_1859-03-12_pna_sn83045462_00280654139_1859031201_0075.json",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "date": "1859-03-12",
+  "service": "service:ndnp:dlc:batch_dlc_leonberger_ver03:data:sn83045462:00280654139:1859031201:0075",
+  "batch": "dlc_leonberger_ver03",
+  "boxes": 3,
+  "display_headline": "THE DISGUISED WIFE.",
+  "first_lines": [
+   "CHAPTER II.",
+   "We will pass over an interval of five years",
+   "and, on beautiful evening in the latter part of",
+   "August. find ourselves ON the upper deck of the",
+   "steamer Bay State. upon which was gathered a",
+   "party of New York fashionables on their yay",
+   "10 that great summer resort for pleasure-seekefs",
+   "Newport"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_leonberger_ver03:data:sn83045462:00280654139:1859031201:0075/249,1218,596,58/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_leonberger_ver03:data:sn83045462:00280654139:1859031201:0075/430,1283,241,30/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_leonberger_ver03:data:sn83045462:00280654139:1859031201:0075/68,1290,965,6939/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "1c0116837d7f1aad29a03f0c.jpg",
+   "9900179bd2aedc6f4ae775c1.jpg",
+   "edb07bd31cfa80d4486c0cd0.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "overlapping boxes repeat the chapter line"
+ },
+ {
+  "year": 1862,
+  "article_id": "4_1862-05-07_p1_sn84024738_00280777985_1862050701_0431.json",
+  "paper": "The daily dispatch. [volume] (Richmond [Va.]) 1850-1884",
+  "date": "1862-05-07",
+  "service": "service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280777985:1862050701:0431",
+  "batch": "vi_kelso_ver01",
+  "boxes": 2,
+  "display_headline": "",
+  "first_lines": [
+   "SoUrHaAs FlsLIse IN KssivckG.-rns fol.",
+   "lowing, from the Louisville Journal, shovs",
+   "that Federal hayonsts have not yet succ ssded",
+   "In crushing the Sou hern sentiment In all",
+   "portions of sold Kaintnck:\"",
+   "The ghost Of rsbeliion Ia uawesyills, Ham",
+   "cock eounty. KY, Is not Yet extinct. /: wac",
+   "gwen Out thaA the loyal men of the place"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280777985:1862050701:0431/4674,8358,806,61/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kelso_ver01:data:sn84024738:00280777985:1862050701:0431/4651,8441,874,905/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "3b524822a9b2bc05b72d85da.jpg",
+   "b9284f57c1f3e429b00dc54c.jpg"
+  ],
+  "errors": [],
+  "verdict": "fail",
+  "reason": "box 1 is the last line of the item above (a letter's address and signature, 'To Hon. W. H. Seward ... Franklin Pierce'), which the article's OCR doesn't contain"
+ },
+ {
+  "year": 1866,
+  "article_id": "49_1866-01-08_pna_sn83025925_00280776178_1866010801_0048.json",
+  "paper": "The evening telegraph. [volume] (Philadelphia [Pa.]) 1864-1918",
+  "date": "1866-01-08",
+  "service": "service:ndnp:pst:batch_pst_ewing_ver01:data:sn83025925:00280776178:1866010801:0048",
+  "batch": "pst_ewing_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "NEW CHEsNUT STREET THEATRE The Sleeping",
+   "Beauty, with theVisions of Heaven, will be repeated",
+   "together with The Phantom, spiritual ghost story",
+   "of thrilling metaphysical interest We consider",
+   "Boucicaults Phantom as the finest sensation piece",
+   "that has ever been written, just as Mrs. Shelley's",
+   "FTankesein\" is the finest sensational and spiritual",
+   "novel of the century."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:pst:batch_pst_ewing_ver01:data:sn83025925:00280776178:1866010801:0048/179,2678,827,304/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "767bea0749aa1641a96aab8a.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1869,
+  "article_id": "1_1869-05-05_pna_sn84026909_00237286996_1869050501_0392.json",
+  "paper": "The Newberry herald. [volume] (Newberry, S.C.) 1865-1884",
+  "date": "1869-05-05",
+  "service": "service:ndnp:scu:batch_scu_floydcouncil_ver01:data:sn84026909:00237286996:1869050501:0392",
+  "batch": "scu_floydcouncil_ver01",
+  "boxes": 2,
+  "display_headline": "TIE Living Lost.",
+  "first_lines": [
+   ".sESeiiom in public prayer or pri-",
+   "vate, in preaching or conversation,",
+   "Is ailnsien made to the greatest",
+   "trial, The saddest work of Sin.",
+   "The strokes of death, the disap",
+   "pointments in business, the cease",
+   "less change of human life, are the",
+   "common topics Of remark upon the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:scu:batch_scu_floydcouncil_ver01:data:sn84026909:00237286996:1869050501:0392/513,5834,570,75/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:scu:batch_scu_floydcouncil_ver01:data:sn84026909:00237286996:1869050501:0392/315,5933,966,3690/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "00bfdf59e7ba30115509a100.jpg",
+   "25ec5dd440f58d0bb49817fe.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1873,
+  "article_id": "32_1873-05-03_p1_sn84020594_00271742526_1873050301_0440.json",
+  "paper": "Wilmington daily commercial.",
+  "date": "1873-05-03",
+  "service": "service:ndnp:deu:batch_deu_jinx_ver01:data:sn84020594:00271742526:1873050301:0440",
+  "batch": "deu_jinx_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "..+ tt PHILADELPHIA May End.",
+   "The case Of Mr.. Grambo, the particularly fast",
+   "broker grows more interesting. As fact after",
+   "fact becomes known there is divulged series Of",
+   "reckless not to say rascally proceedings, such As",
+   "we are accustomed to associate with stock gam",
+   "bling in New York but which have q sort of un-",
+   "fitness here. The gaysGrambo made, in fact"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:deu:batch_deu_jinx_ver01:data:sn84020594:00271742526:1873050301:0440/707,1047,546,4180/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "f533480395985bee7a7a16a8.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1876,
+  "article_id": "6_1876-04-18_p1_sn83016025_00279525401_1876041801_0396.json",
+  "paper": "The Portland daily press.",
+  "date": "1876-04-18",
+  "service": "service:ndnp:me:batch_me_farmington_ver01:data:sn83016025:00279525401:1876041801:0396",
+  "batch": "me_farmington_ver01",
+  "boxes": 2,
+  "display_headline": "Misunderstanding to the Virginia standard,",
+  "first_lines": [
+   "Mr. Tucker-The gentleman says be thanks",
+   "God he was not brought up in the school of",
+   "states rights as L was. He certainly was",
+   "brought up in very different school. The diff",
+   "ference between US in our views on the federal",
+   "constitution are very wide, but l will not 90",
+   "into that matter. l am BOT to be betrayed into",
+   "it. Estates rights is the great \"bugaboo''"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_farmington_ver01:data:sn83016025:00279525401:1876041801:0396/3056,155,650,47/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_farmington_ver01:data:sn83016025:00279525401:1876041801:0396/3031,214,688,1299/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "3708d8a81a7fc69d435fd9c5.jpg",
+   "6443af4d15946466fd2fadc7.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the crop's headline reads 'Blaine, According...', which the OCR garbles to 'Misunderstanding...'"
+ },
+ {
+  "year": 1880,
+  "article_id": "133_1880-02-06_pna_sn82016419_00212472992_1880020601_0243.json",
+  "paper": "The Emporia news. [volume] (Emporia, Kan.) 1859-1881",
+  "date": "1880-02-06",
+  "service": "service:ndnp:khi:batch_khi_brown_ver01:data:sn82016419:00212472992:1880020601:0243",
+  "batch": "khi_brown_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "A half dozen serenaders were abroad",
+   "about midnight Saturday last, seeking",
+   "whom they might sing unto. They wan",
+   "dcrcd around in the first ward and sang",
+   "the \"old Folks at Home\" &c, until the",
+   "old folks couldn't rest as long us the",
+   "singers were IN ear-shot. At one place",
+   "a ghostlike aparitioh appeared on the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:khi:batch_khi_brown_ver01:data:sn82016419:00212472992:1880020601:0243/299,6060,690,449/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "36b635fe1d76e0685398f591.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1883,
+  "article_id": "36_1883-07-25_p2_sn84027718_00271763852_1883072501_0357.json",
+  "paper": "Connecticut western news.",
+  "date": "1883-07-25",
+  "service": "service:ndnp:ct:batch_ct_animals_ver01:data:sn84027718:00271763852:1883072501:0357",
+  "batch": "ct_animals_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "GMHRGv after the payment is claimed to have been made as the regular receipt of the paper with inc date which the subscription is paid plainly printed thereon is prima facie evidence of its acceptance as correct.",
+   "IN ITS issue of July II, the Valley Ledger propounded four conundrums about the Sunday train. No 1 was;",
+   "Measured strictly by the scale of right and wrong, wherein lies the difference",
+   "between a Sunday milk, freight, passen- ger and accommodation train, and a Sunday newspaper and passenger train ?\" Our reply was; \"We don't see any great difference, measured by the rule you furnish us to use, do you ?\" We further stated \"we have our doubts about there being any necessity for run ming even the milk train on Sunday. !\"",
+   "We also stated; ''the same excuse given for running that train cannot ap- ply to the newspaper train\" We also gave several reasons why it was an i'm possibility for the milk train to do as much harm as the newspaper train can. The principle of right and wrong is the same in both cases all the difference is the milk train alone cannot make day for excur- slons, while the newspaper train can and does as long as the excursionist can re- turn home on the milk train. If the Led ger is not satisfied with the answer we gave will they please enlighten us and the public by publishing their answer to their own conundrum and not dodge 1t by appealing to the inventor of rat traps or the father of Zebedee's chil- dren to help it out of it's dilemma.",
+   "The Ledger's second conundrum was,",
+   "\"Are the morals of those communities through which Sunday trains have been run for years, as bad as those anti train ists predict, and if so, can suchdemoraliza- tlon be traced directly toSunday trains :? This question removes the battle-ground from the Housatonic valley to some oth- CT section of our country. Sunday trains have never been run through the Housatonic valley until this season. In the first place you fail to inform us how bad those morals are which you say the anti-trainists predict. We have seen none of those predictions you refer to, ii you have, please state them and To- cate them so we can investigate the sub- Ject. We venture to say however that Sunday trains have not improved the morals of those communities. The Sunday trains question and the rum question are similar in many respects. You stated last week that rum reveals mems characters, just as the cutthroats' dirk reveals the blood of its victim, and that one is not required to be temper ance fanatic in order to see that so far from making mems characters, rum demoralizes and destroys them, I a. gree with you on that point, and now look at the Sunday train through the",
+   "same spectacles and you will see that one is not required to be religious fa-"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_animals_ver01:data:sn84027718:00271763852:1883072501:0357/431,1442,755,5992/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "9ae5d4e00d1b061a16db677a.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the box starts with the end of the item above, as the OCR does"
+ },
+ {
+  "year": 1887,
+  "article_id": "41_1887-07-22_pna_sn86072143_00280777080_1887072201_0974.json",
+  "paper": "Burlington weekly free press. [volume] (Burlington, Vt.) 1866-1928",
+  "date": "1887-07-22",
+  "service": "service:ndnp:vtu:batch_vtu_burlington_ver01:data:sn86072143:00280777080:1887072201:0974",
+  "batch": "vtu_burlington_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "| upward toward tne WIDER llIe ana larger",
+   "liberty, or perchance downward into the",
+   "| depths of an eternal sleep",
+   "Poor dark eyed, deep hearted jess This",
+   "was the fruition of her love and this her",
+   "bridal bed",
+   "1t was done. She had gone taking with",
+   "her the secret of her self sacrifice and crime,"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vtu:batch_vtu_burlington_ver01:data:sn86072143:00280777080:1887072201:0974/927,417,668,4872/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "6f03aebe146310e59daed76e.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1890,
+  "article_id": "8_1890-03-06_pna_sn86092009_00514157273_1890030601_0203.json",
+  "paper": "The Logan County banner. [volume] (Logan, W. Va.) 1889-1903",
+  "date": "1890-03-06",
+  "service": "service:ndnp:wvu:batch_wvu_goalby_ver01:data:sn86092009:00514157273:1890030601:0203",
+  "batch": "wvu_goalby_ver01",
+  "boxes": 3,
+  "display_headline": "",
+  "first_lines": [
+   "andsge sim Floarlshss.",
+   "There arc never brigands actually",
+   "tablished in the plain Of Satoni",
+   "their haunts arc the districts UNI",
+   "Olympus, and the mountains near M",
+   "astir and Series; but give them time",
+   "hear Of . prize worth taking in the",
+   "land, and they will come far and br'"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_goalby_ver01:data:sn86092009:00514157273:1890030601:0203/4050,243,517,52/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_goalby_ver01:data:sn86092009:00514157273:1890030601:0203/4005,311,573,69/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_goalby_ver01:data:sn86092009:00514157273:1890030601:0203/3999,339,636,1853/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "930679b478078d3f658c52b1.jpg",
+   "edf12d90bf7f54695494a654.jpg",
+   "1d8ccaa40569ece10b43ba54.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "line ends are lost in the binding's shadow on the scan, and in the OCR"
+ },
+ {
+  "year": 1894,
+  "article_id": "10_1894-03-04_p14_sn85042461_0028076954A_1894030401_0042.json",
+  "paper": "The herald.",
+  "date": "1894-03-04",
+  "service": "service:ndnp:curiv:batch_curiv_plasse_ver01:data:sn85042461:0028076954A:1894030401:0042",
+  "batch": "curiv_plasse_ver01",
+  "boxes": 3,
+  "display_headline": "UNCLE SANS WINE CELLAR.\nHe Doesn's Drink. bat He Has Lots ofRars\nWines On Hand.",
+  "first_lines": [
+   "wines on Eand.",
+   "A ghostly silence pervades the place.",
+   "Tt is like the silence of the tomb. The",
+   "outside world seems already centuries",
+   "away. The air is cool and soothing,",
+   "and three faring gas jets cast an intri-",
+   "cate combination OF shadows upon the",
+   "massive masonry of the arches. says a"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_plasse_ver01:data:sn85042461:0028076954A:1894030401:0042/1078,311,529,43/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_plasse_ver01:data:sn85042461:0028076954A:1894030401:0042/1030,374,629,75/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_plasse_ver01:data:sn85042461:0028076954A:1894030401:0042/1015,416,650,3295/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "4b659537669eb8d95c61c9e1.jpg",
+   "59f3dc128cdfdc6fbcbb8fdd.jpg",
+   "26cfb99555de62e701e75263.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1897,
+  "article_id": "11_1897-02-05_p1_sn89060092_00279521900_1897020501_0057.json",
+  "paper": "The citizen. (Frederick City, Md.) 1895-1923",
+  "date": "1897-02-05",
+  "service": "service:ndnp:mdu:batch_mdu_frederick_ver03:data:sn89060092:00279521900:1897020501:0057",
+  "batch": "mdu_frederick_ver03",
+  "boxes": 2,
+  "display_headline": "THE ACTORS DOUBLE.",
+  "first_lines": [
+   "retailing the usual second or third hand",
+   "accounts of deceased ladies and gen.",
+   "tlemen showing themselves to their sor-",
+   "rowing relatives.",
+   "at is strange the tricks which our",
+   "brains will sometimes play u.s.\" said",
+   "DR.. Macpherson. 81 remember once",
+   "seeing ghost myself, and l can tell"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mdu:batch_mdu_frederick_ver03:data:sn89060092:00279521900:1897020501:0057/109,438,592,80/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mdu:batch_mdu_frederick_ver03:data:sn89060092:00279521900:1897020501:0057/47,635,687,5298/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "163fb21c2755ebe911af79fe.jpg",
+   "970719386f74f03c9d272a7f.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the body starts mid-story, in the crop and the OCR alike"
+ },
+ {
+  "year": 1901,
+  "article_id": "54_1901-05-21_p1_sn90059523_00206534059_1901052101_0251.json",
+  "paper": "The Saint Paul globe. (St. Paul, Minn.) 1896-1905",
+  "date": "1901-05-21",
+  "service": "service:ndnp:mnhi:batch_mnhi_lanesboro_ver01:data:sn90059523:00206534059:1901052101:0251",
+  "batch": "mnhi_lanesboro_ver01",
+  "boxes": 2,
+  "display_headline": "Not a Seeker of PhantOms",
+  "first_lines": [
+   "Baltimore World.",
+   "Mr.. Hanna has not said he would re-",
+   "fuse the presidential nomination, but",
+   "still he is not man prone to chasing",
+   "the impossible."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_lanesboro_ver01:data:sn90059523:00206534059:1901052101:0251/3889,7310,657,37/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_lanesboro_ver01:data:sn90059523:00206534059:1901052101:0251/3802,7353,874,203/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "ca30e296f453fd279027127a.jpg",
+   "3b447ded746f071f5c8e5bf9.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1904,
+  "article_id": "1_1904-03-17_pna_sn92051501_00271763700_1904031701_0268.json",
+  "paper": "The Press. (Stafford Springs, Conn.) 1883-1935",
+  "date": "1904-03-17",
+  "service": "service:ndnp:ct:batch_ct_animals_ver01:data:sn92051501:00271763700:1904031701:0268",
+  "batch": "ct_animals_ver01",
+  "boxes": 4,
+  "display_headline": "THE PRINCES WRATH.\nAn Appa riti0n Whose Coming Was I\nSign of Death.",
+  "first_lines": [
+   "An Apparition whose Coming Was .",
+   "sign of Death.",
+   "King Gustavus Nv. of Sweden, who",
+   "reigned In the early part of the last",
+   "century, was taking supper one evening",
+   "with the Prince of Baden and others.",
+   "among them a Count Lowenhjelm. Sud-",
+   "denly, halfway through the supper, the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_animals_ver01:data:sn92051501:00271763700:1904031701:0268/4505,516,235,35/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_animals_ver01:data:sn92051501:00271763700:1904031701:0268/4244,1239,634,63/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_animals_ver01:data:sn92051501:00271763700:1904031701:0268/4189,1328,737,84/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_animals_ver01:data:sn92051501:00271763700:1904031701:0268/4189,1322,758,1619/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "eec686e52a113a64ea945cc3.jpg",
+   "e8714d99b352b7aa808ef731.jpg",
+   "d9b0e71858aff484d8dda05f.jpg",
+   "159eca67834e914467eda5f6.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "box 1 is a faint sliver of the item above; overlapping boxes repeat the subhead"
+ },
+ {
+  "year": 1908,
+  "article_id": "6_1908-02-27_pna_sn88086023_0020219462A_1908022701_1079.json",
+  "paper": "East Oregonian : E.O. (Pendleton, OR) 1888-current",
+  "date": "1908-02-27",
+  "service": "service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:0020219462A:1908022701:1079",
+  "batch": "oru_longspur_ver01",
+  "boxes": 4,
+  "display_headline": "SAYS WILD BEASTS\nARE VANISHING\nOID-TIMIE HUNTER\nFINDS GAME is SCARCE.\nReports Fierce Fight With Hungry\nCougar, Found Lying I'm Wait for\nIts Victlm-Aged Trappcr Collects\nBounty Money TO the Tune OF $3.50\nKilled SO Coyotes, II Wildcats and\nOne Dangerous Cougar.",
+  "first_lines": [
+   "David Tulee, mighty Indian hunter,",
+   "who has killed more coyotes, wildcats",
+   "and cougars than any living man in",
+   "this part of the state, tells OF an ex-",
+   "citing encounter with a cougar-a",
+   "fierce and hungry cougar lying In wait",
+   "across a lonely train for a victim",
+   "which occurred recently up Satus"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:0020219462A:1908022701:1079/207,661,668,323/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:0020219462A:1908022701:1079/213,1047,662,110/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:0020219462A:1908022701:1079/213,1196,668,295/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:0020219462A:1908022701:1079/201,1536,669,2682/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "2d031a213b787f9fe5ca1174.jpg",
+   "886dce13045c947ac90b5333.jpg",
+   "22de0d1521cf3e4bbc6b65e1.jpg",
+   "0dec20177f52488744504a23.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1911,
+  "article_id": "2_1911-12-18_pna_sn85025007_00415663985_1911121801_0534.json",
+  "paper": "Alexandria gazette. [volume] (Alexandria, D.C.) 1834-1974",
+  "date": "1911-12-18",
+  "service": "service:ndnp:vi:batch_vi_hilfiger_ver01:data:sn85025007:00415663985:1911121801:0534",
+  "batch": "vi_hilfiger_ver01",
+  "boxes": 4,
+  "display_headline": "REV. 5AHDFORD\nGETS TEN YEARS.\nHead Of Holy Ghost and Us Society\nConvicted Of Man\nSlaughter.\nLEAVES TONIGHT FOR ATLANTA\nCondemned Man Said: ..Eod is Beside\nNe: He Told Me Not to Talk.\"-Gare\nMen Bowl Of Cruel Day.",
+  "first_lines": [
+   "- Portland, Me-, Dec. 1S.-Ten",
+   "years OF hard labor was the sentence",
+   "today meted out TO Rev. Frank W.",
+   "Sandford, head Of the Holy Ghost and",
+   "Us Society Of Shiloh, Maine, who last",
+   "week was convicted OF manslaughter",
+   "in connection with the deaths OF",
+   "members of <his crow of the yacht,"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_hilfiger_ver01:data:sn85025007:00415663985:1911121801:0534/1903,993,845,710/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_hilfiger_ver01:data:sn85025007:00415663985:1911121801:0534/1903,1757,845,88/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_hilfiger_ver01:data:sn85025007:00415663985:1911121801:0534/1903,1905,852,190/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_hilfiger_ver01:data:sn85025007:00415663985:1911121801:0534/1896,2155,846,2758/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "6a14349a24e1cee9a24acf3e.jpg",
+   "a121f189705f3682f894d49c.jpg",
+   "5c60e6faf09bfcb5f93726c8.jpg",
+   "9a769aac245b1e9caada2be6.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "headline boxes, then the body from 'Portland, Me., Dec. 18' to its last line"
+ },
+ {
+  "year": 1915,
+  "article_id": "5_1915-04-08_p1_sn98066406_00296023425_1915040801_0034.json",
+  "paper": "The Yale expositor.",
+  "date": "1915-04-08",
+  "service": "service:ndnp:mimtptc:batch_mimtptc_baldwin_ver01:data:sn98066406:00296023425:1915040801:0034",
+  "batch": "mimtptc_baldwin_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "Such border should run north and",
+   "south, and if possible, face the east.",
+   "The background may be of hollyhocks,",
+   "both single and double, golden-glow,",
+   "the single tiger lily, the ever bloom",
+   "ing flame flower, the tall meadow-rue,",
+   "and tall meadow-sweet, set out alter",
+   "nately."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mimtptc:batch_mimtptc_baldwin_ver01:data:sn98066406:00296023425:1915040801:0034/5927,2480,894,3382/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "9f73d2eca49bb4762d4db604.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1918,
+  "article_id": "6_1918-11-07_pna_sn96075050_00340587856_1918110701_0837.json",
+  "paper": "The independent-reporter. [volume] (Skowhegan, Me.) 1909-1955",
+  "date": "1918-11-07",
+  "service": "service:ndnp:me:batch_me_harpswell_ver01:data:sn96075050:00340587856:1918110701:0837",
+  "batch": "me_harpswell_ver01",
+  "boxes": 2,
+  "display_headline": "Halloween Party",
+  "first_lines": [
+   "Priscilla Rebekah Lodge held its",
+   "regular meeting in l. o. o. F. Hall.",
+   "Tuesday evening with large attend",
+   "ance of members and visitors. After",
+   "the close OF the meeting a program",
+   "was carried out under the direction",
+   "OF Miss Blanche Jewett and her as",
+   "sstants, which was as follows:"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_harpswell_ver01:data:sn96075050:00340587856:1918110701:0837/3109,4103,336,56/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_harpswell_ver01:data:sn96075050:00340587856:1918110701:0837/2942,4186,670,1323/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "70fa1402dc15d37ce5ded5dd.jpg",
+   "b6a04c1bad3dff58ef1daba9.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1922,
+  "article_id": "12_1922-07-21_pna_sn85026941_00393348276_1922072101_0736.json",
+  "paper": "Shenandoah herald. [volume] (Woodstock, Va.) 1865-1974",
+  "date": "1922-07-21",
+  "service": "service:ndnp:vi:batch_vi_jennet_ver02:data:sn85026941:00393348276:1922072101:0736",
+  "batch": "vi_jennet_ver02",
+  "boxes": 2,
+  "display_headline": "Coal and Manchu's Ghost.",
+  "first_lines": [
+   "The Fushun coal mine Of China Is",
+   "one of the largest open-cut mines in",
+   "the world. The Tartars are known to",
+   "have worked the mine Ia the Twelfth",
+   "century.",
+   "For years the Chinese have been",
+   "urged to work the mine, but Chinese",
+   "oflcialdom has always pointed to the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_jennet_ver02:data:sn85026941:00393348276:1922072101:0736/5139,5142,436,44/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_jennet_ver02:data:sn85026941:00393348276:1922072101:0736/5047,5191,639,785/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "13320cd0f367271154e1770d.jpg",
+   "b26756b9e32c57e769ad1fdd.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1925,
+  "article_id": "10_1925-09-03_p1_sn84020657_00393342079_1925090301_0023.json",
+  "paper": "The Alaska daily empire.",
+  "date": "1925-09-03",
+  "service": "service:ndnp:ak:batch_ak_goshawk_ver01:data:sn84020657:00393342079:1925090301:0023",
+  "batch": "ak_goshawk_ver01",
+  "boxes": 2,
+  "display_headline": "Lewis Takes Crack at\nHammond's Coal Com,",
+  "first_lines": [
+   "PHILADELPHIA, Sept. >. - John",
+   "Lewis, President of the United Mine",
+   "Workers, asserted today that John",
+   "Hays Hammond is haunting the",
+   "laws of the White Court, pestering",
+   "the President to breathe life into",
+   "Hammond's defunct coal commission,",
+   "and mixing deyil-stew for the"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_goshawk_ver01:data:sn84020657:00393342079:1925090301:0023/1709,3236,643,141/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_goshawk_ver01:data:sn84020657:00393342079:1925090301:0023/1703,3402,654,581/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "4483813352151d9751ef6415.jpg",
+   "076ae5ba32e920625f9df15e.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the headline box clips 'Com[mission]' as the OCR does"
+ },
+ {
+  "year": 1929,
+  "article_id": "50_1929-04-12_p1_sn86063730_00332894262_1929041202_0269.json",
+  "paper": "Brownsville herald. [volume] (Brownsville, Tex.) 1910-current",
+  "date": "1929-04-12",
+  "service": "service:ndnp:txdn:batch_txdn_long_ver01:data:sn86063730:00332894262:1929041202:0269",
+  "batch": "txdn_long_ver01",
+  "boxes": 2,
+  "display_headline": "READ THIS FIRST:",
+  "first_lines": [
+   "The plot concerns some weird I'M",
+   "foreground noises beneath a sup",
+   "poSedly haunted house in Byford",
+   "Moor. One day, Brown, a romantic",
+   "young clerk heard a rough-looking",
+   "fellow say to another man: after",
+   "her! And-if she's troublesome",
+   "don't be particular what you do to"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:txdn:batch_txdn_long_ver01:data:sn86063730:00332894262:1929041202:0269/2537,3996,501,57/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:txdn:batch_txdn_long_ver01:data:sn86063730:00332894262:1929041202:0269/2530,4052,797,797/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "64d06836b15c15896c101b94.jpg",
+   "f2fbb44712666bbd8d6f4776.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1932,
+  "article_id": "12_1932-08-03_p1_sn82015313_00383349448_1932080301_0177.json",
+  "paper": "The Indianapolis times. [volume] (Indianapolis [Ind.]) 1922-1965",
+  "date": "1932-08-03",
+  "service": "service:ndnp:in:batch_in_huxley_ver01:data:sn82015313:00383349448:1932080301:0177",
+  "batch": "in_huxley_ver01",
+  "boxes": 2,
+  "display_headline": "House Haunted by Spy\nMatt Ha1~i, Is for Sale",
+  "first_lines": [
+   "It's only occupant at present is",
+   "an aged Russian, who cares for",
+   "the property and does not live in",
+   "the main part of the house.",
+   "Mata Hari was a beautiful",
+   "Oriental woman who danced de-",
+   "lightfully for her guests.",
+   "She is said to have wormed"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_huxley_ver01:data:sn82015313:00383349448:1932080301:0177/3420,7882,1425,285/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_huxley_ver01:data:sn82015313:00383349448:1932080301:0177/4150,8181,702,782/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "ff16ca782ea3824e592636f5.jpg",
+   "285fd773adfbeb5522cba94e.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the body starts mid-story, in the crop and the OCR alike"
+ },
+ {
+  "year": 1936,
+  "article_id": "28_1936-04-20_pna_sn83045462_0028060270A_1936042001_0778.json",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "date": "1936-04-20",
+  "service": "service:ndnp:dlc:batch_dlc_1hopper_ver01:data:sn83045462:0028060270A:1936042001:0778",
+  "batch": "dlc_1hopper_ver01",
+  "boxes": 4,
+  "display_headline": "ONLY THREE VETS\nIN SHAPE TO HURL\nNew York Defeat Indicates\nHarris Must Use Rocks\nAGAINST BoSox.",
+  "first_lines": [
+   "~ OSTON, April 20.-Haunted by",
+   "- a prospective return of the",
+   "highly unwelcome 1885 pitch",
+   "- ing bugaboo, the Nationals at",
+   "tempted to shake off memories of their",
+   "first severe beating of the year today",
+   "and looked hopefully, if not conf"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1hopper_ver01:data:sn83045462:0028060270A:1936042001:0778/106,915,661,331/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1hopper_ver01:data:sn83045462:0028060270A:1936042001:0778/112,1288,649,227/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1hopper_ver01:data:sn83045462:0028060270A:1936042001:0778/204,1538,483,62/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_1hopper_ver01:data:sn83045462:0028060270A:1936042001:0778/118,1605,649,270/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "b9080cfea70cb8eb7d383e09.jpg",
+   "a6d179ca5a07ed2737f86251.jpg",
+   "0685feb4bdc80c93faca8926.jpg",
+   "b42308f96e592db758db6ca9.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1939,
+  "article_id": "29_1939-07-18_pna_sn83045499_00393342389_1939071801_0587.json",
+  "paper": "The Daily Alaska empire. [volume] (Juneau, Alaska) 1926-1964",
+  "date": "1939-07-18",
+  "service": "service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342389:1939071801:0587",
+  "batch": "ak_herring_ver01",
+  "boxes": 2,
+  "display_headline": "DR.. R. SIMPSON Is\nNEW OWNER TODAY\nOF BOAT LILLIED",
+  "first_lines": [
+   "DR.. Robert Simpson has pur-",
+   "chased the speed cruiser Lillied",
+   "from Minard Mill and Joe John",
+   "ston, it was revealed today",
+   "The Lillied smart with cabin",
+   "and windshield steering station.",
+   "Is powered with a 81 horse power",
+   "Gray Phantom. and logs along at"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342389:1939071801:0587/212,5142,590,241/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_herring_ver01:data:sn83045499:00393342389:1939071801:0587/202,5418,600,371/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "e2110e8a6abe56a9f145dbf4.jpg",
+   "d5f9f7632381c0efc7f5bc9e.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1943,
+  "article_id": "5_1943-12-03_p1_sn88063294_00340588630_1943120301_0601.json",
+  "paper": "Detroit evening times. (Detroit, Mich) 1921-1958",
+  "date": "1943-12-03",
+  "service": "service:ndnp:mimtptc:batch_mimtptc_gwinn_ver01:data:sn88063294:00340588630:1943120301:0601",
+  "batch": "mimtptc_gwinn_ver01",
+  "boxes": 3,
+  "display_headline": "\"XNHERE'D they get you\nLeft Side Deadened",
+  "first_lines": [
+   "The kid manages 10 pull him.",
+   "self on Hilsky's back and they",
+   "Squirm laboriously from tree 20",
+   "tree. Hilsky holds him by the left",
+   "leg and right wrist because the",
+   "upper part Of the kids right arm",
+   "is Just so much meat\"",
+   "All at once the kid yells,"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mimtptc:batch_mimtptc_gwinn_ver01:data:sn88063294:00340588630:1943120301:0601/6306,5321,769,59/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mimtptc:batch_mimtptc_gwinn_ver01:data:sn88063294:00340588630:1943120301:0601/6284,5778,689,80/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mimtptc:batch_mimtptc_gwinn_ver01:data:sn88063294:00340588630:1943120301:0601/6269,5879,864,1400/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "5f074a0e5fc45ccd4e78e0c3.jpg",
+   "1293c6e2fd69cfda74d55876.jpg",
+   "25a48580690a08b6a362d8c3.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1946,
+  "article_id": "8_1946-07-05_p1_sn83045462_00280604781_1946070501_0155.json",
+  "paper": "Evening star.",
+  "date": "1946-07-05",
+  "service": "service:ndnp:dlc:batch_dlc_2boccioni_ver01:data:sn83045462:00280604781:1946070501:0155",
+  "batch": "dlc_2boccioni_ver01",
+  "boxes": 2,
+  "display_headline": "Something for Everybody",
+  "first_lines": [
+   "There reading matter of interest to everybody in The",
+   "Sunday Star",
+   "With discussions results of the Bkin experiment",
+   "still unfolding of the Sunday feature has story",
+   "about THE League of Frightened Men the lobby of young",
+   "scientists who seeking to spread knowledge and under",
+   "standing of atomic energy. This Week Magazine supple",
+   "ment of The Sunday Star also contains 18th century"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_2boccioni_ver01:data:sn83045462:00280604781:1946070501:0155/2220,6152,825,88/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_2boccioni_ver01:data:sn83045462:00280604781:1946070501:0155/2208,6258,1203,1203/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "b318c0b924f165b5cc0f34e1.jpg",
+   "769694387c9f1e2ba4e10ca6.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1950,
+  "article_id": "3_1950-08-17_pna_sn85038220_00340580734_1950081701_0607.json",
+  "paper": "The Union County journal. [volume] (Marysville, Ohio) 1875-1951",
+  "date": "1950-08-17",
+  "service": "service:ndnp:ohi:batch_ohi_kaffirlily_ver01:data:sn85038220:00340580734:1950081701:0607",
+  "batch": "ohi_kaffirlily_ver01",
+  "boxes": 2,
+  "display_headline": "",
+  "first_lines": [
+   "REV. HObEhT n nAuE I~",
+   "Jobs, tbs Preacher Of RepsntSseS",
+   "L<ssoS for Aagast 20; Like 3: 7-2e",
+   "Memory Selection: Like 5: .",
+   ".YOFIN, the son Of priest and o",
+   "j kinsman of Jesus, dwelt in man",
+   "hood IN the wilderness of Judea.",
+   "dressing in skins and eating locusts"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ohi:batch_ohi_kaffirlily_ver01:data:sn85038220:00340580734:1950081701:0607/283,6477,672,57/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ohi:batch_ohi_kaffirlily_ver01:data:sn85038220:00340580734:1950081701:0607/227,6505,798,2079/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "8a04617c60deb1e2f8ee1b83.jpg",
+   "b028e6f77d8b89a17bb5e301.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "overlapping boxes repeat the byline"
+ },
+ {
+  "year": 1953,
+  "article_id": "2_1953-08-02_p79_sn83045462_00280606741_1953080201_0116.json",
+  "paper": "Evening star.",
+  "date": "1953-08-02",
+  "service": "service:ndnp:dlc:batch_dlc_dongiovanni_ver01:data:sn83045462:00280606741:1953080201:0116",
+  "batch": "dlc_dongiovanni_ver01",
+  "boxes": 1,
+  "display_headline": "",
+  "first_lines": [
+   "Are you a Misunderstanding",
+   "teen-ager with no math to catch",
+   "up on, no summer job to enslave",
+   "you?",
+   "Then, Hollywood's fam d",
+   "beauty expert, Max Factor. jr.,",
+   "suggests as home work some",
+   "summer courses to chalk up your"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_dongiovanni_ver01:data:sn83045462:00280606741:1953080201:0116/287,2584,681,1694/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "986131aa8c070a9f18a17ca6.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": null
+ },
+ {
+  "year": 1957,
+  "article_id": "24_1957-12-12_p1_sn83004278_00340581970_1957121201_0829.json",
+  "paper": "The Sidney herald.",
+  "date": "1957-12-12",
+  "service": "service:ndnp:mthi:batch_mthi_ivy_ver01:data:sn83004278:00340581970:1957121201:0829",
+  "batch": "mthi_ivy_ver01",
+  "boxes": 2,
+  "display_headline": "Fire Wipes Out Mondak\nSaturday. Ghost City\nReduced to Ashes",
+  "first_lines": [
+   "Once the Mecca for the law",
+   "less. Depopulated when the coun-",
+   "ty seat moved. Built in 1929 by",
+   "Kenneth Mckenzie as a trading",
+   "post for the American Fur Com",
+   "pany, it lacked but a few months",
+   "of rounding out a century.",
+   "October 4th, 1928"
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mthi:batch_mthi_ivy_ver01:data:sn83004278:00340581970:1957121201:0829/1766,1597,511,127/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:mthi:batch_mthi_ivy_ver01:data:sn83004278:00340581970:1957121201:0829/1766,1718,665,1650/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "bd7581c844200a6d52b5ae48.jpg",
+   "9a263886d02f632e5a597b7b.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the box runs on into the column's next item, as the OCR does"
+ },
+ {
+  "year": 1960,
+  "article_id": "3_1960-03-21_p5_sn84020662_00414185472_1960032101_0219.json",
+  "paper": "The Nome nugget.",
+  "date": "1960-03-21",
+  "service": "service:ndnp:ak:batch_ak_dungenesscrab_ver01:data:sn84020662:00414185472:1960032101:0219",
+  "batch": "ak_dungenesscrab_ver01",
+  "boxes": 3,
+  "display_headline": "Swallows Make Prompt Return to Capistrano",
+  "first_lines": [
+   "- 1A \" oO@hAN, i@AA AN| A AsA A@' W,",
+   "Calif., R = Swallows came back to this sleepy mission ham let right on schedule St. Joseph's Day Saturday..",
+   "Flights of the birds swooped down into the crumbling old mis- sion grounds just at daybreak. About 500 tourists were on hand as bellringer Choppo Valenuela pealed a welcome from the tower chimes for the swallows return ing from winter haunts in South America.",
+   "Later in the day, large throng of tourists crowded the old mis- sion grounds as the birds, some what annoyed at the disturance, scared and swung in the ruins looking for likely nesting places.",
+   "Strolling Mexican guitar play CTS further added to the annoy ance of the birds, who tradition ally return to the picturesque mis- sion every St. Joseph's Day."
+  ],
+  "crop_urls": [
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_dungenesscrab_ver01:data:sn84020662:00414185472:1960032101:0219/126,276,557,117/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_dungenesscrab_ver01:data:sn84020662:00414185472:1960032101:0219/447,403,277,38/pct:50/0/default.jpg",
+   "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_dungenesscrab_ver01:data:sn84020662:00414185472:1960032101:0219/130,429,598,916/pct:50/0/default.jpg"
+  ],
+  "crop_files": [
+   "473b4648cb4e4a7f0c0dba20.jpg",
+   "53117a04dba4fd1480519774.jpg",
+   "bda7b63d4e6f493820ed6628.jpg"
+  ],
+  "errors": [],
+  "verdict": "pass",
+  "reason": "the dateline is split between two boxes, and garbled in the OCR"
+ },
+ {
+  "year": 1964,
+  "article_id": "7_1964-11-06_p1_sn84021918_0041421695A_1964110601_0620.json",
+  "paper": "Arizona tribune.",
+  "date": "1964-11-06",
+  "service": null,
+  "batch": null,
+  "boxes": 3,
+  "display_headline": "Sights and Sounds\nELouse BANKS\nWhere and Why",
+  "first_lines": [
+   "your own Interpretation. We know",
+   "it, however, by its more popular",
+   "name Halloween.",
+   "During the past years indivi-",
+   "dually and group sponsored pro-",
+   "grams we're designed to take",
+   "some of the mischief and pranks",
+   "out of the celebration. Positive"
+  ],
+  "crop_urls": [],
+  "crop_files": [],
+  "errors": [
+   "loc.gov has no item for faro_1964/1964-11-06_p1_sn84021918_0041421695A_1964110601_0620.json"
+  ],
+  "verdict": "fail",
+  "reason": "no crop: the scan has no batch path, and loc.gov lists the Arizona Tribune (Phoenix, 1958-197?) but has no item for the 1964-11-06 issue, so no IIIF service can be named"
+ }
+]

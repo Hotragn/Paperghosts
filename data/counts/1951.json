@@ -1,0 +1,135 @@
+{
+  "year": 1951,
+  "lexicon_version": "v1",
+  "pages": 53199,
+  "articles": 708864,
+  "candidates": 1189,
+  "near_miss": 8034,
+  "by_term": {
+    "apparition": 17,
+    "banshee": 18,
+    "ghost": 616,
+    "goblin": 47,
+    "haunt": 354,
+    "phantom": 94,
+    "poltergeist": 1,
+    "rapping": 1,
+    "spectre": 61,
+    "spook": 36,
+    "wraith": 4
+  },
+  "only_by_term": {
+    "apparition": 16,
+    "banshee": 17,
+    "ghost": 570,
+    "goblin": 40,
+    "haunt": 318,
+    "phantom": 90,
+    "rapping": 1,
+    "spectre": 58,
+    "spook": 22,
+    "wraith": 3
+  },
+  "by_state": {
+    "Alaska": {
+      "pages": 3042,
+      "articles": 40458,
+      "candidates": 47
+    },
+    "Arizona": {
+      "pages": 568,
+      "articles": 4959,
+      "candidates": 6
+    },
+    "Arkansas": {
+      "pages": 415,
+      "articles": 7231,
+      "candidates": 17
+    },
+    "Delaware": {
+      "pages": 1000,
+      "articles": 15486,
+      "candidates": 20
+    },
+    "District of Columbia": {
+      "pages": 13980,
+      "articles": 185611,
+      "candidates": 352
+    },
+    "Florida": {
+      "pages": 2847,
+      "articles": 33987,
+      "candidates": 77
+    },
+    "Illinois": {
+      "pages": 117,
+      "articles": 1313,
+      "candidates": 4
+    },
+    "Maryland": {
+      "pages": 1819,
+      "articles": 26906,
+      "candidates": 37
+    },
+    "Massachusetts": {
+      "pages": 146,
+      "articles": 2324,
+      "candidates": 3
+    },
+    "Michigan": {
+      "pages": 916,
+      "articles": 7101,
+      "candidates": 10
+    },
+    "Minnesota": {
+      "pages": 606,
+      "articles": 10856,
+      "candidates": 33
+    },
+    "Mississippi": {
+      "pages": 1033,
+      "articles": 18307,
+      "candidates": 45
+    },
+    "Missouri": {
+      "pages": 23,
+      "articles": 0,
+      "candidates": 0
+    },
+    "Montana": {
+      "pages": 2351,
+      "articles": 22623,
+      "candidates": 36
+    },
+    "North Carolina": {
+      "pages": 951,
+      "articles": 13385,
+      "candidates": 16
+    },
+    "Ohio": {
+      "pages": 4416,
+      "articles": 81749,
+      "candidates": 83
+    },
+    "South Carolina": {
+      "pages": 4,
+      "articles": 43,
+      "candidates": 0
+    },
+    "Virginia": {
+      "pages": 244,
+      "articles": 3832,
+      "candidates": 26
+    },
+    "Washington": {
+      "pages": 747,
+      "articles": 8947,
+      "candidates": 15
+    },
+    "unknown": {
+      "pages": 17974,
+      "articles": 223746,
+      "candidates": 362
+    }
+  }
+}

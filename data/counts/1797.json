@@ -1,0 +1,26 @@
+{
+  "year": 1797,
+  "lexicon_version": "v1",
+  "pages": 73,
+  "articles": 871,
+  "candidates": 1,
+  "near_miss": 8,
+  "by_term": {
+    "haunt": 1
+  },
+  "only_by_term": {
+    "haunt": 1
+  },
+  "by_state": {
+    "Virginia": {
+      "pages": 1,
+      "articles": 11,
+      "candidates": 0
+    },
+    "West Virginia": {
+      "pages": 72,
+      "articles": 860,
+      "candidates": 1
+    }
+  }
+}

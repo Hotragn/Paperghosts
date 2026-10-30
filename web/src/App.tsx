@@ -6,9 +6,9 @@ const ARTICLE = '9_1850-07-26_p1_sn83032276_00296028587_1850072601_0265.json'
 type Article = {
   paper: string
   date: string
-  headline: string
+  display_headline: string
   text: string
-  crop_url: string
+  crop_urls: string[]
 }
 
 function App() {
@@ -34,9 +34,18 @@ function App() {
         padding: '1rem',
       }}
     >
-      <img src={article.crop_url} alt={article.text} style={{ width: '100%' }} />
+      <div>
+        {article.crop_urls.map((url, part) => (
+          <img
+            key={url}
+            src={url}
+            alt={`The clipping, part ${part + 1} of ${article.crop_urls.length}`}
+            style={{ width: '100%', display: 'block' }}
+          />
+        ))}
+      </div>
       <article>
-        <h1 style={{ whiteSpace: 'pre-line' }}>{article.headline}</h1>
+        <h1 style={{ whiteSpace: 'pre-line' }}>{article.display_headline}</h1>
         <p>
           {article.paper}, {article.date}
         </p>

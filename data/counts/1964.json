@@ -1,0 +1,21 @@
+{
+  "year": 1964,
+  "lexicon_version": "v1",
+  "pages": 450,
+  "articles": 2678,
+  "candidates": 2,
+  "near_miss": 20,
+  "by_term": {
+    "ghost": 2,
+    "haunt": 1,
+    "spook": 1
+  },
+  "only_by_term": {},
+  "by_state": {
+    "Arizona": {
+      "pages": 450,
+      "articles": 2678,
+      "candidates": 2
+    }
+  }
+}

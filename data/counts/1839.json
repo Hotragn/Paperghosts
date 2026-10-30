@@ -1,0 +1,124 @@
+{
+  "year": 1839,
+  "lexicon_version": "v1",
+  "pages": 9650,
+  "articles": 250101,
+  "candidates": 980,
+  "near_miss": 9498,
+  "by_term": {
+    "apparition": 23,
+    "banshee": 3,
+    "ghost": 267,
+    "goblin": 22,
+    "haunt": 487,
+    "knocking": 2,
+    "phantom": 178,
+    "rapping": 7,
+    "spectre": 61,
+    "spook": 2
+  },
+  "only_by_term": {
+    "apparition": 15,
+    "banshee": 3,
+    "ghost": 217,
+    "goblin": 18,
+    "haunt": 431,
+    "knocking": 2,
+    "phantom": 169,
+    "rapping": 7,
+    "spectre": 46,
+    "spook": 2
+  },
+  "by_state": {
+    "Connecticut": {
+      "pages": 197,
+      "articles": 2955,
+      "candidates": 15
+    },
+    "Delaware": {
+      "pages": 4,
+      "articles": 127,
+      "candidates": 0
+    },
+    "District of Columbia": {
+      "pages": 640,
+      "articles": 20019,
+      "candidates": 159
+    },
+    "Indiana": {
+      "pages": 94,
+      "articles": 2388,
+      "candidates": 10
+    },
+    "Iowa": {
+      "pages": 118,
+      "articles": 2688,
+      "candidates": 10
+    },
+    "Louisiana": {
+      "pages": 960,
+      "articles": 38057,
+      "candidates": 84
+    },
+    "Maine": {
+      "pages": 183,
+      "articles": 3968,
+      "candidates": 5
+    },
+    "Mississippi": {
+      "pages": 1483,
+      "articles": 31217,
+      "candidates": 170
+    },
+    "New York": {
+      "pages": 863,
+      "articles": 23410,
+      "candidates": 90
+    },
+    "North Carolina": {
+      "pages": 378,
+      "articles": 7020,
+      "candidates": 25
+    },
+    "Ohio": {
+      "pages": 458,
+      "articles": 13997,
+      "candidates": 42
+    },
+    "Pennsylvania": {
+      "pages": 410,
+      "articles": 7907,
+      "candidates": 15
+    },
+    "Rhode Island": {
+      "pages": 408,
+      "articles": 10553,
+      "candidates": 35
+    },
+    "South Carolina": {
+      "pages": 402,
+      "articles": 10474,
+      "candidates": 31
+    },
+    "Vermont": {
+      "pages": 1375,
+      "articles": 25431,
+      "candidates": 169
+    },
+    "Virginia": {
+      "pages": 1087,
+      "articles": 31407,
+      "candidates": 75
+    },
+    "West Virginia": {
+      "pages": 381,
+      "articles": 13847,
+      "candidates": 23
+    },
+    "unknown": {
+      "pages": 209,
+      "articles": 4636,
+      "candidates": 22
+    }
+  }
+}
