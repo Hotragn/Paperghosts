@@ -1,0 +1,151 @@
+<task-notification>
+<task-id>b4bv69syj</task-id>
+<tool-use-id>toolu_0198XkKv63xNn8MzshAx9Too</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b4bv69syj.output</output-file>
+<status>completed</status>
+<summary>Background command "Start the worker in its own process group" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bljxz4hdu</task-id>
+<tool-use-id>toolu_01GVeUd1cZEPw4XV1JFaQV39</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bljxz4hdu.output</output-file>
+<status>failed</status>
+<summary>Background command "Start a one-year ingest of 1850 for the orphan check" failed with exit code 2</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Keep 4 and let this run finish. Run the kill test in it. Three reasons:
+- Time isn't our constraint; the owner has said so.
+- One clean run gives clean kill-test evidence and a single wall time and throughput figure for the post. A terminated run plus a restart would mix two settings.
+- 8 CPU-bound processes would saturate the owner's laptop while they're using it. Of its 10 cores, 6 are efficiency cores, so the gain would be well short of 2×.
+
+In the 2A report, record per-process MB/s, the share of CPU left idle and the network MB/s, so a future full re-read (lexicon v2, if eval A finds misses) can set its concurrency from data. I checked that the hashed modules import only each other and the standard library, so the cache key covers everything that shapes the outputs.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>b8u1p8c0x</task-id>
+<tool-use-id>toolu_01T6SvN5zKpywHrRnwCkudNm</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b8u1p8c0x.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait until a year of 3 GB or more is partway through" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b92imrjoc</task-id>
+<tool-use-id>toolu_01CUvHubkpnCqsepFfGyn7Uk</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b92imrjoc.output</output-file>
+<status>completed</status>
+<summary>Background command "Start the full-run worker in its own process group" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bpu74j9gx</task-id>
+<tool-use-id>toolu_015SVPQPHjJx7G3ofiAGWsq7</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bpu74j9gx.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait until an in-flight year runs again as attempt 2" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bdty9uu6a</task-id>
+<tool-use-id>toolu_01897A5UVmDedx8B9AZ5Mnfi</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bdty9uu6a.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait until 1881–1884 are all on attempt 2" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bzlz70nkm</task-id>
+<tool-use-id>toolu_01DnN6q1GVxYxe2hrLtNgq8j</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bzlz70nkm.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait until the four retried years have finished" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Kill test 1 passes my review. The screenshots match the write-up, all 9 pids are gone, and only 1881–1884 re-ran as attempt 2. One fix to the write-up: 1872's first attempt ended at about 05:03, not 05:06. Its attempt 2 started at 05:03:08, so take the time from its failure event.
+
+Step 2A.5, the crop check. Build the code while the read finishes. crops.py isn't part of the hashed code, so the run is safe.
+1. Make one IIIF crop per box in `bbox_list`, in reading order. One bounding crop over all the boxes pulls in neighbouring columns on multi-column articles.
+2. Add a display headline that drops masthead lines (paper title, date, volume, page). The stored OCR stays untouched. Test it on real headlines from the years already read.
+3. Add a crop cache under `data/crops/`, keyed by IIIF URL. Fetch at most one request per second, with a User-Agent that names the project.
+
+Keep test runs light while the read is on, and note in the 2A report when they ran. When the read finishes, finish 2A.4 as specified and report it. Then run the check on 50 candidates chosen at random with a fixed seed, spread across all years, with no more than two from the same LoC batch. Save a contact sheet showing each crop beside the first lines of its OCR, record pass or fail with a reason for each candidate, and explain every failure. Reply with the pass rate, the failures and their causes, and the commit.
+</cross-session-message>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2A.5 so far looks right. The skeleton screenshot shows the three crops in reading order, and the masthead line is gone from the display headline while the OCR is untouched.
+
+One addition before the crop check. Twenty-five sampled drops can only show that mis-drops are under about 12%, which is too loose for text the site shows. Sample 200 dropped lines with a fixed seed, from candidate headlines only, since those are the ones the site shows. Report the precision with a 95% interval, and any rule change it leads to.
+
+With the word boundaries gone, short paper titles like Sun, Star, Bee and Post carry the most risk, so add tests where they sit inside real headline words. Put the result in the 2A report next to the crop check.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>b4pgx3tfk</task-id>
+<tool-use-id>toolu_01C3nvZ6chJi49cwJ5PWajsU</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b4pgx3tfk.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the full archive ingest over all 180 years" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bxebkg8lt</task-id>
+<tool-use-id>toolu_01JoxmzMTvMCnFnKve58gRNR</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bxebkg8lt.output</output-file>
+<status>completed</status>
+<summary>Background command "Restart the worker in a new process group" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>boj0twxw5</task-id>
+<tool-use-id>toolu_01PAHyDdF6vUH2JhxwizF4sp</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/boj0twxw5.output</output-file>
+<status>failed</status>
+<summary>Background command "Pick the 50 crop-check candidates and fetch their crops" failed with exit code 1</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>ba6rqt3qy</task-id>
+<tool-use-id>toolu_01QVRwDVYSW2i4kun1ZfYykT</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/ba6rqt3qy.output</output-file>
+<status>completed</status>
+<summary>Background command "Sample 200 dropped headline lines with a fixed seed" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>biff8unwv</task-id>
+<tool-use-id>toolu_01Lfj6sza5pG88tvJcDTnWLe</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/biff8unwv.output</output-file>
+<status>completed</status>
+<summary>Background command "Rerun the crop-check picks and fetches" completed (exit code 0)</summary>
+</task-notification>

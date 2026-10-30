@@ -1,0 +1,36 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M65TB339Z3PRN9NE59VN84HW",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-archive",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "eval/results/phase2a/skeleton-per-box.png",
+    "paperghosts/ingest/crops.py",
+    "paperghosts/ingest/headline.py",
+    "scripts/crop_check.py",
+    "scripts/headline_drops.py",
+    "scripts/load_skeleton.py",
+    "tests/test_crop_check.py",
+    "tests/test_crops.py",
+    "tests/test_headline.py",
+    "tests/test_headline_drops.py",
+    "web/src/App.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 974,
+    "cache_creation_tokens": 1514617,
+    "cache_read_tokens": 214556115,
+    "output_tokens": 1075859,
+    "api_call_count": 460
+  }
+}
