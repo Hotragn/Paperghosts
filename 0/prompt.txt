@@ -1,0 +1,9 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.5, environment facts: step 1.4 passed. Build `scripts/phase1_env.py`, which writes `eval/results/phase1_env.json` with the facts listed in `BUILD-PLAN.md` section 3.
+- **`faro_1850`:** one streamed pass measures download speed in MB/s and parse speed in pages and articles per second on one core. It also saves the Stratford "knockings" article to `data/skeleton/` for step 1.6.
+- **Atlas:** the tier and the storage limit and usage. Create and then drop one Search index and one Vector Search index on a scratch collection.
+- **Ultramarine:** one tiny completion, recording the usage and cost exactly as reported.
+- **Tinker:** the base models, and whether trained LoRA weights can be downloaded.
+- **Anything unknown** is `null` with a reason.
+Reply with the key numbers, then commit the script and the JSON.
+</cross-session-message>
