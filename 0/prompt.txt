@@ -1,0 +1,7 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.8, close Phase 1: CI is green on PR #1 (I checked once: python, web and secrets all pass), so step 1.7 passed. Finish item 8:
+- a STATUS block in `Docs/RESUME.md`, with numbers taken from `phase1_env.json`
+- a README that matches the make targets
+- `entire status`
+Then run the Phase 1 gate from `BUILD-PLAN.md` section 3 yourself, including `make setup && make test` in a fresh clone of the branch in a temp folder. Push, and reply with the gate checklist.
+</cross-session-message>
