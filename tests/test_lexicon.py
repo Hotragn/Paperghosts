@@ -1,5 +1,6 @@
-"""Lexicon v1 finds ghost terms and their OCR misreadings, leaves ordinary words alone, and
-sorts knocking-and-spirits articles without a ghost term into the near-miss pool."""
+"""The lexicon finds ghost terms and their OCR misreadings, leaves ordinary words alone, and
+sorts knocking-and-spirits articles without a ghost term into the near-miss pool. Version 2
+adds the spiritualist words of the reports version 1 missed (decision 31)."""
 
 import pytest
 
@@ -8,6 +9,7 @@ from paperghosts.ingest.lexicon import (
     GHOST_STEMS,
     NEAR_MISS,
     NEAR_MISS_STEMS,
+    TOGETHER,
     ghost_terms,
     near_miss_terms,
 )
@@ -15,7 +17,7 @@ from paperghosts.ingest.lexicon import (
 
 def test_every_term_has_precheck_stems():
     # a term with no stems would be skipped by the pre-check and lose its recall silently
-    assert GHOST_STEMS.keys() == GHOST.keys()
+    assert GHOST_STEMS.keys() == GHOST.keys() | TOGETHER.keys()
     assert NEAR_MISS_STEMS.keys() == NEAR_MISS.keys()
 
 
@@ -87,10 +89,41 @@ def test_ocr_misreadings_keep_their_spelling(scanned, term):
         "spirits of turpentine",
         "a silver goblet",
         "a spcck of dust",  # speck misread, the most common false spook in 1850
+        "a medium of exchange",
+        "the spirit of the age",
+        "the plans failed to materialize",
     ],
 )
 def test_ordinary_words_are_not_ghost_terms(text):
     assert ghost_terms(text) == {}
+
+
+@pytest.mark.parametrize(
+    ("text", "term"),
+    [
+        # lexicon v2: the words of eval A's missed reports, from 1856, 1898 and 1919
+        ("the spiritualists met", "spiritualism"),
+        ("Spiritualistic mediums are to be called", "spiritualism"),
+        ("a séance at Mrs. Hayden's", "seance"),
+        ("the disembodied spirit of the young man", "spirit_phrase"),
+        ("being under the control of spirits", "spirit_phrase"),
+        ("messages from the spirit world", "spirit_phrase"),
+        ("the spirits of the departed", "spirit_phrase"),
+        ("a ouija board", "ouija"),
+        ("the planchette wrote", "ouija"),
+    ],
+)
+def test_spiritualist_terms(text, term):
+    assert term in ghost_terms(text)
+    # and the pre-check's stems let each one through
+    assert ghost_terms(text) == ghost_terms(text, precheck=False)
+
+
+def test_spirit_and_medium_need_only_share_the_article():
+    # Mrs. Curran's words, as the New-York tribune printed them on 1919-11-15
+    text = "Patience chose her as a medium for her messages.\nno other spirit ever bothers me"
+    assert ghost_terms(text) == {"spirit+medium": ["medium", "spirit"]}
+    assert ghost_terms(text) == ghost_terms(text, precheck=False)
 
 
 @pytest.mark.parametrize(
