@@ -1,0 +1,32 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2A.5 passes my review. 48 of 50 crops pass and both failures are explained, and the verdicts I checked on contact sheet 3 match the scans. Taking the headline drops from 71.0% to 97.5% precision on 200 hand-judged lines was worth it.
+
+Two follow-ups, alongside eval A:
+1. **The last five headline mis-drops.** They are `IN DETROIT`, `1773.`, `April 4th.`, `NO. XXXVI.` and `4k.SATURDAY`.
+   - Drop a date or weekday line only when it matches the issue's own date, year or weekday. The record has the edition date.
+   - Don't treat `IN` + place as a masthead.
+   - Drop a number line only when it comes with the volume or the title.
+
+   Re-run the rule on the same 200 judged lines. Report how many mis-drops remain and how many correct drops are lost. Aim for zero mis-drops, and keep a masthead before you hide a real headline word.
+2. **Missing scans.** Crop 50 had no IIIF service because its scan has no batch path. In eval A, count candidates whose scan has no batch path, by year, so we know how many reports can't show a clipping. Record the stray-line box (crop 21) as a known limitation, with no fix.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bewehij3q</task-id>
+<tool-use-id>toolu_01XBJwHFdTXBsjRP2CgQ85gA</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bewehij3q.output</output-file>
+<status>completed</status>
+<summary>Background command "Compare the old and new headline rules over all candidates" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>brjkfhlb8</task-id>
+<tool-use-id>toolu_0124YMb6tXxYRzKDrG21eg2b</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/brjkfhlb8.output</output-file>
+<status>completed</status>
+<summary>Background command "Probe loc.gov for 100 seeded candidates with no batch path" completed (exit code 0)</summary>
+</task-notification>
