@@ -199,9 +199,14 @@ def parse_place(text):
             if content == "sic" or not content:
                 continue
             parts = [p.strip() for p in split_top(content, ",") if p.strip()]
+            parts = [p.removeprefix("i.e.").strip() for p in parts]
             after_place = printed_part and printed_part == found["place"]
+            after_state = printed_part and printed_part == found["state"]
             if len(parts) > 1 and after_place and not correction:
                 found["supplied_state"] = parts[-1] if is_state(parts[-1]) else None
+            elif len(parts) > 1 and after_state and is_state(parts[0]):
+                # "Dakota [Dakota Territory, i.e. S.D.]": the territory, then its state
+                found["supplied_state"] = parts[-1]
             elif len(parts) > 1:
                 found["supplied_place"] = parts[0]
                 if is_state(parts[-1]):

@@ -65,6 +65,9 @@ def test_a_title_gives_its_place_state_and_years():
          {"place": None, "state": None, "supplied_place": "Nashville", "supplied_state": "Tenn."}),
         ("Boise news. (Bannock City, I.T. [Idaho City, Idaho]) 1863-1864",
          {"place": "Bannock City", "state": "I.T.", "supplied_place": "Idaho City", "supplied_state": "Idaho"}),
+        # a bracket after the state that starts with a state supplies only a state, with i.e. inside
+        ("The Hot Springs star. (Hot Spings [Hot Springs], Dakota [Dakota Territory, i.e. S.D.]) 1886-189?",
+         {"place": "Hot Spings", "state": "Dakota", "supplied_place": "Hot Springs", "supplied_state": "S.D."}),
         # no comma before the state, a semicolon after it, an ampersand between two
         ("Cheraw gazette and Pee Dee farmer. [volume] (Cheraw S.C.) 1838-1839",
          {"place": "Cheraw", "state": "S.C."}),
