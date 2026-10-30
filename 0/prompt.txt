@@ -1,0 +1,6 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.7, CI and the pull request: step 1.6 passed, and the crop matches its text. Two notes for Phase 2A, not for now: one bounding crop is only correct for single-column articles, and AmericanStories headlines can include the page masthead. Now build item 7:
+- `.github/workflows/ci.yml`, running `ruff`, offline `pytest`, the web lint, typecheck and build, and a secret scan over the full git history.
+- Push `phase-1-scaffold`, open a pull request into `main`, and get CI green.
+Reply with the PR link and the CI run link.
+</cross-session-message>
