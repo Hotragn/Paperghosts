@@ -164,23 +164,25 @@ def test_a_ghost_town_counts_only_in_a_county_its_record_names(territories):
 
 
 @pytest.mark.parametrize(
-    ("town", "state", "counties", "recorded_state", "agrees"),
+    ("town", "state", "counties", "states", "agrees"),
     [
-        ("Charles Town", "West Virginia", ["jefferson"], "West Virginia", True),
-        ("Charles Town", "West Virginia", ["Jefferson County", "berkeley"], "West Virginia", True),
-        ("Charles Town", "West Virginia", ["berkeley"], "West Virginia", False),
+        ("Charles Town", "West Virginia", ["jefferson"], ["West Virginia"], True),
+        ("Charles Town", "West Virginia", ["Jefferson County", "berkeley"], ["West Virginia"], True),
+        ("Charles Town", "West Virginia", ["berkeley"], ["West Virginia"], False),
         # a county the record names in another state isn't the result's
-        ("Charles Town", "West Virginia", ["sully"], "South Dakota", False),
+        ("Charles Town", "West Virginia", ["sully"], ["South Dakota"], False),
+        # a paper that moved across a state line has both states
+        ("Charles Town", "West Virginia", ["sully", "jefferson"], ["South Dakota", "West Virginia"], True),
         # counties GeoNames doesn't have in the record's state can't be checked: Connecticut's,
         # which it files under planning regions now, and Alaska's, which loc.gov names after towns
-        ("Litchfield", "Connecticut", ["litchfield"], "Connecticut", None),
-        ("Seward", "Alaska", ["seward"], "Alaska", None),
-        ("Charles Town", "West Virginia", [], "West Virginia", None),
+        ("Litchfield", "Connecticut", ["litchfield"], ["Connecticut"], None),
+        ("Seward", "Alaska", ["seward"], ["Alaska"], None),
+        ("Charles Town", "West Virginia", [], ["West Virginia"], None),
     ],
 )  # fmt: skip
 def test_a_result_is_checked_against_the_counties_a_record_names(
-    territories, town, state, counties, recorded_state, agrees
+    territories, town, state, counties, states, agrees
 ):
     found = territories.geocode(town, state)
 
-    assert territories.same_county(found, counties, recorded_state) is agrees
+    assert territories.same_county(found, counties, states) is agrees

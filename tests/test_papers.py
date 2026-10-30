@@ -41,8 +41,14 @@ def title(place, state, modern):
     return {"place": place, "state": state, "modern_state": modern}
 
 
-def record(place, county, state):
-    return {"place": place, "state": state, "counties": [county] if county else []}
+def record(place, county, state, counties=None, states=None):
+    counties = counties or ([county] if county else [])
+    return {
+        "place": place,
+        "state": state,
+        "counties": counties,
+        "states": states or [state],
+    }
 
 
 def test_a_printed_place_in_its_records_county_stands(gazetteer):
@@ -51,6 +57,20 @@ def test_a_printed_place_in_its_records_county_stands(gazetteer):
         title("Charlestown", "Va.", "West Virginia"),
         record("Charles Town", "jefferson", "West Virginia"),
     )
+
+    assert found["place_id"] == 4801850 and found["record"] == "agrees"
+
+
+def test_a_paper_that_moved_across_a_state_line_is_checked_against_both(gazetteer):
+    # Zajedničar (Allegheny, Pa.): its record's place is Youngstown, Ohio, where it moved later
+    moved = record(
+        "Muscatine",
+        "muscatine",
+        "Iowa",
+        ["jefferson", "muscatine"],
+        ["West Virginia", "Iowa"],
+    )
+    found = paper_place(gazetteer, title("Charlestown", "Va.", "West Virginia"), moved)
 
     assert found["place_id"] == 4801850 and found["record"] == "agrees"
 

@@ -84,6 +84,7 @@ def test_a_record_gives_its_place_state_county_title_and_years():
             "item": {
                 "location_str": "Tucson, Arizona",
                 "location_county": ["santa cruz", "pima"],
+                "location_state": ["arizona"],
                 "title": "Weekly Arizonian (Tubac, Ariz.) 1859-1871",
                 "dates_of_publication": "1859-1871",
             }
@@ -96,6 +97,7 @@ def test_a_record_gives_its_place_state_county_title_and_years():
         "state": "Arizona",
         "county": "Santa Cruz",
         "counties": ["Santa Cruz", "Pima"],
+        "states": ["Arizona"],
         "title": "Weekly Arizonian (Tubac, Ariz.) 1859-1871",
         "years": "1859-1871",
     }

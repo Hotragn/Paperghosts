@@ -3,12 +3,13 @@ its loc.gov title record where it has one.
 
 1. The printed place is geocoded in its modern state: the cataloguer's bracketed place first,
    then the printed one.
-2. With a record that names counties, a result inside one of them stands.
+2. With a record that names counties, a result inside one of them, in one of its states,
+   stands.
 3. A result outside them, or no result at all, gives way to the record's place as catalogued
    today, geocoded in the record's county.
 4. Failing that, a ghost town of the record's name in the record's county, flagged historical.
 5. Failing that, no point: a pin that disagrees with the record is the dangerous kind of answer.
-A record that names no county GeoNames has in its state, as for Alaska's and Connecticut's
+A record that names no county GeoNames has in its states, as for Alaska's and Connecticut's
 places, can't check one: the printed place stands, or where that resolves to nothing, the
 record's own place, unchecked. Without a record, the printed place stands unchecked too. That's
 so for most papers until 2D asks for the records of the papers it stores (BUILD-PLAN.md).
@@ -45,7 +46,8 @@ def paper_place(gazetteer, title, given=None):
     if not given or not given.get("place"):
         return printed | {"record": "none"}
     counties = given.get("counties") or []
-    agrees = gazetteer.same_county(printed, counties, given["state"])
+    states = given.get("states") or [given["state"]]
+    agrees = gazetteer.same_county(printed, counties, states)
     if agrees is None:
         why = (
             "can't be checked against GeoNames' counties"
@@ -70,7 +72,7 @@ def paper_place(gazetteer, title, given=None):
     for county in counties:
         catalogued = gazetteer.geocode(given["place"], given["state"], county)
         if catalogued["place_id"] is not None and gazetteer.same_county(
-            catalogued, counties, given["state"]
+            catalogued, counties, states
         ):
             return catalogued | {"record": how}
     ghost = gazetteer.ghost(given["place"], given["state"], counties)

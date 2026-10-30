@@ -243,17 +243,19 @@ class Gazetteer:
         place, kind = min(found.values(), key=rank)
         return self.result(place) | {"matched": kind, "candidates": len(found)}
 
-    def same_county(self, found, counties, state):
-        """Whether a result lies in a county a title record names, in the record's state. None
-        where that can't be told: for a record that names no county GeoNames has in its state,
-        as for Alaska's, which loc.gov names after towns, or Connecticut's, which GeoNames now
-        files under planning regions."""
-        code = self.states.get((state or "").lower())
+    def same_county(self, found, counties, states):
+        """Whether a result lies in a county a title record names, in one of the record's
+        states. None where that can't be told: for a record that names no county GeoNames has
+        in its states, as for Alaska's, which loc.gov names after towns, or Connecticut's, which
+        GeoNames now files under planning regions."""
+        codes = {self.states.get(s.lower()) for s in states or []} - {None}
         wanted = {county_key(c) for c in counties or []}
-        if not any((code, county) in self.counties for county in wanted):
+        if not any(
+            (code, county) in self.counties for code in codes for county in wanted
+        ):
             return None
         return (
-            found.get("state") == code
+            found.get("state") in codes
             and county_key(found.get("county") or "") in wanted
         )
 
