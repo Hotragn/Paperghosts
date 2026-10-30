@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01PNm4uwXA6hJNLqBf6ks6KR",
+  "agent_id": "ac39e8cbc2a4f098a",
+  "subagent_type": "general-purpose",
+  "task_description": "Judge added-candidate batch 3",
+  "token_usage": {
+    "input_tokens": 10,
+    "cache_creation_tokens": 101908,
+    "cache_read_tokens": 304264,
+    "output_tokens": 23469,
+    "api_call_count": 5
+  },
+  "started_at": "2026-10-30T12:55:39.844392-04:00",
+  "completed_at": "2026-10-30T12:59:20.863809-04:00"
+}
