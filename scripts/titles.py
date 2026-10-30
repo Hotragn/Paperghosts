@@ -5,8 +5,9 @@ candidates:
   once and cached (`paperghosts.geo.loc`)
 - its state today, as most of its candidates' records give it, and the two shown together as
   "Charlestown, Va. (now W.Va.)"
-- its place as catalogued today, from any title record already cached, and the town's name
-  shown where that differs: "Bloomington, Iowa (now Muscatine)"
+- its place as catalogued today, from any title record already cached, and the record's town
+  shown where the record check puts the paper's point there (`paperghosts.geo.papers`): "East
+  Saginaw, Mich. (now Saginaw)". A paper that moved keeps its printed town.
 
 Writes data/titles/titles.json. Writes eval/results/phase2b/titles.json with the counts: where
 the places came from, and loc.gov's requests and cache hits."""
@@ -20,6 +21,8 @@ from pathlib import Path
 import zstandard
 
 from paperghosts.geo import loc
+from paperghosts.geo.geonames import Gazetteer
+from paperghosts.geo.papers import paper_place
 from paperghosts.geo.titles import parse_title, state_name, then_and_now
 from paperghosts.ingest.crops import MEMBER
 from paperghosts.schemas import Title
@@ -29,6 +32,8 @@ DATA = ROOT / "data"
 LOOKUP = DATA / "titles" / "titles.json"
 OUT = ROOT / "eval" / "results" / "phase2b" / "titles.json"
 PLACE = ("place", "supplied_place", "state", "supplied_state")
+# the record check's outcomes that put a paper's point at its record's place, checked
+FROM_THE_RECORD = {"replaced the printed place", "found what the printed place didn't"}
 
 
 def year_titles(path):
@@ -58,7 +63,7 @@ def most_complete(papers):
     )[0]
 
 
-def entry(lccn, papers, states):
+def entry(lccn, papers, states, gazetteer):
     modern = max((s for s in states if s), key=lambda s: (states[s], s), default=None)
     found = most_complete(papers) or parse_title(None)
     found = found | {
@@ -89,11 +94,11 @@ def entry(lccn, papers, states):
         if not found["years"] and given["years"]:
             found["years"] = given["years"]
         modern = modern or state_name(given["state"])
-    catalogued = given and given["place"]
-    found |= {
-        "modern_state": modern,
-        "then_and_now": then_and_now(found, modern, catalogued),
-    }
+    found["modern_state"] = modern
+    catalogued = None
+    if given and paper_place(gazetteer, found, given)["record"] in FROM_THE_RECORD:
+        catalogued = given["place"]
+    found["then_and_now"] = then_and_now(found, modern, catalogued)
     title = Title.model_validate({"_id": lccn, **found})
     return title.model_dump(by_alias=True, exclude_none=True)
 
@@ -115,8 +120,9 @@ def main():
                 m["papers"].update(e["papers"])
                 m["states"].update(e["states"])
                 m["candidates"] += e["candidates"]
+    gazetteer = Gazetteer()
     titles = {
-        lccn: entry(lccn, m["papers"], m["states"])
+        lccn: entry(lccn, m["papers"], m["states"], gazetteer)
         for lccn, m in sorted(merged.items())
     }
     LOOKUP.parent.mkdir(parents=True, exist_ok=True)
@@ -134,8 +140,13 @@ def main():
         "printed_state_differs_from_modern": sum(
             shown(t) != shown(t, t.get("modern_state")) for t in titles.values()
         ),
-        "town_catalogued_under_another_name": sum(
+        # renamed, merged or moved: the record names another town than the printed one
+        "catalogued_under_another_town": sum(
             shown(t) != shown(t, None, t.get("catalogued_place"))
+            for t in titles.values()
+        ),
+        "shown_with_the_records_town": sum(
+            t.get("then_and_now") != shown(t, t.get("modern_state"))
             for t in titles.values()
         ),
         "records_used": sum("catalogued_place" in t for t in titles.values()),

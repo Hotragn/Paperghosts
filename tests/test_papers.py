@@ -3,8 +3,11 @@ printed place in the record's county stands. One elsewhere, or one that resolves
 gives way to the record's place. A ghost town is accepted only in the record's county, and
 where nothing agrees with the record there is no point at all."""
 
+from collections import Counter
+
 import pytest
 
+from paperghosts.geo import loc
 from paperghosts.geo.geonames import Gazetteer
 from paperghosts.geo.papers import paper_place
 
@@ -153,3 +156,72 @@ def test_without_a_record_or_its_county_the_printed_place_stands(gazetteer):
         unchecked["place_id"] == 4848880
         and unchecked["record"] == "has no county to check"
     )
+
+
+def test_the_lookup_names_the_records_town_only_where_the_point_is_the_records(
+    gazetteer, tmp_path, monkeypatch
+):
+    import titles  # scripts/titles.py
+
+    def record_of(**location):
+        return {
+            "url": "https://www.loc.gov/item/x/?fo=json",
+            "retrieved": "2026-10-30T12:00:00+00:00",
+            "status": 200,
+            "body": {"item": location},
+        }
+
+    records = {
+        # renamed: Bloomington was Muscatine's name until 1849
+        "sn88059754": record_of(
+            location_str="Muscatine, Iowa",
+            location_county=["muscatine"],
+            location_state=["iowa"],
+        ),
+        # moved: like Zajedničar's, the record names where the paper went later, so the printed town stands
+        "sn84024547": record_of(
+            location_str="Muscatine, Iowa",
+            location_county=["jefferson", "muscatine"],
+            location_state=["west virginia", "iowa"],
+        ),
+    }
+    for lccn in records:
+        (tmp_path / f"{lccn}.json").write_text("{}")
+    asked = []
+    monkeypatch.setattr(loc, "CACHE", tmp_path)
+    monkeypatch.setattr(
+        loc,
+        "title_record",
+        lambda lccn, cache=None: asked.append(lccn) or records[lccn],
+    )
+
+    renamed = titles.entry(
+        "sn88059754",
+        Counter({"Muscatine journal. [volume] (Bloomington, Iowa) 1849-185?": 2}),
+        Counter({"Iowa": 2}),
+        gazetteer,
+    )
+    moved = titles.entry(
+        "sn84024547",
+        Counter({"Virginia free press. (Charlestown, Va. [W. Va.]) 1832-1916": 1}),
+        Counter({"West Virginia": 1}),
+        gazetteer,
+    )
+    uncached = titles.entry(
+        "sn84038114",
+        Counter({"Iowa state gazette. (Burlington, Iowa) 1847-1848": 1}),
+        Counter({"Iowa": 1}),
+        gazetteer,
+    )
+
+    assert renamed["then_and_now"] == "Bloomington, Iowa (now Muscatine)"
+    assert (
+        renamed["catalogued_place"] == "Muscatine"
+        and renamed["catalogued_county"] == "Muscatine"
+    )
+    assert (
+        moved["then_and_now"] == "Charlestown, Va. (now W.Va.)"
+        and moved["catalogued_place"] == "Muscatine"
+    )
+    # a record is asked for only where it's cached, for a paper whose title string names its place
+    assert asked == ["sn88059754", "sn84024547"] and "catalogued_place" not in uncached

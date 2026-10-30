@@ -1,8 +1,6 @@
 """loc.gov title records: one request each, cached with its URL and retrieval date, and a 404
 cached too; and the place, state and title a record gives."""
 
-from collections import Counter
-
 import httpx
 
 from paperghosts.geo import loc
@@ -102,45 +100,3 @@ def test_a_record_gives_its_place_state_county_title_and_years():
         "years": "1859-1871",
     }
     assert loc.recorded({"status": 404, "body": None}) is None
-
-
-def test_the_lookup_uses_a_cached_record_but_asks_only_for_a_paper_with_no_place(
-    tmp_path, monkeypatch
-):
-    import titles  # scripts/titles.py
-
-    record = {
-        "url": "https://www.loc.gov/item/sn87057062/?fo=json",
-        "retrieved": "2026-10-30T12:00:00+00:00",
-        "status": 200,
-        "body": {
-            "item": {
-                "location_str": "Muscatine, Iowa",
-                "location_county": ["muscatine"],
-            }
-        },
-    }
-    (tmp_path / "sn87057062.json").write_text("{}")
-    asked = []
-    monkeypatch.setattr(loc, "CACHE", tmp_path)
-    monkeypatch.setattr(
-        loc, "title_record", lambda lccn, cache=None: asked.append(lccn) or record
-    )
-    states = Counter({"Iowa": 2})
-
-    found = titles.entry(
-        "sn87057062",
-        Counter({"Muscatine journal. [volume] (Bloomington, Iowa) 1849-185?": 2}),
-        states,
-    )
-    assert found["source"] == "title string" and found["place"] == "Bloomington"
-    assert found["catalogued_place"] == "Muscatine"
-    assert found["catalogued_county"] == "Muscatine"
-    assert found["then_and_now"] == "Bloomington, Iowa (now Muscatine)"
-
-    uncached = titles.entry(
-        "sn84038114",
-        Counter({"Iowa state gazette. (Burlington, Iowa) 1847-1848": 1}),
-        states,
-    )
-    assert asked == ["sn87057062"] and "catalogued_place" not in uncached

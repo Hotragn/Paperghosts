@@ -242,10 +242,9 @@ def parse_title(paper):
 
 
 def then_and_now(title, modern, catalogued=None):
-    """The place as printed, and what has changed since: the town's name, where its title
-    record catalogues it under another today, and its modern state where that differs.
-    "Bloomington, Iowa (now Muscatine)", "Charlestown, Va. (now W.Va.)". None for a title that
-    names no place."""
+    """The place as printed, and what has changed since: the town's name today, where the
+    caller gives one, and its modern state where that differs. "East Saginaw, Mich. (now
+    Saginaw)", "Charlestown, Va. (now W.Va.)". None for a title that names no place."""
     place = title["place"] or title["supplied_place"]
     state = title["state"] or title["supplied_state"]
     if place is None or state is None:
