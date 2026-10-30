@@ -1,0 +1,3 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+EM addendum for 2A.8's judging of the 200; no other change to the brief. I re-checked the read: 180 manifests on 2d6ff0faaf81, which hashes the same as the committed 72ef622, attempt 1 everywhere, and 540 output hashes OK. Every v1 term's by_term count is unchanged. In the report, give each new rule's marginal yield as well as its share: the reports in the 200 that it catches and no other term catches, with Wilson intervals. The rules overlap, and in 2A.7's sample, spirit+medium caught no report the other rules missed. Don't tune or narrow any rule on the 200. I'll decide keep or drop per rule from those numbers.
+</cross-session-message>
