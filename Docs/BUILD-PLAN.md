@@ -84,11 +84,19 @@ How the build runs: five phases, each split into milestones, each milestone with
 - A storage budget built from real document sizes, and a written decision on what goes into Atlas.
 - The GeoNames geocoder and its manifest. The LCCN title parser, tested on at least 200 distinct titles.
 - The reprint-clustering design, and its evaluation set.
+- The reel-to-batch map (decision 29):
+  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 310,000 candidates.
+  - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
+  - Flag every reel that maps to more than one batch, such as a reissued ver01 and ver02.
+- No loc.gov lookups yet for the 25,595 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
+  - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
+  - Cache each answer, which `page_service` doesn't do yet, so no page is looked up twice.
 
 **Gate**
 - Schema tests pass, and `make db-init` can run twice.
 - The budget is written down.
 - Geocoder accuracy is measured on a sample.
+- The reel-to-batch map's hit rate on hidden batches is reported, and every reel with more than one batch is flagged.
 
 ### 2C: the reader
 **Persona:** ML specialist.
