@@ -1,0 +1,79 @@
+<task-notification>
+<task-id>b8s1x8nmz</task-id>
+<tool-use-id>toolu_01KGd5NwKxA8MiMHsYXLDXEe</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b8s1x8nmz.output</output-file>
+<status>completed</status>
+<summary>Background command "Build the full title lookup, fetching the remaining records" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+EM review of 2B.2 so far. The parser fixtures and the 200 geocoded pairs I sampled are right, and so is the third budget scenario. The only wrong answer is the dangerous kind, a pin in the wrong town (Bloomington, Iowa), and the LoC record can catch those. Changes:
+1. **Paper places come from the title record first.** loc.gov's item gives `location_city`, `location_county` and `location_state` as catalogued today. Where a record exists:
+   - Geocode its city, county and state. Keep the printed place for display ("Bloomington, Iowa, now Muscatine").
+   - Check that GeoNames' county (admin2) is the record's county. On a mismatch, take the record's place, and count those.
+   - This also settles the merged towns, which are catalogued under their successors: East Saginaw, Lardo, New Oregon.
+2. **Measure it now:** fetch the records for the 200 pairs' LCCNs and rerun the accuracy with and without the check. Queue that after the current fetch, never alongside it: one request every 3.5 s in all.
+3. **The rest of the LCCNs:** fetch them in 2D, only for those among stored printings (decision 29's pattern), cached. Add that to the plan.
+4. **Inputs:** add GeoNames' PR.zip, and any other territory the titles name, to the inputs and the manifest.
+5. **Ghost towns:** accept "(historical)" class S features only when the record's county matches, flagged as historical. Clifton, S.D. is the case.
+6. **For 2C and 2D (plan note):** a story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved. Never fall back on the paper's state, which was right for only 1 of the 3 here. Measure this on the 2C gold set.
+Then the gate as briefed, with the accuracy with and without the record check.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bkye7nzvk</task-id>
+<tool-use-id>toolu_0187f3ixML3TPF4vggNRKqnz</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bkye7nzvk.output</output-file>
+<status>completed</status>
+<summary>Background command "Lint, then rebuild the title lookup" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bsbnjw9f7</task-id>
+<summary>Monitor event: "queued record fetch, lookup rebuild and accuracy reruns finishing"</summary>
+<event>titles-run: exit 0; 0 tracebacks</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bsbnjw9f7</task-id>
+<summary>Monitor event: "queued record fetch, lookup rebuild and accuracy reruns finishing"</summary>
+<event>[Monitor expired after 30m with 1 event delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>buwkzyp7q</task-id>
+<summary>Monitor event: "accuracy run, lookup rebuild and accuracy rerun finishing"</summary>
+<event>geocheck-run: exit 0; 0 tracebacks
+titles-rerun: exit 0; 0 tracebacks</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bzb08rvc4</task-id>
+<tool-use-id>toolu_015CYmszYwJBdwsBdRcwfNyw</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bzb08rvc4.output</output-file>
+<status>completed</status>
+<summary>Background command "After the current fetch, fetch the pairs' records and rerun" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>buwkzyp7q</task-id>
+<tool-use-id>toolu_01MsDmPck9tNtLXJgtewuNM4</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/buwkzyp7q.output</output-file>
+<status>completed</status>
+<summary>Monitor "accuracy run, lookup rebuild and accuracy rerun finishing" stream ended</summary>
+<event>geocheck-rerun: exit 0; 0 tracebacks</event>
+</task-notification>
