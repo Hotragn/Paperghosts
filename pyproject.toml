@@ -5,9 +5,11 @@ description = "Ghost reports printed in US newspapers, 1774-1963, read from the 
 requires-python = "==3.12.*"
 dependencies = [
     "httpx>=0.28.1",
+    "orjson>=3.13.0",
     "pymongo>=4.19.0",
     "sentry-sdk>=2.73.0",
     "temporalio>=1.35.0",
+    "tinker>=0.36.0",
 ]
 
 [build-system]
