@@ -81,27 +81,38 @@ The size of the top of the range, 57,744 stories with 95,203 printings, as each 
 
 ## How many stories fit with full text
 
-The top of decisions 30 and 31's intervals is 74,027 + 21,176 = **95,203 report printings**. Two scenarios:
+The top of decisions 30 and 31's intervals is 74,027 + 21,176 = **95,203 report printings**. Three scenarios:
 - **v1's ratio** of 22,300 stories to 36,766 printings (decision 27) gives 57,744 stories.
+- **The judged reports' ratio, by pool,** gives 61,960 stories (`scripts/budget_stories.py`, `eval/results/phase2b/budget_stories.json`).
+  - Each judged report counts as 1/k of a story when its v2 reprint cluster holds k printings.
+  - **v1's candidates:** eval A's 7 have clusters of 1, 1, 1, 13, 30, 1 and 7, so 0.608 stories per printing. That's decision 27's ratio again: 74,027 printings give 44,978 stories.
+  - **The candidates v2 added:** 2A.8's 14 and 3 of the screen's 4 have 12 clusters of 1, then 2, 2, 3, 5 and 10. That's 0.802 stories per printing: 21,176 printings give 16,982 stories.
+  - The spiritualist reports v2 adds are reprinted less often, so the same printings make more stories.
 - **The worst case** is one story per printing: 95,203 stories.
 
 | Variant | Scenario | Needs | Fits with `sample_mflix` (350.5 MB) | Fits without it (499.4 MB) | Stories that fit, with / without |
 |---|---|---|---|---|---|
 | As stored | v1's ratio | 430.5 MB | no | **yes** | 47,007 / 66,975 |
+| As stored | the judged reports' ratio | 458.8 MB | no | **yes** | 47,330 / 67,436 |
 | As stored | one story per printing | 681.8 MB | no | no | 48,941 / 69,732 |
 | int8 embedding | v1's ratio | 364.0 MB | no | yes | 55,597 / 79,215 |
+| int8 embedding | the judged reports' ratio | 387.4 MB | no | yes | 56,050 / 79,860 |
 | int8 embedding | one story per printing | 572.1 MB | no | no | 58,324 / 83,100 |
 | The three | v1's ratio | 413.4 MB | no | yes | 48,947 / 69,761 |
+| The three | the judged reports' ratio | 441.5 MB | no | yes | 49,181 / 70,095 |
 | The three | one story per printing | 662.6 MB | no | no | 50,333 / 71,737 |
 | The three, with int8 | v1's ratio | 346.9 MB | yes, with 3.6 MB to spare | yes | 58,343 / 83,152 |
+| The three, with int8 | the judged reports' ratio | 370.1 MB | no | yes | 58,676 / 83,627 |
 | The three, with int8 | one story per printing | 552.9 MB | no | no | 60,323 / 85,974 |
+
+**The judged reports' ratio changes one conclusion.** At v1's ratio, every lever, int8 included, just fits beside `sample_mflix`. At the judged ratio nothing does: the smallest form needs 370.1 MB of the 350.5 MB free. Without `sample_mflix`, every form fits, as before.
 
 At the point estimates, the needs are much smaller: 36,766 + 12,996 = 49,762 printings, so 30,183 stories at v1's ratio.
 
-| Variant | v1's ratio | One story per printing |
-|---|---|---|
-| As stored | 225.0 MB: fits either way | 356.4 MB: fits only without `sample_mflix` |
-| The three | 216.3 MB: fits either way | 346.5 MB: fits either way |
+| Variant | v1's ratio | The judged reports' ratio (32,761 stories) | One story per printing |
+|---|---|---|---|
+| As stored | 225.0 MB: fits either way | 242.3 MB: fits either way | 356.4 MB: fits only without `sample_mflix` |
+| The three | 216.3 MB: fits either way | 233.4 MB: fits either way | 346.5 MB: fits either way |
 
 **Not in these figures:**
 - **Places, cases and stats.** They aren't built yet, but they are small. The tests' example documents are 251 bytes for a place, 272 for a stat and 1,774 for a case. So even 20,000 places, with their 2dsphere index, take a few MB.
@@ -109,7 +120,7 @@ At the point estimates, the needs are much smaller: 36,766 + 12,996 = 49,762 pri
 
 ## Options for the owner
 
-At the top of the range, the full text fits on M0 only without `sample_mflix`, or with every lever including int8 and 1% to spare. In the worst case of one story per printing, it doesn't fit on M0 at all. Every option keeps the text and the search whole.
+At the top of the range, the full text fits on M0 only without `sample_mflix`. At v1's ratio it also fits with every lever, int8 included, but with only 1% to spare, and at the judged reports' ratio not even then. In the worst case of one story per printing, it doesn't fit on M0 at all. Every option keeps the text and the search whole.
 
 1. **Drop `sample_mflix`.** It's free, and it frees 148.9 MB and the third Search slot that `places_search` waits for. Then the top of the range at v1's ratio fits as stored. The owner's call.
 2. **Take the three lossless levers:** int16 boxes, the title lookup, and the derived headline. They save 17 MB at the top of the range. int8 saves 66.5 MB more, but only after 2D's check of its neighbours on real embeddings.
