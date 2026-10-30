@@ -377,6 +377,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "httpx" },
+    { name = "numpy" },
     { name = "orjson" },
     { name = "pymongo" },
     { name = "sentry-sdk" },
@@ -396,6 +397,7 @@ dev = [
 requires-dist = [
     { name = "fastapi", specifier = ">=0.162.0" },
     { name = "httpx", specifier = ">=0.28.1" },
+    { name = "numpy", specifier = ">=2.5.4" },
     { name = "orjson", specifier = ">=3.13.0" },
     { name = "pymongo", specifier = ">=4.19.0" },
     { name = "sentry-sdk", specifier = ">=2.73.0" },
