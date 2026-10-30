@@ -1,0 +1,17 @@
+{
+  "year": 1777,
+  "lexicon_version": "v1",
+  "pages": 144,
+  "articles": 933,
+  "candidates": 0,
+  "near_miss": 26,
+  "by_term": {},
+  "only_by_term": {},
+  "by_state": {
+    "Rhode Island": {
+      "pages": 144,
+      "articles": 933,
+      "candidates": 0
+    }
+  }
+}

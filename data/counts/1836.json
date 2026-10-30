@@ -1,0 +1,110 @@
+{
+  "year": 1836,
+  "lexicon_version": "v1",
+  "pages": 5075,
+  "articles": 112837,
+  "candidates": 391,
+  "near_miss": 5108,
+  "by_term": {
+    "apparition": 6,
+    "ghost": 166,
+    "goblin": 6,
+    "haunt": 156,
+    "phantom": 41,
+    "rapping": 3,
+    "spectre": 38,
+    "wraith": 1
+  },
+  "only_by_term": {
+    "apparition": 4,
+    "ghost": 151,
+    "goblin": 5,
+    "haunt": 139,
+    "phantom": 36,
+    "rapping": 3,
+    "spectre": 28,
+    "wraith": 1
+  },
+  "by_state": {
+    "Arkansas": {
+      "pages": 104,
+      "articles": 2097,
+      "candidates": 10
+    },
+    "Connecticut": {
+      "pages": 158,
+      "articles": 2027,
+      "candidates": 22
+    },
+    "Delaware": {
+      "pages": 4,
+      "articles": 124,
+      "candidates": 1
+    },
+    "Indiana": {
+      "pages": 205,
+      "articles": 4992,
+      "candidates": 12
+    },
+    "Iowa": {
+      "pages": 120,
+      "articles": 2113,
+      "candidates": 17
+    },
+    "Michigan": {
+      "pages": 103,
+      "articles": 3100,
+      "candidates": 2
+    },
+    "Mississippi": {
+      "pages": 47,
+      "articles": 1029,
+      "candidates": 5
+    },
+    "New York": {
+      "pages": 230,
+      "articles": 4661,
+      "candidates": 11
+    },
+    "North Carolina": {
+      "pages": 280,
+      "articles": 4608,
+      "candidates": 6
+    },
+    "Ohio": {
+      "pages": 347,
+      "articles": 5572,
+      "candidates": 10
+    },
+    "Rhode Island": {
+      "pages": 405,
+      "articles": 9899,
+      "candidates": 34
+    },
+    "South Carolina": {
+      "pages": 392,
+      "articles": 8064,
+      "candidates": 28
+    },
+    "Vermont": {
+      "pages": 831,
+      "articles": 16084,
+      "candidates": 92
+    },
+    "Virginia": {
+      "pages": 1149,
+      "articles": 30438,
+      "candidates": 82
+    },
+    "West Virginia": {
+      "pages": 505,
+      "articles": 14269,
+      "candidates": 38
+    },
+    "unknown": {
+      "pages": 195,
+      "articles": 3760,
+      "candidates": 21
+    }
+  }
+}

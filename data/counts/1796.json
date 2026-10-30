@@ -1,0 +1,21 @@
+{
+  "year": 1796,
+  "lexicon_version": "v1",
+  "pages": 68,
+  "articles": 497,
+  "candidates": 1,
+  "near_miss": 5,
+  "by_term": {
+    "phantom": 1
+  },
+  "only_by_term": {
+    "phantom": 1
+  },
+  "by_state": {
+    "West Virginia": {
+      "pages": 68,
+      "articles": 497,
+      "candidates": 1
+    }
+  }
+}

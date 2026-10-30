@@ -1,0 +1,25 @@
+{
+  "year": 1896,
+  "source": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a/faro_1896.tar.gz",
+  "bytes_read": 5862827101,
+  "dataset_revision": "77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a",
+  "lexicon_version": "v1",
+  "code_version": "404315384762",
+  "started_at": "2026-10-30T05:29:04+00:00",
+  "finished_at": "2026-10-30T05:36:54+00:00",
+  "seconds": 470.2,
+  "attempt": 1,
+  "articles": 5944944,
+  "candidates": 17966,
+  "output_bytes": {
+    "candidates": 24419877,
+    "samples": 3668859,
+    "counts": 5422
+  },
+  "output_sha256": {
+    "candidates": "7ce5df2ce0f02b7a068826aab3b0577fcc6cb1c862ce423b3633f2dd1b120795",
+    "samples": "6d001fbc3be335d978cd31f5675e69517d6aa05d8dd8f6628d230d31700bf757",
+    "counts": "992ee4d14c051c265f79e23fb4727ec6cba5e8dc498280ddacbfc82eee7d0c67"
+  },
+  "peak_rss_bytes": 388399104
+}

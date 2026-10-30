@@ -1,0 +1,21 @@
+{
+  "year": 1770,
+  "lexicon_version": "v1",
+  "pages": 58,
+  "articles": 191,
+  "candidates": 1,
+  "near_miss": 4,
+  "by_term": {
+    "phantom": 1
+  },
+  "only_by_term": {
+    "phantom": 1
+  },
+  "by_state": {
+    "Massachusetts": {
+      "pages": 58,
+      "articles": 191,
+      "candidates": 1
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "year": 1798,
+  "lexicon_version": "v1",
+  "pages": 208,
+  "articles": 2067,
+  "candidates": 10,
+  "near_miss": 89,
+  "by_term": {
+    "goblin": 4,
+    "haunt": 4,
+    "phantom": 2
+  },
+  "only_by_term": {
+    "goblin": 4,
+    "haunt": 4,
+    "phantom": 2
+  },
+  "by_state": {
+    "Delaware": {
+      "pages": 24,
+      "articles": 41,
+      "candidates": 0
+    },
+    "Maine": {
+      "pages": 140,
+      "articles": 1586,
+      "candidates": 10
+    },
+    "Virginia": {
+      "pages": 34,
+      "articles": 415,
+      "candidates": 0
+    },
+    "unknown": {
+      "pages": 10,
+      "articles": 25,
+      "candidates": 0
+    }
+  }
+}

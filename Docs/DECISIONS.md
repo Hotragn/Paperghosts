@@ -115,3 +115,17 @@ The download runs in its own process and hands chunks to the parser, which count
 
 **24. Temporal identities name the process and its role, not the host.**
 The SDK's default identity is `pid@hostname`, and Temporal keeps it in every workflow's history, which the kill test's screenshots show. Like Sentry's `server_name` (decision 15), the worker, `make ingest` and `make smoke` use `pid@paperghosts-{role}` instead.
+
+**25. The full read ran four years at a time, each on one CPU-bound core. A re-read can set its concurrency from these numbers.**
+- All 180 year files, 340.4 GB at revision `77e27fa6`, took 118.6 min on 2026-10-30: an aggregate 47.8 MB/s. Every manifest's `bytes_read` equals the listed size, no year failed, and no partial file was left.
+- 370,313,913 articles gave 1,050,459 candidates. The outputs take 1.94 GB (candidates 1.34 GB, samples 0.59 GB), and the highest peak memory was 535 MB (1910).
+- Each year process is CPU-bound on one core: 12.8 MB/s at the median over the 87 years above 1 GB, with a range of 11.0–15.6. With four running, the network carried 55 MB/s at the median of minute samples (50–57 for the middle 80%), and 43% of the CPU stayed idle (35–45%). Alone, a year runs nearly twice as fast: 1850 took 46.8 s by itself and 85.7 s beside three others.
+- Concurrency stayed at four:
+  - Time isn't the constraint.
+  - One clean run gives one wall time and clean kill-test evidence.
+  - Eight CPU-bound processes would saturate the owner's laptop while they use it, for well short of 2×, because 6 of its 10 cores are efficiency cores.
+- Six years ran twice:
+  - The streams for 1872 and 1889 ended partway through a page (`tarfile.ReadError: unexpected end of data`).
+  - Kill test 1's SIGKILL cost 1881–1884 their first attempts (`eval/results/phase2a/kill-test-1.md`).
+  - Each retry read its whole file again, because a gzip stream can't seek.
+- 1850 reproduces. With its candidates file moved aside, a rerun wrote all three outputs byte-identical, with the same sha256 as the committed manifest.

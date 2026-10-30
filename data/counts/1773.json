@@ -1,0 +1,23 @@
+{
+  "year": 1773,
+  "lexicon_version": "v1",
+  "pages": 160,
+  "articles": 1475,
+  "candidates": 5,
+  "near_miss": 45,
+  "by_term": {
+    "ghost": 3,
+    "haunt": 2
+  },
+  "only_by_term": {
+    "ghost": 3,
+    "haunt": 2
+  },
+  "by_state": {
+    "Massachusetts": {
+      "pages": 160,
+      "articles": 1475,
+      "candidates": 5
+    }
+  }
+}

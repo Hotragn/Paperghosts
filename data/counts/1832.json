@@ -1,0 +1,78 @@
+{
+  "year": 1832,
+  "lexicon_version": "v1",
+  "pages": 4265,
+  "articles": 88494,
+  "candidates": 327,
+  "near_miss": 4210,
+  "by_term": {
+    "apparition": 7,
+    "ghost": 94,
+    "goblin": 5,
+    "haunt": 142,
+    "phantom": 61,
+    "rapping": 2,
+    "spectre": 37
+  },
+  "only_by_term": {
+    "apparition": 6,
+    "ghost": 82,
+    "goblin": 4,
+    "haunt": 131,
+    "phantom": 57,
+    "rapping": 2,
+    "spectre": 27
+  },
+  "by_state": {
+    "Arkansas": {
+      "pages": 108,
+      "articles": 1945,
+      "candidates": 8
+    },
+    "Connecticut": {
+      "pages": 153,
+      "articles": 1909,
+      "candidates": 16
+    },
+    "Delaware": {
+      "pages": 88,
+      "articles": 1289,
+      "candidates": 9
+    },
+    "Illinois": {
+      "pages": 120,
+      "articles": 2296,
+      "candidates": 12
+    },
+    "Massachusetts": {
+      "pages": 199,
+      "articles": 5957,
+      "candidates": 34
+    },
+    "Mississippi": {
+      "pages": 42,
+      "articles": 802,
+      "candidates": 2
+    },
+    "Rhode Island": {
+      "pages": 420,
+      "articles": 8415,
+      "candidates": 47
+    },
+    "Virginia": {
+      "pages": 2628,
+      "articles": 55670,
+      "candidates": 157
+    },
+    "West Virginia": {
+      "pages": 320,
+      "articles": 7144,
+      "candidates": 25
+    },
+    "unknown": {
+      "pages": 187,
+      "articles": 3067,
+      "candidates": 17
+    }
+  }
+}
