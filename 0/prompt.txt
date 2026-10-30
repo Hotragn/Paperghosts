@@ -1,0 +1,22 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2B.1 passes my review, with `places_search` pending the owner. I re-ran the tests (237), lint and db-init ("nothing to change"), and BUDGET.md's arithmetic checks out. Good, honest budget. I'm taking `sample_mflix` to the owner now. Don't touch it.
+
+Phase 2B.2: titles, title records and the geocoder. Same branch.
+0. **BUDGET.md, a third scenario.** v1's 0.61 stories per printing rests on 7 reports. Add the ratio from the 24 judged reports, weighting each by 1/k of its cluster, by pool: v1's candidates, and v2's added ones. Use those to give the top of the range in stories, and say whether the conclusions change.
+1. **Title parser:** turn `paper` strings such as `Eureka daily sentinel. [volume] (Eureka, Nev.) 1871-1887` into the title, the place and the state as printed, and the years. Handle `[volume]`, `[microfilm reel]`, `(New Orleans [La.])`, D.C. and titles with no place. Test it on at least 200 distinct titles drawn at random from the 3,336 LCCNs, each with its expected output checked by hand.
+2. **LoC title records,** only for LCCNs whose title gives no place or state:
+   - one request each, every 3.5 s, cached on disk with the URL and the retrieval date
+   - count the requests and the cache hits
+   - fill the title lookup by LCCN from BUDGET.md
+3. **Then and now:** keep the state as printed beside the modern state, so the site can say "Charlestown, Va. (now W.Va.)". Test 1835 Charlestown.
+4. **GeoNames geocoder:**
+   - Use the US dump, with a manifest that records the source URL, the date, the sha256 and the CC BY 4.0 licence.
+   - Resolve a town and state to an ID and a point. Use alternate names and historical places, and break ties by a written rule.
+   - Unresolved places get no point, with a reason. Every result records `location_precision: town` and its source.
+5. **Accuracy:**
+   - a seeded 200 of the papers' (place, state) pairs, checked by hand
+   - the 24 judged reports' story places, read from their text, as an early look at the places the reader will extract
+   - Wilson intervals, and each failure's kind written down
+
+Gate: the parser tests pass on at least 200 titles; the geocoder's accuracy has its intervals and failure kinds; the manifest is complete; every loc.gov request was cached and counted. Then report back, before 2B.3 (the reel-to-batch map and the page check).
+</cross-session-message>

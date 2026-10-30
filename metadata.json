@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M670Z6PF8BXNR7Y9F83F4W3X",
+  "strategy": "manual-commit",
+  "branch": "phase-2b-data-layer",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/BUDGET.md",
+    "scripts/budget_stories.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 18,
+    "cache_creation_tokens": 24694,
+    "cache_read_tokens": 5540392,
+    "output_tokens": 18284,
+    "api_call_count": 8
+  }
+}
