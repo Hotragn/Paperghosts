@@ -39,18 +39,26 @@ def compare(v1, v2, new):
     }
 
 
-def summarise_rules(sample, added):
+def summarise_rules(sample, holding, alone, total):
     """Each rule's share of the judged sample, its report rate, and the reports it gains among
-    the added candidates holding it; a rule with no report in its share is flagged."""
+    the added candidates holding it; a rule with no report in its share is flagged. Then its
+    marginal yield, the reports only it catches: over the whole sample, and over its sampled
+    articles that hold no other term."""
+    judged = [s for s in sample if s["ghost_report"] is not None]
     out = {}
-    for rule, held in added.items():
-        judged = [
-            s for s in sample if rule in s["terms"] and s["ghost_report"] is not None
-        ]
-        found = sum(bool(s["ghost_report"]) for s in judged)
-        out[rule] = {"added": held, "n": len(judged), "no_report": not found}
-        if judged:
-            out[rule] |= rate(found, len(judged), held)
+    for rule, held in holding.items():
+        mine = [s for s in judged if rule in s["terms"]]
+        only = [s for s in mine if len(s["terms"]) == 1]
+        found = sum(bool(s["ghost_report"]) for s in mine)
+        caught = sum(bool(s["ghost_report"]) for s in only)
+        out[rule] = {"added": held, "n": len(mine), "no_report": not found}
+        if mine:
+            out[rule] |= rate(found, len(mine), held)
+        out[rule]["marginal"] = rate(caught, len(judged), total)
+        if only:
+            out[rule]["only"] = {"added": alone[rule]} | rate(
+                caught, len(only), alone[rule]
+            )
     return out
 
 
@@ -258,7 +266,10 @@ def main():
         found = sum(bool(i["ghost_report"]) for i in judged)
         report["added"] |= rate(found, len(judged), len(added))
         report["added"]["by_rule"] = summarise_rules(
-            items, {t: holding[t] for t in new}
+            items,
+            {t: holding[t] for t in new},
+            {t: alone[t] for t in new},
+            len(added),
         )
         report["added"]["reports"] = [
             {k: i[k] for k in ("article_id", "year", "date", "paper", "terms", "note")}

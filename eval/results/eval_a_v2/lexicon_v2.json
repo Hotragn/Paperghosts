@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T17:05:55+00:00",
+ "generated_at": "2026-10-30T17:15:46+00:00",
  "checks": {
   "years": 180,
   "code_versions": [
@@ -112,7 +112,28 @@
     "high": 0.18087392330676672,
     "implied": 6652,
     "implied_low": 3427,
-    "implied_high": 12333
+    "implied_high": 12333,
+    "marginal": {
+     "count": 4,
+     "n": 200,
+     "share": 0.02,
+     "low": 0.007804300176394188,
+     "high": 0.050287865505193874,
+     "implied": 3713,
+     "implied_low": 1449,
+     "implied_high": 9337
+    },
+    "only": {
+     "added": 54411,
+     "count": 4,
+     "n": 64,
+     "share": 0.0625,
+     "low": 0.024570803674792932,
+     "high": 0.14997696642496888,
+     "implied": 3401,
+     "implied_low": 1337,
+     "implied_high": 8160
+    }
    },
    "seance": {
     "added": 30466,
@@ -124,7 +145,28 @@
     "high": 0.24130831200194466,
     "implied": 3207,
     "implied_low": 1270,
-    "implied_high": 7352
+    "implied_high": 7352,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 21656,
+     "count": 2,
+     "n": 28,
+     "share": 0.07142857142857142,
+     "low": 0.019811647447770794,
+     "high": 0.2264573842591786,
+     "implied": 1547,
+     "implied_low": 429,
+     "implied_high": 4904
+    }
    },
    "spirit_phrase": {
     "added": 35695,
@@ -136,7 +178,28 @@
     "high": 0.24708846415167163,
     "implied": 3859,
     "implied_low": 1530,
-    "implied_high": 8820
+    "implied_high": 8820,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 24537,
+     "count": 2,
+     "n": 24,
+     "share": 0.08333333333333333,
+     "low": 0.023158327842973503,
+     "high": 0.258492152014506,
+     "implied": 2045,
+     "implied_low": 568,
+     "implied_high": 6343
+    }
    },
    "ouija": {
     "added": 5855,
@@ -148,7 +211,28 @@
     "high": 0.3903430336530645,
     "implied": 0,
     "implied_low": 0,
-    "implied_high": 2285
+    "implied_high": 2285,
+    "marginal": {
+     "count": 0,
+     "n": 200,
+     "share": 0.0,
+     "low": 0.0,
+     "high": 0.018846005918320894,
+     "implied": 0,
+     "implied_low": 0,
+     "implied_high": 3499
+    },
+    "only": {
+     "added": 5124,
+     "count": 0,
+     "n": 3,
+     "share": 0.0,
+     "low": 0.0,
+     "high": 0.5615060804490177,
+     "implied": 0,
+     "implied_low": 0,
+     "implied_high": 2877
+    }
    },
    "spirit+medium": {
     "added": 72856,
@@ -160,7 +244,28 @@
     "high": 0.12358032510539321,
     "implied": 3262,
     "implied_low": 1118,
-    "implied_high": 9004
+    "implied_high": 9004,
+    "marginal": {
+     "count": 2,
+     "n": 200,
+     "share": 0.01,
+     "low": 0.0027466006037749346,
+     "high": 0.03572248519617954,
+     "implied": 1857,
+     "implied_low": 510,
+     "implied_high": 6632
+    },
+    "only": {
+     "added": 57676,
+     "count": 2,
+     "n": 57,
+     "share": 0.03508771929824561,
+     "low": 0.009675461353255768,
+     "high": 0.11921003804189491,
+     "implied": 2024,
+     "implied_low": 558,
+     "implied_high": 6876
+    }
    }
   },
   "reports": [

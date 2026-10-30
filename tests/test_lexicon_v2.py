@@ -27,13 +27,37 @@ def test_a_rule_with_no_report_in_its_share_is_flagged():
         {"terms": ["ouija"], "ghost_report": False},
         {"terms": ["spirit+medium"], "ghost_report": False},
     ]
-    added = {"seance": 100, "ouija": 50, "spirit+medium": 400}
+    holding = {"seance": 100, "ouija": 50, "spirit+medium": 400}
+    alone = {"seance": 60, "ouija": 30, "spirit+medium": 400}
 
-    rules = summarise_rules(sample, added)
+    rules = summarise_rules(sample, holding, alone, total=500)
 
     assert (rules["seance"]["count"], rules["seance"]["n"]) == (1, 2)
     assert rules["seance"]["implied"] == 50 and not rules["seance"]["no_report"]
     assert rules["ouija"]["no_report"] and rules["spirit+medium"]["no_report"]
+
+
+def test_a_rules_marginal_yield_counts_only_the_reports_no_other_rule_catches():
+    sample = [
+        {"terms": ["seance"], "ghost_report": True},
+        {"terms": ["seance", "spirit+medium"], "ghost_report": True},
+        {"terms": ["spirit+medium"], "ghost_report": False},
+        {"terms": ["spirit+medium"], "ghost_report": False},
+    ]
+    holding = {"seance": 100, "spirit+medium": 400}
+    alone = {"seance": 60, "spirit+medium": 300}
+
+    rules = summarise_rules(sample, holding, alone, total=460)
+
+    # both rules catch the shared report, but only seance catches one alone
+    seance, medium = rules["seance"], rules["spirit+medium"]
+    assert (seance["marginal"]["count"], seance["marginal"]["n"]) == (1, 4)
+    assert seance["marginal"]["implied"] == 115
+    assert medium["marginal"]["count"] == 0 and medium["count"] == 1
+    # and among the sampled articles holding no other rule
+    assert (seance["only"]["count"], seance["only"]["n"]) == (1, 1)
+    assert seance["only"]["implied"] == 60
+    assert (medium["only"]["count"], medium["only"]["n"]) == (0, 2)
 
 
 def test_recall_counts_the_reports_of_both_lexicons():
