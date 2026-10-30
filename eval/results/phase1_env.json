@@ -1,28 +1,29 @@
 {
-  "generated_at": "2026-10-30T01:00:36+00:00",
+  "generated_at": "2026-10-30T01:07:45+00:00",
   "command": "uv run python scripts/phase1_env.py",
-  "code_version": "5192651",
+  "code_version": "9f53354",
   "machine": {
     "chip": "Apple M4",
     "cores": 10,
     "ram_gib": 24.0,
-    "disk_free_gib": 35.2,
+    "disk_free_gib": 26.2,
     "os": "macOS-26.6.2-arm64-arm-64bit"
   },
   "faro_1850": {
     "url": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/main/faro_1850.tar.gz",
     "compressed_bytes": 989144629,
-    "download_seconds": 13.6,
-    "download_mb_per_s": 73.0,
+    "download_seconds": 12.0,
+    "download_mb_per_s": 82.4,
     "pages": 24664,
     "articles": 733880,
-    "parse_cpu_seconds": 10.6,
-    "pages_per_s_one_core": 2323,
-    "articles_per_s_one_core": 69109,
-    "compressed_mb_per_s_one_core": 93.1,
-    "cores_to_keep_up_with_download": 0.8,
+    "parse_cpu_seconds": 6.4,
+    "pages_per_s_one_core": 3835,
+    "articles_per_s_one_core": 114100,
+    "compressed_mb_per_s_one_core": 153.8,
+    "cores_to_keep_up_with_download": 0.5,
     "stratford_knockings": {
-      "printings_found": 20,
+      "matching_articles": 20,
+      "naming_phelps": 2,
       "saved_to": "data/skeleton/stratford_1850.json",
       "first": {
         "paper": "Lewistown gazette. [volume] (Lewistown, Pa.) 1843-1944",
@@ -33,11 +34,11 @@
   },
   "ollama": {
     "model": "gemma4:26b-a4b-it-qat",
-    "load_seconds": 30.6,
+    "load_seconds": 10.5,
     "prompt_tokens": 28,
-    "prompt_tokens_per_s": 71,
+    "prompt_tokens_per_s": 103,
     "generated_tokens": 128,
-    "generated_tokens_per_s": 13.3
+    "generated_tokens_per_s": 31.0
   },
   "atlas": {
     "version": "8.0.34",
@@ -59,12 +60,12 @@
     "indexes": {
       "search": {
         "created": true,
-        "seconds_to_queryable": 33.9,
+        "seconds_to_queryable": 23.5,
         "dropped": true
       },
       "vector_search": {
         "created": true,
-        "seconds_to_queryable": 33.9,
+        "seconds_to_queryable": 23.5,
         "dropped": true
       }
     }
@@ -90,7 +91,7 @@
       "value": null,
       "reason": "no cost in the body or the headers"
     },
-    "latency_seconds": 2.31
+    "latency_seconds": 2.04
   },
   "tinker": {
     "base_models": [
@@ -317,9 +318,9 @@
     }
   },
   "sentry": {
-    "event_id": "f770a068014b498c81d9114009ae3da9",
+    "event_id": "d3c45fd7d0994d969e347f81f61ebbef",
     "read_back_from_project": "paperghosts-api",
-    "seconds_to_read_back": 14.0,
+    "seconds_to_read_back": 10.6,
     "web_dsn": {
       "value": null,
       "reason": "proven in Phase 4, when the React SDK sends the site's first event"
