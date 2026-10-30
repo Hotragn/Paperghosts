@@ -1,0 +1,21 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# planning notes that stay private
+Docs/IDEAS.md
+
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+.DS_Store
+*.log
+
+# bulk data stays local; the small manifests and per-year counts are committed
+data/*
+!data/manifests/
+!data/counts/
