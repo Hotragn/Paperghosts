@@ -1,0 +1,36 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M66KNS2EJ24D58W5ZQBKW96H",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-archive",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/DECISIONS.md",
+    "scripts/charts.py",
+    "scripts/eval_a.py",
+    "tests/test_eval_a.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 170,
+    "cache_creation_tokens": 331926,
+    "cache_read_tokens": 21818594,
+    "output_tokens": 145384,
+    "api_call_count": 84,
+    "subagent_tokens": {
+      "input_tokens": 128,
+      "cache_creation_tokens": 752028,
+      "cache_read_tokens": 5578007,
+      "output_tokens": 95644,
+      "api_call_count": 64
+    }
+  }
+}

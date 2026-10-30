@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_0152oqqh4oqiCb79kH9tFK6J",
+  "agent_id": "abb184101ef449a78",
+  "subagent_type": "general-purpose",
+  "task_description": "Judge screen batch 6",
+  "token_usage": {
+    "input_tokens": 16,
+    "cache_creation_tokens": 93128,
+    "cache_read_tokens": 715883,
+    "output_tokens": 10463,
+    "api_call_count": 8
+  },
+  "started_at": "2026-10-30T10:18:12.601087-04:00",
+  "completed_at": "2026-10-30T10:19:52.756278-04:00"
+}
