@@ -1,7 +1,8 @@
-"""The headline-drop sample reports its precision with a 95% Wilson score interval."""
+"""The evals report their rates with a 95% Wilson score interval."""
 
 import pytest
-from headline_drops import wilson
+
+from paperghosts.stats import wilson
 
 
 def test_the_wilson_interval_matches_known_values():

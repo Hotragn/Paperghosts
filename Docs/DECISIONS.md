@@ -148,3 +148,41 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 - The crop check (`eval/results/phase2a/crop-check.md`): 48 of 50 candidates pass (96%, 95% interval 86.5–98.9%). The two failures:
   - One page has no IIIF service: loc.gov has no item for the 1964 Arizona Tribune.
   - One article's first box, as AmericanStories gives it, is the last line of the item above.
+
+**27. Eval A: 3.5% of candidates are ghost reports, none of 600 articles from outside them is one, and lexicon v1 stays.**
+- `make eval` (`scripts/eval_a.py`) reads the counts, candidates and samples in 41 s, then writes `eval/results/eval_a.json` and eight charts to `eval/results/eval_a/`. Every sample is seeded. A rerun keeps the judgments made by hand in `composition.json`, `recall.json` and `reprint-check.json`.
+- 11.2% of candidates have no state. The median candidate is 358 words long.
+- OCR quality is the share of words of 3+ letters that `/usr/share/dict/words` knows, after line-break hyphens are joined and common endings come off. It is measured on 1 candidate in 20, chosen by the CRC of its id; 51,718 of those have 20 words or more. The median is 92.7%.
+- Reprints:
+  - Each candidate keeps a hash-chosen eighth of the 7-word runs in its first 120 words.
+  - Two candidates are joined when they share a pair among their six smallest runs, so two runs in common. A pair held by more than 1,000 candidates is stock phrasing and joins nothing.
+  - Linking on one shared run chained 6,720 candidates together through quoted Bible verses, and only 15 of 20 sampled pairs were the same story. With two shared runs, 20 of 20 are.
+  - 80,770 clusters hold 31.4% of candidates, which leaves 801,071 distinct stories. 71,191 of the clusters span more than one paper.
+- Composition: 200 candidates drawn uniformly at random and sorted by hand into seven categories.
+  - **Ghost report:** a ghost, haunting, apparition or spirit manifestation, told as something that happened or was claimed to. A ghost scare that turns out to be a trapped man counts. A witch doesn't, and neither does a séance advertised for later or an essay doubting ghosts.
+  - **Fiction:** stories, serials, poems, jokes and allegories.
+  - **Religious:** the Holy Ghost, sermons, hymns, Sunday-school lessons and the Ghost Dance.
+  - **Figurative:** a figure of speech, such as a haunt for a place someone frequents, giving up the ghost, or the spectre of war.
+  - **Name or title:** a person, ship, play, lecture, book or headline, including misread names such as General Gobin read as Goblin.
+  - **Social event:** Halloween parties and pranks, ghost parties and phantom drills.
+  - **Other:** everything else.
+
+  | Category | Count | Share (95% interval) | Candidates implied |
+  |---|---|---|---|
+  | figurative | 79 | 39.5% (33.0–46.4%) | 414,900 |
+  | fiction | 47 | 23.5% (18.2–29.8%) | 246,900 |
+  | name or title | 30 | 15.0% (10.7–20.6%) | 157,600 |
+  | other | 23 | 11.5% (7.8–16.7%) | 120,800 |
+  | religious | 10 | 5.0% (2.7–9.0%) | 52,500 |
+  | ghost report | 7 | 3.5% (1.7–7.0%) | 36,800 (17,900–74,000) |
+  | social event | 4 | 2.0% (0.8–5.0%) | 21,000 |
+- 15 of the 200 are OCR accidents in the source text, such as "flaunting" printed as "haunting" (6) and a codling moth printed as a goblin moth. The lexicon matches what the OCR says, so only the reader, reading in context, can reject them.
+- Sizes:
+  - The reader's job is 1,050,459 candidates, or 801,071 if it reads one printing per cluster.
+  - Atlas would hold about 22,300 ghost-report stories, counting each candidate as 1/k of a story when its cluster holds k printings. Three of the 7 reports were reprinted (7, 13 and 30 printings), so this is a rough estimate.
+- Recall, from the seeded reservoirs of 2,000 articles per year, with each year weighted by its pool's size:
+  - Near-miss pool: 0 ghost reports in 300, so at most 1.26% (95%), or at most 86,900 of its 6,872,539 articles. The sample's terms are spirit (210), knock (80), supernatural (4), spiritualism (4), rap (3) and seance (3).
+  - All non-candidates: 0 in 300, so at most 1.26%, or at most 4.67 million of 369,263,454. This bound is loose, at 127 times the ghost reports found. Bounding the misses at the 36,800 found would take about 38,600 articles with none among them.
+  - The closest calls were a séance announcement promising that spirits "will materialize" and a Kentucky girl who claims to be a witch.
+- No misses means no shared vocabulary to add, so there is no lexicon v2. A re-read would take 118.6 min and 340.4 GB of downloads at four processes (decision 25).
+- Both chart series colors pass the dataviz palette validator, on the light surface and on the dark one.

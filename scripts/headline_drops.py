@@ -8,25 +8,17 @@ keeps the judgments and reports the precision with a 95% Wilson interval.
 """
 
 import json
-import math
 import random
 from pathlib import Path
 
 import zstandard
 
 from paperghosts.ingest.headline import masthead_lines
+from paperghosts.stats import wilson
 
 ROOT = Path(__file__).resolve().parents[1]
 SAMPLE = ROOT / "eval" / "results" / "phase2a" / "headline-drops.json"
 SEED, SIZE = "headline drops", 200
-
-
-def wilson(hits, n, z=1.96):
-    """The Wilson score interval for hits out of n, 95% by default."""
-    p, z2 = hits / n, z * z
-    centre = (p + z2 / (2 * n)) / (1 + z2 / n)
-    half = z * math.sqrt(p * (1 - p) / n + z2 / (4 * n * n)) / (1 + z2 / n)
-    return centre - half, min(1.0, centre + half)
 
 
 def dropped_lines():
