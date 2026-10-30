@@ -16,6 +16,14 @@ make keys    # checks every key by shape and one cheap call; never prints a valu
 make web     # the web shell at http://localhost:5173
 ```
 
+Temporal runs locally. Start the dev server and a worker in two terminals, then run the smoke workflow in a third:
+
+```bash
+make temporal   # dev server; state in data/temporal/, UI at http://localhost:8233
+make worker
+make smoke      # one workflow: heartbeats, an injected failure, a retry
+```
+
 The other targets print the phase that builds them.
 
 ## What it can't do

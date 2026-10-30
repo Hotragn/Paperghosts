@@ -19,8 +19,18 @@ web:
 keys:
 	uv run python scripts/check_keys.py
 
+temporal:
+	mkdir -p data/temporal
+	temporal server start-dev --db-filename data/temporal/temporal.db
+
+worker:
+	uv run python -m paperghosts.workflows.worker
+
+smoke:
+	uv run python -m paperghosts.workflows.smoke
+
 # Later targets fail on purpose until their phase builds them.
-temporal worker smoke api app:
+api app:
 	@echo "make $@ is built later in Phase 1"; exit 1
 
 ingest eval:

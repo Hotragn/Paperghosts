@@ -65,3 +65,12 @@ The model is already on this machine (15 GB), it's open-weight, and it keeps the
 
 **14. Per-year counts are committed.**
 `data/` stays local except `data/manifests/` and `data/counts/`. The counts are small JSON files, and keeping them in git lets Phase 2A diff a reproduced run against the committed one.
+
+**15. Sentry collects nothing about people, and nothing a local variable holds.**
+- sentry-sdk 2.73 deprecates `send_default_pii`, so `init_sentry` sets `data_collection` instead. Fields left out of it default to on, so every one this stack touches is set off: user info, cookies, request headers and bodies, query parameters, model inputs and outputs, Mongo query data and stack-frame variables. Mongo queries can carry near-me coordinates, and locals can hold keys and URIs.
+- `server_name` is the component, because the default is the host name, which can name its owner.
+- A `before_send` hook also strips query strings and coordinate fields from every event and transaction.
+- The API and the pipeline share `paperghosts-api`, told apart by `environment`.
+
+**16. The smoke activity resumes after its last heartbeat.**
+Its first attempt fails on purpose halfway through, and the retry carries on after the failed attempt's last heartbeat. That shows heartbeats reach the server, not only that the activity sends them. The test runs in Temporal's test environment on the installed CLI, so nothing is downloaded locally.
