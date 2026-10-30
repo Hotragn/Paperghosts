@@ -25,7 +25,7 @@ USER_AGENT = (
 )
 CLIENT = httpx.Client(timeout=60, follow_redirects=True)
 last_request = 0.0  # monotonic time of the last request to the Library of Congress
-BUSY = {429, 500, 502, 503, 504}
+BUSY = {429, 500, 502, 503, 504, 520, 521, 522, 523, 524}  # 52x: Cloudflare's
 # seconds between requests: loc.gov's JSON API allows 20 a minute and blocks for an hour past
 # that, and its image services allow 150 a minute
 GAPS = {"www.loc.gov": 3.5}

@@ -347,3 +347,27 @@ class Stat(Model):
         if key is None or self.id != f"{self.scope}:{key}":
             raise ValueError("a stat's _id is its scope and that scope's year or state")
         return self
+
+
+class Title(Model):
+    """One paper by LCCN, for the title lookup that holds each paper's title, place and state
+    once instead of in every printing (BUDGET.md). The place and state are as printed. What a
+    cataloguer supplied, in brackets or in a loc.gov title record, is kept beside them, and so
+    is the state today (decision 34)."""
+
+    id: str = Field(alias="_id")  # the LCCN
+    title: str | None = None
+    place: str | None = None
+    county: str | None = None
+    state: str | None = None
+    supplied_place: str | None = None
+    supplied_state: str | None = None
+    modern_state: str | None = None
+    then_and_now: str | None = None  # "Charlestown, Va. (now W.Va.)"
+    years: str | None = None
+    # a title's run can outlast the archive's years: the Alexandria gazette's is 1834-1974
+    first_year: Annotated[int, Field(ge=1690, le=2100)] | None = None
+    last_year: Annotated[int, Field(ge=1690, le=2100)] | None = None
+    source: Literal["title string", "loc.gov title record", "none"]
+    record_url: str | None = None
+    retrieved: str | None = None
