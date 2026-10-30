@@ -6,33 +6,30 @@ This is a work in progress. The plan is in [`Docs/BUILD-PLAN.md`](Docs/BUILD-PLA
 
 ## Run it
 
-You need `uv`, Node and `pnpm`. Keys go in `.env`, which git ignores.
+You need `uv`, Node with `pnpm`, the Temporal CLI and Ollama. Keys go in `.env`, which git ignores.
 
-```bash
-make setup   # the Python 3.12 environment and the web shell's packages
-make lint    # ruff, oxlint and the TypeScript check
-make test    # pytest
-make keys    # checks every key by shape and one cheap call; never prints a value
-make web     # the web shell at http://localhost:5173
-```
+| Command | What it does |
+|---|---|
+| `make setup` | Installs the Python 3.12 environment and the web shell's packages |
+| `make lint` | ruff, oxlint and the TypeScript check |
+| `make test` | pytest, offline; the Temporal test starts its own throwaway server |
+| `make keys` | Checks every key by shape and with one cheap call, and never prints a value |
+| `make temporal` | The Temporal dev server, with its state in `data/temporal/` and its UI at http://localhost:8233 |
+| `make worker` | The Temporal worker |
+| `make smoke` | One workflow whose activity heartbeats, fails once on purpose and recovers through its retry policy; needs `make temporal` and `make worker` running |
+| `make api` | The read-only API at http://localhost:8000 |
+| `make web` | The web shell at http://localhost:5173 |
+| `make app` | `make api` and `make web` together |
 
-Temporal runs locally. Start the dev server and a worker in two terminals, then run the smoke workflow in a third:
-
-```bash
-make temporal   # dev server; state in data/temporal/, UI at http://localhost:8233
-make worker
-make smoke      # one workflow: heartbeats, an injected failure, a retry
-```
+`make ingest`, `make eval`, `make db-init`, `make db-verify` and `make numbers` print the phase that builds them and exit with an error.
 
 The walking skeleton takes one 1850 article from the archive, through Atlas and the API, to a page that shows its clipping beside its text:
 
 ```bash
 uv run python scripts/phase1_env.py     # environment facts; saves the 1850 Stratford articles
 uv run python scripts/load_skeleton.py  # loads the Lewistown gazette's knockings into Atlas
-make app                                # the API on :8000 and the page on :5173
+make app
 ```
-
-The other targets print the phase that builds them.
 
 ## What it can't do
 
