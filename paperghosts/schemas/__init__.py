@@ -88,20 +88,35 @@ class Box(Model):
 
 
 class Printing(Model):
-    """A compact reference to one printing of a story: its paper, its date and where it sits on
-    its page. Its crop URLs are derived from service and bbox_list when it is read, not stored,
-    and its text isn't kept: the story keeps one printing's (decision 32, rule 6)."""
+    """A compact reference to one printing of a story: its paper, its date and where it sits in
+    the archive. Its crop URLs are derived from service and bbox_list when it is read, not
+    stored, and its text isn't kept: the story keeps one printing's (decision 32, rule 6).
+    `paperghosts.store.printings` builds one from a candidate (decision 33)."""
 
     article_id: str
     lccn: str
-    paper: str
+    paper: str | None = None  # 0.9% of records have none, until a title record names it
     place: str | None = None  # where it was published, from its title record
     state: str | None = None
     date: IsoDate
+    # where it is, from its member name: every candidate's parses
     edition: Annotated[int, Field(ge=1)]
-    page: Annotated[int, Field(ge=1)]
-    service: str | None = None  # its page's IIIF service, once known (decision 29)
+    reel: str
+    issue: Annotated[
+        str, Field(pattern=r"^\d{10}$")
+    ]  # the date and a two-digit edition
+    frame: Annotated[str, Field(pattern=r"^\d+$")]
+    page: Annotated[int, Field(ge=1)] | None = None  # from the scan record only
+    # from the scan's batch path, or else only once a check confirms the page: a member's
+    # frame is off from its batch path's in 2.5% of candidates that have both
+    service: str | None = None
     bbox_list: list[Box] = Field(min_length=1)
+
+    @model_validator(mode="after")
+    def issued(self) -> Self:
+        if self.issue != f"{self.date.replace('-', '')}{self.edition:02d}":
+            raise ValueError("a printing's issue is its date and its edition")
+        return self
 
 
 class Stated(Model):
@@ -109,10 +124,26 @@ class Stated(Model):
     verifier found that quote in the text, and the reader's score. A field with no verified
     quote is "not stated" and has no value."""
 
+    # the same rule for Atlas's validator: no value, or a value with a verified quote
+    model_config = ConfigDict(
+        json_schema_extra={
+            "anyOf": [
+                {"not": {"required": ["value"]}},
+                {"required": ["quote"], "properties": {"verified": {"enum": [True]}}},
+            ]
+        }
+    )
+
     value: str | None = None
     quote: str | None = None
     verified: bool
     score: Score
+
+    @model_validator(mode="after")
+    def quoted(self) -> Self:
+        if self.value is not None and not (self.quote and self.verified):
+            raise ValueError("a stated value needs a quote that verified")
+        return self
 
 
 class StatedOutcome(Stated):
@@ -172,6 +203,17 @@ class Report(Model):
             raise ValueError("a report's _id is r_ and its primary article ID")
         if self.case_id is not None and self.case_id != f"c_{self.id}":
             raise ValueError("a report's case_id is c_ and its _id")
+        return self
+
+    @model_validator(mode="after")
+    def dated(self) -> Self:
+        year, month_day = int(self.date[:4]), self.date[5:]
+        if (self.year, self.month_day, self.decade) != (
+            year,
+            month_day,
+            year // 10 * 10,
+        ):
+            raise ValueError("a report's year, month_day and decade are its date's")
         return self
 
 

@@ -31,6 +31,9 @@ def printing():
         "state": "New York",
         "date": "1875-12-16",
         "edition": 1,
+        "reel": "00271743919",
+        "issue": "1875121601",
+        "frame": "0981",
         "page": 6,
         "service": SERVICE,
         "bbox_list": [{"x0": 2118, "y0": 301, "x1": 3037, "y1": 1990}],
@@ -202,6 +205,16 @@ INVALID = {
             report(), ["printings", 0, "crop_urls"], ["https://x"]
         ),
         "month_day not MM-DD": change(report(), ["month_day"], "Dec 16"),
+        "printing with no frame": change(
+            report(), ["printings", 0, "frame"], drop=True
+        ),
+        "issue not ten digits": change(report(), ["printings", 0, "issue"], "18751216"),
+        "stated value with no quote": change(
+            report(), ["fields", "seen", "quote"], drop=True
+        ),
+        "stated value not verified": change(
+            report(), ["fields", "seen", "verified"], False
+        ),
     },
     Place: {
         "no name": change(place(), ["name"], drop=True),
@@ -241,9 +254,9 @@ BSON_TYPES = {
     "binData": lambda v: isinstance(v, bytes),
 }
 KEYWORDS = {
-    "bsonType", "enum", "anyOf", "required", "properties", "additionalProperties", "items",
-    "additionalItems", "minItems", "maxItems", "minLength", "maxLength", "pattern", "minimum",
-    "maximum", "multipleOf",
+    "bsonType", "enum", "anyOf", "not", "required", "properties", "additionalProperties",
+    "items", "additionalItems", "minItems", "maxItems", "minLength", "maxLength", "pattern",
+    "minimum", "maximum", "multipleOf",
 }  # fmt: skip
 
 
@@ -256,6 +269,8 @@ def conforms(value, schema):
     if "enum" in schema and value not in schema["enum"]:
         return False
     if "anyOf" in schema and not any(conforms(value, s) for s in schema["anyOf"]):
+        return False
+    if "not" in schema and conforms(value, schema["not"]):
         return False
     if isinstance(value, dict):
         props = schema.get("properties", {})
@@ -366,6 +381,17 @@ MODEL_ONLY = {
     "case id not c_ and its report": (Case, change(case(), ["_id"], "c_r_other")),
     "first year after the last": (Place, change(place(), ["first_year"], 1920)),
     "stat id not its scope and year": (Stat, change(stat(), ["_id"], "year:1876")),
+    "year not its date's": (Report, change(report(), ["year"], 1876)),
+    "month_day not its date's": (Report, change(report(), ["month_day"], "12-17")),
+    "decade not its year's": (Report, change(report(), ["decade"], 1880)),
+    "issue not its printing's date": (
+        Report,
+        change(report(), ["printings", 0, "issue"], "1875121701"),
+    ),
+    "edition not its issue's": (
+        Report,
+        change(report(), ["printings", 0, "edition"], 2),
+    ),
 }
 
 

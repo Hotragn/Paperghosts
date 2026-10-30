@@ -14,6 +14,7 @@ TYPES = {
     "null": "null",
 }
 DROPPED = {"title", "description", "default", "examples"}
+NESTED = {"items", "additionalProperties", "not"}  # keywords that hold a schema
 KEPT = {
     "bsonType", "enum", "required", "additionalProperties", "minItems", "maxItems",
     "minLength", "maxLength", "pattern", "minimum", "maximum", "multipleOf",
@@ -45,7 +46,7 @@ def convert(schema: dict, defs: dict) -> dict:
         elif key == "prefixItems":  # a tuple
             out["items"] = [convert(item, defs) for item in value]
             out["additionalItems"] = False
-        elif key in ("items", "additionalProperties") and isinstance(value, dict):
+        elif key in NESTED and isinstance(value, dict):
             out[key] = convert(value, defs)
         elif key == "anyOf":
             options = [convert(option, defs) for option in value]
