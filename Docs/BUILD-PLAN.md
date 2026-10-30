@@ -103,6 +103,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2C: the reader
 **Persona:** ML specialist.
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
+   - The gold set's term strata include each of lexicon v2's five rules. That's how ouija, kept with 0 reports in its 6 sampled candidates, gets measured (decision 31).
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
    - And decision 31's two borderline kinds: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay. It confirms or overrules counting a first-person claim of communication with a named dead person, made in a lecture or an interview.

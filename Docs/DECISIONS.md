@@ -327,6 +327,9 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - In 2A.7's screen, spirit+medium caught no report that another rule missed. Here it alone catches two: 1857's Middlebury trance medium and 1859's Plymouth convention.
   - spirit+medium is also the largest rule, with the lowest precision. Its candidates holding no other rule are reports at 3.5%, the same rate as v1's candidates.
   - `lexicon_v2.json` gives each rule's `marginal` (over the 200) and `only` (over its sampled articles holding only it).
+- **The EM's call (2026-10-30): keep all five rules.**
+  - Each of spiritualism, seance, spirit_phrase and spirit+medium catches reports that no other rule does.
+  - ouija's 0 of 6 rules nothing out (0–39%), and it costs only 5,124 candidates, 0.4% of the reader's job. 2C's term strata measure it.
 - The 14 reports:
   - 1857, Middlebury: a spirit called Judd speaks through a trance medium at Union Hall.
   - Borderline, 1857: in the Picaud ("real Monte Cristo") narrative, printed as true, the dying Allut says he has seen and spoken with a soul separated from its body.
