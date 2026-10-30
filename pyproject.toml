@@ -3,7 +3,10 @@ name = "paperghosts"
 version = "0.1.0"
 description = "Ghost reports printed in US newspapers, 1774-1963, read from the AmericanStories archive."
 requires-python = "==3.12.*"
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+    "pymongo>=4.19.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.13.5,<0.14"]
@@ -17,6 +20,7 @@ extend-select = ["I", "B", "UP"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["scripts"]
 
 [dependency-groups]
 dev = [

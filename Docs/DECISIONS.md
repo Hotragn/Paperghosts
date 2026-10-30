@@ -53,3 +53,15 @@ The model is already on this machine (15 GB), it's open-weight, and it keeps the
 
 **12. Config accepts both names for the Ultramarine key.**
 `.env` names it `PAPERINSTRUMENTS_API_KEY`, while `BRIEF.md` says `ULTRAMARINE_API_KEY`. The owner's file stays as it is.
+
+## Phase 1 (2026-10-29)
+
+**13. `make keys` checks each key with the service's cheapest read, and never prints a value.**
+- Tinker: the route the Tinker CLI's login uses to check a key. A plain HTTP call skips the SDK's 2.5 s import and its session, so the SDK arrives later, with the Tinker facts.
+- Atlas: `connectionStatus`, which proves the connection is authenticated, not just reachable.
+- Sentry: the auth token reads the project. A DSN can prove itself only by sending an event, so here it gets a shape check, and `phase1_env` sends the test event.
+- SerpApi's account endpoint uses no searches, and Ultramarine's model list costs nothing.
+- Output is fixed text, status codes and exception type names. Library messages can quote a key, URL or URI, so they never appear. A test plants canary values and fails if any 6-character slice of one reaches stdout, stderr or an exception message.
+
+**14. Per-year counts are committed.**
+`data/` stays local except `data/manifests/` and `data/counts/`. The counts are small JSON files, and keeping them in git lets Phase 2A diff a reproduced run against the committed one.

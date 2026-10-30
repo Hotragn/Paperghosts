@@ -1,4 +1,4 @@
-"""Secrets, private notes and bulk data must never reach git; manifests must."""
+"""Secrets, private notes and bulk data must never reach git; manifests and counts must."""
 
 import subprocess
 from pathlib import Path
@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
         ("data/temporal/temporal.db", True),
         (".env.example", False),
         ("data/manifests/1850.json", False),
+        ("data/counts/1850.json", False),
     ],
 )
 def test_private_files_stay_out_of_git(path, ignored):

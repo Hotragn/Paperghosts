@@ -227,7 +227,7 @@ eval/
   results/               JSON and charts for evals A to D (committed)
 scripts/                 one-off checks: keys, crop check, offline proof, numbers sheet
 tests/                   unit, integration (Temporal test env), API contract
-data/                    local only, gitignored except small manifests
+data/                    local only, gitignored except small manifests and per-year counts
 Docs/                    BRIEF, ARCHITECTURE, PRD, SRS, BUILD-PLAN, DECISIONS, RESUME, UI-IDEAS (IDEAS.md stays private)
 .github/workflows/       CI
 render.yaml              deploy blueprint (used only after the owner's yes)

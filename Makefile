@@ -16,8 +16,11 @@ test:
 web:
 	pnpm --dir web dev
 
+keys:
+	uv run python scripts/check_keys.py
+
 # Later targets fail on purpose until their phase builds them.
-keys temporal worker smoke api app:
+temporal worker smoke api app:
 	@echo "make $@ is built later in Phase 1"; exit 1
 
 ingest eval:

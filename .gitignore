@@ -15,6 +15,7 @@ node_modules/
 .DS_Store
 *.log
 
-# bulk data stays local; only the small manifests are committed
+# bulk data stays local; the small manifests and per-year counts are committed
 data/*
 !data/manifests/
+!data/counts/

@@ -12,6 +12,7 @@ You need `uv`, Node and `pnpm`. Keys go in `.env`, which git ignores.
 make setup   # the Python 3.12 environment and the web shell's packages
 make lint    # ruff, oxlint and the TypeScript check
 make test    # pytest
+make keys    # checks every key by shape and one cheap call; never prints a value
 make web     # the web shell at http://localhost:5173
 ```
 
