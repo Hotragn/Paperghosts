@@ -49,10 +49,10 @@ api:
 app:
 	$(MAKE) -j2 api web
 
-# Later targets fail on purpose until their phase builds them.
 db-init:
-	@echo "make $@ is built in Phase 2B"; exit 1
+	uv run python -m paperghosts.store.db_init
 
+# Later targets fail on purpose until their phase builds them.
 db-verify:
 	@echo "make $@ is built in Phase 2D"; exit 1
 
