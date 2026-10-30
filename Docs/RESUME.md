@@ -6,7 +6,7 @@ Hard date: the site must be live on Oct 31.
 
 ## Next step
 
-**Phase 2B: schemas and data layer** (`BUILD-PLAN.md` section 4), once PR #3 (lexicon v2) is merged. Whether to drop the ouija rule is the EM's call (decision 31). Dropping it takes a filter on `terms`, not a re-read.
+**Phase 2B: schemas and data layer** (`BUILD-PLAN.md` section 4), once PR #3 (lexicon v2) is merged. The EM keeps or drops each new rule from its marginal yield (decision 31). Dropping one takes a filter on `terms`, not a re-read.
 
 Needs the owner's yes when we get there:
 - the Render deploy
@@ -60,6 +60,7 @@ Gate:
 
 Risks and open questions:
 - **The ouija rule is flagged** (decision 31): none of its 6 sampled candidates is a report (0–39%). Dropping it is the EM's call, and a filter on `terms` would remove 5,124 candidates.
+- Each new rule's marginal yield rests on 0 to 4 reports, so its interval is wide (decision 31).
 - v2's 84% recall is in-sample. The screen behind both lexicons' recall rests on 4 reports, 2 of them borderline. Even with their lexicon terms masked, it would still catch only 5 of eval A's 7 reports.
 - v2's gain rests on 14 reports in 200, 2 of them borderline.
 - `POLICY.md` (2C) has to settle these cases:

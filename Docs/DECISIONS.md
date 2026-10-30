@@ -312,7 +312,21 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 
   - A candidate can hold several rules, so the rows overlap. "Added holding only it" is what dropping that rule alone takes away.
   - **ouija is flagged:** no report in its 6. Dropping it is the EM's call. It would take 5,124 candidates away by filtering.
-  - spirit+medium is the largest rule and has the lowest rate. Its 57 sampled articles holding only it have 2 reports (3.5%), the same rate as v1.
+- **Marginal yield**, which the EM asked for to decide which rules to keep. It counts the reports in the 200 that one rule catches and no other term catches, so it is what dropping that rule alone would lose. No rule was tuned or narrowed on the 200.
+
+  | Rule | Reports only it catches, of the 200 | Reports among the added that only it catches | Sampled articles holding only it | Their rate (95%), of the added holding only it |
+  |---|---|---|---|---|
+  | spiritualism | 4: 2.0% (0.78–5.0%) | ~3,710 (1,450–9,340) | 64 | 6.3% (2.5–15.0%) of 54,411 |
+  | seance | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 28 | 7.1% (2.0–22.6%) of 21,656 |
+  | spirit_phrase | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 24 | 8.3% (2.3–25.9%) of 24,537 |
+  | spirit+medium | 2: 1.0% (0.27–3.6%) | ~1,860 (510–6,630) | 57 | 3.5% (0.97–11.9%) of 57,676 |
+  | ouija | 0: 0% (0–1.9%) | at most 3,500 | 3 | 0% (0–56.2%) of 5,124 |
+
+  - 10 of the 14 reports hold a single rule. Each of the other 4 holds two or more: 1875's Eddys, 1922's Conan Doyle, 1923's Vale Owen and 1924's Chicago meeting.
+  - Two of the single-rule reports are the borderline ones: Allut (spirit_phrase) and Hodgson (spiritualism). Without them, spirit_phrase alone catches 1 and spiritualism alone catches 3.
+  - In 2A.7's screen, spirit+medium caught no report that another rule missed. Here it alone catches two: 1857's Middlebury trance medium and 1859's Plymouth convention.
+  - spirit+medium is also the largest rule, with the lowest precision. Its candidates holding no other rule are reports at 3.5%, the same rate as v1's candidates.
+  - `lexicon_v2.json` gives each rule's `marginal` (over the 200) and `only` (over its sampled articles holding only it).
 - The 14 reports:
   - 1857, Middlebury: a spirit called Judd speaks through a trance medium at Union Hall.
   - Borderline, 1857: in the Picaud ("real Monte Cristo") narrative, printed as true, the dying Allut says he has seen and spoken with a soul separated from its body.
