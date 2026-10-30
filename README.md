@@ -24,6 +24,14 @@ make worker
 make smoke      # one workflow: heartbeats, an injected failure, a retry
 ```
 
+The walking skeleton takes one 1850 article from the archive, through Atlas and the API, to a page that shows its clipping beside its text:
+
+```bash
+uv run python scripts/phase1_env.py     # environment facts; saves the 1850 Stratford articles
+uv run python scripts/load_skeleton.py  # loads the Lewistown gazette's knockings into Atlas
+make app                                # the API on :8000 and the page on :5173
+```
+
 The other targets print the phase that builds them.
 
 ## What it can't do

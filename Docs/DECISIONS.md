@@ -77,3 +77,8 @@ Its first attempt fails on purpose halfway through, and the retry carries on aft
 
 **17. The environment facts measure the download and the parse in one pass, in two processes.**
 The download runs in its own process and hands chunks to the parser, which counts only its own CPU time. In one process, the CPU-bound parser would hold the GIL and slow the very socket reads it is measured against. A fact the script can't measure is `null` with its reason, never a guess.
+
+**18. Crops use the scan's own pixels, and loc.gov names the batch when the record doesn't.**
+- One IIIF crop covers every box in `bbox_list`, in the scan's pixel coordinates, at half size.
+- 9 of the 20 matching 1850 pages have no `raw_data_loc`, and their size is marked approximate. On the Lewistown page the record says 5867 × 8352 while the JP2 is 6337 × 8901: the "approximate" size is just the extent of the boxes, which are already in the JP2's pixels. The crop matched its text from the first line to the last.
+- For those pages, loc.gov's item JSON names the page's IIIF service, and so its batch. Phase 2A's crop check needs that lookup, or a reel-to-batch table, for every page without `raw_data_loc`.

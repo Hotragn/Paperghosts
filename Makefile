@@ -29,10 +29,14 @@ worker:
 smoke:
 	uv run python -m paperghosts.workflows.smoke
 
-# Later targets fail on purpose until their phase builds them.
-api app:
-	@echo "make $@ is built later in Phase 1"; exit 1
+api:
+	uv run uvicorn api.main:app --port 8000
 
+# the API and the web shell together
+app:
+	$(MAKE) -j2 api web
+
+# Later targets fail on purpose until their phase builds them.
 ingest eval:
 	@echo "make $@ is built in Phase 2A"; exit 1
 
