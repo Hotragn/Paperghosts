@@ -129,3 +129,22 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Kill test 1's SIGKILL cost 1881–1884 their first attempts (`eval/results/phase2a/kill-test-1.md`).
   - Each retry read its whole file again, because a gzip stream can't seek.
 - 1850 reproduces. With its candidates file moved aside, a rerun wrote all three outputs byte-identical, with the same sha256 as the committed manifest.
+
+**26. Crops are one per box, fetched once and cached, and the display headline drops only the masthead lines that lead it.**
+- There is one IIIF crop per box in `bbox_list`, in its order, which is the reading order. This replaces decision 18's single crop over every box, which takes in the columns between them on a multi-column article. In 64 of 595 multi-box 1850 articles a later box starts higher on the page, so sorting boxes by height would break the order.
+- Requests to the Library of Congress:
+  - They go at most one a second, with a User-Agent that names the project.
+  - A busy answer is retried after 5 s, then 20 s. tile.loc.gov answered a region it hadn't made yet with a 503 after 35 s, and served the same URL a minute later in 0.2 s.
+  - Crops are cached under `data/crops/`, keyed by URL, and a reply that isn't an image is never cached.
+- A batch path can name a batch that LoC has since reissued. Two of the crop check's pages are recorded in `ver01` batches that tile.loc.gov no longer serves, and loc.gov lists them under `ver02`. So when a crop from a batch path is missing, loc.gov's item names the page's current service.
+- The display headline:
+  - Leading lines are dropped while they are the paper's title, its own place and state, an issue date, or a numbered volume or issue line. Lines of rules and stray marks are dropped anywhere.
+  - A weekday or month alone isn't a date line, an issue word needs a number, and a title or place under 6 letters must stand alone as a word.
+  - The stored OCR is untouched.
+- Precision, judged by hand on 200 dropped lines sampled with a fixed seed from candidate headlines (`scripts/headline_drops.py`):
+  - The first rule dropped such lines anywhere, and 142 of its 200 drops were correct (71.0%, 95% interval 64.4–76.8%). It took dates and words that belonged to the article, as in "Out Ghosts Next / Monday Evening".
+  - The final rule's precision is 195 of 200 (97.5%, 94.3–98.9%), and 139 of the 143 lines with letters (97.2%, 93.0–98.9%).
+  - The final rule drops 10,287 lines instead of 17,270. The cost is masthead blocks whose title line came out garbled, which now stay in the headline.
+- The crop check (`eval/results/phase2a/crop-check.md`): 48 of 50 candidates pass (96%, 95% interval 86.5–98.9%). The two failures:
+  - One page has no IIIF service: loc.gov has no item for the 1964 Arizona Tribune.
+  - One article's first box, as AmericanStories gives it, is the last line of the item above.

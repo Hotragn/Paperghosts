@@ -1,0 +1,1802 @@
+[
+ {
+  "article_id": "18_1928-10-31_pNone_sn82015313_00383349126_1928103101_0002.json",
+  "date": "1928-10-31",
+  "paper": "The Indianapolis times.",
+  "line": ": THE INDIANAPOLIS TIMES",
+  "headline": ": THE INDIANAPOLIS TIMES\n\nCLEAR STREETS\n\n\nFOR Halloween\nGAYETY TONIGHT\n\nMany Social Events on\nCalendar to Celebrate\n\n\nGoblin Day.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "22_1909-11-19_p5_sn90051265_00340585914_1909111901_0642.json",
+  "date": "1909-11-19",
+  "paper": "Rocky Ford enterprise.",
+  "line": "= = = + = = = = = = =, = = .",
+  "headline": "Mrs. Jennie Gobin'Cameron\nGoblin Block Elm Avenue\n\n= = = + = = = = = = =, = = .\n= BUSINESS LOCALS. .\n3 3 3 q = = = + = = = = = = = =",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1856-03-08_pna_sn83016209_00383342387_1856030801_0057.json",
+  "date": "1856-03-08",
+  "paper": "Montgomery County sentinel. [volume] (Rockville, Md.) 1855-1974",
+  "line": "ROCKVILLE, SATURDAY MORNING MARCH s. 1856",
+  "headline": "ROCKVILLE, SATURDAY MORNING MARCH s. 1856",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1865-11-17_pna_sn83009653_00279524007_1865111701_0619.json",
+  "date": "1865-11-17",
+  "paper": "Oxford Democrat. [volume] (Paris, Me.) 1833-1933",
+  "line": "VOLUME 80. NO. /.",
+  "headline": "VOLUME 80. NO. /.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "29_1918-06-28_p1_sn00065154_0027952326A_1918062801_0973.json",
+  "date": "1918-06-28",
+  "paper": "The herald-advance. (Milbank, S.D.) 1890-1922",
+  "line": "~",
+  "headline": "The Empty\nHouse\n\n\n~\n\n\n@Copyrtght. 1913. by the Mcclure Newspa-\nper Syndicato.)",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1865-08-04_pna_sn83035595_00296026633_1865080401_0457.json",
+  "date": "1865-08-04",
+  "paper": "Delaware gazette. [volume] (Delaware, Ohio) 1855-1886",
+  "line": "DELAWARE, OHIO, AUGUST 4, 1866.",
+  "headline": "DELAWARE, OHIO, AUGUST 4, 1866.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1926-09-11_p1_sn86063730_00332894699_1926091101_0091.json",
+  "date": "1926-09-11",
+  "paper": "Brownsville herald. [volume] (Brownsville, Tex.) 1910-current",
+  "line": "\\ * =",
+  "headline": "AUTO ASSOCIATIONS\n\n\nII Il =\nWOULD ELIMINATETHE\n\n\n\\ * =\nSEDUCTIVE HOT DOG",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1866-07-17_pna_sn83030313_00271743555_1866071701_0399.json",
+  "date": "1866-07-17",
+  "paper": "The New York herald. [volume] (New York [N.Y.]) 1840-1920",
+  "line": "---~~~~~>~~~>-~--,~~-~-",
+  "headline": "WASHINGTON\nIMPORTANT PROCEEDINGS IN CONGRESS-.\nVeto of the Freedmen's Bu-\n\n\nreau Bill.\nPassage Of the Bill Over the\nVeto In Both Houses.\nThe Vote in the House lO4 to 33---In\n\n\nthe Senate 33 to y.\nGreat Excitement and Rejoicing\n\n\nAmong the Radicals.\n\n\nr~~~.~-~~-~-->-~~~-~~>--\n! CONFEDERATION of the Rousseau\n\n\nGrinncn Affair.\n\n\n->~>-~-~>-~~------~~o~-~-\nTHE CABINET CRISIS.\n\n\n--~~~->>~~~~-~~-~~<~~@\n\n\n-\nAttorney General Speeds Resignation in the\nHands Of the President.\n---~~~~~>~~~>-~--,~~-~-\nExpected Withdrawal of Sec\nretary Seward.\n-~~----~->~-~---~--\nResignation Of Freeman Clarke, Comp\ntroller of the Currency\n&c. nc. &c.\n\nAttorney General Speeds Resignation in the\n\n\nHands OF the President.\n\nExpected Withdrawal of Sec\n\n\nretary Seward.\n\nResignation of Freeman Clarke, Comp\n\n\ntroller Of the Currency.\n&c. lkc &c.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1917-07-27_pna_sn83016689_0041421888A_1917072701_1169.json",
+  "date": "1917-07-27",
+  "paper": "The Detroit times. [volume] (Detroit, Mich.) 1903-1920",
+  "line": "IN DETROIT",
+  "headline": "IN DETROIT\n\nTo-day. Hand Concert.",
+  "verdict": "mis-drop",
+  "note": "IN DETROIT titles a local column ('In Detroit To-day')"
+ },
+ {
+  "article_id": "2_1914-01-24_pna_sn86092536_00414186324_1914012401_0291.json",
+  "date": "1914-01-24",
+  "paper": "The Wheeling intelligencer. [volume] (Wheeling, W. Va.) 1903-1961",
+  "line": ".",
+  "headline": ".\n\n\n| | (\n\nUNCLE WALT: The Poet PHILOSOPHER.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "37_1877-07-19_pna_sn84026965_00294550847_1877071902_0183.json",
+  "date": "1877-07-19",
+  "paper": "The Anderson intelligencer. [volume] (Anderson Court House, S.C.) 1860-1914",
+  "line": "THURSDAY MORNING. JULY 10, 1877.",
+  "headline": "THURSDAY MORNING. JULY 10, 1877.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "44_1917-08-30_pna_sn88064020_00200299917_1917083001_0438.json",
+  "date": "1917-08-30",
+  "paper": "The herald. [volume] (New Orleans, La.) 1905-1953",
+  "line": "\" ~",
+  "headline": "\" ~\nWON BY THE CLOCK\np wz\n- y\n~ BY c. 8. LEWIS. -\n\n\nMs nss",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1897-08-06_p1_sn85025407_00279522102_1897080601_0900.json",
+  "date": "1897-08-06",
+  "paper": "Maryland independent. [volume] (Port Tobacco, Md.) 1874-current",
+  "line": "Friday, August 6, --- 1897",
+  "headline": "Friday, August 6, --- 1897\n\nLOCAL BREvITIEs.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1881-09-14_pna_sn85025431_00212479767_1881091401_0370.json",
+  "date": "1881-09-14",
+  "paper": "Mower County transcript. [volume] (Lansing, Minn.) 1868-1915",
+  "line": "@$1 451",
+  "headline": "@$1 451\nq 63E\n1890 As\n\n\n@ l @\n\n\n@19 40\n\n\n@$1 404\n\"a 65A\nq Al\n\n[From the New York Evening Mail.J",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "33_1879-10-03_p1_sn86092518_00383341607_1879100301_0319.json",
+  "date": "1879-10-03",
+  "paper": "Wheeling register. [volume] (Wheeling, W. Va.) 1878-1935",
+  "line": "WHEELING W. VA FRIDAY MORNING. OCTOBER g. 1879.",
+  "headline": "WHEELING W. VA FRIDAY MORNING. OCTOBER g. 1879.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1874-05-26_pna_sn84022473_00280777547_1874052601_0491.json",
+  "date": "1874-05-26",
+  "paper": "The Rutland daily globe. [volume] (Rutland, Vt.) 1873-1877",
+  "line": "Chr 3utland daily Globe.",
+  "headline": "Chr 3utland daily Globe.\n\nTUESDAY,, MAY 2G, 1874.\n\nThe New catholic church at Fair\nhaven.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1892-11-15_p1_sn86076999_00416150163_1892111501_0465.json",
+  "date": "1892-11-15",
+  "paper": "Morning appeal. [volume] (Carson City, Nev.) 1877-1906",
+  "line": "MORNING. APPEAL",
+  "headline": "MORNING. APPEAL\n\nTUESDAY NOVEMBER 10\n\nA SAD PICTURE.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1873-02-17_p1_sn84026840_0020219249A_1873021701_0339.json",
+  "date": "1873-02-17",
+  "paper": "The democrat. [volume] (Weston, W. Va.) 1868-1874",
+  "line": "VOL. VI.",
+  "headline": "VOL. VI.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1880-08-07_p1_sn83016025_00279525486_1880080701_0616.json",
+  "date": "1880-08-07",
+  "paper": "The Portland daily press.",
+  "line": "SATURDAY MORNING, AUGUST Z.",
+  "headline": "SATURDAY MORNING, AUGUST Z.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1852-09-29_p1_sn84024738_00202190911_1852092901_0295.json",
+  "date": "1852-09-29",
+  "paper": "The daily dispatch. [volume] (Richmond [Va.]) 1850-1884",
+  "line": "THE, DAILY DISPATCH",
+  "headline": "THE, DAILY DISPATCH\n\nIAs A. CowARDIN, Proprietor.\nHIGH PLEASANTS, Editor.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1907-01-08_p1_sn83045227_00279559940_1907010801_0030.json",
+  "date": "1907-01-08",
+  "paper": "Freie Presse fu\u00cc\u02c6r Texas. [volume] (San Antonio, Tex.) 1865-1945",
+  "line": "..",
+  "headline": "..",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1898-12-29_p1_sn83032011_00296028423_1898122901_0374.json",
+  "date": "1898-12-29",
+  "paper": "The Columbian. [volume] (Bloomsburg, Pa.) 1866-1910",
+  "line": "VOL. 33",
+  "headline": "VOL. 33\n\nTHE DAWNlNG OF THE YEAR.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1894-12-22_pna_sn82015485_00295871659_1894122201_0106.json",
+  "date": "1894-12-22",
+  "paper": "Western Kansas world. [volume] (WaKeeney, Kan.) 1885-current",
+  "line": "SATURDAY. DECEMBER %, 1894.",
+  "headline": "SATURDAY. DECEMBER %, 1894.\n\nsoNe,THE CHRISTMAS TREE",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1905-09-08_p1_sn98060050_0028077747A_1905090801_0312.json",
+  "date": "1905-09-08",
+  "paper": "Vermont ph\u00c5\u201cnix. [volume] (Brattleboro, Vt.) 1834-1955",
+  "line": "September 6. 1905.",
+  "headline": "September 6. 1905.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1943-06-29_pna_sn83035527_0027955596A_1943062901_0747.json",
+  "date": "1943-06-29",
+  "paper": "Enakopravnost. [volume] (Cleveland, O.[Ohio]) 1918-1957",
+  "line": "-",
+  "headline": "X X\n-\n\n\nNa$sii\nfantje-uo'jaki",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "27_1886-10-13_p1_sn84026497_00280776130_1886101301_0944.json",
+  "date": "1886-10-13",
+  "paper": "The Forest Republican. [volume] (Tionesta, Pa.) 1869-1952",
+  "line": "TIONESTA, Pa, WEDNESDAY, OCTOBER l3 1886.",
+  "headline": "TIONESTA, Pa, WEDNESDAY, OCTOBER l3 1886.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1855-11-08_p1_sn85034360_00393347983_1855110801_0314.json",
+  "date": "1855-11-08",
+  "paper": "Lynchburg daily Virginian. [volume] (Lynchburg [Va.]) 1852-1861",
+  "line": "VOL. 4.--N0. 81.",
+  "headline": "VOL. 4.--N0. 81.\n\nDAILY VIRGINIAN.\n\nThe Man that Played on Harp with Thous\n\n\nand 6trings N",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "36_1856-01-12_pna_sn83045462_00280654061_1856011201_0531.json",
+  "date": "1856-01-12",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": "EVENING STAR.",
+  "headline": "EVENING STAR.\n\nLOCAL INTELLIGENCE.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "22_1871-04-09_p1_sn83016555_00295875884_1871040901_0666.json",
+  "date": "1871-04-09",
+  "paper": "New Orleans Republican. [volume] (New Orleans, La) 1867-1878",
+  "line": "NEW ORLEANS, SUNDAY, APRIL 8, 1871",
+  "headline": "\n\nNEW ORLEANS, SUNDAY, APRIL 8, 1871\n\nslErAIRIE SPRING MEETING.\n\n",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1885-04-28_p1_sn90061066_00200291943_1885042801_0577.json",
+  "date": "1885-04-28",
+  "paper": "The Sedalia weekly bazoo. [volume] (Sedalia, Mo.) 187?-1904",
+  "line": "SEDALIA WEEKLY BAZOO. TUESDAY, APRIL Is 1888",
+  "headline": "SEDALIA WEEKLY BAZOO. TUESDAY, APRIL Is 1888",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1890-03-29_pna_sn87075048_00237289511_1890032901_0623.json",
+  "date": "1890-03-29",
+  "paper": "The Ohio Democrat. (Logan, O. [Ohio]) 1886-1906",
+  "line": "OHIO DEMOCRAT SATURDAY. MARCH 90 1890",
+  "headline": "OHIO DEMOCRAT SATURDAY. MARCH 90 1890",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "78_1857-12-19_p1_sn82014488_00279557438_1857121901_0167.json",
+  "date": "1857-12-19",
+  "paper": "Mountain Democrat.",
+  "line": "NUMBER 20.",
+  "headline": "NUMBER 20.\n\nA Battle Incident",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "16_1890-08-28_pna_sn87080287_00296028770_1890082801_0274.json",
+  "date": "1890-08-28",
+  "paper": "Freeland tribune. (Freeland, Pa.) 1888-1921",
+  "line": "FREELAND, PA, AUGUST %, 1890.",
+  "headline": "FREELAND, PA, AUGUST %, 1890.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1823-09-26_pna_sn84024735_00414183979_1823092601_0169.json",
+  "date": "1823-09-26",
+  "paper": "Richmond enquirer. [volume] (Richmond, Va.) 1815-1867",
+  "line": "RICHMOND, SEPTEMBER 90. I8e5.",
+  "headline": "RICHMOND, SEPTEMBER 90. I8e5.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1897-07-20_p3_sn84002889_00513680995_1897072001_0063.json",
+  "date": "1897-07-20",
+  "paper": "Daily camera.",
+  "line": "THE DAILY CAMERA.",
+  "headline": "THE DAILY CAMERA.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1894-09-27_pna_sn87068192_00279529674_1894092701_0311.json",
+  "date": "1894-09-27",
+  "paper": "Bridgeton pioneer. (Bridgeton, N.J.) 1884-1919",
+  "line": "VOL. LXVI.",
+  "headline": "VOL. LXVI.\n\nCOUNTY CONVENTION.\n\na,reat Gathering of the County\nRepublicans Thursday; Much\nEn,husiasm Manifested.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1894-11-16_pna_sn85058217_206534874_1894111601_0071.json",
+  "date": "1894-11-16",
+  "paper": "The Coalville times. [volume] (Coalville, Utah) 1894-1923",
+  "line": "NO. 40",
+  "headline": "NO. 40\n\nrlo aIt !. alled va .moLe IL evsry al.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "20_1911-12-01_p1_sn90051265_00340585926_1911120101_0187.json",
+  "date": "1911-12-01",
+  "paper": "Rocky Ford enterprise.",
+  "line": "+ ++%+++++++++++++",
+  "headline": "+ ++%+++++++++++++\n, PERSONAL =\n; AND\n\\ LOCAL =",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1868-09-04_p1_sn83045646_00279528633_1868090401_0258.json",
+  "date": "1868-09-04",
+  "paper": "Daily Davenport Democrat. [volume] (Davenport, Iowa) 1864-1874",
+  "line": "-",
+  "headline": "DAILY DEMOCRAT.\n\n-\nwhat q Mormon Leader says Of\n\n\nMin ue0t..",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "25_1900-01-13_p1_sn82014248_00514156049_1900011301_0107.json",
+  "date": "1900-01-13",
+  "paper": "Daily Kennebec journal. [microfilm reel] (Augusta, Me.) 1870-1975",
+  "line": "VOLUME V.",
+  "headline": "VOLUME V.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1862-07-16_p1_sn82014129_00279528724_1862071601_0413.json",
+  "date": "1862-07-16",
+  "paper": "Council Bluffs bugle. [volume] (Council Bluffs, Iowa) 1860-1868",
+  "line": "NO. l3.",
+  "headline": "NO. l3.\nFM e - WF# -",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1888-01-07_pna_sn88064492_00295874715_1888010702_0012.json",
+  "date": "1888-01-07",
+  "paper": "The weekly Thibodaux sentinel and journal of the 8th Senatorial District. [volume] (Thibodaux, Lna. [i.e. La.]) 1875-1898",
+  "line": "\"",
+  "headline": "Liable\nCOmStUmt&sa.\nPAR\n1ICD0VlC HAlRVY.\ndc pAcAdenie Frxncaise.\n\n\"",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1886-09-16_p1_sn89053287_00517177155_1886091601_0741.json",
+  "date": "1886-09-16",
+  "paper": "The Dawson journal.",
+  "line": "NO. 18.",
+  "headline": "NO. 18.\n\nA BAD NEGRO.\n\nBeuna Vista Patriot.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1907-07-13_pna_sn85058246_00206535556_1907071301_0102.json",
+  "date": "1907-07-13",
+  "paper": "The Logan Republican. [volume] (Logan, Utah) 1902-1924",
+  "line": "~ ~ ~",
+  "headline": "CITY and COUNTY\nItems OF Interest About\n\n\nPeople and Events.\n\n~ * ~\n~ ~ ~\n\n\n~ ~ ~\n\n\n~ ~ -",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "38_1893-11-05_pna_sn85038614_00175031108_1893110501_0569.json",
+  "date": "1893-11-05",
+  "paper": "Richmond dispatch. [volume] (Richmond, Va.) 1884-1903",
+  "line": "----------------~",
+  "headline": "READYFOR THEFIGHT\n\n\n----------------~\nrhe Democratic Forces Prepared to\nMeet the Enemy on Tuesday.\nRINGING WORDS TO VOTERS.\nCITY and County ChaIrmen Urge a\nPrompt Discharge Of Duty.\nWORK OF OUR SPEAKERS.\nFine Meetings Held Here and Throughout\nthe State Ycstcrdap-The Eiec-\n\n\ntion-Eve Rallies.\n\nRINGING WORDS TO VOTERS.\n\nWORK OF QUIZ SPEAKERS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1873-11-13_pna_sn84022374_00332895394_1873111301_0184.json",
+  "date": "1873-11-13",
+  "paper": "Ellsworth American. [volume] (Ellsworth, Me.) 1855-current",
+  "line": "2",
+  "headline": "2\ns9ortrp.\n\nHome e-Coming.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1859-03-31_pna_sn84026752_00415620378_1859033101_0487.json",
+  "date": "1859-03-31",
+  "paper": "The national era. [volume] (Washington [D.C.]) 1847-1860",
+  "line": "WASHINGTON. d. G.",
+  "headline": "WASHINGTON. d. G.\nrr,pvrisai secured according TO ia,e.l\n\n\nFor the National Era\n\n\nHERMAN;\n\n\nVoUNG KNIGHTH0 GOD.\nBy E. FoxToS,\nAHshor Of\" Prsm;ees.\"",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1887-10-27_p1_sn82007023_00295867838_1887102701_0210.json",
+  "date": "1887-10-27",
+  "paper": "Lewiston teller. [volume] (Lewiston, North Idaho) 1878-1900",
+  "line": "-",
+  "headline": "-\nFor Young Men to Read.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1897-03-12_p1_sn94051168_0028076260A_1897031201_0302.json",
+  "date": "1897-03-12",
+  "paper": "The Jewish South. [volume] (Richmond, Va.) 1893-1899",
+  "line": "iii JEWISH SOUTH.",
+  "headline": "iii JEWISH SOUTH.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1856-09-02_pna_sn84020712_00295879166_1856090201_0520.json",
+  "date": "1856-09-02",
+  "paper": "The western Democrat. [volume] (Charlotte, N.C.) 1852-1870",
+  "line": "WESTERN DEMOCRAT.",
+  "headline": "WESTERN DEMOCRAT.\n\n3 CHARLOTTE o.\n\nTuesday Morning, SePt'r 2, 1856\n\nxHow-NoTFING DRAGGING.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1874-05-23_p1_sn85034248_00200299346_1874052301_0368.json",
+  "date": "1874-05-23",
+  "paper": "The Donaldsonville chief. [volume] (Donaldsonville, La.) 1871-current",
+  "line": "VOLUME III.",
+  "headline": "VOLUME III.\n\nPOETRY.\n\nSIGNS.\n\nBY HOWARD eLyNpoN",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "48_1885-08-13_pna_sn83025167_00279528414_1885081301_0148.json",
+  "date": "1885-08-13",
+  "paper": "The Iowa plain dealer. [volume] (New Oregon, Howard County, Iowa) 1867-1895",
+  "line": ":,",
+  "headline": "Banks and Banking Organizations.\n\nBy MRS. ANA D. WEAVER, JAMESTOWN\n\n\n:,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "24_1856-06-13_p1_sn85026050_00280775782_1856061301_0315.json",
+  "date": "1856-06-13",
+  "paper": "Fremont journal. [volume] (Fremont, Sandusky County [Ohio]) 1853-1866",
+  "line": "NO. 20.",
+  "headline": "NO. 20.\n\nA Song of David-Picture Of a Good ma",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1859-11-23_p1_sn82014282_00414212438_1859112301_0628.json",
+  "date": "1859-11-23",
+  "paper": "Arkansas true Democrat.",
+  "line": "Number 7.",
+  "headline": "Number 7.\n\nThe Deadly Spirit of Abolitionism.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1874-05-16_p1_sn83016739_00295877509_1874051601_0449.json",
+  "date": "1874-05-16",
+  "paper": "American citizen. [volume] (Canton, Miss.) 1864-1890",
+  "line": "VOL. XIV.",
+  "headline": "VOL. XIV.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "21_1874-06-26_p1_sn84038328_00280763391_1874062601_0499.json",
+  "date": "1874-06-26",
+  "paper": "The interior journal. [volume] (Stanford, Ky.) 1872-1881",
+  "line": "VOLUME III-NUMBER Is",
+  "headline": "VOLUME III-NUMBER Is",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "49_1932-01-29_pna_sn89060136_00279522333_1932012901_0048.json",
+  "date": "1932-01-29",
+  "paper": "The midland journal. (Rising Sun, Md.) 1885-1947",
+  "line": "--------------",
+  "headline": "--------------\nOdd Reasons Given for\n\n\nCrushing of Eggshells",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1893-03-28_pna_sn89053706_00393344660_1893032801_0223.json",
+  "date": "1893-03-28",
+  "paper": "The Atlanta constitution. [volume] (Atlanta, Ga.) 1885-19??",
+  "line": "VOL.XXII",
+  "headline": "VOL.XXII\n\nCopyrighted by Frank Mathews.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1887-10-15_pna_sn86092182_00514157480_1887101501_0962.json",
+  "date": "1887-10-15",
+  "paper": "The new dominion. [volume] (Morgantown, W. Va.) 1876-1904",
+  "line": "VOLUME XXI.",
+  "headline": "VOLUME XXI.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1890-08-28_p1_sn84026688_00415623446_1890082801_0320.json",
+  "date": "1890-08-28",
+  "paper": "Catoctin clarion. [volume] (Mechanicstown, Md.) 1871-1940",
+  "line": "No. | 9,",
+  "headline": "No. | 9,\n\n=\nNOW THEY GREET YOU.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1909-08-28_pna_sn86063952_00200294932_1909082801_0397.json",
+  "date": "1909-08-28",
+  "paper": "The Guthrie daily leader. [volume] (Guthrie, Okla.) 1893-1996",
+  "line": "} {",
+  "headline": "D o o o o O = 0 oeo o o ss o {\n, WHAT EDITORS ARE SAYING Q\n\n\n} {\n\n\n, 0 o o o o c 9 Q 90 90 30 c\n\n",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "24_1858-06-23_pna_sn83045462_00280654115_1858062301_0502.json",
+  "date": "1858-06-23",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": "EVENING STAR",
+  "headline": "EVENING STAR\n\nTHE ANGEL GUESTS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1870-02-15_pna_sn85038115_00296027443_1870021501_0326.json",
+  "date": "1870-02-15",
+  "paper": "The spirit of democracy. [volume] (Woodsfield, Ohio) 1844-1994",
+  "line": "THE SPIRIT OF DEMOCRACY",
+  "headline": "THE SPIRIT OF DEMOCRACY\n\ntTncsday, February 10, Isso.\n\nThe Farmers Shop.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "14_1905-12-23_pna_sn90059959_00271742885_1905122301_1138.json",
+  "date": "1905-12-23",
+  "paper": "The Irish standard. [volume] (Minneapolis, Minn. ;) 1886-1920",
+  "line": "% %",
+  "headline": "% %\n\n\n| The Hermit !\nIN A Story of the Wilderness Il.\n~ By CHARLES CLARK MUNN -\nAuthor Of POCKET Island =\" Uncle Terry\nard Rockhaven.\"\n\nCHAPTER Xxx.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1900-02-23_p1_sn85042104_00332892034_1900022301_0410.json",
+  "date": "1900-02-23",
+  "paper": "The news &amp; observer. [volume] (Raleigh, N.C.) 1894-current",
+  "line": "NEWS OBSERVER FRIDAY MORNING. FEBRUARY 49,",
+  "headline": "NEWS OBSERVER FRIDAY MORNING. FEBRUARY 49,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1867-12-14_p1_sn85025202_00279557402_1867121401_0200.json",
+  "date": "1867-12-14",
+  "paper": "Weekly Trinity journal.",
+  "line": "NUMBER 40.",
+  "headline": "NUMBER 40.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1896-11-26_p5_sn85042461_00280769708_1896112601_0281.json",
+  "date": "1896-11-26",
+  "paper": "The herald.",
+  "line": "-",
+  "headline": "OBSERVATION-DISCLOSURES!\n-\ni: At THE THEHTERS :\nn\ny RAAAA4AAAAAAAA&@AAA&AAAAAy",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "15_1930-01-10_p3_sn92070146_00414188588_1930011001_0171.json",
+  "date": "1930-01-10",
+  "paper": "Imperial Valley press.",
+  "line": "Friday, January 10, 1890",
+  "headline": "Friday, January 10, 1890",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1880-12-11_pna_sn84038198_00202192506_1880121101_1110.json",
+  "date": "1880-12-11",
+  "paper": "The Weston Democrat. [volume] (Weston, W. Va.) 1875-current",
+  "line": "No. 28.",
+  "headline": "No. 28.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "14_1853-03-25_p1_sn83045461_00280654000_1853032501_0314.json",
+  "date": "1853-03-25",
+  "paper": "Daily evening star. [volume] (Washington [D.C.]) 1852-1854",
+  "line": "DAILY EVENING STAR.",
+  "headline": "DAILY EVENING STAR.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1914-01-06_p6_sn82014248_00513682761_1914010601_0509.json",
+  "date": "1914-01-06",
+  "paper": "Daily Kennebec journal.",
+  "line": "Tuesday, January e. 1914",
+  "headline": "Tuesday, January e. 1914\n\nThe Only Hope of Democracy.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1888-12-23_p1_sn85042460_0028076923A_1888122301_0435.json",
+  "date": "1888-12-23",
+  "paper": "Los Angeles daily herald.",
+  "line": "..-.....",
+  "headline": "THE\nMss Nj \" R TIE Pc Elk\nRUN MING\n..-.....\nCO M IL i N A TION\n\n10 THOROUGHBRED RUNNING HoRsEsl\n6-R q e S--6\nRUNNING RACES!\n\n\nLADY RIDERS AND\n\n\nDRIVERS!",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "15_1913-08-15_p1_sn85053090_00295861095_1913081501_0616.json",
+  "date": "1913-08-15",
+  "paper": "The Ekalaka eagle. [volume] (Ekalaka, Mont.) 1909-1920",
+  "line": "No. 4",
+  "headline": "No. 4\nA Night In New\nArabia\nConYright by Doubleday. Page & Co.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1909-11-19_p4_sn85042354_00383343318_1909111901_0529.json",
+  "date": "1909-11-19",
+  "paper": "Evening journal.",
+  "line": "Friday, November l9. 1909",
+  "headline": "Friday, November l9. 1909\n\nSHAKING HANDS WITH GHOSTS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1926-02-05_pna_sn83016209_00332899090_1926020501_0029.json",
+  "date": "1926-02-05",
+  "paper": "Montgomery County sentinel. [volume] (Rockville, Md.) 1855-1974",
+  "line": ".~~~~~~~~~~~~~~~~~~~~~~~",
+  "headline": "The Phantom That\n\n\nFollowed\n.~~~~~~~~~~~~~~~~~~~~~~~\nBy KARIN c. SUNDELOF",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1866-11-10_p1_sn82015099_00279556677_1866111001_0395.json",
+  "date": "1866-11-10",
+  "paper": "The Shasta courier.",
+  "line": "NUMBER 81.",
+  "headline": "NUMBER 81.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1867-03-13_pna_sn84027239_00279529443_1867031301_0268.json",
+  "date": "1867-03-13",
+  "paper": "North Iowa times. [volume] (McGregor, Iowa) 1867-current",
+  "line": "WHOLE No. 543.",
+  "headline": "WHOLE No. 543.\n\n",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1866-12-14_p1_sn83030313_00271743567_1866121401_0737.json",
+  "date": "1866-12-14",
+  "paper": "The New York herald. [volume] (New York [N.Y.]) 1840-1920",
+  "line": "--~~~~-~~~-~--~~~-~~~-----",
+  "headline": "THE WEEKLY HERALD.\n\n\n--~~~~-~~~-~--~~~-~~~-----\nThe Cheapest Newspaper and Bsss LITERARY\n\n\nJsurnal In che Cospsry.\nThe WEEKLY HUArp for the present wssk, new ready\nesasains the very Interesting stories sausisd--\n\n\n\"rHE HAUNTED ORGANISE\"\n\nNY ogpERLY.n\n\nPosrnT-\" ssvUr-nx,n written Tor the wuxrr HnAil\n\n\nBY a. r. BANKS; \"on, Tootaz HzAsr\"",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1855-10-27_pna_sn85034360_00393347983_1855102701_0274.json",
+  "date": "1855-10-27",
+  "paper": "Lynchburg daily Virginian. [volume] (Lynchburg [Va.]) 1852-1861",
+  "line": "VOL. l.-:N0. Il.",
+  "headline": "VOL. l.-:N0. Il.\n\nDAILY VIRGINIAN.\n\nAn Italians Wiie's Revenge.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1859-10-25_pna_sn83016318_00296024570_1859102501_0172.json",
+  "date": "1859-10-25",
+  "paper": "The Lansing state Republican. [volume] (Lansing, Mich.) 1855-1874",
+  "line": ":",
+  "headline": ":\nPI ATE'S WIFE'S DREAM\n\n~ LOUISE ,. vICEROY.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1809-08-04_pna_sn84024736_00414183839_1809080401_0105.json",
+  "date": "1809-08-04",
+  "paper": "The enquirer. [volume] (Richmond, Va.) 1804-1815",
+  "line": "The ENQUIRER.",
+  "headline": "The ENQUIRER.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1911-06-02_pna_sn86092536_0041418621A_1911060201_0736.json",
+  "date": "1911-06-02",
+  "paper": "The Wheeling intelligencer. [volume] (Wheeling, W. Va.) 1903-1961",
+  "line": "Friday, June 2, 1911.",
+  "headline": "Friday, June 2, 1911.\n\nDEMOCRATS ALREADY oooe,nc",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1840-03-21_p1_sn86074078_0029587885A_1840032101_0724.json",
+  "date": "1840-03-21",
+  "paper": "Madison Whig advocate.",
+  "line": "Volume 2---Number Ii.",
+  "headline": "Volume 2---Number Ii.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1886-10-12_p1_sn85032490_00237283004_1886101201_0538.json",
+  "date": "1886-10-12",
+  "paper": "Wichita eagle.",
+  "line": "------------------",
+  "headline": "------------------\nSENATOR INGALLS,.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1855-09-08_p1_sn83035487_00211100497_1855090801_0270.json",
+  "date": "1855-09-08",
+  "paper": "Anti-slavery bugle. [volume] (New-Lisbon, Ohio) 1845-1861",
+  "line": "THE ANTI-SLAVERY BUGLE,.",
+  "headline": "THE ANTI-SLAVERY BUGLE,.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "54_1884-11-20_pna_sn88077272_0029602725A_1884112001_0512.json",
+  "date": "1884-11-20",
+  "paper": "The Eaton Democrat. (Eaton, Ohio) 1875-1903",
+  "line": "l. EATON OHIO. THURSDAY. NOVEMBER 90",
+  "headline": "l. EATON OHIO. THURSDAY. NOVEMBER 90\n\nCURRENT TOPICS.\n\nno win care for Belva nowi",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1894-07-12_pna_sn85034082_00517177313_1894071201_0836.json",
+  "date": "1894-07-12",
+  "paper": "The Marietta journal. [volume] (Marietta, Ga.) 1866-1909",
+  "line": "MARIETTA GA,",
+  "headline": "MARIETTA GA,\nTHURSDAY MORNING. July IL, 1894\n\nTIMES AND TIMES.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "20_1849-09-19_pna_sn85055199_0028077635A_1849091901_0012.json",
+  "date": "1849-09-19",
+  "paper": "Lewisburg chronicle, and the West Branch farmer. [volume] (Lewisburg, Pa.) 1849-1849",
+  "line": "WEDNESDAY, SEPT. 10, 1840: V0",
+  "headline": "VOL. VI, NO. 25--285.\n\nWEDNESDAY, SEPT. 10, 1840: V0",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "32_1905-12-14_pna_sn86063790_00295862828_1905121401_0336.json",
+  "date": "1905-12-14",
+  "paper": "The Bamberg herald. [volume] (Bamberg, S.C.) 1891-1972",
+  "line": "THE BAMBERG HERALD",
+  "headline": "THE BAMBERG HERALD\n\nThursday, Dec. IL. 1905\n\nShort Locals.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1882-11-16_pna_sn87093109_00200291025_1882111601_0348.json",
+  "date": "1882-11-16",
+  "paper": "The Vancouver independent. (Vancouver, W.T. [Wash.]) 1875-1910",
+  "line": "THURSDAY, NOVEMBER le, 1882.",
+  "headline": "VANCOUVER INDEPENDENT.\n\nTHURSDAY, NOVEMBER le, 1882.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1863-07-31_p1_sn83035595_00296026633_1863073101_0025.json",
+  "date": "1863-07-31",
+  "paper": "Delaware gazette. [volume] (Delaware, Ohio) 1855-1886",
+  "line": "VOL XL'",
+  "headline": "VOL XL'",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1912-09-13_pna_sn88078751_00237289444_1912091301_0257.json",
+  "date": "1912-09-13",
+  "paper": "The Democratic banner. (Mt. Vernon, Ohio) 1898-192?",
+  "line": "MT. VERNON",
+  "headline": "MT. VERNON\n\nBoy Granted Leave Of Alb.\nseOce To Visit His Old Home",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1877-09-19_p1_sn83016025_00279525437_1877091901_0228.json",
+  "date": "1877-09-19",
+  "paper": "The Portland daily press.",
+  "line": "WEDNESDAY, MORNING, SEPT. Is.",
+  "headline": "WEDNESDAY, MORNING, SEPT. Is.\n\nShaking People In Their Belief.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "14_1905-06-30_p1_sn83016589_0039334085A_1905063001_0242.json",
+  "date": "1905-06-30",
+  "paper": "The Mankato free press. [volume] (Mankato, Blue Earth County, Minn.) 1879-1924",
+  "line": "-",
+  "headline": "INDIAN LOVE STORY\n-\nBeautiful Legend As Told to\n\"\" the Old Settlers.\nHI al\nThomas Hughes Delights an\n\n\nAudience at SibIey.\n\nWar Eagle; Beautiful Maid Who\n\n\nWon His Heart.\n\nIHiTI\n\nGen. J. H. Baker Pays Tribute\n\n\nto Dead Pioneers.\n\nFrom Thursdays Daily.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1858-05-08_pna_sn83045462_00280654115_1858050801_0342.json",
+  "date": "1858-05-08",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": "EVENING STAR.",
+  "headline": "EVENING STAR.\n\nSTAND UP FOik JESUS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1893-10-27_pna_sn95079246_00175032277_1893102701_0170.json",
+  "date": "1893-10-27",
+  "paper": "Highland recorder. (Monterey, Highland County, Va.) 1877-1972",
+  "line": "VOL. VI.",
+  "headline": "VOL. VI.\n\nTHE NEW BEAU.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "21_1947-08-02_p2_sn87065258_00383345091_1947080201_0184.json",
+  "date": "1947-08-02",
+  "paper": "The Mississippi enterprise.",
+  "line": "THE MISSISSIPPI ENTERPRISE",
+  "headline": "THE MISSISSIPPI ENTERPRISE\n\n10 10 Your Favorite Church Sunday\n\nChurch Directory\n\nAFRICAN METHODIST EPISCOPAL,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "23_1858-03-15_p1_sn83030313_00271743282_1858031501_0597.json",
+  "date": "1858-03-15",
+  "paper": "The New York herald. [volume] (New York [N.Y.]) 1840-1920",
+  "line": "--------------------------",
+  "headline": "--------------------------\nBaptksm In the Harlem River.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1886-02-12_p1_sn85026941_0017503237A_1886021201_0384.json",
+  "date": "1886-02-12",
+  "paper": "Shenandoah herald. [volume] (Woodstock, Va.) 1865-1974",
+  "line": "VOL. 66.",
+  "headline": "VOL. 66.\n\nUNFORESEEN.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1860-04-12_p1_sn84024558_00296028642_1860041201_0386.json",
+  "date": "1860-04-12",
+  "paper": "Bradford reporter. [volume] (Towanda, Pa.) 1844-1884",
+  "line": "Thursday Morning, April IL, 1860.",
+  "headline": "TOWANDA:\n\nThursday Morning, April IL, 1860.\n\nOriginal 4oetrg.\n\nCFor the Reporter.1\n\nMUMM1ES FOR FUEL I",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1871-09-15_pna_sn84022552_00202197231_1871091501_0146.json",
+  "date": "1871-09-15",
+  "paper": "National opinion. [volume] (Bradford, Vt.) 1865-1874",
+  "line": "BRADFORD, FRIDAY. SEPT. is, 1911",
+  "headline": "BRADFORD, FRIDAY. SEPT. is, 1911\n\nTHE MINE ELECTION.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "21_1872-08-01_p1_sn84022374_0033289500a_1872080101_0330.json",
+  "date": "1872-08-01",
+  "paper": "Ellsworth American. [volume] (Ellsworth, Me.) 1855-current",
+  "line": "Vol. XVIII. Whole No. 9l5. No. 81",
+  "headline": "Vol. XVIII. Whole No. 9l5. No. 81",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1860-11-28_pna_sn85035610_00513684976_1860112801_0180.json",
+  "date": "1860-11-28",
+  "paper": "The Lambertville press. [volume] (Lambertville, N.J.) 1858-1???",
+  "line": "-",
+  "headline": "Misrellanp.\n\n\n-\n\nTHE LOST BOY.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1876-05-13_p1_sn88064492_00295874739_1876051302_0090.json",
+  "date": "1876-05-13",
+  "paper": "The weekly Thibodaux sentinel and journal of the 8th Senatorial District. [volume] (Thibodaux, Lna. [i.e. La.]) 1875-1898",
+  "line": "81",
+  "headline": "81",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1885-05-23_pna_sn88064492_00295873759_1885052301_0994.json",
+  "date": "1885-05-23",
+  "paper": "The weekly Thibodaux sentinel and journal of the 8th Senatorial District. [volume] (Thibodaux, Lna. [i.e. La.]) 1875-1898",
+  "line": "THIBODAUX, LA, SATURDAY, MAY 23",
+  "headline": "THIBODAUX, LA, SATURDAY, MAY 23\n\nRudderleSS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1936-03-07_p1_sn82015313_00383349837_1936030701_0118.json",
+  "date": "1936-03-07",
+  "paper": "The Indianapolis times. [volume] (Indianapolis [Ind.]) 1922-1965",
+  "line": "THE INDIANAPOLIS TIMES",
+  "headline": "THE INDIANAPOLIS TIMES",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1863-05-09_p4_sn83045462_00280654206_1863050901_0194.json",
+  "date": "1863-05-09",
+  "paper": "Evening star.",
+  "line": "THE EVENING STAR.",
+  "headline": "THE EVENING STAR.\n\nTHE HARBEg,s aHoSr.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "30_1902-12-31_p5_sn89051168_00393343151_1902123101_0458.json",
+  "date": "1902-12-31",
+  "paper": "Pine Bluff daily graphic.",
+  "line": "1902",
+  "headline": "1902",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1901-07-05_pna_sn85025407_00279522114_1901070501_0302.json",
+  "date": "1901-07-05",
+  "paper": "Maryland independent. [volume] (Port Tobacco, Md.) 1874-current",
+  "line": "NO.23.",
+  "headline": "NO.23.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1911-06-07_pna_sn82014248_00513682682_1911060701_0434.json",
+  "date": "1911-06-07",
+  "paper": "Daily Kennebec journal. [microfilm reel] (Augusta, Me.) 1870-1975",
+  "line": "~-",
+  "headline": "GIBBONS\nIs Honored by Many\nDistinguished Men.\nNotable Gathering Seldom\nEQuaIIed in Country\n\n\n~-\n\nListens 10 EuIOgieS Of Amerl-\n\n\ncas- Only Catholic Prince.\n\nTail, Sherman, Roosevelt, Bryce,\n\n\nClark, Root and Cannon\n\nPay Eloquent Tributes In Presence\n\n\nOf Over 5000 People.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1903-10-10_p1_sn89081022_00212472293_1903101001_0254.json",
+  "date": "1903-10-10",
+  "paper": "Willmar tribune. [volume] (Willmar, Minn.) 1895-1931",
+  "line": "-",
+  "headline": "\n-",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1914-11-16_pna_sn85042303_0020029676A_1914111601_0752.json",
+  "date": "1914-11-16",
+  "paper": "The Daily Ardmoreite. [volume] (Ardmore, Okla.) 1893-current",
+  "line": ":: = :: ): :; :: :: :: :: :: :; :: :: :; :: 8",
+  "headline": ":: = :: ): :; :: :: :: :: :: :; :: :: :; :: 8\n:. =:\n:. STREET STORIES ::\ny :: % !: - = :; q :; :: :: :: :: ;! :: :: =",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "25_1883-09-19_p1_sn84036033_00295860595_1883091901_0221.json",
+  "date": "1883-09-19",
+  "paper": "The semi-weekly miner. [volume] (Butte, Mont.) 1882-1886",
+  "line": "The Semi Weekly Miner.",
+  "headline": "The Semi Weekly Miner.\n\nLocal News\n\nFrom the Daily of Tuesday.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1897-10-30_pna_sn86074033_00199916270_1897103001_0829.json",
+  "date": "1897-10-30",
+  "paper": "The sea coast echo. [volume] (Bay Saint Louis, Miss.) 1892-current",
+  "line": "-----=--------------------",
+  "headline": "-----=--------------------\nQuarantine Epidemic.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1855-12-26_pna_sn85026466_0020219798A_1855122601_0897.json",
+  "date": "1855-12-26",
+  "paper": "Grand River times. [volume] (Grand Haven, Mich.) 1851-18??",
+  "line": "THE GRAND RIVER TIMES.",
+  "headline": "THE GRAND RIVER TIMES.\n\nGRAND HAVEN. MICHIGAN\nWEDNESDAY EVENING. DEC. 2e, 1855.\n\nA BEAUTIFUL DEFINITION the",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "23_1939-11-24_pna_sn88085187_00200291657_1939112401_0340.json",
+  "date": "1939-11-24",
+  "paper": "The Tacoma times. [volume] (Tacoma, Wash.) 1903-1949",
+  "line": "- - -",
+  "headline": "- - -\n.JQlJIIE\n\n\nG2.1zzE1n3.,l!g",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1865-05-05_p1_sn83016025_00279525206_1865050501_0067.json",
+  "date": "1865-05-05",
+  "paper": "The Portland daily press.",
+  "line": "Friday Morning, May 5, 1865.",
+  "headline": "Friday Morning, May 5, 1865.\n\nFailnre at its Climax.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "22_1894-10-05_p1_sn86053696_00295873838_1894100501_0025.json",
+  "date": "1894-10-05",
+  "paper": "The Lake Charles echo. [volume] (Lake Charles, Parish of Calcasieu, La.) 1876-1898",
+  "line": "NO 32",
+  "headline": "NO 32\n\n\n\n",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1857-12-19_pna_sn98060050_00280777353_1857121901_0214.json",
+  "date": "1857-12-19",
+  "paper": "Vermont ph\u00c5\u201cnix. [volume] (Brattleboro, Vt.) 1834-1955",
+  "line": "VOL. XIV.",
+  "headline": "VOL. XIV.\n\nP 0 L 7 r Y.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1897-08-22_p1_sn86063034_00414182215_1897082201_1148.json",
+  "date": "1897-08-22",
+  "paper": "The morning news. [volume] (Savannah, Ga.) 1887-1900",
+  "line": "1773.",
+  "headline": "1773.\n\n\nDAVID ENERHART.\nWas Born in October.\nMurdered Sept. %, 1910.",
+  "verdict": "mis-drop",
+  "note": "the year a story's headline opens with (1773)"
+ },
+ {
+  "article_id": "13_1854-06-17_p1_sn83035487_00237283776_1854061701_0930.json",
+  "date": "1854-06-17",
+  "paper": "Anti-slavery bugle. [volume] (New-Lisbon, Ohio) 1845-1861",
+  "line": "WHOLE NO. 454.",
+  "headline": "WHOLE NO. 454.\n\nThe NEW CRIME AGAINST HUBaSrTE",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "21_1856-05-14_pna_sn86053516_00212470065_1856051401_0468.json",
+  "date": "1856-05-14",
+  "paper": "Nashville daily patriot. [volume] (Nashville, Tenn.) 1855-1857",
+  "line": "- ~ -",
+  "headline": "+\" Characters - I'm New York-The Book\n\n\nTrade. Arc.\n\nCorrespondence Of The Nashville Patriot.\n\n\n- ~ -",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1859-10-20_p1_sn82015486_00280760924_1859102001_0518.json",
+  "date": "1859-10-20",
+  "paper": "White Cloud Kansas chief. [volume] (White Cloud, Kan.) 1857-1872",
+  "line": "}WHOLE NUMBER, 1872.",
+  "headline": "}WHOLE NUMBER, 1872.\n\nTwenty.one Foot Rattlesnake.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1840-07-27_p1_sn83016475_00296026402_1840072701_0360.json",
+  "date": "1840-07-27",
+  "paper": "The pilot and transcript. [volume] (Baltimore, Md.) 1840-1841",
+  "line": "VOL. r....NO. 50.",
+  "headline": "VOL. r....NO. 50.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1927-03-17_pna_sn83045462_00280659678_1927031701_0446.json",
+  "date": "1927-03-17",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": ". &",
+  "headline": "The Gray Phantom's Romance\nASTONISHING Adventures of an Unusual Hero.\n\n\n. &",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1899-04-28_pna_sn97070614_00296023620_1899042801_0783.json",
+  "date": "1899-04-28",
+  "paper": "The Owosso times. (Owosso, Mich.) 1897-1926",
+  "line": "THE OWOSSO TIMES.",
+  "headline": "THE OWOSSO TIMES.\n\nEntered at the Postoffice In Owosso for\ntransmission as second class matter.\n\n\nPublished everv Friday noon.\n\nOWOSSO, FRIDAY. APRIL 20, 1899\n\nLOCAL NEWS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1924-02-15_pna_sn84026089_00513684927_1924021501_0233.json",
+  "date": "1924-02-15",
+  "paper": "The Lambertville record. [volume] (Lambertville, N.J.) 1872-1968",
+  "line": "- % - =,",
+  "headline": "L-0rTsSiAlIMr j. IL Is 81 IA \"\n\n\n- % - =,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1889-07-12_pna_sn90059522_00175033427_1889071201_0111.json",
+  "date": "1889-07-12",
+  "paper": "St. Paul daily globe. [volume] (Saint Paul, Minn.) 1884-1896",
+  "line": "SAINT PAUL.",
+  "headline": "SAINT PAUL.\n\nTOWN TALK.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1899-04-12_p2_sn85042354_00383343410_1899041201_1046.json",
+  "date": "1899-04-12",
+  "paper": "Evening journal.",
+  "line": "WEDNESDAY. APRIL Io, 1899",
+  "headline": "WEDNESDAY. APRIL Io, 1899\n\nNn rrMn rnIR sOREHEAps.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1912-11-01_p13_sn90051265_00340585926_1912110101_0600.json",
+  "date": "1912-11-01",
+  "paper": "Rocky Ford enterprise.",
+  "line": "%",
+  "headline": "%\n\nIN the SOCIETY WORLD.\n\nc)(|S",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "30_1904-01-29_p7_sn84024827_00211106980_1904012901_0204.json",
+  "date": "1904-01-29",
+  "paper": "Bisbee daily review.",
+  "line": "*%%~*+<<%+***~%~4 #",
+  "headline": "*%%~*+<<%+***~%~4 #",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1891-11-04_pna_sn87078000_0023728026A_1891110401_0577.json",
+  "date": "1891-11-04",
+  "paper": "The evening herald. [volume] (Shenandoah, Pa.) 1891-1966",
+  "line": "The EVENING HERALD.",
+  "headline": "The EVENING HERALD.\n\nas larger circulation in Shenandoah than\nany other paper published Clrcu-\n\n\nlation books open to all.\n\n\"vHTO BOB\" REBUKED.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1841-12-20_pna_sn84023200_00280777596_1841122001_0446.json",
+  "date": "1841-12-20",
+  "paper": "Vermont watchman and State journal. [volume] (Montpelier, Vt.) 1836-1883",
+  "line": "MONTPELIER, DECEMBER 20, 1871.",
+  "headline": "MONTPELIER, DECEMBER 20, 1871.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "19_1902-08-06_pna_sn84026907_00295862889_1902080601_0110.json",
+  "date": "1902-08-06",
+  "paper": "The Lexington dispatch. [volume] (Lexington, South Carolina) 1870-1917",
+  "line": "The Lexington Dispatch.",
+  "headline": "The Lexington Dispatch.\n\nWednesday, August 6, 1902.\n\nUnder Martial Law.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1865-08-04_p1_sn85026050_00280775836_1865080401_0550.json",
+  "date": "1865-08-04",
+  "paper": "Fremont journal. [volume] (Fremont, Sandusky County [Ohio]) 1853-1866",
+  "line": "FREMONT SANDUSKY COUNTY, OHIO, AUGUST 4 1865",
+  "headline": "FREMONT SANDUSKY COUNTY, OHIO, AUGUST 4 1865\n\nOUR SOLDIERS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "43_1921-07-28_p4_sn84026688_00415623422_1921072801_0487.json",
+  "date": "1921-07-28",
+  "paper": "Catoctin clarion.",
+  "line": "- - ----",
+  "headline": "VALUES\n\n\n- - ----\nBY CAROL FARMER.\n\nSl. ly2l. by Mcclure New spaper synaieals. j",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "12_1859-07-30_p1_sn85025007_0041566347A_1859073001_0600.json",
+  "date": "1859-07-30",
+  "paper": "Alexandria gazette. [volume] (Alexandria, D.C.) 1834-1974",
+  "line": "NO. l79.",
+  "headline": "NO. l79.\n\nM1scELLAHEous RIADIHG.\n\nSTANZAS.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1875-10-08_pna_sn85033306_00212470120_1875100801_0363.json",
+  "date": "1875-10-08",
+  "paper": "The Bolivar bulletin. [volume] (Bolivar, Hardeman County, Tenn.) 1865-1888",
+  "line": "VOL. XII.-NO. 10.",
+  "headline": "VOL. XII.-NO. 10.\n\nThe Eeighbor's Dog.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1827-02-20_pna_sn85025006_00414216377_1827022001_0168.json",
+  "date": "1827-02-20",
+  "paper": "Phenix gazette. [volume] (Alexandria [D.C.]) 1825-1833",
+  "line": "TUESDAY, FEBRUARY 20, 1897,",
+  "headline": "TUESDAY, FEBRUARY 20, 1897,\n\nFrom the Richmond Wing.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "11_1863-06-19_pna_sn88065733_00415625649_1863061901_0314.json",
+  "date": "1863-06-19",
+  "paper": "The southern aegis, and Harford County intelligencer. (Bel Air, Md.) 1862-1864",
+  "line": "BEL AIR. MD. FRIDAY MORNING.",
+  "headline": "BEL AIR. MD. FRIDAY MORNING.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "24_1876-01-27_pna_sn83045462_00280654437_1876012701_0388.json",
+  "date": "1876-01-27",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": "EVENING STAR.",
+  "headline": "EVENING STAR.\n\nWashington News and Gossip.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1853-06-09_p1_sn87091069_00280779714_1853060901_0260.json",
+  "date": "1853-06-09",
+  "paper": "Hannibal journal. (Hannibal, Mo.) 1852-1853",
+  "line": "VOL. 'X---NO. 80.",
+  "headline": "VOL. 'X---NO. 80.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1870-03-03_pna_sn85033123_00514151210_1870030301_0132.json",
+  "date": "1870-03-03",
+  "paper": "The Kenosha telegraph. [volume] (Kenosha, Wis.) 1860-1888",
+  "line": "NUMBER 40.",
+  "headline": "NUMBER 40.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "7_1843-06-29_pna_sn84022687_00202199240_1843062901_0201.json",
+  "date": "1843-06-29",
+  "paper": "The voice of freedom. [volume] (Montpelier, Vt.) 1839-1848",
+  "line": "THURSDAY, JUNE 20, 1913",
+  "headline": "THURSDAY, JUNE 20, 1913\n\nTEMPERANCE ODE.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "24_1920-10-06_p1_sn88076526_00295863869_1920100601_0372.json",
+  "date": "1920-10-06",
+  "paper": "The Devils Lake world. (Devils Lake, N.D.) 1920-1982",
+  "line": "WEDNESDAY, OCTOBER 6, 1920",
+  "headline": "WEDNESDAY, OCTOBER 6, 1920",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1859-07-21_p1_sn84026752_00415620378_1859072101_0552.json",
+  "date": "1859-07-21",
+  "paper": "The national era. [volume] (Washington [D.C.]) 1847-1860",
+  "line": "THE NATIONAL ERA: WASHINGTON, d. G, JULY 2l, 1859",
+  "headline": "THE NATIONAL ERA: WASHINGTON, d. G, JULY 2l, 1859",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "16_1892-03-19_p1_sn83032231_00237287915_1892031901_0508.json",
+  "date": "1892-03-19",
+  "paper": "The Carbon advocate. [volume] (Lehighton, Pa.) 1872-1924",
+  "line": "1892 MARCH. 1892 y",
+  "headline": "1892 MARCH. 1892 y\n\nYESTERDAY AND TOMORROW.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "3_1871-12-28_p1_sn85034457_00280774832_1871122801_0130.json",
+  "date": "1871-12-28",
+  "paper": "Eaton weekly Democrat. [volume] (Eaton, Ohio) 1866-1875",
+  "line": "EATON, OHIO THURSDAY, DECEMBER %, 1871.",
+  "headline": "EATON, OHIO THURSDAY, DECEMBER %, 1871.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "25_1858-09-02_p3_sn86058107_00279557165_1858090201_0823.json",
+  "date": "1858-09-02",
+  "paper": "The daily Butte record.",
+  "line": "DAILY BUTTE RECORD.",
+  "headline": "DAILY BUTTE RECORD.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1897-05-25_pna_sn85058090_00206535313_1897052501_0919.json",
+  "date": "1897-05-25",
+  "paper": "The Lehi banner. [volume] (Lehi, Utah) 1891-1917",
+  "line": "TUESDAY. MAY 25, 1897.",
+  "headline": "TUESDAY. MAY 25, 1897.\n\nans, THAT AND TIE OTHER",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1860-01-07_p1_sn82015408_00212471380_1860010701_0790.json",
+  "date": "1860-01-07",
+  "paper": "Polynesian.",
+  "line": "No. 36.",
+  "headline": "No. 36.\n\nGhe polpnesian.\n\nGuano and Sal. Discoveries.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "14_1895-07-26_pna_sn85038614_00175031182_1895072601_0190.json",
+  "date": "1895-07-26",
+  "paper": "Richmond dispatch. [volume] (Richmond, Va.) 1884-1903",
+  "line": "FRIDAY. ....JULY &c, 1895",
+  "headline": "FRIDAY. ....JULY &c, 1895\n\nAbout n Third Term.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1892-07-08_p1_sn88065202_00340586320_1892070801_0207.json",
+  "date": "1892-07-08",
+  "paper": "The Republican. [volume] (Oakland, Md.) 1877-current",
+  "line": "~ &",
+  "headline": "66CP\n~ &",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1909-01-15_p1_sn84023963_00212470740_1909011501_0423.json",
+  "date": "1909-01-15",
+  "paper": "The Jasper weekly courier. [volume] (Jasper, Ind.) 1858-1922",
+  "line": "].",
+  "headline": "nnnsyssnsyrnsysx,gaensssass\n\nThe Undying Past\n\n].",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1959-01-07_pna_sn84024547_00279555776_1959010701_0651.json",
+  "date": "1959-01-07",
+  "paper": "Zajednic\u00cc\u0152ar = Fraternalist. [volume] (Allegheny, Pa.) 1894-current",
+  "line": ".",
+  "headline": "Fraternally yours,\nJohn BadOVinac\nMember, Lodge 663\n.\n\n\nRID 8, Box 297\nAllegan, Mich.\nDec. 22, 1858",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "27_1888-07-21_p1_sn83016943_00295877832_1888072101_0558.json",
+  "date": "1888-07-21",
+  "paper": "Macon beacon. [volume] (Macon, Miss.) 1859-1995",
+  "line": "NUMBER 80.",
+  "headline": "NUMBER 80.\n\nPERSONAL AND iMPERSONAL.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1910-12-08_p1_sn87056244_00200295870_1910120801_0054.json",
+  "date": "1910-12-08",
+  "paper": "The Plymouth tribune. (Plymouth, Ind.) 1901-1911",
+  "line": "|---..",
+  "headline": "CONTEST\n|---..\n\n\nWILL Be HELD\n\nDistrict Schools of Marshall County Will\nTake Part in Match to Determine the\nBest Spoilers in The State of Indi-\nana.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1869-01-07_pNone_sn78000873_00279524652_1869010701_0007.json",
+  "date": "1869-01-07",
+  "paper": "The Republican journal.",
+  "line": "VOLUME 80.",
+  "headline": "VOLUME 80.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1851-04-03_pna_sn84026752_00415620354_1851040301_0284.json",
+  "date": "1851-04-03",
+  "paper": "The national era. [volume] (Washington [D.C.]) 1847-1860",
+  "line": "THE NATIONAL ERA.",
+  "headline": "THE NATIONAL ERA.\n\nWASHINGTON, MARCH 81, 1851.\n\nBy MARY IRVING.\n\ncHRusTMas on THE PRAIRIE.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1861-11-18_p1_sn83045462_00280654176_1861111801_0425.json",
+  "date": "1861-11-18",
+  "paper": "Evening star. [volume] (Washington, D.C.) 1854-1972",
+  "line": "THE EVENING STAR.",
+  "headline": "THE EVENING STAR.\n\nMYSTERY",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1878-09-21_p1_sn86088181_0020029693A_1878092101_0389.json",
+  "date": "1878-09-21",
+  "paper": "San Marcos free press. [volume] (San Marcos, Tex.) 1877-1892",
+  "line": "NO. 49,.",
+  "headline": "NO. 49,.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1871-08-06_p1_sn86086284_00280761692_1871080601_1036.json",
+  "date": "1871-08-06",
+  "paper": "The morning star and Catholic messenger. [volume] (New Orleans [La.]) 1868-1881",
+  "line": "THE MORNING STAR AND CATHOLIC MESSENGER SUNDAY",
+  "headline": "THE MORNING STAR AND CATHOLIC MESSENGER SUNDAY",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1872-03-01_pna_sn82016419_00212472967_1872030101_0380.json",
+  "date": "1872-03-01",
+  "paper": "The Emporia news. [volume] (Emporia, Kan.) 1859-1881",
+  "line": "EMPORIA NEWS",
+  "headline": "EMPORIA NEWS\n\nFRIDAY, MARCH !, 1872.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "30_1957-03-14_pna_sn87075277_00340580588_1957031401_0168.json",
+  "date": "1957-03-14",
+  "paper": "The journal. (Caldwell, Ohio) 1934-1961",
+  "line": "SATURDAY, March 16'",
+  "headline": "SATURDAY, March 16'",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "18_1870-06-02_p1_sn83045160_00200293010_1870060201_0560.json",
+  "date": "1870-06-02",
+  "paper": "Memphis daily appeal. [volume] (Memphis, Tenn.) 1847-1886",
+  "line": "THURSDAY MORNING, MAY ?, 1870",
+  "headline": "THURSDAY MORNING, MAY ?, 1870",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "46_1908-06-16_p1_sn85035801_00332896994_1908061601_0097.json",
+  "date": "1908-06-16",
+  "paper": "The Mount Holly news. [volume] (Mount Holly, Burlington Co., N.J.) 1891-1942",
+  "line": "TUESDAY, JUNE 10, 1908",
+  "headline": "TUESDAY, JUNE 10, 1908",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "4_1833-04-11_pna_sn83021167_00514152743_1833041101_0644.json",
+  "date": "1833-04-11",
+  "paper": "Herald of the times. [volume] (Newport, R.I.) 1830-1846",
+  "line": "April 4th.",
+  "headline": "April 4th.\nJAS. HAM MOND'S\nCIRCULATING LIBRARY,",
+  "verdict": "mis-drop",
+  "note": "a library advertisement's own date, a week before the issue"
+ },
+ {
+  "article_id": "6_1900-10-29_pna_sn83045604_00202199720_1900102901_0477.json",
+  "date": "1900-10-29",
+  "paper": "The Seattle post-intelligencer. [volume] (Seattle, Wash. Terr. [Wash.]) 1888-1914",
+  "line": "--~-",
+  "headline": "FROM THE PEOPLE.\n\n\n--~-\nA TEACHER ON TEXT books.\n\nMount vernon. wash. Oct. ;,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1886-10-09_p1_sn88064492_00295874703_1886100901_0536.json",
+  "date": "1886-10-09",
+  "paper": "The weekly Thibodaux sentinel and journal of the 8th Senatorial District. [volume] (Thibodaux, Lna. [i.e. La.]) 1875-1898",
+  "line": "VOL. XII",
+  "headline": "VOL. XII\n\n",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "16_1874-03-18_pna_sn84026853_00202194011_1874031801_0415.json",
+  "date": "1874-03-18",
+  "paper": "The Abbeville press and banner. [volume] (Abbeville, S.C.) 1869-1924",
+  "line": "ABBEVILLE, s. Co. WEDNESDAY, MARCH 18, 1874.",
+  "headline": "ABBEVILLE, s. Co. WEDNESDAY, MARCH 18, 1874.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "34_1908-07-11_p1_sn85052114_00100481972_1908071101_0033.json",
+  "date": "1908-07-11",
+  "paper": "The Paducah evening sun. [volume] (Paducah, Ky.) 1906-1929",
+  "line": "Friday. July ~.",
+  "headline": "Friday. July ~.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1857-08-19_pna_sn84024718_00414183761_1857081901_0327.json",
+  "date": "1857-08-19",
+  "paper": "Staunton spectator. [volume] (Staunton, Va.) 1849-1896",
+  "line": "NO. XXXVI.",
+  "headline": "NO. XXXVI.\n\nThe Work of Creation.",
+  "verdict": "mis-drop",
+  "note": "an essay series' number (NO. XXXVI.)"
+ },
+ {
+  "article_id": "14_1903-09-05_p1_sn90059959_00271742885_1903090501_0124.json",
+  "date": "1903-09-05",
+  "paper": "The Irish standard.",
+  "line": "{.",
+  "headline": "{.\nWITH THE POETS !\n\n: ++++.s+i-.s. 4 i. !. $500. i.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "40_1910-02-28_pna_sn82014248_0051368261A_1910022801_0588.json",
+  "date": "1910-02-28",
+  "paper": "Daily Kennebec journal. [microfilm reel] (Augusta, Me.) 1870-1975",
+  "line": "=",
+  "headline": "THE R00!s|'ETEL1S\n\n\n=\nIn Fine Health After Year\nIn African Jung|es.\n\nviii Leave Gondokoro, Soudan,\n\n\nToday for Mongolia.\n\nGreat honors Await Roosevelt on\n\n\nHis Visit TO Rome.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "9_1905-03-11_pna_sn86071985_00175032782_1905031101_0888.json",
+  "date": "1905-03-11",
+  "paper": "Virginia gazette. [volume] (Williamsburg, Va.) 1893-192?",
+  "line": "~ \"",
+  "headline": "6 ~\nTHE SPLENDID SPUR\nTHE ADVENTURES OF JACK MARVEL.\n\n\nBY ARTHUR t. QUILLER COUCH. -.\n~ \"\n\nBY ARTHUR t. QUILLER COUCH:",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "17_1906-08-23_pna_sn86081889_00280776737_1906082301_0720.json",
+  "date": "1906-08-23",
+  "paper": "The Fulton County news. [volume] (McConnellsburg, Pa.) 1899-current",
+  "line": "-",
+  "headline": "-\nRED DOG.\n\nA Mighty Hnnter in India and Mr..\n\n\nklpling's JUNGLE Book.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "10_1873-02-21_pna_sn85033673_00280779416_1873022101_0172.json",
+  "date": "1873-02-21",
+  "paper": "Public ledger. [volume] (Memphis, Tenn.) 1865-1893",
+  "line": "MEMPHIS TENN. FRIDAY EVENING. FEBRUARY 2 1878",
+  "headline": "MEMPHIS TENN. FRIDAY EVENING. FEBRUARY 2 1878\n\nTHE GECKO.\n\nAn Adventure In the Harbor OF\nlomhay : The Most venomous\nReptile known.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "13_1859-09-24_pna_sn83009573_00296026359_1859092401_0303.json",
+  "date": "1859-09-24",
+  "paper": "The daily exchange. [volume] (Baltimore, Md.) 1858-1861",
+  "line": "SATURDAY, SEPTEMBER \"a, 1859,",
+  "headline": "BALTIMORE.\n\nSATURDAY, SEPTEMBER \"a, 1859,\n\nTHE WEEKLY EXCHANGE,",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1887-09-24_p1_sn84022047_00340582597_1887092401_0571.json",
+  "date": "1887-09-24",
+  "paper": "The White Pine news. [volume] (Treasure City, Nev.) 1868-1906",
+  "line": "WHITE PINE NEWS",
+  "headline": "WHITE PINE NEWS",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1933-07-14_pna_sn82014085_00393347764_1933071401_0166.json",
+  "date": "1933-07-14",
+  "paper": "The Waterbury Democrat. [volume] (Waterbury, Conn.) 1917-1946",
+  "line": "FRIDAY, JULY IA, 1888",
+  "headline": "FRIDAY, JULY IA, 1888\n\nBusiness Improvement-Not\n\n\nRecovery",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "6_1864-08-27_p4_sn82015099_00279556665_1864082701_0601.json",
+  "date": "1864-08-27",
+  "paper": "The Shasta courier.",
+  "line": "SHASTA COURIER.",
+  "headline": "SHASTA COURIER.\n\nVirtuous w omen.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1908-08-02_p1_sn86069867_00175044115_1908080201_0512.json",
+  "date": "1908-08-02",
+  "paper": "Blue-grass blade.",
+  "line": "BLUE GRASS BLADE",
+  "headline": "BLUE GRASS BLADE\n\nGod and Mind Ghosts and Miracles",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1882-01-19_pna_sn84024738_00206531046_1882011901_0076.json",
+  "date": "1882-01-19",
+  "paper": "The daily dispatch. [volume] (Richmond [Va.]) 1850-1884",
+  "line": "\".",
+  "headline": "fFor the Dlspatch.I\n\".",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "69_1912-01-12_p1_sn95070058_00206538594_1912011201_1041.json",
+  "date": "1912-01-12",
+  "paper": "The Norfolk weekly news-journal.",
+  "line": "4k.SATURDAY",
+  "headline": "4k.SATURDAY\nGSaf> NIGHT\nI SERMONS\n\n\nBY\n\n\n~rzs,,..h SMMUHW.PUEyHlb\n\nTEE uNHASTINC, UNrEvERISH COZ",
+  "verdict": "mis-drop",
+  "note": "SATURDAY of a 'Saturday Night Sermons' column"
+ },
+ {
+  "article_id": "27_1961-06-09_p1_sn82000867_0041421700A_1961060901_0327.json",
+  "date": "1961-06-09",
+  "paper": "The Arizona post.",
+  "line": "~ ~ ~",
+  "headline": "~ ~ ~",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1855-07-02_p1_sn85034360_00393347971_1855070201_1068.json",
+  "date": "1855-07-02",
+  "paper": "Lynchburg daily Virginian. [volume] (Lynchburg [Va.]) 1852-1861",
+  "line": "VOL. 3.---NO. 279.",
+  "headline": "VOL. 3.---NO. 279.\n\nDAILY VIRGINIAN.\n\nFrom the Mississippi Journal.\nA Frightful Snake Story.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1878-01-24_p1_sn87093109_00200290987_1878012401_0029.json",
+  "date": "1878-01-24",
+  "paper": "The Vancouver independent. (Vancouver, W.T. [Wash.]) 1875-1910",
+  "line": "No. 22.",
+  "headline": "\n\nNo. 22.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1879-07-15_pna_sn90069164_0028077683A_1879071501_0234.json",
+  "date": "1879-07-15",
+  "paper": "The New Bloomfield, Pa. times. (New Bloomfield, Pa.) 1877-188?",
+  "line": "NO. 20.",
+  "headline": "NO. 20.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "1_1870-07-03_p1_sn83016555_00295875860_1870070301_0443.json",
+  "date": "1870-07-03",
+  "paper": "New Orleans Republican. [volume] (New Orleans, La) 1867-1878",
+  "line": "NEW ORLEANS REPUBLICAN, SUNDAY JULY g., 1870",
+  "headline": "NEW ORLEANS REPUBLICAN, SUNDAY JULY g., 1870",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "2_1878-11-16_pna_sn82015387_00200299097_1878111601_0024.json",
+  "date": "1878-11-16",
+  "paper": "St. Tammany farmer. [volume] (Covington, La.) 1874-current",
+  "line": "ST. TAMMANY FARMER.",
+  "headline": "ST. TAMMANY FARMER.\n\nFIaGTON. NOVEMBER 1s, 1873\n\nTEMPUS FUGir.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "36_1924-01-09_p5_sn85038485_00513684125_1924010901_0170.json",
+  "date": "1924-01-09",
+  "paper": "The Birmingham age-herald.",
+  "line": "\\ . | +",
+  "headline": "|nODAYS| l CALENDAR\n\n \\ . | +",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1881-06-02_p1_sn84026844_00202193468_1881060201_0530.json",
+  "date": "1881-06-02",
+  "paper": "The Wheeling daily intelligencer. [volume] (Wheeling, W. Va.) 1865-1903",
+  "line": ".",
+  "headline": ".\n\nPoints AbOut People AI Home and\n\n\nAbroad.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "37_1900-01-29_pna_sn82014248_00514156049_1900012901_0217.json",
+  "date": "1900-01-29",
+  "paper": "Daily Kennebec journal. [microfilm reel] (Augusta, Me.) 1870-1975",
+  "line": "VOLUME V.",
+  "headline": "VOLUME V.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "51_1895-02-16_p3_sn88076013_0027174089A_1895021601_0254.json",
+  "date": "1895-02-16",
+  "paper": "The Dickinson press.",
+  "line": "Saturday, February 1e, 1895.",
+  "headline": "Saturday, February 1e, 1895.\n\nAnd now Dickinson has German",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "24_1847-08-19_pna_sn83021168_00514152779_1847081901_0305.json",
+  "date": "1847-08-19",
+  "paper": "Herald of the times, and Rhode Islander. [volume] (Newport, R.I.) 1846-1849",
+  "line": "Whole No. S G5.",
+  "headline": "Whole No. S G5.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "8_1928-03-15_p1_sn82015313_00383349060_1928031501_0412.json",
+  "date": "1928-03-15",
+  "paper": "The Indianapolis times. [volume] (Indianapolis [Ind.]) 1922-1965",
+  "line": "THE INDIANAPOLIS TIMES",
+  "headline": "THE INDIANAPOLIS TIMES",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "28_1844-11-19_pna_sn84024735_00415664278_1844111901_0621.json",
+  "date": "1844-11-19",
+  "paper": "Richmond enquirer. [volume] (Richmond, Va.) 1815-1867",
+  "line": "RICH MON d, VA.",
+  "headline": "RICH MON d, VA.\n\nsaturday Morning, November &c. 1871.\n\nTHE TONE OF THE RICHMOND WIG,\n! 80 L. 1NL;4x",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "33_1858-02-12_p2_sn84026884_00279557499_1858021201_0556.json",
+  "date": "1858-02-12",
+  "paper": "The Nevada journal.",
+  "line": "FRIDAY MORNING. FEB. 18th, 1858.",
+  "headline": "FRIDAY MORNING. FEB. 18th, 1858.",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "43_1913-07-15_pna_sn83030193_00280765995_1913071501_0806.json",
+  "date": "1913-07-15",
+  "paper": "The evening world. [volume] (New York, N.Y.) 1887-1931",
+  "line": "=",
+  "headline": "\n\n\nCOLUMN\n\n=\n\n~ chaaplonslslp at Stake\nWhsa eunbeat Smith and\nJlm Flynn Clash",
+  "verdict": "correct",
+  "note": null
+ },
+ {
+  "article_id": "5_1875-08-11_p1_sn84026409_00280776452_1875081101_0649.json",
+  "date": "1875-08-11",
+  "paper": "The Somerset herald. [volume] (Somerset, Pa.) 1870-1936",
+  "line": "WHOLE No. 1857",
+  "headline": "WHOLE No. 1857\n\nFreaks Of Lightning in Italy.",
+  "verdict": "correct",
+  "note": null
+ }
+]

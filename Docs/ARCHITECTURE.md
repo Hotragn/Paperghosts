@@ -165,7 +165,7 @@ Pydantic models in the Python package are the single source of truth. Atlas JSON
 **`reports`:** one document per story.
 - `_id`, plus `primary_article_id`
 - `printings[]`: article ID, LCCN, paper title, publication place, state, date, scan location, `bbox_list`, crop URLs
-- `headline`, `text` (the OCR of the primary printing), `date` (earliest printing), `year`, `month_day`
+- `headline` and `text` (the OCR of the primary printing, untouched), `display_headline` (the headline without the masthead lines that lead it), `date` (earliest printing), `year`, `month_day`
 - `kind` (always `report` in this collection)
 - `fields`: each is `{value, quote, verified, score}`:
   - `place`
