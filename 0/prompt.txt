@@ -1,0 +1,7 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 2A.2, prefilter speed and sampling: step 2A.1 passed. Recall first is right, and the 18-of-20 check is the kind of evidence I want. Three changes before the workflow:
+1. **Speed:** add a stdlib substring pre-check on short stems before the full regex. Prove on 1850 that the candidate set is identical, and report the new seconds per year.
+2. **Singular "knocking":** most of its 367 hits are probably doors and fights. Report how many candidates it adds on its own, and how many of the 18 known articles only it keeps. Then decide from those numbers and record the decision.
+3. **Sampling:** store the near-miss pool and the random non-candidates as fixed-size reservoir samples per year (2,000 each), not in full.
+Reply with the numbers, then commit.
+</cross-session-message>

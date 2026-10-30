@@ -1,0 +1,32 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M658T9PQ9BZ4GVT27QJT8PM2",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-archive",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/ARCHITECTURE.md",
+    "paperghosts/ingest/lexicon.py",
+    "paperghosts/ingest/prefilter.py",
+    "scripts/prefilter_year.py",
+    "scripts/verify_precheck.py",
+    "tests/test_lexicon.py",
+    "tests/test_prefilter.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 36,
+    "cache_creation_tokens": 83869,
+    "cache_read_tokens": 12870571,
+    "output_tokens": 71902,
+    "api_call_count": 17
+  }
+}
