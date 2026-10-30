@@ -1,4 +1,4 @@
-.PHONY: setup lint test web keys temporal worker smoke api app ingest eval db-init db-verify numbers
+.PHONY: setup lint test web keys temporal worker smoke api app ingest eval eval-v1 db-init db-verify numbers
 
 setup:
 	uv sync --locked
@@ -32,9 +32,15 @@ smoke:
 ingest:
 	uv run python -m paperghosts.workflows.ingest $(YEARS)
 
-# eval A over the archive read: eval/results/eval_a.json and the charts in eval/results/eval_a/
+# eval A over the read in data/, lexicon v2's: its EDA in eval/results/eval_a_v2/, then v2
+# against v1 (decision 31)
 eval:
 	uv run python scripts/eval_a.py
+	uv run python scripts/lexicon_v2.py
+
+# eval A's record of lexicon v1, from its read in data/archive/lexicon-v1
+eval-v1:
+	uv run python scripts/eval_a.py data/archive/lexicon-v1
 
 api:
 	uv run uvicorn api.main:app --port 8000

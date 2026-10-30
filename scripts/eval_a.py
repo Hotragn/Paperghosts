@@ -1,5 +1,7 @@
-"""make eval: eval A over the archive read in Phase 2A. It writes eval/results/eval_a.json,
-and its charts and hand-judged samples to eval/results/eval_a/.
+"""Eval A over an archive read: eval/results/eval_a.json and eval/results/eval_a/ for lexicon
+v1's read, which `make eval-v1` reproduces from data/archive/lexicon-v1, and
+eval/results/eval_a_{version}.json and its folder for a later read in data/, which `make eval`
+writes. Pass the data folder; it defaults to data/.
 
 1. EDA: by year, by state and by term; candidate lengths; OCR quality, as the share of words
    /usr/share/dict/words knows; reprint clusters among the candidates; and the candidates
@@ -11,13 +13,15 @@ and its charts and hand-judged samples to eval/results/eval_a/.
 4. The screen: 38,600 more from the random reservoirs, of which only those holding a flag
    word or near-miss term are marked by hand, in screen.json. Decision 30 has the method.
 
-Every sample is seeded, so a rerun draws the same articles and keeps the judgments made.
+Every sample is seeded, so a rerun draws the same articles and keeps the judgments made. The
+samples, 2 to 4, are lexicon v1's record (decision 31), so a later read gets the EDA alone.
 """
 
 import itertools
 import json
 import random
 import re
+import sys
 import zlib
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
@@ -31,13 +35,12 @@ from paperghosts.cluster.reprints import clusters, keys
 from paperghosts.ingest import lexicon
 from paperghosts.ingest.crops import BATCH_PATH
 from paperghosts.ingest.prefilter import SAMPLE_SIZE
-from paperghosts.ingest.year import code_version, sha256
+from paperghosts.ingest.year import sha256
 from paperghosts.stats import wilson
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 RESULTS = ROOT / "eval" / "results"
-OUT = RESULTS / "eval_a"
 DICTIONARY = Path("/usr/share/dict/words")
 OCR_ONE_IN = 20  # OCR quality is measured on one candidate in twenty, chosen by its id
 COMPOSITION, RECALL, REPRINT_CHECK = 200, 300, 20
@@ -131,6 +134,20 @@ def draw(pools, sizes, n, seed):
     ]
 
 
+def random_picks(others):
+    """Eval A's 300 recall picks from the random reservoirs, what each year's reservoir holds
+    besides them, and the screen's 38,600 picks from that (decision 30). others maps a year to
+    its non-candidates."""
+    reservoirs = {y: range(min(SAMPLE_SIZE, n)) for y, n in others.items()}
+    rand, screen = defaultdict(set), defaultdict(set)
+    for year, index in draw(reservoirs, others, RECALL, "eval A recall random"):
+        rand[year].add(index)
+    held = {y: [i for i in reservoirs[y] if i not in rand[y]] for y in reservoirs}
+    for year, index in draw(held, others, SCREEN, "eval A screen"):
+        screen[year].add(index)
+    return rand, held, screen
+
+
 def uniform(counts, n, seed):
     """n (year, index) pairs without replacement, every candidate equally likely."""
     rng = random.Random(seed)
@@ -174,9 +191,11 @@ def first_match(text, forms):
 def year_pass(job):
     """One year's candidates: per-article length, OCR quality for a fixed sample, reprint keys,
     paper and opening; plus the composition, recall and screen picks that fall in this year."""
-    year, wanted, near, rand, screen = job
+    data, year, wanted, near, rand, screen, terms = job
     words, docs, picked, no_batch_path = dictionary(), [], [], 0
-    with zstandard.open(DATA / "candidates" / f"{year}.jsonl.zst", "rt") as rows:
+    # the read's own ghost terms, so v1's candidates are masked by lexicon v1
+    mask = lexicon.matcher({term: lexicon.GHOST[term] for term in terms})
+    with zstandard.open(data / "candidates" / f"{year}.jsonl.zst", "rt") as rows:
         for index, row in enumerate(map(json.loads, rows)):
             text = row["text"] or ""
             no_batch_path += not BATCH_PATH.search(
@@ -213,7 +232,7 @@ def year_pass(job):
                         "context": window(both, first_match(both, forms), 600),
                         # what the screen would still find had the lexicon missed it
                         "flags_without_terms": flagged(
-                            lexicon.GHOST_MATCHER.sub("▒", both.replace("-\n", ""))
+                            mask.sub("▒", both.replace("-\n", ""))
                         ),
                         "category": None,
                         "note": None,
@@ -222,7 +241,7 @@ def year_pass(job):
     recalled, screened, tally = [], [], Counter()
     if near or rand or screen:
         seen = Counter()
-        with zstandard.open(DATA / "samples" / f"{year}.jsonl.zst", "rt") as rows:
+        with zstandard.open(data / "samples" / f"{year}.jsonl.zst", "rt") as rows:
             for row in map(json.loads, rows):
                 pool, index = row["sample"], seen[row["sample"]]
                 seen[pool] += 1
@@ -298,12 +317,27 @@ def rate(hits, n, of):
     }
 
 
-def main():
+def main(data=DATA):
     counts = {
         c["year"]: c
-        for c in (json.loads(p.read_text()) for p in (DATA / "counts").glob("*.json"))
+        for c in (json.loads(p.read_text()) for p in (data / "counts").glob("*.json"))
     }
     years = sorted(counts)
+    # one lexicon and one code version made the whole read
+    (version,) = {counts[y]["lexicon_version"] for y in years}
+    (code,) = {
+        json.loads(p.read_text())["code_version"]
+        for p in (data / "manifests").glob("*.json")
+    }
+    judged = version == "v1"
+    name = "eval_a" if judged else f"eval_a_{version}"
+    out = RESULTS / name
+    # the read's ghost terms, in the lexicon's order
+    read_terms = [
+        term
+        for term in (*lexicon.GHOST, *lexicon.TOGETHER)
+        if any(term in counts[y]["by_term"] for y in years)
+    ]
     total = {
         k: sum(counts[y][k] for y in years)
         for k in ("pages", "articles", "candidates", "near_miss")
@@ -311,30 +345,27 @@ def main():
     others = {y: counts[y]["articles"] - counts[y]["candidates"] for y in years}
     total["non_candidates"] = sum(others.values())
 
-    composition = defaultdict(set)
-    for year, index in uniform(
-        {y: counts[y]["candidates"] for y in years}, COMPOSITION, "eval A composition"
-    ):
-        composition[year].add(index)
-    near, rand = defaultdict(set), defaultdict(set)
-    reservoirs = {y: range(min(SAMPLE_SIZE, counts[y]["near_miss"])) for y in years}
-    for year, index in draw(
-        reservoirs,
-        {y: counts[y]["near_miss"] for y in years},
-        RECALL,
-        "eval A recall near-miss",
-    ):
-        near[year].add(index)
-    reservoirs = {y: range(min(SAMPLE_SIZE, others[y])) for y in years}
-    for year, index in draw(reservoirs, others, RECALL, "eval A recall random"):
-        rand[year].add(index)
-    screen = defaultdict(set)
-    held = {y: [i for i in reservoirs[y] if i not in rand[y]] for y in years}
-    for year, index in draw(held, others, SCREEN, "eval A screen"):
-        screen[year].add(index)
+    composition, near, rand, screen = (defaultdict(set) for _ in range(4))
+    if judged:
+        for year, index in uniform(
+            {y: counts[y]["candidates"] for y in years},
+            COMPOSITION,
+            "eval A composition",
+        ):
+            composition[year].add(index)
+        reservoirs = {y: range(min(SAMPLE_SIZE, counts[y]["near_miss"])) for y in years}
+        for year, index in draw(
+            reservoirs,
+            {y: counts[y]["near_miss"] for y in years},
+            RECALL,
+            "eval A recall near-miss",
+        ):
+            near[year].add(index)
+        rand, held, screen = random_picks(others)
 
+    ghost = [term for term in read_terms if term in lexicon.GHOST]
     jobs = [
-        (y, composition[y], near[y], rand[y], screen[y])
+        (data, y, composition[y], near[y], rand[y], screen[y], ghost)
         for y in years
         if counts[y]["candidates"] or near[y] or rand[y] or screen[y]
     ]
@@ -342,7 +373,7 @@ def main():
     no_batch_path, tally = Counter(), Counter()
     with ProcessPoolExecutor(max_workers=6) as pool:
         for year, found, chosen, reread, missing, hits, drawn in pool.map(
-            year_pass, sorted(jobs, key=lambda job: -counts[job[0]]["articles"])
+            year_pass, sorted(jobs, key=lambda job: -counts[job[1]]["articles"])
         ):
             no_batch_path[year] = missing
             docs += found
@@ -363,7 +394,7 @@ def main():
     cross = [g for g in groups if len({docs[d][3] for d in g}) > 1]
     rng = random.Random("eval A reprint check")
     checks = []
-    for group in rng.sample(groups, min(REPRINT_CHECK, len(groups))):
+    for group in rng.sample(groups, min(REPRINT_CHECK, len(groups)) if judged else 0):
         a, b = rng.sample(group, 2)
         checks.append(
             {
@@ -392,31 +423,32 @@ def main():
     for p in picked:
         p["printings"] = printings.get(p["article_id"], 1)
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    picked = keep_judgments(
-        OUT / "composition.json",
-        sorted(picked, key=lambda p: (p["year"], p["article_id"])),
-        lambda p: p["article_id"],
-        ("category", "note"),
-    )
-    recalled = keep_judgments(
-        OUT / "recall.json",
-        sorted(recalled, key=lambda r: (r["pool"], r["year"], r["article_id"])),
-        lambda r: (r["pool"], r["article_id"]),
-        ("ghost_report", "note"),
-    )
-    screened = keep_judgments(
-        OUT / "screen.json",
-        sorted(screened, key=lambda s: (s["year"], s["article_id"])),
-        lambda s: s["article_id"],
-        ("first", "rejudged", "ghost_report", "note"),
-    )
-    checks = keep_judgments(
-        OUT / "reprint-check.json",
-        checks,
-        lambda c: tuple(c["members"]),
-        ("same_story",),
-    )
+    out.mkdir(parents=True, exist_ok=True)
+    if judged:
+        picked = keep_judgments(
+            out / "composition.json",
+            sorted(picked, key=lambda p: (p["year"], p["article_id"])),
+            lambda p: p["article_id"],
+            ("category", "note"),
+        )
+        recalled = keep_judgments(
+            out / "recall.json",
+            sorted(recalled, key=lambda r: (r["pool"], r["year"], r["article_id"])),
+            lambda r: (r["pool"], r["article_id"]),
+            ("ghost_report", "note"),
+        )
+        screened = keep_judgments(
+            out / "screen.json",
+            sorted(screened, key=lambda s: (s["year"], s["article_id"])),
+            lambda s: s["article_id"],
+            ("first", "rejudged", "ghost_report", "note"),
+        )
+        checks = keep_judgments(
+            out / "reprint-check.json",
+            checks,
+            lambda c: tuple(c["members"]),
+            ("same_story",),
+        )
 
     by_state = defaultdict(Counter)
     for year in years:
@@ -424,11 +456,11 @@ def main():
             by_state[state].update(row)
     terms = {
         term: sum(counts[y]["by_term"].get(term, 0) for y in years)
-        for term in lexicon.GHOST
+        for term in read_terms
     }
     only = {
         term: sum(counts[y]["only_by_term"].get(term, 0) for y in years)
-        for term in lexicon.GHOST
+        for term in read_terms
     }
     decade_quality = defaultdict(list)
     for year, quality in qualities:
@@ -436,8 +468,8 @@ def main():
 
     report = {
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
-        "lexicon_version": lexicon.VERSION,
-        "code_version": code_version(),
+        "lexicon_version": version,
+        "code_version": code,
         "totals": {
             **total,
             "candidates_per_million": total["candidates"] / total["articles"] * 1e6,
@@ -518,29 +550,30 @@ def main():
             "cross_paper_candidates": sum(len(g) for g in cross),
             "size_histogram": size_histogram(group_sizes),
             "largest": largest,
-            "check": summarise_checks(checks),
         },
-        "composition": summarise_composition(picked, total["candidates"]),
-        "recall": summarise_recall(recalled, total),
     }
-    report["recall"]["screen"] = summarise_screen(
-        screened,
-        tally,
-        recalled,
-        picked,
-        total,
-        report["composition"].get("categories", {}).get("ghost_report"),
-    )
-    busiest = max(screen, key=lambda y: len(screen[y]))
-    report["recall"]["screen"]["largest_year"] = {
-        "year": busiest,
-        "drawn": len(screen[busiest]),
-        "held": len(held[busiest]),
-    }
-    (RESULTS / "eval_a.json").write_text(json.dumps(report, indent=1) + "\n")
-    charts = draw_all(report, OUT)
+    if judged:
+        report["reprints"]["check"] = summarise_checks(checks)
+        report["composition"] = summarise_composition(picked, total["candidates"])
+        report["recall"] = summarise_recall(recalled, total)
+        report["recall"]["screen"] = summarise_screen(
+            screened,
+            tally,
+            recalled,
+            picked,
+            total,
+            report["composition"].get("categories", {}).get("ghost_report"),
+        )
+        busiest = max(screen, key=lambda y: len(screen[y]))
+        report["recall"]["screen"]["largest_year"] = {
+            "year": busiest,
+            "drawn": len(screen[busiest]),
+            "held": len(held[busiest]),
+        }
+    (RESULTS / f"{name}.json").write_text(json.dumps(report, indent=1) + "\n")
+    charts = draw_all(report, out)
     print(
-        f"wrote {(RESULTS / 'eval_a.json').relative_to(ROOT)} and {len(charts)} charts in {OUT.relative_to(ROOT)}"
+        f"wrote {(RESULTS / f'{name}.json').relative_to(ROOT)} and {len(charts)} charts in {out.relative_to(ROOT)}"
     )
     for line in headline_numbers(report):
         print(line)
@@ -705,7 +738,9 @@ def headline_numbers(report):
     yield f"no state: {report['no_state']['share_of_candidates']:.1%} of candidates; median length {report['lengths']['p50']} words; median OCR quality {report['ocr_quality']['p50']:.1%}"
     yield f"no batch path: {t['no_batch_path']:,} candidates ({t['share_no_batch_path']:.1%}), which need loc.gov to name their page's IIIF service"
     yield f"reprints: {r['clusters']:,} clusters hold {r['clustered_candidates']:,} candidates ({r['share_clustered']:.1%}); {r['distinct_stories']:,} distinct stories; {r['cross_paper_clusters']:,} clusters span papers"
-    s = report["recall"]["screen"]
+    s = report.get("recall", {}).get("screen")
+    if not s:
+        return
     yield f"screen: {s['hits']:,} of {s['drawn']:,} drawn hold a flag word, {s['judged']:,} judged"
     if "random" in s:
         yield f"  non-candidates: {s['random']['count']} reports in {s['random']['n']:,}, at most {s['random']['implied_high']:,}; recall {s['recall']:.1%}, at least {s['recall_at_least']['point']:.1%}"
@@ -713,4 +748,4 @@ def headline_numbers(report):
 
 
 if __name__ == "__main__":
-    main()
+    main(Path(sys.argv[1]) if sys.argv[1:] else DATA)
