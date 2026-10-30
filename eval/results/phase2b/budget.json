@@ -1,0 +1,807 @@
+{
+ "generated_at": "2026-10-30T18:10:25+00:00",
+ "seed": "2B budget probe",
+ "candidates_drawn": 1000,
+ "of_candidates": 1236122,
+ "sample": {
+  "stories": 1000,
+  "printings": {
+   "total": 5116,
+   "per_story": 5.12,
+   "stories_with_more_than_one": 291,
+   "most": 487
+  },
+  "bytes_by_part": {
+   "text": {
+    "total": 2554714,
+    "mean": 2554.7,
+    "median": 2119.5,
+    "p90": 5324,
+    "max": 8927
+   },
+   "headline and display headline": {
+    "total": 101832,
+    "mean": 101.8,
+    "median": 72.0,
+    "p90": 212,
+    "max": 957
+   },
+   "printings, apart from their boxes": {
+    "total": 1801041,
+    "mean": 1801.0,
+    "median": 402.0,
+    "p90": 2660,
+    "max": 169856
+   },
+   "printings' bbox_list": {
+    "total": 501976,
+    "mean": 502.0,
+    "median": 96.0,
+    "p90": 816,
+    "max": 50912
+   },
+   "reader fields": {
+    "total": 1335121,
+    "mean": 1335.1,
+    "median": 1291.5,
+    "p90": 1769,
+    "max": 2495
+   },
+   "embedding": {
+    "total": 1554000,
+    "mean": 1554.0,
+    "median": 1554.0,
+    "p90": 1554,
+    "max": 1554
+   },
+   "the rest": {
+    "total": 637432,
+    "mean": 637.4,
+    "median": 637.0,
+    "p90": 649,
+    "max": 702
+   }
+  },
+  "bytes": {
+   "as stored: rule 6's levers on, float32": {
+    "total": 8486116,
+    "mean": 8486.1,
+    "median": 6994.5,
+    "p90": 11243,
+    "max": 227504
+   },
+   "rule 6 off: embedding as an array of doubles": {
+    "total": 11830116,
+    "mean": 11830.1,
+    "median": 10338.5,
+    "p90": 14587,
+    "max": 230848
+   },
+   "rule 6 off: crop URLs stored": {
+    "total": 10361126,
+    "mean": 10361.1,
+    "median": 7536.5,
+    "p90": 12840,
+    "max": 418519
+   },
+   "rule 6 off: printings with their own text": {
+    "total": 19611881,
+    "mean": 19611.9,
+    "median": 10267.0,
+    "p90": 26210,
+    "max": 2244742
+   },
+   "bbox_list as int16 BinData": {
+    "total": 8150020,
+    "mean": 8150.0,
+    "median": 6871.5,
+    "p90": 10882,
+    "max": 193008
+   },
+   "bbox_list as int32 BinData": {
+    "total": 8234044,
+    "mean": 8234.0,
+    "median": 6917.5,
+    "p90": 10925,
+    "max": 201632
+   },
+   "paper, place and state in a title lookup": {
+    "total": 8066522,
+    "mean": 8066.5,
+    "median": 6845.0,
+    "p90": 10813,
+    "max": 183413
+   },
+   "display_headline derived at read time": {
+    "total": 8431693,
+    "mean": 8431.7,
+    "median": 6954.0,
+    "p90": 11185,
+    "max": 227434
+   },
+   "int8 embedding": {
+    "total": 7334116,
+    "mean": 7334.1,
+    "median": 5842.5,
+    "p90": 10091,
+    "max": 226352
+   },
+   "the three, float32": {
+    "total": 7676003,
+    "mean": 7676.0,
+    "median": 6621.5,
+    "p90": 10372,
+    "max": 148847
+   },
+   "the three, int8": {
+    "total": 6524003,
+    "mean": 6524.0,
+    "median": 5469.5,
+    "p90": 9220,
+    "max": 147695
+   }
+  },
+  "bytes_per": {
+   "as stored: rule 6's levers on, float32": {
+    "story_without_its_printings": 6199.1,
+    "printing": 447.0
+   },
+   "rule 6 off: embedding as an array of doubles": {
+    "story_without_its_printings": 9543.1,
+    "printing": 447.0
+   },
+   "rule 6 off: crop URLs stored": {
+    "story_without_its_printings": 6199.1,
+    "printing": 813.5
+   },
+   "rule 6 off: printings with their own text": {
+    "story_without_its_printings": 6199.1,
+    "printing": 2621.7
+   },
+   "bbox_list as int16 BinData": {
+    "story_without_its_printings": 6199.1,
+    "printing": 381.3
+   },
+   "bbox_list as int32 BinData": {
+    "story_without_its_printings": 6199.1,
+    "printing": 397.8
+   },
+   "paper, place and state in a title lookup": {
+    "story_without_its_printings": 6199.1,
+    "printing": 365.0
+   },
+   "display_headline derived at read time": {
+    "story_without_its_printings": 6144.7,
+    "printing": 447.0
+   },
+   "int8 embedding": {
+    "story_without_its_printings": 5047.1,
+    "printing": 447.0
+   },
+   "the three, float32": {
+    "story_without_its_printings": 6144.7,
+    "printing": 299.3
+   },
+   "the three, int8": {
+    "story_without_its_printings": 4992.7,
+    "printing": 299.3
+   }
+  }
+ },
+ "judged_reports": {
+  "counts": {
+   "eval A": 7,
+   "screen": 4,
+   "2A.8": 14
+  },
+  "not_v2_candidates": [
+   "9_1918-04-21_p1_sn83030214_00206532257_1918042102_0461.json"
+  ],
+  "stories": 24,
+  "printings": {
+   "total": 88,
+   "per_story": 3.67,
+   "stories_with_more_than_one": 8,
+   "most": 30
+  },
+  "bytes_by_part": {
+   "text": {
+    "total": 45379,
+    "mean": 1890.8,
+    "median": 1370.5,
+    "p90": 4011,
+    "max": 5119
+   },
+   "headline and display headline": {
+    "total": 2993,
+    "mean": 124.7,
+    "median": 80.0,
+    "p90": 241,
+    "max": 436
+   },
+   "printings, apart from their boxes": {
+    "total": 30877,
+    "mean": 1286.5,
+    "median": 402.5,
+    "p90": 2617,
+    "max": 10384
+   },
+   "printings' bbox_list": {
+    "total": 9488,
+    "mean": 395.3,
+    "median": 116.0,
+    "p90": 760,
+    "max": 3040
+   },
+   "reader fields": {
+    "total": 31929,
+    "mean": 1330.4,
+    "median": 1350.5,
+    "p90": 1657,
+    "max": 1821
+   },
+   "embedding": {
+    "total": 37296,
+    "mean": 1554.0,
+    "median": 1554.0,
+    "p90": 1554,
+    "max": 1554
+   },
+   "the rest": {
+    "total": 15545,
+    "mean": 647.7,
+    "median": 643.5,
+    "p90": 672,
+    "max": 687
+   }
+  },
+  "bytes": {
+   "as stored: rule 6's levers on, float32": {
+    "total": 173507,
+    "mean": 7229.5,
+    "median": 6579.0,
+    "p90": 8928,
+    "max": 17267
+   },
+   "rule 6 off: embedding as an array of doubles": {
+    "total": 253763,
+    "mean": 10573.5,
+    "median": 9923.0,
+    "p90": 12272,
+    "max": 20611
+   },
+   "rule 6 off: crop URLs stored": {
+    "total": 209472,
+    "mean": 8728.0,
+    "median": 7501.0,
+    "p90": 11675,
+    "max": 28703
+   },
+   "rule 6 off: printings with their own text": {
+    "total": 283471,
+    "mean": 11811.3,
+    "median": 9743.5,
+    "p90": 18309,
+    "max": 39667
+   },
+   "bbox_list as int16 BinData": {
+    "total": 167043,
+    "mean": 6960.1,
+    "median": 6444.0,
+    "p90": 8483,
+    "max": 15219
+   },
+   "bbox_list as int32 BinData": {
+    "total": 168659,
+    "mean": 7027.5,
+    "median": 6476.0,
+    "p90": 8568,
+    "max": 15731
+   },
+   "paper, place and state in a title lookup": {
+    "total": 166714,
+    "mean": 6946.4,
+    "median": 6391.5,
+    "p90": 8424,
+    "max": 14963
+   },
+   "display_headline derived at read time": {
+    "total": 171929,
+    "mean": 7163.7,
+    "median": 6538.0,
+    "p90": 8833,
+    "max": 17224
+   },
+   "int8 embedding": {
+    "total": 145859,
+    "mean": 6077.5,
+    "median": 5427.0,
+    "p90": 7776,
+    "max": 16115
+   },
+   "the three, float32": {
+    "total": 158672,
+    "mean": 6611.3,
+    "median": 6229.5,
+    "p90": 8369,
+    "max": 12872
+   },
+   "the three, int8": {
+    "total": 131024,
+    "mean": 5459.3,
+    "median": 5077.5,
+    "p90": 7217,
+    "max": 11720
+   }
+  },
+  "bytes_per": {
+   "as stored: rule 6's levers on, float32": {
+    "story_without_its_printings": 5563.6,
+    "printing": 454.3
+   },
+   "rule 6 off: embedding as an array of doubles": {
+    "story_without_its_printings": 8907.6,
+    "printing": 454.3
+   },
+   "rule 6 off: crop URLs stored": {
+    "story_without_its_printings": 5563.6,
+    "printing": 863.0
+   },
+   "rule 6 off: printings with their own text": {
+    "story_without_its_printings": 5563.6,
+    "printing": 1703.9
+   },
+   "bbox_list as int16 BinData": {
+    "story_without_its_printings": 5563.6,
+    "printing": 380.9
+   },
+   "bbox_list as int32 BinData": {
+    "story_without_its_printings": 5563.6,
+    "printing": 399.2
+   },
+   "paper, place and state in a title lookup": {
+    "story_without_its_printings": 5563.6,
+    "printing": 377.1
+   },
+   "display_headline derived at read time": {
+    "story_without_its_printings": 5497.8,
+    "printing": 454.3
+   },
+   "int8 embedding": {
+    "story_without_its_printings": 4411.6,
+    "printing": 454.3
+   },
+   "the three, float32": {
+    "story_without_its_printings": 5497.8,
+    "printing": 303.7
+   },
+   "the three, int8": {
+    "story_without_its_printings": 4345.8,
+    "printing": 303.7
+   }
+  }
+ },
+ "largest_box_coordinate": 12274,
+ "title_lookup": {
+  "lccns": 3336,
+  "bytes": 348762,
+  "mean_entry_bytes": 104.5
+ },
+ "atlas": {
+  "steps": {
+   "empty": {
+    "count": 0,
+    "data_bytes": 0,
+    "storage_bytes": 4096,
+    "index_bytes": 20480,
+    "index_bytes_by_index": {
+     "_id_": 4096,
+     "location": 4096,
+     "place_id_date": 4096,
+     "month_day": 4096,
+     "case_id": 4096
+    }
+   },
+   "after 500": {
+    "count": 500,
+    "data_bytes": 4492060,
+    "storage_bytes": 2768896,
+    "index_bytes": 167936,
+    "index_bytes_by_index": {
+     "_id_": 61440,
+     "location": 32768,
+     "place_id_date": 36864,
+     "month_day": 32768,
+     "case_id": 4096
+    }
+   },
+   "after 1000": {
+    "count": 1000,
+    "data_bytes": 8486116,
+    "storage_bytes": 8630272,
+    "index_bytes": 421888,
+    "index_bytes_by_index": {
+     "_id_": 167936,
+     "location": 81920,
+     "place_id_date": 94208,
+     "month_day": 73728,
+     "case_id": 4096
+    }
+   }
+  },
+  "data_bytes_per_story": 8486.116,
+  "index_bytes_per_story": 507.9,
+  "scratch_collection_left": false
+ },
+ "storage_by_database": {
+  "cubby": {
+   "dataSize": 211,
+   "indexSize": 20480,
+   "storageSize": 36864,
+   "counted": 20691
+  },
+  "paperghosts": {
+   "dataSize": 3479,
+   "indexSize": 602112,
+   "storageSize": 10735616,
+   "counted": 605591
+  },
+  "sample_mflix": {
+   "dataSize": 129115418,
+   "indexSize": 19771392,
+   "storageSize": 219414528,
+   "counted": 148886810
+  }
+ },
+ "capacity": {
+  "limit": 500000000,
+  "printings": 95203,
+  "free": {
+   "with sample_mflix": 350486908,
+   "without sample_mflix": 499373718
+  },
+  "variants": {
+   "as stored: rule 6's levers on, float32": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 454.3,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 430539962,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 47007,
+       "without sample_mflix": 66975
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 681777625,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 48941,
+       "without sample_mflix": 69732
+      }
+     }
+    }
+   },
+   "rule 6 off: embedding as an array of doubles": {
+    "story_bytes": 9543.1,
+    "printing_bytes": 454.3,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 623635898,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 32452,
+       "without sample_mflix": 46238
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 1000136457,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 33362,
+       "without sample_mflix": 47535
+      }
+     }
+    }
+   },
+   "rule 6 off: crop URLs stored": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 863.0,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 469449428,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 43111,
+       "without sample_mflix": 61424
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 720687091,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 46299,
+       "without sample_mflix": 65967
+      }
+     }
+    }
+   },
+   "rule 6 off: printings with their own text": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 2621.7,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 636882944,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 31777,
+       "without sample_mflix": 45276
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 888120607,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 37570,
+       "without sample_mflix": 53530
+      }
+     }
+    }
+   },
+   "bbox_list as int16 BinData": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 381.3,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 423590143,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 47778,
+       "without sample_mflix": 68074
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 674827806,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 49445,
+       "without sample_mflix": 70450
+      }
+     }
+    }
+   },
+   "bbox_list as int32 BinData": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 399.2,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 425294277,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 47587,
+       "without sample_mflix": 67802
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 676531939,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 49321,
+       "without sample_mflix": 70272
+      }
+     }
+    }
+   },
+   "paper, place and state in a title lookup": {
+    "story_bytes": 6199.1,
+    "printing_bytes": 377.1,
+    "fixed_bytes": 348762,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 423539052,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 47776,
+       "without sample_mflix": 68091
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 674776715,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 49425,
+       "without sample_mflix": 70442
+      }
+     }
+    }
+   },
+   "display_headline derived at read time": {
+    "story_bytes": 6144.7,
+    "printing_bytes": 454.3,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 427398688,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 47352,
+       "without sample_mflix": 67468
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 676598582,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 49316,
+       "without sample_mflix": 70266
+      }
+     }
+    }
+   },
+   "int8 embedding": {
+    "story_bytes": 5047.1,
+    "printing_bytes": 454.3,
+    "fixed_bytes": 0,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 364018874,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 55597,
+       "without sample_mflix": 79215
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 572103769,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 58324,
+       "without sample_mflix": 83100
+      }
+     }
+    }
+   },
+   "the three, float32": {
+    "story_bytes": 6144.7,
+    "printing_bytes": 303.7,
+    "fixed_bytes": 348762,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 413409878,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 48947,
+       "without sample_mflix": 69761
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 662609772,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 50333,
+       "without sample_mflix": 71737
+      }
+     }
+    }
+   },
+   "the three, int8": {
+    "story_bytes": 4992.7,
+    "printing_bytes": 303.7,
+    "fixed_bytes": 348762,
+    "scenarios": {
+     "v1's ratio of stories to printings": {
+      "stories": 57744,
+      "bytes": 346888790,
+      "fits": {
+       "with sample_mflix": true,
+       "without sample_mflix": true
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 58343,
+       "without sample_mflix": 83152
+      }
+     },
+     "one story per printing": {
+      "stories": 95203,
+      "bytes": 552935916,
+      "fits": {
+       "with sample_mflix": false,
+       "without sample_mflix": false
+      },
+      "stories_that_fit": {
+       "with sample_mflix": 60323,
+       "without sample_mflix": 85974
+      }
+     }
+    }
+   }
+  }
+ }
+}
