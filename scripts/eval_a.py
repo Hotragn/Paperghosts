@@ -8,6 +8,8 @@ and its charts and hand-judged samples to eval/results/eval_a/.
    composition.json. The categories are defined in decision 27.
 3. Recall: 300 articles from the near-miss reservoirs and 300 from the random ones, each
    weighted by its year's share of the pool, marked by hand in recall.json.
+4. The screen: 38,600 more from the random reservoirs, of which only those holding a flag
+   word or near-miss term are marked by hand, in screen.json. Decision 30 has the method.
 
 Every sample is seeded, so a rerun draws the same articles and keeps the judgments made.
 """
@@ -29,7 +31,7 @@ from paperghosts.cluster.reprints import clusters, keys
 from paperghosts.ingest import lexicon
 from paperghosts.ingest.crops import BATCH_PATH
 from paperghosts.ingest.prefilter import SAMPLE_SIZE
-from paperghosts.ingest.year import code_version
+from paperghosts.ingest.year import code_version, sha256
 from paperghosts.stats import wilson
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +41,8 @@ OUT = RESULTS / "eval_a"
 DICTIONARY = Path("/usr/share/dict/words")
 OCR_ONE_IN = 20  # OCR quality is measured on one candidate in twenty, chosen by its id
 COMPOSITION, RECALL, REPRINT_CHECK = 200, 300, 20
+# with no report among them, the bound on missed reports is about the 36,800 found
+SCREEN = 38_600
 CATEGORIES = (
     "ghost_report",
     "fiction",
@@ -70,6 +74,14 @@ FLAGS = re.compile(
     re.IGNORECASE,
 )
 _words = None
+
+
+def flagged(text):
+    """The flag words and near-miss terms in the text, which the screen reads for. Line-break
+    hyphens are joined first, as the lexicon does."""
+    text = text.replace("-\n", "")
+    found = {" ".join(m.group().lower().split()) for m in FLAGS.finditer(text)}
+    return sorted(found.union(*lexicon.near_miss_terms(text).values()))
 
 
 def dictionary():
@@ -104,14 +116,18 @@ def ocr_quality(text, words, least=20):
 def draw(pools, sizes, n, seed):
     """n (year, item) pairs, each year drawn in proportion to its share of the pool across the
     archive, so the sample stands for every article in the pool rather than for each year
-    equally. pools maps a year to its reservoir, and sizes to the pool's full size."""
+    equally. pools maps a year to its reservoir, and sizes to the pool's full size. A year
+    whose reservoir is smaller than its share fails the draw, since shrinking that share
+    would under-sample the year."""
     rng = random.Random(seed)
     years = sorted(year for year in pools if sizes.get(year) and pools[year])
     wanted = Counter(rng.choices(years, weights=[sizes[year] for year in years], k=n))
+    short = {y: (wanted[y], len(pools[y])) for y in years if wanted[y] > len(pools[y])}
+    assert not short, f"years whose reservoir is short, as (wanted, held): {short}"
     return [
         (year, item)
         for year in years
-        for item in rng.sample(list(pools[year]), min(wanted[year], len(pools[year])))
+        for item in rng.sample(list(pools[year]), wanted[year])
     ]
 
 
@@ -134,6 +150,21 @@ def window(text, position, width=320):
     return " ".join(text[start : start + width].split())
 
 
+def for_reading(row, year, text, spots, most=4):
+    """A sampled article as it is judged: its opening, and the text around the spots."""
+    return {
+        "article_id": row["article_id"],
+        "year": year,
+        "date": row["date"],
+        "paper": row["paper"],
+        "headline": " / ".join((row["headline"] or "").split("\n"))[:200],
+        "near_miss_terms": sorted(row["near_miss_terms"]),
+        "words": len(text.split()),
+        "opening": " ".join(text[:420].split()),
+        "contexts": [window(text, p, 300) for p in sorted(set(spots))[:most] if p >= 0],
+    }
+
+
 def first_match(text, forms):
     low = text.lower()
     found = [low.find(form.lower()) for form in forms]
@@ -142,8 +173,8 @@ def first_match(text, forms):
 
 def year_pass(job):
     """One year's candidates: per-article length, OCR quality for a fixed sample, reprint keys,
-    paper and opening; plus the composition picks and recall picks that fall in this year."""
-    year, wanted, near, rand = job
+    paper and opening; plus the composition, recall and screen picks that fall in this year."""
+    year, wanted, near, rand, screen = job
     words, docs, picked, no_batch_path = dictionary(), [], [], 0
     with zstandard.open(DATA / "candidates" / f"{year}.jsonl.zst", "rt") as rows:
         for index, row in enumerate(map(json.loads, rows)):
@@ -180,17 +211,40 @@ def year_pass(job):
                             :200
                         ],
                         "context": window(both, first_match(both, forms), 600),
+                        # what the screen would still find had the lexicon missed it
+                        "flags_without_terms": flagged(
+                            lexicon.GHOST_MATCHER.sub("▒", both.replace("-\n", ""))
+                        ),
                         "category": None,
                         "note": None,
                     }
                 )
-    recalled = []
-    if near or rand:
+    recalled, screened, tally = [], [], Counter()
+    if near or rand or screen:
         seen = Counter()
         with zstandard.open(DATA / "samples" / f"{year}.jsonl.zst", "rt") as rows:
             for row in map(json.loads, rows):
                 pool, index = row["sample"], seen[row["sample"]]
                 seen[pool] += 1
+                if pool == "random" and index in screen:
+                    tally["drawn"] += 1
+                    tally["near_miss"] += bool(row["near_miss_terms"])
+                    flags = flagged(f"{row['headline'] or ''}\n{row['text'] or ''}")
+                    if flags:
+                        text = (row["text"] or "").replace("-\n", "")
+                        spots = [m.start() for m in FLAGS.finditer(text)]
+                        spots += [p for p in map(text.lower().find, flags) if p >= 0]
+                        screened.append(
+                            {
+                                **for_reading(row, year, text, spots, most=6),
+                                "flags": flags,
+                                "first": None,
+                                "rejudged": None,
+                                "ghost_report": None,
+                                "note": None,
+                            }
+                        )
+                    continue
                 if index not in (near if pool == "near_miss" else rand):
                     continue
                 text = row["text"] or ""
@@ -204,26 +258,12 @@ def year_pass(job):
                 recalled.append(
                     {
                         "pool": pool,
-                        "article_id": row["article_id"],
-                        "year": year,
-                        "date": row["date"],
-                        "paper": row["paper"],
-                        "headline": " / ".join((row["headline"] or "").split("\n"))[
-                            :200
-                        ],
-                        "near_miss_terms": sorted(row["near_miss_terms"]),
-                        "words": len(text.split()),
-                        "opening": " ".join(text[:420].split()),
-                        "contexts": [
-                            window(text, p, 300)
-                            for p in sorted(set(spots))[:4]
-                            if p >= 0
-                        ],
+                        **for_reading(row, year, text, spots),
                         "ghost_report": None,
                         "note": None,
                     }
                 )
-    return year, docs, picked, recalled, no_batch_path
+    return year, docs, picked, recalled, no_batch_path, screened, tally
 
 
 def quantiles(values, points=(0.1, 0.25, 0.5, 0.75, 0.9, 0.99)):
@@ -288,16 +328,20 @@ def main():
     reservoirs = {y: range(min(SAMPLE_SIZE, others[y])) for y in years}
     for year, index in draw(reservoirs, others, RECALL, "eval A recall random"):
         rand[year].add(index)
+    screen = defaultdict(set)
+    held = {y: [i for i in reservoirs[y] if i not in rand[y]] for y in years}
+    for year, index in draw(held, others, SCREEN, "eval A screen"):
+        screen[year].add(index)
 
     jobs = [
-        (y, composition[y], near[y], rand[y])
+        (y, composition[y], near[y], rand[y], screen[y])
         for y in years
-        if counts[y]["candidates"] or near[y] or rand[y]
+        if counts[y]["candidates"] or near[y] or rand[y] or screen[y]
     ]
-    docs, years_of, picked, recalled = [], [], [], []
-    no_batch_path = Counter()
+    docs, years_of, picked, recalled, screened = [], [], [], [], []
+    no_batch_path, tally = Counter(), Counter()
     with ProcessPoolExecutor(max_workers=6) as pool:
-        for year, found, chosen, reread, missing in pool.map(
+        for year, found, chosen, reread, missing, hits, drawn in pool.map(
             year_pass, sorted(jobs, key=lambda job: -counts[job[0]]["articles"])
         ):
             no_batch_path[year] = missing
@@ -305,6 +349,8 @@ def main():
             years_of += [year] * len(found)
             picked += chosen
             recalled += reread
+            screened += hits
+            tally.update(drawn)
 
     lengths = [doc[0] for doc in docs]
     qualities = [
@@ -358,6 +404,12 @@ def main():
         sorted(recalled, key=lambda r: (r["pool"], r["year"], r["article_id"])),
         lambda r: (r["pool"], r["article_id"]),
         ("ghost_report", "note"),
+    )
+    screened = keep_judgments(
+        OUT / "screen.json",
+        sorted(screened, key=lambda s: (s["year"], s["article_id"])),
+        lambda s: s["article_id"],
+        ("first", "rejudged", "ghost_report", "note"),
     )
     checks = keep_judgments(
         OUT / "reprint-check.json",
@@ -436,6 +488,11 @@ def main():
         },
         "ocr_quality": {
             "method": "share of words of 3+ letters in /usr/share/dict/words (Webster's 2nd), once line-break hyphens are joined and -s, -es, -ed, -ing, -ly, -ies, -ied come off",
+            # so the figure can be checked against another machine's word list
+            "dictionary": {
+                "sha256": sha256(DICTIONARY),
+                "words": len(DICTIONARY.read_text().splitlines()),
+            },
             "sample": f"1 candidate in {OCR_ONE_IN}, by the CRC of its id: {len(qualities):,}",
             **quantiles([q for _, q in qualities]),
             "histogram": [
@@ -465,6 +522,20 @@ def main():
         },
         "composition": summarise_composition(picked, total["candidates"]),
         "recall": summarise_recall(recalled, total),
+    }
+    report["recall"]["screen"] = summarise_screen(
+        screened,
+        tally,
+        recalled,
+        picked,
+        total,
+        report["composition"].get("categories", {}).get("ghost_report"),
+    )
+    busiest = max(screen, key=lambda y: len(screen[y]))
+    report["recall"]["screen"]["largest_year"] = {
+        "year": busiest,
+        "drawn": len(screen[busiest]),
+        "held": len(held[busiest]),
     }
     (RESULTS / "eval_a.json").write_text(json.dumps(report, indent=1) + "\n")
     charts = draw_all(report, OUT)
@@ -567,6 +638,66 @@ def summarise_recall(recalled, total):
     return out
 
 
+def summarise_screen(screened, tally, recalled, picked, total, in_candidates):
+    """Decision 30. The bound on reports among non-candidates, from the screen's draw and the
+    300 random articles read in full, and among the near-miss pool, from the draw's near-miss
+    articles and the 300 near-miss ones. Both hold once every screen hit is judged."""
+    judged = [s for s in screened if s["ghost_report"] is not None]
+    checked = [s for s in judged if s["first"] == "no" and s["rejudged"]]
+    reports = [p for p in picked if p["category"] == "ghost_report"]
+    out = {
+        "seed": "eval A screen",
+        "drawn": tally["drawn"],
+        "drawn_near_miss": tally["near_miss"],
+        "hits": len(screened),
+        "judged": len(judged),
+        "first_reading": dict(Counter(s["first"] for s in judged)),
+        "negatives_rejudged": len(checked),
+        "negatives_agreed": sum(not s["ghost_report"] for s in checked),
+        "reports_flagged_without_terms": {
+            "count": sum(bool(p["flags_without_terms"]) for p in reports),
+            "of": len(reports),
+            "flags": {p["article_id"]: p["flags_without_terms"] for p in reports},
+        },
+    }
+    if not screened or len(judged) < len(screened):
+        return out
+    read = [r for r in recalled if r["pool"] == "random"]
+    found = [s for s in judged if s["ghost_report"]] + [
+        r for r in read if r["ghost_report"]
+    ]
+    out["random"] = rate(
+        len(found), tally["drawn"] + len(read), total["non_candidates"]
+    )
+    out["reports"] = [
+        {k: r[k] for k in ("article_id", "year", "date", "paper", "headline", "note")}
+        for r in found
+    ]
+    near = {r["article_id"]: r for r in recalled if r["pool"] == "near_miss"}
+    near |= {s["article_id"]: s for s in screened if s["near_miss_terms"]}
+    out["near_miss"] = rate(
+        sum(bool(r["ghost_report"]) for r in near.values()),
+        len(near),
+        total["near_miss"],
+    )
+    if in_candidates:
+        # the reports among candidates, at composition's low, point and high, over those plus
+        # the most that non-candidates can hold
+        missed = out["random"]["implied_high"]
+        out["recall"] = in_candidates["implied"] / (
+            in_candidates["implied"] + out["random"]["implied"]
+        )
+        out["recall_at_least"] = {
+            name: in_candidates[at] / (in_candidates[at] + missed)
+            for name, at in (
+                ("low", "implied_low"),
+                ("point", "implied"),
+                ("high", "implied_high"),
+            )
+        }
+    return out
+
+
 def headline_numbers(report):
     t = report["totals"]
     r = report["reprints"]
@@ -574,6 +705,11 @@ def headline_numbers(report):
     yield f"no state: {report['no_state']['share_of_candidates']:.1%} of candidates; median length {report['lengths']['p50']} words; median OCR quality {report['ocr_quality']['p50']:.1%}"
     yield f"no batch path: {t['no_batch_path']:,} candidates ({t['share_no_batch_path']:.1%}), which need loc.gov to name their page's IIIF service"
     yield f"reprints: {r['clusters']:,} clusters hold {r['clustered_candidates']:,} candidates ({r['share_clustered']:.1%}); {r['distinct_stories']:,} distinct stories; {r['cross_paper_clusters']:,} clusters span papers"
+    s = report["recall"]["screen"]
+    yield f"screen: {s['hits']:,} of {s['drawn']:,} drawn hold a flag word, {s['judged']:,} judged"
+    if "random" in s:
+        yield f"  non-candidates: {s['random']['count']} reports in {s['random']['n']:,}, at most {s['random']['implied_high']:,}; recall {s['recall']:.1%}, at least {s['recall_at_least']['point']:.1%}"
+        yield f"  near-miss: {s['near_miss']['count']} in {s['near_miss']['n']:,}, at most {s['near_miss']['implied_high']:,}"
 
 
 if __name__ == "__main__":

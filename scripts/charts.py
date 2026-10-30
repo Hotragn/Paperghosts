@@ -26,6 +26,13 @@ def compact(value):
     return f"{value:g}"
 
 
+def pct(share):
+    """A share as a percent with two significant figures, so a tiny one doesn't read 0.0%."""
+    if not share:
+        return "0.0%"
+    return f"{share:.{max(1, 1 - math.floor(math.log10(share * 100)))}%}"
+
+
 def nice(top, ticks=4):
     """A round upper bound and step for an axis that reaches `top`."""
     raw = max(top, 1e-9) / ticks
@@ -340,7 +347,11 @@ def draw_all(report, out):
                 intervals=[(c["low"] * 100, c["high"] * 100) for _, c in rows],
             )
         )
-    recall = report["recall"]
+    screen = report["recall"].get("screen", {})
+    # the screen's bounds, once judged, supersede the 300-article ones (decision 30)
+    recall = report["recall"] | {
+        p: screen[p] for p in ("near_miss", "random") if p in screen
+    }
     if composition and all("share" in recall[p] for p in ("near_miss", "random")):
         rows = [
             ("Candidates", composition["ghost_report"]),
@@ -351,12 +362,14 @@ def draw_all(report, out):
             bars(
                 out / "recall.svg",
                 "Ghost reports in and out of the candidates",
-                "Share of each pool's sample that is a ghost report, judged by hand; whiskers are 95% intervals",
+                "Share of each pool's sample judged a ghost report; whiskers are 95% intervals; non-candidates read where they hold a flag word"
+                if screen.get("random")
+                else "Share of each pool's sample that is a ghost report, judged by hand; whiskers are 95% intervals",
                 [
                     (
                         name,
                         r["share"] * 100,
-                        f"{r['count']} of {r['n']} ({r['low']:.1%}–{r['high']:.1%}), {compact(r['implied_low'])}–{compact(r['implied_high'])} articles",
+                        f"{r['count']} of {r['n']:,} ({pct(r['low'])}–{pct(r['high'])}), {compact(r['implied_low'])}–{compact(r['implied_high'])} articles",
                     )
                     for name, r in rows
                 ],

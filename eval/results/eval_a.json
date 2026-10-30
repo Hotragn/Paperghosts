@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T08:00:41+00:00",
+ "generated_at": "2026-10-30T14:30:30+00:00",
  "lexicon_version": "v1",
  "code_version": "404315384762",
  "totals": {
@@ -2102,6 +2102,10 @@
  },
  "ocr_quality": {
   "method": "share of words of 3+ letters in /usr/share/dict/words (Webster's 2nd), once line-break hyphens are joined and -s, -es, -ed, -ing, -ly, -ies, -ied come off",
+  "dictionary": {
+   "sha256": "be41ad97963bf8dabedd5871d5d691596175269d540956b0f9965a885c2bbab9",
+   "words": 235976
+  },
   "sample": "1 candidate in 20, by the CRC of its id: 51,718",
   "p10": 0.8344827586206897,
   "p25": 0.8916666666666667,
@@ -2417,6 +2421,113 @@
    "implied_low": 0,
    "implied_high": 4668757,
    "reports": []
+  },
+  "screen": {
+   "seed": "eval A screen",
+   "drawn": 38600,
+   "drawn_near_miss": 713,
+   "hits": 1284,
+   "judged": 1284,
+   "first_reading": {
+    "no": 1274,
+    "close": 8,
+    "report": 2
+   },
+   "negatives_rejudged": 127,
+   "negatives_agreed": 127,
+   "reports_flagged_without_terms": {
+    "count": 5,
+    "of": 7,
+    "flags": {
+     "21_1854-11-16_p1_sn83021169_00514152792_1854111601_0398.json": [
+      "mysterious",
+      "spirit"
+     ],
+     "1_1875-10-08_p1_sn84023963_0020029595A_1875100801_0921.json": [
+      "in white",
+      "witchcraft"
+     ],
+     "11_1878-10-12_p1_sn83030272_00206533511_1878101201_0896.json": [
+      "spirits",
+      "spiritual",
+      "spiritualism",
+      "spiritualisu"
+     ],
+     "6_1904-05-28_p1_sn84020358_00271744432_1904052801_1153.json": [],
+     "1_1911-07-27_pna_sn92053934_00202198326_1911072701_0413.json": [
+      "in white"
+     ],
+     "6_1911-12-15_pna_sn86058226_00271744924_1911121501_0691.json": [
+      "mysterious"
+     ],
+     "14_1916-12-09_p5_sn84024055_00280761072_1916120901_0525.json": []
+    }
+   },
+   "random": {
+    "count": 4,
+    "n": 38900,
+    "share": 0.00010282776349614396,
+    "low": 3.998776606115435e-05,
+    "high": 0.00026439348558367036,
+    "implied": 37971,
+    "implied_low": 14766,
+    "implied_high": 97631
+   },
+   "reports": [
+    {
+     "article_id": "3_1856-10-29_pna_sn85026466_0020219798A_1856102901_1069.json",
+     "year": 1856,
+     "date": "1856-10-29",
+     "paper": "Grand River times. [volume] (Grand Haven, Mich.) 1851-18??",
+     "headline": "",
+     "note": "1856, Bordentown: spiritualists marry a dead man's corpse to his fianc\u00e9e, on directions they say his spirit gave. A claimed communication from the dead, like eval A's 1878 medium."
+    },
+    {
+     "article_id": "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json",
+     "year": 1898,
+     "date": "1898-01-20",
+     "paper": "Abilene weekly reflector.",
+     "headline": "\"CONTROLLED BY SPIRITS\"",
+     "note": "Borderline. 1898: a wife murderer's defence is to be that he was under the control of spirits, with spiritualist mediums to testify. Counted like eval A's 1904 courtroom spectre."
+    },
+    {
+     "article_id": "9_1918-04-21_p1_sn83030214_00206532257_1918042102_0461.json",
+     "year": 1918,
+     "date": "1918-04-21",
+     "paper": "New-York tribune. [volume] (New York [N.Y.]) 1866-1924",
+     "headline": "SOLDIER died in New York /  /  / last week who probably knew / as much about No Mans Land",
+     "note": "Borderline. 1918: an Australian scout writes that he has felt a touch on the shoulder with no one by, and thinks the spirits of the unburied dead in No Man's Land hover near."
+    },
+    {
+     "article_id": "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json",
+     "year": 1919,
+     "date": "1919-11-15",
+     "paper": "New-York tribune.",
+     "headline": "",
+     "note": "1919: Mrs. Curran says the spirit Patience speaks through her as a medium, and gives verses at a sitting."
+    }
+   ],
+   "near_miss": {
+    "count": 4,
+    "n": 1013,
+    "share": 0.003948667324777887,
+    "low": 0.0015365738050310326,
+    "high": 0.010108897820048033,
+    "implied": 27137,
+    "implied_low": 10560,
+    "implied_high": 69474
+   },
+   "recall": 0.4919383973132451,
+   "recall_at_least": {
+    "low": 0.15505378763619998,
+    "point": 0.2735626539282871,
+    "high": 0.4312470144123781
+   },
+   "largest_year": {
+    "year": 1914,
+    "drawn": 950,
+    "held": 1985
+   }
   }
  }
 }

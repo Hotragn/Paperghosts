@@ -182,7 +182,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Atlas would hold about 22,300 ghost-report stories, counting each candidate as 1/k of a story when its cluster holds k printings. Three of the 7 reports were reprinted (7, 13 and 30 printings), so this is a rough estimate.
 - Recall, from the seeded reservoirs of 2,000 articles per year, with each year weighted by its pool's size:
   - Near-miss pool: 0 ghost reports in 300, so at most 1.26% (95%), or at most 86,900 of its 6,872,539 articles. The sample's terms are spirit (210), knock (80), supernatural (4), spiritualism (4), rap (3) and seance (3).
-  - All non-candidates: 0 in 300, so at most 1.26%, or at most 4.67 million of 369,263,454. This bound is loose, at 127 times the ghost reports found. Bounding the misses at the 36,800 found would take about 38,600 articles with none among them.
+  - All non-candidates: 0 in 300, so at most 1.26%, or at most 4.67 million of 369,263,454. This bound is loose, at 127 times the ghost reports found. Bounding the misses at the 36,800 found would take about 38,600 articles with none among them. Decision 30 screens that many, and finds 4.
   - The closest calls were a séance announcement promising that spirits "will materialize" and a Kentucky girl who claims to be a witch.
 - No misses means no shared vocabulary to add, so there is no lexicon v2. A re-read would take 118.6 min and 340.4 GB of downloads at four processes (decision 25).
 - Both chart series colors pass the dataviz palette validator, on the light surface and on the dark one.
@@ -217,3 +217,53 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - 220 reels hold more than one batch. For 57 of them that's a batch and its reissue (decision 26). The other 163 are split between batches, so the reel alone doesn't settle which batch a page is in.
   - A reel-to-batch map isn't built yet. It needs a crop check of its own.
 - **Known limitation, not fixed:** AmericanStories can give an article a box that belongs to the item above it. In the crop check, #21's first box is the last line of the letter above, its address and signature. The crop shows that line and the OCR doesn't.
+
+**30. A flag-word screen of 38,600 more non-candidates found 4 ghost reports, all spiritualist and all saying "spirit". Lexicon v1 finds about half the reports, and lexicon v2 is proposed but not run.**
+- The draw (`make eval`, seed "eval A screen"):
+  - 38,600 more articles from the random reservoirs, each year in proportion to its non-candidates. None of eval A's 300 is drawn again, so with them there are 38,900.
+  - The largest year draw is 1914's: 950 of the 1,985 articles left in its reservoir. 1910 has the largest expected share, 958.
+  - `draw()` now fails when a reservoir is smaller than its year's share, instead of quietly drawing fewer.
+- The screen reads an article only if its headline or text holds one of eval A's flag words or a near-miss term, once line-break hyphens are joined. 1,284 do (3.3%), and 713 of those are near-miss articles. `eval/results/eval_a/screen.json` holds each one with its opening and up to six windows.
+- The reading:
+  - Eight reading agents judged the hits by decision 27, 160 or 161 each, split by seed. Their first reading was 1,274 no, 8 close calls and 2 reports.
+  - I re-judged a seeded 10% of their negatives (127, seed "eval A screen check") from the same text, and agreed on all 127 (95% interval 97.1–100%).
+  - I re-read every close call and report in full.
+- The 4 reports:
+  - 1856, Bordentown (the Grand River times, from the Trenton Gazette): spiritualists marry a dead man's corpse to his fiancée, on directions they say his spirit gave.
+  - 1919, the New-York Tribune: Mrs. Curran says the spirit Patience speaks through her as a medium.
+  - Borderline, 1898, the Abilene weekly reflector: a wife murderer's defence will be that he was under the control of spirits, with spiritualist mediums to testify. It is counted like eval A's 1904 courtroom spectre.
+  - Borderline, 1918, the New-York Tribune: an Australian scout writes that he has felt a touch on the shoulder with no one there, and thinks the spirits of No Man's Land's unburied dead hover near.
+  - All 4 are near-miss articles, and in each the only near-miss term is spirit. Their other words: spiritualists, spiritualistic, medium(s), disembodied, ouija board, and control of spirits.
+  - Not counted:
+    - living witches' shapes in testimony from 1692
+    - the devil driven out of a woman
+    - a psychical researcher's own spirit visiting Mars
+    - the belief that a dead baby's spirit stays with its mother
+    - a fictional cabman's passenger who is Aaron Burr
+    - a dialect sketch
+- Estimates (`eval_a.json`, `recall.screen`; `recall.svg` now shows them):
+  - **Non-candidates:** 4 in 38,900, so 0.010% (0.0040–0.026%), or about 38,000 (14,800–97,600) of 369,263,454 articles.
+  - **Near-miss pool:** 4 in 1,013 (the 713 drawn and eval A's 300), so 0.39% (0.15–1.0%), or about 27,100 (10,600–69,500) of 6,872,539.
+  - **Recall:**
+    - The candidates hold about 36,800 reports (decision 27), so lexicon v1 finds about 49% of them.
+    - With the most reports the interval allows outside the candidates, it finds at least 27%.
+    - Across the candidates' own interval (17,900–74,000), the floor runs from 16% to 43%.
+  - Counting only the 2 clear reports gives about 19,000 missed (5,200–69,200), so recall would be about 66%, and at least 35%.
+- **Caveat:** the screen sees only the reports that hold a flag word or a near-miss term.
+  - With their lexicon terms masked, 5 of eval A's 7 reports still hold one (71%, 36–92%).
+  - The two that don't are the 1904 courtroom spectre and the 1916 Peking legation, which calls its ghost a "shade".
+  - So the screen may miss about 3 in 10 of the reports outside the candidates (2 in 7). If it does, the true number is about 1.4 times these estimates.
+- **Lexicon v2, proposed to the EM and not run.** Each candidate term was measured on the 38,900 judged articles:
+
+  | Term | Articles in 38,900 | Candidates added | Reports caught |
+  |---|---|---|---|
+  | spiritualism, spiritualist(s), spiritualistic | 8 | ~76,000 | 2 |
+  | spirit(s) and medium(s) in one article | 8 | ~76,000 | 2 |
+  | spirit world, land, control, message, manifestation, circle or photograph; control of or by spirits; disembodied; spirits of the dead or departed | 5 | ~47,000 | 2 |
+  | ouija, planchette | 1 | ~9,500 | 1 |
+  | séance, moved from the near-miss lexicon | 0 | 0 | 0 |
+
+  - Together they match 17 articles: about 161,000 more candidates (+15%), and they catch 3 of the 4 reports. About 18% of what they add are reports (6–41%), against 3.5% for v1.
+  - Left out: materialize, which matched 7 articles and no report. No term catches the 1918 scout's "spirits".
+  - Cost: a full re-read takes 118.6 min and 340.4 GB of downloads (decision 25). The reader's job would grow to about 1.21 million candidates.
+- `eval_a.json` now records `/usr/share/dict/words`'s sha256 (`be41ad97963bf8da…`) and its 235,976 words, so the OCR-quality figure can be checked on another machine.
