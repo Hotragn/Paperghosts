@@ -1,0 +1,19 @@
+{
+  "year": 1804,
+  "source": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/main/faro_1804.tar.gz",
+  "bytes_read": 30338494,
+  "lexicon_version": "v1",
+  "code_version": "fdf045c40a6b",
+  "started_at": "2026-10-30T02:19:47+00:00",
+  "finished_at": "2026-10-30T02:19:50+00:00",
+  "seconds": 2.7,
+  "attempt": 1,
+  "articles": 26766,
+  "candidates": 72,
+  "output_bytes": {
+    "candidates": 116425,
+    "samples": 2505747,
+    "counts": 994
+  },
+  "peak_rss_bytes": 103104512
+}

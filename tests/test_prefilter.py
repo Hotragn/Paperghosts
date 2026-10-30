@@ -49,7 +49,10 @@ def test_scan_sorts_articles_into_candidates_and_samples():
 
     result = scan(pages, year=1850, sample_size=10)
 
-    assert (result["articles"], result["near_miss"]) == (3, 1)
+    assert (result["pages"], result["articles"], result["near_miss"]) == (1, 3, 1)
+    assert result["by_state"] == {
+        "Connecticut": {"pages": 1, "articles": 3, "candidates": 1}
+    }
     assert [c["article_id"] for c in result["candidates"]] == ["a0"]
     assert result["candidates"][0]["terms"] == {"ghost": ["ghost"]}
     assert [s["article_id"] for s in result["samples"]["near_miss"]] == ["a1"]

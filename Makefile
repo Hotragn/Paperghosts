@@ -29,6 +29,9 @@ worker:
 smoke:
 	uv run python -m paperghosts.workflows.smoke
 
+ingest:
+	uv run python -m paperghosts.workflows.ingest $(YEARS)
+
 api:
 	uv run uvicorn api.main:app --port 8000
 
@@ -37,7 +40,7 @@ app:
 	$(MAKE) -j2 api web
 
 # Later targets fail on purpose until their phase builds them.
-ingest eval:
+eval:
 	@echo "make $@ is built in Phase 2A"; exit 1
 
 db-init:

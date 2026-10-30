@@ -1,4 +1,5 @@
-"""The page reader streams a faro tarball page by page from a URL, skipping directories."""
+"""The page reader streams a faro tarball page by page from a URL, skipping directories,
+and reports its progress: pages done and compressed bytes read."""
 
 import io
 import tarfile
@@ -20,10 +21,14 @@ def test_pages_stream_from_a_url(tmp_path):
             info.size = len(data)
             tar.addfile(info, io.BytesIO(data))
 
+    progress = []
     streamed = [
-        (name, page["full articles"][0]["id"]) for name, page in pages(path.as_uri())
+        (name, page["full articles"][0]["id"])
+        for name, page in pages(path.as_uri(), lambda *done: progress.append(done))
     ]
     assert streamed == [
         ("faro_1850/page_0.json", "a0"),
         ("faro_1850/page_1.json", "a1"),
     ]
+    assert [members for members, _ in progress] == [1, 2]
+    assert 0 < progress[-1][1] <= path.stat().st_size

@@ -1,0 +1,19 @@
+{
+  "year": 1910,
+  "source": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/main/faro_1910.tar.gz",
+  "bytes_read": 7617289201,
+  "lexicon_version": "v1",
+  "code_version": "fdf045c40a6b",
+  "started_at": "2026-10-30T02:19:47+00:00",
+  "finished_at": "2026-10-30T02:26:16+00:00",
+  "seconds": 389.4,
+  "attempt": 1,
+  "articles": 9186018,
+  "candidates": 21739,
+  "output_bytes": {
+    "candidates": 23808643,
+    "samples": 3091783,
+    "counts": 5405
+  },
+  "peak_rss_bytes": 535527424
+}

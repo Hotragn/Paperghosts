@@ -2,7 +2,7 @@
 samples of the non-candidates, which measure its recall (ARCHITECTURE section 3.1)."""
 
 import random
-from collections import Counter
+from collections import Counter, defaultdict
 
 import orjson
 import zstandard
@@ -50,14 +50,20 @@ def scan(pages, year, sample_size=SAMPLE_SIZE):
     keeping seeded reservoir samples of the near-miss pool and of all non-candidates."""
     random_sample = Reservoir(sample_size, random.Random(f"{year} random"))
     near_miss_sample = Reservoir(sample_size, random.Random(f"{year} near-miss"))
-    result = {"articles": 0, "near_miss": 0, "candidates": []}
+    result = {"pages": 0, "articles": 0, "near_miss": 0, "candidates": []}
     per_term, only, spellings = Counter(), Counter(), Counter()
+    by_state = defaultdict(lambda: {"pages": 0, "articles": 0, "candidates": 0})
     for member, page in pages:
+        result["pages"] += 1
+        state = by_state[(page.get("lccn") or {}).get("state") or "unknown"]
+        state["pages"] += 1
         for article in page.get("full articles") or []:
             result["articles"] += 1
+            state["articles"] += 1
             text = f"{article.get('headline') or ''}\n{article.get('article') or ''}"
             terms = ghost_terms(text)
             if terms:
+                state["candidates"] += 1
                 result["candidates"].append(record(member, page, article, terms=terms))
                 per_term.update(terms.keys())
                 only.update(terms.keys() if len(terms) == 1 else ())
@@ -71,7 +77,9 @@ def scan(pages, year, sample_size=SAMPLE_SIZE):
             if near:
                 result["near_miss"] += 1
                 near_miss_sample.offer(item)
-    result.update(per_term=per_term, only=only, spellings=spellings)
+    result.update(
+        per_term=per_term, only=only, spellings=spellings, by_state=dict(by_state)
+    )
     result["samples"] = {
         "random": random_sample.items,
         "near_miss": near_miss_sample.items,
