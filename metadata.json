@@ -1,0 +1,35 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M65WAMEAB9QXWJP684W0EXYV",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-archive",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "Makefile",
+    "paperghosts/cluster/reprints.py",
+    "paperghosts/stats.py",
+    "scripts/charts.py",
+    "scripts/eval_a.py",
+    "scripts/headline_drops.py",
+    "tests/test_eval_a.py",
+    "tests/test_headline_drops.py",
+    "tests/test_reprints.py",
+    "tests/test_stats.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 190,
+    "cache_creation_tokens": 354088,
+    "cache_read_tokens": 44998364,
+    "output_tokens": 162098,
+    "api_call_count": 92
+  }
+}

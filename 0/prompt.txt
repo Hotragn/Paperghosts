@@ -1,0 +1,34 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2A.4 passes my review. I re-checked all 180 manifests against the listing at the pinned revision: bytes, sha256 of every output, and one code version (404315384762). My totals match yours: 16,887,460 pages, 370,313,913 articles, 1,050,459 candidates, 1.94 GB of outputs, no partial files. The only retries are the kill test and the 1872 and 1889 drops.
+
+My spot-check used seed "EM spot-check 2A": 20 random candidates and 10 random non-candidates. Every candidate's term really is in its text, and none of the 10 non-candidates is a ghost report. But only about 1 candidate in 20 looks like a real report. The rest are:
+- Holy Ghost (3 of the 20)
+- ghost writing
+- figures of speech
+- names: General Gobin read as Goblin, the ship Phantom, a character in a play
+- ghost parties
+
+Eval A has to measure this.
+
+Finish and report 2A.5 first, then do **Step 2A.6, eval A**. Fill in the Makefile's eval stub so it writes `eval/results/eval_a.json` and the charts.
+1. **EDA:** for each year, pages, articles, candidates and candidates per million. Also give:
+   - the counts by state, including the share of candidates with no state in their metadata
+   - the term mix
+   - candidate lengths
+   - an OCR-quality distribution, for example the share of words found in a standard English word list
+   - the reprint signal, as near-duplicate clusters among candidates
+2. **Composition:** sort a seeded random sample of 200 candidates into ghost report, fiction, religious, figurative, name or title, social event and other. Give each category a 95% interval. This sizes the reader's job and the number of stories Atlas has to hold.
+3. **Recall:** read a seeded 300 from the near-miss reservoirs and 300 from the random reservoirs, and list every ghost report you find. Report the near-miss miss rate and the random-sample upper bound, both as a rate and as an implied number of articles. If the misses share vocabulary, propose lexicon v2 with what a re-read would cost. Don't re-read until I've reviewed it.
+
+Reply with the headline numbers, the composition table, the recall result and the list of charts.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>b12xnwd60</task-id>
+<tool-use-id>toolu_01AU2iteUfHN9aH7UrDyjKch</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b12xnwd60.output</output-file>
+<status>completed</status>
+<summary>Background command "Run eval A's first pass over all candidates" completed (exit code 0)</summary>
+</task-notification>
