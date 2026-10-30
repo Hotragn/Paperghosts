@@ -14,7 +14,7 @@ from temporalio.exceptions import ActivityError
 
 with workflow.unsafe.imports_passed_through():
     from paperghosts.ingest.year import available_years, ingest_year
-    from paperghosts.workflows import TASK_QUEUE, TEMPORAL
+    from paperghosts.workflows import TASK_QUEUE, TEMPORAL, identity
 
 RETRY = RetryPolicy(
     initial_interval=timedelta(seconds=5),
@@ -61,7 +61,7 @@ class IngestArchiveWorkflow:
 
 
 async def main(years):
-    client = await Client.connect(TEMPORAL)
+    client = await Client.connect(TEMPORAL, identity=identity("ingest"))
     workflow_id = "ingest-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     results = await client.execute_workflow(
         IngestArchiveWorkflow.run,

@@ -9,7 +9,7 @@ from temporalio.client import Client
 from temporalio.common import RetryPolicy
 from temporalio.exceptions import ApplicationError
 
-from paperghosts.workflows import TASK_QUEUE, TEMPORAL
+from paperghosts.workflows import TASK_QUEUE, TEMPORAL, identity
 
 
 @activity.defn
@@ -41,7 +41,7 @@ class SmokeWorkflow:
 
 
 async def main():
-    client = await Client.connect(TEMPORAL)
+    client = await Client.connect(TEMPORAL, identity=identity("smoke"))
     workflow_id = "smoke-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     result = await client.execute_workflow(
         SmokeWorkflow.run,

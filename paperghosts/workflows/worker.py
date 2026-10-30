@@ -9,14 +9,14 @@ from temporalio.worker import SharedStateManager, Worker
 
 from paperghosts.ingest.year import available_years, ingest_year
 from paperghosts.observability.sentry import init_sentry
-from paperghosts.workflows import TASK_QUEUE, TEMPORAL
+from paperghosts.workflows import TASK_QUEUE, TEMPORAL, identity
 from paperghosts.workflows.ingest import IngestArchiveWorkflow
 from paperghosts.workflows.smoke import SmokeWorkflow, count_steps
 
 
 async def main():
     init_sentry("pipeline")
-    client = await Client.connect(TEMPORAL)
+    client = await Client.connect(TEMPORAL, identity=identity("worker"))
     spawn = multiprocessing.get_context("spawn")
     # each year gets a fresh process: four cores past the GIL, and its own peak memory
     with ProcessPoolExecutor(
