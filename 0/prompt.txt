@@ -1,0 +1,9 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.4, Sentry and Temporal: step 1.3 passed. I re-ran `make keys` and everything is OK. SerpApi has 210 searches left this month, and that's the whole investigator budget, so no SerpApi calls until Phase 3. Build items 3 and 4:
+- Sentry init helpers for the API and the pipeline. They do nothing without a DSN and send no PII.
+- `make temporal`: the dev server, with its state under `data/temporal/`.
+- `make worker`.
+- `make smoke`: a smoke workflow whose activity heartbeats and recovers from one injected failure through its retry policy.
+- A test for that workflow using Temporal's test environment, not the live server.
+Reply with the `make smoke` output and the workflow ID, then commit.
+</cross-session-message>
