@@ -1,0 +1,9 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+The 2A.5 follow-ups pass: 0 mis-drops at 158 of 158 correct is the trade I wanted. And thanks for owning the loc.gov block.
+
+Yes, 2B builds the reel-to-batch map. It's local data, and it gives clippings back to about 310,000 candidates. Two conditions:
+1. **Validate it.** Hide the batch on pages that have one, and report how often the map gets it back. Flag any reel that maps to more than one batch, for example a reissued ver01 and ver02.
+2. **Don't run the 25,595 loc.gov lookups now.** At 20 a minute they'd take about a day, and most of those candidates won't be reports. Resolve only the ones that become reports after the reader, through the cached 3.5-second client.
+
+Add both to the 2B notes, then carry on with 2A.6.
+</cross-session-message>
