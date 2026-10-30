@@ -1,0 +1,28 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M66WR4N712BA24XDESN6WYJT",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-lexicon-v2",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "Docs/BUILD-PLAN.md",
+    "Docs/DECISIONS.md",
+    "Docs/RESUME.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": ""
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 4,
+    "cache_creation_tokens": 1649,
+    "cache_read_tokens": 611416,
+    "output_tokens": 1024,
+    "api_call_count": 2
+  }
+}
