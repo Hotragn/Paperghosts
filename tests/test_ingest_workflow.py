@@ -1,4 +1,4 @@
-"""IngestArchiveWorkflow skips a year only while its manifest and every output match, and
+"""IngestArchiveWorkflow skips a year only while its cache key and every output match, and
 retries a year whose stream drops; an attempt that is cancelled or loses its worker stops
 before it writes. It runs in Temporal's test environment, on a one-page year file, with
 threads standing in for the process pool."""
@@ -71,29 +71,48 @@ async def in_test_environment(steps):
         return await steps(env.client)
 
 
-def test_a_year_is_skipped_only_while_its_manifest_and_every_output_match(
+def test_a_year_is_skipped_only_while_its_cache_key_and_every_output_match(
     tmp_path, monkeypatch
 ):
     data = setup(tmp_path, monkeypatch)
     manifest = data / "manifests" / "1850.json"
+    samples = data / "samples" / "1850.jsonl.zst"
+
+    def a_fresh_clone():  # manifests and counts are in git, candidates and samples not
+        (data / "candidates" / "1850.jsonl.zst").unlink()
+
+    def a_damaged_output():  # the same size, so only its hash tells
+        damaged = bytearray(samples.read_bytes())
+        damaged[-1] ^= 1
+        samples.write_bytes(damaged)
+
+    def a_manifest_from(**key):
+        manifest.write_text(json.dumps(json.loads(manifest.read_text()) | key))
+
+    changes = [
+        a_fresh_clone,
+        a_damaged_output,
+        lambda: a_manifest_from(dataset_revision="main"),
+        lambda: a_manifest_from(lexicon_version="v0"),
+        lambda: a_manifest_from(code_version="stale"),
+    ]
 
     async def steps(client):
         runs = [await ingest(client, [1850]), await ingest(client, [1850])]
-        # a fresh clone: manifests and counts are in git, candidates and samples are not
-        (data / "candidates" / "1850.jsonl.zst").unlink()
-        runs.append(await ingest(client, [1850]))
-        (data / "samples" / "1850.jsonl.zst").write_bytes(b"cut short")
-        runs.append(await ingest(client, [1850]))
-        stale = json.loads(manifest.read_text()) | {"code_version": "stale"}
-        manifest.write_text(json.dumps(stale))
-        runs.append(await ingest(client, [1850]))
+        for change in changes:
+            change()
+            runs.append(await ingest(client, [1850]))
         return [run for [run] in runs]
 
-    first, again, cloned, cut, stale = asyncio.run(in_test_environment(steps))
+    first, again, *reruns = asyncio.run(in_test_environment(steps))
 
     assert again == {**first, "skipped": True}  # the stored manifest, and no stream
-    assert [run["skipped"] for run in (first, cloned, cut, stale)] == [False] * 4
-    assert json.loads(manifest.read_text())["code_version"] == year.code_version()
+    assert [run["skipped"] for run in (first, *reruns)] == [False] * 6
+    stored = json.loads(manifest.read_text())
+    assert (stored["dataset_revision"], stored["code_version"]) == (
+        year.REVISION,
+        year.code_version(),
+    )
     counts = json.loads((data / "counts" / "1850.json").read_text())
     assert (counts["pages"], counts["articles"], counts["candidates"]) == (1, 3, 1)
     assert counts["by_state"] == {

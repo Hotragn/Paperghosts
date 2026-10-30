@@ -18,11 +18,14 @@ from temporalio.exceptions import ApplicationError, CancelledError
 
 from paperghosts.ingest import lexicon, prefilter, stream
 from paperghosts.ingest.prefilter import scan, write_jsonl_zst
-from paperghosts.ingest.stream import FARO, pages
+from paperghosts.ingest.stream import FARO, REVISION, pages
 
 DATA = Path(__file__).parents[2] / "data"
 SOURCE = FARO
-LISTING = "https://huggingface.co/api/datasets/dell-research-harvard/AmericanStories/tree/main"
+LISTING = (
+    "https://huggingface.co/api/datasets/dell-research-harvard/AmericanStories"
+    f"/tree/{REVISION}"
+)
 HEARTBEAT_EVERY = 200  # pages
 
 
@@ -32,6 +35,11 @@ def code_version():
     return hashlib.sha256(b"".join(Path(f).read_bytes() for f in files)).hexdigest()[
         :12
     ]
+
+
+def sha256(path):
+    with path.open("rb") as file:
+        return hashlib.file_digest(file, "sha256").hexdigest()
 
 
 def write_json(path, data):
@@ -78,21 +86,26 @@ def available_years() -> list[int]:
 @activity.defn(no_thread_cancel_exception=True)
 def ingest_year(year: int) -> dict:
     """Streams one year file through the prefilter and writes its outputs, or skips a year
-    whose manifest matches the current lexicon and code versions and whose every output is
-    on disk at the size the manifest records."""
+    whose manifest matches the current cache key and whose every output on disk has the
+    sha256 the manifest records."""
     manifest_path = DATA / "manifests" / f"{year}.json"
     outputs = {
         "candidates": DATA / "candidates" / f"{year}.jsonl.zst",
         "samples": DATA / "samples" / f"{year}.jsonl.zst",
         "counts": DATA / "counts" / f"{year}.json",
     }
-    versions = {"lexicon_version": lexicon.VERSION, "code_version": code_version()}
+    # the cache key: the input, and the code that turns it into outputs
+    versions = {
+        "dataset_revision": REVISION,
+        "lexicon_version": lexicon.VERSION,
+        "code_version": code_version(),
+    }
     if manifest_path.exists():
         done = json.loads(manifest_path.read_text())
-        sizes = done.get("output_bytes", {})
+        hashes = done.get("output_sha256", {})
         # manifests and counts are in git but candidates and samples are not
         if all(done.get(key) == value for key, value in versions.items()) and all(
-            path.exists() and path.stat().st_size == sizes.get(name)
+            path.exists() and sha256(path) == hashes.get(name)
             for name, path in outputs.items()
         ):
             return {**done, "skipped": True}
@@ -141,6 +154,7 @@ def ingest_year(year: int) -> dict:
         "articles": result["articles"],
         "candidates": len(result["candidates"]),
         "output_bytes": {name: path.stat().st_size for name, path in outputs.items()},
+        "output_sha256": {name: sha256(path) for name, path in outputs.items()},
         "peak_rss_bytes": peak_rss_bytes(),
     }
     write_json(

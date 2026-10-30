@@ -5,9 +5,11 @@ from urllib.request import urlopen
 
 import orjson
 
+# the dataset's 2025-03-26 commit, not main, so a cached year's input can't change under it
+REVISION = "77e27fa69c4788dfaad1c9efd8a226d5a32d3e9a"
 FARO = (
     "https://huggingface.co/datasets/dell-research-harvard/AmericanStories"
-    "/resolve/main/faro_{year}.tar.gz"
+    f"/resolve/{REVISION}/faro_{{year}}.tar.gz"
 )
 
 
