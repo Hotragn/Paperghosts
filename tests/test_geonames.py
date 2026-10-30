@@ -93,7 +93,7 @@ def test_ties_break_by_the_written_rule(
     [
         (None, "Minnesota", "no town"),
         ("Saint Paul", None, "no state"),
-        ("San Juan", "Puerto Rico", "outside GeoNames' US dump"),
+        ("Hagatna", "Guam", "outside GeoNames' dumps here"),
         ("Not a town", "Minnesota", "no place of that name in Minnesota"),
     ],
 )
@@ -103,3 +103,84 @@ def test_an_unresolved_place_gets_no_point_and_a_reason(gazetteer, town, state, 
     assert found["place_id"] is None and "location" not in found
     assert found["reason"] == reason
     assert found["location_precision"] == "town" and found["location_source"]
+
+
+def test_a_state_name_is_read_whatever_its_case(gazetteer):
+    found = gazetteer.geocode("Washington", "District Of Columbia")
+
+    assert found["place_id"] == 4140963
+
+
+@pytest.fixture
+def territories(tmp_path):
+    """The US dump beside Puerto Rico's, each in GeoNames' format, with a ghost town."""
+    rows = {
+        "US.txt": [
+            (5226000, "Onida", "Onida", "", 44.7, -100.07, "P", "PPLA2", "US", "", "SD", "119", "", "", 650),
+            (5763634, "Clifton (historical)", "Clifton (historical)", "", 44.6, -100.0, "S", "", "US", "", "SD", "119", "", "", 0),
+            (4837799, "Litchfield", "Litchfield", "", 41.747, -73.189, "P", "PPL", "US", "", "CT", "160", "", "", 1215),
+            (4801850, "Charles Town", "Charles Town", "", 39.289, -77.86, "P", "PPLA2", "US", "", "WV", "037", "", "", 5899),
+            (5873776, "Seward", "Seward", "", 60.104, -149.442, "P", "PPL", "US", "", "AK", "122", "", "", 2717),
+        ],
+        "PR.txt": [
+            (4566880, "Ponce", "Ponce", "", 18.011, -66.614, "P", "PPLA", "PR", "", "113", "", "", "", 166000),
+        ],
+    }  # fmt: skip
+    paths = []
+    for name, found in rows.items():
+        path = tmp_path / name
+        path.write_text(
+            "".join(
+                "\t".join(map(str, (*r, "", "", "America/New_York", "2026-10-30")))
+                + "\n"
+                for r in found
+            )
+        )
+        paths.append(path)
+    admin1 = tmp_path / "admin1CodesASCII.txt"
+    admin1.write_text(
+        "US.SD\tSouth Dakota\tSouth Dakota\t1\nUS.CT\tConnecticut\tConnecticut\t1\nUS.WV\tWest Virginia\tWest Virginia\t1\nUS.AK\tAlaska\tAlaska\t1\nPR.113\tPonce\tPonce\t1\n"
+    )
+    admin2 = tmp_path / "admin2Codes.txt"
+    admin2.write_text(
+        "US.SD.119\tSully County\tSully County\t1\nUS.CT.160\tNorthwest Hills Planning Region\tNorthwest Hills Planning Region\t1\nUS.WV.037\tJefferson County\tJefferson County\t1\n"
+        "US.WV.003\tBerkeley County\tBerkeley County\t1\nUS.AK.122\tKenai Peninsula Borough\tKenai Peninsula Borough\t1\n"
+    )
+    return Gazetteer(paths, admin1, admin2, source="geonames dumps of 2026-10-30")
+
+
+def test_puerto_rico_is_its_own_dump_and_its_own_state(territories):
+    found = territories.geocode("Ponce", "Puerto Rico")
+
+    assert found["place_id"] == 4566880 and found["county"] == "Ponce"
+
+
+def test_a_ghost_town_counts_only_in_a_county_its_record_names(territories):
+    found = territories.ghost("Clifton", "South Dakota", ["sully"])
+
+    assert found["place_id"] == 5763634 and found["historical"] is True
+    assert territories.ghost("Clifton", "South Dakota", ["hughes"]) is None
+    assert territories.geocode("Clifton", "South Dakota")["place_id"] is None
+
+
+@pytest.mark.parametrize(
+    ("town", "state", "counties", "recorded_state", "agrees"),
+    [
+        ("Charles Town", "West Virginia", ["jefferson"], "West Virginia", True),
+        ("Charles Town", "West Virginia", ["Jefferson County", "berkeley"], "West Virginia", True),
+        ("Charles Town", "West Virginia", ["berkeley"], "West Virginia", False),
+        # a county the record names in another state isn't the result's
+        ("Charles Town", "West Virginia", ["sully"], "South Dakota", False),
+        # counties GeoNames doesn't have in the record's state can't be checked: Connecticut's,
+        # which it files under planning regions now, and Alaska's, which loc.gov names after towns
+        ("Litchfield", "Connecticut", ["litchfield"], "Connecticut", None),
+        ("Seward", "Alaska", ["seward"], "Alaska", None),
+        ("Charles Town", "West Virginia", [], "West Virginia", None),
+    ],
+)  # fmt: skip
+def test_a_result_is_checked_against_the_counties_a_record_names(
+    territories, town, state, counties, recorded_state, agrees
+):
+    found = territories.geocode(town, state)
+
+    assert territories.same_county(found, counties, recorded_state) is agrees
