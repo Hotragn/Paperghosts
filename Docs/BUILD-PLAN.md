@@ -87,10 +87,10 @@ How the build runs: five phases, each split into milestones, each milestone with
   - Sample per candidate as well as per cluster. Eval A's check drew clusters uniformly, so 11 of its 20 pairs came from clusters of 2 printings, and none of the 157 clusters of 50 or more was checked.
   - Hand-check the largest clusters for chaining, where shared runs join stories that aren't the same.
 - The reel-to-batch map (decision 29):
-  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 310,000 candidates.
+  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31).
   - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
   - Flag every reel that maps to more than one batch, such as a reissued ver01 and ver02.
-- No loc.gov lookups yet for the 25,595 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
+- No loc.gov lookups yet for the 27,817 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
   - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
   - Cache each answer, which `page_service` doesn't do yet, so no page is looked up twice.
 
@@ -105,6 +105,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
+   - And decision 31's two borderline kinds: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay. It confirms or overrules counting a first-person claim of communication with a named dead person, made in a lecture or an interview.
 2. Build the labelling page.
 3. Label the gold set before seeing any model output.
 4. Teacher labels for the training pool, with the leakage check passing.
@@ -112,9 +113,11 @@ How the build runs: five phases, each split into milestones, each milestone with
 6. LoRA training on Tinker, iterating on the dev split until improvements stop. Each iteration is recorded.
 7. Eval B, ablations B1 to B10, and edge-case slices E1 to E14.
    - Eval B also has the reader screen the random reservoirs, for a recall bound that doesn't rest on flag words (decision 30). The Tinker credit check sets how many it reads.
+   - That screen gives lexicon v2's independent recall. Decision 31's 84% is in-sample.
 8. The failure log, and `eval/MODEL_CARD.md`.
 9. The local export and the offline proof.
 10. The full pass over all triaged candidates.
+   - Lexicon v2 makes the reader's job 1,236,122 candidates, 17.7% more than v1's (decision 31). The Tinker credit check weighs that before the pass starts.
 
 **Gate**
 - The gold hash hasn't changed since the freeze, and the leakage check passes.
