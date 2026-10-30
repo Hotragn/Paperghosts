@@ -49,6 +49,7 @@ class IngestArchiveWorkflow:
                     return await workflow.execute_activity(
                         ingest_year,
                         year,
+                        activity_id=f"faro_{year}",  # names the year in the UI and history
                         start_to_close_timeout=timedelta(hours=2),
                         heartbeat_timeout=timedelta(minutes=2),
                         retry_policy=RETRY,
