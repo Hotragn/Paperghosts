@@ -2,7 +2,8 @@
 and its charts and hand-judged samples to eval/results/eval_a/.
 
 1. EDA: by year, by state and by term; candidate lengths; OCR quality, as the share of words
-   /usr/share/dict/words knows; and reprint clusters among the candidates.
+   /usr/share/dict/words knows; reprint clusters among the candidates; and the candidates
+   whose scan has no batch path, which can show a clipping only if loc.gov lists the page.
 2. Composition: 200 candidates at random, each put in a category by hand in
    composition.json. The categories are defined in decision 27.
 3. Recall: 300 articles from the near-miss reservoirs and 300 from the random ones, each
@@ -26,6 +27,7 @@ from charts import draw_all
 
 from paperghosts.cluster.reprints import clusters, keys
 from paperghosts.ingest import lexicon
+from paperghosts.ingest.crops import BATCH_PATH
 from paperghosts.ingest.prefilter import SAMPLE_SIZE
 from paperghosts.ingest.year import code_version
 from paperghosts.stats import wilson
@@ -142,10 +144,13 @@ def year_pass(job):
     """One year's candidates: per-article length, OCR quality for a fixed sample, reprint keys,
     paper and opening; plus the composition picks and recall picks that fall in this year."""
     year, wanted, near, rand = job
-    words, docs, picked = dictionary(), [], []
+    words, docs, picked, no_batch_path = dictionary(), [], [], 0
     with zstandard.open(DATA / "candidates" / f"{year}.jsonl.zst", "rt") as rows:
         for index, row in enumerate(map(json.loads, rows)):
             text = row["text"] or ""
+            no_batch_path += not BATCH_PATH.search(
+                (row.get("scan") or {}).get("raw_data_loc") or ""
+            )
             quality = None
             if zlib.crc32(row["article_id"].encode()) % OCR_ONE_IN == 0:
                 quality = ocr_quality(text, words)
@@ -218,7 +223,7 @@ def year_pass(job):
                         "note": None,
                     }
                 )
-    return year, docs, picked, recalled
+    return year, docs, picked, recalled, no_batch_path
 
 
 def quantiles(values, points=(0.1, 0.25, 0.5, 0.75, 0.9, 0.99)):
@@ -290,10 +295,12 @@ def main():
         if counts[y]["candidates"] or near[y] or rand[y]
     ]
     docs, years_of, picked, recalled = [], [], [], []
+    no_batch_path = Counter()
     with ProcessPoolExecutor(max_workers=6) as pool:
-        for year, found, chosen, reread in pool.map(
+        for year, found, chosen, reread, missing in pool.map(
             year_pass, sorted(jobs, key=lambda job: -counts[job[0]]["articles"])
         ):
+            no_batch_path[year] = missing
             docs += found
             years_of += [year] * len(found)
             picked += chosen
@@ -382,6 +389,8 @@ def main():
         "totals": {
             **total,
             "candidates_per_million": total["candidates"] / total["articles"] * 1e6,
+            "no_batch_path": no_batch_path.total(),
+            "share_no_batch_path": no_batch_path.total() / total["candidates"],
         },
         "by_year": [
             {
@@ -390,6 +399,7 @@ def main():
                 "articles": counts[y]["articles"],
                 "candidates": counts[y]["candidates"],
                 "near_miss": counts[y]["near_miss"],
+                "no_batch_path": no_batch_path[y],
                 "candidates_per_million": counts[y]["candidates"]
                 / counts[y]["articles"]
                 * 1e6
@@ -562,6 +572,7 @@ def headline_numbers(report):
     r = report["reprints"]
     yield f"{t['articles']:,} articles in {t['pages']:,} pages; {t['candidates']:,} candidates ({t['candidates_per_million']:.0f} per million), {t['near_miss']:,} near-miss"
     yield f"no state: {report['no_state']['share_of_candidates']:.1%} of candidates; median length {report['lengths']['p50']} words; median OCR quality {report['ocr_quality']['p50']:.1%}"
+    yield f"no batch path: {t['no_batch_path']:,} candidates ({t['share_no_batch_path']:.1%}), which need loc.gov to name their page's IIIF service"
     yield f"reprints: {r['clusters']:,} clusters hold {r['clustered_candidates']:,} candidates ({r['share_clustered']:.1%}); {r['distinct_stories']:,} distinct stories; {r['cross_paper_clusters']:,} clusters span papers"
 
 

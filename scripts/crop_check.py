@@ -99,7 +99,9 @@ def entry(chosen, known):
         "service": service,
         "batch": batch(service) if service else None,
         "boxes": len(row["bbox_list"]),
-        "display_headline": display_headline(row["headline"], row["paper"]),
+        "display_headline": display_headline(
+            row["headline"], row["paper"], row["date"]
+        ),
         "first_lines": text[:8],
         "crop_urls": urls,
         "crop_files": files,

@@ -123,6 +123,28 @@ def test_requests_to_the_library_of_congress_go_at_most_one_a_second(loc, monkey
     assert waits == [0.0, 0.75] and len(requests) == 2
 
 
+def test_loc_gov_json_requests_go_at_most_twenty_a_minute(loc, monkeypatch):
+    # loc.gov's JSON API allows 20 a minute and blocks for an hour past that, and a probe
+    # at one a second was blocked after about 20; its image services allow 150 a minute
+    requests, responses = loc
+    responses["/item/a/"] = responses["/item/b/"] = httpx.Response(200)
+    clock, waits = [500.0], []
+
+    def sleep(seconds):
+        waits.append(seconds)
+        clock[0] += seconds
+
+    monkeypatch.setattr(crops, "monotonic", lambda: clock[0])
+    monkeypatch.setattr(crops, "sleep", sleep)
+    monkeypatch.setattr(crops, "last_request", 0.0)
+
+    crops.get("https://www.loc.gov/item/a/", fo="json")
+    clock[0] += 0.25
+    crops.get("https://www.loc.gov/item/b/", fo="json")
+
+    assert waits == [0.0, 3.25] and len(requests) == 2
+
+
 @pytest.mark.parametrize(
     "busy",
     [httpx.Response(503), httpx.ConnectError("the connection dropped")],

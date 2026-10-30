@@ -186,3 +186,34 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - The closest calls were a séance announcement promising that spirits "will materialize" and a Kentucky girl who claims to be a witch.
 - No misses means no shared vocabulary to add, so there is no lexicon v2. A re-read would take 118.6 min and 340.4 GB of downloads at four processes (decision 25).
 - Both chart series colors pass the dataviz palette validator, on the light surface and on the dark one.
+
+**28. The display headline drops a date only when it is the issue's own, and a number only beside the paper's title or volume.**
+- This follows the EM's review of the last five mis-drops in decision 26's sample: `IN DETROIT`, `1773.`, `April 4th.`, `NO. XXXVI.` and `4k.SATURDAY`.
+- A dateline goes only when it is the issue's own, from the record's edition date:
+  - Each weekday and month on the line must be the issue's.
+  - The issue's weekday then settles it, because OCR misreads digits far more often than words. The Sun's `SUNDAY. DECEMBER 9.` is its masthead of the 6th.
+  - Without a weekday, the day after a month and the year must be the issue's too, with OCR's I, l and O read as digits. So an advertisement's `April 4th.` in the issue of the 11th stays, as does a story's `1773.`.
+- `In` followed by the paper's own place is never a masthead (`IN DETROIT` titles a column).
+- A number line goes only when the leading lines hold the paper's title or its volume. This covers a bare number, and `No.`, `Number`, `Whole No.` or `Page` with a number, because `NO. XXXVI.` on its own numbers an essay.
+- Rerun on the same 200 judged lines (`scripts/headline_drops.py --same`):
+  - It makes none of the 5 mis-drops.
+  - It keeps 37 of the 195 correct drops:
+    - 22 numbers with neither the title nor the volume beside them (`NO. 40`, `NUMBER 81.`, a bare `2`)
+    - 5 whole numbers
+    - 3 lines of stray marks and digits
+    - 4 datelines with no weekday, whose digits don't match the record's (`DELAWARE, OHIO, AUGUST 4, 1866.` in the issue of 1865)
+    - 3 datelines whose weekday or month isn't the record's
+  - On the 158 lines it still drops, its precision is 158 of 158 (95% interval 97.6–100%).
+- Over every candidate headline, it drops 7,509 lines instead of 10,287, and nothing the old rule kept. So the judged lines it still drops remain a fair sample of its drops.
+- Of the 2,778 lines it no longer drops, split as in the sample (37 correct drops to 5 mis-drops), about 2,450 are masthead lines now left in headlines (0.2% of candidates). About 330 are headline lines no longer hidden.
+
+**29. A third of candidates have no batch path, but most of their reels do. AmericanStories' stray boxes stay.**
+- 335,907 candidates (32.0%) have a scan with no batch path, so the IIIF service for their page has to come from somewhere other than `raw_data_loc`. The count for each year is in `eval_a.json` (`by_year[].no_batch_path`). By decade, the share runs from 15% in the 1820s to 37% in the 1850s. It is between 24% and 37% in every decade from the 1840s on.
+- The fallback (decision 18) asks loc.gov for each page. In the crop check, it named the service for 12 of the 13 picks with no batch path. The 13th was the 1964 Arizona Tribune, which has no loc.gov item.
+- loc.gov's JSON API allows 20 requests a minute and blocks an address for an hour past that ([Working Within Limits](https://www.loc.gov/apis/json-and-yaml/working-within-limits/)). Its image services allow 150 a minute.
+  - A probe of 100 such pages, at one request a second, was answered 429 within its first minute, on 2026-10-30 at 04:03. Its script is deleted.
+  - `crops.get` now spaces loc.gov JSON requests 3.5 s apart. At that rate, a lookup for each of the 283,546 pages would take 11.5 days.
+- These candidates sit on 19,115 reels. 92.4% of them are on a reel whose batch another candidate's batch path names, and the service is built from the batch, LCCN, reel, issue and sequence. That leaves 25,595 candidates on 1,292 reels needing a lookup: about 75 minutes at one lookup per reel.
+  - 220 reels hold more than one batch. For 57 of them that's a batch and its reissue (decision 26). The other 163 are split between batches, so the reel alone doesn't settle which batch a page is in.
+  - A reel-to-batch map isn't built yet. It needs a crop check of its own.
+- **Known limitation, not fixed:** AmericanStories can give an article a box that belongs to the item above it. In the crop check, #21's first box is the last line of the letter above, its address and signature. The crop shows that line and the OCR doesn't.

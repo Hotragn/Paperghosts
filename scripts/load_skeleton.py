@@ -32,7 +32,7 @@ def main():
         "date": page["edition"]["date"],
         "headline": article["headline"],
         "display_headline": display_headline(
-            article["headline"], page["lccn"]["title"]
+            article["headline"], page["lccn"]["title"], page["edition"]["date"]
         ),
         "text": article["article"],
         "bbox_list": article["bbox_list"],

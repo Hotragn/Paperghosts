@@ -26,6 +26,9 @@ USER_AGENT = (
 CLIENT = httpx.Client(timeout=60, follow_redirects=True)
 last_request = 0.0  # monotonic time of the last request to the Library of Congress
 BUSY = {429, 500, 502, 503, 504}
+# seconds between requests: loc.gov's JSON API allows 20 a minute and blocks for an hour past
+# that, and its image services allow 150 a minute
+GAPS = {"www.loc.gov": 3.5}
 
 
 def service_id(raw_data_loc: str) -> str:
@@ -52,12 +55,13 @@ def crop_urls(service: str, boxes: list[dict]) -> list[str]:
 
 
 def get(url, **params):
-    """A GET to the Library of Congress: at most one a second, naming the project, and asked
-    again after a pause while the server is busy. tile.loc.gov can answer a crop it hasn't
-    made yet with a 503."""
+    """A GET to the Library of Congress: at most one a second, or one in 3.5 s to loc.gov's
+    JSON API, naming the project, and asked again after a pause while the server is busy.
+    tile.loc.gov can answer a crop it hasn't made yet with a 503."""
     global last_request
+    gap = GAPS.get(httpx.URL(url).host, 1.0)
     for pause in (5, 20, None):
-        sleep(max(0.0, last_request + 1 - monotonic()))
+        sleep(max(0.0, last_request + gap - monotonic()))
         last_request = monotonic()
         try:
             response = CLIENT.get(
