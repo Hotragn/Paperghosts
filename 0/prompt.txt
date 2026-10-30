@@ -1,0 +1,10 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.2, project skeleton: step 1.1 passed review, and your build order is approved. Now build item 1 only:
+- the layout from `ARCHITECTURE.md` section 5
+- a `uv` project pinned to Python 3.12, with only Phase 1 dependencies
+- a `pnpm` Vite + React + TypeScript shell in `web/`
+- a Makefile whose later-phase targets print which phase builds them
+- a README skeleton
+- `ruff` and `pytest` config, with one real test
+Run `make setup`, `make lint` and `make test`, and include the last 3 lines of each in your reply. Commit, but don't push yet.
+</cross-session-message>
