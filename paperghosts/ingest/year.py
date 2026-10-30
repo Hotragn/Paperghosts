@@ -3,6 +3,7 @@ section 3.1). ingest_year is the Temporal activity; the worker runs each in its 
 
 import hashlib
 import json
+import os
 import re
 import resource
 import sys
@@ -13,7 +14,7 @@ from pathlib import Path
 from urllib.request import urlopen
 
 from temporalio import activity
-from temporalio.exceptions import ApplicationError
+from temporalio.exceptions import ApplicationError, CancelledError
 
 from paperghosts.ingest import lexicon, prefilter, stream
 from paperghosts.ingest.prefilter import scan, write_jsonl_zst
@@ -36,7 +37,7 @@ def code_version():
 def write_json(path, data):
     """Writes to a partial file first, like write_jsonl_zst, and renames it once complete."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    partial = path.with_name(path.name + ".partial")
+    partial = path.with_name(f"{path.name}.{os.getpid()}.partial")
     partial.write_text(json.dumps(data, indent=2) + "\n")
     partial.replace(path)
 
@@ -73,25 +74,43 @@ def available_years() -> list[int]:
     )
 
 
-@activity.defn
+# as in the process pool, a cancel reaches a year only through is_cancelled()
+@activity.defn(no_thread_cancel_exception=True)
 def ingest_year(year: int) -> dict:
     """Streams one year file through the prefilter and writes its outputs, or skips a year
-    whose manifest already matches the current lexicon and code versions."""
+    whose manifest matches the current lexicon and code versions and whose every output is
+    on disk at the size the manifest records."""
     manifest_path = DATA / "manifests" / f"{year}.json"
+    outputs = {
+        "candidates": DATA / "candidates" / f"{year}.jsonl.zst",
+        "samples": DATA / "samples" / f"{year}.jsonl.zst",
+        "counts": DATA / "counts" / f"{year}.json",
+    }
     versions = {"lexicon_version": lexicon.VERSION, "code_version": code_version()}
     if manifest_path.exists():
         done = json.loads(manifest_path.read_text())
-        if all(done.get(key) == value for key, value in versions.items()):
+        sizes = done.get("output_bytes", {})
+        # manifests and counts are in git but candidates and samples are not
+        if all(done.get(key) == value for key, value in versions.items()) and all(
+            path.exists() and path.stat().st_size == sizes.get(name)
+            for name, path in outputs.items()
+        ):
             return {**done, "skipped": True}
 
     url = SOURCE.format(year=year)
     started, clock = datetime.now(UTC), time.perf_counter()
     progress = {"members": 0, "bytes_read": 0}
+    parent = os.getppid()
 
     def report(members, bytes_read):
         progress.update(members=members, bytes_read=bytes_read)
         if members % HEARTBEAT_EVERY == 0:
             activity.heartbeat(progress)
+            # a retry may be running this year already, so a lost attempt writes nothing
+            if os.getppid() != parent:
+                raise CancelledError("the worker that started this attempt is gone")
+            if activity.is_cancelled():
+                raise CancelledError("this attempt was cancelled")
 
     try:
         result = scan(pages(url, report), year)
@@ -102,11 +121,6 @@ def ingest_year(year: int) -> dict:
             ) from exc
         raise
 
-    outputs = {
-        "candidates": DATA / "candidates" / f"{year}.jsonl.zst",
-        "samples": DATA / "samples" / f"{year}.jsonl.zst",
-        "counts": DATA / "counts" / f"{year}.json",
-    }
     write_jsonl_zst(outputs["candidates"], result["candidates"])
     samples = [
         {"sample": name, **item}

@@ -17,7 +17,7 @@ You need `uv`, Node with `pnpm`, the Temporal CLI and Ollama. Keys go in `.env`,
 | `make temporal` | The Temporal dev server, with its state in `data/temporal/` and its UI at http://localhost:8233 |
 | `make worker` | The Temporal worker |
 | `make smoke` | One workflow whose activity heartbeats, fails once on purpose and recovers through its retry policy; needs `make temporal` and `make worker` running |
-| `make ingest YEARS="1850 1910"` | Streams those year files through the prefilter, four at a time, and writes each year's candidates, counts, samples and manifest under `data/`; with no `YEARS`, every year in the dataset. A year that is already done is skipped. Needs `make temporal` and `make worker` running |
+| `make ingest YEARS="1850 1910"` | Streams those year files through the prefilter, four at a time, and writes each year's candidates, counts, samples and manifest under `data/`; with no `YEARS`, every year in the dataset. A year is skipped while its manifest matches the current code and its outputs are all on disk. Needs `make temporal` and `make worker` running |
 | `make api` | The read-only API at http://localhost:8000 |
 | `make web` | The web shell at http://localhost:5173 |
 | `make app` | `make api` and `make web` together |

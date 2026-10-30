@@ -104,3 +104,9 @@ The download runs in its own process and hands chunks to the parser, which count
 - Outputs go to partial files that are renamed once complete, and the manifest is written last. A year is skipped when its manifest's lexicon and code versions match the current ones. The code version is a hash of the modules that shape the outputs, so a docs commit doesn't re-run the archive.
 - A year that fails all five attempts is listed with its reason, and the other years carry on.
 - 1804, 1850 and 1910 took 2.7 s, 50.6 s and 389.4 s, wrote 39 MB in all, and peaked at 536 MB of memory (1910). A second run of 1850 wrote byte-identical counts. The code version hashes exact bytes, so even a reformat re-runs a year: format before an ingest.
+
+**23. A year is skipped only while all its outputs are on disk, and a lost attempt stops at its next heartbeat.**
+- Manifests and counts are in git, but candidates and samples are not, so a fresh clone skipped every year and had no candidates. A year is now skipped only while its versions match and every output is on disk at the size its manifest records.
+- Two attempts at one year can run at once. A timed-out attempt keeps going after Temporal starts its retry, and a spawn-pool child outlives a worker killed with SIGKILL and still writes its files. So partial files are named for their process, and an attempt stops at its next heartbeat (every 200 pages), before it writes anything, once it is cancelled or its parent process has changed.
+- In the tests, a cancel reaches a year only through `is_cancelled()`, as in the process pool. Otherwise the SDK would interrupt the test's thread for it.
+- The code is frozen while the full archive runs. The lexicon, prefilter, stream and year modules make up the code version, and a restarted worker replays the workflow's history against the workflow code.

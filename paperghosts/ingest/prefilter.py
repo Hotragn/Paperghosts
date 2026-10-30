@@ -1,6 +1,7 @@
 """The prefilter's pass over one year: the candidates, their term counts, and fixed-size
 samples of the non-candidates, which measure its recall (ARCHITECTURE section 3.1)."""
 
+import os
 import random
 from collections import Counter, defaultdict
 
@@ -90,7 +91,8 @@ def scan(pages, year, sample_size=SAMPLE_SIZE):
 def write_jsonl_zst(path, records):
     """Writes the records to a partial file first, so a crash never leaves a short one."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    partial = path.with_name(path.name + ".partial")
+    # named for its process: a timed-out attempt may still be writing beside its retry
+    partial = path.with_name(f"{path.name}.{os.getpid()}.partial")
     with zstandard.open(partial, "wb") as out:
         for item in records:
             out.write(orjson.dumps(item) + b"\n")
