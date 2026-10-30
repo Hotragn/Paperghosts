@@ -1,0 +1,10 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 1.6, walking skeleton: step 1.5 passed, with one fix to make first.
+- **Fix:** the 20 "Stratford printings" are 20 different articles that mention Stratford along with a knocking or rapping term, and only 2 of them name Phelps. "Printings" means copies of one story (decision 8). Rename the field to `matching_articles`, add `naming_phelps`, and re-run the script.
+- **Then build item 6:**
+  - Load the Lewistown gazette article from 1850-07-26 into the scratch collection `skeleton`.
+  - Serve it from FastAPI (`make api`) at `/api/health` and `/api/skeleton/{id}`.
+  - Show it in the web shell with its IIIF crop, covering every box in `bbox_list`, beside its text.
+  - Confirm that the crop shows the same text, save a screenshot to `eval/results/phase1/`, and add an API test.
+Reply with the crop URL and what you checked, then commit.
+</cross-session-message>
