@@ -1,0 +1,328 @@
+{
+  "generated_at": "2026-10-30T01:00:36+00:00",
+  "command": "uv run python scripts/phase1_env.py",
+  "code_version": "5192651",
+  "machine": {
+    "chip": "Apple M4",
+    "cores": 10,
+    "ram_gib": 24.0,
+    "disk_free_gib": 35.2,
+    "os": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "faro_1850": {
+    "url": "https://huggingface.co/datasets/dell-research-harvard/AmericanStories/resolve/main/faro_1850.tar.gz",
+    "compressed_bytes": 989144629,
+    "download_seconds": 13.6,
+    "download_mb_per_s": 73.0,
+    "pages": 24664,
+    "articles": 733880,
+    "parse_cpu_seconds": 10.6,
+    "pages_per_s_one_core": 2323,
+    "articles_per_s_one_core": 69109,
+    "compressed_mb_per_s_one_core": 93.1,
+    "cores_to_keep_up_with_download": 0.8,
+    "stratford_knockings": {
+      "printings_found": 20,
+      "saved_to": "data/skeleton/stratford_1850.json",
+      "first": {
+        "paper": "Lewistown gazette. [volume] (Lewistown, Pa.) 1843-1944",
+        "date": "1850-07-26",
+        "article_id": "9_1850-07-26_p1_sn83032276_00296028587_1850072601_0265.json"
+      }
+    }
+  },
+  "ollama": {
+    "model": "gemma4:26b-a4b-it-qat",
+    "load_seconds": 30.6,
+    "prompt_tokens": 28,
+    "prompt_tokens_per_s": 71,
+    "generated_tokens": 128,
+    "generated_tokens_per_s": 13.3
+  },
+  "atlas": {
+    "version": "8.0.34",
+    "tier": {
+      "value": null,
+      "reason": "the driver can't read the tier, and the Atlas Admin API needs an Atlas API key, which .env doesn't have"
+    },
+    "storage_limit": {
+      "value": null,
+      "reason": "the driver can't read the tier, and the Atlas Admin API needs an Atlas API key, which .env doesn't have"
+    },
+    "storage_used_bytes": 239243264,
+    "storage_used_bytes_by_database": {
+      "cubby": 57344,
+      "sample_mflix": 239185920,
+      "admin": 0,
+      "local": 0
+    },
+    "indexes": {
+      "search": {
+        "created": true,
+        "seconds_to_queryable": 33.9,
+        "dropped": true
+      },
+      "vector_search": {
+        "created": true,
+        "seconds_to_queryable": 33.9,
+        "dropped": true
+      }
+    }
+  },
+  "serpapi": {
+    "searches_left": 210,
+    "source": "the account endpoint, which uses no searches"
+  },
+  "ultramarine": {
+    "model": "ultramarine-1-flash",
+    "usage": {
+      "prompt_tokens": 19,
+      "completion_tokens": 8,
+      "total_tokens": 27,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8
+      }
+    },
+    "cost": {
+      "value": null,
+      "reason": "no cost in the body or the headers"
+    },
+    "latency_seconds": 2.31
+  },
+  "tinker": {
+    "base_models": [
+      {
+        "name": "Qwen/Qwen3-8B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 32768
+      },
+      {
+        "name": "Qwen/Qwen3.5-35B-A3B-Base",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.5-397B-A17B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.5-397B-A17B:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "Qwen/Qwen3.5-4B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.5-4B:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "Qwen/Qwen3.5-9B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.5-9B-Base",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.6-35B-A3B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "Qwen/Qwen3.8-27B",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "Qwen/Qwen3.8-27B:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "moonshotai/Kimi-K2.6",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 32768
+      },
+      {
+        "name": "moonshotai/Kimi-K2.6:peft:131072",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 131072
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "openai/gpt-oss-120b",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 32768
+      },
+      {
+        "name": "openai/gpt-oss-120b:peft:131072",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 131072
+      },
+      {
+        "name": "openai/gpt-oss-20b",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 32768
+      },
+      {
+        "name": "thinkingmachines/Inkling",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "thinkingmachines/Inkling-Small",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 65536
+      },
+      {
+        "name": "thinkingmachines/Inkling-Small:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+        "trainable": false,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "thinkingmachines/Inkling:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+        "trainable": false,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "zai-org/GLM-5.3-Flash:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      },
+      {
+        "name": "zai-org/GLM-5.3:peft:262144",
+        "trainable": true,
+        "sampleable": true,
+        "max_context_length": 262144
+      }
+    ],
+    "credits": {
+      "value": null,
+      "reason": "the API reports usage and estimated gross cost, not the remaining balance"
+    },
+    "lora_weights_download": {
+      "documented": true,
+      "how": "save_weights_external, then RestClient.get_external_weights_urls gives a signed URL per file (tinker SDK 0.36.0)",
+      "verified": false,
+      "verify_in": "Phase 2C, after the first training run"
+    }
+  },
+  "sentry": {
+    "event_id": "f770a068014b498c81d9114009ae3da9",
+    "read_back_from_project": "paperghosts-api",
+    "seconds_to_read_back": 14.0,
+    "web_dsn": {
+      "value": null,
+      "reason": "proven in Phase 4, when the React SDK sends the site's first event"
+    }
+  }
+}

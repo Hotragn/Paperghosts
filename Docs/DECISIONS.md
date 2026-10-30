@@ -74,3 +74,6 @@ The model is already on this machine (15 GB), it's open-weight, and it keeps the
 
 **16. The smoke activity resumes after its last heartbeat.**
 Its first attempt fails on purpose halfway through, and the retry carries on after the failed attempt's last heartbeat. That shows heartbeats reach the server, not only that the activity sends them. The test runs in Temporal's test environment on the installed CLI, so nothing is downloaded locally.
+
+**17. The environment facts measure the download and the parse in one pass, in two processes.**
+The download runs in its own process and hands chunks to the parser, which counts only its own CPU time. In one process, the CPU-bound parser would hold the GIL and slow the very socket reads it is measured against. A fact the script can't measure is `null` with its reason, never a guess.
