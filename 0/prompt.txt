@@ -1,0 +1,21 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Phase 2B.1: models, db-init and the storage budget. Persona: data architect. PR #3 passed my review: I re-ran `lexicon_v2.py`, and it matched byte for byte apart from `generated_at`. All 540 hashes check, and I agree with the 14 reports and the negatives I sampled. It's merged at 718de62. Branch `phase-2b-data-layer` from main.
+
+0. Record my call in decision 31 and the STATUS block: **keep all five v2 rules.** Each of spiritualism, seance, spirit_phrase and spirit+medium catches reports no other rule does. ouija's 0 of 6 rules nothing out (0–39%), and it costs 0.4% of the reader's job, so 2C's term strata measure it.
+1. Read my Atlas notes at `/Users/hotragn/Documents/Claude Code/HacktoberFest/week4/.claude/worktrees/paperghosts-week4-kickoff-b83282/handoff/ATLAS-PLAN.md`. Take its verified M0 limits, with their source and date, and its nine rules into decision 32, and update ARCHITECTURE.md section 4 to match: BinData vectors, crop URLs derived and not stored, no indexes on category fields, a partial index on `case_id`, and static Search mappings. Build to them.
+2. Pydantic models for `reports`, `places`, `cases` and `stats` (section 4), with `$jsonSchema` validators generated from them. Tests: a valid and an invalid document per collection, and checks that the validator rejects what the model rejects on required fields, enums and GeoJSON.
+3. A BinData check on M0, before any real Search index exists:
+   - In a scratch collection, use float32 and int8 BinData vectors at the planned dimension, build a vector index, query it, and match its nearest neighbours against numpy.
+   - Then remove that scratch collection and its index, so the planned three fit the cap.
+4. `make db-init` on database `paperghosts`: collections, validators, the section 4 indexes, and the three Search indexes as static mappings in code. Run it twice, and show that the second run changes nothing. Never touch `sample_mflix` or any other database.
+5. The budget from real sizes:
+   - Build full `reports` documents for a seeded 1,000 of v2's candidates. Use real text and printings from their clusters, the embedding as BinData, and the reader's fields at realistic sizes.
+   - Measure their BSON bytes, and Atlas's own data and index sizes on a loaded probe. Remove every probe document and collection you created.
+   - Write `Docs/BUDGET.md`:
+     - the free space, with and without `sample_mflix`
+     - the bytes per report, with each rule-6 lever on and off
+     - how many reports fit with full text, at the top of decisions 30–31's intervals: about 95,000 printings, as stories by v1's printings-to-stories ratio, and in the worst case of one story per printing
+   - If they don't fit, list the options for the owner. Don't cut the text or the search to fit.
+
+Gate: tests and lint pass; db-init runs twice cleanly; the BinData neighbours match numpy; BUDGET.md holds measured numbers. Keys stay in `.env`: never printed, logged or committed. Then report back, before 2B.2 (geocoder and LCCN parser).
+</cross-session-message>
