@@ -1,0 +1,38 @@
+{
+ "source": "GeoNames",
+ "licence": "CC BY 4.0",
+ "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+ "attribution": "Place data from GeoNames (geonames.org), licensed under CC BY 4.0",
+ "retrieved": "2026-10-30T18:45:30+00:00",
+ "files": [
+  {
+   "url": "https://download.geonames.org/export/dump/US.zip",
+   "file": "US.zip",
+   "bytes": 71108509,
+   "sha256": "09ab4d4450a483a3e1a22e15e0fc15bb3bf1ed9ad82c3ee9066bf38064df97d9",
+   "last_modified": "Fri, 30 Oct 2026 02:54:46 GMT"
+  },
+  {
+   "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+   "file": "admin1CodesASCII.txt",
+   "bytes": 151571,
+   "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+   "last_modified": "Fri, 30 Oct 2026 02:55:00 GMT"
+  },
+  {
+   "url": "https://download.geonames.org/export/dump/admin2Codes.txt",
+   "file": "admin2Codes.txt",
+   "bytes": 2371888,
+   "sha256": "e0cd374c39ea78dfd878edfbdcd339f7bdd4016f0147c90fc6a5e45eb7f10279",
+   "last_modified": "Fri, 30 Oct 2026 02:55:00 GMT"
+  }
+ ],
+ "extracted": [
+  {
+   "file": "US.txt",
+   "from": "US.zip",
+   "bytes": 307241657,
+   "sha256": "887cdcd890fc59b55a0f61e949e7302b64ce75ac6bf64eb153ba32eaa74c8a1b"
+  }
+ ]
+}
