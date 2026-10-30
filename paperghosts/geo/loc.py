@@ -58,11 +58,12 @@ def recorded(record: dict) -> dict | None:
         return None
     where = (item.get("location_str") or "").split(";")[0].strip()
     place, _, state = where.rpartition(", ")
-    county = (item.get("location_county") or [None])[0]
+    counties = [c.title() for c in item.get("location_county") or []]
     return {
         "place": place or None,
         "state": state or None,
-        "county": county.title() if county else None,
+        "county": counties[0] if counties else None,
+        "counties": counties,
         "title": item.get("title"),
         "years": item.get("dates_of_publication"),
     }

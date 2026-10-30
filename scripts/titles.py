@@ -5,6 +5,8 @@ candidates:
   once and cached (`paperghosts.geo.loc`)
 - its state today, as most of its candidates' records give it, and the two shown together as
   "Charlestown, Va. (now W.Va.)"
+- its place as catalogued today, from any title record already cached, and the town's name
+  shown where that differs: "Bloomington, Iowa (now Muscatine)"
 
 Writes data/titles/titles.json. Writes eval/results/phase2b/titles.json with the counts: where
 the places came from, and loc.gov's requests and cache hits."""
@@ -62,26 +64,42 @@ def entry(lccn, papers, states):
     found = found | {
         "source": "title string" if any(found[k] for k in PLACE) else "none"
     }
-    if found["source"] == "none":
+    # a record is asked for only where no string names a place, and used wherever it's cached
+    given = None
+    if found["source"] == "none" or (loc.CACHE / f"{lccn}.json").exists():
         record = loc.title_record(lccn)
         given = loc.recorded(record)
-        if given:
-            found |= {
-                "source": "loc.gov title record",
-                "supplied_place": given["place"],
-                "supplied_state": given["state"],
-                "county": found["county"] or given["county"],
-                "record_url": record["url"],
-                "retrieved": record["retrieved"],
-            }
-            if not found["title"] and given["title"]:
-                found["title"] = parse_title(given["title"])["title"]
-            if not found["years"] and given["years"]:
-                found["years"] = given["years"]
-            modern = modern or state_name(given["state"])
-    found |= {"modern_state": modern, "then_and_now": then_and_now(found, modern)}
+    if given:
+        found |= {
+            "catalogued_place": given["place"],
+            "catalogued_county": given["county"],
+            "catalogued_state": given["state"],
+            "record_url": record["url"],
+            "retrieved": record["retrieved"],
+        }
+    if given and found["source"] == "none":
+        found |= {
+            "source": "loc.gov title record",
+            "supplied_place": given["place"],
+            "supplied_state": given["state"],
+            "county": found["county"] or given["county"],
+        }
+        if not found["title"] and given["title"]:
+            found["title"] = parse_title(given["title"])["title"]
+        if not found["years"] and given["years"]:
+            found["years"] = given["years"]
+        modern = modern or state_name(given["state"])
+    catalogued = given and given["place"]
+    found |= {
+        "modern_state": modern,
+        "then_and_now": then_and_now(found, modern, catalogued),
+    }
     title = Title.model_validate({"_id": lccn, **found})
     return title.model_dump(by_alias=True, exclude_none=True)
+
+
+def shown(title, modern=None, catalogued=None):
+    return then_and_now({k: title.get(k) for k in PLACE}, modern, catalogued)
 
 
 def main():
@@ -114,8 +132,13 @@ def main():
         "places_from": dict(sources),
         "candidates_by_source": dict(candidates),
         "printed_state_differs_from_modern": sum(
-            "(now " in (t.get("then_and_now") or "") for t in titles.values()
+            shown(t) != shown(t, t.get("modern_state")) for t in titles.values()
         ),
+        "town_catalogued_under_another_name": sum(
+            shown(t) != shown(t, None, t.get("catalogued_place"))
+            for t in titles.values()
+        ),
+        "records_used": sum("catalogued_place" in t for t in titles.values()),
         "no_modern_state": sum("modern_state" not in t for t in titles.values()),
         "loc_gov": {
             "requests": loc.COUNTS["requests"],

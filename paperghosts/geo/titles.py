@@ -16,6 +16,8 @@ import html
 import re
 import unicodedata
 
+from paperghosts.geo.geonames import flat, name_key
+
 YEARS = re.compile(r"\s*\b(?P<first>[\d?]{4})-(?P<last>[\d?]{4}|current)\s*$")
 MARKER = re.compile(r"\s*\[(?:volume|microfilm reel)\]\s*$")
 BRACKET = re.compile(r"\[([^\]]*)\]")
@@ -239,14 +241,18 @@ def parse_title(paper):
     }
 
 
-def then_and_now(title, modern):
-    """The place as printed, and its modern state where that differs: "Charlestown, Va. (now
-    W.Va.)". None for a title that names no place."""
+def then_and_now(title, modern, catalogued=None):
+    """The place as printed, and what has changed since: the town's name, where its title
+    record catalogues it under another today, and its modern state where that differs.
+    "Bloomington, Iowa (now Muscatine)", "Charlestown, Va. (now W.Va.)". None for a title that
+    names no place."""
     place = title["place"] or title["supplied_place"]
     state = title["state"] or title["supplied_state"]
     if place is None or state is None:
         return None
-    shown = f"{place}, {state}"
+    now = []
+    if catalogued and flat(name_key(catalogued)) != flat(name_key(place)):
+        now.append(catalogued)
     if modern and state_name(state) != modern:
-        shown += f" (now {ABBREVIATIONS[modern]})"
-    return shown
+        now.append(ABBREVIATIONS[modern])
+    return f"{place}, {state}" + (f" (now {', '.join(now)})" if now else "")

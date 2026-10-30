@@ -362,8 +362,14 @@ class Title(Model):
     state: str | None = None
     supplied_place: str | None = None
     supplied_state: str | None = None
+    # the place as its loc.gov title record catalogues it today, where a record was asked for
+    catalogued_place: str | None = None
+    catalogued_county: str | None = None
+    catalogued_state: str | None = None
     modern_state: str | None = None
-    then_and_now: str | None = None  # "Charlestown, Va. (now W.Va.)"
+    then_and_now: str | None = (
+        None  # "Charlestown, Va. (now W.Va.)", "Bloomington, Iowa (now Muscatine)"
+    )
     years: str | None = None
     # a title's run can outlast the archive's years: the Alexandria gazette's is 1834-1974
     first_year: Annotated[int, Field(ge=1690, le=2100)] | None = None

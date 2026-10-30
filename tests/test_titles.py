@@ -140,6 +140,28 @@ def test_then_and_now_says_when_a_place_has_changed_state():
     assert then_and_now(parse_title("The New York herald."), "New York") is None
 
 
+@pytest.mark.parametrize(
+    ("paper", "modern", "catalogued", "shown"),
+    [
+        # the record's city, as catalogued today, where the town has a new name
+        ("Muscatine journal. [volume] (Bloomington, Iowa) 1849-185?", "Iowa", "Muscatine",
+         "Bloomington, Iowa (now Muscatine)"),
+        ("East Saginaw courier. (East Saginaw, Mich.) 1859-18??", "Michigan", "Saginaw",
+         "East Saginaw, Mich. (now Saginaw)"),
+        ("Boise news. (Bannock City, I.T. [Idaho City, Idaho]) 1863-1864", "Idaho", "Idaho City",
+         "Bannock City, I.T. (now Idaho City, Idaho)"),
+        # the same town, spelled apart, isn't a new name
+        ("Virginia free press. (Charlestown, Va. [W. Va.]) 1832-1916", "West Virginia", "Charles Town",
+         "Charlestown, Va. (now W.Va.)"),
+        ("Backbone. [volume] (St. Paul, Minn. ;) 1897-1906", "Minnesota", "Saint Paul", "St. Paul, Minn."),
+    ],
+)  # fmt: skip
+def test_then_and_now_gives_the_records_name_for_a_town_renamed(
+    paper, modern, catalogued, shown
+):
+    assert then_and_now(parse_title(paper), modern, catalogued) == shown
+
+
 def test_two_hundred_titles_checked_by_hand():
     cases = json.loads(FIXTURE.read_text())
 
