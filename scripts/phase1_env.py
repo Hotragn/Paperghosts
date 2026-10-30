@@ -109,7 +109,7 @@ class Chunks(io.RawIOBase):
 
 
 def read_pages(stream):
-    """Counts pages and articles in a faro tarball, and keeps every printing that mentions
+    """Counts pages and articles in a faro tarball, and keeps every article that mentions
     Stratford and knocking, the ones naming Phelps first."""
     pages = articles = 0
     matches = []
@@ -171,7 +171,9 @@ def faro_1850():
         "compressed_mb_per_s_one_core": round(parse_rate, 1),
         "cores_to_keep_up_with_download": round(download_rate / parse_rate, 1),
         "stratford_knockings": {
-            "printings_found": len(matches),
+            # different articles, not copies of one story (decision 8)
+            "matching_articles": len(matches),
+            "naming_phelps": sum("Phelps" in m["article"]["article"] for m in matches),
             "saved_to": str(SKELETON.relative_to(ROOT)),
             "first": {
                 "paper": first["page"]["lccn"]["title"],
