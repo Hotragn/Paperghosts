@@ -3,7 +3,20 @@ sorts knocking-and-spirits articles without a ghost term into the near-miss pool
 
 import pytest
 
-from paperghosts.ingest.lexicon import ghost_terms, near_miss_terms
+from paperghosts.ingest.lexicon import (
+    GHOST,
+    GHOST_STEMS,
+    NEAR_MISS,
+    NEAR_MISS_STEMS,
+    ghost_terms,
+    near_miss_terms,
+)
+
+
+def test_every_term_has_precheck_stems():
+    # a term with no stems would be skipped by the pre-check and lose its recall silently
+    assert GHOST_STEMS.keys() == GHOST.keys()
+    assert NEAR_MISS_STEMS.keys() == NEAR_MISS.keys()
 
 
 @pytest.mark.parametrize(

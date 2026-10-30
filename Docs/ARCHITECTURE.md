@@ -83,7 +83,7 @@ Temporal runs only on the owner's machine, through the CLI dev server. The live 
 - **Output per year, under `data/`:**
   - `candidates/{year}.jsonl.zst`: articles that hit the lexicon, with the matched terms, page metadata and scan location
   - `counts/{year}.json`: pages, articles and candidates, broken down by state and by term
-  - `samples/{year}.jsonl.zst`: a reservoir sample of non-candidates, plus a near-miss pool (articles with words like "knocking", "strange noises" or "spirits" but no ghost term). Both feed the recall measurement.
+  - `samples/{year}.jsonl.zst`: seeded reservoir samples of 2,000 non-candidates and 2,000 articles from the near-miss pool (articles with words like "knocking", "strange noises" or "spirits" but no ghost term). Both feed the recall measurement.
   - `manifests/{year}.json`: source URL, bytes read, lexicon version, code version, start and finish times
 - **One activity per year file:** stream, gunzip, and read tar members one at a time. The tarball never touches the disk.
   - Heartbeats carry progress (members done, bytes read).

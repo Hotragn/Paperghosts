@@ -49,21 +49,58 @@ def _matcher(terms):
 
 GHOST_MATCHER, NEAR_MISS_MATCHER = _matcher(GHOST), _matcher(NEAR_MISS)
 
+# The pre-check folds most OCR confusion classes above to one letter (q→g, b→h, c 0→o,
+# f→s, i 1 t→l, u→n). Every match of a term then contains one of its stems, so an article
+# with none of them can skip the regex. Stems are long enough to pass over the commonest
+# lookalikes in 1850: "throughout" (gho), "sarsaparilla" (aparll) and "annual" (nnnal).
+FOLD = str.maketrans("qbc0fi1tu", "ghoosllln")
+GHOST_STEMS = {
+    "ghost": ("ghos", "gllos"),
+    "apparition": ("parlllo",),
+    "spectre": ("speolr", "speoler", "speolor", "spoolr", "spooler", "spoolor"),
+    "phantom": ("phanl", "sanlo", "sanlas"),
+    "haunt": ("hannl", "haonl"),
+    "spook": ("spook",),
+    "wraith": ("wrall",),
+    "poltergeist": ("pollerg",),
+    "banshee": ("hansh",),
+    "goblin": ("gohll",),
+    "knocking": ("knook", "knoek"),
+    "rapping": ("rapp",),
+}
+NEAR_MISS_STEMS = {
+    "knock": ("knook",),
+    "rap": ("rapp",),
+    "noise": ("slrang", "mysler", "nnaooo", "nnearl", "nnnalnr"),
+    "spirit": ("splrl",),
+    "spiritualism": ("splrl",),
+    "seance": ("seano", "séano"),
+    "supernatural": ("snpern",),
+}
 
-def _find(matcher, text):
+
+_GHOST_STEMS = tuple(stem for group in GHOST_STEMS.values() for stem in group)
+_NEAR_MISS_STEMS = tuple(stem for group in NEAR_MISS_STEMS.values() for stem in group)
+
+
+def _find(matcher, stems, text, precheck):
+    text = text.replace("-\n", "")  # rejoin words hyphenated at a line end
+    if precheck:
+        folded = text.lower().translate(FOLD)
+        if not any(stem in folded for stem in stems):
+            return {}
     found = {}
-    # rejoin words hyphenated at a line end before matching
-    for match in matcher.finditer(text.replace("-\n", "")):
+    for match in matcher.finditer(text):
         form = " ".join(match.group().lower().split())
         found.setdefault(match.lastgroup, set()).add(form)
     return {term: sorted(forms) for term, forms in found.items()}
 
 
-def ghost_terms(text):
+def ghost_terms(text, precheck=True):
     """Each ghost term in the text, with the spellings it was scanned as."""
-    return _find(GHOST_MATCHER, text)
+    return _find(GHOST_MATCHER, _GHOST_STEMS, text, precheck)
 
 
-def near_miss_terms(text):
+def near_miss_terms(text, precheck=True):
     """Each near-miss term in the text, with the spellings it was scanned as."""
-    return _find(NEAR_MISS_MATCHER, text)
+    return _find(NEAR_MISS_MATCHER, _NEAR_MISS_STEMS, text, precheck)
