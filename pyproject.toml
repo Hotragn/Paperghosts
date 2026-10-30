@@ -28,6 +28,7 @@ extend-select = ["I", "B", "UP"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = [".", "scripts"]
+markers = ["atlas: asks MongoDB Atlas, so it is skipped without MONGODB_URI, as in CI"]
 
 [dependency-groups]
 dev = [
