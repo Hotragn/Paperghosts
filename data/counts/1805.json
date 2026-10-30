@@ -1,24 +1,26 @@
 {
   "year": 1805,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 2173,
   "articles": 32153,
-  "candidates": 56,
-  "near_miss": 878,
+  "candidates": 64,
+  "near_miss": 870,
   "by_term": {
     "apparition": 1,
     "ghost": 8,
     "goblin": 5,
     "haunt": 21,
     "phantom": 20,
-    "spectre": 5
+    "spectre": 5,
+    "spirit+medium": 8
   },
   "only_by_term": {
     "ghost": 8,
     "goblin": 5,
     "haunt": 18,
     "phantom": 17,
-    "spectre": 4
+    "spectre": 4,
+    "spirit+medium": 8
   },
   "by_state": {
     "Maine": {
@@ -34,7 +36,7 @@
     "Virginia": {
       "pages": 1694,
       "articles": 25842,
-      "candidates": 40
+      "candidates": 48
     },
     "West Virginia": {
       "pages": 201,

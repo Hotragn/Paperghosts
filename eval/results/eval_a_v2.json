@@ -1,0 +1,2313 @@
+{
+ "generated_at": "2026-10-30T16:51:53+00:00",
+ "lexicon_version": "v2",
+ "code_version": "2d6ff0faaf81",
+ "totals": {
+  "pages": 16887460,
+  "articles": 370313913,
+  "candidates": 1236122,
+  "near_miss": 6695792,
+  "non_candidates": 369077791,
+  "candidates_per_million": 3338.0382335243235,
+  "no_batch_path": 395068,
+  "share_no_batch_path": 0.31960275765660673
+ },
+ "by_year": [
+  {
+   "year": 1770,
+   "pages": 58,
+   "articles": 191,
+   "candidates": 1,
+   "near_miss": 4,
+   "no_batch_path": 0,
+   "candidates_per_million": 5235.602094240838
+  },
+  {
+   "year": 1771,
+   "pages": 106,
+   "articles": 749,
+   "candidates": 3,
+   "near_miss": 28,
+   "no_batch_path": 1,
+   "candidates_per_million": 4005.340453938585
+  },
+  {
+   "year": 1772,
+   "pages": 188,
+   "articles": 1780,
+   "candidates": 3,
+   "near_miss": 95,
+   "no_batch_path": 1,
+   "candidates_per_million": 1685.3932584269664
+  },
+  {
+   "year": 1773,
+   "pages": 160,
+   "articles": 1475,
+   "candidates": 5,
+   "near_miss": 45,
+   "no_batch_path": 1,
+   "candidates_per_million": 3389.830508474576
+  },
+  {
+   "year": 1774,
+   "pages": 176,
+   "articles": 1721,
+   "candidates": 0,
+   "near_miss": 62,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1777,
+   "pages": 144,
+   "articles": 933,
+   "candidates": 0,
+   "near_miss": 26,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1778,
+   "pages": 108,
+   "articles": 730,
+   "candidates": 0,
+   "near_miss": 12,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1779,
+   "pages": 64,
+   "articles": 429,
+   "candidates": 0,
+   "near_miss": 11,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1791,
+   "pages": 16,
+   "articles": 117,
+   "candidates": 0,
+   "near_miss": 2,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1792,
+   "pages": 14,
+   "articles": 139,
+   "candidates": 0,
+   "near_miss": 2,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1793,
+   "pages": 8,
+   "articles": 56,
+   "candidates": 0,
+   "near_miss": 1,
+   "no_batch_path": 0,
+   "candidates_per_million": 0.0
+  },
+  {
+   "year": 1796,
+   "pages": 68,
+   "articles": 497,
+   "candidates": 2,
+   "near_miss": 4,
+   "no_batch_path": 0,
+   "candidates_per_million": 4024.144869215292
+  },
+  {
+   "year": 1797,
+   "pages": 73,
+   "articles": 871,
+   "candidates": 1,
+   "near_miss": 8,
+   "no_batch_path": 0,
+   "candidates_per_million": 1148.105625717566
+  },
+  {
+   "year": 1798,
+   "pages": 208,
+   "articles": 2067,
+   "candidates": 12,
+   "near_miss": 87,
+   "no_batch_path": 5,
+   "candidates_per_million": 5805.515239477503
+  },
+  {
+   "year": 1799,
+   "pages": 201,
+   "articles": 2700,
+   "candidates": 9,
+   "near_miss": 65,
+   "no_batch_path": 3,
+   "candidates_per_million": 3333.3333333333335
+  },
+  {
+   "year": 1800,
+   "pages": 348,
+   "articles": 4370,
+   "candidates": 10,
+   "near_miss": 78,
+   "no_batch_path": 4,
+   "candidates_per_million": 2288.329519450801
+  },
+  {
+   "year": 1801,
+   "pages": 846,
+   "articles": 9243,
+   "candidates": 35,
+   "near_miss": 248,
+   "no_batch_path": 7,
+   "candidates_per_million": 3786.649356269609
+  },
+  {
+   "year": 1802,
+   "pages": 1444,
+   "articles": 16859,
+   "candidates": 38,
+   "near_miss": 416,
+   "no_batch_path": 6,
+   "candidates_per_million": 2253.98896731716
+  },
+  {
+   "year": 1803,
+   "pages": 1749,
+   "articles": 21075,
+   "candidates": 46,
+   "near_miss": 506,
+   "no_batch_path": 7,
+   "candidates_per_million": 2182.6809015421118
+  },
+  {
+   "year": 1804,
+   "pages": 1855,
+   "articles": 26766,
+   "candidates": 83,
+   "near_miss": 804,
+   "no_batch_path": 8,
+   "candidates_per_million": 3100.948965104984
+  },
+  {
+   "year": 1805,
+   "pages": 2173,
+   "articles": 32153,
+   "candidates": 64,
+   "near_miss": 870,
+   "no_batch_path": 1,
+   "candidates_per_million": 1990.4830031412312
+  },
+  {
+   "year": 1806,
+   "pages": 2193,
+   "articles": 35618,
+   "candidates": 66,
+   "near_miss": 972,
+   "no_batch_path": 4,
+   "candidates_per_million": 1852.9956763434218
+  },
+  {
+   "year": 1807,
+   "pages": 2524,
+   "articles": 37892,
+   "candidates": 61,
+   "near_miss": 1103,
+   "no_batch_path": 3,
+   "candidates_per_million": 1609.8384883352687
+  },
+  {
+   "year": 1808,
+   "pages": 2543,
+   "articles": 36886,
+   "candidates": 90,
+   "near_miss": 1759,
+   "no_batch_path": 6,
+   "candidates_per_million": 2439.9501165753945
+  },
+  {
+   "year": 1809,
+   "pages": 2467,
+   "articles": 38144,
+   "candidates": 148,
+   "near_miss": 1548,
+   "no_batch_path": 22,
+   "candidates_per_million": 3880.0335570469797
+  },
+  {
+   "year": 1810,
+   "pages": 2543,
+   "articles": 40896,
+   "candidates": 126,
+   "near_miss": 1705,
+   "no_batch_path": 15,
+   "candidates_per_million": 3080.9859154929577
+  },
+  {
+   "year": 1811,
+   "pages": 2579,
+   "articles": 42063,
+   "candidates": 87,
+   "near_miss": 1641,
+   "no_batch_path": 2,
+   "candidates_per_million": 2068.3260823051137
+  },
+  {
+   "year": 1812,
+   "pages": 2477,
+   "articles": 41927,
+   "candidates": 81,
+   "near_miss": 2016,
+   "no_batch_path": 7,
+   "candidates_per_million": 1931.9293056979989
+  },
+  {
+   "year": 1813,
+   "pages": 2552,
+   "articles": 43944,
+   "candidates": 95,
+   "near_miss": 1613,
+   "no_batch_path": 4,
+   "candidates_per_million": 2161.842344802476
+  },
+  {
+   "year": 1814,
+   "pages": 1842,
+   "articles": 35372,
+   "candidates": 59,
+   "near_miss": 1273,
+   "no_batch_path": 5,
+   "candidates_per_million": 1667.9859776094086
+  },
+  {
+   "year": 1815,
+   "pages": 2187,
+   "articles": 40196,
+   "candidates": 77,
+   "near_miss": 1194,
+   "no_batch_path": 3,
+   "candidates_per_million": 1915.6134938799883
+  },
+  {
+   "year": 1816,
+   "pages": 2514,
+   "articles": 52956,
+   "candidates": 106,
+   "near_miss": 1293,
+   "no_batch_path": 7,
+   "candidates_per_million": 2001.6617569302816
+  },
+  {
+   "year": 1817,
+   "pages": 1805,
+   "articles": 40032,
+   "candidates": 81,
+   "near_miss": 1058,
+   "no_batch_path": 6,
+   "candidates_per_million": 2023.3812949640287
+  },
+  {
+   "year": 1818,
+   "pages": 2245,
+   "articles": 52306,
+   "candidates": 111,
+   "near_miss": 1523,
+   "no_batch_path": 7,
+   "candidates_per_million": 2122.12748059496
+  },
+  {
+   "year": 1819,
+   "pages": 2333,
+   "articles": 52030,
+   "candidates": 134,
+   "near_miss": 1678,
+   "no_batch_path": 25,
+   "candidates_per_million": 2575.4372477416873
+  },
+  {
+   "year": 1820,
+   "pages": 2142,
+   "articles": 42899,
+   "candidates": 82,
+   "near_miss": 1306,
+   "no_batch_path": 14,
+   "candidates_per_million": 1911.466467749831
+  },
+  {
+   "year": 1821,
+   "pages": 2443,
+   "articles": 46857,
+   "candidates": 124,
+   "near_miss": 1447,
+   "no_batch_path": 25,
+   "candidates_per_million": 2646.3495315534497
+  },
+  {
+   "year": 1822,
+   "pages": 2780,
+   "articles": 50090,
+   "candidates": 187,
+   "near_miss": 1756,
+   "no_batch_path": 52,
+   "candidates_per_million": 3733.28009582751
+  },
+  {
+   "year": 1823,
+   "pages": 3017,
+   "articles": 57288,
+   "candidates": 277,
+   "near_miss": 2169,
+   "no_batch_path": 48,
+   "candidates_per_million": 4835.2185448959635
+  },
+  {
+   "year": 1824,
+   "pages": 3566,
+   "articles": 65012,
+   "candidates": 374,
+   "near_miss": 2823,
+   "no_batch_path": 50,
+   "candidates_per_million": 5752.7841013966645
+  },
+  {
+   "year": 1825,
+   "pages": 3252,
+   "articles": 58118,
+   "candidates": 428,
+   "near_miss": 2961,
+   "no_batch_path": 52,
+   "candidates_per_million": 7364.327746997487
+  },
+  {
+   "year": 1826,
+   "pages": 4368,
+   "articles": 80204,
+   "candidates": 414,
+   "near_miss": 3997,
+   "no_batch_path": 45,
+   "candidates_per_million": 5161.837314847139
+  },
+  {
+   "year": 1827,
+   "pages": 4537,
+   "articles": 86842,
+   "candidates": 508,
+   "near_miss": 4140,
+   "no_batch_path": 62,
+   "candidates_per_million": 5849.704060247346
+  },
+  {
+   "year": 1828,
+   "pages": 5111,
+   "articles": 97091,
+   "candidates": 415,
+   "near_miss": 4457,
+   "no_batch_path": 102,
+   "candidates_per_million": 4274.340567096848
+  },
+  {
+   "year": 1829,
+   "pages": 5262,
+   "articles": 102441,
+   "candidates": 561,
+   "near_miss": 4454,
+   "no_batch_path": 78,
+   "candidates_per_million": 5476.322956628694
+  },
+  {
+   "year": 1830,
+   "pages": 5668,
+   "articles": 108608,
+   "candidates": 570,
+   "near_miss": 4733,
+   "no_batch_path": 37,
+   "candidates_per_million": 5248.232174425457
+  },
+  {
+   "year": 1831,
+   "pages": 4691,
+   "articles": 97185,
+   "candidates": 427,
+   "near_miss": 4224,
+   "no_batch_path": 59,
+   "candidates_per_million": 4393.682152595565
+  },
+  {
+   "year": 1832,
+   "pages": 4265,
+   "articles": 88494,
+   "candidates": 390,
+   "near_miss": 4148,
+   "no_batch_path": 35,
+   "candidates_per_million": 4407.078445996339
+  },
+  {
+   "year": 1833,
+   "pages": 3669,
+   "articles": 79475,
+   "candidates": 384,
+   "near_miss": 3475,
+   "no_batch_path": 32,
+   "candidates_per_million": 4831.70808430324
+  },
+  {
+   "year": 1834,
+   "pages": 3359,
+   "articles": 75165,
+   "candidates": 260,
+   "near_miss": 2864,
+   "no_batch_path": 18,
+   "candidates_per_million": 3459.0567418346304
+  },
+  {
+   "year": 1835,
+   "pages": 2851,
+   "articles": 65296,
+   "candidates": 283,
+   "near_miss": 2864,
+   "no_batch_path": 11,
+   "candidates_per_million": 4334.109286939476
+  },
+  {
+   "year": 1836,
+   "pages": 5075,
+   "articles": 112837,
+   "candidates": 493,
+   "near_miss": 5007,
+   "no_batch_path": 42,
+   "candidates_per_million": 4369.134237882963
+  },
+  {
+   "year": 1837,
+   "pages": 6592,
+   "articles": 151669,
+   "candidates": 1031,
+   "near_miss": 6629,
+   "no_batch_path": 241,
+   "candidates_per_million": 6797.697617838846
+  },
+  {
+   "year": 1838,
+   "pages": 8184,
+   "articles": 202864,
+   "candidates": 1119,
+   "near_miss": 8345,
+   "no_batch_path": 333,
+   "candidates_per_million": 5516.010726397981
+  },
+  {
+   "year": 1839,
+   "pages": 9650,
+   "articles": 250101,
+   "candidates": 1171,
+   "near_miss": 9307,
+   "no_batch_path": 347,
+   "candidates_per_million": 4682.108428195009
+  },
+  {
+   "year": 1840,
+   "pages": 10906,
+   "articles": 275665,
+   "candidates": 1158,
+   "near_miss": 11693,
+   "no_batch_path": 306,
+   "candidates_per_million": 4200.750911432355
+  },
+  {
+   "year": 1841,
+   "pages": 12021,
+   "articles": 336782,
+   "candidates": 1290,
+   "near_miss": 11460,
+   "no_batch_path": 349,
+   "candidates_per_million": 3830.370981822069
+  },
+  {
+   "year": 1842,
+   "pages": 14088,
+   "articles": 394149,
+   "candidates": 1423,
+   "near_miss": 14021,
+   "no_batch_path": 441,
+   "candidates_per_million": 3610.309806697467
+  },
+  {
+   "year": 1843,
+   "pages": 15287,
+   "articles": 428651,
+   "candidates": 1517,
+   "near_miss": 14834,
+   "no_batch_path": 398,
+   "candidates_per_million": 3539.0095905526878
+  },
+  {
+   "year": 1844,
+   "pages": 16868,
+   "articles": 444518,
+   "candidates": 1454,
+   "near_miss": 16680,
+   "no_batch_path": 425,
+   "candidates_per_million": 3270.9586563423754
+  },
+  {
+   "year": 1845,
+   "pages": 20670,
+   "articles": 600291,
+   "candidates": 2041,
+   "near_miss": 20579,
+   "no_batch_path": 552,
+   "candidates_per_million": 3400.017658102487
+  },
+  {
+   "year": 1846,
+   "pages": 21051,
+   "articles": 597448,
+   "candidates": 1887,
+   "near_miss": 20219,
+   "no_batch_path": 579,
+   "candidates_per_million": 3158.4338720692012
+  },
+  {
+   "year": 1847,
+   "pages": 17949,
+   "articles": 481257,
+   "candidates": 1472,
+   "near_miss": 16369,
+   "no_batch_path": 442,
+   "candidates_per_million": 3058.656809147711
+  },
+  {
+   "year": 1848,
+   "pages": 19284,
+   "articles": 565622,
+   "candidates": 1895,
+   "near_miss": 19112,
+   "no_batch_path": 700,
+   "candidates_per_million": 3350.2940126091275
+  },
+  {
+   "year": 1849,
+   "pages": 18359,
+   "articles": 572141,
+   "candidates": 2022,
+   "near_miss": 17656,
+   "no_batch_path": 670,
+   "candidates_per_million": 3534.0938684694856
+  },
+  {
+   "year": 1850,
+   "pages": 24664,
+   "articles": 733880,
+   "candidates": 3393,
+   "near_miss": 25635,
+   "no_batch_path": 1250,
+   "candidates_per_million": 4623.371668392653
+  },
+  {
+   "year": 1851,
+   "pages": 28672,
+   "articles": 884908,
+   "candidates": 3785,
+   "near_miss": 28858,
+   "no_batch_path": 1379,
+   "candidates_per_million": 4277.2808020720795
+  },
+  {
+   "year": 1852,
+   "pages": 29929,
+   "articles": 966060,
+   "candidates": 4423,
+   "near_miss": 29367,
+   "no_batch_path": 1777,
+   "candidates_per_million": 4578.390576154689
+  },
+  {
+   "year": 1853,
+   "pages": 35780,
+   "articles": 1149306,
+   "candidates": 5923,
+   "near_miss": 33927,
+   "no_batch_path": 2231,
+   "candidates_per_million": 5153.544834882964
+  },
+  {
+   "year": 1854,
+   "pages": 39808,
+   "articles": 1317937,
+   "candidates": 5735,
+   "near_miss": 37124,
+   "no_batch_path": 2073,
+   "candidates_per_million": 4351.497833356223
+  },
+  {
+   "year": 1855,
+   "pages": 41766,
+   "articles": 1340167,
+   "candidates": 5291,
+   "near_miss": 37621,
+   "no_batch_path": 2093,
+   "candidates_per_million": 3948.015433897417
+  },
+  {
+   "year": 1856,
+   "pages": 45841,
+   "articles": 1433801,
+   "candidates": 5213,
+   "near_miss": 41578,
+   "no_batch_path": 1860,
+   "candidates_per_million": 3635.7904618562825
+  },
+  {
+   "year": 1857,
+   "pages": 46510,
+   "articles": 1431375,
+   "candidates": 5908,
+   "near_miss": 37720,
+   "no_batch_path": 2040,
+   "candidates_per_million": 4127.499781678456
+  },
+  {
+   "year": 1858,
+   "pages": 52540,
+   "articles": 1575817,
+   "candidates": 6565,
+   "near_miss": 43329,
+   "no_batch_path": 2366,
+   "candidates_per_million": 4166.092890227736
+  },
+  {
+   "year": 1859,
+   "pages": 57665,
+   "articles": 1683027,
+   "candidates": 6648,
+   "near_miss": 45636,
+   "no_batch_path": 2565,
+   "candidates_per_million": 3950.025757162541
+  },
+  {
+   "year": 1860,
+   "pages": 61146,
+   "articles": 1739493,
+   "candidates": 7154,
+   "near_miss": 47638,
+   "no_batch_path": 2839,
+   "candidates_per_million": 4112.692606408879
+  },
+  {
+   "year": 1861,
+   "pages": 60329,
+   "articles": 1695505,
+   "candidates": 5207,
+   "near_miss": 50399,
+   "no_batch_path": 1904,
+   "candidates_per_million": 3071.0614241774574
+  },
+  {
+   "year": 1862,
+   "pages": 54766,
+   "articles": 1436731,
+   "candidates": 4453,
+   "near_miss": 40374,
+   "no_batch_path": 1608,
+   "candidates_per_million": 3099.3971731660276
+  },
+  {
+   "year": 1863,
+   "pages": 54057,
+   "articles": 1374581,
+   "candidates": 5241,
+   "near_miss": 37900,
+   "no_batch_path": 1862,
+   "candidates_per_million": 3812.7982272416107
+  },
+  {
+   "year": 1864,
+   "pages": 53824,
+   "articles": 1434576,
+   "candidates": 4820,
+   "near_miss": 37452,
+   "no_batch_path": 1708,
+   "candidates_per_million": 3359.8777617916376
+  },
+  {
+   "year": 1865,
+   "pages": 55944,
+   "articles": 1436913,
+   "candidates": 4928,
+   "near_miss": 36232,
+   "no_batch_path": 1897,
+   "candidates_per_million": 3429.5743722828033
+  },
+  {
+   "year": 1866,
+   "pages": 72037,
+   "articles": 1800504,
+   "candidates": 6773,
+   "near_miss": 47808,
+   "no_batch_path": 2369,
+   "candidates_per_million": 3761.7244949192004
+  },
+  {
+   "year": 1867,
+   "pages": 66255,
+   "articles": 1793656,
+   "candidates": 7498,
+   "near_miss": 45659,
+   "no_batch_path": 2300,
+   "candidates_per_million": 4180.288751020263
+  },
+  {
+   "year": 1868,
+   "pages": 68189,
+   "articles": 1874241,
+   "candidates": 8220,
+   "near_miss": 49492,
+   "no_batch_path": 2594,
+   "candidates_per_million": 4385.775361866484
+  },
+  {
+   "year": 1869,
+   "pages": 66033,
+   "articles": 1842216,
+   "candidates": 8768,
+   "near_miss": 46111,
+   "no_batch_path": 2762,
+   "candidates_per_million": 4759.48531551132
+  },
+  {
+   "year": 1870,
+   "pages": 67193,
+   "articles": 1912551,
+   "candidates": 8276,
+   "near_miss": 50604,
+   "no_batch_path": 2838,
+   "candidates_per_million": 4327.20486930806
+  },
+  {
+   "year": 1871,
+   "pages": 66912,
+   "articles": 1899494,
+   "candidates": 8700,
+   "near_miss": 50411,
+   "no_batch_path": 2804,
+   "candidates_per_million": 4580.167139248663
+  },
+  {
+   "year": 1872,
+   "pages": 74854,
+   "articles": 2088240,
+   "candidates": 9145,
+   "near_miss": 54657,
+   "no_batch_path": 3115,
+   "candidates_per_million": 4379.285905834578
+  },
+  {
+   "year": 1873,
+   "pages": 81391,
+   "articles": 2129899,
+   "candidates": 10690,
+   "near_miss": 51829,
+   "no_batch_path": 3679,
+   "candidates_per_million": 5019.017333685776
+  },
+  {
+   "year": 1874,
+   "pages": 82442,
+   "articles": 2157018,
+   "candidates": 11537,
+   "near_miss": 51951,
+   "no_batch_path": 4109,
+   "candidates_per_million": 5348.58772620349
+  },
+  {
+   "year": 1875,
+   "pages": 88244,
+   "articles": 2348887,
+   "candidates": 12020,
+   "near_miss": 54859,
+   "no_batch_path": 4372,
+   "candidates_per_million": 5117.317265581529
+  },
+  {
+   "year": 1876,
+   "pages": 86277,
+   "articles": 2255640,
+   "candidates": 10612,
+   "near_miss": 52419,
+   "no_batch_path": 3971,
+   "candidates_per_million": 4704.651451472753
+  },
+  {
+   "year": 1877,
+   "pages": 85368,
+   "articles": 2178079,
+   "candidates": 10373,
+   "near_miss": 50579,
+   "no_batch_path": 4039,
+   "candidates_per_million": 4762.453519821825
+  },
+  {
+   "year": 1878,
+   "pages": 85012,
+   "articles": 2242682,
+   "candidates": 11107,
+   "near_miss": 51149,
+   "no_batch_path": 3934,
+   "candidates_per_million": 4952.552345807386
+  },
+  {
+   "year": 1879,
+   "pages": 86249,
+   "articles": 2276859,
+   "candidates": 10675,
+   "near_miss": 50845,
+   "no_batch_path": 3774,
+   "candidates_per_million": 4688.476537194442
+  },
+  {
+   "year": 1880,
+   "pages": 91875,
+   "articles": 2482134,
+   "candidates": 11389,
+   "near_miss": 52574,
+   "no_batch_path": 4001,
+   "candidates_per_million": 4588.390473681115
+  },
+  {
+   "year": 1881,
+   "pages": 92301,
+   "articles": 2547382,
+   "candidates": 10821,
+   "near_miss": 54345,
+   "no_batch_path": 4039,
+   "candidates_per_million": 4247.89057942625
+  },
+  {
+   "year": 1882,
+   "pages": 93310,
+   "articles": 2625386,
+   "candidates": 10950,
+   "near_miss": 55257,
+   "no_batch_path": 3734,
+   "candidates_per_million": 4170.815262974664
+  },
+  {
+   "year": 1883,
+   "pages": 102539,
+   "articles": 2890685,
+   "candidates": 13015,
+   "near_miss": 61392,
+   "no_batch_path": 4613,
+   "candidates_per_million": 4502.39303140951
+  },
+  {
+   "year": 1884,
+   "pages": 107637,
+   "articles": 3033967,
+   "candidates": 12959,
+   "near_miss": 60640,
+   "no_batch_path": 5011,
+   "candidates_per_million": 4271.30552178056
+  },
+  {
+   "year": 1885,
+   "pages": 113350,
+   "articles": 3251975,
+   "candidates": 14236,
+   "near_miss": 66792,
+   "no_batch_path": 5502,
+   "candidates_per_million": 4377.6474296389115
+  },
+  {
+   "year": 1886,
+   "pages": 124462,
+   "articles": 3451856,
+   "candidates": 14694,
+   "near_miss": 69118,
+   "no_batch_path": 5256,
+   "candidates_per_million": 4256.840378045898
+  },
+  {
+   "year": 1887,
+   "pages": 135611,
+   "articles": 3672879,
+   "candidates": 15719,
+   "near_miss": 76488,
+   "no_batch_path": 5554,
+   "candidates_per_million": 4279.748938094613
+  },
+  {
+   "year": 1888,
+   "pages": 133078,
+   "articles": 3704419,
+   "candidates": 17120,
+   "near_miss": 76644,
+   "no_batch_path": 6148,
+   "candidates_per_million": 4621.507448266516
+  },
+  {
+   "year": 1889,
+   "pages": 138784,
+   "articles": 3906654,
+   "candidates": 16775,
+   "near_miss": 78976,
+   "no_batch_path": 5670,
+   "candidates_per_million": 4293.955901904801
+  },
+  {
+   "year": 1890,
+   "pages": 149707,
+   "articles": 4199692,
+   "candidates": 19445,
+   "near_miss": 79748,
+   "no_batch_path": 6473,
+   "candidates_per_million": 4630.101445534578
+  },
+  {
+   "year": 1891,
+   "pages": 168868,
+   "articles": 4711244,
+   "candidates": 21720,
+   "near_miss": 89129,
+   "no_batch_path": 7139,
+   "candidates_per_million": 4610.247314721972
+  },
+  {
+   "year": 1892,
+   "pages": 178991,
+   "articles": 4916554,
+   "candidates": 22049,
+   "near_miss": 93259,
+   "no_batch_path": 7457,
+   "candidates_per_million": 4484.645139664895
+  },
+  {
+   "year": 1893,
+   "pages": 186356,
+   "articles": 4981572,
+   "candidates": 19696,
+   "near_miss": 86933,
+   "no_batch_path": 6945,
+   "candidates_per_million": 3953.772022164891
+  },
+  {
+   "year": 1894,
+   "pages": 199241,
+   "articles": 5309812,
+   "candidates": 21040,
+   "near_miss": 95733,
+   "no_batch_path": 7026,
+   "candidates_per_million": 3962.4755076074257
+  },
+  {
+   "year": 1895,
+   "pages": 211353,
+   "articles": 5479353,
+   "candidates": 20496,
+   "near_miss": 98665,
+   "no_batch_path": 6525,
+   "candidates_per_million": 3740.5876204727087
+  },
+  {
+   "year": 1896,
+   "pages": 232185,
+   "articles": 5944944,
+   "candidates": 22124,
+   "near_miss": 105450,
+   "no_batch_path": 6507,
+   "candidates_per_million": 3721.481648944044
+  },
+  {
+   "year": 1897,
+   "pages": 245664,
+   "articles": 6376988,
+   "candidates": 24231,
+   "near_miss": 111490,
+   "no_batch_path": 7593,
+   "candidates_per_million": 3799.756248561233
+  },
+  {
+   "year": 1898,
+   "pages": 255831,
+   "articles": 6543147,
+   "candidates": 22324,
+   "near_miss": 110720,
+   "no_batch_path": 7145,
+   "candidates_per_million": 3411.813917676005
+  },
+  {
+   "year": 1899,
+   "pages": 277231,
+   "articles": 7049791,
+   "candidates": 22389,
+   "near_miss": 112303,
+   "no_batch_path": 7243,
+   "candidates_per_million": 3175.8388298319765
+  },
+  {
+   "year": 1900,
+   "pages": 267106,
+   "articles": 6613951,
+   "candidates": 20925,
+   "near_miss": 102019,
+   "no_batch_path": 7007,
+   "candidates_per_million": 3163.767013090965
+  },
+  {
+   "year": 1901,
+   "pages": 269431,
+   "articles": 6623111,
+   "candidates": 19708,
+   "near_miss": 104080,
+   "no_batch_path": 6044,
+   "candidates_per_million": 2975.6409034968615
+  },
+  {
+   "year": 1902,
+   "pages": 292376,
+   "articles": 7062690,
+   "candidates": 22568,
+   "near_miss": 106352,
+   "no_batch_path": 7231,
+   "candidates_per_million": 3195.38306226098
+  },
+  {
+   "year": 1903,
+   "pages": 303211,
+   "articles": 7183303,
+   "candidates": 21940,
+   "near_miss": 110284,
+   "no_batch_path": 7300,
+   "candidates_per_million": 3054.3052409177226
+  },
+  {
+   "year": 1904,
+   "pages": 323031,
+   "articles": 7328025,
+   "candidates": 20349,
+   "near_miss": 109975,
+   "no_batch_path": 6608,
+   "candidates_per_million": 2776.873714268169
+  },
+  {
+   "year": 1905,
+   "pages": 338667,
+   "articles": 7472034,
+   "candidates": 21070,
+   "near_miss": 114117,
+   "no_batch_path": 6315,
+   "candidates_per_million": 2819.8479824904434
+  },
+  {
+   "year": 1906,
+   "pages": 369776,
+   "articles": 7951462,
+   "candidates": 23442,
+   "near_miss": 120117,
+   "no_batch_path": 7259,
+   "candidates_per_million": 2948.137084727312
+  },
+  {
+   "year": 1907,
+   "pages": 369551,
+   "articles": 7940704,
+   "candidates": 23741,
+   "near_miss": 119781,
+   "no_batch_path": 7014,
+   "candidates_per_million": 2989.785288558798
+  },
+  {
+   "year": 1908,
+   "pages": 374129,
+   "articles": 8037231,
+   "candidates": 23482,
+   "near_miss": 123340,
+   "no_batch_path": 7283,
+   "candidates_per_million": 2921.6529921810134
+  },
+  {
+   "year": 1909,
+   "pages": 397923,
+   "articles": 8450675,
+   "candidates": 25261,
+   "near_miss": 129818,
+   "no_batch_path": 8018,
+   "candidates_per_million": 2989.2286710824874
+  },
+  {
+   "year": 1910,
+   "pages": 427081,
+   "articles": 9186018,
+   "candidates": 25346,
+   "near_miss": 139306,
+   "no_batch_path": 8131,
+   "candidates_per_million": 2759.193374103991
+  },
+  {
+   "year": 1911,
+   "pages": 381260,
+   "articles": 8094131,
+   "candidates": 22742,
+   "near_miss": 119881,
+   "no_batch_path": 7490,
+   "candidates_per_million": 2809.6901322699127
+  },
+  {
+   "year": 1912,
+   "pages": 418066,
+   "articles": 8519071,
+   "candidates": 23391,
+   "near_miss": 127035,
+   "no_batch_path": 7687,
+   "candidates_per_million": 2745.721922026474
+  },
+  {
+   "year": 1913,
+   "pages": 428807,
+   "articles": 8649692,
+   "candidates": 23942,
+   "near_miss": 131552,
+   "no_batch_path": 8021,
+   "candidates_per_million": 2767.9598302459785
+  },
+  {
+   "year": 1914,
+   "pages": 441680,
+   "articles": 8904883,
+   "candidates": 23048,
+   "near_miss": 139557,
+   "no_batch_path": 7506,
+   "candidates_per_million": 2588.2428775313497
+  },
+  {
+   "year": 1915,
+   "pages": 426119,
+   "articles": 8529123,
+   "candidates": 22257,
+   "near_miss": 136739,
+   "no_batch_path": 6849,
+   "candidates_per_million": 2609.5297253891167
+  },
+  {
+   "year": 1916,
+   "pages": 440466,
+   "articles": 8661808,
+   "candidates": 22205,
+   "near_miss": 133282,
+   "no_batch_path": 6883,
+   "candidates_per_million": 2563.55255161509
+  },
+  {
+   "year": 1917,
+   "pages": 416860,
+   "articles": 8247801,
+   "candidates": 18725,
+   "near_miss": 141278,
+   "no_batch_path": 5754,
+   "candidates_per_million": 2270.30210840441
+  },
+  {
+   "year": 1918,
+   "pages": 396500,
+   "articles": 7785782,
+   "candidates": 15979,
+   "near_miss": 147607,
+   "no_batch_path": 4576,
+   "candidates_per_million": 2052.3307742240922
+  },
+  {
+   "year": 1919,
+   "pages": 450482,
+   "articles": 8273605,
+   "candidates": 21568,
+   "near_miss": 135363,
+   "no_batch_path": 6289,
+   "candidates_per_million": 2606.844295805758
+  },
+  {
+   "year": 1920,
+   "pages": 419134,
+   "articles": 7586075,
+   "candidates": 22609,
+   "near_miss": 113790,
+   "no_batch_path": 5882,
+   "candidates_per_million": 2980.3290898125842
+  },
+  {
+   "year": 1921,
+   "pages": 393791,
+   "articles": 7384402,
+   "candidates": 22393,
+   "near_miss": 123428,
+   "no_batch_path": 5566,
+   "candidates_per_million": 3032.473042502291
+  },
+  {
+   "year": 1922,
+   "pages": 384898,
+   "articles": 7368841,
+   "candidates": 25285,
+   "near_miss": 119764,
+   "no_batch_path": 6029,
+   "candidates_per_million": 3431.3401524066
+  },
+  {
+   "year": 1923,
+   "pages": 135030,
+   "articles": 2661376,
+   "candidates": 8438,
+   "near_miss": 43390,
+   "no_batch_path": 2590,
+   "candidates_per_million": 3170.5403520584837
+  },
+  {
+   "year": 1924,
+   "pages": 109465,
+   "articles": 2151588,
+   "candidates": 6250,
+   "near_miss": 35443,
+   "no_batch_path": 1613,
+   "candidates_per_million": 2904.8312223343873
+  },
+  {
+   "year": 1925,
+   "pages": 95839,
+   "articles": 1820661,
+   "candidates": 5724,
+   "near_miss": 28026,
+   "no_batch_path": 1449,
+   "candidates_per_million": 3143.913117268948
+  },
+  {
+   "year": 1926,
+   "pages": 85106,
+   "articles": 1565362,
+   "candidates": 5326,
+   "near_miss": 25220,
+   "no_batch_path": 1729,
+   "candidates_per_million": 3402.40787753887
+  },
+  {
+   "year": 1927,
+   "pages": 78278,
+   "articles": 1303212,
+   "candidates": 4443,
+   "near_miss": 23418,
+   "no_batch_path": 1489,
+   "candidates_per_million": 3409.2687912634324
+  },
+  {
+   "year": 1928,
+   "pages": 75771,
+   "articles": 1248158,
+   "candidates": 4146,
+   "near_miss": 21621,
+   "no_batch_path": 1473,
+   "candidates_per_million": 3321.6948495302677
+  },
+  {
+   "year": 1929,
+   "pages": 77609,
+   "articles": 1276662,
+   "candidates": 4847,
+   "near_miss": 21287,
+   "no_batch_path": 1892,
+   "candidates_per_million": 3796.619622108279
+  },
+  {
+   "year": 1930,
+   "pages": 77043,
+   "articles": 1308519,
+   "candidates": 4138,
+   "near_miss": 20722,
+   "no_batch_path": 1581,
+   "candidates_per_million": 3162.353775527906
+  },
+  {
+   "year": 1931,
+   "pages": 74216,
+   "articles": 1224340,
+   "candidates": 3574,
+   "near_miss": 18607,
+   "no_batch_path": 1240,
+   "candidates_per_million": 2919.123772808207
+  },
+  {
+   "year": 1932,
+   "pages": 65894,
+   "articles": 1152570,
+   "candidates": 3661,
+   "near_miss": 17707,
+   "no_batch_path": 697,
+   "candidates_per_million": 3176.379742662051
+  },
+  {
+   "year": 1933,
+   "pages": 65919,
+   "articles": 1173640,
+   "candidates": 3748,
+   "near_miss": 20008,
+   "no_batch_path": 813,
+   "candidates_per_million": 3193.4835213523734
+  },
+  {
+   "year": 1934,
+   "pages": 74165,
+   "articles": 1281573,
+   "candidates": 4181,
+   "near_miss": 20234,
+   "no_batch_path": 928,
+   "candidates_per_million": 3262.397069850879
+  },
+  {
+   "year": 1935,
+   "pages": 76322,
+   "articles": 1292935,
+   "candidates": 4312,
+   "near_miss": 19188,
+   "no_batch_path": 1074,
+   "candidates_per_million": 3335.0477788906637
+  },
+  {
+   "year": 1936,
+   "pages": 75063,
+   "articles": 1210385,
+   "candidates": 3906,
+   "near_miss": 17854,
+   "no_batch_path": 829,
+   "candidates_per_million": 3227.0723777971475
+  },
+  {
+   "year": 1937,
+   "pages": 71762,
+   "articles": 1169090,
+   "candidates": 3681,
+   "near_miss": 16521,
+   "no_batch_path": 669,
+   "candidates_per_million": 3148.6027594111656
+  },
+  {
+   "year": 1938,
+   "pages": 68738,
+   "articles": 1102453,
+   "candidates": 3235,
+   "near_miss": 16033,
+   "no_batch_path": 608,
+   "candidates_per_million": 2934.3654559423394
+  },
+  {
+   "year": 1939,
+   "pages": 65243,
+   "articles": 1068677,
+   "candidates": 3144,
+   "near_miss": 15139,
+   "no_batch_path": 471,
+   "candidates_per_million": 2941.9553335572864
+  },
+  {
+   "year": 1940,
+   "pages": 72532,
+   "articles": 1201613,
+   "candidates": 3660,
+   "near_miss": 17339,
+   "no_batch_path": 952,
+   "candidates_per_million": 3045.905794960607
+  },
+  {
+   "year": 1941,
+   "pages": 87776,
+   "articles": 1463904,
+   "candidates": 4436,
+   "near_miss": 19846,
+   "no_batch_path": 1079,
+   "candidates_per_million": 3030.253349946445
+  },
+  {
+   "year": 1942,
+   "pages": 80869,
+   "articles": 1300988,
+   "candidates": 3489,
+   "near_miss": 19944,
+   "no_batch_path": 980,
+   "candidates_per_million": 2681.80797978152
+  },
+  {
+   "year": 1943,
+   "pages": 76151,
+   "articles": 1225692,
+   "candidates": 3091,
+   "near_miss": 18069,
+   "no_batch_path": 901,
+   "candidates_per_million": 2521.840723444389
+  },
+  {
+   "year": 1944,
+   "pages": 72508,
+   "articles": 1108433,
+   "candidates": 3134,
+   "near_miss": 16387,
+   "no_batch_path": 968,
+   "candidates_per_million": 2827.4149181772827
+  },
+  {
+   "year": 1945,
+   "pages": 76365,
+   "articles": 1131094,
+   "candidates": 2987,
+   "near_miss": 15996,
+   "no_batch_path": 586,
+   "candidates_per_million": 2640.806157578415
+  },
+  {
+   "year": 1946,
+   "pages": 61778,
+   "articles": 936832,
+   "candidates": 2342,
+   "near_miss": 11042,
+   "no_batch_path": 595,
+   "candidates_per_million": 2499.9146058204674
+  },
+  {
+   "year": 1947,
+   "pages": 56498,
+   "articles": 802878,
+   "candidates": 1786,
+   "near_miss": 9250,
+   "no_batch_path": 533,
+   "candidates_per_million": 2224.4973707088748
+  },
+  {
+   "year": 1948,
+   "pages": 53690,
+   "articles": 728159,
+   "candidates": 1510,
+   "near_miss": 8526,
+   "no_batch_path": 290,
+   "candidates_per_million": 2073.7229094195086
+  },
+  {
+   "year": 1949,
+   "pages": 56443,
+   "articles": 785155,
+   "candidates": 1424,
+   "near_miss": 8077,
+   "no_batch_path": 341,
+   "candidates_per_million": 1813.6546287038866
+  },
+  {
+   "year": 1950,
+   "pages": 54883,
+   "articles": 745085,
+   "candidates": 1491,
+   "near_miss": 8033,
+   "no_batch_path": 272,
+   "candidates_per_million": 2001.1139668628412
+  },
+  {
+   "year": 1951,
+   "pages": 53199,
+   "articles": 708864,
+   "candidates": 1294,
+   "near_miss": 7940,
+   "no_batch_path": 207,
+   "candidates_per_million": 1825.455940772842
+  },
+  {
+   "year": 1952,
+   "pages": 52482,
+   "articles": 664331,
+   "candidates": 1348,
+   "near_miss": 7657,
+   "no_batch_path": 210,
+   "candidates_per_million": 2029.1089833230722
+  },
+  {
+   "year": 1953,
+   "pages": 52847,
+   "articles": 673731,
+   "candidates": 1468,
+   "near_miss": 7987,
+   "no_batch_path": 291,
+   "candidates_per_million": 2178.911167810298
+  },
+  {
+   "year": 1954,
+   "pages": 54109,
+   "articles": 687085,
+   "candidates": 1695,
+   "near_miss": 8427,
+   "no_batch_path": 442,
+   "candidates_per_million": 2466.9436823682663
+  },
+  {
+   "year": 1955,
+   "pages": 53849,
+   "articles": 671246,
+   "candidates": 1604,
+   "near_miss": 7935,
+   "no_batch_path": 410,
+   "candidates_per_million": 2389.585934217858
+  },
+  {
+   "year": 1956,
+   "pages": 55123,
+   "articles": 670882,
+   "candidates": 1549,
+   "near_miss": 7763,
+   "no_batch_path": 596,
+   "candidates_per_million": 2308.9008201144165
+  },
+  {
+   "year": 1957,
+   "pages": 51318,
+   "articles": 627547,
+   "candidates": 1468,
+   "near_miss": 7015,
+   "no_batch_path": 632,
+   "candidates_per_million": 2339.267019043992
+  },
+  {
+   "year": 1958,
+   "pages": 45977,
+   "articles": 593931,
+   "candidates": 1183,
+   "near_miss": 5801,
+   "no_batch_path": 505,
+   "candidates_per_million": 1991.8138639000151
+  },
+  {
+   "year": 1959,
+   "pages": 49773,
+   "articles": 594368,
+   "candidates": 1280,
+   "near_miss": 6375,
+   "no_batch_path": 486,
+   "candidates_per_million": 2153.547970281038
+  },
+  {
+   "year": 1960,
+   "pages": 52460,
+   "articles": 584440,
+   "candidates": 1479,
+   "near_miss": 6445,
+   "no_batch_path": 361,
+   "candidates_per_million": 2530.627609335432
+  },
+  {
+   "year": 1961,
+   "pages": 51670,
+   "articles": 570587,
+   "candidates": 1422,
+   "near_miss": 6495,
+   "no_batch_path": 373,
+   "candidates_per_million": 2492.1703438739405
+  },
+  {
+   "year": 1962,
+   "pages": 53455,
+   "articles": 570606,
+   "candidates": 1401,
+   "near_miss": 6342,
+   "no_batch_path": 403,
+   "candidates_per_million": 2455.2843818676984
+  },
+  {
+   "year": 1963,
+   "pages": 51600,
+   "articles": 553445,
+   "candidates": 1285,
+   "near_miss": 5900,
+   "no_batch_path": 368,
+   "candidates_per_million": 2321.820596445898
+  },
+  {
+   "year": 1964,
+   "pages": 450,
+   "articles": 2678,
+   "candidates": 2,
+   "near_miss": 20,
+   "no_batch_path": 2,
+   "candidates_per_million": 746.8259895444362
+  }
+ ],
+ "by_state": [
+  {
+   "state": "unknown",
+   "pages": 2189398,
+   "articles": 41900856,
+   "candidates": 137691,
+   "candidates_per_million": 3286.114250267345
+  },
+  {
+   "state": "District of Columbia",
+   "pages": 1266065,
+   "articles": 23702222,
+   "candidates": 87943,
+   "candidates_per_million": 3710.3272427369893
+  },
+  {
+   "state": "New York",
+   "pages": 562607,
+   "articles": 13693963,
+   "candidates": 63605,
+   "candidates_per_million": 4644.747470107814
+  },
+  {
+   "state": "Virginia",
+   "pages": 636130,
+   "articles": 17106738,
+   "candidates": 49976,
+   "candidates_per_million": 2921.421956658248
+  },
+  {
+   "state": "Minnesota",
+   "pages": 529109,
+   "articles": 12052611,
+   "candidates": 47479,
+   "candidates_per_million": 3939.3124029307837
+  },
+  {
+   "state": "Ohio",
+   "pages": 456451,
+   "articles": 11214047,
+   "candidates": 40939,
+   "candidates_per_million": 3650.6891758167235
+  },
+  {
+   "state": "Pennsylvania",
+   "pages": 344994,
+   "articles": 8504903,
+   "candidates": 37949,
+   "candidates_per_million": 4462.014440376333
+  },
+  {
+   "state": "Vermont",
+   "pages": 357378,
+   "articles": 8041316,
+   "candidates": 35197,
+   "candidates_per_million": 4377.019880825477
+  },
+  {
+   "state": "Indiana",
+   "pages": 380387,
+   "articles": 9127627,
+   "candidates": 34383,
+   "candidates_per_million": 3766.9155411368147
+  },
+  {
+   "state": "Wisconsin",
+   "pages": 313368,
+   "articles": 7800289,
+   "candidates": 33947,
+   "candidates_per_million": 4352.018239324209
+  },
+  {
+   "state": "West Virginia",
+   "pages": 439299,
+   "articles": 11177684,
+   "candidates": 31784,
+   "candidates_per_million": 2843.5228621599967
+  },
+  {
+   "state": "Kansas",
+   "pages": 302785,
+   "articles": 8512817,
+   "candidates": 31054,
+   "candidates_per_million": 3647.911143866948
+  },
+  {
+   "state": "Maine",
+   "pages": 274928,
+   "articles": 8766102,
+   "candidates": 29196,
+   "candidates_per_million": 3330.5567286349165
+  },
+  {
+   "state": "Louisiana",
+   "pages": 283585,
+   "articles": 6852435,
+   "candidates": 26653,
+   "candidates_per_million": 3889.566263671235
+  },
+  {
+   "state": "Michigan",
+   "pages": 329100,
+   "articles": 6493094,
+   "candidates": 26313,
+   "candidates_per_million": 4052.459428432732
+  },
+  {
+   "state": "Iowa",
+   "pages": 371072,
+   "articles": 9661172,
+   "candidates": 25720,
+   "candidates_per_million": 2662.2028880140006
+  },
+  {
+   "state": "Washington",
+   "pages": 381851,
+   "articles": 8108118,
+   "candidates": 24701,
+   "candidates_per_million": 3046.4529499940677
+  },
+  {
+   "state": "South Carolina",
+   "pages": 272612,
+   "articles": 5718699,
+   "candidates": 24497,
+   "candidates_per_million": 4283.666617179886
+  },
+  {
+   "state": "Maryland",
+   "pages": 343743,
+   "articles": 7083140,
+   "candidates": 24332,
+   "candidates_per_million": 3435.199643096141
+  },
+  {
+   "state": "Tennessee",
+   "pages": 244298,
+   "articles": 6950324,
+   "candidates": 24139,
+   "candidates_per_million": 3473.07549978965
+  },
+  {
+   "state": "California",
+   "pages": 282266,
+   "articles": 5901726,
+   "candidates": 23724,
+   "candidates_per_million": 4019.8409753350115
+  },
+  {
+   "state": "Georgia",
+   "pages": 274678,
+   "articles": 6443169,
+   "candidates": 23222,
+   "candidates_per_million": 3604.127099568551
+  },
+  {
+   "state": "Texas",
+   "pages": 428102,
+   "articles": 9176036,
+   "candidates": 22956,
+   "candidates_per_million": 2501.7338641653105
+  },
+  {
+   "state": "Connecticut",
+   "pages": 264318,
+   "articles": 6213804,
+   "candidates": 22010,
+   "candidates_per_million": 3542.113655338984
+  },
+  {
+   "state": "Utah",
+   "pages": 236180,
+   "articles": 6000159,
+   "candidates": 19573,
+   "candidates_per_million": 3262.0802215407957
+  },
+  {
+   "state": "Idaho",
+   "pages": 282036,
+   "articles": 5214003,
+   "candidates": 17112,
+   "candidates_per_million": 3281.9313682788447
+  },
+  {
+   "state": "Illinois",
+   "pages": 347485,
+   "articles": 6221873,
+   "candidates": 16652,
+   "candidates_per_million": 2676.3644966716615
+  },
+  {
+   "state": "North Carolina",
+   "pages": 255260,
+   "articles": 5005688,
+   "candidates": 16491,
+   "candidates_per_million": 3294.4522311418527
+  },
+  {
+   "state": "North Dakota",
+   "pages": 255680,
+   "articles": 5586332,
+   "candidates": 15440,
+   "candidates_per_million": 2763.8887198254597
+  },
+  {
+   "state": "Montana",
+   "pages": 244681,
+   "articles": 4709220,
+   "candidates": 15329,
+   "candidates_per_million": 3255.103817617355
+  },
+  {
+   "state": "South Dakota",
+   "pages": 189749,
+   "articles": 4068592,
+   "candidates": 15172,
+   "candidates_per_million": 3729.0541789395443
+  },
+  {
+   "state": "Delaware",
+   "pages": 182982,
+   "articles": 4825051,
+   "candidates": 14412,
+   "candidates_per_million": 2986.9114336822554
+  },
+  {
+   "state": "Oregon",
+   "pages": 263509,
+   "articles": 5824359,
+   "candidates": 14108,
+   "candidates_per_million": 2422.2407993738025
+  },
+  {
+   "state": "Missouri",
+   "pages": 183369,
+   "articles": 4349136,
+   "candidates": 13836,
+   "candidates_per_million": 3181.321531449005
+  },
+  {
+   "state": "New Jersey",
+   "pages": 159720,
+   "articles": 3808862,
+   "candidates": 13815,
+   "candidates_per_million": 3627.0676123209505
+  },
+  {
+   "state": "Mississippi",
+   "pages": 196837,
+   "articles": 4413028,
+   "candidates": 13789,
+   "candidates_per_million": 3124.6119444517462
+  },
+  {
+   "state": "Colorado",
+   "pages": 166595,
+   "articles": 3611439,
+   "candidates": 11634,
+   "candidates_per_million": 3221.4305710272274
+  },
+  {
+   "state": "Oklahoma",
+   "pages": 280979,
+   "articles": 5700099,
+   "candidates": 11577,
+   "candidates_per_million": 2031.017356014343
+  },
+  {
+   "state": "Hawaii",
+   "pages": 267194,
+   "articles": 4346996,
+   "candidates": 10659,
+   "candidates_per_million": 2452.038143122285
+  },
+  {
+   "state": "Nevada",
+   "pages": 255008,
+   "articles": 4299613,
+   "candidates": 10323,
+   "candidates_per_million": 2400.9137566567038
+  },
+  {
+   "state": "Nebraska",
+   "pages": 137603,
+   "articles": 3079331,
+   "candidates": 9832,
+   "candidates_per_million": 3192.9013152532157
+  },
+  {
+   "state": "Arizona",
+   "pages": 222819,
+   "articles": 3965063,
+   "candidates": 9597,
+   "candidates_per_million": 2420.390293924712
+  },
+  {
+   "state": "Alabama",
+   "pages": 116611,
+   "articles": 2992281,
+   "candidates": 9267,
+   "candidates_per_million": 3096.968499950372
+  },
+  {
+   "state": "Florida",
+   "pages": 227673,
+   "articles": 4395418,
+   "candidates": 9074,
+   "candidates_per_million": 2064.422541837887
+  },
+  {
+   "state": "Kentucky",
+   "pages": 152971,
+   "articles": 3252179,
+   "candidates": 8285,
+   "candidates_per_million": 2547.5227532063886
+  },
+  {
+   "state": "Arkansas",
+   "pages": 147520,
+   "articles": 2973151,
+   "candidates": 7597,
+   "candidates_per_million": 2555.2015353407883
+  },
+  {
+   "state": "New Mexico",
+   "pages": 175862,
+   "articles": 3770789,
+   "candidates": 7485,
+   "candidates_per_million": 1984.9957130987705
+  },
+  {
+   "state": "Rhode Island",
+   "pages": 69699,
+   "articles": 1782065,
+   "candidates": 6960,
+   "candidates_per_million": 3905.5814462435433
+  },
+  {
+   "state": "Alaska",
+   "pages": 167101,
+   "articles": 2734557,
+   "candidates": 4526,
+   "candidates_per_million": 1655.1126928420217
+  },
+  {
+   "state": "Massachusetts",
+   "pages": 33264,
+   "articles": 885835,
+   "candidates": 3078,
+   "candidates_per_million": 3474.6877240118083
+  },
+  {
+   "state": "Wyoming",
+   "pages": 10075,
+   "articles": 286909,
+   "candidates": 736,
+   "candidates_per_million": 2565.2733096556744
+  },
+  {
+   "state": "Puerto Rico",
+   "pages": 127498,
+   "articles": 1993255,
+   "candidates": 298,
+   "candidates_per_million": 149.5042029243624
+  },
+  {
+   "state": "Virgin Islands",
+   "pages": 2976,
+   "articles": 15738,
+   "candidates": 55,
+   "candidates_per_million": 3494.7261405515314
+  }
+ ],
+ "no_state": {
+  "candidates": 137691,
+  "share_of_candidates": 0.11138949068134052,
+  "share_of_articles": 0.11314955914173282
+ },
+ "terms": {
+  "any": {
+   "ghost": 452510,
+   "apparition": 33796,
+   "spectre": 76552,
+   "phantom": 96701,
+   "haunt": 401005,
+   "spook": 29378,
+   "wraith": 3642,
+   "poltergeist": 177,
+   "banshee": 4485,
+   "goblin": 45199,
+   "knocking": 2864,
+   "rapping": 9431,
+   "spiritualism": 74516,
+   "seance": 34206,
+   "spirit_phrase": 42186,
+   "ouija": 6389,
+   "spirit+medium": 79374
+  },
+  "only": {
+   "ghost": 374801,
+   "apparition": 21820,
+   "spectre": 55778,
+   "phantom": 79588,
+   "haunt": 348624,
+   "spook": 16016,
+   "wraith": 2163,
+   "poltergeist": 64,
+   "banshee": 3611,
+   "goblin": 38770,
+   "knocking": 2080,
+   "rapping": 6160,
+   "spiritualism": 54411,
+   "seance": 21656,
+   "spirit_phrase": 24537,
+   "ouija": 5124,
+   "spirit+medium": 57676
+  }
+ },
+ "lengths": {
+  "unit": "words of the article's text",
+  "mean": 448.6729877795234,
+  "p10": 79,
+  "p25": 170,
+  "p50": 355,
+  "p75": 684,
+  "p90": 952,
+  "p99": 1356,
+  "max": 2320,
+  "histogram": [
+   {
+    "from": 0,
+    "to": 24,
+    "candidates": 20819
+   },
+   {
+    "from": 25,
+    "to": 49,
+    "candidates": 47548
+   },
+   {
+    "from": 50,
+    "to": 99,
+    "candidates": 97080
+   },
+   {
+    "from": 100,
+    "to": 199,
+    "candidates": 203035
+   },
+   {
+    "from": 200,
+    "to": 399,
+    "candidates": 303423
+   },
+   {
+    "from": 400,
+    "to": 799,
+    "candidates": 340092
+   },
+   {
+    "from": 800,
+    "to": 1599,
+    "candidates": 222714
+   },
+   {
+    "from": 1600,
+    "to": 3199,
+    "candidates": 1411
+   },
+   {
+    "from": 3200,
+    "to": null,
+    "candidates": 0
+   }
+  ]
+ },
+ "ocr_quality": {
+  "method": "share of words of 3+ letters in /usr/share/dict/words (Webster's 2nd), once line-break hyphens are joined and -s, -es, -ed, -ing, -ly, -ies, -ied come off",
+  "dictionary": {
+   "sha256": "be41ad97963bf8dabedd5871d5d691596175269d540956b0f9965a885c2bbab9",
+   "words": 235976
+  },
+  "sample": "1 candidate in 20, by the CRC of its id: 60,677",
+  "p10": 0.8309352517985612,
+  "p25": 0.8888888888888888,
+  "p50": 0.9252336448598131,
+  "p75": 0.949685534591195,
+  "p90": 0.9653179190751445,
+  "p99": 0.9891774891774892,
+  "histogram": [
+   1,
+   4,
+   15,
+   41,
+   101,
+   103,
+   54,
+   65,
+   107,
+   95,
+   132,
+   164,
+   314,
+   524,
+   859,
+   1644,
+   3725,
+   10699,
+   27259,
+   15039
+  ],
+  "median_by_decade": {
+   "1800": 0.8648648648648649,
+   "1810": 0.8875968992248062,
+   "1820": 0.9057239057239057,
+   "1830": 0.8885754583921015,
+   "1840": 0.8988326848249028,
+   "1850": 0.9030054644808743,
+   "1860": 0.9059011164274322,
+   "1870": 0.918918918918919,
+   "1880": 0.927007299270073,
+   "1890": 0.9287833827893175,
+   "1900": 0.9313929313929314,
+   "1910": 0.9301075268817204,
+   "1920": 0.9244186046511628,
+   "1930": 0.9322033898305084,
+   "1940": 0.92,
+   "1950": 0.92,
+   "1960": 0.9127272727272727
+  }
+ },
+ "reprints": {
+  "method": "runs of 7 words of 3+ letters from each candidate's first 120, one in 8 kept by its hash; candidates sharing two of their six smallest runs, in a pair held by at most 1,000 candidates, are joined",
+  "clusters": 91301,
+  "clustered_candidates": 374832,
+  "share_clustered": 0.30323220523540556,
+  "distinct_stories": 952591,
+  "cross_paper_clusters": 78904,
+  "cross_paper_candidates": 336003,
+  "size_histogram": [
+   {
+    "from": 2,
+    "to": 2,
+    "clusters": 47814,
+    "candidates": 95628
+   },
+   {
+    "from": 3,
+    "to": 3,
+    "clusters": 15488,
+    "candidates": 46464
+   },
+   {
+    "from": 4,
+    "to": 4,
+    "clusters": 8189,
+    "candidates": 32756
+   },
+   {
+    "from": 5,
+    "to": 9,
+    "clusters": 13881,
+    "candidates": 88063
+   },
+   {
+    "from": 10,
+    "to": 19,
+    "clusters": 4600,
+    "candidates": 59711
+   },
+   {
+    "from": 20,
+    "to": 49,
+    "clusters": 1122,
+    "candidates": 31153
+   },
+   {
+    "from": 50,
+    "to": null,
+    "clusters": 207,
+    "candidates": 21057
+   }
+  ],
+  "largest": [
+   {
+    "size": 732,
+    "papers": 2,
+    "years": [
+     1899,
+     1902
+    ],
+    "example": "The Savannah morning news. 1902-09-06: COTTON-Savannah to Boston, per 100 pounds, 25c; to New York, per 100 pounds, zoe to dock; 2Sc lightered; to Philadelphia,"
+   },
+   {
+    "size": 684,
+    "papers": 137,
+    "years": [
+     1911,
+     1912
+    ],
+    "example": "Aberdeen herald. [volume] (Aberdeen, Chehalis County, W.T.) 1886-1917 1912-04-08: No, never. It's foolish to fear . fancied evil, when there are real and deadly"
+   },
+   {
+    "size": 487,
+    "papers": 2,
+    "years": [
+     1849,
+     1852
+    ],
+    "example": "The republic. [volume] (Washington [D.C.]) 1849-1853 1852-01-20: yIILDRE rH'S History ofthe United States from III the frtt settlement Of the country to the or "
+   },
+   {
+    "size": 427,
+    "papers": 33,
+    "years": [
+     1855,
+     1868
+    ],
+    "example": "Bloomsburg democrat. [volume] (Bloomsburg, Pa.) 1867-1869 1868-03-18: OPERATE by their powerful influence on tho \" internal visccra to purify the blood and stim"
+   },
+   {
+    "size": 402,
+    "papers": 119,
+    "years": [
+     1879,
+     1882
+    ],
+    "example": "Huntsville gazette. 1882-09-16: AWorkingmln says: \"Debt, poverty and suffering haunted me for years, caused by a sick fami y and large bills for doctoring which"
+   },
+   {
+    "size": 379,
+    "papers": 58,
+    "years": [
+     1912,
+     1913
+    ],
+    "example": "The Madison daily leader. [volume] (Madison, S.D.) 1890-current 1913-03-01: The haunting fear of sickness and is the secret terror of the working man. Health is"
+   },
+   {
+    "size": 342,
+    "papers": 1,
+    "years": [
+     1893,
+     1899
+    ],
+    "example": "The morning news. [volume] (Savannah, Ga.) 1887-1900 1899-01-05: per 100 pounds; Boston,per bale. 81 25; New York. per bale, SL00; Philadelphia, per bale. 500; "
+   },
+   {
+    "size": 308,
+    "papers": 119,
+    "years": [
+     1908,
+     1913
+    ],
+    "example": "Bismarck daily tribune. [volume] (Bismarck, Dakota [N.D.]) 1881-1916 1910-02-22: Many people oro afraid Of ghosts. Few people are afraid of germs. Yet the ghost"
+   },
+   {
+    "size": 271,
+    "papers": 1,
+    "years": [
+     1891,
+     1895
+    ],
+    "example": "The Portland daily press. 1895-06-18: GTEANTER PHANTOM will leave Portland ~ Pier t9r Freeport, touching at Falmouth Foreside, CouSenS, Great Cheheague and Litt"
+   },
+   {
+    "size": 264,
+    "papers": 1,
+    "years": [
+     1889,
+     1892
+    ],
+    "example": "The Portland daily press. 1892-06-28: STEAMER PHANTOM on and after Mon M; 2.o5 p. m. VOLTS Point $40 a. m: 2.1o. p m. Great Chebeague 7.o5 Am. 2.40 D. m. Little"
+   }
+  ]
+ }
+}

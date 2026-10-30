@@ -1,10 +1,10 @@
 {
   "year": 1957,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 51318,
   "articles": 627547,
-  "candidates": 1410,
-  "near_miss": 7064,
+  "candidates": 1468,
+  "near_miss": 7015,
   "by_term": {
     "apparition": 42,
     "banshee": 9,
@@ -12,22 +12,32 @@
     "goblin": 84,
     "haunt": 390,
     "knocking": 1,
+    "ouija": 4,
     "phantom": 152,
     "rapping": 1,
+    "seance": 16,
     "spectre": 58,
+    "spirit+medium": 22,
+    "spirit_phrase": 11,
+    "spiritualism": 25,
     "spook": 61,
     "wraith": 2
   },
   "only_by_term": {
     "apparition": 38,
     "banshee": 9,
-    "ghost": 633,
+    "ghost": 629,
     "goblin": 66,
-    "haunt": 343,
+    "haunt": 340,
     "knocking": 1,
+    "ouija": 3,
     "phantom": 145,
     "rapping": 1,
+    "seance": 7,
     "spectre": 49,
+    "spirit+medium": 16,
+    "spirit_phrase": 6,
+    "spiritualism": 22,
     "spook": 52
   },
   "by_state": {
@@ -54,12 +64,12 @@
     "District of Columbia": {
       "pages": 28734,
       "articles": 325071,
-      "candidates": 808
+      "candidates": 845
     },
     "Florida": {
       "pages": 912,
       "articles": 9400,
-      "candidates": 38
+      "candidates": 42
     },
     "Illinois": {
       "pages": 129,
@@ -69,7 +79,7 @@
     "Maryland": {
       "pages": 1535,
       "articles": 25952,
-      "candidates": 30
+      "candidates": 33
     },
     "Massachusetts": {
       "pages": 55,
@@ -84,7 +94,7 @@
     "Minnesota": {
       "pages": 808,
       "articles": 14888,
-      "candidates": 33
+      "candidates": 40
     },
     "Mississippi": {
       "pages": 747,
@@ -109,17 +119,17 @@
     "North Carolina": {
       "pages": 1178,
       "articles": 16519,
-      "candidates": 25
+      "candidates": 26
     },
     "Ohio": {
       "pages": 4354,
       "articles": 69307,
-      "candidates": 111
+      "candidates": 113
     },
     "Pennsylvania": {
       "pages": 624,
       "articles": 13041,
-      "candidates": 13
+      "candidates": 14
     },
     "Virginia": {
       "pages": 1594,
@@ -134,7 +144,7 @@
     "unknown": {
       "pages": 5611,
       "articles": 53281,
-      "candidates": 134
+      "candidates": 137
     }
   }
 }

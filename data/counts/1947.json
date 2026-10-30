@@ -1,32 +1,42 @@
 {
   "year": 1947,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 56498,
   "articles": 802878,
-  "candidates": 1712,
-  "near_miss": 9322,
+  "candidates": 1786,
+  "near_miss": 9250,
   "by_term": {
     "apparition": 20,
     "banshee": 14,
     "ghost": 786,
     "goblin": 60,
     "haunt": 524,
+    "ouija": 2,
     "phantom": 211,
     "poltergeist": 1,
     "rapping": 8,
+    "seance": 11,
     "spectre": 105,
+    "spirit+medium": 35,
+    "spirit_phrase": 19,
+    "spiritualism": 24,
     "spook": 82,
     "wraith": 7
   },
   "only_by_term": {
     "apparition": 15,
     "banshee": 9,
-    "ghost": 705,
+    "ghost": 702,
     "goblin": 52,
-    "haunt": 467,
+    "haunt": 466,
+    "ouija": 1,
     "phantom": 206,
     "rapping": 8,
+    "seance": 9,
     "spectre": 92,
+    "spirit+medium": 26,
+    "spirit_phrase": 11,
+    "spiritualism": 21,
     "spook": 56,
     "wraith": 5
   },
@@ -34,12 +44,12 @@
     "Alaska": {
       "pages": 3220,
       "articles": 36432,
-      "candidates": 48
+      "candidates": 49
     },
     "Arizona": {
       "pages": 542,
       "articles": 6371,
-      "candidates": 16
+      "candidates": 18
     },
     "Arkansas": {
       "pages": 391,
@@ -54,22 +64,22 @@
     "Delaware": {
       "pages": 806,
       "articles": 13685,
-      "candidates": 25
+      "candidates": 27
     },
     "District of Columbia": {
       "pages": 11166,
       "articles": 147003,
-      "candidates": 384
+      "candidates": 394
     },
     "Florida": {
       "pages": 2623,
       "articles": 38608,
-      "candidates": 68
+      "candidates": 69
     },
     "Illinois": {
       "pages": 1396,
       "articles": 14290,
-      "candidates": 34
+      "candidates": 39
     },
     "Maryland": {
       "pages": 1636,
@@ -84,7 +94,7 @@
     "Michigan": {
       "pages": 873,
       "articles": 10627,
-      "candidates": 16
+      "candidates": 22
     },
     "Minnesota": {
       "pages": 643,
@@ -104,22 +114,22 @@
     "Montana": {
       "pages": 2910,
       "articles": 40602,
-      "candidates": 106
+      "candidates": 108
     },
     "Nebraska": {
       "pages": 290,
       "articles": 6015,
-      "candidates": 14
+      "candidates": 15
     },
     "North Carolina": {
       "pages": 5570,
       "articles": 101976,
-      "candidates": 267
+      "candidates": 287
     },
     "Ohio": {
       "pages": 4950,
       "articles": 85545,
-      "candidates": 106
+      "candidates": 109
     },
     "Virginia": {
       "pages": 362,
@@ -129,12 +139,12 @@
     "Washington": {
       "pages": 1309,
       "articles": 18970,
-      "candidates": 31
+      "candidates": 32
     },
     "unknown": {
       "pages": 15067,
       "articles": 197408,
-      "candidates": 419
+      "candidates": 439
     }
   }
 }

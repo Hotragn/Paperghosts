@@ -1,10 +1,10 @@
 {
   "year": 1962,
-  "lexicon_version": "v1",
+  "lexicon_version": "v2",
   "pages": 53455,
   "articles": 570606,
-  "candidates": 1335,
-  "near_miss": 6395,
+  "candidates": 1401,
+  "near_miss": 6342,
   "by_term": {
     "apparition": 8,
     "banshee": 2,
@@ -12,20 +12,30 @@
     "goblin": 50,
     "haunt": 348,
     "knocking": 1,
+    "ouija": 9,
     "phantom": 111,
     "poltergeist": 1,
+    "seance": 5,
     "spectre": 95,
+    "spirit+medium": 17,
+    "spirit_phrase": 7,
+    "spiritualism": 30,
     "spook": 120,
     "wraith": 1
   },
   "only_by_term": {
     "apparition": 8,
     "banshee": 2,
-    "ghost": 616,
+    "ghost": 615,
     "goblin": 39,
     "haunt": 310,
+    "ouija": 9,
     "phantom": 107,
+    "seance": 4,
     "spectre": 83,
+    "spirit+medium": 17,
+    "spirit_phrase": 6,
+    "spiritualism": 29,
     "spook": 106
   },
   "by_state": {
@@ -37,7 +47,7 @@
     "Arizona": {
       "pages": 1484,
       "articles": 9445,
-      "candidates": 21
+      "candidates": 24
     },
     "Delaware": {
       "pages": 961,
@@ -47,7 +57,7 @@
     "District of Columbia": {
       "pages": 22929,
       "articles": 230101,
-      "candidates": 539
+      "candidates": 576
     },
     "Florida": {
       "pages": 36,
@@ -62,7 +72,7 @@
     "Maryland": {
       "pages": 1902,
       "articles": 30729,
-      "candidates": 48
+      "candidates": 51
     },
     "Michigan": {
       "pages": 419,
@@ -72,7 +82,7 @@
     "Minnesota": {
       "pages": 705,
       "articles": 15694,
-      "candidates": 41
+      "candidates": 43
     },
     "Mississippi": {
       "pages": 1473,
@@ -87,17 +97,17 @@
     "Montana": {
       "pages": 1480,
       "articles": 16459,
-      "candidates": 38
+      "candidates": 39
     },
     "North Carolina": {
       "pages": 1126,
       "articles": 14321,
-      "candidates": 29
+      "candidates": 31
     },
     "Ohio": {
       "pages": 1820,
       "articles": 22589,
-      "candidates": 86
+      "candidates": 89
     },
     "South Carolina": {
       "pages": 4,
@@ -117,7 +127,7 @@
     "unknown": {
       "pages": 14331,
       "articles": 139315,
-      "candidates": 327
+      "candidates": 342
     }
   }
 }
