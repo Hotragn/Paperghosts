@@ -108,6 +108,13 @@ Temporal runs only on the owner's machine, through the CLI dev server. The live 
 
 ### 3.3 Geocode, cluster, embed, load
 - Places are resolved against GeoNames. Every location records its precision (town, street or building) and its source. Street or building coordinates exist only when a source supplies them.
+- The title lookup by LCCN (`scripts/titles.py`, decision 34) holds:
+  - each paper's title, place and state as printed
+  - what the cataloguer supplied
+  - its place as its loc.gov title record catalogues it today, where the record was fetched
+  - its state today
+- The site shows the printed place, with what has changed since: "Charlestown, Va. (now W.Va.)". It names the record's town only where the paper's point is the record's place: "East Saginaw, Mich. (now Saginaw)".
+- A paper's point is its printed place, checked against its title record's county (`paperghosts/geo/papers.py`). A place outside that county gives way to the record's place. Where nothing agrees with the record, there is no point.
 - Printings of the same story are grouped. Counts on the site say which they count: stories or printings.
 - Stories get one embedding each, from the earliest legible printing.
 - The loader upserts by stable IDs, so re-running it is safe.

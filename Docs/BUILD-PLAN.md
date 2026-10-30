@@ -110,6 +110,7 @@ How the build runs: five phases, each split into milestones, each milestone with
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
    - And decision 31's two borderline kinds: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay. It confirms or overrules counting a first-person claim of communication with a named dead person, made in a lecture or an interview.
+   - A story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved. It never falls back on the paper's state, which put 2 of decision 34's 9 towns in the wrong place. Measure the rule on the gold set.
 2. Build the labelling page.
 3. Label the gold set before seeing any model output.
 4. Teacher labels for the training pool, with the leakage check passing.
@@ -135,6 +136,10 @@ How the build runs: five phases, each split into milestones, each milestone with
 - Geocode, cluster, embed, and load Atlas.
   - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
+  - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.
+  - Story places follow 2C's rule: a county or state the text gives, or the dateline, and never the paper's state.
+  - Measure the record check, and any further geocoder fix, on a fresh draw of papers, never on decision 34's 200. The first of two towns joined by "and" is one such fix.
+  - The title lookup by LCCN (decision 34) holds each paper's place and state once. Whether it replaces every printing's copy is `BUDGET.md`'s lever.
 - `make db-verify` runs geo, fuzzy and vector queries and checks their expected results and latencies.
 - The top-case rule, and the follow-up harvest as a second Temporal pass.
 

@@ -446,3 +446,118 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - int8 saves 66.5 MB more, but only after 2D checks it on real embeddings.
     - Turning rule 6's levers off would cost up to 206 MB.
   - **Next:** the owner's options are listed in `BUDGET.md`, and the EM takes them to the owner with the Search slot.
+
+**34. Every paper's title, place and state as printed, with its state today; and a GeoNames geocoder, checked against each paper's loc.gov title record, which puts 98.0% of papers' places right.**
+- **BUDGET.md's third scenario** (`scripts/budget_stories.py`):
+  - Each judged report counts as 1/k of a story when its v2 cluster holds k printings.
+  - In v1's candidates, eval A's 7 give 0.608 stories per printing, decision 27's ratio again.
+  - In the candidates v2 added, 17 reports give 0.802.
+  - So the top of the range is 61,960 stories, not 57,744. It needs 458.8 MB as stored, and 370.1 MB with every lever. Nothing fits beside `sample_mflix` any more, and everything still fits without it.
+- **The title parser** (`paperghosts/geo/titles.py`) gives each title string's title, and its place, county and state as printed. It also gives the place and state the cataloguer supplied in brackets, and the years.
+  - A bracket after the place adds to it.
+  - A bracket after the state, or one marked `i.e.`, supplies a place. A bracket after the state that starts with a state supplies only a state.
+  - A bracket standing alone supplies the whole place, and `[sic]` affirms what's printed.
+  - A single part is the place, unless it's an abbreviated state, so Washington and New York stay cities.
+  - It also handles `[volume]`, `[microfilm reel]`, HTML entities, and UTF-8 that was read as Windows-1252.
+- **The parser's test** (`tests/fixtures/titles.json`):
+  - The draw: 200 LCCNs at random from the candidates' 3,336 (seed "2B title parser"), each by its longest title string.
+  - Five LCCNs in that draw have no title string at all. A second seeded draw replaced them.
+  - I checked all 200 outputs by hand. 199 were right first time, and #6's `H.T.`, Hawaii Territory, was the one fault.
+  - The geocoder's draw found one more fault, in `Dakota [Dakota Territory, i.e. S.D.]`. It is fixed, and of the 4,531 title strings among the candidates, it's the only one that changed.
+  - `state_name` maps a printed state to its modern one. The exception is the territory initials that stood for two states (W.T., N.T., I.T., D.T. and Dakota), which a bracket or the record settles.
+- **Then and now:** `then_and_now` shows a state that has changed.
+  - 1835's Virginia free press is printed in "Charlestown, Va. (now W.Va.)" (sn84026784).
+  - 1834's Alexandria gazette is printed in "Alexandria, D.C. (now Va.)", because Alexandria returned to Virginia in 1846.
+  - Where the record check puts a paper's point at its record's place, the display names the record's town too: "East Saginaw, Mich. (now Saginaw)". Two spellings of one town, such as Charlestown and Charles Town, aren't a new name.
+  - A paper that moved keeps its printed town: Zajedničar stays "Allegheny, Pa.", not "now Youngstown". A first build compared the names alone, and 8 of the 14 towns it showed as "now" were moves.
+- **Title records:** 424 LCCNs give no place or state in any title string, 45 of them having no title at all. They hold 22,313 candidates.
+  - Each is asked for once from loc.gov's item JSON, at least 3.5 s apart, and cached with its URL, retrieval date and status.
+  - A 404 is cached. A server error that outlasts the retries is counted and not cached, so the next run asks again.
+  - Cloudflare's 520–524 now count as busy, and `crops.get` retries them.
+  - All 424 records are cached. 423 were found, and 1 wasn't: sn88084224, The Western star (Texas), a 404. None failed.
+  - The final build made 327 requests in 39 minutes, 7.2 s each on average. It found the other 97 already cached: the draw's papers, fetched first, and those from a first build that a 520 stopped.
+  - The records of the accuracy draw's 200 papers came next, queued after that fetch and never beside it. 23 were cached already, and 177 requests took 20 minutes. One got a 503 that outlasted the retries, so it wasn't cached, and the next run fetched it. All 200 have a record.
+  - The other LCCNs' records come in 2D, and only for the papers among stored printings, as decision 29 does for pages (`BUILD-PLAN.md`).
+- **The title lookup** (`scripts/titles.py`, `data/titles/titles.json`, the `Title` model) has one entry per LCCN: the title, the place and state as printed, what was supplied, the state today, and the two together. It also keeps the place, county and state that a fetched record catalogues today (`catalogued_place`, `catalogued_county` and `catalogued_state`).
+  - Of the 3,336 LCCNs, 2,912 take their place from a title string and 423 from a title record. One has neither: The Western star.
+  - 115 show a state that has changed.
+  - 599 have a record. 15 of those records name a town other than the printed one, because the town was renamed or merged, or the paper moved. Only East Saginaw, whose point the check takes from its record, is shown with the record's town.
+- **GeoNames** (`paperghosts/geo/geonames.py`):
+  - The data: GeoNames' US, Puerto Rico and Virgin Islands dumps of 2026-10-30, with their state and county codes.
+    - `US.zip`: 71.1 MB, 2,241,410 rows
+    - `PR.zip`: 0.3 MB, 8,277 rows
+    - `VI.zip`: 0.1 MB, 1,872 rows
+  - A territory's municipios or islands serve as its counties. No title names any other territory.
+  - `data/geonames/manifest.json` records each file's URL, retrieval date, size and sha256, and the CC BY 4.0 licence.
+  - Only populated places count. GeoNames' 107,543 "(historical)" places in class S are kept apart as ghost towns, and only a title record's county can accept one.
+  - Names compare without accents, case, punctuation or spaces, so "Charlestown" is "Charles Town", and "St." reads as Saint.
+  - Ties break in this order:
+    1. the printed county
+    2. a living place before a section, and before a historical, abandoned or destroyed one
+    3. a match by name before one by alternate name
+    4. a capital or county seat
+    5. the larger population
+    6. the lower ID
+  - The space-free names came from this check's first look at Charlestown. GeoNames lists Charlestown among the capital Charleston's alternate names, and Charleston's population won.
+- **The record check** (`paperghosts/geo/papers.py`, from the EM's review). loc.gov's title record gives each paper's city, county and state as catalogued today.
+  1. The printed place is geocoded in its modern state, the cataloguer's bracketed place first.
+  2. It is checked against the record's county: GeoNames' county (admin2) has to be one the record names, in one of the record's states. A paper that moved has all its counties and states.
+  3. A place outside the record's county, or no place at all, gives way to the record's place, geocoded in its county. The printed place stays for display, with the record's town: "East Saginaw, Mich. (now Saginaw)".
+  4. Failing that, a ghost town of the record's name in the record's county counts, flagged historical. Clifton, S.D. is the case.
+  5. Failing that, there is no point. A pin that disagrees with the record is the dangerous kind of answer.
+  - A record that names no county GeoNames has in its state can't check a place. The printed place stands, or, where that resolves to nothing, the record's place, unchecked.
+    - Alaska is one such case: loc.gov files Seward under "Seward", and GeoNames files it under the Kenai Peninsula Borough.
+    - Connecticut is another: GeoNames files its places under planning regions now.
+  - **I made two of the check's rules on these 200:**
+    - Alaska's rule. The first run, with 23 records cached, turned Seward from a right answer into no point.
+    - Reading the record's `location_state` list, as your review said, instead of the one state in its `location_str`. Zajedničar (Allegheny, Pa.) moved to Youngstown, Ohio, and with Ohio alone, the check replaced a right answer with Youngstown.
+- **Accuracy on the papers** (`scripts/geocode_check.py`, `eval/results/phase2b/geocoder.json`, answers in `geocoder_expected.json`):
+  - The draw: 200 distinct (place, state) pairs, by walking the papers in seeded order (seed "2B geocoder"). I checked each by hand.
+  - Each pair is geocoded twice: by its printed place alone, and with the record check against its paper's record.
+  - **Without the record check, 194 are right: 97.0% (93.6–98.6%).** 195 resolve, and 194 of those are right: 99.5% (97.2–99.9%). The one wrong pin is Bloomington.
+    - Ponce, P.R. is right now, because the Puerto Rico dump is an input.
+    - Before the dump, 193 were right (96.5%). Before the parser fix the draw prompted, 192 were (96.0%).
+  - **With the record check, 196 are right: 98.0% (95.0–99.2%).** 198 resolve, and 196 of those are right: 99.0% (96.4–99.7%).
+    - The check settles East Saginaw, under Saginaw, and Clifton, as a ghost town.
+    - **It leaves 2 wrong pins, one more than without it:**
+      - Bloomington still. loc.gov's own record puts Bloomington in Story County: it names Story and Muscatine, so the check agrees with the wrong Bloomington. Its record can't catch it.
+      - Norfolk and Portsmouth, which the check adds. The record names no county and gives Portsmouth as its place, so the unchecked rule pins Portsmouth, about 2 km from Norfolk. Its notes say the paper was published in both. I kept my expected answer, Norfolk, from the title.
+    - No printed place that resolved was replaced.
+  - What the records made of the 200:
+
+    | Outcome | Papers |
+    |---|---|
+    | agrees | 177 |
+    | has no county to check: independent cities, D.C., Alaska and Ponce | 14 |
+    | can't be checked: Connecticut's planning regions, and Seward | 4 |
+    | found what the printed place didn't: East Saginaw | 1 |
+    | a ghost town in the record's county: Clifton | 1 |
+    | found what the printed place didn't, unchecked: Norfolk and Portsmouth | 1 |
+    | disagrees, and its own place isn't in GeoNames: Lardo and New Oregon | 2 |
+
+  - Only one of the three merged towns is catalogued under its successor: East Saginaw, under Saginaw.
+    - The Long Valley advocate's record names Lardo and Roseberry, in Idaho County, its county then. GeoNames has Roseberry and McCall in Valley County.
+    - New Oregon's record names New Oregon itself, which GeoNames doesn't have.
+    - Both stay as no point, which is the safe failure.
+  - Some are right under an old name or a merger: Allegheny is Pittsburgh, and Daytona is Daytona Beach. Fort Wrangel, Sumterville, North Yakima and Langston City are old names their towns list.
+  - **The failures, by kind:**
+
+    | Kind | Without the check | With it | Cases |
+    |---|---|---|---|
+    | merged into a town that doesn't list its name | 3 | 2 | East Saginaw into Saginaw, which the check settles; Lardo into McCall; New Oregon into Cresco |
+    | renamed, with its old name now another town's | 1 | 1 | Bloomington, Iowa, Muscatine's name until 1849: a wrong pin either way, on a living Bloomington in Story County |
+    | two towns named as one place | 1 | 1 | "Norfolk and Portsmouth, Va.": no point without the check, and a pin on Portsmouth with it |
+    | a ghost town filed outside populated places | 1 | 0 | Clifton, S.D., which GeoNames has as "Clifton (historical)" in class S |
+    | outside GeoNames' US dump | 0 | 0 | Ponce, P.R., right since the Puerto Rico dump became an input |
+
+  - **These 200 are in-sample for the check.** Its fixes come from their failures, through the EM's review, and so do two of its rules. 2D measures it, and any further fix, on a fresh draw (`BUILD-PLAN.md`).
+- **The 24 judged reports' story places,** as their text gives them: an early look at what the reader will extract.
+  - The text gives a town and a state for only 3. The geocoder puts all 3 right (43.8–100%).
+  - 9 name a town but no state. Datelines like "CHICAGO, Jan. 1" are the usual case.
+  - 8 name no town at all, or only a venue such as "the National Theater".
+  - 4 are abroad: Jersey, Peking, Blickling and France.
+  - **For the 9 with a town only, the paper's own state is a poor guess:**
+    - right for 3, the local stories at Middlebury, Waterloo and Chittenden
+    - a wrong place for 2: Adamsville lands in Pennsylvania, and Easton in Indiana matches West Newton, which lists Easton as an alternate name
+    - nothing for 4: Chicago in Connecticut, Kansas and Utah papers, and Bordentown in a Michigan one
+  - **So a story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved, and it never falls back on the paper's state** (the EM's review). 2C measures the rule on its gold set, and 2D applies it (`BUILD-PLAN.md`).
