@@ -1,0 +1,35 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M65A46NJSGN6MRGCVXFYVVP3",
+  "strategy": "manual-commit",
+  "branch": "phase-2a-archive",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/DECISIONS.md",
+    "README.md",
+    "paperghosts/ingest/prefilter.py",
+    "paperghosts/ingest/stream.py",
+    "paperghosts/ingest/year.py",
+    "paperghosts/workflows/ingest.py",
+    "paperghosts/workflows/worker.py",
+    "tests/test_ingest_workflow.py",
+    "tests/test_prefilter.py",
+    "tests/test_stream.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 56,
+    "cache_creation_tokens": 63526,
+    "cache_read_tokens": 22669559,
+    "output_tokens": 49470,
+    "api_call_count": 27
+  }
+}

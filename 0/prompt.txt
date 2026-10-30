@@ -1,0 +1,9 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 2A.3, ingest workflow: step 2A.2 passed. Build `IngestArchiveWorkflow` from `ARCHITECTURE.md` section 3.1:
+- one activity per year file, heartbeating its progress, with a retry policy
+- outputs written to a temp file and then renamed, plus a manifest for each year
+- a year is skipped when its manifest's lexicon and code versions match
+- concurrency bounded at 4 to start: one core prefilters about 21 MB/s, so 4 cores roughly match the 80 MB/s download
+- `make ingest YEARS=...` runs it
+Test the skip and retry paths in Temporal's test environment. Then run it on three years: 1850, one small early year, and one large year from 1897–1920. Reply with the seconds, candidates, output size and peak memory for each year, then commit.
+</cross-session-message>
