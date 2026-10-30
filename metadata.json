@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M672YP3BD6N5BMVG2YQ33ADE",
+  "strategy": "manual-commit",
+  "branch": "phase-2b-data-layer",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "paperghosts/geo/titles.py",
+    "tests/test_titles.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 2298,
+    "cache_creation_tokens": 3381283,
+    "cache_read_tokens": 497965258,
+    "output_tokens": 2180834,
+    "api_call_count": 1103
+  }
+}
