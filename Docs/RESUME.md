@@ -6,7 +6,12 @@ Hard date: the site must be live on Oct 31.
 
 ## Next step
 
-**Phase 2B: schemas and data layer** (`BUILD-PLAN.md` section 4), on branch `phase-2b-data-layer`. Step 2B.1 covers the models, `make db-init` and the storage budget. Step 2B.2, the geocoder and LCCN parser, follows once the EM has reviewed it. Lexicon v2 keeps all five rules (decision 31).
+**Phase 2B: schemas and data layer** (`BUILD-PLAN.md` section 4), on branch `phase-2b-data-layer`.
+- **Step 2B.1 is built**, and waits on the EM's review (decisions 32 and 33): the models and validators, the BinData check, `make db-init` and `BUDGET.md`.
+  - **Pending:** `places_search`. `sample_mflix` holds M0's third Search slot, and freeing it is the owner's call.
+  - **The owner's call:** what to do if the reader's real count needs more storage than M0 has (`BUDGET.md`). The EM takes both to the owner.
+- **Step 2B.2,** the geocoder and LCCN parser, follows the review.
+- Lexicon v2 keeps all five rules (decision 31).
 
 Needs the owner's yes when we get there:
 - the Render deploy

@@ -160,50 +160,82 @@ sequenceDiagram
 
 ## 4. Data model (MongoDB Atlas, database `paperghosts`)
 
-Pydantic models in the Python package are the single source of truth. Atlas JSON Schema validators are generated from them.
+The Pydantic models in `paperghosts/schemas` are the single source of truth.
+- `make db-init` generates Atlas's JSON Schema validators from them (strict, with errors) and builds the collections and indexes below (`paperghosts/store/db_init.py`).
+- Atlas holds stories, places, cases and stats only, built to M0's limits and decision 32's rules.
+- A field with no value is left out of the stored document, not stored as null.
 
 **`reports`:** one document per story.
-- `_id`, plus `primary_article_id`
-- `printings[]`: article ID, LCCN, paper title, publication place, state, date, scan location, `bbox_list`, crop URLs
-- `headline` and `text` (the OCR of the primary printing, untouched), `display_headline` (the headline without the masthead lines that lead it), `date` (earliest printing), `year`, `month_day`
-- `kind` (always `report` in this collection)
-- `fields`: each is `{value, quote, verified, score}`:
+- `_id`, which is `r_` plus the primary article ID, and `primary_article_id`, the earliest printing's
+- `printings[]`: compact references (decision 32, rule 6), built by `paperghosts/store/printings.py`. Each has:
+  - article ID, LCCN, paper title, publication place, state and date
+  - edition, reel, issue and frame, from its member name. The issue is the date and a two-digit edition.
+  - page, from the scan record only, when it has one
+  - the page's IIIF `service`. It comes from the scan's batch path, or else only once a check confirms the page, because a member name can point one frame off (decision 33).
+  - `bbox_list`
+
+  Crop URLs are derived from `service` and `bbox_list` when a printing is read, never stored, and a printing keeps no text of its own.
+- `headline` and `text`, the OCR of the primary printing, untouched
+- `display_headline`: the headline without the masthead lines that lead it
+- `date` (the earliest printing's), and `year`, `month_day` and `decade`, which the model checks against it
+- `kind`, always `report` in this collection
+- `fields`: each is `{value, quote, verified, score}`. A value needs a quote that verified, and both the model and Atlas's validator enforce it. A field without one is "not stated" and has no value.
   - `place`
   - `people[]`
   - `seen`
   - `outcome`: unexplained, explained, hoax or unknown
-  - `specific_place`
-  - `place_type`: house, church, cemetery, inn or hotel, road or bridge, public building, ship, or other
-  - `precision`: town, street or building
-- `location`: GeoJSON point, with `location_precision` and `location_source`
-- `place_id`, `town`, `state`
-- `embedding`
-- `reader`: model, adapter version, prompt version
-- `lexicon_terms[]`
-- `case_id`, when an investigation exists
+  - for walks:
+    - `specific_place`
+    - `place_type`: house, church, cemetery, inn_or_hotel, road_or_bridge, public_building, ship or other
+    - `precision`: town, street or building
+- `location`: a GeoJSON point, with `location_precision` and `location_source`
+- `place_id`, `town` and `state`
+- `embedding`: a BinData vector of 384 dimensions, float32 or int8, never an array of doubles (rule 6)
+- `versions`: the code's git SHA, and the versions of the lexicon, the reader's model, its adapter and its prompt (SRS section 5)
+- `lexicon_terms[]`: the lexicon rules that matched, by name
+- `case_id`, which is `c_` plus the report's `_id`, when an investigation exists
 
-**`places`:** GeoNames ID, name, alternate names, state, location, report count, first and last year.
+**`places`:** `_id` is the GeoNames ID. Each place also has its name, alternate names, state, location, report count, first and last year, and versions.
 
 **`cases`:**
-- `report_id`
-- `claims[]`: each with its text, the clippings it cites (article ID, quote, verified) and a confidence
-- `followups[]`: each with its relation (follow-up, debunking, arrest, moved out, inquest or death notice), date, paper, quote and crop URLs
-- `person`: name, death-notice article, link grade and reasons
-- `then_now`: the "then" side; the "now" items, each with source, URL, retrieval date and quote; and differences, each backed by both quotes
+- `_id`, which is `c_` plus the report ID, and `report_id`
+- `claims[]`: each has its text, a confidence, and at least one clipping it cites (article ID, quote, verified)
+- `followups[]`: each is a printing reference with its relation and quote. The relation is follow_up, debunking, arrest, moved_out, inquest or death_notice. Crop URLs are derived as a report's are.
+- `person`: name, death-notice article, link grade (strong, possible or weak) and reasons
+- `then_now`:
+  - the "then" side
+  - the "now" items, each with source, URL, retrieval date and quote
+  - the differences, each backed by both quotes
 - `run`: model, provider, steps, tokens, cost, latency, Sentry trace ID and Temporal workflow ID
+- `versions`
 
-**`stats`:** one document per year and per state: pages, articles, candidates, stories, printings, and reports per million articles.
+**`stats`:** one document per year (`_id` `year:1875`) and one per state (`state:New York`). Each holds:
+- pages, articles, candidates, stories and printings
+- reports per million articles
+- stories by outcome, precomputed for the reel so that outcome needs no index (rule 4)
 
-**Indexes:**
+**Indexes:** the category fields get none of their own (rule 4): outcome, kind, place type, precision, decade and state.
 - `reports`:
   - a 2dsphere index on `location`
   - compound `{place_id, date}` and `{month_day}`
-  - an Atlas Search index on headline, text, field values and town, used with fuzzy matching
-  - a Vector Search index on `embedding`, with filters on state and decade
-- `places`: 2dsphere, plus Atlas Search autocomplete on names
-- `cases`: `{report_id}`
+  - a partial unique index on `case_id`, which holds only the 30–60 investigated stories
+  - Atlas Search `reports_search`, a static mapping (rule 5) used with fuzzy matching:
+    - headline, display headline, text, town and the reader fields' values, as strings
+    - state, and the reader's outcome, place type and precision, as tokens
+    - decade, as a number
+    - no printings and no quotes
+  - Vector Search `reports_vector` on `embedding` (384 dimensions, cosine), with filters on state and decade
+- `places`:
+  - 2dsphere on `location`
+  - Atlas Search autocomplete `places_search` on name and alternate names, with state as a token
+- `cases`: unique `{report_id}`
 
-**Storage budget:** if the cluster is the free tier (512 MB), only stories, places, cases and stats go to Atlas. Candidates and reader outputs stay local, and the article says so. The real per-document size is measured in Phase 2B before anything is loaded.
+M0 allows three Search indexes in the whole cluster, and the plan uses all three. `sample_mflix.movies` holds one (`default`), so `places_search` waits on the owner (decision 33).
+
+**Storage budget:**
+- M0 counts data size plus index size against its 512 MB.
+- Candidates and reader outputs stay local, and the article says so.
+- `BUDGET.md` has the measured bytes per story and how many stories fit (decision 33).
 
 ## 5. Repo layout
 

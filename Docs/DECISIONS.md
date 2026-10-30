@@ -356,3 +356,93 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Without the 2 borderline reports among the 200, recall is 83%, and at least 47%.
   - **Caveat:** v2's rules were chosen from this screen's misses, so it catches them by construction, and the 84% is optimistic. 2C's eval B gives the independent figure with the reader's screen of the random reservoirs. Decision 30's caveat also stands: the screen sees only reports that hold a flag word or a near-miss term.
 - Cost: no money, only machine time and 340.4 GB of downloads. The reader's job grows from 1,050,459 candidates to 1,236,122 (+17.7%). The Tinker credit check weighs that before the full pass.
+
+## Phase 2B (2026-10-30)
+
+**32. Atlas is the serving index, not the archive. It is built to M0's limits and to nine rules.**
+- **M0's limits**, from the MongoDB docs as the EM checked them on 2026-10-30, in the EM's Atlas notes (`ATLAS-PLAN.md`):
+  - **Storage:** 0.5 GB, a hard limit. It counts uncompressed BSON plus indexes. `sample_mflix` already uses about 239 MB: Phase 1 measured 239,185,920 bytes.
+  - **Search indexes:** 3 in all, Search and Vector Search together. The plan uses exactly three: Search and Vector Search on `reports`, and autocomplete on `places`.
+  - **Throughput:** 100 operations a second, throttled above that.
+  - **Network:** 10 GB in and 10 GB out per rolling 7 days.
+  - **Other:** 500 collections, and 32 MB for a sort in memory.
+- **The rules:**
+  1. Atlas holds stories, places, cases and stats only. The 340 GB is streamed and never stored, and candidates, samples and reader labels stay in local files, one per year.
+  2. The pipeline is partitioned by year. The year is the Temporal activity, the unit of retry and the cache key. The static export is partitioned by state and then town, with one more file per calendar day for "Printed on this night".
+  3. One collection per entity, never one per year. Collections per year would multiply the indexes and split the town drawer's queries across years. Nor could each have a Search index under the cap of 3.
+  4. Category fields get no index of their own: outcome, kind, place type, precision, decade and state.
+     - They are token fields in the Search index and filter fields in the vector index.
+     - The reel's counts are precomputed into `stats`.
+     - A partial index on `case_id` covers only the 30–60 investigated stories.
+  5. Atlas Search mappings are static, not dynamic. They map the fields that are searched or filtered, and nothing else: no printings and no quotes.
+  6. Heavy fields stay small:
+     - **Embeddings** are BinData vectors (float32 or int8), never arrays of doubles. A 384-dimension embedding takes about 4.8 KB as an array, 1.5 KB as float32 and 0.4 KB as int8. Decision 33 checks that BinData vectors work on M0.
+     - **Crop URLs** are derived from the scan location and the boxes when they are read, not stored.
+     - **Printings** are compact references embedded in their story.
+  7. Loading:
+     - one activity per year
+     - `bulk_write` of `ReplaceOne(upsert=True)` on stable `_id`s, with `ordered=False`, about 1,000 documents a batch, and a retry when throttled
+     - indexes built after the load
+     - `db-verify` run only once the Search and Vector indexes can be queried
+  8. The budget comes from measurement. 2B measures the real bytes per story, and the free space divided by that says how many stories fit with full text (`BUDGET.md`).
+     - The free levers in rule 6 come first. Dropping `sample_mflix` is the owner's call.
+     - Quality is never cut to fit. If full-text fuzzy search over every story won't fit, the options go to the owner rather than search shrinking to excerpts. One such option is the Flex tier, which costs money and needs the owner's yes.
+  9. To weigh in 2B and 2C: cluster reprints before the reader, read one printing per cluster, and split gold, dev and train by cluster. That means less work for the reader and no leakage.
+
+**33. The data layer is built: models, validators generated from them, BinData embeddings and `make db-init`. M0's third Search index waits on the owner.**
+- **Models** (`paperghosts/schemas`): `Report`, `Place`, `Case` and `Stat`, as ARCHITECTURE section 4 now gives them.
+  - **No nulls:** a document is stored without its empty fields.
+  - **IDs:** the model checks SRS section 5's, which a validator can't: a report is `r_` plus its primary article, and a case is `c_` plus its report.
+  - **`versions`:** every record carries the code's SHA and whichever lexicon, model, adapter and prompt made it. It replaces section 4's `reader`.
+  - **Embeddings:** an embedding must be a float32 or int8 BinData vector of 384 dimensions.
+  - **Cross-field rules:** the model also checks three more.
+    - A stated value needs a quote that verified. Atlas's validator enforces this one too.
+    - A report's year, month_day and decade must be its date's.
+    - A printing's issue must be its date and its edition.
+- **Printings** (`paperghosts/store/printings.py`), checked over all 1,236,122 v2 candidates (the EM's review):
+  - **Location:** a printing is located by its member name, as `1910-04-12_p8_sn84022472_0029586686A_1910041201_0396.json` shows. That gives the date, a page token, the LCCN, the reel, the issue (the date and a two-digit edition) and the frame.
+    - Every member name parses, and every issue is its date and two digits.
+    - So edition, reel, issue and frame are required.
+  - **LCCN:** 10,871 records (0.88%) have none, and those take the member's. Every record that has one agrees with its member name.
+  - **Page:** the page comes from the scan record only, where it is a number for 19.9% of candidates. It is never taken from the member name's page token.
+    - In 1910, the article ID and the member name differ only in that token, for 18,082 of 25,346 candidates (71.3%). Their date, LCCN, reel, issue and frame always agree.
+    - In those candidates the member gives a page number that the scan record doesn't confirm: the scan says "na" or nothing.
+    - Where the scan's page is a number, the two always agree.
+  - **Service:** the IIIF service comes only from the scan's batch path, which 68.0% of candidates have. Where a candidate has both, the batch path's frame differs from its member's in 20,643 (2.5%), and the reel in 396.
+    - Example: the member `…_1910021001_0164` and the jp2 `sn82016187/100493962/1910021001/0163.jp2`.
+    - So a page located without a batch path can be the wrong one. Its crop waits for a check, whose error 2B's reel-map validation measures (`BUILD-PLAN.md`).
+- **Validators** (`paperghosts/store/validators.py`): generated from the models.
+  - Atlas reads draft 4 with `bsonType`, so references are inlined, `const` becomes `enum`, integers become int or long, and a tuple becomes `items` with `additionalItems: false`.
+  - A keyword Atlas lacks raises an error.
+  - The collections validate strictly, with errors.
+  - **Tests:** 27 invalid documents cover required fields, enums, GeoJSON, a printing with no frame, a stated value with no verified quote, an embedding stored as an array, and stored crop URLs. The model, an offline checker in the tests and Atlas itself each reject every one, Atlas with error 121 (the test marked `atlas`). The valid documents pass all three.
+- **BinData vectors work on M0** (`scripts/bindata_check.py`, `eval/results/phase2b/bindata_check.json`):
+  - The test set: 2,000 vectors of 384 dimensions, in 40 clusters, each stored as float32 and as int8, under one Vector Search index.
+  - **Exact search:** for both types, Atlas returns numpy's 10 nearest neighbours in the same order for all 20 queries. Its scores are within 1e-7 of (1 + cos)/2.
+  - **Approximate search:** recall is 1.0 at 200 candidates.
+  - **Sizes:** an embedding takes 4,898 BSON bytes as an array of doubles, 1,554 as float32 and 402 as int8.
+  - **Cleanup:** the index was queryable in 28 s. The scratch collection and its index were then removed.
+- **`make db-init`** (`paperghosts/store/db_init.py`):
+  - It builds the four collections, their validators, section 4's indexes and the three Search indexes, as static mappings in code.
+  - It touches only database `paperghosts`, and in it only the collections in the plan. Phase 1's `skeleton` is left as it is.
+  - Each change to the models made one run update the validators it changed. The run after printed "nothing to change", which was true of the final model too.
+- **The third Search index can't be created yet.**
+  - M0's cap of three counts every database in the cluster, and `sample_mflix.movies` holds a Search index named `default`. So `places_search` isn't created.
+  - `make db-init` names the index it couldn't create, and exits 1 instead of stopping halfway.
+  - Freeing the slot is the owner's call, as dropping `sample_mflix` is (decision 32, rule 8). The EM is taking it to the owner with the budget.
+  - `places_search` stays in the code, so db-init creates it once there's a slot. Until then, it's pending.
+  - The cluster also holds a database `cubby`, with one collection, which isn't this project's. Nothing here touches it.
+- **The budget** (`BUDGET.md`, `eval/results/phase2b/budget.json`, `scripts/budget_probe.py`):
+  - **What counts:** Atlas counts data size plus B-tree index size, from `dbStats`, against the cap. Search indexes aren't in `dbStats`, and Free clusters have no Search size metrics, so by the docs they don't count. No page says so outright.
+  - **Free space:** of the 500,000,000 bytes planned for, 350.5 MB is free with `sample_mflix` and 499.4 MB without it.
+  - **A story's size:** 6,199 bytes before its printings, 454 per printing and 508 of indexes. Each figure is the larger of the 1,000 sampled candidates' and the 24 judged reports'.
+  - **Index sizes:** these come from a fresh scratch collection that was dropped afterwards. `reports` kept its index pages after an earlier probe run, which made its own sizes useless.
+  - **The top of the range** is 95,203 printings:
+    - At v1's ratio of 57,744 stories, it needs 430.5 MB as stored. That fits only without `sample_mflix`, or with every lever including int8 (346.9 MB).
+    - At one story per printing, it needs 681.8 MB, which M0 can't hold in any form. The smallest form is 552.9 MB.
+  - **The point estimates** of 30,183 stories need 225 MB, which fits either way.
+  - **The levers:**
+    - int16 boxes, the title lookup and the derived headline save 17 MB at the top of the range, all without loss.
+    - int8 saves 66.5 MB more, but only after 2D checks it on real embeddings.
+    - Turning rule 6's levers off would cost up to 206 MB.
+  - **Next:** the owner's options are listed in `BUDGET.md`, and the EM takes them to the owner with the Search slot.

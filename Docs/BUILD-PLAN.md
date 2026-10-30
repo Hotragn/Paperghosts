@@ -90,6 +90,9 @@ How the build runs: five phases, each split into milestones, each milestone with
   - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31).
   - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
   - Flag every reel that maps to more than one batch, such as a reissued ver01 and ver02.
+  - Check a page located without a batch path before its crop is shown, and measure the check's error in the validation. One way is the scan's height and width against the IIIF `info.json`, and another is its OCR.
+    - The check is needed because a member name can point at the wrong page. Where a candidate has both, its member's frame differs from its batch path's in 2.5% of them, and its reel in 396 (decision 33).
+    - The batch path wins wherever it exists.
 - No loc.gov lookups yet for the 27,817 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
   - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
   - Cache each answer, which `page_service` doesn't do yet, so no page is looked up twice.
@@ -130,6 +133,8 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2D: load, cluster and harvest
 **Persona:** data engineer.
 - Geocode, cluster, embed, and load Atlas.
+  - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
+  - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
 - `make db-verify` runs geo, fuzzy and vector queries and checks their expected results and latencies.
 - The top-case rule, and the follow-up harvest as a second Temporal pass.
 
