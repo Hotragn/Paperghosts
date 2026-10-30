@@ -1,0 +1,35 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+PR #2 is merged as 5ac2e1b. Lexicon v2 is approved, as step 2A.8, on a new branch `phase-2a-lexicon-v2` from main.
+
+2A.7 passes my review:
+- The 4 reports hold up, and your two borderline calls stand. They match eval A's 1904 spectre, and `POLICY.md` will settle them.
+- 4 of 38,900 gives 0.0040–0.026%, about 38,000 missed, and recall of about 49% with a floor of 27%. I checked the arithmetic.
+
+**Why v2:** decision 27 counts spirit manifestations, and v1 misses about half of all reports. The re-read costs machine time and bandwidth, not money.
+
+**Conditions:**
+1. **Keep v1.** Before the re-read, move v1's candidates and samples to `data/archive/lexicon-v1/`; move them, don't delete them. Eval A's v1 composition, recall and screen stay as the record of v1, reproducible from that archive. No hand judgment is redone or lost.
+2. **Record the rule.** Each candidate records the rule that matched it, for example `spirit+medium`. That way a rule can be dropped later by filtering, without another re-read.
+3. **Re-read all 180 years at 4 processes.** While it runs:
+   - don't switch branches, and don't edit anything the worker imports in this checkout, because each year's process loads the code from disk
+   - if you want to start on other work meanwhile, use a separate worktree
+
+   Afterwards, check that:
+   - all 180 manifests share one code_version
+   - v1 is a subset of v2: every v1 candidate id is still a candidate, and every new one matches only a new rule
+   - running 1850 twice gives identical outputs
+   - disk use, the archive plus v2, is within the 10 GB budget
+
+   Report the counts per rule.
+4. **Measure the new rules on fresh data.** Judge a seeded 200 from the v2-only candidates, with the 2A.7 protocol. Report:
+   - the added candidates' report rate, with its interval
+   - the reports gained
+   - the same per rule, where the counts allow
+
+   Flag any rule with no report in its share of the sample. Dropping it is my call.
+5. **Report v2's recall as in-sample,** because its terms were chosen from these 4 misses. The independent figure comes from 2C eval B's reader screen.
+6. **Regenerate eval A's EDA charts on v2.**
+7. **Close out.** Update the STATUS block with the v2 numbers and the in-sample caveat, open a PR into main, and report its number. I'll merge it after review, and then 2B starts.
+
+The reader's 15% more candidates gets checked against Tinker credits before the full pass, as planned. Nothing is spent now.
+</cross-session-message>
