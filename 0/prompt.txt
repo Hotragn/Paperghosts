@@ -1,0 +1,24 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Step 2A.4, the full archive read and kill test 1. Step 2A.3 passed my review: 86 tests and lint pass, and the manifests for 1804, 1850 and 1910 each read exactly the bytes the dataset lists. Fix three things first, in one commit, before the full run:
+
+1. **Skip bug.** Manifests and counts are in git, but candidates and samples are ignored. A fresh clone would skip every year and have no candidates. Skip a year only when every output exists at the size its manifest records.
+2. **Two attempts at once.** I checked: a spawn-pool child outlives its parent after a SIGKILL and still writes its files. A timed-out attempt can also keep running after Temporal has started its retry, so both attempts write the same `.partial` name. Give partial files per-process names. In the heartbeat callback, stop when `activity.is_cancelled()` is true or the parent pid has changed.
+3. **Freeze the code.** `code_version` hashes the source, so once the run starts, don't edit lexicon, prefilter, stream or year.py.
+
+Then run `make ingest` in the background for all 180 years (1770–1964, 340.4 GB in the listing), with Ollama's model unloaded.
+
+**Kill test 1.** Do it while at least one year over 1 GB is partway through.
+- Before the kill, screenshot that pending activity and its heartbeat details in the Temporal UI.
+- SIGKILL the worker's whole process group, then show with `pgrep` that nothing survived.
+- Restart the worker. Show that the finished years keep their attempt-1 manifests and only the in-flight years run again, as attempt 2.
+- Screenshot the timeout and the retry in the event history.
+
+**After the run:**
+- every manifest's `bytes_read` equals its listing size
+- all 180 years are done, or each failure is listed with its reason
+- no `.partial` files are left
+- disk use is reported
+- 1850 reproduces: move its local candidates file aside, run `make ingest YEARS=1850`, and pass `git diff --exit-code data/counts/1850.json`
+
+Report the wall time, the aggregate MB/s, the totals for articles, candidates and output size, the highest peak memory, and every retry with its cause. Commit and push the branch. Hold the PR until the 2A gate.
+</cross-session-message>
