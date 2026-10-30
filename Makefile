@@ -1,0 +1,33 @@
+.PHONY: setup lint test web keys temporal worker smoke api app ingest eval db-init db-verify numbers
+
+setup:
+	uv sync --locked
+	pnpm --dir web install --frozen-lockfile
+
+lint:
+	uv run ruff check .
+	uv run ruff format --check .
+	pnpm --dir web lint
+	pnpm --dir web exec tsc -b
+
+test:
+	uv run pytest
+
+web:
+	pnpm --dir web dev
+
+# Later targets fail on purpose until their phase builds them.
+keys temporal worker smoke api app:
+	@echo "make $@ is built later in Phase 1"; exit 1
+
+ingest eval:
+	@echo "make $@ is built in Phase 2A"; exit 1
+
+db-init:
+	@echo "make $@ is built in Phase 2B"; exit 1
+
+db-verify:
+	@echo "make $@ is built in Phase 2D"; exit 1
+
+numbers:
+	@echo "make $@ is built in Phase 5A"; exit 1

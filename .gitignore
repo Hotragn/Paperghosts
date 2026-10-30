@@ -15,7 +15,6 @@ node_modules/
 .DS_Store
 *.log
 
-# bulk data stays local
-data/raw/
-data/cache/
-data/candidates/
+# bulk data stays local; only the small manifests are committed
+data/*
+!data/manifests/
