@@ -1,0 +1,10 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+The Phase 1 gate passed: I verified a fresh clone, CI, and that the STATUS numbers match the JSON. PR #1 is waiting for the owner to merge it, so cut `phase-2a-archive` from `phase-1-scaffold`, stacked on it.
+
+Step 2A.1, lexicon and prefilter:
+- Write lexicon v1 (ghost terms plus common OCR misreadings) and the near-miss lexicon from `ARCHITECTURE.md` section 3.1.
+- Favour recall; triage and the reader handle precision later.
+- Add unit tests for hits, misses and OCR variants.
+- Run the prefilter over a streamed `faro_1850`.
+Reply with the candidate count, the count per term, and 15 random candidates (the headline plus the first line of each), so I can spot-check them. Don't build the workflow yet.
+</cross-session-message>
