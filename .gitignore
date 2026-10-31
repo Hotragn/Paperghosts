@@ -19,3 +19,7 @@ node_modules/
 data/*
 !data/manifests/
 !data/counts/
+# GeoNames' dump stays local, and its manifest is committed
+!data/geonames/
+data/geonames/*
+!data/geonames/manifest.json

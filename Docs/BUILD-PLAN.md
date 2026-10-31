@@ -86,13 +86,18 @@ How the build runs: five phases, each split into milestones, each milestone with
 - The reprint-clustering design, and its evaluation set:
   - Sample per candidate as well as per cluster. Eval A's check drew clusters uniformly, so 11 of its 20 pairs came from clusters of 2 printings, and none of the 157 clusters of 50 or more was checked.
   - Hand-check the largest clusters for chaining, where shared runs join stories that aren't the same.
+  - Decision 36 builds the stories: eval A's links, but each printing must match its story's first printing directly. It's measured on a frozen set of 667 pairs.
 - The reel-to-batch map (decision 29):
-  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31).
+  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31), and 370,949 with the samples' batch paths (decision 35).
   - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
   - Flag every reel that maps to more than one batch, such as a reissued ver01 and ver02.
-- No loc.gov lookups yet for the 27,817 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
+  - Check a page located without a batch path before its crop is shown, and measure the check's error in the validation. One way is the scan's height and width against the IIIF `info.json`, and another is its OCR.
+    - The check is needed because a member name can point at the wrong page. Where a candidate has both, its member's frame differs from its batch path's in 2.5% of them, and its reel in 396 (decision 33).
+    - The batch path wins wherever it exists.
+    - Decision 35 found the opposite for the frame. Where only the frame differs, the member's frame was the page in 18 of 18, and the stored service now takes it (the EM's call). Any page whose member and batch path disagree is checked before its crop is shown.
+- No loc.gov lookups yet for the 24,119 candidates on the 1,000 reels the map doesn't cover (decision 35). At 20 a minute they would take most of a day, and most won't be reports.
   - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
-  - Cache each answer, which `page_service` doesn't do yet, so no page is looked up twice.
+  - `page_service` caches each answer, one per issue, so no page is looked up twice (decision 35).
 
 **Gate**
 - Schema tests pass, and `make db-init` can run twice.
@@ -103,9 +108,12 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2C: the reader
 **Persona:** ML specialist.
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
+   - Gold, dev and train split by story id, a story's first printing's article id (decision 36). The reader reads each story's first printing, and its members at least 25% longer.
+   - The gold set's term strata include each of lexicon v2's five rules. That's how ouija, kept with 0 reports in its 6 sampled candidates, gets measured (decision 31).
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
    - And decision 31's two borderline kinds: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay. It confirms or overrules counting a first-person claim of communication with a named dead person, made in a lecture or an interview.
+   - A story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved. It never falls back on the paper's state, which put 2 of decision 34's 9 towns in the wrong place. Measure the rule on the gold set.
 2. Build the labelling page.
 3. Label the gold set before seeing any model output.
 4. Teacher labels for the training pool, with the leakage check passing.
@@ -129,6 +137,18 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2D: load, cluster and harvest
 **Persona:** data engineer.
 - Geocode, cluster, embed, and load Atlas.
+  - Cluster with decision 36's stories at its tuned 0.25. Before loading, measure two changes on a fresh draw, never on decision 36's frozen set:
+    - the body's links added to the blocking. Its probe found 76 of 80 such pairs to be one story, outside eval A's links.
+    - a floor on the share of the longer printing. Three large clusters still join two texts that each hold a short first printing.
+  - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
+  - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
+  - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.
+  - Story places follow 2C's rule: a county or state the text gives, or the dateline, and never the paper's state.
+  - A crop is fetched through `crops_for`, which checks a page by its size and its OCR before its crop is shown, wherever its member and batch path don't agree (decision 35).
+    - Record each check's score and reason, so the numbers sheet can count rejections.
+    - The cache keeps about 187 KiB of ALTO words a page, so about 21,000 checks would take about 4 GB. Fit it inside the 10 GB data budget: gzip those entries (about 1.3 GB), or keep only each check's result.
+  - Measure the record check, and any further geocoder fix, on a fresh draw of papers, never on decision 34's 200. The first of two towns joined by "and" is one such fix.
+  - The title lookup by LCCN (decision 34) holds each paper's place and state once. Whether it replaces every printing's copy is `BUDGET.md`'s lever.
 - `make db-verify` runs geo, fuzzy and vector queries and checks their expected results and latencies.
 - The top-case rule, and the follow-up harvest as a second Temporal pass.
 
@@ -157,6 +177,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 **Persona:** software engineer.
 - FastAPI endpoints from `SRS.md` section 6, with contract tests, Sentry, the privacy tests and latency measurements.
 - `export_static`, plus the cached crops for the front page and the top cases.
+- Crops come only through `crops_for`, which checks a page before its crop is shown (decision 35).
 
 **Gate**
 - Tests are green, and the OpenAPI document is generated.

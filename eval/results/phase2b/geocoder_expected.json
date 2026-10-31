@@ -1,0 +1,1295 @@
+{
+ "checked": "by hand, 2026-10-30, against GeoNames' US, PR and VI dumps of 2026-10-30 (data/geonames/manifest.json)",
+ "papers": {
+  "Waynesburg|Pennsylvania": {
+   "place_id": 4562078,
+   "failure": null,
+   "note": null
+  },
+  "Barre|Vermont": {
+   "place_id": 5233500,
+   "failure": null,
+   "note": null
+  },
+  "Milan|Tennessee": {
+   "place_id": 4641630,
+   "failure": null,
+   "note": null
+  },
+  "Lawrenceburg|Tennessee": {
+   "place_id": 4635849,
+   "failure": null,
+   "note": null
+  },
+  "Washington|District of Columbia": {
+   "place_id": 4140963,
+   "failure": null,
+   "note": null
+  },
+  "Litchfield|Connecticut": {
+   "place_id": 4837799,
+   "failure": null,
+   "note": null
+  },
+  "Nome|Alaska": {
+   "place_id": 5870133,
+   "failure": null,
+   "note": null
+  },
+  "Ponce|Puerto Rico": {
+   "place_id": 4566880,
+   "failure": null,
+   "note": "Ponce, P.R.: in GeoNames' Puerto Rico dump, among the inputs since the EM's review"
+  },
+  "Kenosha|Wisconsin": {
+   "place_id": 5258393,
+   "failure": null,
+   "note": null
+  },
+  "Farmington|Missouri": {
+   "place_id": 4386289,
+   "failure": null,
+   "note": null
+  },
+  "Springfield|Illinois": {
+   "place_id": 4250542,
+   "failure": null,
+   "note": null
+  },
+  "Keokuk|Iowa": {
+   "place_id": 4863349,
+   "failure": null,
+   "note": null
+  },
+  "Knoxville|Tennessee": {
+   "place_id": 4634946,
+   "failure": null,
+   "note": null
+  },
+  "Oroville|California": {
+   "place_id": 5379759,
+   "failure": null,
+   "note": null
+  },
+  "Hazlehurst|Mississippi": {
+   "place_id": 4429387,
+   "failure": null,
+   "note": null
+  },
+  "Maryville|Tennessee": {
+   "place_id": 4639848,
+   "failure": null,
+   "note": null
+  },
+  "Walla Walla|Washington": {
+   "place_id": 5814916,
+   "failure": null,
+   "note": null
+  },
+  "Pioche|Nevada": {
+   "place_id": 5510323,
+   "failure": null,
+   "note": null
+  },
+  "Little Falls|Minnesota": {
+   "place_id": 5034970,
+   "failure": null,
+   "note": null
+  },
+  "Cape Girardeau|Missouri": {
+   "place_id": 4379966,
+   "failure": null,
+   "note": null
+  },
+  "Chitina|Alaska": {
+   "place_id": 5859304,
+   "failure": null,
+   "note": null
+  },
+  "Hattiesburg|Mississippi": {
+   "place_id": 4429295,
+   "failure": null,
+   "note": null
+  },
+  "Fort Wrangel|Alaska": {
+   "place_id": 5558586,
+   "failure": null,
+   "note": "right: Fort Wrangel is Wrangell's old name"
+  },
+  "Warren|Rhode Island": {
+   "place_id": 5225502,
+   "failure": null,
+   "note": null
+  },
+  "Atlanta|Georgia": {
+   "place_id": 4180439,
+   "failure": null,
+   "note": null
+  },
+  "Winnsboro|South Carolina": {
+   "place_id": 4601335,
+   "failure": null,
+   "note": null
+  },
+  "Eureka|South Dakota": {
+   "place_id": 5227665,
+   "failure": null,
+   "note": null
+  },
+  "Sequatchie|Tennessee": {
+   "place_id": 4656458,
+   "failure": null,
+   "note": "right: the cataloguer's spelling of the printed Sequachee, in Marion County"
+  },
+  "Wilmington|Delaware": {
+   "place_id": 4145381,
+   "failure": null,
+   "note": null
+  },
+  "Weaverville|California": {
+   "place_id": 5573443,
+   "failure": null,
+   "note": null
+  },
+  "New Orleans|Louisiana": {
+   "place_id": 4335045,
+   "failure": null,
+   "note": null
+  },
+  "Worcester|Massachusetts": {
+   "place_id": 4956184,
+   "failure": null,
+   "note": null
+  },
+  "Cincinnati|Ohio": {
+   "place_id": 4508722,
+   "failure": null,
+   "note": null
+  },
+  "Columbus|Ohio": {
+   "place_id": 4509177,
+   "failure": null,
+   "note": null
+  },
+  "Centre Hall|Pennsylvania": {
+   "place_id": 5183766,
+   "failure": null,
+   "note": null
+  },
+  "Mesilla|New Mexico": {
+   "place_id": 5478971,
+   "failure": null,
+   "note": null
+  },
+  "Minneapolis|Minnesota": {
+   "place_id": 5037649,
+   "failure": null,
+   "note": null
+  },
+  "Cheyenne|Wyoming": {
+   "place_id": 5821086,
+   "failure": null,
+   "note": null
+  },
+  "Crystal Falls|Michigan": {
+   "place_id": 4990121,
+   "failure": null,
+   "note": null
+  },
+  "Van Buren|Arkansas": {
+   "place_id": 4134716,
+   "failure": null,
+   "note": null
+  },
+  "Paris|Tennessee": {
+   "place_id": 4647963,
+   "failure": null,
+   "note": null
+  },
+  "Sturgis|South Dakota": {
+   "place_id": 5769489,
+   "failure": null,
+   "note": null
+  },
+  "Ashland|Oregon": {
+   "place_id": 5711789,
+   "failure": null,
+   "note": null
+  },
+  "Winchester|Indiana": {
+   "place_id": 4928318,
+   "failure": null,
+   "note": null
+  },
+  "Camden|Tennessee": {
+   "place_id": 4610643,
+   "failure": null,
+   "note": null
+  },
+  "Lamar|Colorado": {
+   "place_id": 5427957,
+   "failure": null,
+   "note": null
+  },
+  "Mount Holly|New Jersey": {
+   "place_id": 4503134,
+   "failure": null,
+   "note": null
+  },
+  "Plymouth|Indiana": {
+   "place_id": 4924970,
+   "failure": null,
+   "note": null
+  },
+  "Kimball|South Dakota": {
+   "place_id": 5228984,
+   "failure": null,
+   "note": null
+  },
+  "Baltimore|Maryland": {
+   "place_id": 4347778,
+   "failure": null,
+   "note": null
+  },
+  "Snowflake|Arizona": {
+   "place_id": 5314943,
+   "failure": null,
+   "note": null
+  },
+  "Tallahassee|Florida": {
+   "place_id": 4174715,
+   "failure": null,
+   "note": null
+  },
+  "Watertown|Wisconsin": {
+   "place_id": 5278005,
+   "failure": null,
+   "note": null
+  },
+  "Lancaster|South Carolina": {
+   "place_id": 4584556,
+   "failure": null,
+   "note": null
+  },
+  "Franklinton|Louisiana": {
+   "place_id": 4325165,
+   "failure": null,
+   "note": null
+  },
+  "Allegheny|Pennsylvania": {
+   "place_id": 5206379,
+   "failure": null,
+   "note": "right: Allegheny City joined Pittsburgh in 1907, and is its North Side"
+  },
+  "Daytona|Florida": {
+   "place_id": 4152872,
+   "failure": null,
+   "note": "right: Daytona joined Daytona Beach in 1926"
+  },
+  "Ottumwa|Iowa": {
+   "place_id": 4870380,
+   "failure": null,
+   "note": null
+  },
+  "Shasta|California": {
+   "place_id": 5571092,
+   "failure": null,
+   "note": null
+  },
+  "Safford|Arizona": {
+   "place_id": 5312476,
+   "failure": null,
+   "note": null
+  },
+  "Bloomington|Iowa": {
+   "place_id": 4868404,
+   "failure": "renamed: its old name is now another town's",
+   "note": "Muscatine journal (Bloomington, Iowa): Bloomington was Muscatine's name until 1849; the geocoder found a living Bloomington in Story County"
+  },
+  "Lincoln|Nebraska": {
+   "place_id": 5072006,
+   "failure": null,
+   "note": null
+  },
+  "Bryan|Texas": {
+   "place_id": 4677008,
+   "failure": null,
+   "note": null
+  },
+  "Richmond|Virginia": {
+   "place_id": 4781708,
+   "failure": null,
+   "note": null
+  },
+  "Manchester|Vermont": {
+   "place_id": 5238267,
+   "failure": null,
+   "note": null
+  },
+  "Chicago|Illinois": {
+   "place_id": 4887398,
+   "failure": null,
+   "note": null
+  },
+  "East Saginaw|Michigan": {
+   "place_id": 5007989,
+   "failure": "merged into a town that doesn't list its name",
+   "note": "East Saginaw joined Saginaw in 1889"
+  },
+  "San Francisco|California": {
+   "place_id": 5391959,
+   "failure": null,
+   "note": null
+  },
+  "Edwardsville|Illinois": {
+   "place_id": 4237717,
+   "failure": null,
+   "note": null
+  },
+  "Brownsville|Texas": {
+   "place_id": 4676740,
+   "failure": null,
+   "note": null
+  },
+  "Ripley|Mississippi": {
+   "place_id": 4443338,
+   "failure": null,
+   "note": null
+  },
+  "Gann Valley|South Dakota": {
+   "place_id": 5227964,
+   "failure": null,
+   "note": "right: GeoNames spells it Gannvalley"
+  },
+  "Coolidge|Arizona": {
+   "place_id": 5290663,
+   "failure": null,
+   "note": null
+  },
+  "Lubbock|Texas": {
+   "place_id": 5525577,
+   "failure": null,
+   "note": null
+  },
+  "Dover|Delaware": {
+   "place_id": 4142290,
+   "failure": null,
+   "note": null
+  },
+  "Lexington|South Carolina": {
+   "place_id": 4585000,
+   "failure": null,
+   "note": null
+  },
+  "Alexandria|Virginia": {
+   "place_id": 4744091,
+   "failure": null,
+   "note": null
+  },
+  "Lardo|Idaho": {
+   "place_id": 5600363,
+   "failure": "merged into a town that doesn't list its name",
+   "note": "Lardo joined McCall"
+  },
+  "Alma|Michigan": {
+   "place_id": 4984049,
+   "failure": null,
+   "note": null
+  },
+  "Seward|Alaska": {
+   "place_id": 5873776,
+   "failure": null,
+   "note": null
+  },
+  "Bloomsburg|Pennsylvania": {
+   "place_id": 5180934,
+   "failure": null,
+   "note": null
+  },
+  "Mexico|Missouri": {
+   "place_id": 4398103,
+   "failure": null,
+   "note": null
+  },
+  "Kosciusko|Mississippi": {
+   "place_id": 4432542,
+   "failure": null,
+   "note": null
+  },
+  "Ozark|Arkansas": {
+   "place_id": 4125181,
+   "failure": null,
+   "note": null
+  },
+  "Yankton|South Dakota": {
+   "place_id": 5233053,
+   "failure": null,
+   "note": null
+  },
+  "Columbia|California": {
+   "place_id": 5338800,
+   "failure": null,
+   "note": null
+  },
+  "Trenton|New Jersey": {
+   "place_id": 5105496,
+   "failure": null,
+   "note": null
+  },
+  "Los Angeles|California": {
+   "place_id": 5368361,
+   "failure": null,
+   "note": null
+  },
+  "Butte|Montana": {
+   "place_id": 5642934,
+   "failure": null,
+   "note": null
+  },
+  "Idaho City|Idaho": {
+   "place_id": 5596462,
+   "failure": null,
+   "note": null
+  },
+  "Neihart|Montana": {
+   "place_id": 5668381,
+   "failure": null,
+   "note": null
+  },
+  "Benton|Missouri": {
+   "place_id": 4376569,
+   "failure": null,
+   "note": null
+  },
+  "Plaquemine|Louisiana": {
+   "place_id": 4337436,
+   "failure": null,
+   "note": null
+  },
+  "Timber Lake|South Dakota": {
+   "place_id": 5769772,
+   "failure": null,
+   "note": null
+  },
+  "Lewistown|Montana": {
+   "place_id": 5662162,
+   "failure": null,
+   "note": null
+  },
+  "Skagway|Alaska": {
+   "place_id": 5557317,
+   "failure": null,
+   "note": null
+  },
+  "Beaufort|South Carolina": {
+   "place_id": 4570284,
+   "failure": null,
+   "note": null
+  },
+  "Woodstown|New Jersey": {
+   "place_id": 4504946,
+   "failure": null,
+   "note": null
+  },
+  "Douglas|Alaska": {
+   "place_id": 5845826,
+   "failure": null,
+   "note": null
+  },
+  "Chase|Michigan": {
+   "place_id": 4832516,
+   "failure": null,
+   "note": null
+  },
+  "Water Valley|Mississippi": {
+   "place_id": 4450347,
+   "failure": null,
+   "note": null
+  },
+  "Bel Air|Maryland": {
+   "place_id": 4348240,
+   "failure": null,
+   "note": null
+  },
+  "Seattle|Washington": {
+   "place_id": 5809844,
+   "failure": null,
+   "note": null
+  },
+  "Phoenix|Arizona": {
+   "place_id": 5308655,
+   "failure": null,
+   "note": null
+  },
+  "Ketchum|Idaho": {
+   "place_id": 5597711,
+   "failure": null,
+   "note": null
+  },
+  "Middlebury|Vermont": {
+   "place_id": 5238499,
+   "failure": null,
+   "note": null
+  },
+  "Woodville|Mississippi": {
+   "place_id": 4451678,
+   "failure": null,
+   "note": null
+  },
+  "Napoleon|Ohio": {
+   "place_id": 5164057,
+   "failure": null,
+   "note": null
+  },
+  "St. Joseph|Louisiana": {
+   "place_id": 4339934,
+   "failure": null,
+   "note": null
+  },
+  "Louisville|Kentucky": {
+   "place_id": 4299276,
+   "failure": null,
+   "note": null
+  },
+  "Greenbelt|Maryland": {
+   "place_id": 4356847,
+   "failure": null,
+   "note": null
+  },
+  "Harlem|Montana": {
+   "place_id": 5656197,
+   "failure": null,
+   "note": null
+  },
+  "Brunswick|Georgia": {
+   "place_id": 4184845,
+   "failure": null,
+   "note": null
+  },
+  "Rampart|Alaska": {
+   "place_id": 5872441,
+   "failure": null,
+   "note": null
+  },
+  "Elgin|Oklahoma": {
+   "place_id": 4535806,
+   "failure": null,
+   "note": null
+  },
+  "Salem|Oregon": {
+   "place_id": 5750162,
+   "failure": null,
+   "note": null
+  },
+  "Martinsburg|West Virginia": {
+   "place_id": 4813878,
+   "failure": null,
+   "note": null
+  },
+  "Sistersville|West Virginia": {
+   "place_id": 4822313,
+   "failure": null,
+   "note": null
+  },
+  "Butler|Missouri": {
+   "place_id": 4379322,
+   "failure": null,
+   "note": null
+  },
+  "Beaumont|Texas": {
+   "place_id": 4672989,
+   "failure": null,
+   "note": null
+  },
+  "Price|Utah": {
+   "place_id": 5545269,
+   "failure": null,
+   "note": null
+  },
+  "Chapel Hill|North Carolina": {
+   "place_id": 4460162,
+   "failure": null,
+   "note": null
+  },
+  "Gunnison|Colorado": {
+   "place_id": 5424099,
+   "failure": null,
+   "note": null
+  },
+  "Richmond|Indiana": {
+   "place_id": 4263681,
+   "failure": null,
+   "note": null
+  },
+  "Olympia|Washington": {
+   "place_id": 5805687,
+   "failure": null,
+   "note": null
+  },
+  "Hot Springs|South Dakota": {
+   "place_id": 5765751,
+   "failure": null,
+   "note": "right once the parser read [Dakota Territory, i.e. S.D.] as a state, a fix this draw prompted"
+  },
+  "Putnam|Connecticut": {
+   "place_id": 4841187,
+   "failure": null,
+   "note": null
+  },
+  "Augusta|Maine": {
+   "place_id": 4957003,
+   "failure": null,
+   "note": null
+  },
+  "St. Maries|Idaho": {
+   "place_id": 5606232,
+   "failure": null,
+   "note": null
+  },
+  "New Oregon|Iowa": {
+   "place_id": 4853059,
+   "failure": "merged into a town that doesn't list its name",
+   "note": "New Oregon joined Cresco"
+  },
+  "Meridian|Idaho": {
+   "place_id": 5600685,
+   "failure": null,
+   "note": null
+  },
+  "Langston City|Oklahoma": {
+   "place_id": 4540677,
+   "failure": null,
+   "note": "right: Langston City is Langston's old name"
+  },
+  "Hopkinsville|Kentucky": {
+   "place_id": 4295251,
+   "failure": null,
+   "note": null
+  },
+  "High Point|North Carolina": {
+   "place_id": 4471025,
+   "failure": null,
+   "note": null
+  },
+  "Lihue|Hawaii": {
+   "place_id": 5850248,
+   "failure": null,
+   "note": null
+  },
+  "Conway|Arkansas": {
+   "place_id": 4106458,
+   "failure": null,
+   "note": null
+  },
+  "Council Bluffs|Iowa": {
+   "place_id": 4852832,
+   "failure": null,
+   "note": null
+  },
+  "Mitchell|South Dakota": {
+   "place_id": 5229794,
+   "failure": null,
+   "note": null
+  },
+  "Wiggins|Mississippi": {
+   "place_id": 4451140,
+   "failure": null,
+   "note": null
+  },
+  "Roanoke|Virginia": {
+   "place_id": 4782167,
+   "failure": null,
+   "note": null
+  },
+  "Cedar Falls|Iowa": {
+   "place_id": 4850699,
+   "failure": null,
+   "note": null
+  },
+  "Wetumpka|Alabama": {
+   "place_id": 4097257,
+   "failure": null,
+   "note": null
+  },
+  "Opelousas|Louisiana": {
+   "place_id": 4336153,
+   "failure": null,
+   "note": null
+  },
+  "Ritzville|Washington": {
+   "place_id": 5808453,
+   "failure": null,
+   "note": null
+  },
+  "Lansing|Minnesota": {
+   "place_id": 5034163,
+   "failure": null,
+   "note": null
+  },
+  "Parkersburg|West Virginia": {
+   "place_id": 4817641,
+   "failure": null,
+   "note": null
+  },
+  "Sumterville|South Carolina": {
+   "place_id": 4597948,
+   "failure": null,
+   "note": "right: Sumterville is Sumter's old name"
+  },
+  "Jacksonville|Florida": {
+   "place_id": 4160021,
+   "failure": null,
+   "note": null
+  },
+  "Denver|Colorado": {
+   "place_id": 5419384,
+   "failure": null,
+   "note": null
+  },
+  "Millersburg|Ohio": {
+   "place_id": 5163076,
+   "failure": null,
+   "note": null
+  },
+  "Norfolk and Portsmouth|Virginia": {
+   "place_id": 4776222,
+   "failure": "two towns named as one place",
+   "note": "Norfolk day book (Norfolk and Portsmouth Va.): Norfolk, from its title. Its title record gives Portsmouth as its place, and its notes say it was published in both"
+  },
+  "Davenport|Iowa": {
+   "place_id": 4853423,
+   "failure": null,
+   "note": null
+  },
+  "Harpers-Ferry|West Virginia": {
+   "place_id": 4808234,
+   "failure": null,
+   "note": null
+  },
+  "Charleston|West Virginia": {
+   "place_id": 4801859,
+   "failure": null,
+   "note": null
+  },
+  "Burlington|Vermont": {
+   "place_id": 5234372,
+   "failure": null,
+   "note": null
+  },
+  "Carrizozo|New Mexico": {
+   "place_id": 5460567,
+   "failure": null,
+   "note": null
+  },
+  "Hot Springs|Arkansas": {
+   "place_id": 4115412,
+   "failure": null,
+   "note": null
+  },
+  "Caldwell|Ohio": {
+   "place_id": 4507661,
+   "failure": null,
+   "note": null
+  },
+  "Lewiston|Idaho": {
+   "place_id": 5598538,
+   "failure": null,
+   "note": null
+  },
+  "North Yakima|Washington": {
+   "place_id": 5816605,
+   "failure": null,
+   "note": "right: North Yakima was renamed Yakima in 1918"
+  },
+  "Detroit|Michigan": {
+   "place_id": 4990729,
+   "failure": null,
+   "note": null
+  },
+  "Clarksville|Tennessee": {
+   "place_id": 4613868,
+   "failure": null,
+   "note": null
+  },
+  "Elko|Nevada": {
+   "place_id": 5703670,
+   "failure": null,
+   "note": null
+  },
+  "Parma|Idaho": {
+   "place_id": 5603310,
+   "failure": null,
+   "note": null
+  },
+  "Okolona|Mississippi": {
+   "place_id": 4439566,
+   "failure": null,
+   "note": null
+  },
+  "Kalispell|Montana": {
+   "place_id": 5660340,
+   "failure": null,
+   "note": null
+  },
+  "Jefferson City|Missouri": {
+   "place_id": 4392388,
+   "failure": null,
+   "note": null
+  },
+  "Champaign|Illinois": {
+   "place_id": 4887158,
+   "failure": null,
+   "note": null
+  },
+  "Clayton|New Mexico": {
+   "place_id": 5462269,
+   "failure": null,
+   "note": null
+  },
+  "Savannah|Georgia": {
+   "place_id": 4221552,
+   "failure": null,
+   "note": null
+  },
+  "Waterbury|Connecticut": {
+   "place_id": 4845193,
+   "failure": null,
+   "note": null
+  },
+  "Clifton|South Dakota": {
+   "place_id": 5763634,
+   "failure": "a ghost town filed outside populated places",
+   "note": "Sully County watchman (Clifton, Dakota [S.D.]): GeoNames has 'Clifton (historical)' in Sully County, as a class S feature"
+  },
+  "Owosso|Michigan": {
+   "place_id": 5004792,
+   "failure": null,
+   "note": null
+  },
+  "Charlotte|North Carolina": {
+   "place_id": 4460243,
+   "failure": null,
+   "note": null
+  },
+  "Canton|Mississippi": {
+   "place_id": 4420617,
+   "failure": null,
+   "note": null
+  },
+  "Benton|Tennessee": {
+   "place_id": 4605577,
+   "failure": null,
+   "note": null
+  },
+  "Huntington|West Virginia": {
+   "place_id": 4809537,
+   "failure": null,
+   "note": null
+  },
+  "Skowhegan|Maine": {
+   "place_id": 4978701,
+   "failure": null,
+   "note": null
+  },
+  "Enterprise|Oregon": {
+   "place_id": 5725721,
+   "failure": null,
+   "note": null
+  },
+  "Taiban|New Mexico": {
+   "place_id": 5493652,
+   "failure": null,
+   "note": null
+  },
+  "Henderson|North Carolina": {
+   "place_id": 4470566,
+   "failure": null,
+   "note": null
+  },
+  "Chanute|Kansas": {
+   "place_id": 4269392,
+   "failure": null,
+   "note": null
+  },
+  "Marietta|Georgia": {
+   "place_id": 4207783,
+   "failure": null,
+   "note": null
+  },
+  "Winnfield|Louisiana": {
+   "place_id": 4346455,
+   "failure": null,
+   "note": null
+  },
+  "Vinita|Oklahoma": {
+   "place_id": 4554496,
+   "failure": null,
+   "note": null
+  },
+  "Dayton|Ohio": {
+   "place_id": 4509884,
+   "failure": null,
+   "note": null
+  },
+  "Ardmore|Oklahoma": {
+   "place_id": 4529469,
+   "failure": null,
+   "note": null
+  },
+  "Wallace|Idaho": {
+   "place_id": 5611375,
+   "failure": null,
+   "note": null
+  },
+  "St. Joseph|Missouri": {
+   "place_id": 4407010,
+   "failure": null,
+   "note": null
+  },
+  "Honolulu|Hawaii": {
+   "place_id": 5856195,
+   "failure": null,
+   "note": null
+  },
+  "Palmer|Alaska": {
+   "place_id": 5871146,
+   "failure": null,
+   "note": null
+  },
+  "Cumberland|Maryland": {
+   "place_id": 4352681,
+   "failure": null,
+   "note": null
+  },
+  "Hurley|Wisconsin": {
+   "place_id": 5257163,
+   "failure": null,
+   "note": null
+  },
+  "Hyder|Alaska": {
+   "place_id": 5553654,
+   "failure": null,
+   "note": null
+  },
+  "Columbia|South Carolina": {
+   "place_id": 4575352,
+   "failure": null,
+   "note": null
+  },
+  "Bolivar|Tennessee": {
+   "place_id": 4607598,
+   "failure": null,
+   "note": null
+  },
+  "Brattleboro|Vermont": {
+   "place_id": 5234141,
+   "failure": null,
+   "note": null
+  },
+  "Paducah|Kentucky": {
+   "place_id": 4048662,
+   "failure": null,
+   "note": null
+  },
+  "Minot|North Dakota": {
+   "place_id": 5690532,
+   "failure": null,
+   "note": null
+  },
+  "Holly|Colorado": {
+   "place_id": 5425247,
+   "failure": null,
+   "note": null
+  }
+ },
+ "stories": [
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Rhode Island",
+   "report": "21_1854-11-16_p1_sn83021169_00514152792_1854111601_0398.json",
+   "date": "1854-11-16",
+   "given": "no town",
+   "note": "the Empire House, a hotel, named without its town"
+  },
+  {
+   "town": "Easton",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Indiana",
+   "report": "1_1875-10-08_p1_sn84023963_0020029595A_1875100801_0921.json",
+   "date": "1875-10-08",
+   "given": "town only",
+   "note": "Easton, with no state; which Easton the story means is unknown"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "New York",
+   "report": "11_1878-10-12_p1_sn83030272_00206533511_1878101201_0896.json",
+   "date": "1878-10-12",
+   "given": "no town",
+   "note": "testimony in the Vanderbilt will case; the text names no town"
+  },
+  {
+   "town": "Chicago",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 4887398,
+   "paper_state": "Connecticut",
+   "report": "6_1904-05-28_p1_sn84020358_00271744432_1904052801_1153.json",
+   "date": "1904-05-28",
+   "given": "town only",
+   "note": "the dateline, 'Chicago, May 27'"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Illinois",
+   "report": "1_1911-07-27_pna_sn92053934_00202198326_1911072701_0413.json",
+   "date": "1911-07-27",
+   "given": "abroad",
+   "note": "Blickling, Norfolk, England"
+  },
+  {
+   "town": "Silver Lake",
+   "state": "Indiana",
+   "county": null,
+   "place_id": 4926434,
+   "true_place_id": 4926434,
+   "paper_state": "Indiana",
+   "report": "6_1911-12-15_pna_sn86058226_00271744924_1911121501_0691.json",
+   "date": "1911-12-15",
+   "given": "town and state",
+   "note": "the dateline, 'SILVER LAKE, Ind'"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Illinois",
+   "report": "14_1916-12-09_p5_sn84024055_00280761072_1916120901_0525.json",
+   "date": "1916-12-09",
+   "given": "abroad",
+   "note": "the American legation in Peking"
+  },
+  {
+   "town": "Bordentown",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 5095847,
+   "paper_state": "Michigan",
+   "report": "3_1856-10-29_pna_sn85026466_0020219798A_1856102901_1069.json",
+   "date": "1856-10-29",
+   "given": "town only",
+   "note": "'residing in Bordentown', from the Trenton Gazette"
+  },
+  {
+   "town": "Chicago",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 4887398,
+   "paper_state": "Kansas",
+   "report": "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json",
+   "date": "1898-01-20",
+   "given": "town only",
+   "note": "the dateline, 'CHICAGO, Jan.'"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "New York",
+   "report": "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json",
+   "date": "1919-11-15",
+   "given": "no town",
+   "note": "Mrs. Curran's sitting; the text names no town"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "District of Columbia",
+   "report": "4_1923-02-02_p21_sn83045462_00280657256_1923020201_0533.json",
+   "date": "1923-02-02",
+   "given": "no town",
+   "note": "the National Theater, named without its town: the paper's own Washington"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "North Dakota",
+   "report": "12_1922-04-14_p2_sn85042243_00212478854_1922041401_0708.json",
+   "date": "1922-04-14",
+   "given": "no town",
+   "note": "'arrived here last night', with no dateline"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "District of Columbia",
+   "report": "11_1923-10-20_p26_sn84026749_00222254048_1923102001_0082.json",
+   "date": "1923-10-20",
+   "given": "abroad",
+   "note": "Victor Hugo's seances on Jersey"
+  },
+  {
+   "town": "Middlebury",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 5238499,
+   "paper_state": "Vermont",
+   "report": "17_1857-07-29_pna_sn83025667_00280777808_1857072901_0724.json",
+   "date": "1857-07-29",
+   "given": "town only",
+   "note": "Union Hall, beside Middlebury College"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "South Carolina",
+   "report": "1_1857-04-02_p1_sn83025802_00295862026_1857040201_0270.json",
+   "date": "1857-04-02",
+   "given": "abroad",
+   "note": "the Picaud narrative, in France"
+  },
+  {
+   "town": "Waterloo",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 5554953,
+   "paper_state": "Oregon",
+   "report": "1_1895-05-24_pna_sn97071028_00416152664_1895052401_0955.json",
+   "date": "1895-05-24",
+   "given": "town only",
+   "note": "'We arrived in Waterloo', Yew Park"
+  },
+  {
+   "town": "Chittenden",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 5234855,
+   "paper_state": "Vermont",
+   "report": "4_1875-03-29_pna_sn84022473_00280777559_1875032901_0300.json",
+   "date": "1875-03-29",
+   "given": "town only",
+   "note": "the Eddys at Chittenden"
+  },
+  {
+   "town": "Trenton",
+   "state": "New Jersey",
+   "county": null,
+   "place_id": 5105496,
+   "true_place_id": 5105496,
+   "paper_state": "Virginia",
+   "report": "15_1920-07-19_p1_sn85025007_00415664175_1920071901_0261.json",
+   "date": "1920-07-19",
+   "given": "town and state",
+   "note": "'the First Spiritualist Church, of Trenton, N.J.', OCR 'Trenron y. j.'"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "California",
+   "report": "4_1898-01-12_pna_sn82015104_00280768790_1898011201_0105.json",
+   "date": "1898-01-12",
+   "given": "no town",
+   "note": "Pythian Castle, named without its town: the paper's own Sacramento"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Nevada",
+   "report": "3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json",
+   "date": "1907-02-23",
+   "given": "no town",
+   "note": "Professor Hodgson's claimed communications; no town"
+  },
+  {
+   "town": null,
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": null,
+   "paper_state": "Delaware",
+   "report": "2_1873-09-01_pna_sn87062253_00271765186_1873090101_0288.json",
+   "date": "1873-09-01",
+   "given": "no town",
+   "note": "the excursion's fragment names no place"
+  },
+  {
+   "town": "Adamsville",
+   "state": null,
+   "county": "Muskingum county",
+   "place_id": null,
+   "true_place_id": 5145410,
+   "paper_state": "Pennsylvania",
+   "report": "2_1869-10-23_p1_sn84026005_00280776403_1869102301_0548.json",
+   "date": "1869-10-23",
+   "given": "town only",
+   "note": "'near Adamsville, in Muskingum county'; Ohio isn't named"
+  },
+  {
+   "town": "Chicago",
+   "state": null,
+   "county": null,
+   "place_id": null,
+   "true_place_id": 4887398,
+   "paper_state": "Utah",
+   "report": "26_1924-08-30_pna_sn84024055_00332898048_1924083001_0370.json",
+   "date": "1924-08-30",
+   "given": "town only",
+   "note": "'here in Chicago'"
+  },
+  {
+   "town": "Plymouth",
+   "state": "Massachusetts",
+   "county": null,
+   "place_id": 4947597,
+   "true_place_id": 4947597,
+   "paper_state": "Massachusetts",
+   "report": "1_1859-08-11_p1_sn82014511_no_reel_1859081101_0001.json",
+   "date": "1859-08-11",
+   "given": "town and state",
+   "note": "'held in Plymouth, Mass.'"
+  }
+ ]
+}

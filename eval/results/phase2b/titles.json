@@ -1,0 +1,26 @@
+{
+ "generated_at": "2026-10-30T20:07:24+00:00",
+ "lccns": 3336,
+ "places_from": {
+  "title string": 2912,
+  "loc.gov title record": 423,
+  "none": 1
+ },
+ "candidates_by_source": {
+  "title string": 1213809,
+  "loc.gov title record": 22312,
+  "none": 1
+ },
+ "printed_state_differs_from_modern": 115,
+ "catalogued_under_another_town": 15,
+ "shown_with_the_records_town": 1,
+ "records_used": 599,
+ "no_modern_state": 1,
+ "loc_gov": {
+  "requests": 0,
+  "cache_hits": 601,
+  "errors_not_cached": 0,
+  "records_cached": 601,
+  "not_found": 1
+ }
+}

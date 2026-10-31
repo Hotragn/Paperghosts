@@ -327,6 +327,9 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - In 2A.7's screen, spirit+medium caught no report that another rule missed. Here it alone catches two: 1857's Middlebury trance medium and 1859's Plymouth convention.
   - spirit+medium is also the largest rule, with the lowest precision. Its candidates holding no other rule are reports at 3.5%, the same rate as v1's candidates.
   - `lexicon_v2.json` gives each rule's `marginal` (over the 200) and `only` (over its sampled articles holding only it).
+- **The EM's call (2026-10-30): keep all five rules.**
+  - Each of spiritualism, seance, spirit_phrase and spirit+medium catches reports that no other rule does.
+  - ouija's 0 of 6 rules nothing out (0–39%), and it costs only 5,124 candidates, 0.4% of the reader's job. 2C's term strata measure it.
 - The 14 reports:
   - 1857, Middlebury: a spirit called Judd speaks through a trance medium at Union Hall.
   - Borderline, 1857: in the Picaud ("real Monte Cristo") narrative, printed as true, the dying Allut says he has seen and spoken with a soul separated from its body.
@@ -353,3 +356,433 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Without the 2 borderline reports among the 200, recall is 83%, and at least 47%.
   - **Caveat:** v2's rules were chosen from this screen's misses, so it catches them by construction, and the 84% is optimistic. 2C's eval B gives the independent figure with the reader's screen of the random reservoirs. Decision 30's caveat also stands: the screen sees only reports that hold a flag word or a near-miss term.
 - Cost: no money, only machine time and 340.4 GB of downloads. The reader's job grows from 1,050,459 candidates to 1,236,122 (+17.7%). The Tinker credit check weighs that before the full pass.
+
+## Phase 2B (2026-10-30)
+
+**32. Atlas is the serving index, not the archive. It is built to M0's limits and to nine rules.**
+- **M0's limits**, from the MongoDB docs as the EM checked them on 2026-10-30, in the EM's Atlas notes (`ATLAS-PLAN.md`):
+  - **Storage:** 0.5 GB, a hard limit. It counts uncompressed BSON plus indexes. `sample_mflix` already uses about 239 MB: Phase 1 measured 239,185,920 bytes.
+  - **Search indexes:** 3 in all, Search and Vector Search together. The plan uses exactly three: Search and Vector Search on `reports`, and autocomplete on `places`.
+  - **Throughput:** 100 operations a second, throttled above that.
+  - **Network:** 10 GB in and 10 GB out per rolling 7 days.
+  - **Other:** 500 collections, and 32 MB for a sort in memory.
+- **The rules:**
+  1. Atlas holds stories, places, cases and stats only. The 340 GB is streamed and never stored, and candidates, samples and reader labels stay in local files, one per year.
+  2. The pipeline is partitioned by year. The year is the Temporal activity, the unit of retry and the cache key. The static export is partitioned by state and then town, with one more file per calendar day for "Printed on this night".
+  3. One collection per entity, never one per year. Collections per year would multiply the indexes and split the town drawer's queries across years. Nor could each have a Search index under the cap of 3.
+  4. Category fields get no index of their own: outcome, kind, place type, precision, decade and state.
+     - They are token fields in the Search index and filter fields in the vector index.
+     - The reel's counts are precomputed into `stats`.
+     - A partial index on `case_id` covers only the 30–60 investigated stories.
+  5. Atlas Search mappings are static, not dynamic. They map the fields that are searched or filtered, and nothing else: no printings and no quotes.
+  6. Heavy fields stay small:
+     - **Embeddings** are BinData vectors (float32 or int8), never arrays of doubles. A 384-dimension embedding takes about 4.8 KB as an array, 1.5 KB as float32 and 0.4 KB as int8. Decision 33 checks that BinData vectors work on M0.
+     - **Crop URLs** are derived from the scan location and the boxes when they are read, not stored.
+     - **Printings** are compact references embedded in their story.
+  7. Loading:
+     - one activity per year
+     - `bulk_write` of `ReplaceOne(upsert=True)` on stable `_id`s, with `ordered=False`, about 1,000 documents a batch, and a retry when throttled
+     - indexes built after the load
+     - `db-verify` run only once the Search and Vector indexes can be queried
+  8. The budget comes from measurement. 2B measures the real bytes per story, and the free space divided by that says how many stories fit with full text (`BUDGET.md`).
+     - The free levers in rule 6 come first. Dropping `sample_mflix` is the owner's call.
+     - Quality is never cut to fit. If full-text fuzzy search over every story won't fit, the options go to the owner rather than search shrinking to excerpts. One such option is the Flex tier, which costs money and needs the owner's yes.
+  9. To weigh in 2B and 2C: cluster reprints before the reader, read one printing per cluster, and split gold, dev and train by cluster. That means less work for the reader and no leakage.
+
+**33. The data layer is built: models, validators generated from them, BinData embeddings and `make db-init`. M0's third Search index waits on the owner.**
+- **Models** (`paperghosts/schemas`): `Report`, `Place`, `Case` and `Stat`, as ARCHITECTURE section 4 now gives them.
+  - **No nulls:** a document is stored without its empty fields.
+  - **IDs:** the model checks SRS section 5's, which a validator can't: a report is `r_` plus its primary article, and a case is `c_` plus its report.
+  - **`versions`:** every record carries the code's SHA and whichever lexicon, model, adapter and prompt made it. It replaces section 4's `reader`.
+  - **Embeddings:** an embedding must be a float32 or int8 BinData vector of 384 dimensions.
+  - **Cross-field rules:** the model also checks three more.
+    - A stated value needs a quote that verified. Atlas's validator enforces this one too.
+    - A report's year, month_day and decade must be its date's.
+    - A printing's issue must be its date and its edition.
+- **Printings** (`paperghosts/store/printings.py`), checked over all 1,236,122 v2 candidates (the EM's review):
+  - **Location:** a printing is located by its member name, as `1910-04-12_p8_sn84022472_0029586686A_1910041201_0396.json` shows. That gives the date, a page token, the LCCN, the reel, the issue (the date and a two-digit edition) and the frame.
+    - Every member name parses, and every issue is its date and two digits.
+    - So edition, reel, issue and frame are required.
+  - **LCCN:** 10,871 records (0.88%) have none, and those take the member's. Every record that has one agrees with its member name.
+  - **Page:** the page comes from the scan record only, where it is a number for 19.9% of candidates. It is never taken from the member name's page token.
+    - In 1910, the article ID and the member name differ only in that token, for 18,082 of 25,346 candidates (71.3%). Their date, LCCN, reel, issue and frame always agree.
+    - In those candidates the member gives a page number that the scan record doesn't confirm: the scan says "na" or nothing.
+    - Where the scan's page is a number, the two always agree.
+  - **Service:** the IIIF service comes only from the scan's batch path, which 68.0% of candidates have. Where a candidate has both, the batch path's frame differs from its member's in 20,643 (2.5%), and the reel in 396. For the frame, decision 35 supersedes this.
+    - Example: the member `…_1910021001_0164` and the jp2 `sn82016187/100493962/1910021001/0163.jp2`.
+    - So a page located without a batch path can be the wrong one. Its crop waits for a check, whose error 2B's reel-map validation measures (`BUILD-PLAN.md`).
+- **Validators** (`paperghosts/store/validators.py`): generated from the models.
+  - Atlas reads draft 4 with `bsonType`, so references are inlined, `const` becomes `enum`, integers become int or long, and a tuple becomes `items` with `additionalItems: false`.
+  - A keyword Atlas lacks raises an error.
+  - The collections validate strictly, with errors.
+  - **Tests:** 27 invalid documents cover required fields, enums, GeoJSON, a printing with no frame, a stated value with no verified quote, an embedding stored as an array, and stored crop URLs. The model, an offline checker in the tests and Atlas itself each reject every one, Atlas with error 121 (the test marked `atlas`). The valid documents pass all three.
+- **BinData vectors work on M0** (`scripts/bindata_check.py`, `eval/results/phase2b/bindata_check.json`):
+  - The test set: 2,000 vectors of 384 dimensions, in 40 clusters, each stored as float32 and as int8, under one Vector Search index.
+  - **Exact search:** for both types, Atlas returns numpy's 10 nearest neighbours in the same order for all 20 queries. Its scores are within 1e-7 of (1 + cos)/2.
+  - **Approximate search:** recall is 1.0 at 200 candidates.
+  - **Sizes:** an embedding takes 4,898 BSON bytes as an array of doubles, 1,554 as float32 and 402 as int8.
+  - **Cleanup:** the index was queryable in 28 s. The scratch collection and its index were then removed.
+- **`make db-init`** (`paperghosts/store/db_init.py`):
+  - It builds the four collections, their validators, section 4's indexes and the three Search indexes, as static mappings in code.
+  - It touches only database `paperghosts`, and in it only the collections in the plan. Phase 1's `skeleton` is left as it is.
+  - Each change to the models made one run update the validators it changed. The run after printed "nothing to change", which was true of the final model too.
+- **The third Search index can't be created yet.**
+  - M0's cap of three counts every database in the cluster, and `sample_mflix.movies` holds a Search index named `default`. So `places_search` isn't created.
+  - `make db-init` names the index it couldn't create, and exits 1 instead of stopping halfway.
+  - Freeing the slot is the owner's call, as dropping `sample_mflix` is (decision 32, rule 8). The EM is taking it to the owner with the budget.
+  - `places_search` stays in the code, so db-init creates it once there's a slot. Until then, it's pending.
+  - The cluster also holds a database `cubby`, with one collection, which isn't this project's. Nothing here touches it.
+- **The budget** (`BUDGET.md`, `eval/results/phase2b/budget.json`, `scripts/budget_probe.py`):
+  - **What counts:** Atlas counts data size plus B-tree index size, from `dbStats`, against the cap. Search indexes aren't in `dbStats`, and Free clusters have no Search size metrics, so by the docs they don't count. No page says so outright.
+  - **Free space:** of the 500,000,000 bytes planned for, 350.5 MB is free with `sample_mflix` and 499.4 MB without it.
+  - **A story's size:** 6,199 bytes before its printings, 454 per printing and 508 of indexes. Each figure is the larger of the 1,000 sampled candidates' and the 24 judged reports'.
+  - **Index sizes:** these come from a fresh scratch collection that was dropped afterwards. `reports` kept its index pages after an earlier probe run, which made its own sizes useless.
+  - **The top of the range** is 95,203 printings:
+    - At v1's ratio of 57,744 stories, it needs 430.5 MB as stored. That fits only without `sample_mflix`, or with every lever including int8 (346.9 MB).
+    - At one story per printing, it needs 681.8 MB, which M0 can't hold in any form. The smallest form is 552.9 MB.
+  - **The point estimates** of 30,183 stories need 225 MB, which fits either way.
+  - **The levers:**
+    - int16 boxes, the title lookup and the derived headline save 17 MB at the top of the range, all without loss.
+    - int8 saves 66.5 MB more, but only after 2D checks it on real embeddings.
+    - Turning rule 6's levers off would cost up to 206 MB.
+  - **Next:** the owner's options are listed in `BUDGET.md`, and the EM takes them to the owner with the Search slot.
+
+**34. Every paper's title, place and state as printed, with its state today; and a GeoNames geocoder, checked against each paper's loc.gov title record, which puts 98.0% of papers' places right.**
+- **BUDGET.md's third scenario** (`scripts/budget_stories.py`):
+  - Each judged report counts as 1/k of a story when its v2 cluster holds k printings.
+  - In v1's candidates, eval A's 7 give 0.608 stories per printing, decision 27's ratio again.
+  - In the candidates v2 added, 17 reports give 0.802.
+  - So the top of the range is 61,960 stories, not 57,744. It needs 458.8 MB as stored, and 370.1 MB with every lever. Nothing fits beside `sample_mflix` any more, and everything still fits without it.
+- **The title parser** (`paperghosts/geo/titles.py`) gives each title string's title, and its place, county and state as printed. It also gives the place and state the cataloguer supplied in brackets, and the years.
+  - A bracket after the place adds to it.
+  - A bracket after the state, or one marked `i.e.`, supplies a place. A bracket after the state that starts with a state supplies only a state.
+  - A bracket standing alone supplies the whole place, and `[sic]` affirms what's printed.
+  - A single part is the place, unless it's an abbreviated state, so Washington and New York stay cities.
+  - It also handles `[volume]`, `[microfilm reel]`, HTML entities, and UTF-8 that was read as Windows-1252.
+- **The parser's test** (`tests/fixtures/titles.json`):
+  - The draw: 200 LCCNs at random from the candidates' 3,336 (seed "2B title parser"), each by its longest title string.
+  - Five LCCNs in that draw have no title string at all. A second seeded draw replaced them.
+  - I checked all 200 outputs by hand. 199 were right first time, and #6's `H.T.`, Hawaii Territory, was the one fault.
+  - The geocoder's draw found one more fault, in `Dakota [Dakota Territory, i.e. S.D.]`. It is fixed, and of the 4,531 title strings among the candidates, it's the only one that changed.
+  - `state_name` maps a printed state to its modern one. The exception is the territory initials that stood for two states (W.T., N.T., I.T., D.T. and Dakota), which a bracket or the record settles.
+- **Then and now:** `then_and_now` shows a state that has changed.
+  - 1835's Virginia free press is printed in "Charlestown, Va. (now W.Va.)" (sn84026784).
+  - 1834's Alexandria gazette is printed in "Alexandria, D.C. (now Va.)", because Alexandria returned to Virginia in 1846.
+  - Where the record check puts a paper's point at its record's place, the display names the record's town too: "East Saginaw, Mich. (now Saginaw)". Two spellings of one town, such as Charlestown and Charles Town, aren't a new name.
+  - A paper that moved keeps its printed town: Zajedničar stays "Allegheny, Pa.", not "now Youngstown". A first build compared the names alone, and 8 of the 14 towns it showed as "now" were moves.
+- **Title records:** 424 LCCNs give no place or state in any title string, 45 of them having no title at all. They hold 22,313 candidates.
+  - Each is asked for once from loc.gov's item JSON, at least 3.5 s apart, and cached with its URL, retrieval date and status.
+  - A 404 is cached. A server error that outlasts the retries is counted and not cached, so the next run asks again.
+  - Cloudflare's 520–524 now count as busy, and `crops.get` retries them.
+  - All 424 records are cached. 423 were found, and 1 wasn't: sn88084224, The Western star (Texas), a 404. None failed.
+  - The final build made 327 requests in 39 minutes, 7.2 s each on average. It found the other 97 already cached: the draw's papers, fetched first, and those from a first build that a 520 stopped.
+  - The records of the accuracy draw's 200 papers came next, queued after that fetch and never beside it. 23 were cached already, and 177 requests took 20 minutes. One got a 503 that outlasted the retries, so it wasn't cached, and the next run fetched it. All 200 have a record.
+  - The other LCCNs' records come in 2D, and only for the papers among stored printings, as decision 29 does for pages (`BUILD-PLAN.md`).
+- **The title lookup** (`scripts/titles.py`, `data/titles/titles.json`, the `Title` model) has one entry per LCCN: the title, the place and state as printed, what was supplied, the state today, and the two together. It also keeps the place, county and state that a fetched record catalogues today (`catalogued_place`, `catalogued_county` and `catalogued_state`).
+  - Of the 3,336 LCCNs, 2,912 take their place from a title string and 423 from a title record. One has neither: The Western star.
+  - 115 show a state that has changed.
+  - 599 have a record. 15 of those records name a town other than the printed one, because the town was renamed or merged, or the paper moved. Only East Saginaw, whose point the check takes from its record, is shown with the record's town.
+- **GeoNames** (`paperghosts/geo/geonames.py`):
+  - The data: GeoNames' US, Puerto Rico and Virgin Islands dumps of 2026-10-30, with their state and county codes.
+    - `US.zip`: 71.1 MB, 2,241,410 rows
+    - `PR.zip`: 0.3 MB, 8,277 rows
+    - `VI.zip`: 0.1 MB, 1,872 rows
+  - A territory's municipios or islands serve as its counties. No title names any other territory.
+  - `data/geonames/manifest.json` records each file's URL, retrieval date, size and sha256, and the CC BY 4.0 licence.
+  - Only populated places count. GeoNames' 107,543 "(historical)" places in class S are kept apart as ghost towns, and only a title record's county can accept one.
+  - Names compare without accents, case, punctuation or spaces, so "Charlestown" is "Charles Town", and "St." reads as Saint.
+  - Ties break in this order:
+    1. the printed county
+    2. a living place before a section, and before a historical, abandoned or destroyed one
+    3. a match by name before one by alternate name
+    4. a capital or county seat
+    5. the larger population
+    6. the lower ID
+  - The space-free names came from this check's first look at Charlestown. GeoNames lists Charlestown among the capital Charleston's alternate names, and Charleston's population won.
+- **The record check** (`paperghosts/geo/papers.py`, from the EM's review). loc.gov's title record gives each paper's city, county and state as catalogued today.
+  1. The printed place is geocoded in its modern state, the cataloguer's bracketed place first.
+  2. It is checked against the record's county: GeoNames' county (admin2) has to be one the record names, in one of the record's states. A paper that moved has all its counties and states.
+  3. A place outside the record's county, or no place at all, gives way to the record's place, geocoded in its county. The printed place stays for display, with the record's town: "East Saginaw, Mich. (now Saginaw)".
+  4. Failing that, a ghost town of the record's name in the record's county counts, flagged historical. Clifton, S.D. is the case.
+  5. Failing that, there is no point. A pin that disagrees with the record is the dangerous kind of answer.
+  - A record that names no county GeoNames has in its state can't check a place. The printed place stands, or, where that resolves to nothing, the record's place, unchecked.
+    - Alaska is one such case: loc.gov files Seward under "Seward", and GeoNames files it under the Kenai Peninsula Borough.
+    - Connecticut is another: GeoNames files its places under planning regions now.
+  - **I made two of the check's rules on these 200:**
+    - Alaska's rule. The first run, with 23 records cached, turned Seward from a right answer into no point.
+    - Reading the record's `location_state` list, as your review said, instead of the one state in its `location_str`. Zajedničar (Allegheny, Pa.) moved to Youngstown, Ohio, and with Ohio alone, the check replaced a right answer with Youngstown.
+- **Accuracy on the papers** (`scripts/geocode_check.py`, `eval/results/phase2b/geocoder.json`, answers in `geocoder_expected.json`):
+  - The draw: 200 distinct (place, state) pairs, by walking the papers in seeded order (seed "2B geocoder"). I checked each by hand.
+  - Each pair is geocoded twice: by its printed place alone, and with the record check against its paper's record.
+  - **Without the record check, 194 are right: 97.0% (93.6–98.6%).** 195 resolve, and 194 of those are right: 99.5% (97.2–99.9%). The one wrong pin is Bloomington.
+    - Ponce, P.R. is right now, because the Puerto Rico dump is an input.
+    - Before the dump, 193 were right (96.5%). Before the parser fix the draw prompted, 192 were (96.0%).
+  - **With the record check, 196 are right: 98.0% (95.0–99.2%).** 198 resolve, and 196 of those are right: 99.0% (96.4–99.7%).
+    - The check settles East Saginaw, under Saginaw, and Clifton, as a ghost town.
+    - **It leaves 2 wrong pins, one more than without it:**
+      - Bloomington still. loc.gov's own record puts Bloomington in Story County: it names Story and Muscatine, so the check agrees with the wrong Bloomington. Its record can't catch it.
+      - Norfolk and Portsmouth, which the check adds. The record names no county and gives Portsmouth as its place, so the unchecked rule pins Portsmouth, about 2 km from Norfolk. Its notes say the paper was published in both. I kept my expected answer, Norfolk, from the title.
+    - No printed place that resolved was replaced.
+  - What the records made of the 200:
+
+    | Outcome | Papers |
+    |---|---|
+    | agrees | 177 |
+    | has no county to check: independent cities, D.C., Alaska and Ponce | 14 |
+    | can't be checked: Connecticut's planning regions, and Seward | 4 |
+    | found what the printed place didn't: East Saginaw | 1 |
+    | a ghost town in the record's county: Clifton | 1 |
+    | found what the printed place didn't, unchecked: Norfolk and Portsmouth | 1 |
+    | disagrees, and its own place isn't in GeoNames: Lardo and New Oregon | 2 |
+
+  - Only one of the three merged towns is catalogued under its successor: East Saginaw, under Saginaw.
+    - The Long Valley advocate's record names Lardo and Roseberry, in Idaho County, its county then. GeoNames has Roseberry and McCall in Valley County.
+    - New Oregon's record names New Oregon itself, which GeoNames doesn't have.
+    - Both stay as no point, which is the safe failure.
+  - Some are right under an old name or a merger: Allegheny is Pittsburgh, and Daytona is Daytona Beach. Fort Wrangel, Sumterville, North Yakima and Langston City are old names their towns list.
+  - **The failures, by kind:**
+
+    | Kind | Without the check | With it | Cases |
+    |---|---|---|---|
+    | merged into a town that doesn't list its name | 3 | 2 | East Saginaw into Saginaw, which the check settles; Lardo into McCall; New Oregon into Cresco |
+    | renamed, with its old name now another town's | 1 | 1 | Bloomington, Iowa, Muscatine's name until 1849: a wrong pin either way, on a living Bloomington in Story County |
+    | two towns named as one place | 1 | 1 | "Norfolk and Portsmouth, Va.": no point without the check, and a pin on Portsmouth with it |
+    | a ghost town filed outside populated places | 1 | 0 | Clifton, S.D., which GeoNames has as "Clifton (historical)" in class S |
+    | outside GeoNames' US dump | 0 | 0 | Ponce, P.R., right since the Puerto Rico dump became an input |
+
+  - **These 200 are in-sample for the check.** Its fixes come from their failures, through the EM's review, and so do two of its rules. 2D measures it, and any further fix, on a fresh draw (`BUILD-PLAN.md`).
+- **The 24 judged reports' story places,** as their text gives them: an early look at what the reader will extract.
+  - The text gives a town and a state for only 3. The geocoder puts all 3 right (43.8–100%).
+  - 9 name a town but no state. Datelines like "CHICAGO, Jan. 1" are the usual case.
+  - 8 name no town at all, or only a venue such as "the National Theater".
+  - 4 are abroad: Jersey, Peking, Blickling and France.
+  - **For the 9 with a town only, the paper's own state is a poor guess:**
+    - right for 3, the local stories at Middlebury, Waterloo and Chittenden
+    - a wrong place for 2: Adamsville lands in Pennsylvania, and Easton in Indiana matches West Newton, which lists Easton as an alternate name
+    - nothing for 4: Chicago in Connecticut, Kansas and Utah papers, and Bordentown in a Michigan one
+  - **So a story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved, and it never falls back on the paper's state** (the EM's review). 2C measures the rule on its gold set, and 2D applies it (`BUILD-PLAN.md`).
+
+**35. The reel-to-batch map gives 93.9% of the candidates with no batch path a batch from local data, and it's right for 99.8% of hidden issues. A page it locates is checked by its size and its OCR before its crop is shown, and the check rejected all 90 wrong frames tried. Where a member and its batch path name different frames, the member's was the page, and the stored service now takes it.**
+- **The map** (`paperghosts/ingest/reels.py`, built by `scripts/reel_map.py` into `data/reels/map.json`, 10.6 MB): for each LCCN and reel, the batches its pages' batch paths name, and the issues each batch holds there.
+  - Its source is the 1,101,110 pages with a batch path, of the 1,586,714 distinct pages among the candidates and samples. They cover 24,620 reels and 742,015 issues.
+  - A reel is keyed by its LCCN and reel number, as decision 29 counted. A page is filed under its batch path's reel and issue, never its member's.
+  - Building it asks loc.gov nothing, and takes 26 s.
+- **Coverage, reconciled with decision 31** (`eval/results/phase2b/reels.json`):
+  - From the candidates' batch paths alone, the map reproduces decision 31 exactly. 367,251 of the 395,068 candidates with no batch path (93.0%) sit on a reel it holds, and 27,817 on 1,258 reels don't.
+  - The samples' batch paths add 589 reels. With them, 370,949 are covered (93.9%), and 24,119 on 1,000 reels aren't.
+  - 6,530 of those 24,119 have no reel in their member name ("no_reel"), so no reel map can place them.
+  - No loc.gov lookup ran for the 24,119.
+- **The rule** (`reels.ranked`, whose first batch is `reels.pick`), for a page with no batch path:
+  1. A reel with one batch gives it.
+  2. On a reel with several, batch names are tried by how near their nearest issue is to the page's in date. A tie goes to the name with more of the reel's issues.
+  3. Within a name, its latest version comes first: ver02 before ver01. A version can come without an underscore, as in `ncu_frankenver01`.
+  4. `info.json` decides. A batch that doesn't hold the page answers 404, and the next batch is tried. Where none holds it, loc.gov's item for the issue names it.
+  - The batch path wins wherever it exists, so the map is only for pages with none.
+- **The hidden-issue check:** every issue on every reel was hidden in turn, all its pages at once, and its batch picked from the rest of its reel.
+  - 740,969 issues could be tested. The 1,046 reels that hold a single issue can't be.
+  - **Overall, 739,317 are right: 99.78% (99.77–99.79%).** Every page on a reel with one batch is right.
+  - **On the 257 flagged reels, 9,616 of 11,268 are right: 85.3% (84.7–86.0%).** By batch name, with a reissue's versions taken as one, 10,594 are: 94.0% (93.6–94.4%).
+  - All 1,652 misses are on flagged reels. 978 name a reissue's other version, and 674 another batch.
+  - By page, the flagged reels' pages are right for 13,439 of 16,324 (82.3%), and their candidates for 11,102 of 13,677 (81.2%).
+  - 173 issues lie in two batches.
+- **Flagged reels: 257,** each listed in `reels.json` with its batches' date ranges and its candidates with no batch path. 5,232 such candidates sit on them.
+  - 62 are reissues: one batch name in two or more versions. Their versions alternate along the reel, and half their issues (978 of 1,958) have the older version's batch path.
+  - 195 are split between batch names:
+    - 127 interleave over the same years
+    - 53 follow one another
+    - 15 are one batch under two awardee codes, such as `cohi_dearfield` and `ohi_dearfield`
+- **Which batch serves** (`scripts/page_check.py reels`): 25 split and 25 reissued reels were drawn (seed "2B.3 reels"), each with one candidate page that has no batch path. `info.json` was asked of every batch each reel holds.
+  - **The rule's first batch serves 42 of the 50: 84.0% (71.5–91.7%).** Trying the reel's batches in turn finds a batch for 46: 92.0% (81.2–96.8%).
+    - On split reels, the first batch serves 23 of 25. The other two are served by the reel's other batch: `vi_balikun`, and `cohi_dearfield` where the rule picked `ohi_dearfield`.
+    - On reissued reels, the first batch serves 19 of 25:
+      - 2 are served only by the older version: `dlc_thompson`'s ver02 lacks some of ver01's issues.
+      - 4 are served by no version the map knows (`az_campfiregoneout`, `dlc_davis` and `vi_ironmaiden` twice), so they need loc.gov.
+  - 11 pages are served by two batches. Where the recorded size is exact, both have it.
+    - `vi_kernals`' two versions differ by about 10 pixels, on pages of approximate size, so which one AmericanStories read can't be told.
+  - Where one batch serves a page of exact size, that batch has the recorded size: 23 of 23.
+- **Where a page's member and its batch path name different frames, the member's frame was the page: 18 of 18 (82.4–100%).** So the EM changed decision 33's rule for the frame.
+  - Calibration drew 20 candidate pages whose member names another frame or reel than their batch path does (seed "2B.3 calibrate"). 18 differ only in the frame, and 2 in the reel. Each was checked on the page its member names, in its batch path's batch.
+  - All 18 member frames have the scan's recorded size exactly. The article's words lie inside its boxes on them: 0.31 to 1.00 of its distinct words of five letters or more, and 0.78 at the median.
+  - The `frames` run then checked each batch path's own frame. None of the 18 has the recorded size, and the article's words aren't in its boxes: 0 to 0.11.
+  - The size match isn't chance. In the 15 batches that hold half of such pages, a page's neighbouring frame never has its size (0 of about 115 pairs of agreeing pages).
+  - The offset is systematic, batch by batch, and mostly in `dlc_` batches. In `dlc_earl_ver02`, 1,120 of its 1,147 pages have a member frame one above the batch path's. 202 batches hold such pages, and 10 of them hold 39%.
+  - **So where the two differed, the stored `service`, which `printings.py` took from the batch path, named a frame beside the article's page.** That was up to 20,643 candidates (2.5% of those with both, decision 33).
+  - **The EM's call (2026-10-30), which supersedes decision 33's frame rule** (`crops.batch_path_service`, used by `printings.py`, `page_service` and `crops_for`):
+    - Where only the frame differs, the page is the batch path's batch with the member's frame.
+    - Where the member's reel differs too (396 candidates), the batch path's page stands. The evidence for the member is thin there: the map has the member's issue on the member's reel for only 12 of the 411 such pages, and for both sampled ones the batch path's batch holds no page at the member's place.
+    - Either way, the page is checked before its crop is shown, as a page with no batch path is. A page goes unchecked only where its member and batch path agree.
+  - **It changes the stored service of 20,247 candidates, on 17,545 pages in 187 batches** (`reels.json`, `frame_rule`). That's decision 33's 20,643 with another frame, less the 396 with another reel. The most are in `dlc_earl_ver02` (1,163), `dlc_dutch_ver02` (1,032), `dlc_abe_ver01` (964), `dlc_chester_ver02` (929) and `dlc_braniff_ver01` (872).
+- **The page check** (`crops.page_check`), for a page located without a batch path, before its crop is shown. `crops_for` runs it, and fetches no crop for a page it rejects.
+  1. The page has to exist: `info.json` answers.
+  2. It has to be the scan's recorded size.
+     - Where AmericanStories marks the size approximate, the size is only the extent of the boxes (decision 18), so the boxes have to lie on the page instead.
+     - That's 19% of the candidates' pages with no batch path.
+  3. LoC's OCR of the page, its ALTO, has to hold the article's words inside the article's boxes: at least a fifth of its distinct words of five letters or more.
+     - An article with fewer than 10 such words can't be checked, and isn't shown. None in the measurement had so few.
+  - The ALTO sits beside the image (`tile.loc.gov/storage-services/…/{frame}.xml`), at about 1 MB a page. The cache keeps only its words and their boxes.
+- **The text rule came from calibration's 38 pages** (the 20 drawn and the 18 batch path frames):
+  - The article's words anywhere on the page don't separate right from wrong: 0.37 to 1.0 on the article's page, and up to 0.5 on the frame beside it.
+  - Its words inside its boxes do: 0.31 to 1.0 on its page, and 0 to 0.11 on the frame beside it. A fifth sits in the gap.
+- **Measuring the check needed a truth the check doesn't decide.** The EM's design took pages whose member names another frame as wrong pages, but those turned out to be the article's pages. So the measurement (seed "2B.3 measure") instead drew:
+  - 90 other candidate pages whose member and batch path agree, so two sources name the one frame: 45 of exact size and 45 approximate.
+  - Each was checked on its own frame, which should pass. It was also checked on the frame beside it in its batch, one up or down at random, which should fail. The article was the same, and so was its scan's recorded size.
+- **The page check's errors** (`eval/results/phase2b/page_check.json`, `summary`):
+  - **False accepts: 0 of 90 (0–4.1%).** 31 of the frames beside don't exist, and of the 59 that do, the check accepts none (0–6.1%).
+  - **Size alone isn't enough:**
+    - It would accept 2 of the 36 exact-size frames beside that exist (5.6%, 1.5–18.1%), more than a few percent.
+    - It would accept all 23 approximate ones, whose boxes fit.
+    - The text check rejected all 25.
+  - **False rejects: 2 of the 85 own frames that exist (2.4%, 0.6–8.2%).** That's 0 of 41 of exact size and 2 of 44 approximate.
+    - Both are the article's page, by their crops, and LoC's OCR of them is garbled: "he ceptisady gifted. Be ad r p enlmto crew4de" where the article reads "…ceptionally gifted. He had performed to crowded…". The failure is the safe kind, since no crop is shown.
+    - One of them, the Caledonian's 1856 letter, also has AmericanStories' stray box (decision 29): its first box is the paper's masthead.
+  - 5 of the 90 own frames' batches no longer serve them (`info.json` 404s). `crops_for` sends those to loc.gov.
+  - All 41 own frames of exact size have the recorded size.
+  - The rule's margin: own frames' words in their boxes are 0.87 at the median, and the lowest after the two garbled ones is 0.23. The frames beside reach 0.13.
+- **`page_service`** now finds a page's IIIF service in three ways:
+  1. from its batch path: its batch, with the member's frame where only the frame differs;
+  2. or else from its reel's first batch in the map, which asks nothing;
+  3. or else from loc.gov's item for its issue.
+  - The item is asked for once per issue and cached, so the issue's other pages are found without asking.
+  - A page it locates without a batch path is unchecked, so crops come through `crops_for`, which checks the page.
+  - A page whose member and batch path agree is shown unchecked. Where its batch has been reissued, loc.gov names its current service, at the same place.
+- **The cache** (`crops.cached`): every answer from the Library of Congress is cached under `data/loc/requests/`, keyed by its URL, with its URL, retrieval date and status.
+  - A 404 is cached. A server error that outlasts `get`'s retries isn't, so a later run asks again.
+  - `loc.title_record` uses it too. Title records keep their own folder, and their copy of the caching code is gone.
+  - `crops.SENT` counts every request `get` sends, by host, each retry included.
+- **Requests: 549 in all, against the 600 planned,** all to tile.loc.gov, one at a time and at least 3.5 s apart. None failed, and they took about 37 minutes.
+
+  | Run | Requests | Minutes |
+  |---|---|---|
+  | probes: `info.json` and the ALTO's place | 4 | |
+  | calibrate | 77 | 6.6 |
+  | frames | 36 | 2.0 |
+  | measure | 326 | 20.8 |
+  | look: two crops | 2 | |
+  | reels | 104 | 7.0 |
+
+  - The script spaces tile.loc.gov 3.5 s apart, as this step asked. `crops.get`'s default for image services stays 1 s (decision 29).
+- **For 2D:** the check costs 2 requests and about 1 MB of ALTO download for each page it checks. At 5% reports, that's about 20,000 pages with no batch path, and about 1,000 more whose member and batch path disagree: 12 hours at 1 s a request.
+  - **On disk,** the cache keeps a page's ALTO words at 187 KiB, the median of the 197 cached, so about 21,000 checks take about 4.0 GB. Gzipped, they'd take 1.3 GB (61 KB at the median). Keeping only the check's result would take almost nothing. The plan keeps it inside the 10 GB data budget.
+- **The EM's calls on this step (2026-10-30):**
+  - The frame rule changes, as above.
+  - The page check's design change stands, and its text rule's fifth is frozen. 2D records each check's score and reason, so the numbers sheet can count rejections.
+  - `scripts/load_skeleton.py` stays as it is. 3B's crops come only through `crops_for`.
+  - **Request rates:** loc.gov's "Working Within Limits" page (https://www.loc.gov/apis/json-and-yaml/working-within-limits/, read 2026-10-30) gives these limits, each blocking for an hour past them:
+
+    | Service | Requests a minute |
+    |---|---|
+    | the JSON/YAML API | 20 |
+    | image services | 150 |
+    | text services | 150 |
+    | `/storage-services/` | 150 |
+
+    - So tile.loc.gov stays at one request a second, and www.loc.gov at one in 3.5 s.
+    - The page warns that under heavy load you may meet "429 status codes or HTML pages with CAPTCHAs" even below those rates.
+    - So an HTML answer that isn't a 404 is busy, since every request the project makes expects JSON, XML or an image (`crops.captcha`). `get` pauses and asks again. A CAPTCHA page still there after the pauses raises `crops.Busy`, and `cached` never caches it.
+
+**36. Reprint clusters become stories. Eval A's links stay, but a printing joins a story only by matching the story's first printing directly. That ends the chaining that joined different stories in 54 of the 207 largest clusters. Precision per candidate is 100% (97.7–100%), against eval A's 98.0%, and recall is 84.7%.**
+- **What makes two printings one story:** one is the other's text printed again.
+  - That allows OCR errors, cuts, a new or missing headline, a credit line, and paragraphs added or dropped at either end.
+  - An advertisement or notice printed again word for word is one story too.
+  - A printing held whole in a longer one is one story with it, so a notice and the column that holds it are one story.
+- **What doesn't:**
+  - shared boilerplate: stock phrases, an advertisement's standard wording, a legal form, a masthead
+  - a quoted passage: a verse, a poem or a quotation inside otherwise different articles
+  - a serial's other instalments
+  - a standing column or department with other content
+  - a template with other particulars, such as testimonials quoting different people
+  - the same event told in different words
+  - two fragments of one long text that hardly overlap, since neither printing holds the other. Merging them would leave the reader one fragment.
+  - `eval/clusters/LABELLING.md` is the reading agents' version.
+- **Eval A's clusters (decision 27), and what changes:**
+  - Eval A joins two candidates that share a pair among their six smallest sampled seven-word runs, from their first 120 words. A pair held by more than 1,000 candidates is boilerplate.
+  - It joins every linked pair, so a chain of links joins stories that share nothing. That gave v2's 91,301 clusters holding 30.3% of candidates, and 952,591 distinct stories.
+  - The links stay as they are, as the blocking. The new method never joins candidates the links leave apart, so every story sits inside one of eval A's clusters. That's why an evaluation set drawn from eval A's clusters before any tuning covers every link the method can make.
+- **The stories** (`paperghosts/cluster/reprints.py`, `stories`; `scripts/clusters.py`):
+  1. The printings are taken earliest first, ties by article id.
+  2. Each looks at the stories of the printings it is linked to.
+  3. It joins the one whose first printing it matches best, where at least the threshold of the shorter's shingles are the other's. Otherwise it starts a story of its own.
+  - Every member matches its story's first printing directly, so nothing chains.
+  - **Shingles** (`shingles`) are five-word runs of 3+ letters in the first 600 words, one in four kept by its own hash. They are shorter than the links' seven-word runs, so they weather OCR errors better, and they cover five times as much of the text. The share is taken of the shorter printing, so a cut reprint is held whole in its original.
+  - **The threshold is 0.25**, tuned on the dev set alone (`tune`, `eval/clusters/tuning.json`), with a false merge costing five false splits:
+
+    | Threshold | 0.2 | 0.25 | 0.3 | 0.4 | 0.5 | 0.6 | 0.8 |
+    |---|---|---|---|---|---|---|---|
+    | False merges | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+    | False splits | 21 | 22 | 28 | 42 | 59 | 86 | 137 |
+    | Cost | 31 | **22** | 28 | 42 | 59 | 86 | 137 |
+
+    0.5 was the provisional value before any labels.
+- **Stable ids:** a story's id is its first printing's article id. The same candidates give the same stories and the same ids on every run, which 2C's split by cluster needs.
+- **The reader reads** each story's first printing, and also every member at least 25% longer than it, since the extra text might hold another story. That's the answer to a false merge's cost: a report merged into another story would never be read.
+  - A first version read every member with less than 80% of its shingles in the first printing. That flagged OCR noise, not added text: 166,717 members, against 27,806 by length.
+- **The evaluation set** (`eval/clusters/eval.json`, 667 pairs) was drawn from eval A's clusters before any label or tuning (seed "2B.4 eval"). It was then labelled and frozen, with its sha256 in `frozen.json` (`094d4070…754c`), and pushed at `f86021f` before tuning began.
+  - **Per candidate, 200:** a uniform draw of clustered candidates, each paired with a random other member of its cluster. That weights precision as the reader's job and the story counts are weighted.
+  - **Per cluster, 100:** a uniform draw of clusters with a random pair from each, as eval A drew them.
+  - **Large clusters, 207:** every cluster of 50 printings or more (v1 had 157), with its two least similar members.
+  - **Near the threshold, 80:** per-candidate pairs whose shorter printing has 20% to 60% of its shingles in the other.
+  - **The body probe, 80:** pairs that share a pair of runs among their body's, from word 120, but sit in different clusters of eval A's, or in none.
+  - No candidate is in two pairs, apart from the large clusters' fixed pairs.
+- **The dev set** (`eval/clusters/dev.json`, 160 pairs, seed "2B.4 dev"): 40 per-candidate pairs, and 120 from 10% to 80%. None shares a candidate with the evaluation set.
+- **Labelling**, by decision 30's protocol:
+  - 17 reading agents read 50 pairs each, with both sets shuffled together (seed "2B.4 batches"). A batch names no set, stratum or score, and shows each printing's paper, date, headline and first 400 words.
+  - **My blind re-check:** a seeded 10% of each stratum's commoner label ("same" in every stratum), judged before seeing the agents' labels. I agreed on all 61 (94.1–100%).
+  - **Read in full:** every rarer label and close call, 77 in the evaluation set and dev's 4 close calls, against both printings' full texts.
+    - All 43 of the agents' "different" labels stand.
+    - Their 38 close calls went 15 to "same" and 23 to "different".
+  - This maps decision 30's protocol onto pairs. There, the rare label, a report, was read in full. Here the rare label in every stratum is "different", so those were read in full.
+- **Results, at 0.25** (`eval/results/phase2b/clusters.json`):
+
+  | Stratum | Precision | Recall | Eval A on the same pairs |
+  |---|---|---|---|
+  | per candidate | 166 of 166: 100% (97.7–100%) | 166 of 196: 84.7% (79.0–89.1%) | 196 of 200 one story: 98.0% (95.0–99.2%) |
+  | per cluster | 87 of 87: 100% (95.8–100%) | 87 of 100: 87.0% (79.0–92.2%) | 100 of 100 (96.3–100%) |
+  | near the threshold | 65 of 65: 100% (94.4–100%) | 65 of 79: 82.3% (72.4–89.1%) | 79 of 80 |
+  | large clusters' least similar pairs | 26 of 29: 89.7% (73.6–96.4%) | 26 of 153: 17.0% (11.9–23.7%) | 153 of 207: 73.9% (67.5–79.4%) |
+  | body probe | none joined | 0 of 76 | none joined |
+
+  - Eval A's recall within its own clusters is 100% by construction, since it joins every pair it links.
+  - **The trade:** the method removes eval A's false merges, 4 of the 200 per-candidate pairs and 54 of the 207 large clusters' pairs. In return it splits 15% of the true reprints, mostly where OCR noise leaves too few shared runs.
+  - At five to one, eval A costs 20 on the per-candidate pairs and the method 30. On the dev set, eval A costs 40 and the method 22.
+    - So per candidate the two are close, and the method's gain sits in the large clusters, where the chaining is.
+    - On the dev set, a hybrid that kept eval A's clusters below 20 printings would cost 24, so the method stands as it is. The eval set's numbers changed nothing.
+- **Chaining in the large clusters:** 54 of the 207 least similar pairs are different stories (26.1%, 20.6–32.5%). The method splits 51 of them (94.4%, 84.9–98.1%). The 54, by kind, from the reading notes:
+
+  | Kind | Clusters |
+  |---|---|
+  | a standing column or report of another day or week: markets, freight, prices, river news, church notices and directories | 15 |
+  | advertisements and notices on one template with other particulars, including two ad columns that share one ad | 14 |
+  | a quoted stanza, verse, epigraph or scripture inside another article | 12 |
+  | a serial's other instalments, or their synopses | 5 |
+  | fragments of one long text that hardly overlap | 4 |
+  | unrelated texts, joined only through the chain | 3 |
+  | two variants of one piece: the curse on the man who won't pay the printer | 1 |
+
+  - They chain because eval A needs only two shared runs from the opening, and templates, standing columns and quotations share their opening wording. The links' tokens drop digits, so market reports of different days look alike.
+  - **The 3 left joined** (`eval-0432`, `eval-0466`, `eval-0506`) are one pattern. Two different texts each hold a short first printing whole, such as a poem's lines, stock clairvoyant wording or a sermon's opening, so both match it. A floor on the share of the longer printing would catch them. That's for a fresh draw.
+  - The ten largest clusters, before and after:
+
+    | Printings | Stories now | Largest story | Its least similar pair | Split |
+    |---|---|---|---|---|
+    | 732 | 39 | 210 | different: a cotton freight table of different days | yes |
+    | 684 | 9 | 515 | one story | yes, a false split |
+    | 487 | 28 | 295 | one story | yes, a false split |
+    | 427 | 56 | 340 | one story | yes, a false split |
+    | 402 | 3 | 400 | one story | yes, a false split |
+    | 379 | 15 | 332 | one story | yes, a false split |
+    | 342 | 43 | 91 | different | yes |
+    | 308 | 39 | 188 | one story | yes, a false split |
+    | 271 | 13 | 141 | different: a steamboat's timetables of other seasons | yes |
+    | 264 | 15 | 86 | one story | yes, a false split |
+
+    The least similar pair is the hardest by construction. It shares no sampled shingles, so the method can't keep it together.
+- **v2's stories:** 974,399 distinct stories, against eval A's 952,591 (+21,808, 2.3%).
+  - 96,105 have more than one printing, holding 357,828 printings (28.9% of candidates), and 82,854 of those span more than one paper.
+  - By size: 52,483 of 2 printings, 16,823 of 3, 8,530 of 4, 13,414 of 5 to 9, 3,915 of 10 to 19, 832 of 20 to 49, and 108 of 50 or more.
+- **The reader's job** is 974,399 first printings and 27,806 longer members: 1,002,205 of 1,236,122 candidates (81.1%). Eval A, with one printing per cluster, gave 952,591.
+- **The body probe: eval A's links miss many reprints.** 76 of its 80 pairs are one story: 95.0% (87.8–98.0%), all of them outside the method's reach.
+  - Its frame holds 55,711 links across eval A's clusters, touching 77,641 candidates. 42,733 of those are in no cluster at all.
+  - These are reprints whose openings differ, such as a new first paragraph or a cut start, or whose opening runs fell outside each other's six smallest.
+  - **Proposed for the EM, not done:** add the body's links to the blocking, with the direct-match rule keeping them from chaining, and measure it on a fresh draw. Adopting it now would mean tuning on the frozen set.
+- **BUDGET.md's third scenario** now takes the stories' sizes (`scripts/budget_stories.py`): 0.609 stories per printing in v1's candidates and 0.820 in those v2 added. That gives 62,402 stories at the top of the range, against 61,960, needing 461.8 MB as stored and 372.5 MB with every lever. The conclusions stand: nothing fits beside `sample_mflix`, and everything fits without it.
+- **For 2C:** split gold, dev and train by story id. The reader reads each story's first printing and its longer members.

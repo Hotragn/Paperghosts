@@ -1,0 +1,2562 @@
+[
+ {
+  "pair": "dev-0001",
+  "stratum": "per candidate",
+  "a": "18_1893-10-23_p1_sn99062034_00279523313_1893102301_0773.json",
+  "b": "9_1893-12-08_pna_sn83016209_00332899004_1893120801_0409.json",
+  "similarity": [
+   64,
+   0.4638,
+   0.4324
+  ],
+  "label": "same",
+  "note": "Same Will and I story; the second starts mid-sentence.",
+  "agent": "same",
+  "agent_note": "Same Will and I story; the second starts mid-sentence.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0002",
+  "stratum": "per candidate",
+  "a": "15_1919-11-06_pna_sn85040437_00414215385_1919110601_0326.json",
+  "b": "19_1919-10-25_p1_sn92051282_00414219305_1919102501_0296.json",
+  "similarity": [
+   11,
+   1.0,
+   0.8462
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0003",
+  "stratum": "per candidate",
+  "a": "19_1903-12-10_pna_sn85033255_00514152561_1903121001_0129.json",
+  "b": "44_1903-12-03_pna_sn86082061_00415629710_1903120301_0620.json",
+  "similarity": [
+   4,
+   1.0,
+   1.0
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0004",
+  "stratum": "per candidate",
+  "a": "13_1888-08-03_p3_sn83007654_00393342742_1888080301_0036.json",
+  "b": "1_1888-08-09_pna_sn83025167_00279528414_1888080901_0798.json",
+  "similarity": [
+   32,
+   0.6667,
+   0.64
+  ],
+  "label": "same",
+  "note": "Same poem 'To a Child'.",
+  "agent": "same",
+  "agent_note": "Same poem 'To a Child'.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0005",
+  "stratum": "per candidate",
+  "a": "9_1913-06-26_pna_sn86088651_00202191149_1913062601_1203.json",
+  "b": "10_1913-06-06_pna_sn89060136_00279522631_1913060601_0634.json",
+  "similarity": [
+   65,
+   0.942,
+   0.9028
+  ],
+  "label": "same",
+  "note": "Same Zuider Zee dead cities article.",
+  "agent": "same",
+  "agent_note": "Same Zuider Zee dead cities article.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0006",
+  "stratum": "per candidate",
+  "a": "18_1880-04-16_p1_sn83040340_00237283156_1880041601_0344.json",
+  "b": "37_1880-05-13_p1_sn84022835_00237285013_1880051301_0362.json",
+  "similarity": [
+   36,
+   0.8182,
+   0.5538
+  ],
+  "label": "same",
+  "note": "Same Fritz and the Little White Door tale; first starts later.",
+  "agent": "same",
+  "agent_note": "Same Fritz and the Little White Door tale; first starts later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0007",
+  "stratum": "per candidate",
+  "a": "1_1863-11-07_p1_sn84031042_00279529315_1863110701_0111.json",
+  "b": "4_1881-11-26_p1_sn83016368_00415627609_1881112601_0534.json",
+  "similarity": [
+   18,
+   0.2118,
+   0.1714
+  ],
+  "label": "same",
+  "note": "Same advice piece; second adds a local introduction and light edits.",
+  "agent": "same",
+  "agent_note": "Same advice piece; second adds a local introduction and light edits.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0008",
+  "stratum": "per candidate",
+  "a": "14_1921-06-27_p7_sn85042354_00383342557_1921062701_0468.json",
+  "b": "14_1921-05-10_p6_sn87062237_00383342843_1921051001_0687.json",
+  "similarity": [
+   2,
+   0.1176,
+   0.1
+  ],
+  "label": "different",
+  "note": "Same pageant: one is an advance notice, the other a later report of a repeat performance.",
+  "agent": "different",
+  "agent_note": "Same pageant: one is an advance notice, the other a later report of a repeat performance.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0009",
+  "stratum": "per candidate",
+  "a": "7_1889-11-23_pna_sn83032231_00237287903_1889112301_0667.json",
+  "b": "15_1889-06-26_pna_sn84026089_00514155896_1889062601_0540.json",
+  "similarity": [
+   28,
+   0.8485,
+   0.8
+  ],
+  "label": "same",
+  "note": "Same poem, The Old House.",
+  "agent": "same",
+  "agent_note": "Same poem, The Old House.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0010",
+  "stratum": "per candidate",
+  "a": "2_1865-03-04_p1_sn83030213_00206530790_1865030401_0423.json",
+  "b": "18_1865-03-09_pna_sn84028822_00280775459_1865030901_1095.json",
+  "similarity": [
+   22,
+   0.4783,
+   0.449
+  ],
+  "label": "same",
+  "note": "Same Richmond Examiner editorial on Virginia's assembly.",
+  "agent": "same",
+  "agent_note": "Same Richmond Examiner editorial on Virginia's assembly.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0011",
+  "stratum": "per candidate",
+  "a": "5_1919-12-29_pna_sn86072054_00415660492_1919122901_1130.json",
+  "b": "1_1920-01-15_p1_sn85035720_00383340809_1920011502_0155.json",
+  "similarity": [
+   41,
+   0.5942,
+   0.3905
+  ],
+  "label": "same",
+  "note": "Same serial instalment; the second starts a little later.",
+  "agent": "same",
+  "agent_note": "Same serial instalment; the second starts a little later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0012",
+  "stratum": "per candidate",
+  "a": "10_1907-01-04_p1_sn88076741_00295863614_1907010401_0442.json",
+  "b": "10_1907-01-05_pna_sn85040223_00414214897_1907010501_0216.json",
+  "similarity": [
+   7,
+   1.0,
+   0.875
+  ],
+  "label": "same",
+  "note": "Same joke.",
+  "agent": "same",
+  "agent_note": "Same joke.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0013",
+  "stratum": "per candidate",
+  "a": "4_1920-12-09_pna_sn93066071_00237281068_1920120901_0593.json",
+  "b": "3_1920-08-13_pna_sn89058253_00415621991_1920081301_0688.json",
+  "similarity": [
+   47,
+   0.7581,
+   0.7581
+  ],
+  "label": "same",
+  "note": "Same serial chapter text.",
+  "agent": "same",
+  "agent_note": "Same serial chapter text.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0014",
+  "stratum": "per candidate",
+  "a": "23_1907-08-29_pna_sn95067647_0017503318A_1907082901_0464.json",
+  "b": "21_1907-08-29_pna_sn86081889_00280776749_1907082901_0291.json",
+  "similarity": [
+   69,
+   0.8961,
+   0.8118
+  ],
+  "label": "same",
+  "note": "Same domestic news summary, same date, same items word for word.",
+  "agent": "same",
+  "agent_note": "Same domestic news summary, same date, same items word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0015",
+  "stratum": "per candidate",
+  "a": "9_1908-10-23_pna_sn86058226_00271744705_1908102301_0217.json",
+  "b": "6_1913-12-17_p12_sn86064451_00280768686_1913121701_0286.json",
+  "similarity": [
+   17,
+   0.5667,
+   0.425
+  ],
+  "label": "same",
+  "note": "Same serial passage (Grenier, Philip Anson).",
+  "agent": "same",
+  "agent_note": "Same serial passage (Grenier, Philip Anson).",
+  "checked": null
+ },
+ {
+  "pair": "dev-0016",
+  "stratum": "per candidate",
+  "a": "8_1892-10-01_p1_sn88064555_00294555122_1892100101_0361.json",
+  "b": "22_1893-07-24_pna_sn85059538_0051415742A_1893072401_0690.json",
+  "similarity": [
+   19,
+   0.1638,
+   0.131
+  ],
+  "label": "same",
+  "note": "Same tollman Tim story; the second's later text is badly garbled.",
+  "agent": "same",
+  "agent_note": "Same tollman Tim story; the second's later text is badly garbled.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0017",
+  "stratum": "per candidate",
+  "a": "19_1896-05-05_p1_sn82016014_00295871313_1896050501_0247.json",
+  "b": "46_1896-08-06_pna_sn84020631_00415628973_1896080601_0753.json",
+  "similarity": [
+   60,
+   0.4412,
+   0.4225
+  ],
+  "label": "same",
+  "note": "Same 'Magic Aid to Love' story text; first starts mid-way.",
+  "agent": "same",
+  "agent_note": "Same 'Magic Aid to Love' story text; first starts mid-way.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0018",
+  "stratum": "per candidate",
+  "a": "12_1887-05-02_pna_sn84038114_00271765472_1887050201_0445.json",
+  "b": "3_1887-05-02_pna_sn82014248_00332895898_1887050201_0412.json",
+  "similarity": [
+   4,
+   0.4,
+   0.0909
+  ],
+  "label": "different",
+  "note": "two dispatches on one suicide, sharing the quoted note",
+  "agent": "close",
+  "agent_note": "Same suicide and note, but leads differ and the second adds detail; shared copy or separate reports unclear.",
+  "checked": "full"
+ },
+ {
+  "pair": "dev-0019",
+  "stratum": "per candidate",
+  "a": "3_1839-01-16_pna_sn88084131_00295861800_1839011601_0033.json",
+  "b": "15_1866-03-29_pna_sn85033395_00212470363_1866032901_0124.json",
+  "similarity": [
+   24,
+   0.2727,
+   0.2581
+  ],
+  "label": "same",
+  "note": "Same article on the number seven.",
+  "agent": "same",
+  "agent_note": "Same article on the number seven.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0020",
+  "stratum": "per candidate",
+  "a": "4_1899-12-25_pna_sn83045462_00280655302_1899122501_0308.json",
+  "b": "4_1900-09-27_p6_sn89051168_00393343114_1900092701_0529.json",
+  "similarity": [
+   17,
+   0.3696,
+   0.3617
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0021",
+  "stratum": "per candidate",
+  "a": "1_1918-12-13_p4_sn89051168_00393343515_1918121301_0073.json",
+  "b": "9_1918-12-13_pna_sn88065731_00415626320_1918121301_0164.json",
+  "similarity": [
+   31,
+   0.62,
+   0.3735
+  ],
+  "label": "same",
+  "note": "Same Vail multiplex telephony letter dispatch; second runs longer with a telegraph paragraph.",
+  "agent": "same",
+  "agent_note": "Same Vail multiplex telephony letter dispatch; second runs longer with a telegraph paragraph.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0022",
+  "stratum": "per candidate",
+  "a": "9_1922-08-12_pna_sn84025828_00295879993_1922081201_0055.json",
+  "b": "11_1922-02-25_p12_sn83045462_00280657074_1922022501_0431.json",
+  "similarity": [
+   20,
+   0.6667,
+   0.5882
+  ],
+  "label": "same",
+  "note": "Same phantom play umpire anecdote; OCR differences only.",
+  "agent": "same",
+  "agent_note": "Same phantom play umpire anecdote; OCR differences only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0023",
+  "stratum": "per candidate",
+  "a": "15_1907-05-15_pna_sn85033133_00514159117_1907051501_0495.json",
+  "b": "7_1907-07-12_p1_sn88056165_00295869197_1907071201_0987.json",
+  "similarity": [
+   90,
+   0.7965,
+   0.7759
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0024",
+  "stratum": "per candidate",
+  "a": "5_1885-12-26_p1_sn85025350_00415627701_1885122601_0450.json",
+  "b": "12_1886-01-06_pna_sn85033295_00279550067_1886010601_0078.json",
+  "similarity": [
+   62,
+   0.5391,
+   0.5041
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0025",
+  "stratum": "per candidate",
+  "a": "27_1915-10-28_pna_sn89067273_00200292674_1915102801_1028.json",
+  "b": "12_1915-11-04_pna_sn86092333_00514157728_1915110401_0305.json",
+  "similarity": [
+   53,
+   0.8983,
+   0.8548
+  ],
+  "label": "same",
+  "note": "Same serial installment text.",
+  "agent": "same",
+  "agent_note": "Same serial installment text.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0026",
+  "stratum": "per candidate",
+  "a": "5_1911-06-14_p1_sn83030193_00280765806_1911061401_0689.json",
+  "b": "4_1911-12-02_p1_sn91064011_00332896179_1911120201_0430.json",
+  "similarity": [
+   23,
+   0.4182,
+   0.3194
+  ],
+  "label": "same",
+  "note": "Same serial passage (Reid, Dr. Paulus and the medium); second starts earlier.",
+  "agent": "same",
+  "agent_note": "Same serial passage (Reid, Dr. Paulus and the medium); second starts earlier.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0027",
+  "stratum": "per candidate",
+  "a": "3_1898-07-16_pna_sn86063034_00414182240_1898071601_0836.json",
+  "b": "2_1898-03-04_pna_sn86063034_00414182239_1898030401_0672.json",
+  "similarity": [
+   2,
+   0.0714,
+   0.0526
+  ],
+  "label": "different",
+  "note": "Savannah freight reports of different days; stock wording, but rates and figures differ.",
+  "agent": "different",
+  "agent_note": "Savannah freight reports of different days; stock wording, but rates and figures differ.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0028",
+  "stratum": "per candidate",
+  "a": "2_1922-08-18_pna_sn86091255_00414217266_1922081801_0347.json",
+  "b": "2_1922-06-22_pna_sn88076639_00199918229_1922062201_0209.json",
+  "similarity": [
+   41,
+   0.7455,
+   0.6508
+  ],
+  "label": "same",
+  "note": "Serial instalment: identical synopsis and lead line.",
+  "agent": "same",
+  "agent_note": "Serial instalment: identical synopsis and lead line.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0029",
+  "stratum": "per candidate",
+  "a": "7_1913-07-24_p1_sn84024779_00295863766_1913072401_0705.json",
+  "b": "18_1913-07-31_p1_sn84024779_00295863766_1913073101_0707.json",
+  "similarity": [
+   33,
+   0.8919,
+   0.6471
+  ],
+  "label": "same",
+  "note": "Same Home Coming article printed a week later; second runs longer.",
+  "agent": "same",
+  "agent_note": "Same Home Coming article printed a week later; second runs longer.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0030",
+  "stratum": "per candidate",
+  "a": "60_1899-10-24_p1_sn84002889_00513681033_1899102401_0755.json",
+  "b": "87_1899-10-25_p1_sn84002889_00513681033_1899102501_0759.json",
+  "similarity": [
+   3,
+   1.0,
+   0.0577
+  ],
+  "label": "same",
+  "note": "a notice the earlier local column holds word for word",
+  "agent": "close",
+  "agent_note": "Second is a single notice that also sits inside the first's multi-item local column; only that line shared.",
+  "checked": "full"
+ },
+ {
+  "pair": "dev-0031",
+  "stratum": "per candidate",
+  "a": "18_1917-02-01_p2_sn89067273_00200292698_1917020101_0236.json",
+  "b": "29_1917-02-08_pna_sn85040437_00414215361_1917020801_0530.json",
+  "similarity": [
+   105,
+   0.7343,
+   0.7095
+  ],
+  "label": "same",
+  "note": "Same serial instalment, word for word.",
+  "agent": "same",
+  "agent_note": "Same serial instalment, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0032",
+  "stratum": "per candidate",
+  "a": "10_1909-04-22_pna_sn83040592_00212474009_1909042201_1233.json",
+  "b": "6_1909-04-03_pna_sn90051068_00513680831_1909040301_0901.json",
+  "similarity": [
+   58,
+   0.6042,
+   0.4234
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0033",
+  "stratum": "per candidate",
+  "a": "12_1883-03-09_pna_sn83016589_00393340678_1883030901_0047.json",
+  "b": "47_1883-03-10_pna_sn85040344_00271769295_1883031001_0644.json",
+  "similarity": [
+   98,
+   0.6447,
+   0.6164
+  ],
+  "label": "same",
+  "note": "Same Washington letter on Congress's last days.",
+  "agent": "same",
+  "agent_note": "Same Washington letter on Congress's last days.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0034",
+  "stratum": "per candidate",
+  "a": "8_1890-06-30_p1_sn84036012_00294550550_1890063001_0857.json",
+  "b": "25_1909-08-02_pna_sn86090528_00295864515_1909080201_0164.json",
+  "similarity": [
+   25,
+   0.1582,
+   0.1515
+  ],
+  "label": "same",
+  "note": "Same Sam Harding scalp story; second has expanded framing and extra lines, core narrative near-verbatim.",
+  "agent": "same",
+  "agent_note": "Same Sam Harding scalp story; second has expanded framing and extra lines, core narrative near-verbatim.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0035",
+  "stratum": "per candidate",
+  "a": "12_1925-05-03_p64_sn83045462_0028065761A_1925050301_0281.json",
+  "b": "7_1925-04-29_p21_sn83045462_0028065761A_1925042901_0056.json",
+  "similarity": [
+   13,
+   0.8667,
+   0.7647
+  ],
+  "label": "same",
+  "note": "Same Empire theatre programme; only the opening day names differ.",
+  "agent": "same",
+  "agent_note": "Same Empire theatre programme; only the opening day names differ.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0036",
+  "stratum": "per candidate",
+  "a": "1_1898-03-03_pna_sn98062949_00340581088_1898030301_1358.json",
+  "b": "3_1905-10-21_p1_sn90059959_00271742885_1905102101_1048.json",
+  "similarity": [
+   17,
+   0.4857,
+   0.4722
+  ],
+  "label": "same",
+  "note": "Same poem by Prentice.",
+  "agent": "same",
+  "agent_note": "Same poem by Prentice.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0037",
+  "stratum": "per candidate",
+  "a": "10_1907-10-04_p2_sn90051167_00340586050_1907100401_0816.json",
+  "b": "10_1907-08-12_p4_sn85038485_00340583474_1907081201_0587.json",
+  "similarity": [
+   44,
+   0.6984,
+   0.5714
+  ],
+  "label": "same",
+  "note": "Same Lafitte treasure story; second credits the Houston Post.",
+  "agent": "same",
+  "agent_note": "Same Lafitte treasure story; second credits the Houston Post.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0038",
+  "stratum": "per candidate",
+  "a": "24_1899-03-25_p1_sn84029696_00212473157_1899032501_0047.json",
+  "b": "18_1899-03-23_pna_sn85030687_00212473145_1899032301_0343.json",
+  "similarity": [
+   98,
+   0.7903,
+   0.7424
+  ],
+  "label": "same",
+  "note": "Same column of Kansas news paragraphs in the same order.",
+  "agent": "same",
+  "agent_note": "Same column of Kansas news paragraphs in the same order.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0039",
+  "stratum": "per candidate",
+  "a": "12_1931-10-13_p1_sn86063730_00332893592_1931101302_0246.json",
+  "b": "3_1931-10-13_p1_sn86063730_00332893592_1931101301_0238.json",
+  "similarity": [
+   23,
+   0.8846,
+   0.8214
+  ],
+  "label": "same",
+  "note": "Identical blurb in the same issue; OCR differences only.",
+  "agent": "same",
+  "agent_note": "Identical blurb in the same issue; OCR differences only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0040",
+  "stratum": "per candidate",
+  "a": "7_1896-07-22_p8_sn85042461_0028076968A_1896072201_0256.json",
+  "b": "1_1896-01-19_p6_sn85042461_00280769654_1896011901_0204.json",
+  "similarity": [
+   44,
+   0.44,
+   0.4151
+  ],
+  "label": "same",
+  "note": "Same alcohol-cure advertisement text.",
+  "agent": "same",
+  "agent_note": "Same alcohol-cure advertisement text.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0041",
+  "stratum": "near the threshold",
+  "a": "54_1909-11-25_pna_sn88085187_00211108174_1909112501_0194.json",
+  "b": "18_1909-11-25_pna_sn87093407_00211107479_1909112501_0846.json",
+  "similarity": [
+   11,
+   0.3548,
+   0.3056
+  ],
+  "label": "same",
+  "note": "Same editorial; second starts a few words later.",
+  "agent": "same",
+  "agent_note": "Same editorial; second starts a few words later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0042",
+  "stratum": "near the threshold",
+  "a": "24_1951-10-30_p22_sn83045462_00280605694_1951103001_0266.json",
+  "b": "27_1951-10-30_p21_sn83045462_00280605694_1951103001_0265.json",
+  "similarity": [
+   25,
+   0.3906,
+   0.2294
+  ],
+  "label": "same",
+  "note": "Same paper and date; identical lead, later paragraphs revised between editions.",
+  "agent": "same",
+  "agent_note": "Same paper and date; identical lead, later paragraphs revised between editions.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0043",
+  "stratum": "near the threshold",
+  "a": "12_1902-06-03_p1_sn88064676_00280761655_1902060301_0964.json",
+  "b": "8_1902-05-20_p1_sn92066979_00513687436_1902052001_0354.json",
+  "similarity": [
+   9,
+   0.5625,
+   0.0682
+  ],
+  "label": "same",
+  "note": "Same Myrtle masquerade-ball story; second is a short opening that stops early.",
+  "agent": "same",
+  "agent_note": "Same Myrtle masquerade-ball story; second is a short opening that stops early.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0044",
+  "stratum": "near the threshold",
+  "a": "4_1899-08-31_p1_sn88053046_00271741728_1899083101_0505.json",
+  "b": "4_1899-09-01_p1_sn83016025_00414210740_1899090101_0680.json",
+  "similarity": [
+   19,
+   0.2436,
+   0.2065
+  ],
+  "label": "different",
+  "note": "two magazine columns sharing one blurb, each with other items",
+  "agent": "close",
+  "agent_note": "Shared Scribner's blurb verbatim for about 150 words, then each column diverges; intro and later items differ.",
+  "checked": "full"
+ },
+ {
+  "pair": "dev-0045",
+  "stratum": "near the threshold",
+  "a": "5_1874-08-26_pna_sn85033295_00271768758_1874082601_0271.json",
+  "b": "9_1874-08-22_p1_sn85038292_00415623756_1874082201_0192.json",
+  "similarity": [
+   30,
+   0.4,
+   0.3659
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0046",
+  "stratum": "near the threshold",
+  "a": "11_1924-01-18_p1_sn89060136_00279522291_1924011801_0031.json",
+  "b": "20_1924-02-01_p1_sn83016209_00332899089_1924020101_0447.json",
+  "similarity": [
+   6,
+   0.3333,
+   0.3333
+  ],
+  "label": "same",
+  "note": "Same sea monster item; OCR differences only.",
+  "agent": "same",
+  "agent_note": "Same sea monster item; OCR differences only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0047",
+  "stratum": "near the threshold",
+  "a": "2_1918-02-25_p3_sn82014519_00414183372_1918022501_0552.json",
+  "b": "6_1918-02-26_pna_sn87057262_00295875227_1918022601_1125.json",
+  "similarity": [
+   40,
+   0.5,
+   0.4494
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0048",
+  "stratum": "near the threshold",
+  "a": "21_1908-12-30_pna_sn89081128_00280766379_1908123001_0424.json",
+  "b": "5_1909-01-01_pna_sn93063557_00200296023_1909010101_0529.json",
+  "similarity": [
+   89,
+   0.6096,
+   0.6096
+  ],
+  "label": "same",
+  "note": "Same year-end chronology; second starts later in the list.",
+  "agent": "same",
+  "agent_note": "Same year-end chronology; second starts later in the list.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0049",
+  "stratum": "near the threshold",
+  "a": "11_1849-04-13_pna_sn86086768_00271769751_1849041301_0104.json",
+  "b": "2_1868-02-04_pna_sn85033133_00514159361_1868020401_0360.json",
+  "similarity": [
+   23,
+   0.3382,
+   0.1825
+  ],
+  "label": "same",
+  "note": "Same Macaulay sketch of Bunyan; second omits the opening.",
+  "agent": "same",
+  "agent_note": "Same Macaulay sketch of Bunyan; second omits the opening.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0050",
+  "stratum": "near the threshold",
+  "a": "12_1881-10-22_p1_sn88064176_00211100837_1881102201_0579.json",
+  "b": "59_1898-08-04_p1_sn86071045_00296026517_1898080401_0407.json",
+  "similarity": [
+   51,
+   0.3355,
+   0.3072
+  ],
+  "label": "same",
+  "note": "Same commercial traveller and hostler's-room story; second starts mid-sentence.",
+  "agent": "same",
+  "agent_note": "Same commercial traveller and hostler's-room story; second starts mid-sentence.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0051",
+  "stratum": "near the threshold",
+  "a": "2_1916-12-21_p10_sn98066406_00296023425_1916122101_0883.json",
+  "b": "1_1917-03-25_p1_sn95060905_00211106542_1917032501_0599.json",
+  "similarity": [
+   32,
+   0.7619,
+   0.7111
+  ],
+  "label": "same",
+  "note": "Same serial instalment (Cranmer, David and Lydia); text matches line for line.",
+  "agent": "same",
+  "agent_note": "Same serial instalment (Cranmer, David and Lydia); text matches line for line.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0052",
+  "stratum": "near the threshold",
+  "a": "22_1908-11-09_p1_sn99021999_00280779027_1908110901_0076.json",
+  "b": "27_1908-11-09_p14_sn92051397_00271764145_1908110901_0486.json",
+  "similarity": [
+   33,
+   0.2558,
+   0.226
+  ],
+  "label": "same",
+  "note": "Same stock-market weekly review; headlines differ.",
+  "agent": "same",
+  "agent_note": "Same stock-market weekly review; headlines differ.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0053",
+  "stratum": "near the threshold",
+  "a": "1_1920-06-17_pna_sn87057934_00415622727_1920061701_0239.json",
+  "b": "8_1920-06-03_pna_sn85040437_00414215385_1920060301_0587.json",
+  "similarity": [
+   7,
+   0.2,
+   0.1077
+  ],
+  "label": "same",
+  "note": "Same serial instalment; the two overlap verbatim in the Fitzhugh and Nikolay fight.",
+  "agent": "same",
+  "agent_note": "Same serial instalment; the two overlap verbatim in the Fitzhugh and Nikolay fight.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0054",
+  "stratum": "near the threshold",
+  "a": "8_1874-02-18_pna_sn83032195_0029602868A_1874021801_0682.json",
+  "b": "13_1887-03-12_pna_sn90053049_00332897901_1887031201_0297.json",
+  "similarity": [
+   63,
+   0.504,
+   0.4437
+  ],
+  "label": "same",
+  "note": "Same essay; second has one extra sentence.",
+  "agent": "same",
+  "agent_note": "Same essay; second has one extra sentence.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0055",
+  "stratum": "near the threshold",
+  "a": "9_1838-04-07_p1_sn83016939_00295878216_1838040701_0516.json",
+  "b": "7_1838-08-04_pna_sn83016942_00295878204_1838080401_0714.json",
+  "similarity": [
+   25,
+   0.3623,
+   0.3289
+  ],
+  "label": "same",
+  "note": "Same newspaper prospectus text; second adds terms.",
+  "agent": "same",
+  "agent_note": "Same newspaper prospectus text; second adds terms.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0056",
+  "stratum": "near the threshold",
+  "a": "4_1915-03-05_p1_sn87076552_00296028964_1915030501_0061.json",
+  "b": "2_1915-02-27_p1_sn90061556_00200292054_1915022701_0480.json",
+  "similarity": [
+   75,
+   0.7143,
+   0.7009
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0057",
+  "stratum": "near the threshold",
+  "a": "7_1894-11-15_pna_sn84026824_00271767869_1894111501_0191.json",
+  "b": "5_1894-11-29_pna_sn84026824_00271767869_1894112901_0198.json",
+  "similarity": [
+   22,
+   0.7586,
+   0.7333
+  ],
+  "label": "same",
+  "note": "Same Hostetter's Bitters notice, word for word.",
+  "agent": "same",
+  "agent_note": "Same Hostetter's Bitters notice, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0058",
+  "stratum": "near the threshold",
+  "a": "3_1919-06-12_pna_sn82006687_00415623616_1919061201_0409.json",
+  "b": "9_1919-06-04_p6_sn84020422_00514156281_1919060401_0160.json",
+  "similarity": [
+   32,
+   0.7273,
+   0.6667
+  ],
+  "label": "same",
+  "note": "Same article on the Moors hoping to return to Granada.",
+  "agent": "same",
+  "agent_note": "Same article on the Moors hoping to return to Granada.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0059",
+  "stratum": "near the threshold",
+  "a": "3_1861-03-06_p1_sn83025182_00279528682_1861030601_0361.json",
+  "b": "5_1861-03-21_pna_sn84027398_00279529406_1861032101_0348.json",
+  "similarity": [
+   15,
+   0.2679,
+   0.2381
+  ],
+  "label": "same",
+  "note": "Same Harper's Weekly item.",
+  "agent": "same",
+  "agent_note": "Same Harper's Weekly item.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0060",
+  "stratum": "near the threshold",
+  "a": "22_1916-02-25_pna_sn89058253_0041562189A_1916022501_0463.json",
+  "b": "2_1916-03-31_p1_sn96076776_00415669914_1916033101_0545.json",
+  "similarity": [
+   2,
+   0.2222,
+   0.0513
+  ],
+  "label": "different",
+  "note": "Sea-Wolf serial synopses from different points; share only the opening premise, second far longer.",
+  "agent": "different",
+  "agent_note": "Sea-Wolf serial synopses from different points; share only the opening premise, second far longer.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0061",
+  "stratum": "near the threshold",
+  "a": "32_1881-02-25_pna_sn87076843_00237282747_1881022501_0062.json",
+  "b": "13_1881-03-25_pna_sn86086852_00271769623_1881032501_0792.json",
+  "similarity": [
+   81,
+   0.5586,
+   0.5364
+  ],
+  "label": "same",
+  "note": "Same story, A Pyramid of Cabbages.",
+  "agent": "same",
+  "agent_note": "Same story, A Pyramid of Cabbages.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0062",
+  "stratum": "near the threshold",
+  "a": "30_1886-06-03_pna_sn85042405_00212478714_1886060301_1060.json",
+  "b": "10_1886-06-09_pna_sn89064939_00206537966_1886060901_0182.json",
+  "similarity": [
+   31,
+   0.369,
+   0.2348
+  ],
+  "label": "different",
+  "note": "two cuts of the wedding account that barely overlap",
+  "agent": "close",
+  "agent_note": "Cleveland wedding: benediction and Folsom sentence shared verbatim; otherwise first has vows and dress, second has departure.",
+  "checked": "full"
+ },
+ {
+  "pair": "dev-0063",
+  "stratum": "near the threshold",
+  "a": "26_1897-03-10_pna_sn85033781_00296023814_1897031001_0853.json",
+  "b": "30_1897-03-13_p1_sn96076817_00415669458_1897031301_0841.json",
+  "similarity": [
+   106,
+   0.7211,
+   0.6272
+  ],
+  "label": "same",
+  "note": "Same press-opinions compilation on McKinley's inaugural; second adds one opening quotation.",
+  "agent": "same",
+  "agent_note": "Same press-opinions compilation on McKinley's inaugural; second adds one opening quotation.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0064",
+  "stratum": "near the threshold",
+  "a": "15_1878-03-14_p4_sn84023017_00414213005_1878031401_0627.json",
+  "b": "5_1878-03-02_pna_sn83032231_00237287472_1878030201_0268.json",
+  "similarity": [
+   21,
+   0.1826,
+   0.1721
+  ],
+  "label": "same",
+  "note": "Same party platform, planks in the same order; second lightly reworded and starts later.",
+  "agent": "same",
+  "agent_note": "Same party platform, planks in the same order; second lightly reworded and starts later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0065",
+  "stratum": "near the threshold",
+  "a": "17_1917-11-30_pna_sn91068748_00415667395_1917113001_0326.json",
+  "b": "8_1917-12-01_p1_sn86091059_0041566641A_1917120101_1233.json",
+  "similarity": [
+   10,
+   0.7692,
+   0.625
+  ],
+  "label": "same",
+  "note": "Same Fantomas aviator item.",
+  "agent": "same",
+  "agent_note": "Same Fantomas aviator item.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0066",
+  "stratum": "near the threshold",
+  "a": "17_1908-09-05_pna_sn90059959_00271742897_1908090501_1046.json",
+  "b": "18_1909-08-17_pna_sn86090947_0039334412A_1909081701_0528.json",
+  "similarity": [
+   98,
+   0.6405,
+   0.6323
+  ],
+  "label": "same",
+  "note": "Same 'Brass Bowl' serial instalment.",
+  "agent": "same",
+  "agent_note": "Same 'Brass Bowl' serial instalment.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0067",
+  "stratum": "near the threshold",
+  "a": "27_1913-01-30_pna_sn87062268_00415662932_1913013001_0277.json",
+  "b": "10_1913-01-25_p1_sn82016014_00295870576_1913012501_0285.json",
+  "similarity": [
+   83,
+   0.6336,
+   0.5188
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0068",
+  "stratum": "near the threshold",
+  "a": "15_1839-10-29_pna_sn84022355_00200290100_1839102901_0830.json",
+  "b": "2_1853-10-05_pna_sn85026466_0020219798A_1853100501_0468.json",
+  "similarity": [
+   19,
+   0.3016,
+   0.2639
+  ],
+  "label": "same",
+  "note": "Same poem; second drops two stanzas and rewords a few lines.",
+  "agent": "same",
+  "agent_note": "Same poem; second drops two stanzas and rewords a few lines.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0069",
+  "stratum": "near the threshold",
+  "a": "7_1892-12-26_pna_sn87080287_00296028770_1892122601_0902.json",
+  "b": "11_1892-12-24_pna_sn83032231_00237287915_1892122401_0681.json",
+  "similarity": [
+   72,
+   0.7826,
+   0.75
+  ],
+  "label": "same",
+  "note": "Same 'In Other Lands' Christmas article.",
+  "agent": "same",
+  "agent_note": "Same 'In Other Lands' Christmas article.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0070",
+  "stratum": "near the threshold",
+  "a": "16_1894-02-01_p1_sn86092245_00279550328_1894020101_0231.json",
+  "b": "19_1897-08-06_p1_sn83016235_00393344520_1897080601_0438.json",
+  "similarity": [
+   27,
+   0.4154,
+   0.225
+  ],
+  "label": "same",
+  "note": "Same brakeman-and-churches sketch, word for word.",
+  "agent": "same",
+  "agent_note": "Same brakeman-and-churches sketch, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0071",
+  "stratum": "near the threshold",
+  "a": "8_1943-11-15_p35_sn83045462_0028060396A_1943111501_0232.json",
+  "b": "10_1943-11-16_p29_sn83045462_0028060396A_1943111601_0261.json",
+  "similarity": [
+   8,
+   0.5,
+   0.5
+  ],
+  "label": "same",
+  "note": "Same theater listings, films and showtimes, a day apart; only OCR differs.",
+  "agent": "same",
+  "agent_note": "Same theater listings, films and showtimes, a day apart; only OCR differs.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0072",
+  "stratum": "near the threshold",
+  "a": "51_1860-02-21_p1_sn84020712_0029587918A_1860022101_0036.json",
+  "b": "9_1863-04-22_pna_sn85026309_00280775897_1863042201_0240.json",
+  "similarity": [
+   19,
+   0.2714,
+   0.19
+  ],
+  "label": "same",
+  "note": "Same anecdote; second lightly reworded.",
+  "agent": "same",
+  "agent_note": "Same anecdote; second lightly reworded.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0073",
+  "stratum": "near the threshold",
+  "a": "22_1922-09-02_pna_sn86072054_00415660571_1922090201_0020.json",
+  "b": "29_1922-09-02_p1_sn82015313_00383348675_1922090201_0195.json",
+  "similarity": [
+   11,
+   0.55,
+   0.0982
+  ],
+  "label": "same",
+  "note": "Second is the story-so-far recap, word for word; first adds the instalment text after it.",
+  "agent": "same",
+  "agent_note": "Second is the story-so-far recap, word for word; first adds the instalment text after it.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0074",
+  "stratum": "near the threshold",
+  "a": "20_1897-08-10_p1_sn82014248_00340587935_1897081001_0261.json",
+  "b": "3_1897-08-08_pna_sn83030214_00175039132_1897080801_0146.json",
+  "similarity": [
+   32,
+   0.6154,
+   0.3368
+  ],
+  "label": "same",
+  "note": "Same Nora Hopper poem; first runs on into Maine gossip items.",
+  "agent": "same",
+  "agent_note": "Same Nora Hopper poem; first runs on into Maine gossip items.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0075",
+  "stratum": "near the threshold",
+  "a": "9_1907-07-25_p7_sn89051213_00414213066_1907072501_0531.json",
+  "b": "18_1907-08-06_p1_sn88056158_00415666330_1907080601_0643.json",
+  "similarity": [
+   28,
+   0.6829,
+   0.6667
+  ],
+  "label": "same",
+  "note": "Same banshee or death wraith article.",
+  "agent": "same",
+  "agent_note": "Same banshee or death wraith article.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0076",
+  "stratum": "near the threshold",
+  "a": "14_1900-10-19_p1_sn91068367_00296024284_1900101901_0676.json",
+  "b": "41_1900-10-19_pna_sn93067853_0029586140A_1900101901_0392.json",
+  "similarity": [
+   38,
+   0.2992,
+   0.2568
+  ],
+  "label": "same",
+  "note": "Same strike-march dispatch with edits and different later paragraphs.",
+  "agent": "same",
+  "agent_note": "Same strike-march dispatch with edits and different later paragraphs.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0077",
+  "stratum": "near the threshold",
+  "a": "13_1843-01-20_p1_sn82014968_00212472025_1843012001_0559.json",
+  "b": "20_1843-01-20_pna_sn83035366_00296029087_1843012001_0499.json",
+  "similarity": [
+   58,
+   0.4833,
+   0.4296
+  ],
+  "label": "same",
+  "note": "Same Montgomery poem 'The Press'; second starts mid-poem.",
+  "agent": "same",
+  "agent_note": "Same Montgomery poem 'The Press'; second starts mid-poem.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0078",
+  "stratum": "near the threshold",
+  "a": "12_1898-04-03_pna_sn90059523_00206537498_1898040301_0353.json",
+  "b": "3_1899-05-04_p1_sn87057928_00340584429_1899050401_0135.json",
+  "similarity": [
+   50,
+   0.7042,
+   0.5263
+  ],
+  "label": "same",
+  "note": "Same serial chapter (Gryce, Knollys, Trohm at the gate); first starts mid-chapter.",
+  "agent": "same",
+  "agent_note": "Same serial chapter (Gryce, Knollys, Trohm at the gate); first starts mid-chapter.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0079",
+  "stratum": "near the threshold",
+  "a": "4_1899-10-13_p1_sn82014635_00280760699_1899101301_0281.json",
+  "b": "4_1899-10-13_p1_sn86072192_00340583358_1899101301_0100.json",
+  "similarity": [
+   43,
+   0.4343,
+   0.3874
+  ],
+  "label": "same",
+  "note": "Same yacht-race dispatch under different headlines.",
+  "agent": "same",
+  "agent_note": "Same yacht-race dispatch under different headlines.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0080",
+  "stratum": "near the threshold",
+  "a": "5_1865-08-25_pna_sn85038624_00280762635_1865082501_0234.json",
+  "b": "19_1865-08-23_pna_sn83030313_0027174352A_1865082301_0448.json",
+  "similarity": [
+   19,
+   0.5758,
+   0.1166
+  ],
+  "label": "same",
+  "note": "Same Colchester spirit medium trial item; first is the opening paragraph only.",
+  "agent": "same",
+  "agent_note": "Same Colchester spirit medium trial item; first is the opening paragraph only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0081",
+  "stratum": "near the threshold",
+  "a": "5_1896-07-15_pna_sn84026853_00237287393_1896071501_0316.json",
+  "b": "3_1896-06-05_pna_sn90000523_00415628109_1896060501_0510.json",
+  "similarity": [
+   11,
+   0.3143,
+   0.25
+  ],
+  "label": "same",
+  "note": "Same spectral lemur article; first starts mid-text.",
+  "agent": "same",
+  "agent_note": "Same spectral lemur article; first starts mid-text.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0082",
+  "stratum": "near the threshold",
+  "a": "20_1901-03-20_pna_sn89066695_00415661800_1901032001_0050.json",
+  "b": "10_1901-03-27_pna_sn89066695_00415661800_1901032701_0054.json",
+  "similarity": [
+   28,
+   0.6829,
+   0.4375
+  ],
+  "label": "same",
+  "note": "Same Bollinger County trustee's sale notice a week apart; first stops early.",
+  "agent": "same",
+  "agent_note": "Same Bollinger County trustee's sale notice a week apart; first stops early.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0083",
+  "stratum": "near the threshold",
+  "a": "4_1914-05-27_pna_sn82016014_00295870291_1914052701_0305.json",
+  "b": "19_1914-05-27_pna_sn83045462_00280658923_1914052701_0255.json",
+  "similarity": [
+   52,
+   0.486,
+   0.3611
+  ],
+  "label": "same",
+  "note": "Same Derby dispatch; each adds different paragraphs, shared race account near-verbatim.",
+  "agent": "same",
+  "agent_note": "Same Derby dispatch; each adds different paragraphs, shared race account near-verbatim.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0084",
+  "stratum": "near the threshold",
+  "a": "10_1885-09-10_p1_sn84024283_00294556825_1885091001_0679.json",
+  "b": "15_1897-08-19_p1_sn96076998_00415669422_1897081901_0404.json",
+  "similarity": [
+   45,
+   0.5921,
+   0.3383
+  ],
+  "label": "same",
+  "note": "Same Spot's Savings Bank anecdote.",
+  "agent": "same",
+  "agent_note": "Same Spot's Savings Bank anecdote.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0085",
+  "stratum": "near the threshold",
+  "a": "15_1875-02-12_pna_sn88078580_00280775198_1875021201_0262.json",
+  "b": "10_1875-02-12_p1_sn84027718_00271763815_1875021201_0252.json",
+  "similarity": [
+   46,
+   0.3566,
+   0.3511
+  ],
+  "label": "same",
+  "note": "Same Crack in the Door story; each has small cuts.",
+  "agent": "same",
+  "agent_note": "Same Crack in the Door story; each has small cuts.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0086",
+  "stratum": "near the threshold",
+  "a": "13_1884-07-02_p1_sn84026497_00280776130_1884070201_0465.json",
+  "b": "18_1884-05-31_pna_sn83016348_0041562458A_1884053101_0259.json",
+  "similarity": [
+   90,
+   0.566,
+   0.5625
+  ],
+  "label": "same",
+  "note": "Same Old Tree's Secret serial; the second starts later.",
+  "agent": "same",
+  "agent_note": "Same Old Tree's Secret serial; the second starts later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0087",
+  "stratum": "near the threshold",
+  "a": "4_1913-04-03_pna_sn89053729_00393343990_1913040302_0299.json",
+  "b": "6_1915-01-08_pna_sn86086499_00414214411_1915010801_0418.json",
+  "similarity": [
+   14,
+   0.5,
+   0.3889
+  ],
+  "label": "same",
+  "note": "Same school inspector joke.",
+  "agent": "same",
+  "agent_note": "Same school inspector joke.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0088",
+  "stratum": "near the threshold",
+  "a": "17_1897-09-11_p1_sn85034438_00175049411_1897091101_0533.json",
+  "b": "8_1897-09-11_pna_sn90059523_00206537462_1897091101_0112.json",
+  "similarity": [
+   3,
+   0.1875,
+   0.1154
+  ],
+  "label": "same",
+  "note": "Same Harrisburg dispatch; second adds later paragraphs.",
+  "agent": "same",
+  "agent_note": "Same Harrisburg dispatch; second adds later paragraphs.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0089",
+  "stratum": "near the threshold",
+  "a": "19_1880-10-14_pna_sn84026259_00280776105_1880101401_0172.json",
+  "b": "20_1880-10-14_p1_sn87068079_0033289643A_1880101401_0408.json",
+  "similarity": [
+   122,
+   0.7821,
+   0.7439
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0090",
+  "stratum": "near the threshold",
+  "a": "4_1921-10-14_p1_sn86074011_00415661873_1921101401_0456.json",
+  "b": "9_1921-09-15_pna_sn85040749_0027176909A_1921091501_0393.json",
+  "similarity": [
+   25,
+   0.6579,
+   0.5102
+  ],
+  "label": "same",
+  "note": "Same cab driver dialogue; the two start and stop at slightly different points.",
+  "agent": "same",
+  "agent_note": "Same cab driver dialogue; the two start and stop at slightly different points.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0091",
+  "stratum": "near the threshold",
+  "a": "2_1941-07-28_p1_sn96077287_00414187523_1941072801_0122.json",
+  "b": "1_1941-07-28_p25_sn83045462_00280602917_1941072801_0160.json",
+  "similarity": [
+   11,
+   0.2973,
+   0.2821
+  ],
+  "label": "same",
+  "note": "Same Indianhead demountable-houses story; the texts overlap verbatim.",
+  "agent": "same",
+  "agent_note": "Same Indianhead demountable-houses story; the texts overlap verbatim.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0092",
+  "stratum": "near the threshold",
+  "a": "6_1884-09-04_p1_sn84023253_00200296308_1884090401_0783.json",
+  "b": "10_1884-10-18_p3_sn84022982_00513688659_1884101801_0496.json",
+  "similarity": [
+   19,
+   0.7917,
+   0.6333
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0093",
+  "stratum": "near the threshold",
+  "a": "7_1896-03-27_p4_sn84024441_211102470_1896032701_0279.json",
+  "b": "9_1896-05-20_pna_sn83045604_00202199379_1896052001_0688.json",
+  "similarity": [
+   20,
+   0.2778,
+   0.2299
+  ],
+  "label": "same",
+  "note": "Same debutante don'ts essay; small wording edits.",
+  "agent": "same",
+  "agent_note": "Same debutante don'ts essay; small wording edits.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0094",
+  "stratum": "near the threshold",
+  "a": "28_1882-04-07_pna_sn84026844_0020219347A_1882040701_0337.json",
+  "b": "4_1882-04-12_pna_sn83025733_00200294737_1882041201_0598.json",
+  "similarity": [
+   68,
+   0.4595,
+   0.4359
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0095",
+  "stratum": "near the threshold",
+  "a": "2_1903-12-20_pna_sn85042104_00332892320_1903122001_0070.json",
+  "b": "6_1903-12-22_p1_sn99061556_00415667607_1903122201_0408.json",
+  "similarity": [
+   68,
+   0.4964,
+   0.4416
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0096",
+  "stratum": "near the threshold",
+  "a": "6_1858-12-01_pna_sn86071378_00212477631_1858120101_0500.json",
+  "b": "6_1858-04-07_pna_sn84026897_00237288257_1858040701_0183.json",
+  "similarity": [
+   44,
+   0.419,
+   0.2876
+  ],
+  "label": "same",
+  "note": "Same story; first starts mid-sentence.",
+  "agent": "same",
+  "agent_note": "Same story; first starts mid-sentence.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0097",
+  "stratum": "near the threshold",
+  "a": "8_1896-04-30_p1_sn87057928_00340584405_1896043001_0584.json",
+  "b": "4_1896-05-02_p1_sn89066818_00200292339_1896050201_0559.json",
+  "similarity": [
+   61,
+   0.7176,
+   0.6354
+  ],
+  "label": "same",
+  "note": "Same ghost-engine story.",
+  "agent": "same",
+  "agent_note": "Same ghost-engine story.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0098",
+  "stratum": "near the threshold",
+  "a": "36_1864-11-18_pna_sn84024738_00280778084_1864111801_0244.json",
+  "b": "10_1864-11-19_pna_sn84024738_00280778084_1864111901_0245.json",
+  "similarity": [
+   6,
+   0.1304,
+   0.1071
+  ],
+  "label": "same",
+  "note": "Same music advertisement on consecutive days.",
+  "agent": "same",
+  "agent_note": "Same music advertisement on consecutive days.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0099",
+  "stratum": "near the threshold",
+  "a": "43_1872-06-28_pna_sn84026005_00280776439_1872062801_0204.json",
+  "b": "24_1872-07-17_p1_sn84020422_00332894948_1872071701_0428.json",
+  "similarity": [
+   4,
+   0.6667,
+   0.2
+  ],
+  "label": "same",
+  "note": "Same Dolly Varden housecleaning item; the first's opening verse sits in its headline.",
+  "agent": "same",
+  "agent_note": "Same Dolly Varden housecleaning item; the first's opening verse sits in its headline.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0100",
+  "stratum": "near the threshold",
+  "a": "17_1919-03-01_pna_sn99063957_00295867590_1919030101_1098.json",
+  "b": "19_1919-04-18_p1_sn87090131_0020029970A_1919041801_0438.json",
+  "similarity": [
+   104,
+   0.7429,
+   0.6624
+  ],
+  "label": "same",
+  "note": "Same serial instalment, offset: second starts earlier, first runs further.",
+  "agent": "same",
+  "agent_note": "Same serial instalment, offset: second starts earlier, first runs further.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0101",
+  "stratum": "near the threshold",
+  "a": "20_1900-08-24_p1_sn86076366_00279555132_1900082401_0763.json",
+  "b": "10_1901-02-27_pna_sn86063952_00237281184_1901022701_0312.json",
+  "similarity": [
+   16,
+   0.3902,
+   0.3721
+  ],
+  "label": "same",
+  "note": "Same Dr. Pierce advertisement with the same Mrs. Dennis testimonial.",
+  "agent": "same",
+  "agent_note": "Same Dr. Pierce advertisement with the same Mrs. Dennis testimonial.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0102",
+  "stratum": "near the threshold",
+  "a": "34_1903-10-08_pna_sn87093220_00200290355_1903100801_0626.json",
+  "b": "46_1903-10-08_pna_sn88085190_00211107935_1903100801_0465.json",
+  "similarity": [
+   80,
+   0.7407,
+   0.7407
+  ],
+  "label": "same",
+  "note": "Same Chamberlain manifesto dispatch, near-verbatim.",
+  "agent": "same",
+  "agent_note": "Same Chamberlain manifesto dispatch, near-verbatim.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0103",
+  "stratum": "near the threshold",
+  "a": "4_1900-05-29_p3_sn86063397_00383341474_1900052901_0249.json",
+  "b": "9_1910-01-15_pna_sn93062856_206534667_1910011501_0025.json",
+  "similarity": [
+   17,
+   0.6296,
+   0.6296
+  ],
+  "label": "same",
+  "note": "Same poem; credit line differs.",
+  "agent": "same",
+  "agent_note": "Same poem; credit line differs.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0104",
+  "stratum": "near the threshold",
+  "a": "19_1922-06-17_p6_sn85034322_0029587496A_1922061701_0644.json",
+  "b": "10_1922-04-20_pna_sn93067951_00295861861_1922042001_0295.json",
+  "similarity": [
+   74,
+   0.5401,
+   0.5
+  ],
+  "label": "same",
+  "note": "Same serial instalment; windows overlap on the Spearman scene, with different starts and ends.",
+  "agent": "same",
+  "agent_note": "Same serial instalment; windows overlap on the Spearman scene, with different starts and ends.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0105",
+  "stratum": "near the threshold",
+  "a": "9_1906-06-09_pna_sn88085488_0021110806A_1906060902_1562.json",
+  "b": "8_1906-06-08_pna_sn86091096_00295867759_1906060801_0356.json",
+  "similarity": [
+   100,
+   0.7143,
+   0.6803
+  ],
+  "label": "same",
+  "note": "Same serial passage (Rex, Barker, the skylight), word for word.",
+  "agent": "same",
+  "agent_note": "Same serial passage (Rex, Barker, the skylight), word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0106",
+  "stratum": "near the threshold",
+  "a": "33_1907-06-28_pna_sn83045462_00280655855_1907062801_0395.json",
+  "b": "6_1907-06-28_pna_sn91070633_00514153826_1907062801_1122.json",
+  "similarity": [
+   11,
+   0.6111,
+   0.55
+  ],
+  "label": "same",
+  "note": "Same wire dispatch on the Holy Ghost and Us yacht; small edits and one added clause.",
+  "agent": "same",
+  "agent_note": "Same wire dispatch on the Holy Ghost and Us yacht; small edits and one added clause.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0107",
+  "stratum": "near the threshold",
+  "a": "8_1874-12-08_pna_sn84026844_00202190893_1874120801_1181.json",
+  "b": "1_1874-12-10_pna_sn84028490_00280775010_1874121001_0588.json",
+  "similarity": [
+   78,
+   0.4968,
+   0.4535
+  ],
+  "label": "same",
+  "note": "President's 1874 message, same text.",
+  "agent": "same",
+  "agent_note": "President's 1874 message, same text.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0108",
+  "stratum": "near the threshold",
+  "a": "10_1907-07-20_pna_sn86086499_00414214514_1907072001_1037.json",
+  "b": "12_1908-01-02_p7_sn89064489_00393340290_1908010201_0009.json",
+  "similarity": [
+   12,
+   0.6316,
+   0.6
+  ],
+  "label": "same",
+  "note": "Same Wild Pigeons paragraph; first adds a Rochester paper credit.",
+  "agent": "same",
+  "agent_note": "Same Wild Pigeons paragraph; first adds a Rochester paper credit.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0109",
+  "stratum": "near the threshold",
+  "a": "9_1896-04-25_p3_sn90051081_0038334153A_1896042501_0149.json",
+  "b": "9_1896-04-24_pna_sn83040052_00212473728_1896042401_0124.json",
+  "similarity": [
+   10,
+   0.7692,
+   0.6667
+  ],
+  "label": "same",
+  "note": "Same paragraph on threatened American birds, word for word.",
+  "agent": "same",
+  "agent_note": "Same paragraph on threatened American birds, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0110",
+  "stratum": "near the threshold",
+  "a": "36_1913-01-16_pna_sn83030214_00206531617_1913011601_0367.json",
+  "b": "21_1913-01-17_pna_sn85025007_0041566400A_1913011701_0222.json",
+  "similarity": [
+   27,
+   0.5094,
+   0.2231
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0111",
+  "stratum": "near the threshold",
+  "a": "5_1901-12-01_pna_sn89053684_00414182355_1901120101_0014.json",
+  "b": "38_1902-12-13_pna_sn89053684_00414182380_1902121301_0928.json",
+  "similarity": [
+   11,
+   0.6471,
+   0.3929
+  ],
+  "label": "different",
+  "note": "Ocean freight reports a year apart; same format but market tone and rates differ.",
+  "agent": "different",
+  "agent_note": "Ocean freight reports a year apart; same format but market tone and rates differ.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0112",
+  "stratum": "near the threshold",
+  "a": "3_1918-10-18_p20_sn85042354_00383343021_1918101801_0731.json",
+  "b": "15_1918-10-11_pna_sn85042243_00212478672_1918101101_0267.json",
+  "similarity": [
+   66,
+   0.6735,
+   0.4648
+  ],
+  "label": "same",
+  "note": "Same Whitehair correspondence on Jericho; headlines differ, OCR variants.",
+  "agent": "same",
+  "agent_note": "Same Whitehair correspondence on Jericho; headlines differ, OCR variants.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0113",
+  "stratum": "near the threshold",
+  "a": "13_1909-01-08_pna_sn85049554_00415622600_1909010801_0058.json",
+  "b": "6_1909-01-14_p1_sn84038335_0041562279A_1909011401_0022.json",
+  "similarity": [
+   9,
+   0.6429,
+   0.4737
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0114",
+  "stratum": "near the threshold",
+  "a": "38_1887-07-26_pna_sn84026788_00202192385_1887072601_0326.json",
+  "b": "30_1887-10-11_p1_sn89053706_00393344659_1887101101_0035.json",
+  "similarity": [
+   82,
+   0.6029,
+   0.5541
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0115",
+  "stratum": "near the threshold",
+  "a": "22_1903-12-23_p9_sn86063147_0034058594A_1903122301_0073.json",
+  "b": "4_1904-01-01_pna_sn96091104_00415621528_1904010101_0840.json",
+  "similarity": [
+   43,
+   0.5059,
+   0.2638
+  ],
+  "label": "same",
+  "note": "Same story, The Old and New, word for word.",
+  "agent": "same",
+  "agent_note": "Same story, The Old and New, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0116",
+  "stratum": "near the threshold",
+  "a": "16_1914-06-26_p1_sn87090131_00200299772_1914062601_0228.json",
+  "b": "9_1914-06-29_pna_sn86090528_0029586431A_1914062901_0639.json",
+  "similarity": [
+   51,
+   0.5795,
+   0.4474
+  ],
+  "label": "same",
+  "note": "Same serial instalment (Dorothy and John).",
+  "agent": "same",
+  "agent_note": "Same serial instalment (Dorothy and John).",
+  "checked": null
+ },
+ {
+  "pair": "dev-0117",
+  "stratum": "near the threshold",
+  "a": "5_1891-07-13_p1_sn87068097_00383340743_1891071301_0796.json",
+  "b": "19_1891-07-29_pna_sn84026497_00280776142_1891072901_0926.json",
+  "similarity": [
+   52,
+   0.5149,
+   0.3077
+  ],
+  "label": "same",
+  "note": "Same coffee-history article; headlines and decks differ.",
+  "agent": "same",
+  "agent_note": "Same coffee-history article; headlines and decks differ.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0118",
+  "stratum": "near the threshold",
+  "a": "10_1908-03-14_p1_sn88056094_00295869550_1908031401_1084.json",
+  "b": "9_1908-02-29_pna_sn88085488_00211108058_1908022901_0915.json",
+  "similarity": [
+   9,
+   0.6923,
+   0.6
+  ],
+  "label": "same",
+  "note": "Same paragraph on isthmian canal knockers.",
+  "agent": "same",
+  "agent_note": "Same paragraph on isthmian canal knockers.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0119",
+  "stratum": "near the threshold",
+  "a": "6_1915-12-24_p8_sn90051265_00340585938_1915122401_0638.json",
+  "b": "3_1915-12-17_p4_sn90051265_00340585938_1915121701_0624.json",
+  "similarity": [
+   28,
+   0.5833,
+   0.5714
+  ],
+  "label": "same",
+  "note": "Same Roark divorce summons, same parties and dates, printed a week later.",
+  "agent": "same",
+  "agent_note": "Same Roark divorce summons, same parties and dates, printed a week later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0120",
+  "stratum": "near the threshold",
+  "a": "5_1907-10-13_p9_sn89051168_00393343242_1907101301_0702.json",
+  "b": "5_1907-10-12_pna_sn86092066_0041418652A_1907101201_0392.json",
+  "similarity": [
+   12,
+   0.3158,
+   0.3
+  ],
+  "label": "same",
+  "note": "Same news-forecast dispatch; second has one extra item (bartenders' convention).",
+  "agent": "same",
+  "agent_note": "Same news-forecast dispatch; second has one extra item (bartenders' convention).",
+  "checked": null
+ },
+ {
+  "pair": "dev-0121",
+  "stratum": "near the threshold",
+  "a": "9_1899-09-14_p1_sn88076432_00271740724_1899091401_0319.json",
+  "b": "7_1899-09-14_p1_sn99068116_00340581222_1899091401_1596.json",
+  "similarity": [
+   101,
+   0.6159,
+   0.5976
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0122",
+  "stratum": "near the threshold",
+  "a": "2_1914-09-12_pna_sn88085187_00211108381_1914091201_0730.json",
+  "b": "15_1916-10-21_pna_sn87093407_00200290707_1916102101_0416.json",
+  "similarity": [
+   43,
+   0.5733,
+   0.2945
+  ],
+  "label": "same",
+  "note": "Same serial passage, word for word.",
+  "agent": "same",
+  "agent_note": "Same serial passage, word for word.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0123",
+  "stratum": "near the threshold",
+  "a": "15_1913-03-06_pna_sn85033078_00271768692_1913030601_0078.json",
+  "b": "10_1913-05-10_pna_sn96077142_00271764364_1913051001_0458.json",
+  "similarity": [
+   47,
+   0.662,
+   0.5875
+  ],
+  "label": "same",
+  "note": "Same chapter (III) of the opera ghost serial.",
+  "agent": "same",
+  "agent_note": "Same chapter (III) of the opera ghost serial.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0124",
+  "stratum": "near the threshold",
+  "a": "78_1912-02-15_p1_sn91064011_00332896180_1912021501_0659.json",
+  "b": "54_1912-02-16_p1_sn91064011_00332896180_1912021601_0675.json",
+  "similarity": [
+   2,
+   0.2222,
+   0.1429
+  ],
+  "label": "same",
+  "note": "Same sheet-music ad; seven titles repeat in order, with different cuts at either end.",
+  "agent": "same",
+  "agent_note": "Same sheet-music ad; seven titles repeat in order, with different cuts at either end.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0125",
+  "stratum": "near the threshold",
+  "a": "29_1895-05-03_pna_sn86063034_0041418215A_1895050301_0027.json",
+  "b": "45_1898-06-02_p1_sn86063034_00414182240_1898060201_0363.json",
+  "similarity": [
+   11,
+   0.1009,
+   0.0833
+  ],
+  "label": "different",
+  "note": "Same cotton market report format, different days (1895, 1898) with different figures.",
+  "agent": "different",
+  "agent_note": "Same cotton market report format, different days (1895, 1898) with different figures.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0126",
+  "stratum": "near the threshold",
+  "a": "4_1892-03-12_pna_sn93051669_00200298871_1892031201_0132.json",
+  "b": "9_1892-03-10_p1_sn88085350_no_reel_1892031001_0465.json",
+  "similarity": [
+   37,
+   0.5606,
+   0.5211
+  ],
+  "label": "same",
+  "note": "Same dispatch; second has a different headline deck and a slightly reworded first sentence.",
+  "agent": "same",
+  "agent_note": "Same dispatch; second has a different headline deck and a slightly reworded first sentence.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0127",
+  "stratum": "near the threshold",
+  "a": "17_1916-02-03_pna_sn93067671_00237288178_1916020301_0035.json",
+  "b": "49_1916-02-03_p1_sn89066901_00294556187_1916020301_0042.json",
+  "similarity": [
+   70,
+   0.5,
+   0.4575
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0128",
+  "stratum": "near the threshold",
+  "a": "1_1892-05-31_pna_sn84026788_00202192403_1892053101_0289.json",
+  "b": "3_1892-05-31_pna_sn84026788_00202192403_1892053101_0288.json",
+  "similarity": [
+   39,
+   0.6964,
+   0.661
+  ],
+  "label": "same",
+  "note": "Same story twice in one issue; OCR differences only.",
+  "agent": "same",
+  "agent_note": "Same story twice in one issue; OCR differences only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0129",
+  "stratum": "near the threshold",
+  "a": "2_1886-09-22_p1_sn84020422_00332894985_1886092201_0523.json",
+  "b": "4_1886-10-02_pna_sn83016348_00415624591_1886100201_0330.json",
+  "similarity": [
+   69,
+   0.6389,
+   0.633
+  ],
+  "label": "same",
+  "note": "Same lager beer saloon editorial; OCR differences only.",
+  "agent": "same",
+  "agent_note": "Same lager beer saloon editorial; OCR differences only.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0130",
+  "stratum": "near the threshold",
+  "a": "17_1897-12-16_p3_sn82014635_00280760614_1897121601_0442.json",
+  "b": "11_1897-12-19_p10_sn82015104_00280768789_1897121901_0431.json",
+  "similarity": [
+   79,
+   0.594,
+   0.5486
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0131",
+  "stratum": "near the threshold",
+  "a": "21_1909-11-18_pna_sn86086852_00271768990_1909111801_0645.json",
+  "b": "5_1909-11-17_pna_sn85040613_00514151416_1909111701_0520.json",
+  "similarity": [
+   38,
+   0.7755,
+   0.3065
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0132",
+  "stratum": "near the threshold",
+  "a": "5_1873-08-14_p1_sn84022374_00332895394_1873081401_0135.json",
+  "b": "1_1883-05-19_pna_sn88085204_00200291396_1883051901_0230.json",
+  "similarity": [
+   34,
+   0.4658,
+   0.4595
+  ],
+  "label": "same",
+  "note": "Same Bret Harte poem.",
+  "agent": "same",
+  "agent_note": "Same Bret Harte poem.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0133",
+  "stratum": "near the threshold",
+  "a": "13_1916-08-31_pna_sn85033078_00271768771_1916083101_0275.json",
+  "b": "19_1916-04-14_p1_sn85042242_00212478593_1916041401_0768.json",
+  "similarity": [
+   78,
+   0.78,
+   0.6047
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0134",
+  "stratum": "near the threshold",
+  "a": "18_1888-08-16_p1_sn88065721_00279521638_1888081601_0539.json",
+  "b": "28_1888-09-08_pna_sn87076917_00237289201_1888090801_0787.json",
+  "similarity": [
+   117,
+   0.7852,
+   0.7597
+  ],
+  "label": "same",
+  "note": "Same 'Sailors' Superstition' article.",
+  "agent": "same",
+  "agent_note": "Same 'Sailors' Superstition' article.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0135",
+  "stratum": "near the threshold",
+  "a": "3_1909-12-21_p3_sn85066387_00175046537_1909122101_0465.json",
+  "b": "5_1909-12-20_p1_sn83045462_0028065632A_1909122001_0241.json",
+  "similarity": [
+   9,
+   0.25,
+   0.225
+  ],
+  "label": "same",
+  "note": "Same dispatch; near-identical lead sentences, different cuts and ending.",
+  "agent": "same",
+  "agent_note": "Same dispatch; near-identical lead sentences, different cuts and ending.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0136",
+  "stratum": "near the threshold",
+  "a": "4_1914-12-27_p33_sn83045462_00280658595_1914122701_0171.json",
+  "b": "4_1914-12-27_pna_sn83030214_00206531848_1914122701_0585.json",
+  "similarity": [
+   65,
+   0.5039,
+   0.4887
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0137",
+  "stratum": "near the threshold",
+  "a": "30_1900-03-08_pna_sn87057928_00340584429_1900030801_0494.json",
+  "b": "17_1900-03-09_p2_sn98066406_00296023358_1900030901_0209.json",
+  "similarity": [
+   113,
+   0.7793,
+   0.7152
+  ],
+  "label": "same",
+  "note": "Same sermon on Lent.",
+  "agent": "same",
+  "agent_note": "Same sermon on Lent.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0138",
+  "stratum": "near the threshold",
+  "a": "4_1890-12-13_pna_sn90059959_00271742812_1890121301_0561.json",
+  "b": "16_1890-12-12_p3_sn84029838_00237283119_1890121201_0503.json",
+  "similarity": [
+   30,
+   0.5085,
+   0.283
+  ],
+  "label": "same",
+  "note": "Same chapter text; second starts a paragraph or two later.",
+  "agent": "same",
+  "agent_note": "Same chapter text; second starts a paragraph or two later.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0139",
+  "stratum": "near the threshold",
+  "a": "45_1913-12-01_p1_sn91064011_00332896295_1913120101_0486.json",
+  "b": "73_1913-11-24_pna_sn91064011_00332896295_1913112401_0386.json",
+  "similarity": [
+   7,
+   0.3182,
+   0.3182
+  ],
+  "label": "same",
+  "note": "Same psychics' ads column; most ads repeat nearly word for word, one dropped, two reworded.",
+  "agent": "same",
+  "agent_note": "Same psychics' ads column; most ads repeat nearly word for word, one dropped, two reworded.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0140",
+  "stratum": "near the threshold",
+  "a": "53_1903-04-23_pna_sn85033255_0051415255A_1903042301_0555.json",
+  "b": "11_1903-04-24_pna_sn87076843_00237282759_1903042401_0141.json",
+  "similarity": [
+   97,
+   0.6978,
+   0.669
+  ],
+  "label": "same",
+  "note": "Same serial instalment; second starts earlier.",
+  "agent": "same",
+  "agent_note": "Same serial instalment; second starts earlier.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0141",
+  "stratum": "near the threshold",
+  "a": "14_1901-05-30_pna_sn93067634_00237288130_1901053001_0610.json",
+  "b": "11_1901-06-01_pna_sn84026925_00295862178_1901060101_0413.json",
+  "similarity": [
+   99,
+   0.6266,
+   0.5964
+  ],
+  "label": "same",
+  "note": "Second starts earlier; overlapping text identical.",
+  "agent": "same",
+  "agent_note": "Second starts earlier; overlapping text identical.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0142",
+  "stratum": "near the threshold",
+  "a": "2_1906-04-20_p1_sn94057006_00415620482_1906042001_0258.json",
+  "b": "2_1906-10-05_p1_sn94057006_00415620482_1906100501_0355.json",
+  "similarity": [
+   39,
+   0.65,
+   0.6
+  ],
+  "label": "same",
+  "note": "Same story printed again in the same paper.",
+  "agent": "same",
+  "agent_note": "Same story printed again in the same paper.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0143",
+  "stratum": "near the threshold",
+  "a": "1_1908-12-07_pna_sn99063812_00280760006_1908120701_0853.json",
+  "b": "8_1909-01-07_pna_sn98062890_00415624785_1909010702_0954.json",
+  "similarity": [
+   25,
+   0.4902,
+   0.3205
+  ],
+  "label": "same",
+  "note": "Same acetylene bulletin notice.",
+  "agent": "same",
+  "agent_note": "Same acetylene bulletin notice.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0144",
+  "stratum": "near the threshold",
+  "a": "7_1879-12-06_p1_sn86079068_00200299206_1879120601_0336.json",
+  "b": "1_1879-12-16_pna_sn86069392_00202195088_1879121601_0193.json",
+  "similarity": [
+   16,
+   0.3077,
+   0.2963
+  ],
+  "label": "same",
+  "note": "Same 'A Strange Tragedy' item.",
+  "agent": "same",
+  "agent_note": "Same 'A Strange Tragedy' item.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0145",
+  "stratum": "near the threshold",
+  "a": "5_1899-05-14_pna_sn83030214_00175037019_1899051401_0259.json",
+  "b": "11_1899-06-10_pna_sn84028140_00237283697_1899061001_0201.json",
+  "similarity": [
+   37,
+   0.5968,
+   0.4405
+  ],
+  "label": "same",
+  "note": "Same Boynton Agnes Hall ghost story; first credits the London Mail.",
+  "agent": "same",
+  "agent_note": "Same Boynton Agnes Hall ghost story; first credits the London Mail.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0146",
+  "stratum": "near the threshold",
+  "a": "5_1907-08-31_p4_sn89051318_00393342638_1907083101_0114.json",
+  "b": "6_1907-08-28_p1_sn86063147_00340585951_1907082801_0341.json",
+  "similarity": [
+   33,
+   0.7174,
+   0.4024
+  ],
+  "label": "same",
+  "note": "Same serial passage ('I know you, Ware'); second opens earlier, first runs further.",
+  "agent": "same",
+  "agent_note": "Same serial passage ('I know you, Ware'); second opens earlier, first runs further.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0147",
+  "stratum": "near the threshold",
+  "a": "24_1915-08-13_pna_sn84023416_00202197383_1915081301_0249.json",
+  "b": "24_1915-03-25_pna_sn86091099_00415666238_1915032501_0141.json",
+  "similarity": [
+   120,
+   0.7101,
+   0.6977
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0148",
+  "stratum": "near the threshold",
+  "a": "16_1909-05-07_p1_sn85025407_00279522114_1909050701_0811.json",
+  "b": "13_1909-05-19_pna_sn87078321_00212477990_1909051901_0173.json",
+  "similarity": [
+   88,
+   0.6069,
+   0.5986
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0149",
+  "stratum": "near the threshold",
+  "a": "29_1912-12-31_pna_sn82016014_00295870588_1912123101_0706.json",
+  "b": "3_1912-11-30_pna_sn86088651_00202191149_1912113001_0101.json",
+  "similarity": [
+   5,
+   0.7143,
+   0.3125
+  ],
+  "label": "same",
+  "note": "Same Madame Sherry blurb localised to city and theatre; second adds sentences.",
+  "agent": "same",
+  "agent_note": "Same Madame Sherry blurb localised to city and theatre; second adds sentences.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0150",
+  "stratum": "near the threshold",
+  "a": "21_1906-10-24_pna_sn84024716_00175032654_1906102401_0594.json",
+  "b": "24_1906-08-16_pna_sn88085421_00237282930_1906081601_0491.json",
+  "similarity": [
+   3,
+   0.4286,
+   0.3333
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0151",
+  "stratum": "near the threshold",
+  "a": "5_1907-10-25_p1_sn85030529_00212473935_1907102501_0136.json",
+  "b": "19_1907-12-21_p3_sn96077142_00271764339_1907122101_0752.json",
+  "similarity": [
+   10,
+   0.7692,
+   0.5263
+  ],
+  "label": "same",
+  "note": "Same deacon anecdote; new headline and credit.",
+  "agent": "same",
+  "agent_note": "Same deacon anecdote; new headline and credit.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0152",
+  "stratum": "near the threshold",
+  "a": "4_1914-04-08_p2_sn84026749_00294557854_1914040801_0082.json",
+  "b": "22_1914-03-31_pna_sn83030193_00280765958_1914033101_0245.json",
+  "similarity": [
+   26,
+   0.6341,
+   0.5652
+  ],
+  "label": "same",
+  "note": "Same Mrs. Wagstaff 'Litany' poem analysis, near-verbatim.",
+  "agent": "same",
+  "agent_note": "Same Mrs. Wagstaff 'Litany' poem analysis, near-verbatim.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0153",
+  "stratum": "near the threshold",
+  "a": "38_1891-08-07_pna_sn82014635_00237286728_1891080701_0526.json",
+  "b": "10_1891-09-02_pna_sn88085722_00414189908_1891090201_0677.json",
+  "similarity": [
+   65,
+   0.4745,
+   0.4643
+  ],
+  "label": "same",
+  "note": "Same article on Jake Summerdyke, the old-time pool seller.",
+  "agent": "same",
+  "agent_note": "Same article on Jake Summerdyke, the old-time pool seller.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0154",
+  "stratum": "near the threshold",
+  "a": "10_1949-11-05_pna_sn79000083_00383344979_1949110501_0397.json",
+  "b": "3_1949-10-26_p1_sn88077226_00414210399_1949102601_0513.json",
+  "similarity": [
+   11,
+   0.6111,
+   0.3333
+  ],
+  "label": "same",
+  "note": null,
+  "agent": "same",
+  "agent_note": null,
+  "checked": null
+ },
+ {
+  "pair": "dev-0155",
+  "stratum": "near the threshold",
+  "a": "2_1851-10-09_pna_sn84026752_00415620354_1851100901_0402.json",
+  "b": "9_1851-10-02_pna_sn83021169_00514152780_1851100201_0568.json",
+  "similarity": [
+   35,
+   0.5738,
+   0.443
+  ],
+  "label": "same",
+  "note": "Same Australian gold item; first adds a Corcoran paragraph.",
+  "agent": "same",
+  "agent_note": "Same Australian gold item; first adds a Corcoran paragraph.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0156",
+  "stratum": "near the threshold",
+  "a": "15_1899-12-03_pna_sn85034438_00175049538_1899120301_0543.json",
+  "b": "14_1900-03-03_pna_sn82014248_00514156049_1900030301_0466.json",
+  "similarity": [
+   46,
+   0.3898,
+   0.2968
+  ],
+  "label": "same",
+  "note": "Same ghost story; Adirondack setting changed to Maine in the second.",
+  "agent": "same",
+  "agent_note": "Same ghost story; Adirondack setting changed to Maine in the second.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0157",
+  "stratum": "near the threshold",
+  "a": "2_1919-04-07_pna_sn86092536_00271768400_1919040701_0058.json",
+  "b": "4_1919-04-10_p2_sn83025458_00414217357_1919041001_0050.json",
+  "similarity": [
+   22,
+   0.4889,
+   0.4583
+  ],
+  "label": "same",
+  "note": "Same Walt Mason 'Recompense' poem.",
+  "agent": "same",
+  "agent_note": "Same Walt Mason 'Recompense' poem.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0158",
+  "stratum": "near the threshold",
+  "a": "27_1896-11-27_pna_sn83025186_00202198387_1896112701_0516.json",
+  "b": "55_1896-11-27_p1_sn83025186_00202198399_1896112702_0016.json",
+  "similarity": [
+   7,
+   0.7,
+   0.5385
+  ],
+  "label": "same",
+  "note": "Same item printed twice in one issue.",
+  "agent": "same",
+  "agent_note": "Same item printed twice in one issue.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0159",
+  "stratum": "near the threshold",
+  "a": "38_1844-04-06_pna_sn83016863_00415662051_1844040601_0275.json",
+  "b": "20_1851-07-31_p1_sn84024649_00393347946_1851073101_0172.json",
+  "similarity": [
+   20,
+   0.3704,
+   0.1399
+  ],
+  "label": "same",
+  "note": "Same poem, The Lady's Dream.",
+  "agent": "same",
+  "agent_note": "Same poem, The Lady's Dream.",
+  "checked": null
+ },
+ {
+  "pair": "dev-0160",
+  "stratum": "near the threshold",
+  "a": "39_1889-09-27_p1_sn97065832_00415624827_1889092701_0041.json",
+  "b": "2_1889-10-12_p2_sn90059959_00199919507_1889101201_0011.json",
+  "similarity": [
+   15,
+   0.4412,
+   0.1034
+  ],
+  "label": "same",
+  "note": "Second is the full item; first starts mid-item and adds another article.",
+  "agent": "same",
+  "agent_note": "Second is the full item; first starts mid-item and adds another article.",
+  "checked": null
+ }
+]

@@ -1,0 +1,39 @@
+{
+ "generated_at": "2026-10-30T17:40:10+00:00",
+ "dimensions": 384,
+ "docs": 2000,
+ "queries": 20,
+ "k": 10,
+ "num_candidates": 200,
+ "embedding_bson_bytes": {
+  "array_of_doubles": 4898,
+  "float32": 1554,
+  "int8": 402
+ },
+ "seconds_to_queryable": 28.1,
+ "float32": {
+  "exact": {
+   "same_neighbours": 20,
+   "same_order": 20,
+   "max_score_error": 7.991295802867171e-08
+  },
+  "approximate": {
+   "recall": 1.0
+  }
+ },
+ "int8": {
+  "exact": {
+   "same_neighbours": 20,
+   "same_order": 20,
+   "max_score_error": 4.452686619416113e-08
+  },
+  "approximate": {
+   "recall": 1.0
+  }
+ },
+ "seconds_to_drop_index": 0.1,
+ "cleaned_up": {
+  "scratch_collection_left": false,
+  "search_indexes_left_on_it": 0
+ }
+}

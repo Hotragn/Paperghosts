@@ -1,0 +1,151 @@
+{
+ "generated_at": "2026-10-31T02:38:00+00:00",
+ "pools": {
+  "v1's candidates": {
+   "reports": [
+    {
+     "article_id": "21_1854-11-16_p1_sn83021169_00514152792_1854111601_0398.json",
+     "from": "eval A",
+     "printings": 1
+    },
+    {
+     "article_id": "1_1875-10-08_p1_sn84023963_0020029595A_1875100801_0921.json",
+     "from": "eval A",
+     "printings": 1
+    },
+    {
+     "article_id": "11_1878-10-12_p1_sn83030272_00206533511_1878101201_0896.json",
+     "from": "eval A",
+     "printings": 1
+    },
+    {
+     "article_id": "6_1904-05-28_p1_sn84020358_00271744432_1904052801_1153.json",
+     "from": "eval A",
+     "printings": 12
+    },
+    {
+     "article_id": "1_1911-07-27_pna_sn92053934_00202198326_1911072701_0413.json",
+     "from": "eval A",
+     "printings": 30
+    },
+    {
+     "article_id": "6_1911-12-15_pna_sn86058226_00271744924_1911121501_0691.json",
+     "from": "eval A",
+     "printings": 1
+    },
+    {
+     "article_id": "14_1916-12-09_p5_sn84024055_00280761072_1916120901_0525.json",
+     "from": "eval A",
+     "printings": 7
+    }
+   ],
+   "stories_per_printing": 0.6085,
+   "stories": {
+    "top": 45046,
+    "point": 22372
+   }
+  },
+  "the candidates v2 added": {
+   "reports": [
+    {
+     "article_id": "17_1857-07-29_pna_sn83025667_00280777808_1857072901_0724.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "1_1857-04-02_p1_sn83025802_00295862026_1857040201_0270.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "1_1859-08-11_p1_sn82014511_no_reel_1859081101_0001.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "2_1869-10-23_p1_sn84026005_00280776403_1869102301_0548.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "2_1873-09-01_pna_sn87062253_00271765186_1873090101_0288.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "4_1875-03-29_pna_sn84022473_00280777559_1875032901_0300.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "1_1895-05-24_pna_sn97071028_00416152664_1895052401_0955.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "4_1898-01-12_pna_sn82015104_00280768790_1898011201_0105.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json",
+     "from": "2A.8",
+     "printings": 2
+    },
+    {
+     "article_id": "15_1920-07-19_p1_sn85025007_00415664175_1920071901_0261.json",
+     "from": "2A.8",
+     "printings": 2
+    },
+    {
+     "article_id": "12_1922-04-14_p2_sn85042243_00212478854_1922041401_0708.json",
+     "from": "2A.8",
+     "printings": 2
+    },
+    {
+     "article_id": "11_1923-10-20_p26_sn84026749_00222254048_1923102001_0082.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "4_1923-02-02_p21_sn83045462_00280657256_1923020201_0533.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "26_1924-08-30_pna_sn84024055_00332898048_1924083001_0370.json",
+     "from": "2A.8",
+     "printings": 1
+    },
+    {
+     "article_id": "3_1856-10-29_pna_sn85026466_0020219798A_1856102901_1069.json",
+     "from": "screen",
+     "printings": 10
+    },
+    {
+     "article_id": "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json",
+     "from": "screen",
+     "printings": 3
+    },
+    {
+     "article_id": "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json",
+     "from": "screen",
+     "printings": 1
+    }
+   ],
+   "stories_per_printing": 0.8196,
+   "stories": {
+    "top": 17356,
+    "point": 10652
+   }
+  }
+ },
+ "top_of_the_range": {
+  "printings": 95203,
+  "stories": 62402,
+  "stories_at_v1s_ratio": 57744
+ },
+ "point": {
+  "stories": 33024
+ }
+}

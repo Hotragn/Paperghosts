@@ -1,0 +1,3002 @@
+[
+ {
+  "lccn": "sn98061398",
+  "paper": "Imperial press.",
+  "expected": {
+   "title": "Imperial press.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn88061288",
+  "paper": "Polk County news-gazette. (Benton, Tenn.) 190?-191?",
+  "expected": {
+   "title": "Polk County news-gazette.",
+   "place": "Benton",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "190?-191?",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn87065355",
+  "paper": "Louisville messenger. (Louisville, Miss.) 1842-1843",
+  "expected": {
+   "title": "Louisville messenger.",
+   "place": "Louisville",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1842-1843",
+   "first_year": 1842,
+   "last_year": 1843
+  }
+ },
+ {
+  "lccn": "sn83035045",
+  "paper": "The Portage County Democrat. [volume] (Ravenna, Ohio) 1854-1868",
+  "expected": {
+   "title": "The Portage County Democrat.",
+   "place": "Ravenna",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1854-1868",
+   "first_year": 1854,
+   "last_year": 1868
+  }
+ },
+ {
+  "lccn": "sn89070104",
+  "paper": "The Jewish monitor. (Fort Worth-Dallas, Tex.) 191?-1921",
+  "expected": {
+   "title": "The Jewish monitor.",
+   "place": "Fort Worth-Dallas",
+   "county": null,
+   "state": "Tex.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "191?-1921",
+   "first_year": null,
+   "last_year": 1921
+  }
+ },
+ {
+  "lccn": "sn82015411",
+  "paper": "The Garden Island. [volume] (Lihue, Kauai, H.T.) 1902-current",
+  "expected": {
+   "title": "The Garden Island.",
+   "place": "Lihue",
+   "county": "Kauai",
+   "state": "H.T.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1902-current",
+   "first_year": 1902,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn92065637",
+  "paper": "The Marlboro democrat. [volume] (Bennettsville, S.C.) 1882-1908",
+  "expected": {
+   "title": "The Marlboro democrat.",
+   "place": "Bennettsville",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1882-1908",
+   "first_year": 1882,
+   "last_year": 1908
+  }
+ },
+ {
+  "lccn": "sn84028262",
+  "paper": "The Medina sentinel. [volume] (Medina, Ohio) 1888-1961",
+  "expected": {
+   "title": "The Medina sentinel.",
+   "place": "Medina",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1888-1961",
+   "first_year": 1888,
+   "last_year": 1961
+  }
+ },
+ {
+  "lccn": "sn82016312",
+  "paper": "The Washingtonian.",
+  "expected": {
+   "title": "The Washingtonian.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84025841",
+  "paper": "Richmond planet. [volume] (Richmond, Va.) 1883-1938",
+  "expected": {
+   "title": "Richmond planet.",
+   "place": "Richmond",
+   "county": null,
+   "state": "Va.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1883-1938",
+   "first_year": 1883,
+   "last_year": 1938
+  }
+ },
+ {
+  "lccn": "sn88056166",
+  "paper": "Cottonwood chronicle. [volume] (Cottonwood, Idaho) 1917-current",
+  "expected": {
+   "title": "Cottonwood chronicle.",
+   "place": "Cottonwood",
+   "county": null,
+   "state": "Idaho",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1917-current",
+   "first_year": 1917,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn96088088",
+  "paper": "Polk County observer. (Monmouth, Polk County, Or.) 1888-1927",
+  "expected": {
+   "title": "Polk County observer.",
+   "place": "Monmouth",
+   "county": "Polk County",
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1888-1927",
+   "first_year": 1888,
+   "last_year": 1927
+  }
+ },
+ {
+  "lccn": "sn82014371",
+  "paper": "The daily Chattanooga rebel. [volume] (Griffin, Ga.) 1864-1865",
+  "expected": {
+   "title": "The daily Chattanooga rebel.",
+   "place": "Griffin",
+   "county": null,
+   "state": "Ga.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1864-1865",
+   "first_year": 1864,
+   "last_year": 1865
+  }
+ },
+ {
+  "lccn": "sn88085651",
+  "paper": "Victory worker. [volume] (Seattle, Wash.) 1942-1943",
+  "expected": {
+   "title": "Victory worker.",
+   "place": "Seattle",
+   "county": null,
+   "state": "Wash.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1942-1943",
+   "first_year": 1942,
+   "last_year": 1943
+  }
+ },
+ {
+  "lccn": "sn89066695",
+  "paper": "Marble Hill press. (Marbel [sic] Hill, Mo.) 1881-1923",
+  "expected": {
+   "title": "Marble Hill press.",
+   "place": "Marbel Hill",
+   "county": null,
+   "state": "Mo.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1881-1923",
+   "first_year": 1881,
+   "last_year": 1923
+  }
+ },
+ {
+  "lccn": "sn85040307",
+  "paper": "Tribune and telegraph. [volume] (Kenosha, Wis.) 1855-1856",
+  "expected": {
+   "title": "Tribune and telegraph.",
+   "place": "Kenosha",
+   "county": null,
+   "state": "Wis.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1855-1856",
+   "first_year": 1855,
+   "last_year": 1856
+  }
+ },
+ {
+  "lccn": "sn86074063",
+  "paper": "The leader. [volume] (Brookhaven, Miss.) 1895-1905",
+  "expected": {
+   "title": "The leader.",
+   "place": "Brookhaven",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1895-1905",
+   "first_year": 1895,
+   "last_year": 1905
+  }
+ },
+ {
+  "lccn": "sn88087034",
+  "paper": "The Nespelem tribune. [volume] (Nespelem, Wash.) 1934-1936",
+  "expected": {
+   "title": "The Nespelem tribune.",
+   "place": "Nespelem",
+   "county": null,
+   "state": "Wash.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1934-1936",
+   "first_year": 1934,
+   "last_year": 1936
+  }
+ },
+ {
+  "lccn": "sn87068079",
+  "paper": "Gloucester County Democrat. (Woodbury, N.J.) 1878-1932",
+  "expected": {
+   "title": "Gloucester County Democrat.",
+   "place": "Woodbury",
+   "county": null,
+   "state": "N.J.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1878-1932",
+   "first_year": 1878,
+   "last_year": 1932
+  }
+ },
+ {
+  "lccn": "sn82014301",
+  "paper": "Indiana State sentinel. [volume] (Indianapolis [Ind.]) 1845-1851",
+  "expected": {
+   "title": "Indiana State sentinel.",
+   "place": "Indianapolis",
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "Ind.",
+   "years": "1845-1851",
+   "first_year": 1845,
+   "last_year": 1851
+  }
+ },
+ {
+  "lccn": "sn84028297",
+  "paper": "Democratic Northwest and Henry County news. [volume] (Napoleon, O. [Ohio]) 1894-1905",
+  "expected": {
+   "title": "Democratic Northwest and Henry County news.",
+   "place": "Napoleon",
+   "county": null,
+   "state": "O.",
+   "supplied_place": null,
+   "supplied_state": "Ohio",
+   "years": "1894-1905",
+   "first_year": 1894,
+   "last_year": 1905
+  }
+ },
+ {
+  "lccn": "sn83032199",
+  "paper": "Clearfield Republican. [volume] (Clearfield, Pa.) 1851-1937",
+  "expected": {
+   "title": "Clearfield Republican.",
+   "place": "Clearfield",
+   "county": null,
+   "state": "Pa.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1851-1937",
+   "first_year": 1851,
+   "last_year": 1937
+  }
+ },
+ {
+  "lccn": "sn93067846",
+  "paper": "The watchman and southron. [volume] (Sumter, S.C.) 1881-1930",
+  "expected": {
+   "title": "The watchman and southron.",
+   "place": "Sumter",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1881-1930",
+   "first_year": 1881,
+   "last_year": 1930
+  }
+ },
+ {
+  "lccn": "sn89052197",
+  "paper": "The Julesburg grit-advocate. (Julesburg, Colo.) 1907-1972",
+  "expected": {
+   "title": "The Julesburg grit-advocate.",
+   "place": "Julesburg",
+   "county": null,
+   "state": "Colo.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1907-1972",
+   "first_year": 1907,
+   "last_year": 1972
+  }
+ },
+ {
+  "lccn": "sn86058063",
+  "paper": "The advance. [volume] (Wilmington, Del.) 1899-19??",
+  "expected": {
+   "title": "The advance.",
+   "place": "Wilmington",
+   "county": null,
+   "state": "Del.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1899-19??",
+   "first_year": 1899,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn87090080",
+  "paper": "Rio Grande republican. (Las Cruces, N.M.) 1881-1914",
+  "expected": {
+   "title": "Rio Grande republican.",
+   "place": "Las Cruces",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1881-1914",
+   "first_year": 1881,
+   "last_year": 1914
+  }
+ },
+ {
+  "lccn": "sn96080161",
+  "paper": "The Conservative",
+  "expected": {
+   "title": "The Conservative",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83035644",
+  "paper": "America. [volume] (Cleveland, Ohio) 1905-current",
+  "expected": {
+   "title": "America.",
+   "place": "Cleveland",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1905-current",
+   "first_year": 1905,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn89058007",
+  "paper": "The Bolivar bulletin. (Bolivar, Tenn.) 1888-1946",
+  "expected": {
+   "title": "The Bolivar bulletin.",
+   "place": "Bolivar",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1888-1946",
+   "first_year": 1888,
+   "last_year": 1946
+  }
+ },
+ {
+  "lccn": "sn95072297",
+  "paper": "Goldsboro weekly argus. [volume] (Goldsboro, N.C.) 191?-19??",
+  "expected": {
+   "title": "Goldsboro weekly argus.",
+   "place": "Goldsboro",
+   "county": null,
+   "state": "N.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "191?-19??",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn87076917",
+  "paper": "Springfield daily republic. [volume] (Springfield, O. [Ohio]) 1887-1888",
+  "expected": {
+   "title": "Springfield daily republic.",
+   "place": "Springfield",
+   "county": null,
+   "state": "O.",
+   "supplied_place": null,
+   "supplied_state": "Ohio",
+   "years": "1887-1888",
+   "first_year": 1887,
+   "last_year": 1888
+  }
+ },
+ {
+  "lccn": "sn83035526",
+  "paper": "RadnicÌŒka borba = Workers&#39; struggle. [volume] ([New York, N.Y.]) 1907-1970",
+  "expected": {
+   "title": "Radnička borba = Workers' struggle.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": "New York",
+   "supplied_state": "N.Y.",
+   "years": "1907-1970",
+   "first_year": 1907,
+   "last_year": 1970
+  }
+ },
+ {
+  "lccn": "sn98060016",
+  "paper": "Bennington banner and reformer. (Bennington, Vt.) 1903-19??",
+  "expected": {
+   "title": "Bennington banner and reformer.",
+   "place": "Bennington",
+   "county": null,
+   "state": "Vt.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1903-19??",
+   "first_year": 1903,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn91068347",
+  "paper": "Hillsboro recorder. (Hillsboro, N.C.) 1887-18??",
+  "expected": {
+   "title": "Hillsboro recorder.",
+   "place": "Hillsboro",
+   "county": null,
+   "state": "N.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1887-18??",
+   "first_year": 1887,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84020429",
+  "paper": "The Museum of Delaware &amp; general advertiser. [volume] (Wilmington, Del.) 1807-1809",
+  "expected": {
+   "title": "The Museum of Delaware & general advertiser.",
+   "place": "Wilmington",
+   "county": null,
+   "state": "Del.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1807-1809",
+   "first_year": 1807,
+   "last_year": 1809
+  }
+ },
+ {
+  "lccn": "sn86063662",
+  "paper": "Richmond democrat.",
+  "expected": {
+   "title": "Richmond democrat.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83035044",
+  "paper": "The Ohio star. [volume] (Ravenna, Ohio) 1830-1854",
+  "expected": {
+   "title": "The Ohio star.",
+   "place": "Ravenna",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1830-1854",
+   "first_year": 1830,
+   "last_year": 1854
+  }
+ },
+ {
+  "lccn": "sn84022109",
+  "paper": "The Waco daily examiner. [volume] (Waco, Tex.) 187?-1888",
+  "expected": {
+   "title": "The Waco daily examiner.",
+   "place": "Waco",
+   "county": null,
+   "state": "Tex.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "187?-1888",
+   "first_year": null,
+   "last_year": 1888
+  }
+ },
+ {
+  "lccn": "sn87065205",
+  "paper": "The hummer. (Houston, Miss.) 1914-19??",
+  "expected": {
+   "title": "The hummer.",
+   "place": "Houston",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1914-19??",
+   "first_year": 1914,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn93051659",
+  "paper": "Union gazette. [volume] (Corvallis, Benton County, Or.) 1899-1900",
+  "expected": {
+   "title": "Union gazette.",
+   "place": "Corvallis",
+   "county": "Benton County",
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1899-1900",
+   "first_year": 1899,
+   "last_year": 1900
+  }
+ },
+ {
+  "lccn": "sn84027101",
+  "paper": "Luxemburger gazette. [volume] (Dubuque, Iowa) 1871-1918",
+  "expected": {
+   "title": "Luxemburger gazette.",
+   "place": "Dubuque",
+   "county": null,
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1871-1918",
+   "first_year": 1871,
+   "last_year": 1918
+  }
+ },
+ {
+  "lccn": "sn88064439",
+  "paper": "Natchitoches populist. [volume] (Natchitoches, La.) 1898-1899",
+  "expected": {
+   "title": "Natchitoches populist.",
+   "place": "Natchitoches",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1898-1899",
+   "first_year": 1898,
+   "last_year": 1899
+  }
+ },
+ {
+  "lccn": "sn90059228",
+  "paper": "Warren sheaf. [volume] (Warren, Marshall County, Minn.) 1880-current",
+  "expected": {
+   "title": "Warren sheaf.",
+   "place": "Warren",
+   "county": "Marshall County",
+   "state": "Minn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1880-current",
+   "first_year": 1880,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn89055266",
+  "paper": "The daily mountaineer. (Dalles, Or.) 1861-1866",
+  "expected": {
+   "title": "The daily mountaineer.",
+   "place": "Dalles",
+   "county": null,
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1861-1866",
+   "first_year": 1861,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn86091348",
+  "paper": "The Pioche weekly record. [volume] (Pioche, Nev.) 1906-1908",
+  "expected": {
+   "title": "The Pioche weekly record.",
+   "place": "Pioche",
+   "county": null,
+   "state": "Nev.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1906-1908",
+   "first_year": 1906,
+   "last_year": 1908
+  }
+ },
+ {
+  "lccn": "sn88053051",
+  "paper": "The Sunday mirror.",
+  "expected": {
+   "title": "The Sunday mirror.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83016631",
+  "paper": "Semi-weekly Louisianian. [volume] (New Orleans, La.) 1871-1872",
+  "expected": {
+   "title": "Semi-weekly Louisianian.",
+   "place": "New Orleans",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1871-1872",
+   "first_year": 1871,
+   "last_year": 1872
+  }
+ },
+ {
+  "lccn": "sn00063520",
+  "paper": "The Ontario Argus. (Ontario, Or.) 1???-1947",
+  "expected": {
+   "title": "The Ontario Argus.",
+   "place": "Ontario",
+   "county": null,
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1???-1947",
+   "first_year": null,
+   "last_year": 1947
+  }
+ },
+ {
+  "lccn": "sn85026955",
+  "paper": "Bristol news. [volume] (Bristol, Va. &amp; Tenn.) 1867-189?",
+  "expected": {
+   "title": "Bristol news.",
+   "place": "Bristol",
+   "county": null,
+   "state": "Va. & Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1867-189?",
+   "first_year": 1867,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84036198",
+  "paper": "The Colored citizen. [volume] (Helena, Mont.) 1894-1894",
+  "expected": {
+   "title": "The Colored citizen.",
+   "place": "Helena",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1894-1894",
+   "first_year": 1894,
+   "last_year": 1894
+  }
+ },
+ {
+  "lccn": "sn84028194",
+  "paper": "Northern Ohio journal. [volume] (Painesville, Ohio) 1872-1896",
+  "expected": {
+   "title": "Northern Ohio journal.",
+   "place": "Painesville",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1872-1896",
+   "first_year": 1872,
+   "last_year": 1896
+  }
+ },
+ {
+  "lccn": "sn85035720",
+  "paper": "Perth Amboy evening news. [volume] (Perth Amboy, N.J.) 1903-1959",
+  "expected": {
+   "title": "Perth Amboy evening news.",
+   "place": "Perth Amboy",
+   "county": null,
+   "state": "N.J.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1903-1959",
+   "first_year": 1903,
+   "last_year": 1959
+  }
+ },
+ {
+  "lccn": "sn89064515",
+  "paper": "Little Falls herald. [volume] (Little Falls, Morrison County, Minn.) 1889-1950",
+  "expected": {
+   "title": "Little Falls herald.",
+   "place": "Little Falls",
+   "county": "Morrison County",
+   "state": "Minn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1889-1950",
+   "first_year": 1889,
+   "last_year": 1950
+  }
+ },
+ {
+  "lccn": "sn86053481",
+  "paper": "Loudon free press. (Loudon, Tenn.) 1852-1855",
+  "expected": {
+   "title": "Loudon free press.",
+   "place": "Loudon",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1852-1855",
+   "first_year": 1852,
+   "last_year": 1855
+  }
+ },
+ {
+  "lccn": "sn97070123",
+  "paper": "Anadarko daily democrat. [volume] (Anadarko, Oklahoma) 1901-190?",
+  "expected": {
+   "title": "Anadarko daily democrat.",
+   "place": "Anadarko",
+   "county": null,
+   "state": "Oklahoma",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1901-190?",
+   "first_year": 1901,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn92051356",
+  "paper": "Eastern Connecticut news.",
+  "expected": {
+   "title": "Eastern Connecticut news.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85025061",
+  "paper": "Elizabeth-Town gazette. [volume] (Elizabeth-Town, N.J.) 1818-1821",
+  "expected": {
+   "title": "Elizabeth-Town gazette.",
+   "place": "Elizabeth-Town",
+   "county": null,
+   "state": "N.J.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1818-1821",
+   "first_year": 1818,
+   "last_year": 1821
+  }
+ },
+ {
+  "lccn": "sn89059463",
+  "paper": "The semi-weekly Republican. (St. Francisville, La.) 1872-1872",
+  "expected": {
+   "title": "The semi-weekly Republican.",
+   "place": "St. Francisville",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1872-1872",
+   "first_year": 1872,
+   "last_year": 1872
+  }
+ },
+ {
+  "lccn": "sn86069396",
+  "paper": "The daily Kentuckian. [volume] (Hopkinsville, Ky.) 1898-1898",
+  "expected": {
+   "title": "The daily Kentuckian.",
+   "place": "Hopkinsville",
+   "county": null,
+   "state": "Ky.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1898-1898",
+   "first_year": 1898,
+   "last_year": 1898
+  }
+ },
+ {
+  "lccn": "sn82016245",
+  "paper": "The Coconino sun. [volume] (Flagstaff, Ariz.) 1891-1891",
+  "expected": {
+   "title": "The Coconino sun.",
+   "place": "Flagstaff",
+   "county": null,
+   "state": "Ariz.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1891-1891",
+   "first_year": 1891,
+   "last_year": 1891
+  }
+ },
+ {
+  "lccn": "sn83025146",
+  "paper": "Pioneer press. [volume] (Martinsburg, W. Va.) 1882-19??",
+  "expected": {
+   "title": "Pioneer press.",
+   "place": "Martinsburg",
+   "county": null,
+   "state": "W. Va.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1882-19??",
+   "first_year": 1882,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn90051302",
+  "paper": "Elbert County tribune.",
+  "expected": {
+   "title": "Elbert County tribune.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn88085488",
+  "paper": "Pullman herald. [volume] (Pullman, W.T. [Wash.]) 1888-1989",
+  "expected": {
+   "title": "Pullman herald.",
+   "place": "Pullman",
+   "county": null,
+   "state": "W.T.",
+   "supplied_place": null,
+   "supplied_state": "Wash.",
+   "years": "1888-1989",
+   "first_year": 1888,
+   "last_year": 1989
+  }
+ },
+ {
+  "lccn": "sn84026857",
+  "paper": "Beaufort Republican. [volume] (Beaufort, S.C.) 1871-1873",
+  "expected": {
+   "title": "Beaufort Republican.",
+   "place": "Beaufort",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1871-1873",
+   "first_year": 1871,
+   "last_year": 1873
+  }
+ },
+ {
+  "lccn": "sn95076622",
+  "paper": "The pioneer. [volume] (Philip, Haakon County, S.D.) 1???-19??",
+  "expected": {
+   "title": "The pioneer.",
+   "place": "Philip",
+   "county": "Haakon County",
+   "state": "S.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1???-19??",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn86076375",
+  "paper": "White Pine news. [volume] (East Ely, Nev.) 1920-1923",
+  "expected": {
+   "title": "White Pine news.",
+   "place": "East Ely",
+   "county": null,
+   "state": "Nev.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1920-1923",
+   "first_year": 1920,
+   "last_year": 1923
+  }
+ },
+ {
+  "lccn": "sn85053382",
+  "paper": "The daily enterprise. [volume] (Livingston, Mont.) 1883-1884",
+  "expected": {
+   "title": "The daily enterprise.",
+   "place": "Livingston",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1883-1884",
+   "first_year": 1883,
+   "last_year": 1884
+  }
+ },
+ {
+  "lccn": "sn93057084",
+  "paper": "Forest City press. (Forest City, Potter County, D.T. [S.D.]) 1883-19??",
+  "expected": {
+   "title": "Forest City press.",
+   "place": "Forest City",
+   "county": "Potter County",
+   "state": "D.T.",
+   "supplied_place": null,
+   "supplied_state": "S.D.",
+   "years": "1883-19??",
+   "first_year": 1883,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn98062949",
+  "paper": "The pioneer press. (Miller, Hand County, S.D.) 1893-190?",
+  "expected": {
+   "title": "The pioneer press.",
+   "place": "Miller",
+   "county": "Hand County",
+   "state": "S.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1893-190?",
+   "first_year": 1893,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85025007",
+  "paper": "Alexandria gazette. [volume] (Alexandria, D.C.) 1834-1974",
+  "expected": {
+   "title": "Alexandria gazette.",
+   "place": "Alexandria",
+   "county": null,
+   "state": "D.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1834-1974",
+   "first_year": 1834,
+   "last_year": 1974
+  }
+ },
+ {
+  "lccn": "sn97065763",
+  "paper": "Custer weekly chronicle. [volume] (Custer City, S.D.) 1890-1931",
+  "expected": {
+   "title": "Custer weekly chronicle.",
+   "place": "Custer City",
+   "county": null,
+   "state": "S.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1890-1931",
+   "first_year": 1890,
+   "last_year": 1931
+  }
+ },
+ {
+  "lccn": "sn90061662",
+  "paper": "The tribune. (Rich Hill, Mo.) 1900-1902",
+  "expected": {
+   "title": "The tribune.",
+   "place": "Rich Hill",
+   "county": null,
+   "state": "Mo.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1900-1902",
+   "first_year": 1900,
+   "last_year": 1902
+  }
+ },
+ {
+  "lccn": "sn86075096",
+  "paper": "Montana farmer-stockman. [volume] (Great Falls, Mont.) 1947-1993",
+  "expected": {
+   "title": "Montana farmer-stockman.",
+   "place": "Great Falls",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1947-1993",
+   "first_year": 1947,
+   "last_year": 1993
+  }
+ },
+ {
+  "lccn": "sn85025148",
+  "paper": "Baltimore Wecker. [volume] (Baltimore [Md.]) 1851-1867",
+  "expected": {
+   "title": "Baltimore Wecker.",
+   "place": "Baltimore",
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "Md.",
+   "years": "1851-1867",
+   "first_year": 1851,
+   "last_year": 1867
+  }
+ },
+ {
+  "lccn": "sn85033306",
+  "paper": "The Bolivar bulletin. [volume] (Bolivar, Hardeman County, Tenn.) 1865-1888",
+  "expected": {
+   "title": "The Bolivar bulletin.",
+   "place": "Bolivar",
+   "county": "Hardeman County",
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1865-1888",
+   "first_year": 1865,
+   "last_year": 1888
+  }
+ },
+ {
+  "lccn": "sn85058027",
+  "paper": "American Fork citizen. [volume] (American Fork, Utah) 1912-1979",
+  "expected": {
+   "title": "American Fork citizen.",
+   "place": "American Fork",
+   "county": null,
+   "state": "Utah",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1912-1979",
+   "first_year": 1912,
+   "last_year": 1979
+  }
+ },
+ {
+  "lccn": "sn85000631",
+  "paper": "The Washburn leader. [volume] (Washburn, McLean County, N.D.) 1890-1986",
+  "expected": {
+   "title": "The Washburn leader.",
+   "place": "Washburn",
+   "county": "McLean County",
+   "state": "N.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1890-1986",
+   "first_year": 1890,
+   "last_year": 1986
+  }
+ },
+ {
+  "lccn": "sn86069873",
+  "paper": "The Bourbon news. [volume] (Paris, Ky.) 1895-19??",
+  "expected": {
+   "title": "The Bourbon news.",
+   "place": "Paris",
+   "county": null,
+   "state": "Ky.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1895-19??",
+   "first_year": 1895,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn78001213",
+  "paper": "The Phoenix Jewish news.",
+  "expected": {
+   "title": "The Phoenix Jewish news.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84026882",
+  "paper": "Grass Valley telegraph.",
+  "expected": {
+   "title": "Grass Valley telegraph.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn87091048",
+  "paper": "Nevada County picayune. (Prescott, Nev. County, Ark.) 1885-1???",
+  "expected": {
+   "title": "Nevada County picayune.",
+   "place": "Prescott",
+   "county": "Nev. County",
+   "state": "Ark.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1885-1???",
+   "first_year": 1885,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85038220",
+  "paper": "The Union County journal. [volume] (Marysville, Ohio) 1875-1951",
+  "expected": {
+   "title": "The Union County journal.",
+   "place": "Marysville",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1875-1951",
+   "first_year": 1875,
+   "last_year": 1951
+  }
+ },
+ {
+  "lccn": "sn84020021",
+  "paper": "Woodville Republican. [volume] (Woodville, Miss.) 1833-1844",
+  "expected": {
+   "title": "Woodville Republican.",
+   "place": "Woodville",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1833-1844",
+   "first_year": 1833,
+   "last_year": 1844
+  }
+ },
+ {
+  "lccn": "sn86053570",
+  "paper": "Daily national Republican. [volume] (Washington, D.C.) 1862-1866",
+  "expected": {
+   "title": "Daily national Republican.",
+   "place": "Washington",
+   "county": null,
+   "state": "D.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1862-1866",
+   "first_year": 1862,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn83032300",
+  "paper": "Lancaster daily intelligencer. [volume] (Lancaster, Pa.) 1864-1928",
+  "expected": {
+   "title": "Lancaster daily intelligencer.",
+   "place": "Lancaster",
+   "county": null,
+   "state": "Pa.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1864-1928",
+   "first_year": 1864,
+   "last_year": 1928
+  }
+ },
+ {
+  "lccn": "sn83016892",
+  "paper": "The daily clarion. [volume] (Meridian, Miss.) 1863-1866",
+  "expected": {
+   "title": "The daily clarion.",
+   "place": "Meridian",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1863-1866",
+   "first_year": 1863,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn84020670",
+  "paper": "Arkansas weekly mansion.",
+  "expected": {
+   "title": "Arkansas weekly mansion.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn86063758",
+  "paper": "The herald and news. [volume] (Newberry S.C.) 1903-1937",
+  "expected": {
+   "title": "The herald and news.",
+   "place": "Newberry",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1903-1937",
+   "first_year": 1903,
+   "last_year": 1937
+  }
+ },
+ {
+  "lccn": "sn85067074",
+  "paper": "The Kansas blackman.",
+  "expected": {
+   "title": "The Kansas blackman.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85034082",
+  "paper": "The Marietta journal. [volume] (Marietta, Ga.) 1866-1909",
+  "expected": {
+   "title": "The Marietta journal.",
+   "place": "Marietta",
+   "county": null,
+   "state": "Ga.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1866-1909",
+   "first_year": 1866,
+   "last_year": 1909
+  }
+ },
+ {
+  "lccn": "sn86079110",
+  "paper": "Thibodaux minerva. [volume] (Thibodaux, La.) 18??-1858",
+  "expected": {
+   "title": "Thibodaux minerva.",
+   "place": "Thibodaux",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "18??-1858",
+   "first_year": null,
+   "last_year": 1858
+  }
+ },
+ {
+  "lccn": "sn87062239",
+  "paper": "Delaware advertiser and farmer&#39;s journal. (Wilmington, Del.) 1828-1831",
+  "expected": {
+   "title": "Delaware advertiser and farmer's journal.",
+   "place": "Wilmington",
+   "county": null,
+   "state": "Del.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1828-1831",
+   "first_year": 1828,
+   "last_year": 1831
+  }
+ },
+ {
+  "lccn": "sn83030213",
+  "paper": "New-York daily tribune. [volume] (New-York [N.Y.]) 1842-1866",
+  "expected": {
+   "title": "New-York daily tribune.",
+   "place": "New-York",
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "N.Y.",
+   "years": "1842-1866",
+   "first_year": 1842,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn85032490",
+  "paper": "Wichita eagle. [volume] (Wichita, Kan.) 1886-1890",
+  "expected": {
+   "title": "Wichita eagle.",
+   "place": "Wichita",
+   "county": null,
+   "state": "Kan.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1886-1890",
+   "first_year": 1886,
+   "last_year": 1890
+  }
+ },
+ {
+  "lccn": "sn82014351",
+  "paper": "The colored American.",
+  "expected": {
+   "title": "The colored American.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn86060019",
+  "paper": "The Burlington weekly hawk-eye. [volume] (Burlington, Iowa) 1857-1858",
+  "expected": {
+   "title": "The Burlington weekly hawk-eye.",
+   "place": "Burlington",
+   "county": null,
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1857-1858",
+   "first_year": 1857,
+   "last_year": 1858
+  }
+ },
+ {
+  "lccn": "sn89058154",
+  "paper": "McNairy County independent. (Selmer, McNairy County, Tenn.) 1902-1969",
+  "expected": {
+   "title": "McNairy County independent.",
+   "place": "Selmer",
+   "county": "McNairy County",
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1902-1969",
+   "first_year": 1902,
+   "last_year": 1969
+  }
+ },
+ {
+  "lccn": "sn83016072",
+  "paper": "Jenks&#39; Portland gazette. Maine advertiser. [volume] (Portland, Me.) 1802-1803",
+  "expected": {
+   "title": "Jenks' Portland gazette. Maine advertiser.",
+   "place": "Portland",
+   "county": null,
+   "state": "Me.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1802-1803",
+   "first_year": 1802,
+   "last_year": 1803
+  }
+ },
+ {
+  "lccn": "sn89053306",
+  "paper": "The Leader, enterprise and press. (Fitzgerald, Ga.) 1915-1921",
+  "expected": {
+   "title": "The Leader, enterprise and press.",
+   "place": "Fitzgerald",
+   "county": null,
+   "state": "Ga.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1915-1921",
+   "first_year": 1915,
+   "last_year": 1921
+  }
+ },
+ {
+  "lccn": "sn89060379",
+  "paper": "Maryland suffrage news. (Baltimore, Md.) 1912-1920",
+  "expected": {
+   "title": "Maryland suffrage news.",
+   "place": "Baltimore",
+   "county": null,
+   "state": "Md.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1912-1920",
+   "first_year": 1912,
+   "last_year": 1920
+  }
+ },
+ {
+  "lccn": "sn88085081",
+  "paper": "The Mason County journal. [volume] (Shelton, W.T.) 1886-1927",
+  "expected": {
+   "title": "The Mason County journal.",
+   "place": "Shelton",
+   "county": null,
+   "state": "W.T.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1886-1927",
+   "first_year": 1886,
+   "last_year": 1927
+  }
+ },
+ {
+  "lccn": "sn96060035",
+  "paper": "The Socialist press.",
+  "expected": {
+   "title": "The Socialist press.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn97060034",
+  "paper": "Matanuska Valley pioneer. (Palmer, Alaska) 1935-1936",
+  "expected": {
+   "title": "Matanuska Valley pioneer.",
+   "place": "Palmer",
+   "county": null,
+   "state": "Alaska",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1935-1936",
+   "first_year": 1935,
+   "last_year": 1936
+  }
+ },
+ {
+  "lccn": "sn85040721",
+  "paper": "The Watertown weekly leader. [volume] (Watertown, Jefferson County, Wis.) 1912-1917",
+  "expected": {
+   "title": "The Watertown weekly leader.",
+   "place": "Watertown",
+   "county": "Jefferson County",
+   "state": "Wis.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1912-1917",
+   "first_year": 1912,
+   "last_year": 1917
+  }
+ },
+ {
+  "lccn": "sn91052379",
+  "paper": "Los Cerrillos rustler. (Cerrillos, N.M.) 188?-1891",
+  "expected": {
+   "title": "Los Cerrillos rustler.",
+   "place": "Cerrillos",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "188?-1891",
+   "first_year": null,
+   "last_year": 1891
+  }
+ },
+ {
+  "lccn": "sn97065558",
+  "paper": "The Sneedville news. (Sneedville, Tenn.) 191?-19??",
+  "expected": {
+   "title": "The Sneedville news.",
+   "place": "Sneedville",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "191?-19??",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84023646",
+  "paper": "The people&#39;s press, and Addison County Democrat. [volume] (Middlebury, Vt.) 1838-1841",
+  "expected": {
+   "title": "The people's press, and Addison County Democrat.",
+   "place": "Middlebury",
+   "county": null,
+   "state": "Vt.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1838-1841",
+   "first_year": 1838,
+   "last_year": 1841
+  }
+ },
+ {
+  "lccn": "sn88053043",
+  "paper": "The evening Republican. (Wilmington, Del.) 1902-1902",
+  "expected": {
+   "title": "The evening Republican.",
+   "place": "Wilmington",
+   "county": null,
+   "state": "Del.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1902-1902",
+   "first_year": 1902,
+   "last_year": 1902
+  }
+ },
+ {
+  "lccn": "sn82014760",
+  "paper": "The national Republican. [volume] (Washington, D.C.) 1860-1862",
+  "expected": {
+   "title": "The national Republican.",
+   "place": "Washington",
+   "county": null,
+   "state": "D.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1860-1862",
+   "first_year": 1860,
+   "last_year": 1862
+  }
+ },
+ {
+  "lccn": "sn86063760",
+  "paper": "The Manning times. [volume] (Manning, Clarendon County, S.C.) 1884-current",
+  "expected": {
+   "title": "The Manning times.",
+   "place": "Manning",
+   "county": "Clarendon County",
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1884-current",
+   "first_year": 1884,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn89058249",
+  "paper": "The Sequachee news. (Sequachee [Sequatchie], Tenn.) 189?-1896",
+  "expected": {
+   "title": "The Sequachee news.",
+   "place": "Sequachee",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": "Sequatchie",
+   "supplied_state": null,
+   "years": "189?-1896",
+   "first_year": null,
+   "last_year": 1896
+  }
+ },
+ {
+  "lccn": "sn87090075",
+  "paper": "The Mesilla Valley independent. [volume] (Mesilla, N.M.) 1877-1879",
+  "expected": {
+   "title": "The Mesilla Valley independent.",
+   "place": "Mesilla",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1877-1879",
+   "first_year": 1877,
+   "last_year": 1879
+  }
+ },
+ {
+  "lccn": "sn92070146",
+  "paper": "Imperial Valley press. (El Centro, Calif.) 1907-current",
+  "expected": {
+   "title": "Imperial Valley press.",
+   "place": "El Centro",
+   "county": null,
+   "state": "Calif.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1907-current",
+   "first_year": 1907,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83025186",
+  "paper": "Iowa state bystander. [volume] (Des Moines, Iowa) 1894-1916",
+  "expected": {
+   "title": "Iowa state bystander.",
+   "place": "Des Moines",
+   "county": null,
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1894-1916",
+   "first_year": 1894,
+   "last_year": 1916
+  }
+ },
+ {
+  "lccn": "sn86071045",
+  "paper": "Butler citizen. [volume] (Butler, Pa.) 1877-1922",
+  "expected": {
+   "title": "Butler citizen.",
+   "place": "Butler",
+   "county": null,
+   "state": "Pa.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1877-1922",
+   "first_year": 1877,
+   "last_year": 1922
+  }
+ },
+ {
+  "lccn": "sn86058544",
+  "paper": "Randolph County journal. [volume] (Winchester, Indiana) 1864-1865",
+  "expected": {
+   "title": "Randolph County journal.",
+   "place": "Winchester",
+   "county": null,
+   "state": "Indiana",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1864-1865",
+   "first_year": 1864,
+   "last_year": 1865
+  }
+ },
+ {
+  "lccn": "sn84022565",
+  "paper": "The Somerset reporter. [volume] (Skowhegan, Me.) 1868-1909",
+  "expected": {
+   "title": "The Somerset reporter.",
+   "place": "Skowhegan",
+   "county": null,
+   "state": "Me.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1868-1909",
+   "first_year": 1868,
+   "last_year": 1909
+  }
+ },
+ {
+  "lccn": "sn88064249",
+  "paper": "The star-progress. (Opelousas, La.) 1917-1921",
+  "expected": {
+   "title": "The star-progress.",
+   "place": "Opelousas",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1917-1921",
+   "first_year": 1917,
+   "last_year": 1921
+  }
+ },
+ {
+  "lccn": "sn86064187",
+  "paper": "The Oklahoma City times. [volume] (Oklahoma City, Okla.) 1908-1984",
+  "expected": {
+   "title": "The Oklahoma City times.",
+   "place": "Oklahoma City",
+   "county": null,
+   "state": "Okla.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1908-1984",
+   "first_year": 1908,
+   "last_year": 1984
+  }
+ },
+ {
+  "lccn": "sn84022374",
+  "paper": "Ellsworth American. [volume] (Ellsworth, Me.) 1855-current",
+  "expected": {
+   "title": "Ellsworth American.",
+   "place": "Ellsworth",
+   "county": null,
+   "state": "Me.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1855-current",
+   "first_year": 1855,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn90050115",
+  "paper": "The Home news. (McCrory, Ark.) 1915-1922",
+  "expected": {
+   "title": "The Home news.",
+   "place": "McCrory",
+   "county": null,
+   "state": "Ark.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1915-1922",
+   "first_year": 1915,
+   "last_year": 1922
+  }
+ },
+ {
+  "lccn": "sn86079018",
+  "paper": "The New Orleans bulletin. [volume] (New Orleans [La.]) 1874-1876",
+  "expected": {
+   "title": "The New Orleans bulletin.",
+   "place": "New Orleans",
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "La.",
+   "years": "1874-1876",
+   "first_year": 1874,
+   "last_year": 1876
+  }
+ },
+ {
+  "lccn": "sn88078775",
+  "paper": "Newark leader. ([Newark, Ohio]) 1917-1946",
+  "expected": {
+   "title": "Newark leader.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": "Newark",
+   "supplied_state": "Ohio",
+   "years": "1917-1946",
+   "first_year": 1917,
+   "last_year": 1946
+  }
+ },
+ {
+  "lccn": "sn83016865",
+  "paper": "The Democratic Whig. [volume] (Columbus, Miss.) 1842-1843",
+  "expected": {
+   "title": "The Democratic Whig.",
+   "place": "Columbus",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1842-1843",
+   "first_year": 1842,
+   "last_year": 1843
+  }
+ },
+ {
+  "lccn": "sn86064259",
+  "paper": "The Nashville globe. [volume] (Nashville, Tenn.) 1906-193?",
+  "expected": {
+   "title": "The Nashville globe.",
+   "place": "Nashville",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1906-193?",
+   "first_year": 1906,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn2001063549",
+  "paper": "Saturday news. (Watertown, S.D.) 19??-19??",
+  "expected": {
+   "title": "Saturday news.",
+   "place": "Watertown",
+   "county": null,
+   "state": "S.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "19??-19??",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn95060626",
+  "paper": "The Arizona gleam.",
+  "expected": {
+   "title": "The Arizona gleam.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84021940",
+  "paper": "Valdez weekly prospector.",
+  "expected": {
+   "title": "Valdez weekly prospector.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84024443",
+  "paper": "The Athens post. [volume] (Athens, Tenn.) 1848-1917",
+  "expected": {
+   "title": "The Athens post.",
+   "place": "Athens",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1848-1917",
+   "first_year": 1848,
+   "last_year": 1917
+  }
+ },
+ {
+  "lccn": "sn92038389",
+  "paper": "Vashon Island news. [volume] (Vashon, Wash.) 1907-19??",
+  "expected": {
+   "title": "Vashon Island news.",
+   "place": "Vashon",
+   "county": null,
+   "state": "Wash.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1907-19??",
+   "first_year": 1907,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn87065031",
+  "paper": "The Columbus dispatch. (Columbus, Miss.) 19??-1922",
+  "expected": {
+   "title": "The Columbus dispatch.",
+   "place": "Columbus",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "19??-1922",
+   "first_year": null,
+   "last_year": 1922
+  }
+ },
+ {
+  "lccn": "sn86069456",
+  "paper": "The Crittenden record. [volume] (Marion, Ky.) 1904-1907",
+  "expected": {
+   "title": "The Crittenden record.",
+   "place": "Marion",
+   "county": null,
+   "state": "Ky.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1904-1907",
+   "first_year": 1904,
+   "last_year": 1907
+  }
+ },
+ {
+  "lccn": "sn85032923",
+  "paper": "Weekly journal-miner. [volume] (Prescott, Ariz.) 1908-1929",
+  "expected": {
+   "title": "Weekly journal-miner.",
+   "place": "Prescott",
+   "county": null,
+   "state": "Ariz.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1908-1929",
+   "first_year": 1908,
+   "last_year": 1929
+  }
+ },
+ {
+  "lccn": "sn87052128",
+  "paper": "The state journal.",
+  "expected": {
+   "title": "The state journal.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn86072239",
+  "paper": "The Cordova daily times. [volume] (Cordova, Alaska) 1914-1947",
+  "expected": {
+   "title": "The Cordova daily times.",
+   "place": "Cordova",
+   "county": null,
+   "state": "Alaska",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1914-1947",
+   "first_year": 1914,
+   "last_year": 1947
+  }
+ },
+ {
+  "lccn": "sn86092124",
+  "paper": "American union. [volume] (Morgantown, Va. [W. Va.]) 1855-1859",
+  "expected": {
+   "title": "American union.",
+   "place": "Morgantown",
+   "county": null,
+   "state": "Va.",
+   "supplied_place": null,
+   "supplied_state": "W. Va.",
+   "years": "1855-1859",
+   "first_year": 1855,
+   "last_year": 1859
+  }
+ },
+ {
+  "lccn": "sn96060040",
+  "paper": "Tanana Valley socialist. (Fairbanks, Alaska) 19??-19??",
+  "expected": {
+   "title": "Tanana Valley socialist.",
+   "place": "Fairbanks",
+   "county": null,
+   "state": "Alaska",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "19??-19??",
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn91068403",
+  "paper": "Henderson gold leaf. [volume] (Henderson, N.C.) 1911-19??",
+  "expected": {
+   "title": "Henderson gold leaf.",
+   "place": "Henderson",
+   "county": null,
+   "state": "N.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1911-19??",
+   "first_year": 1911,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85049838",
+  "paper": "Audubon County Republican. [volume] (Audubon, Audubon Co., Iowa) 1885-1894",
+  "expected": {
+   "title": "Audubon County Republican.",
+   "place": "Audubon",
+   "county": "Audubon Co.",
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1885-1894",
+   "first_year": 1885,
+   "last_year": 1894
+  }
+ },
+ {
+  "lccn": "sn87067106",
+  "paper": "The semi-weekly mountain Democrat. (Placerville, El Dorado Co. [Calif.]) 1860-1860",
+  "expected": {
+   "title": "The semi-weekly mountain Democrat.",
+   "place": "Placerville",
+   "county": "El Dorado Co.",
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "Calif.",
+   "years": "1860-1860",
+   "first_year": 1860,
+   "last_year": 1860
+  }
+ },
+ {
+  "lccn": "sn94056836",
+  "paper": "Columbus daily courier. [volume] (Columbus, N.M.) 1920-1920",
+  "expected": {
+   "title": "Columbus daily courier.",
+   "place": "Columbus",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1920-1920",
+   "first_year": 1920,
+   "last_year": 1920
+  }
+ },
+ {
+  "lccn": "sn87056247",
+  "paper": "Marshall County Democrat. (Plymouth, Ind.) 1855-1859",
+  "expected": {
+   "title": "Marshall County Democrat.",
+   "place": "Plymouth",
+   "county": null,
+   "state": "Ind.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1855-1859",
+   "first_year": 1855,
+   "last_year": 1859
+  }
+ },
+ {
+  "lccn": "sn84038198",
+  "paper": "The Weston Democrat. [volume] (Weston, W. Va.) 1875-current",
+  "expected": {
+   "title": "The Weston Democrat.",
+   "place": "Weston",
+   "county": null,
+   "state": "W. Va.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1875-current",
+   "first_year": 1875,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84026561",
+  "paper": "Spirit of the age. [volume] (Raleigh, N.C.) 1849-1865",
+  "expected": {
+   "title": "Spirit of the age.",
+   "place": "Raleigh",
+   "county": null,
+   "state": "N.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1849-1865",
+   "first_year": 1849,
+   "last_year": 1865
+  }
+ },
+ {
+  "lccn": "sn92051487",
+  "paper": "The Newtown bee. (Newtown, Conn.) 1877-current",
+  "expected": {
+   "title": "The Newtown bee.",
+   "place": "Newtown",
+   "county": null,
+   "state": "Conn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1877-current",
+   "first_year": 1877,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn88064175",
+  "paper": "The Colfax chronicle. (Colfax, Grant Parish, La.) 1876-1877",
+  "expected": {
+   "title": "The Colfax chronicle.",
+   "place": "Colfax",
+   "county": "Grant Parish",
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1876-1877",
+   "first_year": 1876,
+   "last_year": 1877
+  }
+ },
+ {
+  "lccn": "sn84026788",
+  "paper": "Spirit of Jefferson. [volume] (Charles Town, Va. [W. Va.]) 1844-1948",
+  "expected": {
+   "title": "Spirit of Jefferson.",
+   "place": "Charles Town",
+   "county": null,
+   "state": "Va.",
+   "supplied_place": null,
+   "supplied_state": "W. Va.",
+   "years": "1844-1948",
+   "first_year": 1844,
+   "last_year": 1948
+  }
+ },
+ {
+  "lccn": "sn97065122",
+  "paper": "The Greeneville daily sun. (Greeneville, Tenn.) 1918-1920",
+  "expected": {
+   "title": "The Greeneville daily sun.",
+   "place": "Greeneville",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1918-1920",
+   "first_year": 1918,
+   "last_year": 1920
+  }
+ },
+ {
+  "lccn": "sn87065034",
+  "paper": "Columbus Whig. (Columbus, Miss.) 1843-18??",
+  "expected": {
+   "title": "Columbus Whig.",
+   "place": "Columbus",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1843-18??",
+   "first_year": 1843,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83016118",
+  "paper": "Der Deutsche correspondent. [volume] (Baltimore, Md.) 1848-1918",
+  "expected": {
+   "title": "Der Deutsche correspondent.",
+   "place": "Baltimore",
+   "county": null,
+   "state": "Md.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1848-1918",
+   "first_year": 1848,
+   "last_year": 1918
+  }
+ },
+ {
+  "lccn": "sn97071028",
+  "paper": "The Lebanon express. (Lebanon, Linn County, Or.) 1887-1898",
+  "expected": {
+   "title": "The Lebanon express.",
+   "place": "Lebanon",
+   "county": "Linn County",
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1887-1898",
+   "first_year": 1887,
+   "last_year": 1898
+  }
+ },
+ {
+  "lccn": "sn95060817",
+  "paper": "Postscript of the Apache sentinel. [volume] (Fort Huachuca, Ariz.) 1945-1946",
+  "expected": {
+   "title": "Postscript of the Apache sentinel.",
+   "place": "Fort Huachuca",
+   "county": null,
+   "state": "Ariz.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1945-1946",
+   "first_year": 1945,
+   "last_year": 1946
+  }
+ },
+ {
+  "lccn": "sn96077385",
+  "paper": "The times. (Owosso, Mich.) 1882-1897",
+  "expected": {
+   "title": "The times.",
+   "place": "Owosso",
+   "county": null,
+   "state": "Mich.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1882-1897",
+   "first_year": 1882,
+   "last_year": 1897
+  }
+ },
+ {
+  "lccn": "sn86075240",
+  "paper": "The tribune. [volume] (Great Falls, Mont.) 1890-1890",
+  "expected": {
+   "title": "The tribune.",
+   "place": "Great Falls",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1890-1890",
+   "first_year": 1890,
+   "last_year": 1890
+  }
+ },
+ {
+  "lccn": "sn96061021",
+  "paper": "Las Vegas free press. (East Las Vegas, N.M.) 1891-1???",
+  "expected": {
+   "title": "Las Vegas free press.",
+   "place": "East Las Vegas",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1891-1???",
+   "first_year": 1891,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83016483",
+  "paper": "The south-western. [volume] (Shreveport, La.) 1852-1870",
+  "expected": {
+   "title": "The south-western.",
+   "place": "Shreveport",
+   "county": null,
+   "state": "La.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1852-1870",
+   "first_year": 1852,
+   "last_year": 1870
+  }
+ },
+ {
+  "lccn": "sn87093109",
+  "paper": "The Vancouver independent. (Vancouver, W.T. [Wash.]) 1875-1910",
+  "expected": {
+   "title": "The Vancouver independent.",
+   "place": "Vancouver",
+   "county": null,
+   "state": "W.T.",
+   "supplied_place": null,
+   "supplied_state": "Wash.",
+   "years": "1875-1910",
+   "first_year": 1875,
+   "last_year": 1910
+  }
+ },
+ {
+  "lccn": "sn85044812",
+  "paper": "Birmingham state herald. (Birmingham, Ala.) 1895-1897",
+  "expected": {
+   "title": "Birmingham state herald.",
+   "place": "Birmingham",
+   "county": null,
+   "state": "Ala.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1895-1897",
+   "first_year": 1895,
+   "last_year": 1897
+  }
+ },
+ {
+  "lccn": "sn85038519",
+  "paper": "Daily union and American. [volume] (Nashville, Tenn.) 1865-1866",
+  "expected": {
+   "title": "Daily union and American.",
+   "place": "Nashville",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1865-1866",
+   "first_year": 1865,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn87065028",
+  "paper": "The Columbus commercial. (Columbus, Miss.) 1893-1922",
+  "expected": {
+   "title": "The Columbus commercial.",
+   "place": "Columbus",
+   "county": null,
+   "state": "Miss.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1893-1922",
+   "first_year": 1893,
+   "last_year": 1922
+  }
+ },
+ {
+  "lccn": "sn88056095",
+  "paper": "The Coeur d&#39;Alene press. (Coeur d&#39;Alene, Idaho) 1892-1907",
+  "expected": {
+   "title": "The Coeur d'Alene press.",
+   "place": "Coeur d'Alene",
+   "county": null,
+   "state": "Idaho",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1892-1907",
+   "first_year": 1892,
+   "last_year": 1907
+  }
+ },
+ {
+  "lccn": "sn91068158",
+  "paper": "The French Broad hustler. [volume] (Hendersonville, N.C.) 1896-1912",
+  "expected": {
+   "title": "The French Broad hustler.",
+   "place": "Hendersonville",
+   "county": null,
+   "state": "N.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1896-1912",
+   "first_year": 1896,
+   "last_year": 1912
+  }
+ },
+ {
+  "lccn": "sn83025331",
+  "paper": "The progress.",
+  "expected": {
+   "title": "The progress.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn93067849",
+  "paper": "The Spartan. [volume] (Spartanburg, S.C.) 1896-1898",
+  "expected": {
+   "title": "The Spartan.",
+   "place": "Spartanburg",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1896-1898",
+   "first_year": 1896,
+   "last_year": 1898
+  }
+ },
+ {
+  "lccn": "sn85042462",
+  "paper": "Los Angeles herald. [microfilm reel] (Los Angeles [Calif.]) 1900-1911",
+  "expected": {
+   "title": "Los Angeles herald.",
+   "place": "Los Angeles",
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": "Calif.",
+   "years": "1900-1911",
+   "first_year": 1900,
+   "last_year": 1911
+  }
+ },
+ {
+  "lccn": "sn89074986",
+  "paper": "The Lemmon herald. (Lemmon, Perkins County, S.D.) 1912-1917",
+  "expected": {
+   "title": "The Lemmon herald.",
+   "place": "Lemmon",
+   "county": "Perkins County",
+   "state": "S.D.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1912-1917",
+   "first_year": 1912,
+   "last_year": 1917
+  }
+ },
+ {
+  "lccn": "sn84036284",
+  "paper": "The Carbon County chronicle. [volume] (Red Lodge, Mont.) 1924-1924",
+  "expected": {
+   "title": "The Carbon County chronicle.",
+   "place": "Red Lodge",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1924-1924",
+   "first_year": 1924,
+   "last_year": 1924
+  }
+ },
+ {
+  "lccn": "sn89058168",
+  "paper": "The Lexington progress. (Lexington, Tenn.) 1884-current",
+  "expected": {
+   "title": "The Lexington progress.",
+   "place": "Lexington",
+   "county": null,
+   "state": "Tenn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1884-current",
+   "first_year": 1884,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn83025287",
+  "paper": "Daily globe. [volume] (St. Paul, Minn.) 1878-1884",
+  "expected": {
+   "title": "Daily globe.",
+   "place": "St. Paul",
+   "county": null,
+   "state": "Minn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1878-1884",
+   "first_year": 1878,
+   "last_year": 1884
+  }
+ },
+ {
+  "lccn": "sn93065779",
+  "paper": "The Lincoln times.",
+  "expected": {
+   "title": "The Lincoln times.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn84026355",
+  "paper": "The Scranton tribune. [volume] (Scranton, Pa.) 1891-1910",
+  "expected": {
+   "title": "The Scranton tribune.",
+   "place": "Scranton",
+   "county": null,
+   "state": "Pa.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1891-1910",
+   "first_year": 1891,
+   "last_year": 1910
+  }
+ },
+ {
+  "lccn": "sn83045012",
+  "paper": "The Butler County press. [volume] (Hamilton, Ohio) 1900-1946",
+  "expected": {
+   "title": "The Butler County press.",
+   "place": "Hamilton",
+   "county": null,
+   "state": "Ohio",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1900-1946",
+   "first_year": 1900,
+   "last_year": 1946
+  }
+ },
+ {
+  "lccn": "sn86075109",
+  "paper": "The weekly chronicle. (Bozeman, Mont.) 1883-1883",
+  "expected": {
+   "title": "The weekly chronicle.",
+   "place": "Bozeman",
+   "county": null,
+   "state": "Mont.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1883-1883",
+   "first_year": 1883,
+   "last_year": 1883
+  }
+ },
+ {
+  "lccn": "sn86090439",
+  "paper": "San Antonio daily light. [volume] (San Antonio, Tex.) 1886-1907",
+  "expected": {
+   "title": "San Antonio daily light.",
+   "place": "San Antonio",
+   "county": null,
+   "state": "Tex.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1886-1907",
+   "first_year": 1886,
+   "last_year": 1907
+  }
+ },
+ {
+  "lccn": "sn94050504",
+  "paper": "The Weekly orb.",
+  "expected": {
+   "title": "The Weekly orb.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85042524",
+  "paper": "Port Royal commercial and Beaufort County Republican. [volume] (Port Royal, S.C.) 1873-1874",
+  "expected": {
+   "title": "Port Royal commercial and Beaufort County Republican.",
+   "place": "Port Royal",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1873-1874",
+   "first_year": 1873,
+   "last_year": 1874
+  }
+ },
+ {
+  "lccn": "sn88059319",
+  "paper": "Twice-a-week plain dealer. (Cresco, Howard County, Iowa) 1895-1913",
+  "expected": {
+   "title": "Twice-a-week plain dealer.",
+   "place": "Cresco",
+   "county": "Howard County",
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1895-1913",
+   "first_year": 1895,
+   "last_year": 1913
+  }
+ },
+ {
+  "lccn": "sn86053573",
+  "paper": "National Republican. (Washington City (D.C.)) 1872-1888",
+  "expected": {
+   "title": "National Republican.",
+   "place": "Washington City",
+   "county": null,
+   "state": "D.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1872-1888",
+   "first_year": 1872,
+   "last_year": 1888
+  }
+ },
+ {
+  "lccn": "sn85042002",
+  "paper": "Daily American organ. [volume] (Washington, D.C.) 1854-1856",
+  "expected": {
+   "title": "Daily American organ.",
+   "place": "Washington",
+   "county": null,
+   "state": "D.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1854-1856",
+   "first_year": 1854,
+   "last_year": 1856
+  }
+ },
+ {
+  "lccn": "sn96060003",
+  "paper": "The daily Alaska citizen.",
+  "expected": {
+   "title": "The daily Alaska citizen.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn95060581",
+  "paper": "Snips and the St. Johns herald.",
+  "expected": {
+   "title": "Snips and the St. Johns herald.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn85025182",
+  "paper": "The star of the north. [volume] (Bloomsburg, Pa.) 1849-1866",
+  "expected": {
+   "title": "The star of the north.",
+   "place": "Bloomsburg",
+   "county": null,
+   "state": "Pa.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1849-1866",
+   "first_year": 1849,
+   "last_year": 1866
+  }
+ },
+ {
+  "lccn": "sn84022367",
+  "paper": "Rutland weekly herald. [volume] (Rutland, Vt.) 1859-1877",
+  "expected": {
+   "title": "Rutland weekly herald.",
+   "place": "Rutland",
+   "county": null,
+   "state": "Vt.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1859-1877",
+   "first_year": 1859,
+   "last_year": 1877
+  }
+ },
+ {
+  "lccn": "sn93061711",
+  "paper": "The Tucumcari news and Tucumcari times. [volume] (Tucumcari, N.M.) 1907-1921",
+  "expected": {
+   "title": "The Tucumcari news and Tucumcari times.",
+   "place": "Tucumcari",
+   "county": null,
+   "state": "N.M.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1907-1921",
+   "first_year": 1907,
+   "last_year": 1921
+  }
+ },
+ {
+  "lccn": "sn85047084",
+  "paper": "The Pacific commercial advertiser. [volume] (Honolulu, Hawaiian Islands) 1885-1921",
+  "expected": {
+   "title": "The Pacific commercial advertiser.",
+   "place": "Honolulu",
+   "county": null,
+   "state": "Hawaiian Islands",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1885-1921",
+   "first_year": 1885,
+   "last_year": 1921
+  }
+ },
+ {
+  "lccn": "sn83025779",
+  "paper": "The Dallas express. [volume] (Dallas, Tex.) 1893-1970",
+  "expected": {
+   "title": "The Dallas express.",
+   "place": "Dallas",
+   "county": null,
+   "state": "Tex.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1893-1970",
+   "first_year": 1893,
+   "last_year": 1970
+  }
+ },
+ {
+  "lccn": "sn84020071",
+  "paper": "Litchfield enquirer. [volume] (Litchfield, Conn.) 1829-current",
+  "expected": {
+   "title": "Litchfield enquirer.",
+   "place": "Litchfield",
+   "county": null,
+   "state": "Conn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1829-current",
+   "first_year": 1829,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn94056415",
+  "paper": "The McCook tribune. (McCook, Neb.) 1886-1936",
+  "expected": {
+   "title": "The McCook tribune.",
+   "place": "McCook",
+   "county": null,
+   "state": "Neb.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1886-1936",
+   "first_year": 1886,
+   "last_year": 1936
+  }
+ },
+ {
+  "lccn": "sn90059960",
+  "paper": "The Northwestern standard. [volume] (Minneapolis, Minn.) 1885-1886",
+  "expected": {
+   "title": "The Northwestern standard.",
+   "place": "Minneapolis",
+   "county": null,
+   "state": "Minn.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1885-1886",
+   "first_year": 1885,
+   "last_year": 1886
+  }
+ },
+ {
+  "lccn": "sn83004231",
+  "paper": "The Miami times. [volume] (Miami, Fla.) 1923-current",
+  "expected": {
+   "title": "The Miami times.",
+   "place": "Miami",
+   "county": null,
+   "state": "Fla.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1923-current",
+   "first_year": 1923,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn93067659",
+  "paper": "The Pickens sentinel-journal. (Pickens, S.C.) 1903-1906",
+  "expected": {
+   "title": "The Pickens sentinel-journal.",
+   "place": "Pickens",
+   "county": null,
+   "state": "S.C.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1903-1906",
+   "first_year": 1903,
+   "last_year": 1906
+  }
+ },
+ {
+  "lccn": "sn89066349",
+  "paper": "The crisis. (Chillicothe, Livingston Co., Mo.) 1877-1878",
+  "expected": {
+   "title": "The crisis.",
+   "place": "Chillicothe",
+   "county": "Livingston Co.",
+   "state": "Mo.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1877-1878",
+   "first_year": 1877,
+   "last_year": 1878
+  }
+ },
+ {
+  "lccn": "sn85032967",
+  "paper": "The Nevada news.",
+  "expected": {
+   "title": "The Nevada news.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ },
+ {
+  "lccn": "sn94052320",
+  "paper": "The Weston leader. [volume] (Weston, Umatilla County, Or.) 189?-1946",
+  "expected": {
+   "title": "The Weston leader.",
+   "place": "Weston",
+   "county": "Umatilla County",
+   "state": "Or.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "189?-1946",
+   "first_year": null,
+   "last_year": 1946
+  }
+ },
+ {
+  "lccn": "sn86083363",
+  "paper": "The miners&#39; express. (Dubuque, Iowa) 1849-1854",
+  "expected": {
+   "title": "The miners' express.",
+   "place": "Dubuque",
+   "county": null,
+   "state": "Iowa",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1849-1854",
+   "first_year": 1849,
+   "last_year": 1854
+  }
+ },
+ {
+  "lccn": "sn85042477",
+  "paper": "Delaware State journal, advertiser and star. [volume] (Wilmington, Del.) 1832-1833",
+  "expected": {
+   "title": "Delaware State journal, advertiser and star.",
+   "place": "Wilmington",
+   "county": null,
+   "state": "Del.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1832-1833",
+   "first_year": 1832,
+   "last_year": 1833
+  }
+ },
+ {
+  "lccn": "sn85048197",
+  "paper": "Brookville American. [volume] (Brookville, Ind.) 1858-1861",
+  "expected": {
+   "title": "Brookville American.",
+   "place": "Brookville",
+   "county": null,
+   "state": "Ind.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1858-1861",
+   "first_year": 1858,
+   "last_year": 1861
+  }
+ },
+ {
+  "lccn": "sn84023127",
+  "paper": "Burlington free press. [volume] (Burlington, Vt.) 1827-1865",
+  "expected": {
+   "title": "Burlington free press.",
+   "place": "Burlington",
+   "county": null,
+   "state": "Vt.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1827-1865",
+   "first_year": 1827,
+   "last_year": 1865
+  }
+ },
+ {
+  "lccn": "sn84022356",
+  "paper": "Rutland County herald. [volume] (Rutland, Vt.) 1848-1850",
+  "expected": {
+   "title": "Rutland County herald.",
+   "place": "Rutland",
+   "county": null,
+   "state": "Vt.",
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": "1848-1850",
+   "first_year": 1848,
+   "last_year": 1850
+  }
+ },
+ {
+  "lccn": "sn87062013",
+  "paper": "The Nome nugget.",
+  "expected": {
+   "title": "The Nome nugget.",
+   "place": null,
+   "county": null,
+   "state": null,
+   "supplied_place": null,
+   "supplied_state": null,
+   "years": null,
+   "first_year": null,
+   "last_year": null
+  }
+ }
+]

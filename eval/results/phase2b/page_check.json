@@ -1,0 +1,6511 @@
+{
+ "requests": [
+  {
+   "run": "calibrate",
+   "sent": 77,
+   "by_host": {
+    "tile.loc.gov": 77
+   },
+   "cache_hits": 0,
+   "errors_not_cached": 0
+  },
+  {
+   "run": "frames",
+   "sent": 36,
+   "by_host": {
+    "tile.loc.gov": 36
+   },
+   "cache_hits": 0,
+   "errors_not_cached": 0
+  },
+  {
+   "run": "measure",
+   "sent": 326,
+   "by_host": {
+    "tile.loc.gov": 326
+   },
+   "cache_hits": 290,
+   "errors_not_cached": 0
+  },
+  {
+   "run": "look",
+   "sent": 2,
+   "by_host": {
+    "tile.loc.gov": 2
+   },
+   "cache_hits": 0,
+   "errors_not_cached": 0
+  },
+  {
+   "run": "reels",
+   "sent": 104,
+   "by_host": {
+    "tile.loc.gov": 104
+   },
+   "cache_hits": 0,
+   "errors_not_cached": 0
+  }
+ ],
+ "calibrate": [
+  {
+   "member": "faro_1899/1899-08-20_p12_sn85054468_211102202_1899082001_0140.json",
+   "article_id": "7_1899-08-20_p12_sn85054468_211102202_1899082001_0140.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn85054468:211102202:1899082001:0140",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn85054468/211102202/1899082001/0139.jp2",
+   "recorded_size": [
+    8924,
+    6828
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8924,
+    6828
+   ],
+   "alto_status": 200,
+   "article_words": 40,
+   "words_on_page": 0.8,
+   "pairs_on_page": 0.7907,
+   "words_in_boxes": 0.775
+  },
+  {
+   "member": "faro_1870/1870-12-10_p2_sn82014899_00211105483_1870121001_0972.json",
+   "article_id": "3_1870-12-10_p2_sn82014899_00211105483_1870121001_0972.json",
+   "truth": "another frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014899:00211105483:1870121001:0972",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014899/00211105483/1870121001/0971.jp2",
+   "recorded_size": [
+    6883,
+    4548
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6883,
+    4548
+   ],
+   "alto_status": 200,
+   "article_words": 89,
+   "words_on_page": 0.3708,
+   "pairs_on_page": 0.1528,
+   "words_in_boxes": 0.3146
+  },
+  {
+   "member": "faro_1913/1913-02-23_p5_sn83045433_0029455824A_1913022301_0144.json",
+   "article_id": "13_1913-02-23_p5_sn83045433_0029455824A_1913022301_0144.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:0029455824A:1913022301:0144",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/0029455824A/1913022301/0143.jp2",
+   "recorded_size": [
+    6437,
+    4772
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6437,
+    4772
+   ],
+   "alto_status": 200,
+   "article_words": 238,
+   "words_on_page": 0.8151,
+   "pairs_on_page": 0.7193,
+   "words_in_boxes": 0.7899
+  },
+  {
+   "member": "faro_1916/1916-02-08_p5_sn84026749_00280764942_1916020801_1038.json",
+   "article_id": "7_1916-02-08_p5_sn84026749_00280764942_1916020801_1038.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_ghana_ver01:data:sn84026749:00280764942:1916020801:1038",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ghana_ver01/data/sn84026749/00280764942/1916020801/1037.jp2",
+   "recorded_size": [
+    7146,
+    5484
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7146,
+    5484
+   ],
+   "alto_status": 200,
+   "article_words": 147,
+   "words_on_page": 0.6735,
+   "pairs_on_page": 0.3497,
+   "words_in_boxes": 0.5238
+  },
+  {
+   "member": "faro_1913/1913-01-19_p18_sn83045433_00294558238_1913011901_0319.json",
+   "article_id": "14_1913-01-19_p18_sn83045433_00294558238_1913011901_0319.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:00294558238:1913011901:0319",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/00294558238/1913011901/0318.jp2",
+   "recorded_size": [
+    6487,
+    4820
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6487,
+    4820
+   ],
+   "alto_status": 200,
+   "article_words": 18,
+   "words_on_page": 1.0,
+   "pairs_on_page": 0.9412,
+   "words_in_boxes": 1.0
+  },
+  {
+   "member": "faro_1900/1900-12-25_p5_sn85054468_100493056_1900122501_0085.json",
+   "article_id": "3_1900-12-25_p5_sn85054468_100493056_1900122501_0085.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_abe_ver01:data:sn85054468:100493056:1900122501:0085",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_abe_ver01/data/sn85054468/100493056/1900122501/0084.jp2",
+   "recorded_size": [
+    6780,
+    5172
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6780,
+    5172
+   ],
+   "alto_status": 200,
+   "article_words": 112,
+   "words_on_page": 0.8482,
+   "pairs_on_page": 0.7613,
+   "words_in_boxes": 0.8393
+  },
+  {
+   "member": "faro_1901/1901-05-13_p5_sn85054468_00211102299_1901051301_0735.json",
+   "article_id": "72_1901-05-13_p5_sn85054468_00211102299_1901051301_0735.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_barack_ver01:data:sn85054468:00211102299:1901051301:0735",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_barack_ver01/data/sn85054468/100493135/1901051301/0727.jp2",
+   "recorded_size": [
+    8934,
+    6788
+   ],
+   "approximate": false,
+   "info_status": 404
+  },
+  {
+   "member": "faro_1901/1901-07-04_p1_sn82016187_100493767_1901070401_0298.json",
+   "article_id": "1_1901-07-04_p1_sn82016187_100493767_1901070401_0298.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_abe_ver01:data:sn82016187:100493767:1901070401:0298",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_abe_ver01/data/sn82016187/100493767/1901070401/0297.jp2",
+   "recorded_size": [
+    7119,
+    5420
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7119,
+    5420
+   ],
+   "alto_status": 200,
+   "article_words": 91,
+   "words_on_page": 0.978,
+   "pairs_on_page": 0.9176,
+   "words_in_boxes": 0.956
+  },
+  {
+   "member": "faro_1897/1897-08-22_p15_sn85054468_0021110210A_1897082201_0507.json",
+   "article_id": "6_1897-08-22_p15_sn85054468_0021110210A_1897082201_0507.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_dutch_ver02:data:sn85054468:0021110210A:1897082201:0507",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_dutch_ver02/data/sn85054468/0021110210A/1897082201/0506.jp2",
+   "recorded_size": [
+    8804,
+    6752
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8804,
+    6752
+   ],
+   "alto_status": 200,
+   "article_words": 164,
+   "words_on_page": 0.8841,
+   "pairs_on_page": 0.773,
+   "words_in_boxes": 0.878
+  },
+  {
+   "member": "faro_1904/1904-07-31_p19_sn83030272_100479758_1904073101_0436.json",
+   "article_id": "45_1904-07-31_p19_sn83030272_100479758_1904073101_0436.json",
+   "truth": "another frame",
+   "service": "service:ndnp:nn:batch_nn_epicurus_ver01:data:sn83030272:100479758:1904073101:0436",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_epicurus_ver01/data/sn83030272/100479758/1904073101/0440.jp2",
+   "recorded_size": [
+    6774,
+    5334
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6774,
+    5334
+   ],
+   "alto_status": 200,
+   "article_words": 91,
+   "words_on_page": 0.9231,
+   "pairs_on_page": 0.37,
+   "words_in_boxes": 0.9231
+  },
+  {
+   "member": "faro_1910/1910-01-02_p43_sn83030272_100481455_1910010201_0059.json",
+   "article_id": "18_1910-01-02_p43_sn83030272_100481455_1910010201_0059.json",
+   "truth": "another frame",
+   "service": "service:ndnp:nn:batch_nn_james_ver01:data:sn83030272:100481455:1910010201:0059",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_james_ver01/data/sn83030272/100481455/1910010201/0063.jp2",
+   "recorded_size": [
+    6685,
+    5009
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6685,
+    5009
+   ],
+   "alto_status": 200,
+   "article_words": 255,
+   "words_on_page": 0.8196,
+   "pairs_on_page": 0.3228,
+   "words_in_boxes": 0.8078
+  },
+  {
+   "member": "faro_1896/1896-01-19_p3_sn84024442_211103012_1896011901_0519.json",
+   "article_id": "7_1896-01-19_p3_sn84024442_211103012_1896011901_0519.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn84024442:211103012:1896011901:0519",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn84024442/211103012/1896011901/0518.jp2",
+   "recorded_size": [
+    6610,
+    4912
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6610,
+    4912
+   ],
+   "alto_status": 200,
+   "article_words": 60,
+   "words_on_page": 0.7167,
+   "pairs_on_page": 0.5398,
+   "words_in_boxes": 0.6333
+  },
+  {
+   "member": "faro_1901/1901-04-07_p18_sn85054468_00211102299_1901040701_0338.json",
+   "article_id": "10_1901-04-07_p18_sn85054468_00211102299_1901040701_0338.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_barack_ver01:data:sn85054468:00211102299:1901040701:0338",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_barack_ver01/data/sn85054468/100493135/1901040701/0332.jp2",
+   "recorded_size": [
+    8948,
+    6928
+   ],
+   "approximate": false,
+   "info_status": 404
+  },
+  {
+   "member": "faro_1913/1913-03-04_p9_sn83045433_0029455824A_1913030401_0326.json",
+   "article_id": "29_1913-03-04_p9_sn83045433_0029455824A_1913030401_0326.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:0029455824A:1913030401:0326",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/0029455824A/1913030401/0325.jp2",
+   "recorded_size": [
+    6537,
+    4820
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6537,
+    4820
+   ],
+   "alto_status": 200,
+   "article_words": 273,
+   "words_on_page": 0.8278,
+   "pairs_on_page": 0.6938,
+   "words_in_boxes": 0.7839
+  },
+  {
+   "member": "faro_1877/1877-11-23_p3_sn82014897_00211105501_1877112301_0675.json",
+   "article_id": "8_1877-11-23_p3_sn82014897_00211105501_1877112301_0675.json",
+   "truth": "another frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014897:00211105501:1877112301:0675",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014897/00211105501/1877112301/0674.jp2",
+   "recorded_size": [
+    9304,
+    6648
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9304,
+    6648
+   ],
+   "alto_status": 200,
+   "article_words": 38,
+   "words_on_page": 0.8421,
+   "pairs_on_page": 0.6778,
+   "words_in_boxes": 0.7632
+  },
+  {
+   "member": "faro_1913/1913-08-24_p7_sn84026749_00294557799_1913082401_0517.json",
+   "article_id": "6_1913-08-24_p7_sn84026749_00294557799_1913082401_0517.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_braniff_ver01:data:sn84026749:00294557799:1913082401:0517",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_braniff_ver01/data/sn84026749/00294557799/1913082401/0516.jp2",
+   "recorded_size": [
+    7090,
+    5992
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7090,
+    5992
+   ],
+   "alto_status": 200,
+   "article_words": 79,
+   "words_on_page": 0.8987,
+   "pairs_on_page": 0.8606,
+   "words_in_boxes": 0.8861
+  },
+  {
+   "member": "faro_1872/1872-11-16_p2_sn82014899_00211105495_1872111601_0402.json",
+   "article_id": "1_1872-11-16_p2_sn82014899_00211105495_1872111601_0402.json",
+   "truth": "another frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014899:00211105495:1872111601:0402",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014899/00211105495/1872111601/0401.jp2",
+   "recorded_size": [
+    9476,
+    6248
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9476,
+    6248
+   ],
+   "alto_status": 200,
+   "article_words": 87,
+   "words_on_page": 0.8161,
+   "pairs_on_page": 0.5821,
+   "words_in_boxes": 0.7356
+  },
+  {
+   "member": "faro_1891/1891-05-24_p14_sn82016373_00211103358_1891052401_0431.json",
+   "article_id": "6_1891-05-24_p14_sn82016373_00211103358_1891052401_0431.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_ike_ver01:data:sn82016373:00211103358:1891052401:0431",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ike_ver01/data/sn82016373/00211103358/1891052401/0430.jp2",
+   "recorded_size": [
+    7392,
+    5240
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7392,
+    5240
+   ],
+   "alto_status": 200,
+   "article_words": 93,
+   "words_on_page": 0.9247,
+   "pairs_on_page": 0.7302,
+   "words_in_boxes": 0.9032
+  },
+  {
+   "member": "faro_1895/1895-12-27_p2_sn84024442_211103012_1895122701_0291.json",
+   "article_id": "3_1895-12-27_p2_sn84024442_211103012_1895122701_0291.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn84024442:211103012:1895122701:0291",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn84024442/211103012/1895122701/0290.jp2",
+   "recorded_size": [
+    6613,
+    4940
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6613,
+    4940
+   ],
+   "alto_status": 200,
+   "article_words": 98,
+   "words_on_page": 0.8878,
+   "pairs_on_page": 0.8082,
+   "words_in_boxes": 0.8776
+  },
+  {
+   "member": "faro_1883/1883-08-08_p4_sn86053573_00211101970_1883080801_0264.json",
+   "article_id": "11_1883-08-08_p4_sn86053573_00211101970_1883080801_0264.json",
+   "truth": "another frame",
+   "service": "service:ndnp:dlc:batch_dlc_chester_ver02:data:sn86053573:00211101970:1883080801:0264",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_chester_ver02/data/sn86053573/00211101970/1883080801/0263.jp2",
+   "recorded_size": [
+    6868,
+    4536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6868,
+    4536
+   ],
+   "alto_status": 200,
+   "article_words": 368,
+   "words_on_page": 0.7582,
+   "pairs_on_page": 0.4548,
+   "words_in_boxes": 0.7364
+  },
+  {
+   "member": "faro_1916/1916-02-04_p2_sn89060136_00279522254_1916020401_0047.json",
+   "article_id": "4_1916-02-04_p2_sn89060136_00279522254_1916020401_0047.json",
+   "truth": "same page",
+   "service": "service:ndnp:mdu:batch_mdu_belair_ver01:data:sn89060136:00279522254:1916020401:0047",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mdu_belair_ver01/data/sn89060136/00279522254/1916020401/0047.jp2",
+   "recorded_size": [
+    6506,
+    4677
+   ],
+   "approximate": false,
+   "info_status": 404
+  },
+  {
+   "member": "faro_1902/1902-09-15_p4_sn92053934_00212471926_1902091501_0492.json",
+   "article_id": "2_1902-09-15_pna_sn92053934_00212471926_1902091501_0492.json",
+   "truth": "same page",
+   "service": "service:ndnp:iune:batch_iune_folio_ver01:data:sn92053934:00212471926:1902091501:0492",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/iune_folio_ver01/data/sn92053934/00212471926/1902091501/0492.jp2",
+   "recorded_size": [
+    7504,
+    6512
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7504,
+    6512
+   ],
+   "alto_status": 200,
+   "article_words": 93,
+   "words_on_page": 0.9785,
+   "pairs_on_page": 0.8973,
+   "words_in_boxes": 0.9785
+  },
+  {
+   "member": "faro_1896/1896-03-08_p16_sn86063034_00414182173_1896030801_0648.json",
+   "article_id": "3_1896-03-08_pna_sn86063034_00414182173_1896030801_0648.json",
+   "truth": "same page",
+   "service": "service:ndnp:gu:batch_gu_endeavour_ver01:data:sn86063034:00414182173:1896030801:0648",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/gu_endeavour_ver01/data/sn86063034/00414182173/1896030801/0648.jp2",
+   "recorded_size": [
+    6995,
+    5458
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6995,
+    5458
+   ],
+   "alto_status": 200,
+   "article_words": 198,
+   "words_on_page": 0.9394,
+   "pairs_on_page": 0.8884,
+   "words_in_boxes": 0.9394
+  },
+  {
+   "member": "faro_1894/1894-09-08_p2_sn82015133_00211104673_1894090801_0270.json",
+   "article_id": "58_1894-09-08_p2_sn82015133_00211104673_1894090801_0270.json",
+   "truth": "same page",
+   "service": "service:ndnp:az:batch_az_hedgehog_ver01:data:sn82015133:00211104673:1894090801:0270",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_hedgehog_ver01/data/sn82015133/00211104673/1894090801/0270.jp2",
+   "recorded_size": [
+    10160,
+    7824
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    10160,
+    7824
+   ],
+   "alto_status": 200,
+   "article_words": 4,
+   "words_on_page": 1.0,
+   "pairs_on_page": 1.0,
+   "words_in_boxes": 1.0
+  },
+  {
+   "member": "faro_1900/1900-12-30_p11_sn85034438_00175045612_1900123001_0723.json",
+   "article_id": "20_1900-12-30_pna_sn85034438_00175045612_1900123001_0723.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_albion_ver01:data:sn85034438:00175045612:1900123001:0723",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_albion_ver01/data/sn85034438/00175045612/1900123001/0723.jp2",
+   "recorded_size": [
+    8236,
+    6094
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8236,
+    6094
+   ],
+   "alto_status": 200,
+   "article_words": 281,
+   "words_on_page": 0.7046,
+   "pairs_on_page": 0.5368,
+   "words_in_boxes": 0.6762
+  },
+  {
+   "member": "faro_1876/1876-07-14_p2_sn83030272_00206533481_1876071401_0346.json",
+   "article_id": "32_1876-07-14_pna_sn83030272_00206533481_1876071401_0346.json",
+   "truth": "same page",
+   "service": "service:ndnp:nn:batch_nn_carson_ver02:data:sn83030272:00206533481:1876071401:0346",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_carson_ver02/data/sn83030272/00206533481/1876071401/0346.jp2",
+   "recorded_size": [
+    6787,
+    5316
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6787,
+    5316
+   ],
+   "alto_status": 200,
+   "article_words": 451,
+   "words_on_page": 0.5388,
+   "pairs_on_page": 0.2715,
+   "words_in_boxes": 0.4435
+  },
+  {
+   "member": "faro_1864/1864-08-19_p3_sn83035143_00280775599_1864081901_0604.json",
+   "article_id": "69_1864-08-19_pna_sn83035143_00280775599_1864081901_0604.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_edgar_ver01:data:sn83035143:00280775599:1864081901:0604",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_edgar_ver01/data/sn83035143/00280775599/1864081901/0604.jp2",
+   "recorded_size": [
+    6981,
+    5520
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6981,
+    5520
+   ],
+   "alto_status": 200,
+   "article_words": 107,
+   "words_on_page": 0.6262,
+   "pairs_on_page": 0.4213,
+   "words_in_boxes": 0.5234
+  },
+  {
+   "member": "faro_1893/1893-10-16_p8_sn85042461_00280769514_1893101601_0450.json",
+   "article_id": "1_1893-10-16_p8_sn85042461_00280769514_1893101601_0450.json",
+   "truth": "same page",
+   "service": "service:ndnp:curiv:batch_curiv_ogilby_ver01:data:sn85042461:00280769514:1893101601:0450",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/curiv_ogilby_ver01/data/sn85042461/00280769514/1893101601/0450.jp2",
+   "recorded_size": [
+    6898,
+    5209
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6898,
+    5209
+   ],
+   "alto_status": 200,
+   "article_words": 111,
+   "words_on_page": 0.9279,
+   "pairs_on_page": 0.8505,
+   "words_in_boxes": 0.9279
+  },
+  {
+   "member": "faro_1919/1919-05-05_p2_sn83030214_00206532397_1919050501_0162.json",
+   "article_id": "2_1919-05-05_p2_sn83030214_00206532397_1919050501_0162.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_carril_ver01:data:sn83030214:00206532397:1919050501:0162",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_carril_ver01/data/sn83030214/00206532397/1919050501/0162.jp2",
+   "recorded_size": [
+    8460,
+    6629
+   ],
+   "approximate": false,
+   "info_status": 404
+  },
+  {
+   "member": "faro_1891/1891-01-02_p7_sn83032011_00280776853_1891010201_0013.json",
+   "article_id": "2_1891-01-02_pna_sn83032011_00280776853_1891010201_0013.json",
+   "truth": "same page",
+   "service": "service:ndnp:pst:batch_pst_irvin_ver01:data:sn83032011:00280776853:1891010201:0013",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/pst_irvin_ver01/data/sn83032011/00280776853/1891010201/0013.jp2",
+   "recorded_size": [
+    6719,
+    4656
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6719,
+    4656
+   ],
+   "alto_status": 200,
+   "article_words": 133,
+   "words_on_page": 0.6541,
+   "pairs_on_page": 0.3797,
+   "words_in_boxes": 0.594
+  },
+  {
+   "member": "faro_1872/1872-05-14_p1_sn85033673_00280779404_1872051401_0452.json",
+   "article_id": "28_1872-05-14_pna_sn85033673_00280779404_1872051401_0452.json",
+   "truth": "same page",
+   "service": "service:ndnp:tu:batch_tu_nancy_ver01:data:sn85033673:00280779404:1872051401:0452",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_nancy_ver01/data/sn85033673/00280779404/1872051401/0452.jp2",
+   "recorded_size": [
+    6726,
+    4532
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6915,
+    4720
+   ],
+   "alto_status": 200,
+   "article_words": 344,
+   "words_on_page": 0.907,
+   "pairs_on_page": 0.8088,
+   "words_in_boxes": 0.8924
+  },
+  {
+   "member": "faro_1889/1889-10-11_p1_sn84026844_00202193547_1889101101_0980.json",
+   "article_id": "4_1889-10-11_pna_sn84026844_00202193547_1889101101_0980.json",
+   "truth": "same page",
+   "service": "service:ndnp:wvu:batch_wvu_eritrea_ver01:data:sn84026844:00202193547:1889101101:0980",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wvu_eritrea_ver01/data/sn84026844/00202193547/1889101101/0980.jp2",
+   "recorded_size": [
+    5861,
+    4447
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    5992,
+    4558
+   ],
+   "alto_status": 200,
+   "article_words": 73,
+   "words_on_page": 0.7671,
+   "pairs_on_page": 0.6143,
+   "words_in_boxes": 0.6849
+  },
+  {
+   "member": "faro_1887/1887-05-14_p1_sn90059959_00295876864_1887051401_0431.json",
+   "article_id": "9_1887-05-14_pna_sn90059959_00295876864_1887051401_0431.json",
+   "truth": "same page",
+   "service": "service:ndnp:mnhi:batch_mnhi_antares_ver03:data:sn90059959:00295876864:1887051401:0431",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mnhi_antares_ver03/data/sn90059959/00295876864/1887051401/0431.jp2",
+   "recorded_size": [
+    9294,
+    6222
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9294,
+    6430
+   ],
+   "alto_status": 200,
+   "article_words": 237,
+   "words_on_page": 0.8861,
+   "pairs_on_page": 0.8233,
+   "words_in_boxes": 0.8776
+  },
+  {
+   "member": "faro_1922/1922-03-22_p1_sn96076642_00415669641_1922032201_1029.json",
+   "article_id": "33_1922-03-22_pna_sn96076642_00415669641_1922032201_1029.json",
+   "truth": "same page",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_franklin_ver01:data:sn96076642:00415669641:1922032201:1029",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_franklin_ver01/data/sn96076642/00415669641/1922032201/1029.jp2",
+   "recorded_size": [
+    9091,
+    7081
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9475,
+    7528
+   ],
+   "alto_status": 200,
+   "article_words": 15,
+   "words_on_page": 1.0,
+   "pairs_on_page": 1.0,
+   "words_in_boxes": 1.0
+  },
+  {
+   "member": "faro_1881/1881-12-11_p1_sn85033437_00296021052_1881121101_0557.json",
+   "article_id": "25_1881-12-11_pna_sn85033437_00296021052_1881121101_0557.json",
+   "truth": "same page",
+   "service": "service:ndnp:tu:batch_tu_kay_ver01:data:sn85033437:00296021052:1881121101:0557",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_kay_ver01/data/sn85033437/00296021052/1881121101/0557.jp2",
+   "recorded_size": [
+    8697,
+    6257
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8697,
+    6588
+   ],
+   "alto_status": 200,
+   "article_words": 10,
+   "words_on_page": 0.9,
+   "pairs_on_page": 0.6364,
+   "words_in_boxes": 0.9
+  },
+  {
+   "member": "faro_1906/1906-03-16_p1_sn84001718_00332890955_1906031601_0044.json",
+   "article_id": "5_1906-03-16_pna_sn84001718_00332890955_1906031601_0044.json",
+   "truth": "same page",
+   "service": "service:ndnp:nvln:batch_nvln_fairview_ver02:data:sn84001718:00332890955:1906031601:0044",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nvln_fairview_ver02/data/sn84001718/00332890955/1906031601/0044.jp2",
+   "recorded_size": [
+    5909,
+    4070
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6094,
+    4339
+   ],
+   "alto_status": 200,
+   "article_words": 111,
+   "words_on_page": 0.8739,
+   "pairs_on_page": 0.7546,
+   "words_in_boxes": 0.8468
+  },
+  {
+   "member": "faro_1882/1882-01-12_p1_sn89066350_0028077974A_1882011201_0894.json",
+   "article_id": "2_1882-01-12_pna_sn89066350_0028077974A_1882011201_0894.json",
+   "truth": "same page",
+   "service": "service:ndnp:mohi:batch_mohi_beetlebailey_ver01:data:sn89066350:0028077974A:1882011201:0894",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_beetlebailey_ver01/data/sn89066350/0028077974A/1882011201/0894.jp2",
+   "recorded_size": [
+    6584,
+    4470
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6584,
+    4700
+   ],
+   "alto_status": 200,
+   "article_words": 53,
+   "words_on_page": 0.9057,
+   "pairs_on_page": 0.9114,
+   "words_in_boxes": 0.9057
+  },
+  {
+   "member": "faro_1891/1891-07-17_p1_sn89066097_00211109750_1891071701_0116.json",
+   "article_id": "67_1891-07-17_pna_sn89066097_00211109750_1891071701_0116.json",
+   "truth": "same page",
+   "service": "service:ndnp:mohi:batch_mohi_angelou_ver01:data:sn89066097:00211109750:1891071701:0116",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_angelou_ver01/data/sn89066097/00211109750/1891071701/0116.jp2",
+   "recorded_size": [
+    7357,
+    5211
+   ],
+   "approximate": true,
+   "info_status": 404
+  },
+  {
+   "member": "faro_1919/1919-02-21_p1_sn83025458_00414217345_1919022101_0358.json",
+   "article_id": "6_1919-02-21_pna_sn83025458_00414217345_1919022101_0358.json",
+   "truth": "same page",
+   "service": "service:ndnp:az:batch_az_foolsfortynine_ver01:data:sn83025458:00414217345:1919022101:0358",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_foolsfortynine_ver01/data/sn83025458/00414217345/1919022101/0358.jp2",
+   "recorded_size": [
+    7552,
+    5764
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8068,
+    5956
+   ],
+   "alto_status": 200,
+   "article_words": 92,
+   "words_on_page": 0.9565,
+   "pairs_on_page": 0.9381,
+   "words_in_boxes": 0.9565
+  },
+  {
+   "member": "faro_1874/1874-03-26_p1_sn83016025_0027952536A_1874032601_0439.json",
+   "article_id": "6_1874-03-26_pna_sn83016025_0027952536A_1874032601_0439.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_edgecomb_ver02:data:sn83016025:0027952536A:1874032601:0439",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_edgecomb_ver02/data/sn83016025/0027952536A/1874032601/0439.jp2",
+   "recorded_size": [
+    8208,
+    5910
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8459,
+    6163
+   ],
+   "alto_status": 200,
+   "article_words": 156,
+   "words_on_page": 0.8846,
+   "pairs_on_page": 0.8235,
+   "words_in_boxes": 0.8782
+  }
+ ],
+ "frames": [
+  {
+   "member": "faro_1899/1899-08-20_p12_sn85054468_211102202_1899082001_0140.json",
+   "article_id": "7_1899-08-20_p12_sn85054468_211102202_1899082001_0140.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn85054468:211102202:1899082001:0139",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn85054468/211102202/1899082001/0139.jp2",
+   "recorded_size": [
+    8924,
+    6828
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8915,
+    6804
+   ],
+   "alto_status": 200,
+   "article_words": 40,
+   "words_on_page": 0.4,
+   "pairs_on_page": 0.0814,
+   "words_in_boxes": 0.075
+  },
+  {
+   "member": "faro_1870/1870-12-10_p2_sn82014899_00211105483_1870121001_0972.json",
+   "article_id": "3_1870-12-10_p2_sn82014899_00211105483_1870121001_0972.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014899:00211105483:1870121001:0971",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014899/00211105483/1870121001/0971.jp2",
+   "recorded_size": [
+    6883,
+    4548
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6922,
+    4620
+   ],
+   "alto_status": 200,
+   "article_words": 89,
+   "words_on_page": 0.2584,
+   "pairs_on_page": 0.0218,
+   "words_in_boxes": 0.0337
+  },
+  {
+   "member": "faro_1913/1913-02-23_p5_sn83045433_0029455824A_1913022301_0144.json",
+   "article_id": "13_1913-02-23_p5_sn83045433_0029455824A_1913022301_0144.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:0029455824A:1913022301:0143",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/0029455824A/1913022301/0143.jp2",
+   "recorded_size": [
+    6437,
+    4772
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6466,
+    4760
+   ],
+   "alto_status": 200,
+   "article_words": 238,
+   "words_on_page": 0.0756,
+   "pairs_on_page": 0.0091,
+   "words_in_boxes": 0.0126
+  },
+  {
+   "member": "faro_1916/1916-02-08_p5_sn84026749_00280764942_1916020801_1038.json",
+   "article_id": "7_1916-02-08_p5_sn84026749_00280764942_1916020801_1038.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_ghana_ver01:data:sn84026749:00280764942:1916020801:1037",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ghana_ver01/data/sn84026749/00280764942/1916020801/1037.jp2",
+   "recorded_size": [
+    7146,
+    5484
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7191,
+    5472
+   ],
+   "alto_status": 200,
+   "article_words": 147,
+   "words_on_page": 0.1224,
+   "pairs_on_page": 0.0105,
+   "words_in_boxes": 0.0
+  },
+  {
+   "member": "faro_1913/1913-01-19_p18_sn83045433_00294558238_1913011901_0319.json",
+   "article_id": "14_1913-01-19_p18_sn83045433_00294558238_1913011901_0319.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:00294558238:1913011901:0318",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/00294558238/1913011901/0318.jp2",
+   "recorded_size": [
+    6487,
+    4820
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6485,
+    4808
+   ],
+   "alto_status": 200,
+   "article_words": 18,
+   "words_on_page": 0.5,
+   "pairs_on_page": 0.1471,
+   "words_in_boxes": 0.0
+  },
+  {
+   "member": "faro_1900/1900-12-25_p5_sn85054468_100493056_1900122501_0085.json",
+   "article_id": "3_1900-12-25_p5_sn85054468_100493056_1900122501_0085.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_abe_ver01:data:sn85054468:100493056:1900122501:0084",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_abe_ver01/data/sn85054468/100493056/1900122501/0084.jp2",
+   "recorded_size": [
+    6780,
+    5172
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6753,
+    5152
+   ],
+   "alto_status": 200,
+   "article_words": 112,
+   "words_on_page": 0.2232,
+   "pairs_on_page": 0.0658,
+   "words_in_boxes": 0.0268
+  },
+  {
+   "member": "faro_1901/1901-07-04_p1_sn82016187_100493767_1901070401_0298.json",
+   "article_id": "1_1901-07-04_p1_sn82016187_100493767_1901070401_0298.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_abe_ver01:data:sn82016187:100493767:1901070401:0297",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_abe_ver01/data/sn82016187/100493767/1901070401/0297.jp2",
+   "recorded_size": [
+    7119,
+    5420
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7103,
+    5396
+   ],
+   "alto_status": 200,
+   "article_words": 91,
+   "words_on_page": 0.2198,
+   "pairs_on_page": 0.0471,
+   "words_in_boxes": 0.033
+  },
+  {
+   "member": "faro_1897/1897-08-22_p15_sn85054468_0021110210A_1897082201_0507.json",
+   "article_id": "6_1897-08-22_p15_sn85054468_0021110210A_1897082201_0507.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_dutch_ver02:data:sn85054468:0021110210A:1897082201:0506",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_dutch_ver02/data/sn85054468/0021110210A/1897082201/0506.jp2",
+   "recorded_size": [
+    8804,
+    6752
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8798,
+    6736
+   ],
+   "alto_status": 200,
+   "article_words": 164,
+   "words_on_page": 0.3659,
+   "pairs_on_page": 0.09,
+   "words_in_boxes": 0.061
+  },
+  {
+   "member": "faro_1904/1904-07-31_p19_sn83030272_100479758_1904073101_0436.json",
+   "article_id": "45_1904-07-31_p19_sn83030272_100479758_1904073101_0436.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:nn:batch_nn_epicurus_ver01:data:sn83030272:100479758:1904073101:0440",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_epicurus_ver01/data/sn83030272/100479758/1904073101/0440.jp2",
+   "recorded_size": [
+    6774,
+    5334
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6820,
+    5371
+   ],
+   "alto_status": 200,
+   "article_words": 91,
+   "words_on_page": 0.3187,
+   "pairs_on_page": 0.0617,
+   "words_in_boxes": 0.044
+  },
+  {
+   "member": "faro_1910/1910-01-02_p43_sn83030272_100481455_1910010201_0059.json",
+   "article_id": "18_1910-01-02_p43_sn83030272_100481455_1910010201_0059.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:nn:batch_nn_james_ver01:data:sn83030272:100481455:1910010201:0063",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_james_ver01/data/sn83030272/100481455/1910010201/0063.jp2",
+   "recorded_size": [
+    6685,
+    5009
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6669,
+    5025
+   ],
+   "alto_status": 200,
+   "article_words": 255,
+   "words_on_page": 0.2745,
+   "pairs_on_page": 0.0403,
+   "words_in_boxes": 0.0902
+  },
+  {
+   "member": "faro_1896/1896-01-19_p3_sn84024442_211103012_1896011901_0519.json",
+   "article_id": "7_1896-01-19_p3_sn84024442_211103012_1896011901_0519.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn84024442:211103012:1896011901:0518",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn84024442/211103012/1896011901/0518.jp2",
+   "recorded_size": [
+    6610,
+    4912
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6624,
+    4912
+   ],
+   "alto_status": 200,
+   "article_words": 60,
+   "words_on_page": 0.2167,
+   "pairs_on_page": 0.0177,
+   "words_in_boxes": 0.0167
+  },
+  {
+   "member": "faro_1913/1913-03-04_p9_sn83045433_0029455824A_1913030401_0326.json",
+   "article_id": "29_1913-03-04_p9_sn83045433_0029455824A_1913030401_0326.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:0029455824A:1913030401:0325",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/0029455824A/1913030401/0325.jp2",
+   "recorded_size": [
+    6537,
+    4820
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6475,
+    4760
+   ],
+   "alto_status": 200,
+   "article_words": 273,
+   "words_on_page": 0.315,
+   "pairs_on_page": 0.0869,
+   "words_in_boxes": 0.1099
+  },
+  {
+   "member": "faro_1877/1877-11-23_p3_sn82014897_00211105501_1877112301_0675.json",
+   "article_id": "8_1877-11-23_p3_sn82014897_00211105501_1877112301_0675.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014897:00211105501:1877112301:0674",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014897/00211105501/1877112301/0674.jp2",
+   "recorded_size": [
+    9304,
+    6648
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9156,
+    6604
+   ],
+   "alto_status": 200,
+   "article_words": 38,
+   "words_on_page": 0.2632,
+   "pairs_on_page": 0.0333,
+   "words_in_boxes": 0.0
+  },
+  {
+   "member": "faro_1913/1913-08-24_p7_sn84026749_00294557799_1913082401_0517.json",
+   "article_id": "6_1913-08-24_p7_sn84026749_00294557799_1913082401_0517.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_braniff_ver01:data:sn84026749:00294557799:1913082401:0516",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_braniff_ver01/data/sn84026749/00294557799/1913082401/0516.jp2",
+   "recorded_size": [
+    7090,
+    5992
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7071,
+    6016
+   ],
+   "alto_status": 200,
+   "article_words": 79,
+   "words_on_page": 0.1899,
+   "pairs_on_page": 0.0303,
+   "words_in_boxes": 0.0
+  },
+  {
+   "member": "faro_1872/1872-11-16_p2_sn82014899_00211105495_1872111601_0402.json",
+   "article_id": "1_1872-11-16_p2_sn82014899_00211105495_1872111601_0402.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:az:batch_az_apachetrout_ver01:data:sn82014899:00211105495:1872111601:0401",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_apachetrout_ver01/data/sn82014899/00211105495/1872111601/0401.jp2",
+   "recorded_size": [
+    9476,
+    6248
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9579,
+    6312
+   ],
+   "alto_status": 200,
+   "article_words": 87,
+   "words_on_page": 0.3103,
+   "pairs_on_page": 0.0746,
+   "words_in_boxes": 0.0575
+  },
+  {
+   "member": "faro_1891/1891-05-24_p14_sn82016373_00211103358_1891052401_0431.json",
+   "article_id": "6_1891-05-24_p14_sn82016373_00211103358_1891052401_0431.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_ike_ver01:data:sn82016373:00211103358:1891052401:0430",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ike_ver01/data/sn82016373/00211103358/1891052401/0430.jp2",
+   "recorded_size": [
+    7392,
+    5240
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7294,
+    5248
+   ],
+   "alto_status": 200,
+   "article_words": 93,
+   "words_on_page": 0.1613,
+   "pairs_on_page": 0.0279,
+   "words_in_boxes": 0.0108
+  },
+  {
+   "member": "faro_1895/1895-12-27_p2_sn84024442_211103012_1895122701_0291.json",
+   "article_id": "3_1895-12-27_p2_sn84024442_211103012_1895122701_0291.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_earl_ver02:data:sn84024442:211103012:1895122701:0290",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_earl_ver02/data/sn84024442/211103012/1895122701/0290.jp2",
+   "recorded_size": [
+    6613,
+    4940
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6548,
+    4916
+   ],
+   "alto_status": 200,
+   "article_words": 98,
+   "words_on_page": 0.2959,
+   "pairs_on_page": 0.0594,
+   "words_in_boxes": 0.0408
+  },
+  {
+   "member": "faro_1883/1883-08-08_p4_sn86053573_00211101970_1883080801_0264.json",
+   "article_id": "11_1883-08-08_p4_sn86053573_00211101970_1883080801_0264.json",
+   "truth": "the batch path's frame",
+   "service": "service:ndnp:dlc:batch_dlc_chester_ver02:data:sn86053573:00211101970:1883080801:0263",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_chester_ver02/data/sn86053573/00211101970/1883080801/0263.jp2",
+   "recorded_size": [
+    6868,
+    4536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7056,
+    4624
+   ],
+   "alto_status": 200,
+   "article_words": 368,
+   "words_on_page": 0.2228,
+   "pairs_on_page": 0.0291,
+   "words_in_boxes": 0.0353
+  }
+ ],
+ "measure": [
+  {
+   "member": "faro_1894/1894-05-12_p4_sn85042461_00280769551_1894051201_0110.json",
+   "article_id": "5_1894-05-12_pna_sn85042461_00280769551_1894051201_0110.json",
+   "truth": "same page",
+   "service": "service:ndnp:curiv:batch_curiv_ogilby_ver01:data:sn85042461:00280769551:1894051201:0110",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/curiv_ogilby_ver01/data/sn85042461/00280769551/1894051201/0110.jp2",
+   "recorded_size": [
+    6933,
+    5197
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6933,
+    5197
+   ],
+   "alto_status": 200,
+   "article_words": 213,
+   "words_on_page": 0.8967,
+   "pairs_on_page": 0.784,
+   "words_in_boxes": 0.892,
+   "verdict": null
+  },
+  {
+   "member": "faro_1894/1894-05-12_p4_sn85042461_00280769551_1894051201_0110.json",
+   "article_id": "5_1894-05-12_pna_sn85042461_00280769551_1894051201_0110.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:curiv:batch_curiv_ogilby_ver01:data:sn85042461:00280769551:1894051201:0111",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/curiv_ogilby_ver01/data/sn85042461/00280769551/1894051201/0110.jp2",
+   "recorded_size": [
+    6933,
+    5197
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6933,
+    5197
+   ],
+   "alto_status": 200,
+   "article_words": 213,
+   "words_on_page": 0.2441,
+   "pairs_on_page": 0.0493,
+   "words_in_boxes": 0.0329,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1872/1872-01-27_p4_sn84024738_00271742022_1872012701_0102.json",
+   "article_id": "3_1872-01-27_pna_sn84024738_00271742022_1872012701_0102.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_kors_ver02:data:sn84024738:00271742022:1872012701:0102",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_kors_ver02/data/sn84024738/00271742022/1872012701/0102.jp2",
+   "recorded_size": [
+    11020,
+    7341
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    11020,
+    7341
+   ],
+   "alto_status": 200,
+   "article_words": 198,
+   "words_on_page": 0.8081,
+   "pairs_on_page": 0.6447,
+   "words_in_boxes": 0.7828,
+   "verdict": null
+  },
+  {
+   "member": "faro_1872/1872-01-27_p4_sn84024738_00271742022_1872012701_0102.json",
+   "article_id": "3_1872-01-27_pna_sn84024738_00271742022_1872012701_0102.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_kors_ver02:data:sn84024738:00271742022:1872012701:0103",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_kors_ver02/data/sn84024738/00271742022/1872012701/0102.jp2",
+   "recorded_size": [
+    11020,
+    7341
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1905/1905-02-02_p7_sn99068116_00340581246_1905020201_0770.json",
+   "article_id": "5_1905-02-02_pna_sn99068116_00340581246_1905020201_0770.json",
+   "truth": "same page",
+   "service": "service:ndnp:sdhi:batch_sdhi_leek_ver02:data:sn99068116:00340581246:1905020201:0770",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/sdhi_leek_ver02/data/sn99068116/00340581246/1905020201/0770.jp2",
+   "recorded_size": [
+    8519,
+    6099
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8519,
+    6099
+   ],
+   "alto_status": 200,
+   "article_words": 77,
+   "words_on_page": 0.8831,
+   "pairs_on_page": 0.7288,
+   "words_in_boxes": 0.8831,
+   "verdict": null
+  },
+  {
+   "member": "faro_1905/1905-02-02_p7_sn99068116_00340581246_1905020201_0770.json",
+   "article_id": "5_1905-02-02_pna_sn99068116_00340581246_1905020201_0770.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:sdhi:batch_sdhi_leek_ver02:data:sn99068116:00340581246:1905020201:0771",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/sdhi_leek_ver02/data/sn99068116/00340581246/1905020201/0770.jp2",
+   "recorded_size": [
+    8519,
+    6099
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8524,
+    6113
+   ],
+   "alto_status": 200,
+   "article_words": 77,
+   "words_on_page": 0.2468,
+   "pairs_on_page": 0.096,
+   "words_in_boxes": 0.039,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1884/1884-05-08_p6_sn84028296_00296029130_1884050801_0273.json",
+   "article_id": "25_1884-05-08_pna_sn84028296_00296029130_1884050801_0273.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_ingstad_ver01:data:sn84028296:00296029130:1884050801:0273",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_ingstad_ver01/data/sn84028296/00296029130/1884050801/0273.jp2",
+   "recorded_size": [
+    7093,
+    4680
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7093,
+    4680
+   ],
+   "alto_status": 200,
+   "article_words": 92,
+   "words_on_page": 0.8478,
+   "pairs_on_page": 0.7179,
+   "words_in_boxes": 0.7935,
+   "verdict": null
+  },
+  {
+   "member": "faro_1884/1884-05-08_p6_sn84028296_00296029130_1884050801_0273.json",
+   "article_id": "25_1884-05-08_pna_sn84028296_00296029130_1884050801_0273.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ohi:batch_ohi_ingstad_ver01:data:sn84028296:00296029130:1884050801:0272",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_ingstad_ver01/data/sn84028296/00296029130/1884050801/0273.jp2",
+   "recorded_size": [
+    7093,
+    4680
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7040,
+    4688
+   ],
+   "alto_status": 200,
+   "article_words": 92,
+   "words_on_page": 0.25,
+   "pairs_on_page": 0.0299,
+   "words_in_boxes": 0.0217,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1878/1878-01-11_p2_sn86086852_00271769611_1878011101_0034.json",
+   "article_id": "5_1878-01-11_pna_sn86086852_00271769611_1878011101_0034.json",
+   "truth": "same page",
+   "service": "service:ndnp:whi:batch_whi_katherine_ver01:data:sn86086852:00271769611:1878011101:0034",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/whi_katherine_ver01/data/sn86086852/00271769611/1878011101/0034.jp2",
+   "recorded_size": [
+    7035,
+    4572
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7035,
+    4572
+   ],
+   "alto_status": 200,
+   "article_words": 106,
+   "words_on_page": 0.8868,
+   "pairs_on_page": 0.7306,
+   "words_in_boxes": 0.8774,
+   "verdict": null
+  },
+  {
+   "member": "faro_1878/1878-01-11_p2_sn86086852_00271769611_1878011101_0034.json",
+   "article_id": "5_1878-01-11_pna_sn86086852_00271769611_1878011101_0034.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:whi:batch_whi_katherine_ver01:data:sn86086852:00271769611:1878011101:0035",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/whi_katherine_ver01/data/sn86086852/00271769611/1878011101/0034.jp2",
+   "recorded_size": [
+    7035,
+    4572
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6972,
+    4502
+   ],
+   "alto_status": 200,
+   "article_words": 106,
+   "words_on_page": 0.2075,
+   "pairs_on_page": 0.0204,
+   "words_in_boxes": 0.0283,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1892/1892-05-29_p5_sn83045604_00202199124_1892052901_0197.json",
+   "article_id": "1_1892-05-29_pna_sn83045604_00202199124_1892052901_0197.json",
+   "truth": "same page",
+   "service": "service:ndnp:wa:batch_wa_forks_ver01:data:sn83045604:00202199124:1892052901:0197",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wa_forks_ver01/data/sn83045604/00202199124/1892052901/0197.jp2",
+   "recorded_size": [
+    9449,
+    6772
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9449,
+    6772
+   ],
+   "alto_status": 200,
+   "article_words": 105,
+   "words_on_page": 0.781,
+   "pairs_on_page": 0.6494,
+   "words_in_boxes": 0.7333,
+   "verdict": null
+  },
+  {
+   "member": "faro_1892/1892-05-29_p5_sn83045604_00202199124_1892052901_0197.json",
+   "article_id": "1_1892-05-29_pna_sn83045604_00202199124_1892052901_0197.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:wa:batch_wa_forks_ver01:data:sn83045604:00202199124:1892052901:0196",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wa_forks_ver01/data/sn83045604/00202199124/1892052901/0197.jp2",
+   "recorded_size": [
+    9449,
+    6772
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9449,
+    6772
+   ],
+   "alto_status": 200,
+   "article_words": 105,
+   "words_on_page": 0.3619,
+   "pairs_on_page": 0.1235,
+   "words_in_boxes": 0.0286,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1914/1914-12-11_p11_sn84020558_0020219610A_1914121101_0412.json",
+   "article_id": "118_1914-12-11_p11_sn84020558_0020219610A_1914121101_0412.json",
+   "truth": "same page",
+   "service": "service:ndnp:az:batch_az_hornedowl_ver01:data:sn84020558:0020219610A:1914121101:0412",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_hornedowl_ver01/data/sn84020558/0020219610A/1914121101/0412.jp2",
+   "recorded_size": [
+    6429,
+    4896
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6429,
+    4896
+   ],
+   "alto_status": 200,
+   "article_words": 14,
+   "words_on_page": 0.9286,
+   "pairs_on_page": 0.8636,
+   "words_in_boxes": 0.9286,
+   "verdict": null
+  },
+  {
+   "member": "faro_1914/1914-12-11_p11_sn84020558_0020219610A_1914121101_0412.json",
+   "article_id": "118_1914-12-11_p11_sn84020558_0020219610A_1914121101_0412.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:az:batch_az_hornedowl_ver01:data:sn84020558:0020219610A:1914121101:0411",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_hornedowl_ver01/data/sn84020558/0020219610A/1914121101/0412.jp2",
+   "recorded_size": [
+    6429,
+    4896
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6456,
+    4832
+   ],
+   "alto_status": 200,
+   "article_words": 14,
+   "words_on_page": 0.1429,
+   "pairs_on_page": 0.0,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1930/1930-12-08_p12_sn84026749_00205696404_1930120801_0400.json",
+   "article_id": "27_1930-12-08_p12_sn84026749_00205696404_1930120801_0400.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_brookland_ver01:data:sn84026749:00205696404:1930120801:0400",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_brookland_ver01/data/sn84026749/00205696404/1930120801/0400.jp2",
+   "recorded_size": [
+    7804,
+    6200
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7804,
+    6200
+   ],
+   "alto_status": 200,
+   "article_words": 214,
+   "words_on_page": 0.9533,
+   "pairs_on_page": 0.9229,
+   "words_in_boxes": 0.9486,
+   "verdict": null
+  },
+  {
+   "member": "faro_1930/1930-12-08_p12_sn84026749_00205696404_1930120801_0400.json",
+   "article_id": "27_1930-12-08_p12_sn84026749_00205696404_1930120801_0400.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_brookland_ver01:data:sn84026749:00205696404:1930120801:0401",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_brookland_ver01/data/sn84026749/00205696404/1930120801/0400.jp2",
+   "recorded_size": [
+    7804,
+    6200
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7795,
+    6231
+   ],
+   "alto_status": 200,
+   "article_words": 214,
+   "words_on_page": 0.0935,
+   "pairs_on_page": 0.0147,
+   "words_in_boxes": 0.0374,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1864/1864-11-29_p5_sn83030213_00206530789_1864112901_0615.json",
+   "article_id": "12_1864-11-29_pna_sn83030213_00206530789_1864112901_0615.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_cobol_ver01:data:sn83030213:00206530789:1864112901:0615",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_cobol_ver01/data/sn83030213/00206530789/1864112901/0615.jp2",
+   "recorded_size": [
+    7983,
+    5611
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1864/1864-11-29_p5_sn83030213_00206530789_1864112901_0615.json",
+   "article_id": "12_1864-11-29_pna_sn83030213_00206530789_1864112901_0615.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_cobol_ver01:data:sn83030213:00206530789:1864112901:0614",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_cobol_ver01/data/sn83030213/00206530789/1864112901/0615.jp2",
+   "recorded_size": [
+    7983,
+    5611
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1877/1877-01-12_p7_sn83030214_00206531289_1877011201_0097.json",
+   "article_id": "9_1877-01-12_pna_sn83030214_00206531289_1877011201_0097.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_inform_ver01:data:sn83030214:00206531289:1877011201:0097",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_inform_ver01/data/sn83030214/00206531289/1877011201/0097.jp2",
+   "recorded_size": [
+    8749,
+    6158
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1877/1877-01-12_p7_sn83030214_00206531289_1877011201_0097.json",
+   "article_id": "9_1877-01-12_pna_sn83030214_00206531289_1877011201_0097.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_inform_ver01:data:sn83030214:00206531289:1877011201:0098",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_inform_ver01/data/sn83030214/00206531289/1877011201/0097.jp2",
+   "recorded_size": [
+    8749,
+    6158
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1922/1922-10-17_p13_sn83030214_00206532798_1922101701_0583.json",
+   "article_id": "4_1922-10-17_p13_sn83030214_00206532798_1922101701_0583.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_jones_ver01:data:sn83030214:00206532798:1922101701:0583",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_jones_ver01/data/sn83030214/00206532798/1922101701/0583.jp2",
+   "recorded_size": [
+    8327,
+    6564
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8327,
+    6564
+   ],
+   "alto_status": 200,
+   "article_words": 93,
+   "words_on_page": 0.6237,
+   "pairs_on_page": 0.3155,
+   "words_in_boxes": 0.6129,
+   "verdict": null
+  },
+  {
+   "member": "faro_1922/1922-10-17_p13_sn83030214_00206532798_1922101701_0583.json",
+   "article_id": "4_1922-10-17_p13_sn83030214_00206532798_1922101701_0583.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_jones_ver01:data:sn83030214:00206532798:1922101701:0582",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_jones_ver01/data/sn83030214/00206532798/1922101701/0583.jp2",
+   "recorded_size": [
+    8327,
+    6564
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8374,
+    6573
+   ],
+   "alto_status": 200,
+   "article_words": 93,
+   "words_on_page": 0.1828,
+   "pairs_on_page": 0.0,
+   "words_in_boxes": 0.0108,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1922/1922-12-01_p13_sn83045389_00296029415_1922120101_0055.json",
+   "article_id": "2_1922-12-01_pna_sn83045389_00296029415_1922120101_0055.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_xanadu_ver01:data:sn83045389:00296029415:1922120101:0055",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_xanadu_ver01/data/sn83045389/00296029415/1922120101/0055.jp2",
+   "recorded_size": [
+    7965,
+    6654
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7965,
+    6654
+   ],
+   "alto_status": 200,
+   "article_words": 90,
+   "words_on_page": 0.4333,
+   "pairs_on_page": 0.25,
+   "words_in_boxes": 0.4222,
+   "verdict": null
+  },
+  {
+   "member": "faro_1922/1922-12-01_p13_sn83045389_00296029415_1922120101_0055.json",
+   "article_id": "2_1922-12-01_pna_sn83045389_00296029415_1922120101_0055.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_xanadu_ver01:data:sn83045389:00296029415:1922120101:0054",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_xanadu_ver01/data/sn83045389/00296029415/1922120101/0055.jp2",
+   "recorded_size": [
+    7965,
+    6654
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8017,
+    6717
+   ],
+   "alto_status": 200,
+   "article_words": 90,
+   "words_on_page": 0.1222,
+   "pairs_on_page": 0.0,
+   "words_in_boxes": 0.0444,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1891/1891-03-07_p4_sn85042354_0027174027A_1891030701_1215.json",
+   "article_id": "18_1891-03-07_pna_sn85042354_0027174027A_1891030701_1215.json",
+   "truth": "same page",
+   "service": "service:ndnp:deu:batch_deu_arden_ver01:data:sn85042354:0027174027A:1891030701:1215",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_arden_ver01/data/sn85042354/0027174027A/1891030701/1215.jp2",
+   "recorded_size": [
+    7168,
+    5328
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7168,
+    5328
+   ],
+   "alto_status": 200,
+   "article_words": 30,
+   "words_on_page": 0.9333,
+   "pairs_on_page": 0.8182,
+   "words_in_boxes": 0.9,
+   "verdict": null
+  },
+  {
+   "member": "faro_1891/1891-03-07_p4_sn85042354_0027174027A_1891030701_1215.json",
+   "article_id": "18_1891-03-07_pna_sn85042354_0027174027A_1891030701_1215.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:deu:batch_deu_arden_ver01:data:sn85042354:0027174027A:1891030701:1214",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_arden_ver01/data/sn85042354/0027174027A/1891030701/1215.jp2",
+   "recorded_size": [
+    7168,
+    5328
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7088,
+    5104
+   ],
+   "alto_status": 200,
+   "article_words": 30,
+   "words_on_page": 0.3667,
+   "pairs_on_page": 0.0364,
+   "words_in_boxes": 0.0333,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1851/1851-08-09_p2_sn85026051_00296027029_1851080901_0215.json",
+   "article_id": "54_1851-08-09_pna_sn85026051_00296027029_1851080901_0215.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_ingstad_ver01:data:sn85026051:00296027029:1851080901:0215",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_ingstad_ver01/data/sn85026051/00296027029/1851080901/0215.jp2",
+   "recorded_size": [
+    6966,
+    5536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6966,
+    5536
+   ],
+   "alto_status": 200,
+   "article_words": 297,
+   "words_on_page": 0.9091,
+   "pairs_on_page": 0.7916,
+   "words_in_boxes": 0.8956,
+   "verdict": null
+  },
+  {
+   "member": "faro_1851/1851-08-09_p2_sn85026051_00296027029_1851080901_0215.json",
+   "article_id": "54_1851-08-09_pna_sn85026051_00296027029_1851080901_0215.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ohi:batch_ohi_ingstad_ver01:data:sn85026051:00296027029:1851080901:0216",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_ingstad_ver01/data/sn85026051/00296027029/1851080901/0215.jp2",
+   "recorded_size": [
+    6966,
+    5536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6877,
+    5552
+   ],
+   "alto_status": 200,
+   "article_words": 297,
+   "words_on_page": 0.3401,
+   "pairs_on_page": 0.0699,
+   "words_in_boxes": 0.0909,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1884/1884-05-01_p3_sn2006060001_00202198077_1884050101_0426.json",
+   "article_id": "29_1884-05-01_pna_sn2006060001_00202198077_1884050101_0426.json",
+   "truth": "same page",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_alpena_ver01:data:sn2006060001:00202198077:1884050101:0426",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_alpena_ver01/data/sn2006060001/00202198077/1884050101/0426.jp2",
+   "recorded_size": [
+    9469,
+    6960
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9469,
+    6960
+   ],
+   "alto_status": 200,
+   "article_words": 13,
+   "words_on_page": 0.7692,
+   "pairs_on_page": 0.5909,
+   "words_in_boxes": 0.7692,
+   "verdict": null
+  },
+  {
+   "member": "faro_1884/1884-05-01_p3_sn2006060001_00202198077_1884050101_0426.json",
+   "article_id": "29_1884-05-01_pna_sn2006060001_00202198077_1884050101_0426.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_alpena_ver01:data:sn2006060001:00202198077:1884050101:0425",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_alpena_ver01/data/sn2006060001/00202198077/1884050101/0426.jp2",
+   "recorded_size": [
+    9469,
+    6960
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9453,
+    6944
+   ],
+   "alto_status": 200,
+   "article_words": 13,
+   "words_on_page": 0.1538,
+   "pairs_on_page": 0.1364,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1919/1919-08-05_p1_sn85042303_00200296886_1919080501_0765.json",
+   "article_id": "12_1919-08-05_pna_sn85042303_00200296886_1919080501_0765.json",
+   "truth": "same page",
+   "service": "service:ndnp:okhi:batch_okhi_geronimo_ver01:data:sn85042303:00200296886:1919080501:0765",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/okhi_geronimo_ver01/data/sn85042303/00200296886/1919080501/0765.jp2",
+   "recorded_size": [
+    6845,
+    4760
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6845,
+    4760
+   ],
+   "alto_status": 200,
+   "article_words": 98,
+   "words_on_page": 0.9286,
+   "pairs_on_page": 0.8685,
+   "words_in_boxes": 0.9184,
+   "verdict": null
+  },
+  {
+   "member": "faro_1919/1919-08-05_p1_sn85042303_00200296886_1919080501_0765.json",
+   "article_id": "12_1919-08-05_pna_sn85042303_00200296886_1919080501_0765.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:okhi:batch_okhi_geronimo_ver01:data:sn85042303:00200296886:1919080501:0764",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/okhi_geronimo_ver01/data/sn85042303/00200296886/1919080501/0765.jp2",
+   "recorded_size": [
+    6845,
+    4760
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1915/1915-12-04_p8_sn85059715_00295869951_1915120401_0547.json",
+   "article_id": "18_1915-12-04_pna_sn85059715_00295869951_1915120401_0547.json",
+   "truth": "same page",
+   "service": "service:ndnp:wvu:batch_wvu_getz_ver02:data:sn85059715:00295869951:1915120401:0547",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wvu_getz_ver02/data/sn85059715/00295869951/1915120401/0547.jp2",
+   "recorded_size": [
+    5904,
+    4376
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    5904,
+    4376
+   ],
+   "alto_status": 200,
+   "article_words": 238,
+   "words_on_page": 0.9244,
+   "pairs_on_page": 0.8958,
+   "words_in_boxes": 0.9202,
+   "verdict": null
+  },
+  {
+   "member": "faro_1915/1915-12-04_p8_sn85059715_00295869951_1915120401_0547.json",
+   "article_id": "18_1915-12-04_pna_sn85059715_00295869951_1915120401_0547.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:wvu:batch_wvu_getz_ver02:data:sn85059715:00295869951:1915120401:0548",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wvu_getz_ver02/data/sn85059715/00295869951/1915120401/0547.jp2",
+   "recorded_size": [
+    5904,
+    4376
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    5954,
+    4333
+   ],
+   "alto_status": 200,
+   "article_words": 238,
+   "words_on_page": 0.0798,
+   "pairs_on_page": 0.0229,
+   "words_in_boxes": 0.0168,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1904/1904-07-27_p8_sn85042354_00383343495_1904072701_1082.json",
+   "article_id": "10_1904-07-27_p8_sn85042354_00383343495_1904072701_1082.json",
+   "truth": "same page",
+   "service": "service:ndnp:deu:batch_deu_christiana_ver01:data:sn85042354:00383343495:1904072701:1082",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_christiana_ver01/data/sn85042354/00383343495/1904072701/1082.jp2",
+   "recorded_size": [
+    7184,
+    5216
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7184,
+    5216
+   ],
+   "alto_status": 200,
+   "article_words": 168,
+   "words_on_page": 0.9107,
+   "pairs_on_page": 0.8626,
+   "words_in_boxes": 0.9107,
+   "verdict": null
+  },
+  {
+   "member": "faro_1904/1904-07-27_p8_sn85042354_00383343495_1904072701_1082.json",
+   "article_id": "10_1904-07-27_p8_sn85042354_00383343495_1904072701_1082.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:deu:batch_deu_christiana_ver01:data:sn85042354:00383343495:1904072701:1081",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_christiana_ver01/data/sn85042354/00383343495/1904072701/1082.jp2",
+   "recorded_size": [
+    7184,
+    5216
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7168,
+    5120
+   ],
+   "alto_status": 200,
+   "article_words": 168,
+   "words_on_page": 0.1845,
+   "pairs_on_page": 0.019,
+   "words_in_boxes": 0.0595,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1906/1906-12-28_p2_sn88085012_00200290525_1906122801_0462.json",
+   "article_id": "14_1906-12-28_pna_sn88085012_00200290525_1906122801_0462.json",
+   "truth": "same page",
+   "service": "service:ndnp:wa:batch_wa_muddy_ver02:data:sn88085012:00200290525:1906122801:0462",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wa_muddy_ver02/data/sn88085012/00200290525/1906122801/0462.jp2",
+   "recorded_size": [
+    6550,
+    4733
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6550,
+    4733
+   ],
+   "alto_status": 200,
+   "article_words": 143,
+   "words_on_page": 0.8881,
+   "pairs_on_page": 0.8377,
+   "words_in_boxes": 0.8881,
+   "verdict": null
+  },
+  {
+   "member": "faro_1906/1906-12-28_p2_sn88085012_00200290525_1906122801_0462.json",
+   "article_id": "14_1906-12-28_pna_sn88085012_00200290525_1906122801_0462.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:wa:batch_wa_muddy_ver02:data:sn88085012:00200290525:1906122801:0463",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wa_muddy_ver02/data/sn88085012/00200290525/1906122801/0462.jp2",
+   "recorded_size": [
+    6550,
+    4733
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6599,
+    4676
+   ],
+   "alto_status": 200,
+   "article_words": 143,
+   "words_on_page": 0.014,
+   "pairs_on_page": 0.0022,
+   "words_in_boxes": 0.007,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1911/1911-11-30_p3_sn85033139_00271769957_1911113001_0243.json",
+   "article_id": "8_1911-11-30_pna_sn85033139_00271769957_1911113001_0243.json",
+   "truth": "same page",
+   "service": "service:ndnp:whi:batch_whi_harriet_ver01:data:sn85033139:00271769957:1911113001:0243",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/whi_harriet_ver01/data/sn85033139/00271769957/1911113001/0243.jp2",
+   "recorded_size": [
+    7832,
+    5568
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7832,
+    5568
+   ],
+   "alto_status": 200,
+   "article_words": 75,
+   "words_on_page": 0.9733,
+   "pairs_on_page": 0.9276,
+   "words_in_boxes": 0.96,
+   "verdict": null
+  },
+  {
+   "member": "faro_1911/1911-11-30_p3_sn85033139_00271769957_1911113001_0243.json",
+   "article_id": "8_1911-11-30_pna_sn85033139_00271769957_1911113001_0243.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:whi:batch_whi_harriet_ver01:data:sn85033139:00271769957:1911113001:0242",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/whi_harriet_ver01/data/sn85033139/00271769957/1911113001/0243.jp2",
+   "recorded_size": [
+    7832,
+    5568
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7790,
+    5531
+   ],
+   "alto_status": 200,
+   "article_words": 75,
+   "words_on_page": 0.3867,
+   "pairs_on_page": 0.0658,
+   "words_in_boxes": 0.0133,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1908/1908-09-21_p3_sn85042354_00383343288_1908092101_0843.json",
+   "article_id": "33_1908-09-21_p3_sn85042354_00383343288_1908092101_0843.json",
+   "truth": "same page",
+   "service": "service:ndnp:deu:batch_deu_dover_ver01:data:sn85042354:00383343288:1908092101:0843",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_dover_ver01/data/sn85042354/00383343288/1908092101/0843.jp2",
+   "recorded_size": [
+    6976,
+    5072
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6976,
+    5072
+   ],
+   "alto_status": 200,
+   "article_words": 328,
+   "words_on_page": 0.8415,
+   "pairs_on_page": 0.7263,
+   "words_in_boxes": 0.8171,
+   "verdict": null
+  },
+  {
+   "member": "faro_1908/1908-09-21_p3_sn85042354_00383343288_1908092101_0843.json",
+   "article_id": "33_1908-09-21_p3_sn85042354_00383343288_1908092101_0843.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:deu:batch_deu_dover_ver01:data:sn85042354:00383343288:1908092101:0844",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/deu_dover_ver01/data/sn85042354/00383343288/1908092101/0843.jp2",
+   "recorded_size": [
+    6976,
+    5072
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6992,
+    5088
+   ],
+   "alto_status": 200,
+   "article_words": 328,
+   "words_on_page": 0.1433,
+   "pairs_on_page": 0.0298,
+   "words_in_boxes": 0.0244,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1912/1912-08-23_p9_sn84022472_00295866834_1912082301_0242.json",
+   "article_id": "10_1912-08-23_p9_sn84022472_00295866834_1912082301_0242.json",
+   "truth": "same page",
+   "service": "service:ndnp:ct:batch_ct_eastford_ver01:data:sn84022472:00295866834:1912082301:0242",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ct_eastford_ver01/data/sn84022472/00295866834/1912082301/0242.jp2",
+   "recorded_size": [
+    9226,
+    6944
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9226,
+    6944
+   ],
+   "alto_status": 200,
+   "article_words": 196,
+   "words_on_page": 0.9694,
+   "pairs_on_page": 0.9472,
+   "words_in_boxes": 0.9694,
+   "verdict": null
+  },
+  {
+   "member": "faro_1912/1912-08-23_p9_sn84022472_00295866834_1912082301_0242.json",
+   "article_id": "10_1912-08-23_p9_sn84022472_00295866834_1912082301_0242.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ct:batch_ct_eastford_ver01:data:sn84022472:00295866834:1912082301:0241",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ct_eastford_ver01/data/sn84022472/00295866834/1912082301/0242.jp2",
+   "recorded_size": [
+    9226,
+    6944
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9250,
+    6952
+   ],
+   "alto_status": 200,
+   "article_words": 196,
+   "words_on_page": 0.1939,
+   "pairs_on_page": 0.0459,
+   "words_in_boxes": 0.0459,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1866/1866-01-20_p3_sn85025202_00279557396_1866012001_0424.json",
+   "article_id": "2_1866-01-20_pna_sn85025202_00279557396_1866012001_0424.json",
+   "truth": "same page",
+   "service": "service:ndnp:curiv:batch_curiv_knotgrass_ver01:data:sn85025202:00279557396:1866012001:0424",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/curiv_knotgrass_ver01/data/sn85025202/00279557396/1866012001/0424.jp2",
+   "recorded_size": [
+    7769,
+    5510
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7769,
+    5510
+   ],
+   "alto_status": 200,
+   "article_words": 161,
+   "words_on_page": 0.6149,
+   "pairs_on_page": 0.4332,
+   "words_in_boxes": 0.559,
+   "verdict": null
+  },
+  {
+   "member": "faro_1866/1866-01-20_p3_sn85025202_00279557396_1866012001_0424.json",
+   "article_id": "2_1866-01-20_pna_sn85025202_00279557396_1866012001_0424.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:curiv:batch_curiv_knotgrass_ver01:data:sn85025202:00279557396:1866012001:0425",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/curiv_knotgrass_ver01/data/sn85025202/00279557396/1866012001/0424.jp2",
+   "recorded_size": [
+    7769,
+    5510
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7824,
+    5601
+   ],
+   "alto_status": 200,
+   "article_words": 161,
+   "words_on_page": 0.3727,
+   "pairs_on_page": 0.0561,
+   "words_in_boxes": 0.0807,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1860/1860-06-29_p7_sn83030213_00206530650_1860062901_0445.json",
+   "article_id": "10_1860-06-29_pna_sn83030213_00206530650_1860062901_0445.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_alice_ver01:data:sn83030213:00206530650:1860062901:0445",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_alice_ver01/data/sn83030213/00206530650/1860062901/0445.jp2",
+   "recorded_size": [
+    8491,
+    6029
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1860/1860-06-29_p7_sn83030213_00206530650_1860062901_0445.json",
+   "article_id": "10_1860-06-29_pna_sn83030213_00206530650_1860062901_0445.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_alice_ver01:data:sn83030213:00206530650:1860062901:0446",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_alice_ver01/data/sn83030213/00206530650/1860062901/0445.jp2",
+   "recorded_size": [
+    8491,
+    6029
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1911/1911-01-26_p3_sn91052314_00513680582_1911012601_0687.json",
+   "article_id": "9_1911-01-26_p3_sn91052314_00513680582_1911012601_0687.json",
+   "truth": "same page",
+   "service": "service:ndnp:cohi:batch_cohi_eureka_ver01:data:sn91052314:00513680582:1911012601:0687",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/cohi_eureka_ver01/data/sn91052314/00513680582/1911012601/0687.jp2",
+   "recorded_size": [
+    5171,
+    4035
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    5171,
+    4035
+   ],
+   "alto_status": 200,
+   "article_words": 216,
+   "words_on_page": 0.9306,
+   "pairs_on_page": 0.8789,
+   "words_in_boxes": 0.9167,
+   "verdict": null
+  },
+  {
+   "member": "faro_1911/1911-01-26_p3_sn91052314_00513680582_1911012601_0687.json",
+   "article_id": "9_1911-01-26_p3_sn91052314_00513680582_1911012601_0687.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:cohi:batch_cohi_eureka_ver01:data:sn91052314:00513680582:1911012601:0688",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/cohi_eureka_ver01/data/sn91052314/00513680582/1911012601/0687.jp2",
+   "recorded_size": [
+    5171,
+    4035
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    5171,
+    4013
+   ],
+   "alto_status": 200,
+   "article_words": 216,
+   "words_on_page": 0.1481,
+   "pairs_on_page": 0.0277,
+   "words_in_boxes": 0.0185,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1910/1910-03-03_p6_sn86074053_00383344426_1910030301_0353.json",
+   "article_id": "21_1910-03-03_p6_sn86074053_00383344426_1910030301_0353.json",
+   "truth": "same page",
+   "service": "service:ndnp:msar:batch_msar_flint_ver01:data:sn86074053:00383344426:1910030301:0353",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/msar_flint_ver01/data/sn86074053/00383344426/1910030301/0353.jp2",
+   "recorded_size": [
+    10631,
+    7299
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    10631,
+    7299
+   ],
+   "alto_status": 200,
+   "article_words": 198,
+   "words_on_page": 0.9394,
+   "pairs_on_page": 0.9059,
+   "words_in_boxes": 0.9394,
+   "verdict": null
+  },
+  {
+   "member": "faro_1910/1910-03-03_p6_sn86074053_00383344426_1910030301_0353.json",
+   "article_id": "21_1910-03-03_p6_sn86074053_00383344426_1910030301_0353.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:msar:batch_msar_flint_ver01:data:sn86074053:00383344426:1910030301:0352",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/msar_flint_ver01/data/sn86074053/00383344426/1910030301/0353.jp2",
+   "recorded_size": [
+    10631,
+    7299
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    10719,
+    7406
+   ],
+   "alto_status": 200,
+   "article_words": 198,
+   "words_on_page": 0.202,
+   "pairs_on_page": 0.0286,
+   "words_in_boxes": 0.0404,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1875/1875-05-06_p4_sn83035083_00296027182_1875050601_0081.json",
+   "article_id": "15_1875-05-06_pna_sn83035083_00296027182_1875050601_0081.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_fu_ver01:data:sn83035083:00296027182:1875050601:0081",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_fu_ver01/data/sn83035083/00296027182/1875050601/0081.jp2",
+   "recorded_size": [
+    8429,
+    6860
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8429,
+    6860
+   ],
+   "alto_status": 200,
+   "article_words": 11,
+   "words_on_page": 0.8182,
+   "pairs_on_page": 0.6429,
+   "words_in_boxes": 0.8182,
+   "verdict": null
+  },
+  {
+   "member": "faro_1875/1875-05-06_p4_sn83035083_00296027182_1875050601_0081.json",
+   "article_id": "15_1875-05-06_pna_sn83035083_00296027182_1875050601_0081.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ohi:batch_ohi_fu_ver01:data:sn83035083:00296027182:1875050601:0082",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_fu_ver01/data/sn83035083/00296027182/1875050601/0081.jp2",
+   "recorded_size": [
+    8429,
+    6860
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1963/1963-05-18_p4_sn83045462_00280609481_1963051801_0666.json",
+   "article_id": "12_1963-05-18_p4_sn83045462_00280609481_1963051801_0666.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_ivory_ver01:data:sn83045462:00280609481:1963051801:0666",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ivory_ver01/data/sn83045462/00280609481/1963051801/0666.jp2",
+   "recorded_size": [
+    7512,
+    4785
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7512,
+    4785
+   ],
+   "alto_status": 200,
+   "article_words": 126,
+   "words_on_page": 0.9683,
+   "pairs_on_page": 0.9289,
+   "words_in_boxes": 0.9603,
+   "verdict": null
+  },
+  {
+   "member": "faro_1963/1963-05-18_p4_sn83045462_00280609481_1963051801_0666.json",
+   "article_id": "12_1963-05-18_p4_sn83045462_00280609481_1963051801_0666.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_ivory_ver01:data:sn83045462:00280609481:1963051801:0667",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_ivory_ver01/data/sn83045462/00280609481/1963051801/0666.jp2",
+   "recorded_size": [
+    7512,
+    4785
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7555,
+    4853
+   ],
+   "alto_status": 200,
+   "article_words": 126,
+   "words_on_page": 0.4365,
+   "pairs_on_page": 0.0751,
+   "words_in_boxes": 0.0079,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1914/1914-06-30_p2_sn83009653_00279524214_1914063001_0318.json",
+   "article_id": "33_1914-06-30_pna_sn83009653_00279524214_1914063001_0318.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_baxter_ver01:data:sn83009653:00279524214:1914063001:0318",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_baxter_ver01/data/sn83009653/00279524214/1914063001/0318.jp2",
+   "recorded_size": [
+    10104,
+    7839
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    10104,
+    7839
+   ],
+   "alto_status": 200,
+   "article_words": 234,
+   "words_on_page": 0.8761,
+   "pairs_on_page": 0.7404,
+   "words_in_boxes": 0.8462,
+   "verdict": null
+  },
+  {
+   "member": "faro_1914/1914-06-30_p2_sn83009653_00279524214_1914063001_0318.json",
+   "article_id": "33_1914-06-30_pna_sn83009653_00279524214_1914063001_0318.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:me:batch_me_baxter_ver01:data:sn83009653:00279524214:1914063001:0319",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_baxter_ver01/data/sn83009653/00279524214/1914063001/0318.jp2",
+   "recorded_size": [
+    10104,
+    7839
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    10120,
+    7839
+   ],
+   "alto_status": 200,
+   "article_words": 234,
+   "words_on_page": 0.5256,
+   "pairs_on_page": 0.139,
+   "words_in_boxes": 0.1111,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1817/1817-08-01_p4_sn84024735_0041418392A_1817080101_0106.json",
+   "article_id": "12_1817-08-01_pna_sn84024735_0041418392A_1817080101_0106.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:0041418392A:1817080101:0106",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_mudhens_ver02/data/sn84024735/0041418392A/1817080101/0106.jp2",
+   "recorded_size": [
+    8226,
+    5983
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8226,
+    5983
+   ],
+   "alto_status": 200,
+   "article_words": 474,
+   "words_on_page": 0.6435,
+   "pairs_on_page": 0.4558,
+   "words_in_boxes": 0.6055,
+   "verdict": null
+  },
+  {
+   "member": "faro_1817/1817-08-01_p4_sn84024735_0041418392A_1817080101_0106.json",
+   "article_id": "12_1817-08-01_pna_sn84024735_0041418392A_1817080101_0106.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_mudhens_ver02:data:sn84024735:0041418392A:1817080101:0105",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_mudhens_ver02/data/sn84024735/0041418392A/1817080101/0106.jp2",
+   "recorded_size": [
+    8226,
+    5983
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8348,
+    5972
+   ],
+   "alto_status": 200,
+   "article_words": 474,
+   "words_on_page": 0.2954,
+   "pairs_on_page": 0.0668,
+   "words_in_boxes": 0.0992,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1869/1869-07-22_p1_sn90061771_00200292790_1869072201_0763.json",
+   "article_id": "6_1869-07-22_p1_sn90061771_00200292790_1869072201_0763.json",
+   "truth": "same page",
+   "service": "service:ndnp:mohi:batch_mohi_dorothea_ver01:data:sn90061771:00200292790:1869072201:0763",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_dorothea_ver01/data/sn90061771/00200292790/1869072201/0763.jp2",
+   "recorded_size": [
+    6450,
+    4520
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6450,
+    4520
+   ],
+   "alto_status": 200,
+   "article_words": 215,
+   "words_on_page": 0.4977,
+   "pairs_on_page": 0.2757,
+   "words_in_boxes": 0.4326,
+   "verdict": null
+  },
+  {
+   "member": "faro_1869/1869-07-22_p1_sn90061771_00200292790_1869072201_0763.json",
+   "article_id": "6_1869-07-22_p1_sn90061771_00200292790_1869072201_0763.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mohi:batch_mohi_dorothea_ver01:data:sn90061771:00200292790:1869072201:0764",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_dorothea_ver01/data/sn90061771/00200292790/1869072201/0763.jp2",
+   "recorded_size": [
+    6450,
+    4520
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6491,
+    4668
+   ],
+   "alto_status": 200,
+   "article_words": 215,
+   "words_on_page": 0.1488,
+   "pairs_on_page": 0.0162,
+   "words_in_boxes": 0.0326,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1892/1892-11-11_p11_sn84024546_0023728222A_1892111101_0146.json",
+   "article_id": "5_1892-11-11_pna_sn84024546_0023728222A_1892111101_0146.json",
+   "truth": "same page",
+   "service": "service:ndnp:pst:batch_pst_eisenhower_ver01:data:sn84024546:0023728222A:1892111101:0146",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/pst_eisenhower_ver01/data/sn84024546/0023728222A/1892111101/0146.jp2",
+   "recorded_size": [
+    7145,
+    5216
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7145,
+    5216
+   ],
+   "alto_status": 200,
+   "article_words": 258,
+   "words_on_page": 0.9341,
+   "pairs_on_page": 0.9109,
+   "words_in_boxes": 0.9302,
+   "verdict": null
+  },
+  {
+   "member": "faro_1892/1892-11-11_p11_sn84024546_0023728222A_1892111101_0146.json",
+   "article_id": "5_1892-11-11_pna_sn84024546_0023728222A_1892111101_0146.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:pst:batch_pst_eisenhower_ver01:data:sn84024546:0023728222A:1892111101:0147",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/pst_eisenhower_ver01/data/sn84024546/0023728222A/1892111101/0146.jp2",
+   "recorded_size": [
+    7145,
+    5216
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1871/1871-03-10_p3_sn84022552_00202197231_1871031001_0034.json",
+   "article_id": "55_1871-03-10_pna_sn84022552_00202197231_1871031001_0034.json",
+   "truth": "same page",
+   "service": "service:ndnp:vtu:batch_vtu_kirby_ver02:data:sn84022552:00202197231:1871031001:0034",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_kirby_ver02/data/sn84022552/00202197231/1871031001/0034.jp2",
+   "recorded_size": [
+    7140,
+    5184
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7140,
+    5184
+   ],
+   "alto_status": 200,
+   "article_words": 38,
+   "words_on_page": 0.8158,
+   "pairs_on_page": 0.5588,
+   "words_in_boxes": 0.7895,
+   "verdict": null
+  },
+  {
+   "member": "faro_1871/1871-03-10_p3_sn84022552_00202197231_1871031001_0034.json",
+   "article_id": "55_1871-03-10_pna_sn84022552_00202197231_1871031001_0034.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vtu:batch_vtu_kirby_ver02:data:sn84022552:00202197231:1871031001:0035",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_kirby_ver02/data/sn84022552/00202197231/1871031001/0034.jp2",
+   "recorded_size": [
+    7140,
+    5184
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1891/1891-05-25_p7_sn83030214_00175038474_1891052501_0349.json",
+   "article_id": "25_1891-05-25_p7_sn83030214_00175038474_1891052501_0349.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_eagle_ver01:data:sn83030214:00175038474:1891052501:0349",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_eagle_ver01/data/sn83030214/00175038474/1891052501/0349.jp2",
+   "recorded_size": [
+    9149,
+    6184
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1891/1891-05-25_p7_sn83030214_00175038474_1891052501_0349.json",
+   "article_id": "25_1891-05-25_p7_sn83030214_00175038474_1891052501_0349.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_eagle_ver01:data:sn83030214:00175038474:1891052501:0350",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_eagle_ver01/data/sn83030214/00175038474/1891052501/0349.jp2",
+   "recorded_size": [
+    9149,
+    6184
+   ],
+   "approximate": false,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1877/1877-10-10_p2_sn83030272_0020653350A_1877101001_0198.json",
+   "article_id": "24_1877-10-10_pna_sn83030272_0020653350A_1877101001_0198.json",
+   "truth": "same page",
+   "service": "service:ndnp:nn:batch_nn_carson_ver02:data:sn83030272:0020653350A:1877101001:0198",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_carson_ver02/data/sn83030272/0020653350A/1877101001/0198.jp2",
+   "recorded_size": [
+    6693,
+    5360
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6693,
+    5360
+   ],
+   "alto_status": 200,
+   "article_words": 47,
+   "words_on_page": 0.5957,
+   "pairs_on_page": 0.2621,
+   "words_in_boxes": 0.5319,
+   "verdict": null
+  },
+  {
+   "member": "faro_1877/1877-10-10_p2_sn83030272_0020653350A_1877101001_0198.json",
+   "article_id": "24_1877-10-10_pna_sn83030272_0020653350A_1877101001_0198.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nn:batch_nn_carson_ver02:data:sn83030272:0020653350A:1877101001:0199",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nn_carson_ver02/data/sn83030272/0020653350A/1877101001/0198.jp2",
+   "recorded_size": [
+    6693,
+    5360
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6722,
+    5340
+   ],
+   "alto_status": 200,
+   "article_words": 47,
+   "words_on_page": 0.1702,
+   "pairs_on_page": 0.0291,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1858/1858-04-22_p4_sn87075163_00280774947_1858042201_0707.json",
+   "article_id": "11_1858-04-22_pna_sn87075163_00280774947_1858042201_0707.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_kent_ver02:data:sn87075163:00280774947:1858042201:0707",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_kent_ver02/data/sn87075163/00280774947/1858042201/0707.jp2",
+   "recorded_size": [
+    7344,
+    4844
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7344,
+    4844
+   ],
+   "alto_status": 200,
+   "article_words": 147,
+   "words_on_page": 0.7415,
+   "pairs_on_page": 0.5831,
+   "words_in_boxes": 0.7007,
+   "verdict": null
+  },
+  {
+   "member": "faro_1858/1858-04-22_p4_sn87075163_00280774947_1858042201_0707.json",
+   "article_id": "11_1858-04-22_pna_sn87075163_00280774947_1858042201_0707.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ohi:batch_ohi_kent_ver02:data:sn87075163:00280774947:1858042201:0706",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_kent_ver02/data/sn87075163/00280774947/1858042201/0707.jp2",
+   "recorded_size": [
+    7344,
+    4844
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7314,
+    4872
+   ],
+   "alto_status": 200,
+   "article_words": 147,
+   "words_on_page": 0.1701,
+   "pairs_on_page": 0.035,
+   "words_in_boxes": 0.0068,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1905/1905-05-19_p4_sn83025121_00294552480_1905051901_0399.json",
+   "article_id": "8_1905-05-19_pna_sn83025121_00294552480_1905051901_0399.json",
+   "truth": "same page",
+   "service": "service:ndnp:hihouml:batch_hihouml_damsel_ver01:data:sn83025121:00294552480:1905051901:0399",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_damsel_ver01/data/sn83025121/00294552480/1905051901/0399.jp2",
+   "recorded_size": [
+    6266,
+    4264
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6266,
+    4264
+   ],
+   "alto_status": 200,
+   "article_words": 186,
+   "words_on_page": 0.8763,
+   "pairs_on_page": 0.7241,
+   "words_in_boxes": 0.8548,
+   "verdict": null
+  },
+  {
+   "member": "faro_1905/1905-05-19_p4_sn83025121_00294552480_1905051901_0399.json",
+   "article_id": "8_1905-05-19_pna_sn83025121_00294552480_1905051901_0399.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:hihouml:batch_hihouml_damsel_ver01:data:sn83025121:00294552480:1905051901:0400",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_damsel_ver01/data/sn83025121/00294552480/1905051901/0399.jp2",
+   "recorded_size": [
+    6266,
+    4264
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6273,
+    4296
+   ],
+   "alto_status": 200,
+   "article_words": 186,
+   "words_on_page": 0.2796,
+   "pairs_on_page": 0.0528,
+   "words_in_boxes": 0.0645,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1916/1916-11-10_p2_sn85025007_00415664102_1916111001_0609.json",
+   "article_id": "17_1916-11-10_pna_sn85025007_00415664102_1916111001_0609.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_isogawa_ver01:data:sn85025007:00415664102:1916111001:0609",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_isogawa_ver01/data/sn85025007/00415664102/1916111001/0609.jp2",
+   "recorded_size": [
+    8504,
+    6474
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8504,
+    6474
+   ],
+   "alto_status": 200,
+   "article_words": 151,
+   "words_on_page": 0.8675,
+   "pairs_on_page": 0.7639,
+   "words_in_boxes": 0.8675,
+   "verdict": null
+  },
+  {
+   "member": "faro_1916/1916-11-10_p2_sn85025007_00415664102_1916111001_0609.json",
+   "article_id": "17_1916-11-10_pna_sn85025007_00415664102_1916111001_0609.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_isogawa_ver01:data:sn85025007:00415664102:1916111001:0608",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_isogawa_ver01/data/sn85025007/00415664102/1916111001/0609.jp2",
+   "recorded_size": [
+    8504,
+    6474
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8602,
+    6443
+   ],
+   "alto_status": 200,
+   "article_words": 151,
+   "words_on_page": 0.3311,
+   "pairs_on_page": 0.0833,
+   "words_in_boxes": 0.0596,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1922/1922-03-04_p11_sn84020558_0041421776A_1922030401_0359.json",
+   "article_id": "20_1922-03-04_p11_sn84020558_0041421776A_1922030401_0359.json",
+   "truth": "same page",
+   "service": "service:ndnp:az:batch_az_jeddito_ver01:data:sn84020558:0041421776A:1922030401:0359",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_jeddito_ver01/data/sn84020558/0041421776A/1922030401/0359.jp2",
+   "recorded_size": [
+    8535,
+    6712
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8535,
+    6712
+   ],
+   "alto_status": 200,
+   "article_words": 65,
+   "words_on_page": 0.9385,
+   "pairs_on_page": 0.8786,
+   "words_in_boxes": 0.9385,
+   "verdict": null
+  },
+  {
+   "member": "faro_1922/1922-03-04_p11_sn84020558_0041421776A_1922030401_0359.json",
+   "article_id": "20_1922-03-04_p11_sn84020558_0041421776A_1922030401_0359.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:az:batch_az_jeddito_ver01:data:sn84020558:0041421776A:1922030401:0360",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/az_jeddito_ver01/data/sn84020558/0041421776A/1922030401/0359.jp2",
+   "recorded_size": [
+    8535,
+    6712
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8515,
+    6685
+   ],
+   "alto_status": 200,
+   "article_words": 65,
+   "words_on_page": 0.1231,
+   "pairs_on_page": 0.05,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1900/1900-07-02_p4_sn91070630_00514152949_1900070201_0637.json",
+   "article_id": "8_1900-07-02_pna_sn91070630_00514152949_1900070201_0637.json",
+   "truth": "same page",
+   "service": "service:ndnp:rp:batch_rp_firefriend_ver01:data:sn91070630:00514152949:1900070201:0637",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/rp_firefriend_ver01/data/sn91070630/00514152949/1900070201/0637.jp2",
+   "recorded_size": [
+    9606,
+    7386
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9606,
+    7386
+   ],
+   "alto_status": 200,
+   "article_words": 77,
+   "words_on_page": 0.8831,
+   "pairs_on_page": 0.6854,
+   "words_in_boxes": 0.8571,
+   "verdict": null
+  },
+  {
+   "member": "faro_1900/1900-07-02_p4_sn91070630_00514152949_1900070201_0637.json",
+   "article_id": "8_1900-07-02_pna_sn91070630_00514152949_1900070201_0637.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:rp:batch_rp_firefriend_ver01:data:sn91070630:00514152949:1900070201:0636",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/rp_firefriend_ver01/data/sn91070630/00514152949/1900070201/0637.jp2",
+   "recorded_size": [
+    9606,
+    7386
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9677,
+    7450
+   ],
+   "alto_status": 200,
+   "article_words": 77,
+   "words_on_page": 0.2727,
+   "pairs_on_page": 0.0899,
+   "words_in_boxes": 0.013,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1943/1943-10-29_p9_sn96077289_00414187596_1943102901_0744.json",
+   "article_id": "5_1943-10-29_pna_sn96077289_00414187596_1943102901_0744.json",
+   "truth": "same page",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_alma_ver01:data:sn96077289:00414187596:1943102901:0744",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_alma_ver01/data/sn96077289/00414187596/1943102901/0744.jp2",
+   "recorded_size": [
+    9762,
+    7416
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9762,
+    7416
+   ],
+   "alto_status": 200,
+   "article_words": 35,
+   "words_on_page": 0.9429,
+   "pairs_on_page": 0.9412,
+   "words_in_boxes": 0.9429,
+   "verdict": null
+  },
+  {
+   "member": "faro_1943/1943-10-29_p9_sn96077289_00414187596_1943102901_0744.json",
+   "article_id": "5_1943-10-29_pna_sn96077289_00414187596_1943102901_0744.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_alma_ver01:data:sn96077289:00414187596:1943102901:0743",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_alma_ver01/data/sn96077289/00414187596/1943102901/0744.jp2",
+   "recorded_size": [
+    9762,
+    7416
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    9748,
+    7354
+   ],
+   "alto_status": 200,
+   "article_words": 35,
+   "words_on_page": 0.4286,
+   "pairs_on_page": 0.0941,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1913/1913-05-16_p2_sn82016014_00295870552_1913051601_0180.json",
+   "article_id": "8_1913-05-16_pna_sn82016014_00295870552_1913051601_0180.json",
+   "truth": "same page",
+   "service": "service:ndnp:khi:batch_khi_dalton_ver01:data:sn82016014:00295870552:1913051601:0180",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/khi_dalton_ver01/data/sn82016014/00295870552/1913051601/0180.jp2",
+   "recorded_size": [
+    6389,
+    5536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6389,
+    5536
+   ],
+   "alto_status": 200,
+   "article_words": 61,
+   "words_on_page": 1.0,
+   "pairs_on_page": 0.9627,
+   "words_in_boxes": 0.9836,
+   "verdict": null
+  },
+  {
+   "member": "faro_1913/1913-05-16_p2_sn82016014_00295870552_1913051601_0180.json",
+   "article_id": "8_1913-05-16_pna_sn82016014_00295870552_1913051601_0180.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:khi:batch_khi_dalton_ver01:data:sn82016014:00295870552:1913051601:0179",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/khi_dalton_ver01/data/sn82016014/00295870552/1913051601/0180.jp2",
+   "recorded_size": [
+    6389,
+    5536
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    6415,
+    5520
+   ],
+   "alto_status": 200,
+   "article_words": 61,
+   "words_on_page": 0.4262,
+   "pairs_on_page": 0.1343,
+   "words_in_boxes": 0.0328,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1892/1892-01-12_p3_sn84024546_00237282085_1892011201_0137.json",
+   "article_id": "13_1892-01-12_pna_sn84024546_00237282085_1892011201_0137.json",
+   "truth": "same page",
+   "service": "service:ndnp:pst:batch_pst_eisenhower_ver01:data:sn84024546:00237282085:1892011201:0137",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/pst_eisenhower_ver01/data/sn84024546/00237282085/1892011201/0137.jp2",
+   "recorded_size": [
+    7242,
+    5412
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7242,
+    5412
+   ],
+   "alto_status": 200,
+   "article_words": 50,
+   "words_on_page": 0.92,
+   "pairs_on_page": 0.6168,
+   "words_in_boxes": 0.8,
+   "verdict": null
+  },
+  {
+   "member": "faro_1892/1892-01-12_p3_sn84024546_00237282085_1892011201_0137.json",
+   "article_id": "13_1892-01-12_pna_sn84024546_00237282085_1892011201_0137.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:pst:batch_pst_eisenhower_ver01:data:sn84024546:00237282085:1892011201:0136",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/pst_eisenhower_ver01/data/sn84024546/00237282085/1892011201/0137.jp2",
+   "recorded_size": [
+    7242,
+    5412
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    7126,
+    5336
+   ],
+   "alto_status": 200,
+   "article_words": 50,
+   "words_on_page": 0.42,
+   "pairs_on_page": 0.0841,
+   "words_in_boxes": 0.02,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1892/1892-12-31_p6_sn86063147_00279528232_1892123101_0150.json",
+   "article_id": "8_1892-12-31_p6_sn86063147_00279528232_1892123101_0150.json",
+   "truth": "same page",
+   "service": "service:ndnp:cohi:batch_cohi_bailey_ver02:data:sn86063147:00279528232:1892123101:0150",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/cohi_bailey_ver02/data/sn86063147/00279528232/1892123101/0150.jp2",
+   "recorded_size": [
+    4323,
+    2783
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    4323,
+    2783
+   ],
+   "alto_status": 200,
+   "article_words": 157,
+   "words_on_page": 0.7643,
+   "pairs_on_page": 0.5857,
+   "words_in_boxes": 0.7389,
+   "verdict": null
+  },
+  {
+   "member": "faro_1892/1892-12-31_p6_sn86063147_00279528232_1892123101_0150.json",
+   "article_id": "8_1892-12-31_p6_sn86063147_00279528232_1892123101_0150.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:cohi:batch_cohi_bailey_ver02:data:sn86063147:00279528232:1892123101:0149",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/cohi_bailey_ver02/data/sn86063147/00279528232/1892123101/0150.jp2",
+   "recorded_size": [
+    4323,
+    2783
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    4294,
+    2783
+   ],
+   "alto_status": 200,
+   "article_words": 157,
+   "words_on_page": 0.1975,
+   "pairs_on_page": 0.031,
+   "words_in_boxes": 0.051,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1937/1937-08-13_p5_sn91068099_00416157091_1937081301_0371.json",
+   "article_id": "21_1937-08-13_p5_sn91068099_00416157091_1937081301_0371.json",
+   "truth": "same page",
+   "service": "service:ndnp:ncu:batch_ncu_apple_ver01:data:sn91068099:00416157091:1937081301:0371",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_apple_ver01/data/sn91068099/00416157091/1937081301/0371.jp2",
+   "recorded_size": [
+    8931,
+    6358
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8931,
+    6358
+   ],
+   "alto_status": 200,
+   "article_words": 19,
+   "words_on_page": 0.8947,
+   "pairs_on_page": 0.7838,
+   "words_in_boxes": 0.8421,
+   "verdict": null
+  },
+  {
+   "member": "faro_1937/1937-08-13_p5_sn91068099_00416157091_1937081301_0371.json",
+   "article_id": "21_1937-08-13_p5_sn91068099_00416157091_1937081301_0371.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ncu:batch_ncu_apple_ver01:data:sn91068099:00416157091:1937081301:0370",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_apple_ver01/data/sn91068099/00416157091/1937081301/0371.jp2",
+   "recorded_size": [
+    8931,
+    6358
+   ],
+   "approximate": false,
+   "info_status": 200,
+   "info_size": [
+    8954,
+    6357
+   ],
+   "alto_status": 200,
+   "article_words": 19,
+   "words_on_page": 0.2632,
+   "pairs_on_page": 0.0,
+   "words_in_boxes": 0.0,
+   "verdict": "another size"
+  },
+  {
+   "member": "faro_1887/1887-04-09_p1_sn88067090_00199916610_1887040901_0412.json",
+   "article_id": "2_1887-04-09_pna_sn88067090_00199916610_1887040901_0412.json",
+   "truth": "same page",
+   "service": "service:ndnp:msar:batch_msar_cotton_ver01:data:sn88067090:00199916610:1887040901:0412",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/msar_cotton_ver01/data/sn88067090/00199916610/1887040901/0412.jp2",
+   "recorded_size": [
+    5560,
+    3090
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    5560,
+    3304
+   ],
+   "alto_status": 200,
+   "article_words": 46,
+   "words_on_page": 0.9565,
+   "pairs_on_page": 0.8106,
+   "words_in_boxes": 0.9348,
+   "verdict": null
+  },
+  {
+   "member": "faro_1887/1887-04-09_p1_sn88067090_00199916610_1887040901_0412.json",
+   "article_id": "2_1887-04-09_pna_sn88067090_00199916610_1887040901_0412.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:msar:batch_msar_cotton_ver01:data:sn88067090:00199916610:1887040901:0411",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/msar_cotton_ver01/data/sn88067090/00199916610/1887040901/0412.jp2",
+   "recorded_size": [
+    5560,
+    3090
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1893/1893-04-01_p1_sn86075022_00294550021_1893040101_0261.json",
+   "article_id": "10_1893-04-01_pna_sn86075022_00294550021_1893040101_0261.json",
+   "truth": "same page",
+   "service": "service:ndnp:mthi:batch_mthi_avocet_ver01:data:sn86075022:00294550021:1893040101:0261",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mthi_avocet_ver01/data/sn86075022/00294550021/1893040101/0261.jp2",
+   "recorded_size": [
+    6110,
+    4432
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6400,
+    4504
+   ],
+   "alto_status": 200,
+   "article_words": 34,
+   "words_on_page": 0.2647,
+   "pairs_on_page": 0.0984,
+   "words_in_boxes": 0.0294,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1893/1893-04-01_p1_sn86075022_00294550021_1893040101_0261.json",
+   "article_id": "10_1893-04-01_pna_sn86075022_00294550021_1893040101_0261.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mthi:batch_mthi_avocet_ver01:data:sn86075022:00294550021:1893040101:0260",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mthi_avocet_ver01/data/sn86075022/00294550021/1893040101/0261.jp2",
+   "recorded_size": [
+    6110,
+    4432
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1921/1921-07-10_p1_sn87062268_00271762203_1921071001_0081.json",
+   "article_id": "4_1921-07-10_pna_sn87062268_00271762203_1921071001_0081.json",
+   "truth": "same page",
+   "service": "service:ndnp:fu:batch_fu_cedarkey_ver01:data:sn87062268:00271762203:1921071001:0081",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_cedarkey_ver01/data/sn87062268/00271762203/1921071001/0081.jp2",
+   "recorded_size": [
+    7424,
+    5938
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7732,
+    6208
+   ],
+   "alto_status": 200,
+   "article_words": 63,
+   "words_on_page": 1.0,
+   "pairs_on_page": 0.9909,
+   "words_in_boxes": 1.0,
+   "verdict": null
+  },
+  {
+   "member": "faro_1921/1921-07-10_p1_sn87062268_00271762203_1921071001_0081.json",
+   "article_id": "4_1921-07-10_pna_sn87062268_00271762203_1921071001_0081.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:fu:batch_fu_cedarkey_ver01:data:sn87062268:00271762203:1921071001:0082",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_cedarkey_ver01/data/sn87062268/00271762203/1921071001/0081.jp2",
+   "recorded_size": [
+    7424,
+    5938
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7803,
+    6216
+   ],
+   "alto_status": 200,
+   "article_words": 63,
+   "words_on_page": 0.1587,
+   "pairs_on_page": 0.0182,
+   "words_in_boxes": 0.0,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1913/1913-01-16_pNone_sn83045396_print_1913011601_0005.json",
+   "article_id": "35_1913-01-16_pna_sn83045396_print_1913011601_0005.json",
+   "truth": "same page",
+   "service": "service:ndnp:uuml:batch_uuml_sastre_ver01:data:sn83045396:print:1913011601:0005",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/uuml_sastre_ver01/data/sn83045396/print/1913011601/0005.jp2",
+   "recorded_size": [
+    8769,
+    6375
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8769,
+    6652
+   ],
+   "alto_status": 200,
+   "article_words": 66,
+   "words_on_page": 0.5758,
+   "pairs_on_page": 0.3056,
+   "words_in_boxes": 0.4394,
+   "verdict": null
+  },
+  {
+   "member": "faro_1913/1913-01-16_pNone_sn83045396_print_1913011601_0005.json",
+   "article_id": "35_1913-01-16_pna_sn83045396_print_1913011601_0005.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:uuml:batch_uuml_sastre_ver01:data:sn83045396:print:1913011601:0006",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/uuml_sastre_ver01/data/sn83045396/print/1913011601/0005.jp2",
+   "recorded_size": [
+    8769,
+    6375
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8461,
+    6428
+   ],
+   "alto_status": 200,
+   "article_words": 66,
+   "words_on_page": 0.1515,
+   "pairs_on_page": 0.0278,
+   "words_in_boxes": 0.0152,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1898/1898-08-18_p1_sn89067274_00294556977_1898081801_0765.json",
+   "article_id": "4_1898-08-18_pna_sn89067274_00294556977_1898081801_0765.json",
+   "truth": "same page",
+   "service": "service:ndnp:mohi:batch_mohi_garfield_ver01:data:sn89067274:00294556977:1898081801:0765",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_garfield_ver01/data/sn89067274/00294556977/1898081801/0765.jp2",
+   "recorded_size": [
+    7616,
+    5936
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7932,
+    6220
+   ],
+   "alto_status": 200,
+   "article_words": 52,
+   "words_on_page": 0.9423,
+   "pairs_on_page": 0.6667,
+   "words_in_boxes": 0.9038,
+   "verdict": null
+  },
+  {
+   "member": "faro_1898/1898-08-18_p1_sn89067274_00294556977_1898081801_0765.json",
+   "article_id": "4_1898-08-18_pna_sn89067274_00294556977_1898081801_0765.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mohi:batch_mohi_garfield_ver01:data:sn89067274:00294556977:1898081801:0764",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_garfield_ver01/data/sn89067274/00294556977/1898081801/0765.jp2",
+   "recorded_size": [
+    7616,
+    5936
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1860/1860-03-03_p1_sn84027096_00279529480_1860030301_0034.json",
+   "article_id": "11_1860-03-03_pna_sn84027096_00279529480_1860030301_0034.json",
+   "truth": "same page",
+   "service": "service:ndnp:iahi:batch_iahi_dragonite_ver01:data:sn84027096:00279529480:1860030301:0034",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/iahi_dragonite_ver01/data/sn84027096/00279529480/1860030301/0034.jp2",
+   "recorded_size": [
+    8316,
+    6087
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8542,
+    6380
+   ],
+   "alto_status": 200,
+   "article_words": 78,
+   "words_on_page": 0.8333,
+   "pairs_on_page": 0.6803,
+   "words_in_boxes": 0.8077,
+   "verdict": null
+  },
+  {
+   "member": "faro_1860/1860-03-03_p1_sn84027096_00279529480_1860030301_0034.json",
+   "article_id": "11_1860-03-03_pna_sn84027096_00279529480_1860030301_0034.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:iahi:batch_iahi_dragonite_ver01:data:sn84027096:00279529480:1860030301:0035",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/iahi_dragonite_ver01/data/sn84027096/00279529480/1860030301/0034.jp2",
+   "recorded_size": [
+    8316,
+    6087
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8604,
+    6273
+   ],
+   "alto_status": 200,
+   "article_words": 78,
+   "words_on_page": 0.2692,
+   "pairs_on_page": 0.0612,
+   "words_in_boxes": 0.0128,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1868/1868-11-14_p1_sn82015407_0029586946A_1868111401_0358.json",
+   "article_id": "16_1868-11-14_pna_sn82015407_0029586946A_1868111401_0358.json",
+   "truth": "same page",
+   "service": "service:ndnp:idhi:batch_idhi_dickens_ver01:data:sn82015407:0029586946A:1868111401:0358",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/idhi_dickens_ver01/data/sn82015407/0029586946A/1868111401/0358.jp2",
+   "recorded_size": [
+    9048,
+    5652
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9272,
+    5928
+   ],
+   "alto_status": 200,
+   "article_words": 111,
+   "words_on_page": 0.8108,
+   "pairs_on_page": 0.7049,
+   "words_in_boxes": 0.7928,
+   "verdict": null
+  },
+  {
+   "member": "faro_1868/1868-11-14_p1_sn82015407_0029586946A_1868111401_0358.json",
+   "article_id": "16_1868-11-14_pna_sn82015407_0029586946A_1868111401_0358.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:idhi:batch_idhi_dickens_ver01:data:sn82015407:0029586946A:1868111401:0357",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/idhi_dickens_ver01/data/sn82015407/0029586946A/1868111401/0358.jp2",
+   "recorded_size": [
+    9048,
+    5652
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1889/1889-07-11_p1_sn85042405_00212478726_1889071101_1096.json",
+   "article_id": "4_1889-07-11_pna_sn85042405_00212478726_1889071101_1096.json",
+   "truth": "same page",
+   "service": "service:ndnp:ndhi:batch_ndhi_hazen_ver01:data:sn85042405:00212478726:1889071101:1096",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ndhi_hazen_ver01/data/sn85042405/00212478726/1889071101/1096.jp2",
+   "recorded_size": [
+    7280,
+    4910
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7682,
+    5414
+   ],
+   "alto_status": 200,
+   "article_words": 137,
+   "words_on_page": 0.8686,
+   "pairs_on_page": 0.6824,
+   "words_in_boxes": 0.8394,
+   "verdict": null
+  },
+  {
+   "member": "faro_1889/1889-07-11_p1_sn85042405_00212478726_1889071101_1096.json",
+   "article_id": "4_1889-07-11_pna_sn85042405_00212478726_1889071101_1096.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ndhi:batch_ndhi_hazen_ver01:data:sn85042405:00212478726:1889071101:1097",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ndhi_hazen_ver01/data/sn85042405/00212478726/1889071101/1096.jp2",
+   "recorded_size": [
+    7280,
+    4910
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7716,
+    5453
+   ],
+   "alto_status": 200,
+   "article_words": 137,
+   "words_on_page": 0.2628,
+   "pairs_on_page": 0.0566,
+   "words_in_boxes": 0.0292,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1875/1875-02-21_p1_sn84022053_00279554619_1875022101_0417.json",
+   "article_id": "13_1875-02-21_pna_sn84022053_00279554619_1875022101_0417.json",
+   "truth": "same page",
+   "service": "service:ndnp:nvln:batch_nvln_tonopah_ver01:data:sn84022053:00279554619:1875022101:0417",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nvln_tonopah_ver01/data/sn84022053/00279554619/1875022101/0417.jp2",
+   "recorded_size": [
+    6085,
+    3903
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6231,
+    4291
+   ],
+   "alto_status": 200,
+   "article_words": 193,
+   "words_on_page": 0.9896,
+   "pairs_on_page": 0.9597,
+   "words_in_boxes": 0.9896,
+   "verdict": null
+  },
+  {
+   "member": "faro_1875/1875-02-21_p1_sn84022053_00279554619_1875022101_0417.json",
+   "article_id": "13_1875-02-21_pna_sn84022053_00279554619_1875022101_0417.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nvln:batch_nvln_tonopah_ver01:data:sn84022053:00279554619:1875022101:0416",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nvln_tonopah_ver01/data/sn84022053/00279554619/1875022101/0417.jp2",
+   "recorded_size": [
+    6085,
+    3903
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1909/1909-06-20_pNone_sn83045396_print_1909062001_0915.json",
+   "article_id": "2_1909-06-20_pna_sn83045396_print_1909062001_0915.json",
+   "truth": "same page",
+   "service": "service:ndnp:uuml:batch_uuml_pereiro_ver01:data:sn83045396:print:1909062001:0915",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/uuml_pereiro_ver01/data/sn83045396/print/1909062001/0915.jp2",
+   "recorded_size": [
+    8717,
+    6615
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8983,
+    6968
+   ],
+   "alto_status": 200,
+   "article_words": 113,
+   "words_on_page": 0.8673,
+   "pairs_on_page": 0.7431,
+   "words_in_boxes": 0.8407,
+   "verdict": null
+  },
+  {
+   "member": "faro_1909/1909-06-20_pNone_sn83045396_print_1909062001_0915.json",
+   "article_id": "2_1909-06-20_pna_sn83045396_print_1909062001_0915.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:uuml:batch_uuml_pereiro_ver01:data:sn83045396:print:1909062001:0914",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/uuml_pereiro_ver01/data/sn83045396/print/1909062001/0915.jp2",
+   "recorded_size": [
+    8717,
+    6615
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8895,
+    6988
+   ],
+   "alto_status": 200,
+   "article_words": 113,
+   "words_on_page": 0.3982,
+   "pairs_on_page": 0.1621,
+   "words_in_boxes": 0.1327,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1897/1897-06-10_p1_sn91068402_0029587868A_1897061001_0530.json",
+   "article_id": "2_1897-06-10_pna_sn91068402_0029587868A_1897061001_0530.json",
+   "truth": "same page",
+   "service": "service:ndnp:ncu:batch_ncu_haw_ver01:data:sn91068402:0029587868A:1897061001:0530",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_haw_ver01/data/sn91068402/0029587868A/1897061001/0530.jp2",
+   "recorded_size": [
+    8964,
+    6684
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9260,
+    7016
+   ],
+   "alto_status": 200,
+   "article_words": 121,
+   "words_on_page": 0.8678,
+   "pairs_on_page": 0.7157,
+   "words_in_boxes": 0.8182,
+   "verdict": null
+  },
+  {
+   "member": "faro_1897/1897-06-10_p1_sn91068402_0029587868A_1897061001_0530.json",
+   "article_id": "2_1897-06-10_pna_sn91068402_0029587868A_1897061001_0530.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ncu:batch_ncu_haw_ver01:data:sn91068402:0029587868A:1897061001:0529",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_haw_ver01/data/sn91068402/0029587868A/1897061001/0530.jp2",
+   "recorded_size": [
+    8964,
+    6684
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1857/1857-02-20_p1_sn84024443_00280779209_1857022001_0694.json",
+   "article_id": "46_1857-02-20_pna_sn84024443_00280779209_1857022001_0694.json",
+   "truth": "same page",
+   "service": "service:ndnp:tu:batch_tu_nancy_ver01:data:sn84024443:00280779209:1857022001:0694",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_nancy_ver01/data/sn84024443/00280779209/1857022001/0694.jp2",
+   "recorded_size": [
+    7056,
+    5054
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7307,
+    5324
+   ],
+   "alto_status": 200,
+   "article_words": 18,
+   "words_on_page": 0.8889,
+   "pairs_on_page": 0.7368,
+   "words_in_boxes": 0.8889,
+   "verdict": null
+  },
+  {
+   "member": "faro_1857/1857-02-20_p1_sn84024443_00280779209_1857022001_0694.json",
+   "article_id": "46_1857-02-20_pna_sn84024443_00280779209_1857022001_0694.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:tu:batch_tu_nancy_ver01:data:sn84024443:00280779209:1857022001:0693",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_nancy_ver01/data/sn84024443/00280779209/1857022001/0694.jp2",
+   "recorded_size": [
+    7056,
+    5054
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1911/1911-12-29_p1_sn82014086_00295866561_1911122901_0565.json",
+   "article_id": "17_1911-12-29_pna_sn82014086_00295866561_1911122901_0565.json",
+   "truth": "same page",
+   "service": "service:ndnp:ct:batch_ct_danbury_ver01:data:sn82014086:00295866561:1911122901:0565",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ct_danbury_ver01/data/sn82014086/00295866561/1911122901/0565.jp2",
+   "recorded_size": [
+    7117,
+    6178
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7117,
+    6472
+   ],
+   "alto_status": 200,
+   "article_words": 44,
+   "words_on_page": 0.8182,
+   "pairs_on_page": 0.6771,
+   "words_in_boxes": 0.7955,
+   "verdict": null
+  },
+  {
+   "member": "faro_1911/1911-12-29_p1_sn82014086_00295866561_1911122901_0565.json",
+   "article_id": "17_1911-12-29_pna_sn82014086_00295866561_1911122901_0565.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ct:batch_ct_danbury_ver01:data:sn82014086:00295866561:1911122901:0566",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ct_danbury_ver01/data/sn82014086/00295866561/1911122901/0565.jp2",
+   "recorded_size": [
+    7117,
+    6178
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7087,
+    6436
+   ],
+   "alto_status": 200,
+   "article_words": 44,
+   "words_on_page": 0.3182,
+   "pairs_on_page": 0.0938,
+   "words_in_boxes": 0.0,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1916/1916-11-02_p1_sn96075050_0033289559A_1916110201_0927.json",
+   "article_id": "13_1916-11-02_pna_sn96075050_0033289559A_1916110201_0927.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_harpswell_ver01:data:sn96075050:0033289559A:1916110201:0927",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_harpswell_ver01/data/sn96075050/0033289559A/1916110201/0927.jp2",
+   "recorded_size": [
+    6996,
+    4988
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7215,
+    5274
+   ],
+   "alto_status": 200,
+   "article_words": 68,
+   "words_on_page": 0.9412,
+   "pairs_on_page": 0.8261,
+   "words_in_boxes": 0.9265,
+   "verdict": null
+  },
+  {
+   "member": "faro_1916/1916-11-02_p1_sn96075050_0033289559A_1916110201_0927.json",
+   "article_id": "13_1916-11-02_pna_sn96075050_0033289559A_1916110201_0927.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:me:batch_me_harpswell_ver01:data:sn96075050:0033289559A:1916110201:0926",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_harpswell_ver01/data/sn96075050/0033289559A/1916110201/0927.jp2",
+   "recorded_size": [
+    6996,
+    4988
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1906/1906-06-06_p1_sn84020615_00280773980_1906060601_1082.json",
+   "article_id": "5_1906-06-06_pna_sn84020615_00280773980_1906060601_1082.json",
+   "truth": "same page",
+   "service": "service:ndnp:nmu:batch_nmu_ironweed_ver01:data:sn84020615:00280773980:1906060601:1082",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_ironweed_ver01/data/sn84020615/00280773980/1906060601/1082.jp2",
+   "recorded_size": [
+    6733,
+    4932
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7146,
+    5364
+   ],
+   "alto_status": 200,
+   "article_words": 122,
+   "words_on_page": 0.9672,
+   "pairs_on_page": 0.8686,
+   "words_in_boxes": 0.959,
+   "verdict": null
+  },
+  {
+   "member": "faro_1906/1906-06-06_p1_sn84020615_00280773980_1906060601_1082.json",
+   "article_id": "5_1906-06-06_pna_sn84020615_00280773980_1906060601_1082.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nmu:batch_nmu_ironweed_ver01:data:sn84020615:00280773980:1906060601:1081",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_ironweed_ver01/data/sn84020615/00280773980/1906060601/1082.jp2",
+   "recorded_size": [
+    6733,
+    4932
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1867/1867-01-19_p1_sn83016025_00279525231_1867011901_0071.json",
+   "article_id": "7_1867-01-19_pna_sn83016025_00279525231_1867011901_0071.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_edgecomb_ver02:data:sn83016025:00279525231:1867011901:0071",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_edgecomb_ver02/data/sn83016025/00279525231/1867011901/0071.jp2",
+   "recorded_size": [
+    8632,
+    5859
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8734,
+    6150
+   ],
+   "alto_status": 200,
+   "article_words": 282,
+   "words_on_page": 0.8901,
+   "pairs_on_page": 0.7969,
+   "words_in_boxes": 0.8901,
+   "verdict": null
+  },
+  {
+   "member": "faro_1867/1867-01-19_p1_sn83016025_00279525231_1867011901_0071.json",
+   "article_id": "7_1867-01-19_pna_sn83016025_00279525231_1867011901_0071.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:me:batch_me_edgecomb_ver02:data:sn83016025:00279525231:1867011901:0072",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_edgecomb_ver02/data/sn83016025/00279525231/1867011901/0071.jp2",
+   "recorded_size": [
+    8632,
+    5859
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8730,
+    6131
+   ],
+   "alto_status": 200,
+   "article_words": 282,
+   "words_on_page": 0.3617,
+   "pairs_on_page": 0.0851,
+   "words_in_boxes": 0.0532,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1921/1921-08-08_p1_sn86069168_00202194746_1921080801_0208.json",
+   "article_id": "5_1921-08-08_pna_sn86069168_00202194746_1921080801_0208.json",
+   "truth": "same page",
+   "service": "service:ndnp:kyu:batch_kyu_egret_ver01:data:sn86069168:00202194746:1921080801:0208",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/kyu_egret_ver01/data/sn86069168/00202194746/1921080801/0208.jp2",
+   "recorded_size": [
+    8052,
+    6316
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8045,
+    6836
+   ],
+   "alto_status": 200,
+   "article_words": 27,
+   "words_on_page": 0.9259,
+   "pairs_on_page": 0.9123,
+   "words_in_boxes": 0.9259,
+   "verdict": null
+  },
+  {
+   "member": "faro_1921/1921-08-08_p1_sn86069168_00202194746_1921080801_0208.json",
+   "article_id": "5_1921-08-08_pna_sn86069168_00202194746_1921080801_0208.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:kyu:batch_kyu_egret_ver01:data:sn86069168:00202194746:1921080801:0207",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/kyu_egret_ver01/data/sn86069168/00202194746/1921080801/0208.jp2",
+   "recorded_size": [
+    8052,
+    6316
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1915/1915-01-27_p1_sn95047222_00415663389_1915012701_0183.json",
+   "article_id": "25_1915-01-27_pna_sn95047222_00415663389_1915012701_0183.json",
+   "truth": "same page",
+   "service": "service:ndnp:fu:batch_fu_frostproof_ver01:data:sn95047222:00415663389:1915012701:0183",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_frostproof_ver01/data/sn95047222/00415663389/1915012701/0183.jp2",
+   "recorded_size": [
+    6883,
+    4526
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6899,
+    4760
+   ],
+   "alto_status": 200,
+   "article_words": 104,
+   "words_on_page": 0.875,
+   "pairs_on_page": 0.7819,
+   "words_in_boxes": 0.8654,
+   "verdict": null
+  },
+  {
+   "member": "faro_1915/1915-01-27_p1_sn95047222_00415663389_1915012701_0183.json",
+   "article_id": "25_1915-01-27_pna_sn95047222_00415663389_1915012701_0183.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:fu:batch_fu_frostproof_ver01:data:sn95047222:00415663389:1915012701:0182",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_frostproof_ver01/data/sn95047222/00415663389/1915012701/0183.jp2",
+   "recorded_size": [
+    6883,
+    4526
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1854/1854-07-12_p1_sn83045461_00280654048_1854071201_0047.json",
+   "article_id": "33_1854-07-12_pna_sn83045461_00280654048_1854071201_0047.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_kuvasz_ver02:data:sn83045461:00280654048:1854071201:0047",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_kuvasz_ver02/data/sn83045461/00280654048/1854071201/0047.jp2",
+   "recorded_size": [
+    9524,
+    6805
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9614,
+    6865
+   ],
+   "alto_status": 200,
+   "article_words": 263,
+   "words_on_page": 0.8137,
+   "pairs_on_page": 0.6577,
+   "words_in_boxes": 0.7833,
+   "verdict": null
+  },
+  {
+   "member": "faro_1854/1854-07-12_p1_sn83045461_00280654048_1854071201_0047.json",
+   "article_id": "33_1854-07-12_pna_sn83045461_00280654048_1854071201_0047.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_kuvasz_ver02:data:sn83045461:00280654048:1854071201:0048",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_kuvasz_ver02/data/sn83045461/00280654048/1854071201/0047.jp2",
+   "recorded_size": [
+    9524,
+    6805
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9495,
+    6736
+   ],
+   "alto_status": 200,
+   "article_words": 263,
+   "words_on_page": 0.3536,
+   "pairs_on_page": 0.0594,
+   "words_in_boxes": 0.0951,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1872/1872-09-23_p1_sn85033673_00280779404_1872092301_0880.json",
+   "article_id": "8_1872-09-23_pna_sn85033673_00280779404_1872092301_0880.json",
+   "truth": "same page",
+   "service": "service:ndnp:tu:batch_tu_nancy_ver01:data:sn85033673:00280779404:1872092301:0880",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_nancy_ver01/data/sn85033673/00280779404/1872092301/0880.jp2",
+   "recorded_size": [
+    6683,
+    4587
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7098,
+    4980
+   ],
+   "alto_status": 200,
+   "article_words": 131,
+   "words_on_page": 0.9542,
+   "pairs_on_page": 0.8777,
+   "words_in_boxes": 0.9313,
+   "verdict": null
+  },
+  {
+   "member": "faro_1872/1872-09-23_p1_sn85033673_00280779404_1872092301_0880.json",
+   "article_id": "8_1872-09-23_pna_sn85033673_00280779404_1872092301_0880.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:tu:batch_tu_nancy_ver01:data:sn85033673:00280779404:1872092301:0881",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/tu_nancy_ver01/data/sn85033673/00280779404/1872092301/0880.jp2",
+   "recorded_size": [
+    6683,
+    4587
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7092,
+    4968
+   ],
+   "alto_status": 200,
+   "article_words": 131,
+   "words_on_page": 0.3359,
+   "pairs_on_page": 0.0376,
+   "words_in_boxes": 0.0458,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1856/1856-02-23_p1_sn84023252_00200296229_1856022301_0452.json",
+   "article_id": "9_1856-02-23_pna_sn84023252_00200296229_1856022301_0452.json",
+   "truth": "same page",
+   "service": "service:ndnp:vtu:batch_vtu_londonderry_ver01:data:sn84023252:00200296229:1856022301:0452",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_londonderry_ver01/data/sn84023252/00200296229/1856022301/0452.jp2",
+   "recorded_size": [
+    9688,
+    6927
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9688,
+    6996
+   ],
+   "alto_status": 200,
+   "article_words": 184,
+   "words_on_page": 0.1196,
+   "pairs_on_page": 0.0159,
+   "words_in_boxes": 0.0489,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1856/1856-02-23_p1_sn84023252_00200296229_1856022301_0452.json",
+   "article_id": "9_1856-02-23_pna_sn84023252_00200296229_1856022301_0452.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vtu:batch_vtu_londonderry_ver01:data:sn84023252:00200296229:1856022301:0453",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_londonderry_ver01/data/sn84023252/00200296229/1856022301/0452.jp2",
+   "recorded_size": [
+    9688,
+    6927
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9781,
+    6988
+   ],
+   "alto_status": 200,
+   "article_words": 184,
+   "words_on_page": 0.1848,
+   "pairs_on_page": 0.0338,
+   "words_in_boxes": 0.0326,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1852/1852-10-13_p1_sn83025667_00280777791_1852101301_0589.json",
+   "article_id": "14_1852-10-13_pna_sn83025667_00280777791_1852101301_0589.json",
+   "truth": "same page",
+   "service": "service:ndnp:vtu:batch_vtu_irasburg_ver01:data:sn83025667:00280777791:1852101301:0589",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_irasburg_ver01/data/sn83025667/00280777791/1852101301/0589.jp2",
+   "recorded_size": [
+    6250,
+    4939
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6514,
+    5236
+   ],
+   "alto_status": 200,
+   "article_words": 209,
+   "words_on_page": 0.3732,
+   "pairs_on_page": 0.1701,
+   "words_in_boxes": 0.2967,
+   "verdict": null
+  },
+  {
+   "member": "faro_1852/1852-10-13_p1_sn83025667_00280777791_1852101301_0589.json",
+   "article_id": "14_1852-10-13_pna_sn83025667_00280777791_1852101301_0589.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vtu:batch_vtu_irasburg_ver01:data:sn83025667:00280777791:1852101301:0588",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_irasburg_ver01/data/sn83025667/00280777791/1852101301/0589.jp2",
+   "recorded_size": [
+    6250,
+    4939
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1909/1909-11-06_p1_sn82016441_100493743_1909110601_0046.json",
+   "article_id": "11_1909-11-06_pna_sn82016441_100493743_1909110601_0046.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_delta_ver01:data:sn82016441:100493743:1909110601:0046",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_delta_ver01/data/sn82016441/100493743/1909110601/0046.jp2",
+   "recorded_size": [
+    7131,
+    4926
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7131,
+    5071
+   ],
+   "alto_status": 200,
+   "article_words": 161,
+   "words_on_page": 0.8944,
+   "pairs_on_page": 0.509,
+   "words_in_boxes": 0.8696,
+   "verdict": null
+  },
+  {
+   "member": "faro_1909/1909-11-06_p1_sn82016441_100493743_1909110601_0046.json",
+   "article_id": "11_1909-11-06_pna_sn82016441_100493743_1909110601_0046.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_delta_ver01:data:sn82016441:100493743:1909110601:0045",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_delta_ver01/data/sn82016441/100493743/1909110601/0046.jp2",
+   "recorded_size": [
+    7131,
+    4926
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1893/1893-03-21_p1_sn83025121_00211108976_1893032101_0138.json",
+   "article_id": "20_1893-03-21_pna_sn83025121_00211108976_1893032101_0138.json",
+   "truth": "same page",
+   "service": "service:ndnp:hihouml:batch_hihouml_damsel_ver01:data:sn83025121:00211108976:1893032101:0138",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_damsel_ver01/data/sn83025121/00211108976/1893032101/0138.jp2",
+   "recorded_size": [
+    6396,
+    4313
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6656,
+    4444
+   ],
+   "alto_status": 200,
+   "article_words": 207,
+   "words_on_page": 0.8744,
+   "pairs_on_page": 0.847,
+   "words_in_boxes": 0.8744,
+   "verdict": null
+  },
+  {
+   "member": "faro_1893/1893-03-21_p1_sn83025121_00211108976_1893032101_0138.json",
+   "article_id": "20_1893-03-21_pna_sn83025121_00211108976_1893032101_0138.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:hihouml:batch_hihouml_damsel_ver01:data:sn83025121:00211108976:1893032101:0137",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_damsel_ver01/data/sn83025121/00211108976/1893032101/0138.jp2",
+   "recorded_size": [
+    6396,
+    4313
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6634,
+    4372
+   ],
+   "alto_status": 200,
+   "article_words": 207,
+   "words_on_page": 0.2222,
+   "pairs_on_page": 0.0409,
+   "words_in_boxes": 0.0628,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1863/1863-07-31_p1_sn84022548_00202194941_1863073101_0539.json",
+   "article_id": "16_1863-07-31_pna_sn84022548_00202194941_1863073101_0539.json",
+   "truth": "same page",
+   "service": "service:ndnp:vtu:batch_vtu_ludlow_ver01:data:sn84022548:00202194941:1863073101:0539",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_ludlow_ver01/data/sn84022548/00202194941/1863073101/0539.jp2",
+   "recorded_size": [
+    6996,
+    4890
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7001,
+    5032
+   ],
+   "alto_status": 200,
+   "article_words": 221,
+   "words_on_page": 0.9412,
+   "pairs_on_page": 0.8564,
+   "words_in_boxes": 0.9276,
+   "verdict": null
+  },
+  {
+   "member": "faro_1863/1863-07-31_p1_sn84022548_00202194941_1863073101_0539.json",
+   "article_id": "16_1863-07-31_pna_sn84022548_00202194941_1863073101_0539.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vtu:batch_vtu_ludlow_ver01:data:sn84022548:00202194941:1863073101:0540",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vtu_ludlow_ver01/data/sn84022548/00202194941/1863073101/0539.jp2",
+   "recorded_size": [
+    6996,
+    4890
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7030,
+    5060
+   ],
+   "alto_status": 200,
+   "article_words": 221,
+   "words_on_page": 0.2851,
+   "pairs_on_page": 0.0613,
+   "words_in_boxes": 0.0814,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1888/1888-08-25_p1_sn86076200_00279554115_1888082501_0135.json",
+   "article_id": "4_1888-08-25_pna_sn86076200_00279554115_1888082501_0135.json",
+   "truth": "same page",
+   "service": "service:ndnp:nvln:batch_nvln_quartz_ver01:data:sn86076200:00279554115:1888082501:0135",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nvln_quartz_ver01/data/sn86076200/00279554115/1888082501/0135.jp2",
+   "recorded_size": [
+    6582,
+    4680
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6582,
+    4670
+   ],
+   "alto_status": 200,
+   "article_words": 53,
+   "words_on_page": 0.9434,
+   "pairs_on_page": 0.8073,
+   "words_in_boxes": 0.9057,
+   "verdict": null
+  },
+  {
+   "member": "faro_1888/1888-08-25_p1_sn86076200_00279554115_1888082501_0135.json",
+   "article_id": "4_1888-08-25_pna_sn86076200_00279554115_1888082501_0135.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nvln:batch_nvln_quartz_ver01:data:sn86076200:00279554115:1888082501:0134",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nvln_quartz_ver01/data/sn86076200/00279554115/1888082501/0135.jp2",
+   "recorded_size": [
+    6582,
+    4680
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1858/1858-03-31_p1_sn84026561_00415667814_1858033101_0571.json",
+   "article_id": "10_1858-03-31_pna_sn84026561_00415667814_1858033101_0571.json",
+   "truth": "same page",
+   "service": "service:ndnp:ncu:batch_ncu_black_ver02:data:sn84026561:00415667814:1858033101:0571",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_black_ver02/data/sn84026561/00415667814/1858033101/0571.jp2",
+   "recorded_size": [
+    10219,
+    7647
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    10219,
+    7724
+   ],
+   "alto_status": 200,
+   "article_words": 345,
+   "words_on_page": 0.8493,
+   "pairs_on_page": 0.7243,
+   "words_in_boxes": 0.8377,
+   "verdict": null
+  },
+  {
+   "member": "faro_1858/1858-03-31_p1_sn84026561_00415667814_1858033101_0571.json",
+   "article_id": "10_1858-03-31_pna_sn84026561_00415667814_1858033101_0571.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ncu:batch_ncu_black_ver02:data:sn84026561:00415667814:1858033101:0572",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ncu_black_ver02/data/sn84026561/00415667814/1858033101/0571.jp2",
+   "recorded_size": [
+    10219,
+    7647
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    10309,
+    7760
+   ],
+   "alto_status": 200,
+   "article_words": 345,
+   "words_on_page": 0.2261,
+   "pairs_on_page": 0.0521,
+   "words_in_boxes": 0.0551,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1885/1885-08-20_p1_sn78000873_00279524718_1885082001_0371.json",
+   "article_id": "19_1885-08-20_pna_sn78000873_00279524718_1885082001_0371.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_camden_ver01:data:sn78000873:00279524718:1885082001:0371",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_camden_ver01/data/sn78000873/00279524718/1885082001/0371.jp2",
+   "recorded_size": [
+    7977,
+    6296
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8155,
+    6526
+   ],
+   "alto_status": 200,
+   "article_words": 247,
+   "words_on_page": 0.8745,
+   "pairs_on_page": 0.7915,
+   "words_in_boxes": 0.8583,
+   "verdict": null
+  },
+  {
+   "member": "faro_1885/1885-08-20_p1_sn78000873_00279524718_1885082001_0371.json",
+   "article_id": "19_1885-08-20_pna_sn78000873_00279524718_1885082001_0371.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:me:batch_me_camden_ver01:data:sn78000873:00279524718:1885082001:0372",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_camden_ver01/data/sn78000873/00279524718/1885082001/0371.jp2",
+   "recorded_size": [
+    7977,
+    6296
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8141,
+    6529
+   ],
+   "alto_status": 200,
+   "article_words": 247,
+   "words_on_page": 0.4575,
+   "pairs_on_page": 0.1015,
+   "words_in_boxes": 0.0931,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1911/1911-07-06_p1_sn87057096_00202198442_1911070601_0368.json",
+   "article_id": "1_1911-07-06_pna_sn87057096_00202198442_1911070601_0368.json",
+   "truth": "same page",
+   "service": "service:ndnp:iahi:batch_iahi_bettendorf_ver01:data:sn87057096:00202198442:1911070601:0368",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/iahi_bettendorf_ver01/data/sn87057096/00202198442/1911070601/0368.jp2",
+   "recorded_size": [
+    7603,
+    5250
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7603,
+    5439
+   ],
+   "alto_status": 200,
+   "article_words": 102,
+   "words_on_page": 0.9412,
+   "pairs_on_page": 0.908,
+   "words_in_boxes": 0.9412,
+   "verdict": null
+  },
+  {
+   "member": "faro_1911/1911-07-06_p1_sn87057096_00202198442_1911070601_0368.json",
+   "article_id": "1_1911-07-06_pna_sn87057096_00202198442_1911070601_0368.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:iahi:batch_iahi_bettendorf_ver01:data:sn87057096:00202198442:1911070601:0369",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/iahi_bettendorf_ver01/data/sn87057096/00202198442/1911070601/0368.jp2",
+   "recorded_size": [
+    7603,
+    5250
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7576,
+    5391
+   ],
+   "alto_status": 200,
+   "article_words": 102,
+   "words_on_page": 0.2549,
+   "pairs_on_page": 0.0383,
+   "words_in_boxes": 0.0392,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1870/1870-09-07_p1_sn85026309_00280775927_1870090701_0008.json",
+   "article_id": "14_1870-09-07_pna_sn85026309_00280775927_1870090701_0008.json",
+   "truth": "same page",
+   "service": "service:ndnp:ohi:batch_ohi_borachio_ver02:data:sn85026309:00280775927:1870090701:0008",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_borachio_ver02/data/sn85026309/00280775927/1870090701/0008.jp2",
+   "recorded_size": [
+    8948,
+    6322
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8948,
+    6728
+   ],
+   "alto_status": 200,
+   "article_words": 138,
+   "words_on_page": 0.913,
+   "pairs_on_page": 0.7809,
+   "words_in_boxes": 0.8913,
+   "verdict": null
+  },
+  {
+   "member": "faro_1870/1870-09-07_p1_sn85026309_00280775927_1870090701_0008.json",
+   "article_id": "14_1870-09-07_pna_sn85026309_00280775927_1870090701_0008.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:ohi:batch_ohi_borachio_ver02:data:sn85026309:00280775927:1870090701:0007",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/ohi_borachio_ver02/data/sn85026309/00280775927/1870090701/0008.jp2",
+   "recorded_size": [
+    8948,
+    6322
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1911/1911-01-18_p1_sn87062268_00415663018_1911011801_0155.json",
+   "article_id": "21_1911-01-18_pna_sn87062268_00415663018_1911011801_0155.json",
+   "truth": "same page",
+   "service": "service:ndnp:fu:batch_fu_flavet_ver01:data:sn87062268:00415663018:1911011801:0155",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_flavet_ver01/data/sn87062268/00415663018/1911011801/0155.jp2",
+   "recorded_size": [
+    7786,
+    6407
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7792,
+    6044
+   ],
+   "alto_status": 200,
+   "article_words": 117,
+   "words_on_page": 0.9402,
+   "pairs_on_page": 0.8621,
+   "words_in_boxes": 0.9145,
+   "verdict": null
+  },
+  {
+   "member": "faro_1911/1911-01-18_p1_sn87062268_00415663018_1911011801_0155.json",
+   "article_id": "21_1911-01-18_pna_sn87062268_00415663018_1911011801_0155.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:fu:batch_fu_flavet_ver01:data:sn87062268:00415663018:1911011801:0156",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/fu_flavet_ver01/data/sn87062268/00415663018/1911011801/0155.jp2",
+   "recorded_size": [
+    7786,
+    6407
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7829,
+    6080
+   ],
+   "alto_status": 200,
+   "article_words": 117,
+   "words_on_page": 0.1453,
+   "pairs_on_page": 0.0268,
+   "words_in_boxes": 0.0256,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1862/1862-10-30_p1_sn83016836_00212472529_1862103001_0445.json",
+   "article_id": "1_1862-10-30_pna_sn83016836_00212472529_1862103001_0445.json",
+   "truth": "same page",
+   "service": "service:ndnp:mnhi:batch_mnhi_datsun_ver01:data:sn83016836:00212472529:1862103001:0445",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mnhi_datsun_ver01/data/sn83016836/00212472529/1862103001/0445.jp2",
+   "recorded_size": [
+    8931,
+    6391
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8931,
+    6669
+   ],
+   "alto_status": 200,
+   "article_words": 131,
+   "words_on_page": 0.5496,
+   "pairs_on_page": 0.3426,
+   "words_in_boxes": 0.542,
+   "verdict": null
+  },
+  {
+   "member": "faro_1862/1862-10-30_p1_sn83016836_00212472529_1862103001_0445.json",
+   "article_id": "1_1862-10-30_pna_sn83016836_00212472529_1862103001_0445.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mnhi:batch_mnhi_datsun_ver01:data:sn83016836:00212472529:1862103001:0446",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mnhi_datsun_ver01/data/sn83016836/00212472529/1862103001/0445.jp2",
+   "recorded_size": [
+    8931,
+    6391
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9003,
+    6689
+   ],
+   "alto_status": 200,
+   "article_words": 131,
+   "words_on_page": 0.2061,
+   "pairs_on_page": 0.0588,
+   "words_in_boxes": 0.0153,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1916/1916-12-12_p1_sn85042344_00200295584_1916121201_0070.json",
+   "article_id": "42_1916-12-12_pna_sn85042344_00200295584_1916121201_0070.json",
+   "truth": "same page",
+   "service": "service:ndnp:okhi:batch_okhi_caddo_ver01:data:sn85042344:00200295584:1916121201:0070",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/okhi_caddo_ver01/data/sn85042344/00200295584/1916121201/0070.jp2",
+   "recorded_size": [
+    6153,
+    4667
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6424,
+    4816
+   ],
+   "alto_status": 200,
+   "article_words": 235,
+   "words_on_page": 0.7191,
+   "pairs_on_page": 0.512,
+   "words_in_boxes": 0.6723,
+   "verdict": null
+  },
+  {
+   "member": "faro_1916/1916-12-12_p1_sn85042344_00200295584_1916121201_0070.json",
+   "article_id": "42_1916-12-12_pna_sn85042344_00200295584_1916121201_0070.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:okhi:batch_okhi_caddo_ver01:data:sn85042344:00200295584:1916121201:0069",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/okhi_caddo_ver01/data/sn85042344/00200295584/1916121201/0070.jp2",
+   "recorded_size": [
+    6153,
+    4667
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1894/1894-05-26_p1_sn90059959_00271742848_1894052601_0010.json",
+   "article_id": "13_1894-05-26_pna_sn90059959_00271742848_1894052601_0010.json",
+   "truth": "same page",
+   "service": "service:ndnp:mnhi:batch_mnhi_betelgeuse_ver01:data:sn90059959:00271742848:1894052601:0010",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mnhi_betelgeuse_ver01/data/sn90059959/00271742848/1894052601/0010.jp2",
+   "recorded_size": [
+    9804,
+    6689
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    9873,
+    6836
+   ],
+   "alto_status": 200,
+   "article_words": 244,
+   "words_on_page": 0.9426,
+   "pairs_on_page": 0.8903,
+   "words_in_boxes": 0.9262,
+   "verdict": null
+  },
+  {
+   "member": "faro_1894/1894-05-26_p1_sn90059959_00271742848_1894052601_0010.json",
+   "article_id": "13_1894-05-26_pna_sn90059959_00271742848_1894052601_0010.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mnhi:batch_mnhi_betelgeuse_ver01:data:sn90059959:00271742848:1894052601:0009",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mnhi_betelgeuse_ver01/data/sn90059959/00271742848/1894052601/0010.jp2",
+   "recorded_size": [
+    9804,
+    6689
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1902/1902-06-09_p1_sn84020630_00415629138_1902060901_0557.json",
+   "article_id": "9_1902-06-09_pna_sn84020630_00415629138_1902060901_0557.json",
+   "truth": "same page",
+   "service": "service:ndnp:nmu:batch_nmu_grimes_ver01:data:sn84020630:00415629138:1902060901:0557",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_grimes_ver01/data/sn84020630/00415629138/1902060901/0557.jp2",
+   "recorded_size": [
+    6907,
+    4729
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6912,
+    4932
+   ],
+   "alto_status": 200,
+   "article_words": 148,
+   "words_on_page": 0.9257,
+   "pairs_on_page": 0.8812,
+   "words_in_boxes": 0.9257,
+   "verdict": null
+  },
+  {
+   "member": "faro_1902/1902-06-09_p1_sn84020630_00415629138_1902060901_0557.json",
+   "article_id": "9_1902-06-09_pna_sn84020630_00415629138_1902060901_0557.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nmu:batch_nmu_grimes_ver01:data:sn84020630:00415629138:1902060901:0558",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_grimes_ver01/data/sn84020630/00415629138/1902060901/0557.jp2",
+   "recorded_size": [
+    6907,
+    4729
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6913,
+    4968
+   ],
+   "alto_status": 200,
+   "article_words": 148,
+   "words_on_page": 0.4054,
+   "pairs_on_page": 0.125,
+   "words_in_boxes": 0.0338,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1886/1886-08-31_p1_sn82016412_00294551955_1886083101_0211.json",
+   "article_id": "6_1886-08-31_pna_sn82016412_00294551955_1886083101_0211.json",
+   "truth": "same page",
+   "service": "service:ndnp:hihouml:batch_hihouml_flying_ver01:data:sn82016412:00294551955:1886083101:0211",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_flying_ver01/data/sn82016412/00294551955/1886083101/0211.jp2",
+   "recorded_size": [
+    6563,
+    5103
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6954,
+    5380
+   ],
+   "alto_status": 200,
+   "article_words": 82,
+   "words_on_page": 0.9268,
+   "pairs_on_page": 0.8333,
+   "words_in_boxes": 0.9024,
+   "verdict": null
+  },
+  {
+   "member": "faro_1886/1886-08-31_p1_sn82016412_00294551955_1886083101_0211.json",
+   "article_id": "6_1886-08-31_pna_sn82016412_00294551955_1886083101_0211.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:hihouml:batch_hihouml_flying_ver01:data:sn82016412:00294551955:1886083101:0212",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/hihouml_flying_ver01/data/sn82016412/00294551955/1886083101/0211.jp2",
+   "recorded_size": [
+    6563,
+    5103
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6916,
+    5268
+   ],
+   "alto_status": 200,
+   "article_words": 82,
+   "words_on_page": 0.3293,
+   "pairs_on_page": 0.0625,
+   "words_in_boxes": 0.0488,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1912/1912-11-17_p1_sn83045433_00294558226_1912111701_0090.json",
+   "article_id": "43_1912-11-17_pna_sn83045433_00294558226_1912111701_0090.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:00294558226:1912111701:0090",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/00294558226/1912111701/0090.jp2",
+   "recorded_size": [
+    6256,
+    4548
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6457,
+    4776
+   ],
+   "alto_status": 200,
+   "article_words": 26,
+   "words_on_page": 0.8462,
+   "pairs_on_page": 0.7292,
+   "words_in_boxes": 0.8077,
+   "verdict": null
+  },
+  {
+   "member": "faro_1912/1912-11-17_p1_sn83045433_00294558226_1912111701_0090.json",
+   "article_id": "43_1912-11-17_pna_sn83045433_00294558226_1912111701_0090.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn83045433:00294558226:1912111701:0089",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn83045433/00294558226/1912111701/0090.jp2",
+   "recorded_size": [
+    6256,
+    4548
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6441,
+    4752
+   ],
+   "alto_status": 200,
+   "article_words": 26,
+   "words_on_page": 0.2308,
+   "pairs_on_page": 0.0625,
+   "words_in_boxes": 0.0,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1903/1903-07-24_p1_sn84024720_00280762532_1903072401_0337.json",
+   "article_id": "9_1903-07-24_pna_sn84024720_00280762532_1903072401_0337.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_hansel_ver01:data:sn84024720:00280762532:1903072401:0337",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_hansel_ver01/data/sn84024720/00280762532/1903072401/0337.jp2",
+   "recorded_size": [
+    7335,
+    5614
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7670,
+    5870
+   ],
+   "alto_status": 200,
+   "article_words": 127,
+   "words_on_page": 0.9213,
+   "pairs_on_page": 0.8743,
+   "words_in_boxes": 0.9134,
+   "verdict": null
+  },
+  {
+   "member": "faro_1903/1903-07-24_p1_sn84024720_00280762532_1903072401_0337.json",
+   "article_id": "9_1903-07-24_pna_sn84024720_00280762532_1903072401_0337.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_hansel_ver01:data:sn84024720:00280762532:1903072401:0338",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_hansel_ver01/data/sn84024720/00280762532/1903072401/0337.jp2",
+   "recorded_size": [
+    7335,
+    5614
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7670,
+    5870
+   ],
+   "alto_status": 200,
+   "article_words": 127,
+   "words_on_page": 0.3386,
+   "pairs_on_page": 0.1047,
+   "words_in_boxes": 0.0709,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1895/1895-12-07_p1_sn85038614_00175031194_1895120701_0569.json",
+   "article_id": "8_1895-12-07_pna_sn85038614_00175031194_1895120701_0569.json",
+   "truth": "same page",
+   "service": "service:ndnp:vi:batch_vi_u2_ver01:data:sn85038614:00175031194:1895120701:0569",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_u2_ver01/data/sn85038614/00175031194/1895120701/0569.jp2",
+   "recorded_size": [
+    8634,
+    5806
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1895/1895-12-07_p1_sn85038614_00175031194_1895120701_0569.json",
+   "article_id": "8_1895-12-07_pna_sn85038614_00175031194_1895120701_0569.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:vi:batch_vi_u2_ver01:data:sn85038614:00175031194:1895120701:0568",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/vi_u2_ver01/data/sn85038614/00175031194/1895120701/0569.jp2",
+   "recorded_size": [
+    8634,
+    5806
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1882/1882-01-19_p1_sn89067274_00294556278_1882011901_0488.json",
+   "article_id": "10_1882-01-19_pna_sn89067274_00294556278_1882011901_0488.json",
+   "truth": "same page",
+   "service": "service:ndnp:mohi:batch_mohi_garfield_ver01:data:sn89067274:00294556278:1882011901:0488",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_garfield_ver01/data/sn89067274/00294556278/1882011901/0488.jp2",
+   "recorded_size": [
+    8352,
+    5748
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    8635,
+    5964
+   ],
+   "alto_status": 200,
+   "article_words": 242,
+   "words_on_page": 0.5496,
+   "pairs_on_page": 0.1338,
+   "words_in_boxes": 0.438,
+   "verdict": null
+  },
+  {
+   "member": "faro_1882/1882-01-19_p1_sn89067274_00294556278_1882011901_0488.json",
+   "article_id": "10_1882-01-19_pna_sn89067274_00294556278_1882011901_0488.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mohi:batch_mohi_garfield_ver01:data:sn89067274:00294556278:1882011901:0487",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mohi_garfield_ver01/data/sn89067274/00294556278/1882011901/0488.jp2",
+   "recorded_size": [
+    8352,
+    5748
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1885/1885-09-17_p1_sn85033781_00296023784_1885091701_0307.json",
+   "article_id": "21_1885-09-17_pna_sn85033781_00296023784_1885091701_0307.json",
+   "truth": "same page",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_gaylord_ver02:data:sn85033781:00296023784:1885091701:0307",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_gaylord_ver02/data/sn85033781/00296023784/1885091701/0307.jp2",
+   "recorded_size": [
+    10613,
+    7141
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    10621,
+    7460
+   ],
+   "alto_status": 200,
+   "article_words": 270,
+   "words_on_page": 0.963,
+   "pairs_on_page": 0.8922,
+   "words_in_boxes": 0.9519,
+   "verdict": null
+  },
+  {
+   "member": "faro_1885/1885-09-17_p1_sn85033781_00296023784_1885091701_0307.json",
+   "article_id": "21_1885-09-17_pna_sn85033781_00296023784_1885091701_0307.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:mimtptc:batch_mimtptc_gaylord_ver02:data:sn85033781:00296023784:1885091701:0306",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/mimtptc_gaylord_ver02/data/sn85033781/00296023784/1885091701/0307.jp2",
+   "recorded_size": [
+    10613,
+    7141
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1913/1913-04-04_p1_sn86092536_00414186294_1913040401_0043.json",
+   "article_id": "12_1913-04-04_pna_sn86092536_00414186294_1913040401_0043.json",
+   "truth": "same page",
+   "service": "service:ndnp:wvu:batch_wvu_boreman_ver01:data:sn86092536:00414186294:1913040401:0043",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wvu_boreman_ver01/data/sn86092536/00414186294/1913040401/0043.jp2",
+   "recorded_size": [
+    6805,
+    5096
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7041,
+    5251
+   ],
+   "alto_status": 200,
+   "article_words": 163,
+   "words_on_page": 0.8528,
+   "pairs_on_page": 0.7983,
+   "words_in_boxes": 0.8528,
+   "verdict": null
+  },
+  {
+   "member": "faro_1913/1913-04-04_p1_sn86092536_00414186294_1913040401_0043.json",
+   "article_id": "12_1913-04-04_pna_sn86092536_00414186294_1913040401_0043.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:wvu:batch_wvu_boreman_ver01:data:sn86092536:00414186294:1913040401:0044",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/wvu_boreman_ver01/data/sn86092536/00414186294/1913040401/0043.jp2",
+   "recorded_size": [
+    6805,
+    5096
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7009,
+    5254
+   ],
+   "alto_status": 200,
+   "article_words": 163,
+   "words_on_page": 0.184,
+   "pairs_on_page": 0.0432,
+   "words_in_boxes": 0.0184,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1875/1875-01-22_p1_sn82014248_00332895916_1875012201_0396.json",
+   "article_id": "1_1875-01-22_pna_sn82014248_00332895916_1875012201_0396.json",
+   "truth": "same page",
+   "service": "service:ndnp:me:batch_me_dyerbrook_ver01:data:sn82014248:00332895916:1875012201:0396",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_dyerbrook_ver01/data/sn82014248/00332895916/1875012201/0396.jp2",
+   "recorded_size": [
+    6827,
+    5251
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    6974,
+    5488
+   ],
+   "alto_status": 200,
+   "article_words": 196,
+   "words_on_page": 0.9235,
+   "pairs_on_page": 0.8637,
+   "words_in_boxes": 0.9184,
+   "verdict": null
+  },
+  {
+   "member": "faro_1875/1875-01-22_p1_sn82014248_00332895916_1875012201_0396.json",
+   "article_id": "1_1875-01-22_pna_sn82014248_00332895916_1875012201_0396.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:me:batch_me_dyerbrook_ver01:data:sn82014248:00332895916:1875012201:0395",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/me_dyerbrook_ver01/data/sn82014248/00332895916/1875012201/0396.jp2",
+   "recorded_size": [
+    6827,
+    5251
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  },
+  {
+   "member": "faro_1865/1865-04-17_p1_sn86053570_00237288981_1865041701_0187.json",
+   "article_id": "25_1865-04-17_pna_sn86053570_00237288981_1865041701_0187.json",
+   "truth": "same page",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn86053570:00237288981:1865041701:0187",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn86053570/00237288981/1865041701/0187.jp2",
+   "recorded_size": [
+    5644,
+    4371
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    5960,
+    4476
+   ],
+   "alto_status": 200,
+   "article_words": 26,
+   "words_on_page": 0.4615,
+   "pairs_on_page": 0.1373,
+   "words_in_boxes": 0.2308,
+   "verdict": null
+  },
+  {
+   "member": "faro_1865/1865-04-17_p1_sn86053570_00237288981_1865041701_0187.json",
+   "article_id": "25_1865-04-17_pna_sn86053570_00237288981_1865041701_0187.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:dlc:batch_dlc_deltaair_ver01:data:sn86053570:00237288981:1865041701:0186",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/dlc_deltaair_ver01/data/sn86053570/00237288981/1865041701/0187.jp2",
+   "recorded_size": [
+    5644,
+    4371
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    5748,
+    4284
+   ],
+   "alto_status": 200,
+   "article_words": 26,
+   "words_on_page": 0.1923,
+   "pairs_on_page": 0.0392,
+   "words_in_boxes": 0.0,
+   "verdict": "the article's words aren't in its boxes"
+  },
+  {
+   "member": "faro_1897/1897-04-30_p1_sn84020631_00415628985_1897043001_0412.json",
+   "article_id": "40_1897-04-30_pna_sn84020631_00415628985_1897043001_0412.json",
+   "truth": "same page",
+   "service": "service:ndnp:nmu:batch_nmu_fleming_ver01:data:sn84020631:00415628985:1897043001:0412",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_fleming_ver01/data/sn84020631/00415628985/1897043001/0412.jp2",
+   "recorded_size": [
+    7021,
+    4903
+   ],
+   "approximate": true,
+   "info_status": 200,
+   "info_size": [
+    7021,
+    4924
+   ],
+   "alto_status": 200,
+   "article_words": 319,
+   "words_on_page": 0.8088,
+   "pairs_on_page": 0.6827,
+   "words_in_boxes": 0.7649,
+   "verdict": null
+  },
+  {
+   "member": "faro_1897/1897-04-30_p1_sn84020631_00415628985_1897043001_0412.json",
+   "article_id": "40_1897-04-30_pna_sn84020631_00415628985_1897043001_0412.json",
+   "truth": "the frame beside it",
+   "service": "service:ndnp:nmu:batch_nmu_fleming_ver01:data:sn84020631:00415628985:1897043001:0411",
+   "batch_path": "https://chroniclingamerica.loc.gov/data/batches/nmu_fleming_ver01/data/sn84020631/00415628985/1897043001/0412.jp2",
+   "recorded_size": [
+    7021,
+    4903
+   ],
+   "approximate": true,
+   "info_status": 404,
+   "verdict": "no such page"
+  }
+ ],
+ "look": [
+  {
+   "service": "service:ndnp:mthi:batch_mthi_avocet_ver01:data:sn86075022:00294550021:1893040101:0261",
+   "crop": "data/crops/ff371e98b1735a6bee7068fa.jpg",
+   "text": "An Engiishusn who Coal1 Do Daay 1nnes\n\n\nFor Teachers Of HypaOtisD.\n\n\nThe subject who came to mo had been\n. shining light in the profession, and\nhave reason to know that he was ex-\nceptionally gifted. He had performed to\ncrowded houses under several great\nartists at the Aquarium. and elsewhere\nin Lon"
+  },
+  {
+   "service": "service:ndnp:vtu:batch_vtu_londonderry_ver01:data:sn84023252:00200296229:1856022301:0452",
+   "crop": "data/crops/cedc9d41f2a353f10f54ec31.jpg",
+   "text": "'-i' o\\ HIS IRNN FL .S.\n\n\nIf'v' Mr' EDITOR, what do YOU think Of\nWinter? Every celebrated author. noet\nwarrior and politician, has his merits and\ndement's fully vtliscussed-smal, mor;t so,,o of\n'hem nave too-and think the aforc men.\n''ohe' Old fellow. who has paid us in \"OlJ\nVermont\" yearly visit fr"
+  }
+ ],
+ "reels": [
+  {
+   "kind": "split",
+   "member": "faro_1932/1932-08-31_p12_sn84026749_00205696507_1932083101_1242.json",
+   "recorded_size": [
+    7496,
+    5945
+   ],
+   "approximate": false,
+   "picked": "dlc_foxhall_ver03",
+   "batches": {
+    "dlc_chinatown_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_foxhall_ver03": {
+     "status": 200,
+     "size": [
+      7496,
+      5945
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1922/1922-08-30_p4_sn91052360_00279550791_1922083001_0374.json",
+   "recorded_size": [
+    4762,
+    4056
+   ],
+   "approximate": false,
+   "picked": "cohi_bailey_ver02",
+   "batches": {
+    "cohi_bailey_ver02": {
+     "status": 200,
+     "size": [
+      4762,
+      4056
+     ]
+    },
+    "cohi_hancock_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1912/1912-12-29_p1_sn83045396_print_1912122901_0645.json",
+   "recorded_size": [
+    8663,
+    6177
+   ],
+   "approximate": true,
+   "picked": "uuml_riis_ver02",
+   "batches": {
+    "uuml_ocana_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "uuml_pereiro_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "uuml_riis_ver02": {
+     "status": 200,
+     "size": [
+      8663,
+      6276
+     ]
+    },
+    "uuml_sastre_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1903/1903-06-01_p4_sn82015679_00202191708_1903060101_0197.json",
+   "recorded_size": [
+    11651,
+    8848
+   ],
+   "approximate": false,
+   "picked": "in_hoosier_ver01",
+   "batches": {
+    "in_hoosier_ver01": {
+     "status": 200,
+     "size": [
+      11651,
+      8848
+     ]
+    },
+    "in_jasper_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1875/1875-07-08_p4_sn87056600_00202191575_1875070801_0239.json",
+   "recorded_size": [
+    8808,
+    6472
+   ],
+   "approximate": false,
+   "picked": "in_gary_ver01",
+   "batches": {
+    "in_fairmount_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "in_gary_ver01": {
+     "status": 200,
+     "size": [
+      8808,
+      6472
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1897/1897-04-15_p3_sn90059048_00280767505_1897041501_0055.json",
+   "recorded_size": [
+    8060,
+    5484
+   ],
+   "approximate": false,
+   "picked": "mnhi_jevne_ver02",
+   "batches": {
+    "mnhi_datsun_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "mnhi_jevne_ver02": {
+     "status": 200,
+     "size": [
+      8060,
+      5484
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1904/1904-10-20_p2_sn87057928_00340584454_1904102001_0807.json",
+   "recorded_size": [
+    8554,
+    6348
+   ],
+   "approximate": false,
+   "picked": "iahi_nincada_ver01",
+   "batches": {
+    "iahi_gardevoir_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "iahi_nincada_ver01": {
+     "status": 200,
+     "size": [
+      8554,
+      6348
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1907/1907-09-07_p1_sn85038615_00100480037_1907090701_0139.json",
+   "recorded_size": [
+    7463,
+    5493
+   ],
+   "approximate": true,
+   "picked": "vi_chatham_ver01",
+   "batches": {
+    "vi_bristol_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "vi_chatham_ver01": {
+     "status": 200,
+     "size": [
+      7463,
+      5517
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1902/1902-06-02_p8_sn88064676_00280761655_1902060201_0959.json",
+   "recorded_size": [
+    6449,
+    4989
+   ],
+   "approximate": false,
+   "picked": "lu_havok_ver01",
+   "batches": {
+    "lu_havok_ver01": {
+     "status": 200,
+     "size": [
+      6449,
+      4989
+     ]
+    },
+    "lu_onslaught_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1908/1908-01-10_p1_sn85038615_00100480050_1908011001_0125.json",
+   "recorded_size": [
+    7503,
+    5353
+   ],
+   "approximate": true,
+   "picked": "vi_danville_ver01",
+   "batches": {
+    "vi_chatham_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "vi_danville_ver01": {
+     "status": 200,
+     "size": [
+      7616,
+      5445
+     ]
+    },
+    "vi_ivy_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1916/1916-01-22_p1_sn83045211_00237287502_1916012201_0959.json",
+   "recorded_size": [
+    6551,
+    4959
+   ],
+   "approximate": true,
+   "picked": "pst_curtin_ver01",
+   "batches": {
+    "pst_beaver_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "pst_curtin_ver01": {
+     "status": 200,
+     "size": [
+      6778,
+      4992
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1885/1885-05-09_p2_sn88064176_00211100849_1885050901_0699.json",
+   "recorded_size": [
+    7338,
+    4890
+   ],
+   "approximate": false,
+   "picked": "lu_lila_ver02",
+   "batches": {
+    "lu_lila_ver02": {
+     "status": 200,
+     "size": [
+      7338,
+      4890
+     ]
+    },
+    "lu_quentin_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1874/1874-03-19_p1_sn85033078_0027176943A_1874031901_0095.json",
+   "recorded_size": [
+    9431,
+    7193
+   ],
+   "approximate": true,
+   "picked": "whi_ada_ver01",
+   "batches": {
+    "whi_ada_ver01": {
+     "status": 200,
+     "size": [
+      9854,
+      7580
+     ]
+    },
+    "whi_inez_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1958/1958-03-05_p2_sn84020662_00414185447_1958030501_0172.json",
+   "recorded_size": [
+    5805,
+    4115
+   ],
+   "approximate": false,
+   "picked": "ak_dungenesscrab_ver01",
+   "batches": {
+    "ak_dungenesscrab_ver01": {
+     "status": 200,
+     "size": [
+      5805,
+      4115
+     ]
+    },
+    "ak_killerwhale_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1865/1865-04-22_p1_sn84024669_00414184765_1865042201_0259.json",
+   "recorded_size": [
+    6189,
+    4029
+   ],
+   "approximate": true,
+   "picked": "vi_hanoverian_ver01",
+   "batches": {
+    "vi_balikun_ver01": {
+     "status": 200,
+     "size": [
+      6776,
+      4383
+     ]
+    },
+    "vi_hanoverian_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1860/1860-09-01_p1_sn84024656_00414184704_1860090101_0215.json",
+   "recorded_size": [
+    8574,
+    6167
+   ],
+   "approximate": true,
+   "picked": "vi_balikun_ver01",
+   "batches": {
+    "vi_balikun_ver01": {
+     "status": 200,
+     "size": [
+      8843,
+      6350
+     ]
+    },
+    "vi_hanoverian_ver01": {
+     "status": 200,
+     "size": [
+      8843,
+      6350
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1921/1921-05-15_p1_sn85042551_00212477576_1921051501_0148.json",
+   "recorded_size": [
+    7000,
+    4994
+   ],
+   "approximate": true,
+   "picked": "txdn_honda_ver02",
+   "batches": {
+    "txdn_gmc_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "txdn_honda_ver02": {
+     "status": 200,
+     "size": [
+      7111,
+      5188
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1908/1908-06-04_p1_sn84026483_00415667930_1908060401_0193.json",
+   "recorded_size": [
+    7440,
+    5791
+   ],
+   "approximate": true,
+   "picked": "ncu_frankenbatch_ver01",
+   "batches": {
+    "ncu_frankenbatch_ver01": {
+     "status": 200,
+     "size": [
+      7761,
+      6064
+     ]
+    },
+    "ncu_frankenver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1899/1899-05-13_p1_sn85059533_0039334913A_1899051301_0149.json",
+   "recorded_size": [
+    7286,
+    4984
+   ],
+   "approximate": false,
+   "picked": "wvu_casper_ver01",
+   "batches": {
+    "wvu_casper_ver01": {
+     "status": 200,
+     "size": [
+      7286,
+      4984
+     ]
+    },
+    "wvu_faldo_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1891/1891-11-07_p1_sn86069867_00175044152_1891110701_0068.json",
+   "recorded_size": [
+    7223,
+    5640
+   ],
+   "approximate": true,
+   "picked": "kyu_albatross_ver01",
+   "batches": {
+    "kyu_albatross_ver01": {
+     "status": 200,
+     "size": [
+      7828,
+      5800
+     ]
+    },
+    "kyu_dylan_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1892/1892-07-01_p1_sn94056415_00206537772_1892070101_0519.json",
+   "recorded_size": [
+    8581,
+    5932
+   ],
+   "approximate": false,
+   "picked": "nbu_indianola_ver01",
+   "batches": {
+    "nbu_gering_ver01": {
+     "status": 200,
+     "size": [
+      8581,
+      5932
+     ]
+    },
+    "nbu_indianola_ver01": {
+     "status": 200,
+     "size": [
+      8581,
+      5932
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1890/1890-03-13_pNone_sn83030272_00175044899_1890031301_0446.json",
+   "recorded_size": [
+    6396,
+    5212
+   ],
+   "approximate": false,
+   "picked": "nn_borges_ver01",
+   "batches": {
+    "nn_borges_ver01": {
+     "status": 200,
+     "size": [
+      6396,
+      5212
+     ]
+    },
+    "nn_dante_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1908/1908-07-06_p1_sn85038615_00100480074_1908070601_0221.json",
+   "recorded_size": [
+    7291,
+    5336
+   ],
+   "approximate": true,
+   "picked": "vi_danville_ver01",
+   "batches": {
+    "vi_danville_ver01": {
+     "status": 200,
+     "size": [
+      7291,
+      5386
+     ]
+    },
+    "vi_grundy_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1904/1904-06-16_p1_sn85067315_00383341085_1904061601_0575.json",
+   "recorded_size": [
+    4345,
+    3084
+   ],
+   "approximate": true,
+   "picked": "ohi_dearfield_ver01",
+   "batches": {
+    "cohi_dearfield_ver01": {
+     "status": 200,
+     "size": [
+      4485,
+      3356
+     ]
+    },
+    "ohi_dearfield_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "split",
+   "member": "faro_1900/1900-11-24_p2_sn88064111_00280761679_1900112401_0394.json",
+   "recorded_size": [
+    6716,
+    6215
+   ],
+   "approximate": false,
+   "picked": "lu_iceman_ver01",
+   "batches": {
+    "lu_iceman_ver01": {
+     "status": 200,
+     "size": [
+      6716,
+      6215
+     ]
+    },
+    "lu_onslaught_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1964/1964-10-02_p1_sn84021918_0041421695A_1964100201_0568.json",
+   "recorded_size": [
+    7384,
+    4912
+   ],
+   "approximate": false,
+   "picked": "az_campfiregoneout_ver03",
+   "batches": {
+    "az_campfiregoneout_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "az_campfiregoneout_ver03": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1918/1918-09-03_p1_sn83030214_00206532300_1918090301_0068.json",
+   "recorded_size": [
+    8415,
+    6650
+   ],
+   "approximate": false,
+   "picked": "dlc_allen_ver02",
+   "batches": {
+    "dlc_allen_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_allen_ver02": {
+     "status": 200,
+     "size": [
+      8415,
+      6650
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1918/1918-06-02_p20_sn83030214_00206532270_1918060202_0042.json",
+   "recorded_size": [
+    8333,
+    6693
+   ],
+   "approximate": false,
+   "picked": "dlc_allen_ver02",
+   "batches": {
+    "dlc_allen_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_allen_ver02": {
+     "status": 200,
+     "size": [
+      8333,
+      6693
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1918/1918-05-12_p40_sn83030214_00206532269_1918051202_0272.json",
+   "recorded_size": [
+    8377,
+    6630
+   ],
+   "approximate": false,
+   "picked": "dlc_allen_ver02",
+   "batches": {
+    "dlc_allen_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_allen_ver02": {
+     "status": 200,
+     "size": [
+      8377,
+      6630
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1917/1917-05-13_p34_sn83030214_00206532142_1917051302_0258.json",
+   "recorded_size": [
+    8349,
+    6241
+   ],
+   "approximate": false,
+   "picked": "dlc_thompson_ver02",
+   "batches": {
+    "dlc_thompson_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_thompson_ver02": {
+     "status": 200,
+     "size": [
+      8349,
+      6241
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-05-11_p76_sn83030214_00206532397_1919051102_0370.json",
+   "recorded_size": [
+    8433,
+    6676
+   ],
+   "approximate": false,
+   "picked": "dlc_carril_ver02",
+   "batches": {
+    "dlc_carril_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_carril_ver02": {
+     "status": 200,
+     "size": [
+      8433,
+      6676
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1918/1918-02-27_p4_sn89055128_0041421146A_1918022701_0204.json",
+   "recorded_size": [
+    6958,
+    4879
+   ],
+   "approximate": false,
+   "picked": "idhi_kathmandu_ver02",
+   "batches": {
+    "idhi_kathmandu_ver01": {
+     "status": 200,
+     "size": [
+      6958,
+      4879
+     ]
+    },
+    "idhi_kathmandu_ver02": {
+     "status": 200,
+     "size": [
+      6958,
+      4879
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-06-15_p61_sn83030214_00206532403_1919061502_0499.json",
+   "recorded_size": [
+    8455,
+    6756
+   ],
+   "approximate": false,
+   "picked": "dlc_carril_ver02",
+   "batches": {
+    "dlc_carril_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_carril_ver02": {
+     "status": 200,
+     "size": [
+      8455,
+      6756
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-05-05_p4_sn89055128_00414211471_1919050501_0494.json",
+   "recorded_size": [
+    6955,
+    4998
+   ],
+   "approximate": false,
+   "picked": "idhi_kathmandu_ver02",
+   "batches": {
+    "idhi_kathmandu_ver01": {
+     "status": 200,
+     "size": [
+      6955,
+      4998
+     ]
+    },
+    "idhi_kathmandu_ver02": {
+     "status": 200,
+     "size": [
+      6955,
+      4998
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1852/1852-02-25_p1_sn84024718_00414183748_1852022501_0035.json",
+   "recorded_size": [
+    9932,
+    7286
+   ],
+   "approximate": true,
+   "picked": "vi_kernals_ver02",
+   "batches": {
+    "vi_kernals_ver01": {
+     "status": 200,
+     "size": [
+      10480,
+      7480
+     ]
+    },
+    "vi_kernals_ver02": {
+     "status": 200,
+     "size": [
+      10470,
+      7465
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-12-07_p36_sn83030214_00206532464_1919120701_0172.json",
+   "recorded_size": [
+    8415,
+    6610
+   ],
+   "approximate": false,
+   "picked": "dlc_davis_ver02",
+   "batches": {
+    "dlc_davis_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_davis_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1851/1851-05-07_p1_sn84024718_00414183736_1851050701_0278.json",
+   "recorded_size": [
+    9866,
+    7211
+   ],
+   "approximate": true,
+   "picked": "vi_kernals_ver02",
+   "batches": {
+    "vi_kernals_ver01": {
+     "status": 200,
+     "size": [
+      10283,
+      7319
+     ]
+    },
+    "vi_kernals_ver02": {
+     "status": 200,
+     "size": [
+      10278,
+      7314
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-01-01_p10_sn83030214_0020653235A_1919010101_0016.json",
+   "recorded_size": [
+    8389,
+    6703
+   ],
+   "approximate": false,
+   "picked": "dlc_brown_ver02",
+   "batches": {
+    "dlc_brown_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_brown_ver02": {
+     "status": 200,
+     "size": [
+      8389,
+      6703
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1915/1915-07-14_p14_sn83030214_00206531915_1915071401_0298.json",
+   "recorded_size": [
+    8429,
+    6292
+   ],
+   "approximate": false,
+   "picked": "dlc_quinn_ver02",
+   "batches": {
+    "dlc_quinn_ver01": {
+     "status": 200,
+     "size": [
+      8429,
+      6292
+     ]
+    },
+    "dlc_quinn_ver02": {
+     "status": 200,
+     "size": [
+      8429,
+      6292
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1909/1909-10-17_p1_sn89066313_00211109798_1909101701_0101.json",
+   "recorded_size": [
+    7284,
+    5945
+   ],
+   "approximate": true,
+   "picked": "mohi_angelou_ver03",
+   "batches": {
+    "mohi_angelou_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "mohi_angelou_ver03": {
+     "status": 200,
+     "size": [
+      7289,
+      4600
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1916/1916-01-24_p1_sn89055128_00414211446_1916012401_0083.json",
+   "recorded_size": [
+    7105,
+    4932
+   ],
+   "approximate": true,
+   "picked": "idhi_kathmandu_ver02",
+   "batches": {
+    "idhi_kathmandu_ver01": {
+     "status": 200,
+     "size": [
+      7105,
+      5022
+     ]
+    },
+    "idhi_kathmandu_ver02": {
+     "status": 200,
+     "size": [
+      7105,
+      5022
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1917/1917-10-26_p3_sn89055128_00414211458_1917102601_1117.json",
+   "recorded_size": [
+    7066,
+    4979
+   ],
+   "approximate": false,
+   "picked": "idhi_kathmandu_ver02",
+   "batches": {
+    "idhi_kathmandu_ver01": {
+     "status": 200,
+     "size": [
+      7066,
+      4979
+     ]
+    },
+    "idhi_kathmandu_ver02": {
+     "status": 200,
+     "size": [
+      7066,
+      4979
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1890/1890-04-12_p1_sn85038614_00175031017_1890041201_0428.json",
+   "recorded_size": [
+    9317,
+    6503
+   ],
+   "approximate": true,
+   "picked": "vi_ironmaiden_ver02",
+   "batches": {
+    "vi_ironmaiden_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "vi_ironmaiden_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1917/1917-10-25_p8_sn90061052_0021110076A_1917102501_0382.json",
+   "recorded_size": [
+    5590,
+    3792
+   ],
+   "approximate": false,
+   "picked": "mohi_angelou_ver03",
+   "batches": {
+    "mohi_angelou_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "mohi_angelou_ver03": {
+     "status": 200,
+     "size": [
+      5590,
+      3792
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1917/1917-04-15_p14_sn83030214_00206532130_1917041501_0314.json",
+   "recorded_size": [
+    8296,
+    6135
+   ],
+   "approximate": false,
+   "picked": "dlc_thompson_ver02",
+   "batches": {
+    "dlc_thompson_ver01": {
+     "status": 200,
+     "size": [
+      8296,
+      6135
+     ]
+    },
+    "dlc_thompson_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1919/1919-04-13_p36_sn83030214_00206532385_1919041302_0334.json",
+   "recorded_size": [
+    8393,
+    6702
+   ],
+   "approximate": false,
+   "picked": "dlc_carril_ver02",
+   "batches": {
+    "dlc_carril_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "dlc_carril_ver02": {
+     "status": 200,
+     "size": [
+      8393,
+      6702
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1916/1916-12-31_p11_sn83030214_00206532099_1916123101_0623.json",
+   "recorded_size": [
+    8493,
+    6231
+   ],
+   "approximate": false,
+   "picked": "dlc_thompson_ver02",
+   "batches": {
+    "dlc_thompson_ver01": {
+     "status": 200,
+     "size": [
+      8493,
+      6231
+     ]
+    },
+    "dlc_thompson_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1892/1892-02-25_p1_sn85038614_00175031066_1892022501_0256.json",
+   "recorded_size": [
+    9342,
+    6488
+   ],
+   "approximate": true,
+   "picked": "vi_ironmaiden_ver02",
+   "batches": {
+    "vi_ironmaiden_ver01": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    },
+    "vi_ironmaiden_ver02": {
+     "status": 404,
+     "size": [
+      null,
+      null
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1917/1917-07-07_p6_sn83030214_00206532166_1917070701_0134.json",
+   "recorded_size": [
+    8362,
+    6255
+   ],
+   "approximate": false,
+   "picked": "dlc_thompson_ver02",
+   "batches": {
+    "dlc_thompson_ver01": {
+     "status": 200,
+     "size": [
+      8362,
+      6255
+     ]
+    },
+    "dlc_thompson_ver02": {
+     "status": 200,
+     "size": [
+      8362,
+      6255
+     ]
+    }
+   }
+  },
+  {
+   "kind": "reissue",
+   "member": "faro_1916/1916-06-21_p10_sn83030214_00206532026_1916062101_0466.json",
+   "recorded_size": [
+    8388,
+    6321
+   ],
+   "approximate": false,
+   "picked": "dlc_quinn_ver02",
+   "batches": {
+    "dlc_quinn_ver01": {
+     "status": 200,
+     "size": [
+      8388,
+      6321
+     ]
+    },
+    "dlc_quinn_ver02": {
+     "status": 200,
+     "size": [
+      8388,
+      6321
+     ]
+    }
+   }
+  }
+ ],
+ "summary": {
+  "false_accepts": {
+   "hits": 0,
+   "n": 90,
+   "share": 0.0,
+   "low": 0.0,
+   "high": 0.04093706842168078
+  },
+  "false_accepts_where_the_frame_exists": {
+   "hits": 0,
+   "n": 59,
+   "share": 0.0,
+   "low": 0.0,
+   "high": 0.061131479784092065
+  },
+  "size_alone_accepts_where_the_frame_exists": {
+   "hits": 25,
+   "n": 59,
+   "share": 0.4237,
+   "low": 0.3061253228310244,
+   "high": 0.5506574452716337,
+   "exact": {
+    "hits": 2,
+    "n": 36,
+    "share": 0.0556,
+    "low": 0.015369663767066846,
+    "high": 0.18144974107611211
+   },
+   "approximate": {
+    "hits": 23,
+    "n": 23,
+    "share": 1.0,
+    "low": 0.8568788745827374,
+    "high": 1.0
+   }
+  },
+  "false_rejects_where_the_page_exists": {
+   "hits": 2,
+   "n": 85,
+   "share": 0.0235,
+   "low": 0.0064763754542195365,
+   "high": 0.08178858150288165
+  },
+  "own_frames_no_longer_served": 5,
+  "member_frames_of_the_recorded_size": {
+   "hits": 18,
+   "n": 18,
+   "share": 1.0,
+   "low": 0.8241154494176252,
+   "high": 1.0
+  },
+  "batch_path_frames_of_the_recorded_size": {
+   "hits": 0,
+   "n": 18,
+   "share": 0.0,
+   "low": 0.0,
+   "high": 0.1758845505823749
+  },
+  "reels_first_pick_serves": {
+   "hits": 42,
+   "n": 50,
+   "share": 0.84,
+   "low": 0.7148551903823401,
+   "high": 0.9166267863791231
+  },
+  "reels_some_batch_serves": {
+   "hits": 46,
+   "n": 50,
+   "share": 0.92,
+   "low": 0.8116149745493629,
+   "high": 0.9684509967442093
+  },
+  "requests": 549
+ }
+}

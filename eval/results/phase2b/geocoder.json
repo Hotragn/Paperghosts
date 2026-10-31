@@ -1,0 +1,6448 @@
+{
+ "generated_at": "2026-10-30T20:07:28+00:00",
+ "gazetteer": "geonames dumps of 2026-10-30",
+ "papers": {
+  "seed": "2B geocoder",
+  "pairs": 200,
+  "without_the_record_check": {
+   "right": {
+    "right": 194,
+    "n": 200,
+    "share": 0.97,
+    "low": 0.9361048802675267,
+    "high": 0.9861798741692518
+   },
+   "resolved": 195,
+   "right_when_resolved": {
+    "right": 194,
+    "n": 195,
+    "share": 0.9948717948717949,
+    "low": 0.9715276468408303,
+    "high": 0.9990941948663379
+   },
+   "wrong_pins": 1,
+   "failures": {
+    "renamed: its old name is now another town's": 1,
+    "merged into a town that doesn't list its name": 3,
+    "two towns named as one place": 1,
+    "a ghost town filed outside populated places": 1
+   }
+  },
+  "with_the_record_check": {
+   "right": {
+    "right": 196,
+    "n": 200,
+    "share": 0.98,
+    "low": 0.9497121344948062,
+    "high": 0.9921956998236058
+   },
+   "resolved": 198,
+   "right_when_resolved": {
+    "right": 196,
+    "n": 198,
+    "share": 0.98989898989899,
+    "low": 0.9639241212907879,
+    "high": 0.9972256119653893
+   },
+   "wrong_pins": 2,
+   "failures": {
+    "renamed: its old name is now another town's": 1,
+    "merged into a town that doesn't list its name": 2,
+    "two towns named as one place": 1
+   },
+   "record": {
+    "agrees": 177,
+    "has no county to check": 14,
+    "can't be checked against GeoNames' counties": 4,
+    "found what the printed place didn't": 1,
+    "disagrees, and its own place isn't in GeoNames": 2,
+    "found what the printed place didn't, unchecked": 1,
+    "a ghost town in the record's county": 1
+   }
+  },
+  "title_records": {
+   "found": 200,
+   "requests": 0,
+   "cache_hits": 200,
+   "errors_not_cached": 0
+  },
+  "results": [
+   {
+    "town": "Waynesburg",
+    "state": "Pennsylvania",
+    "towns": [
+     "Waynesburg"
+    ],
+    "county": null,
+    "lccn": "sn81004761",
+    "expected": 4562078,
+    "catalogued": [
+     "Waynesburg",
+     [
+      "Greene"
+     ],
+     "Pennsylvania"
+    ],
+    "without_the_record_check": {
+     "found": 4562078,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4562078,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Barre",
+    "state": "Vermont",
+    "towns": [
+     "Barre"
+    ],
+    "county": null,
+    "lccn": "sn98060035",
+    "expected": 5233500,
+    "catalogued": [
+     "Barre",
+     [
+      "Washington"
+     ],
+     "Vermont"
+    ],
+    "without_the_record_check": {
+     "found": 5233500,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5233500,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Milan",
+    "state": "Tennessee",
+    "towns": [
+     "Milan"
+    ],
+    "county": "Gibson County",
+    "lccn": "sn86053488",
+    "expected": 4641630,
+    "catalogued": [
+     "Milan",
+     [
+      "Gibson"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4641630,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4641630,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lawrenceburg",
+    "state": "Tennessee",
+    "towns": [
+     "Lawrenceburg"
+    ],
+    "county": null,
+    "lccn": "sn97065075",
+    "expected": 4635849,
+    "catalogued": [
+     "Lawrenceburg",
+     [
+      "Lawrence"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4635849,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4635849,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Washington",
+    "state": "District of Columbia",
+    "towns": [
+     "Washington"
+    ],
+    "county": null,
+    "lccn": "sn82000189",
+    "expected": 4140963,
+    "catalogued": [
+     "Washington",
+     [],
+     "District Of Columbia"
+    ],
+    "without_the_record_check": {
+     "found": 4140963,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4140963,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Litchfield",
+    "state": "Connecticut",
+    "towns": [
+     "Litchfield"
+    ],
+    "county": null,
+    "lccn": "sn82014309",
+    "expected": 4837799,
+    "catalogued": [
+     "Litchfield",
+     [
+      "Litchfield"
+     ],
+     "Connecticut"
+    ],
+    "without_the_record_check": {
+     "found": 4837799,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4837799,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "can't be checked against GeoNames' counties"
+    }
+   },
+   {
+    "town": "Nome",
+    "state": "Alaska",
+    "towns": [
+     "Nome"
+    ],
+    "county": null,
+    "lccn": "sn94051405",
+    "expected": 5870133,
+    "catalogued": [
+     "Nome",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5870133,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5870133,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Ponce",
+    "state": "Puerto Rico",
+    "towns": [
+     "Ponce"
+    ],
+    "county": null,
+    "lccn": "sn90070270",
+    "expected": 4566880,
+    "catalogued": [
+     "Ponce",
+     [],
+     "Puerto Rico"
+    ],
+    "without_the_record_check": {
+     "found": 4566880,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4566880,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Kenosha",
+    "state": "Wisconsin",
+    "towns": [
+     "Kenosha"
+    ],
+    "county": null,
+    "lccn": "sn85040305",
+    "expected": 5258393,
+    "catalogued": [
+     "Kenosha",
+     [
+      "Kenosha"
+     ],
+     "Wisconsin"
+    ],
+    "without_the_record_check": {
+     "found": 5258393,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5258393,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Farmington",
+    "state": "Missouri",
+    "towns": [
+     "Farmington"
+    ],
+    "county": "St. Francois County",
+    "lccn": "sn89066996",
+    "expected": 4386289,
+    "catalogued": [
+     "Farmington",
+     [
+      "Saint Francois"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4386289,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4386289,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Springfield",
+    "state": "Illinois",
+    "towns": [
+     "Springfield"
+    ],
+    "county": "Sangamon County",
+    "lccn": "sn84025827",
+    "expected": 4250542,
+    "catalogued": [
+     "Springfield",
+     [
+      "Sangamon County"
+     ],
+     "Illinois"
+    ],
+    "without_the_record_check": {
+     "found": 4250542,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4250542,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Keokuk",
+    "state": "Iowa",
+    "towns": [
+     "Keokuk"
+    ],
+    "county": null,
+    "lccn": "sn83025182",
+    "expected": 4863349,
+    "catalogued": [
+     "Keokuk",
+     [
+      "Lee"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4863349,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4863349,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Knoxville",
+    "state": "Tennessee",
+    "towns": [
+     "Knoxville"
+    ],
+    "county": null,
+    "lccn": "sn85042907",
+    "expected": 4634946,
+    "catalogued": [
+     "Knoxville",
+     [
+      "Knox"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4634946,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4634946,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Oroville",
+    "state": "California",
+    "towns": [
+     "Oroville"
+    ],
+    "county": null,
+    "lccn": "sn86058108",
+    "expected": 5379759,
+    "catalogued": [
+     "Oroville",
+     [
+      "Butte"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5379759,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5379759,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hazlehurst",
+    "state": "Mississippi",
+    "towns": [
+     "Hazlehurst"
+    ],
+    "county": "Copiah County",
+    "lccn": "sn87065177",
+    "expected": 4429387,
+    "catalogued": [
+     "Hazlehurst",
+     [
+      "Copiah"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4429387,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4429387,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Maryville",
+    "state": "Tennessee",
+    "towns": [
+     "Maryville"
+    ],
+    "county": null,
+    "lccn": "sn96091617",
+    "expected": 4639848,
+    "catalogued": [
+     "Maryville",
+     [
+      "Blount"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4639848,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4639848,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Walla Walla",
+    "state": "Washington",
+    "towns": [
+     "Walla Walla"
+    ],
+    "county": "Walla Walla",
+    "lccn": "sn86072040",
+    "expected": 5814916,
+    "catalogued": [
+     "Walla Walla",
+     [
+      "Walla Walla"
+     ],
+     "Washington"
+    ],
+    "without_the_record_check": {
+     "found": 5814916,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5814916,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Pioche",
+    "state": "Nevada",
+    "towns": [
+     "Pioche"
+    ],
+    "county": null,
+    "lccn": "sn86091347",
+    "expected": 5510323,
+    "catalogued": [
+     "Pioche",
+     [
+      "Lincoln"
+     ],
+     "Nevada"
+    ],
+    "without_the_record_check": {
+     "found": 5510323,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5510323,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Little Falls",
+    "state": "Minnesota",
+    "towns": [
+     "Little Falls"
+    ],
+    "county": "Morrison Co.",
+    "lccn": "sn89064526",
+    "expected": 5034970,
+    "catalogued": [
+     "Little Falls",
+     [
+      "Morrison"
+     ],
+     "Minnesota"
+    ],
+    "without_the_record_check": {
+     "found": 5034970,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5034970,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Cape Girardeau",
+    "state": "Missouri",
+    "towns": [
+     "Cape Girardeau"
+    ],
+    "county": null,
+    "lccn": "sn89066818",
+    "expected": 4379966,
+    "catalogued": [
+     "Cape Girardeau",
+     [
+      "Cape Girardeau"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4379966,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4379966,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Chitina",
+    "state": "Alaska",
+    "towns": [
+     "Chitina"
+    ],
+    "county": null,
+    "lccn": "sn95060002",
+    "expected": 5859304,
+    "catalogued": [
+     "Chitina",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5859304,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5859304,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Hattiesburg",
+    "state": "Mississippi",
+    "towns": [
+     "Hattiesburg"
+    ],
+    "county": null,
+    "lccn": "sn87065167",
+    "expected": 4429295,
+    "catalogued": [
+     "Hattiesburg",
+     [
+      "Forrest",
+      "Perry"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4429295,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4429295,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Fort Wrangel",
+    "state": "Alaska",
+    "towns": [
+     "Fort Wrangel"
+    ],
+    "county": null,
+    "lccn": "sn93049269",
+    "expected": 5558586,
+    "catalogued": [
+     "Fort Wrangel",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5558586,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5558586,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Warren",
+    "state": "Rhode Island",
+    "towns": [
+     "Warren"
+    ],
+    "county": null,
+    "lccn": "sn83021520",
+    "expected": 5225502,
+    "catalogued": [
+     "Warren",
+     [
+      "Bristol"
+     ],
+     "Rhode Island"
+    ],
+    "without_the_record_check": {
+     "found": 5225502,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5225502,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Atlanta",
+    "state": "Georgia",
+    "towns": [
+     "Atlanta"
+    ],
+    "county": null,
+    "lccn": "sn83016235",
+    "expected": 4180439,
+    "catalogued": [
+     "Atlanta",
+     [
+      "Fulton"
+     ],
+     "Georgia"
+    ],
+    "without_the_record_check": {
+     "found": 4180439,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4180439,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Winnsboro",
+    "state": "South Carolina",
+    "towns": [
+     "Winnsboro"
+    ],
+    "county": null,
+    "lccn": "sn86063744",
+    "expected": 4601335,
+    "catalogued": [
+     "Winnsboro",
+     [
+      "Fairfield"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4601335,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4601335,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Eureka",
+    "state": "South Dakota",
+    "towns": [
+     "Eureka"
+    ],
+    "county": "McPherson Co.",
+    "lccn": "sn99062853",
+    "expected": 5227665,
+    "catalogued": [
+     "Eureka",
+     [
+      "Mcpherson"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5227665,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5227665,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Sequatchie",
+    "state": "Tennessee",
+    "towns": [
+     "Sequatchie",
+     "Sequachee"
+    ],
+    "county": null,
+    "lccn": "sn89058250",
+    "expected": 4656458,
+    "catalogued": [
+     "Sequatchie",
+     [
+      "Marion"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4656458,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4656458,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Wilmington",
+    "state": "Delaware",
+    "towns": [
+     "Wilmington"
+    ],
+    "county": null,
+    "lccn": "sn84038113",
+    "expected": 4145381,
+    "catalogued": [
+     "Wilmington",
+     [
+      "New Castle"
+     ],
+     "Delaware"
+    ],
+    "without_the_record_check": {
+     "found": 4145381,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4145381,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Weaverville",
+    "state": "California",
+    "towns": [
+     "Weaverville"
+    ],
+    "county": "Trinity",
+    "lccn": "sn85025203",
+    "expected": 5573443,
+    "catalogued": [
+     "Weaverville",
+     [
+      "Trinity"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5573443,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5573443,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "New Orleans",
+    "state": "Louisiana",
+    "towns": [
+     "New Orleans"
+    ],
+    "county": null,
+    "lccn": "sn88064020",
+    "expected": 4335045,
+    "catalogued": [
+     "New Orleans",
+     [
+      "Orleans"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4335045,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4335045,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Worcester",
+    "state": "Massachusetts",
+    "towns": [
+     "Worcester"
+    ],
+    "county": null,
+    "lccn": "sn83021205",
+    "expected": 4956184,
+    "catalogued": [
+     "Worcester",
+     [
+      "Worcester"
+     ],
+     "Massachusetts"
+    ],
+    "without_the_record_check": {
+     "found": 4956184,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4956184,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Cincinnati",
+    "state": "Ohio",
+    "towns": [
+     "Cincinnati"
+    ],
+    "county": null,
+    "lccn": "sn88077379",
+    "expected": 4508722,
+    "catalogued": [
+     "Cincinnati",
+     [
+      "Hamilton"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 4508722,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4508722,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Columbus",
+    "state": "Ohio",
+    "towns": [
+     "Columbus"
+    ],
+    "county": null,
+    "lccn": "sn85025948",
+    "expected": 4509177,
+    "catalogued": [
+     "Columbus",
+     [
+      "Franklin"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 4509177,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4509177,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Centre Hall",
+    "state": "Pennsylvania",
+    "towns": [
+     "Centre Hall"
+    ],
+    "county": null,
+    "lccn": "sn83032058",
+    "expected": 5183766,
+    "catalogued": [
+     "Centre Hall",
+     [
+      "Centre"
+     ],
+     "Pennsylvania"
+    ],
+    "without_the_record_check": {
+     "found": 5183766,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5183766,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Mesilla",
+    "state": "New Mexico",
+    "towns": [
+     "Mesilla"
+    ],
+    "county": null,
+    "lccn": "sn87090075",
+    "expected": 5478971,
+    "catalogued": [
+     "Mesilla",
+     [
+      "Doña Ana"
+     ],
+     "New Mexico"
+    ],
+    "without_the_record_check": {
+     "found": 5478971,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5478971,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Minneapolis",
+    "state": "Minnesota",
+    "towns": [
+     "Minneapolis"
+    ],
+    "county": null,
+    "lccn": "sn86058064",
+    "expected": 5037649,
+    "catalogued": [
+     "Minneapolis",
+     [
+      "Hennepin"
+     ],
+     "Minnesota"
+    ],
+    "without_the_record_check": {
+     "found": 5037649,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5037649,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Cheyenne",
+    "state": "Wyoming",
+    "towns": [
+     "Cheyenne"
+    ],
+    "county": "Laramie",
+    "lccn": "sn86072173",
+    "expected": 5821086,
+    "catalogued": [
+     "Cheyenne",
+     [
+      "Laramie"
+     ],
+     "Wyoming"
+    ],
+    "without_the_record_check": {
+     "found": 5821086,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5821086,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Crystal Falls",
+    "state": "Michigan",
+    "towns": [
+     "Crystal Falls"
+    ],
+    "county": "Iron County",
+    "lccn": "sn96076817",
+    "expected": 4990121,
+    "catalogued": [
+     "Crystal Falls",
+     [
+      "Iron"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": 4990121,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4990121,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Van Buren",
+    "state": "Arkansas",
+    "towns": [
+     "Van Buren"
+    ],
+    "county": null,
+    "lccn": "sn82016488",
+    "expected": 4134716,
+    "catalogued": [
+     "Van Buren",
+     [
+      "Crawford"
+     ],
+     "Arkansas"
+    ],
+    "without_the_record_check": {
+     "found": 4134716,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4134716,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Paris",
+    "state": "Tennessee",
+    "towns": [
+     "Paris"
+    ],
+    "county": null,
+    "lccn": "sn89058354",
+    "expected": 4647963,
+    "catalogued": [
+     "Paris",
+     [
+      "Henry"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4647963,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4647963,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Sturgis",
+    "state": "South Dakota",
+    "towns": [
+     "Sturgis"
+    ],
+    "county": null,
+    "lccn": "sn97065761",
+    "expected": 5769489,
+    "catalogued": [
+     "Sturgis",
+     [
+      "Meade"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5769489,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5769489,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ashland",
+    "state": "Oregon",
+    "towns": [
+     "Ashland"
+    ],
+    "county": null,
+    "lccn": "sn96088004",
+    "expected": 5711789,
+    "catalogued": [
+     "Ashland",
+     [
+      "Jackson"
+     ],
+     "Oregon"
+    ],
+    "without_the_record_check": {
+     "found": 5711789,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5711789,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Winchester",
+    "state": "Indiana",
+    "towns": [
+     "Winchester"
+    ],
+    "county": null,
+    "lccn": "sn84038255",
+    "expected": 4928318,
+    "catalogued": [
+     "Winchester",
+     [
+      "Randolph"
+     ],
+     "Indiana"
+    ],
+    "without_the_record_check": {
+     "found": 4928318,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4928318,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Camden",
+    "state": "Tennessee",
+    "towns": [
+     "Camden"
+    ],
+    "county": null,
+    "lccn": "sn89058013",
+    "expected": 4610643,
+    "catalogued": [
+     "Camden",
+     [
+      "Benton"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4610643,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4610643,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lamar",
+    "state": "Colorado",
+    "towns": [
+     "Lamar"
+    ],
+    "county": "Prowers",
+    "lccn": "sn90051188",
+    "expected": 5427957,
+    "catalogued": [
+     "Lamar",
+     [
+      "Prowers",
+      "Bent"
+     ],
+     "Colorado"
+    ],
+    "without_the_record_check": {
+     "found": 5427957,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5427957,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Mount Holly",
+    "state": "New Jersey",
+    "towns": [
+     "Mount Holly"
+    ],
+    "county": "Burlington Co.",
+    "lccn": "sn85035561",
+    "expected": 4503134,
+    "catalogued": [
+     "Mount Holly",
+     [
+      "Burlington"
+     ],
+     "New Jersey"
+    ],
+    "without_the_record_check": {
+     "found": 4503134,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4503134,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Plymouth",
+    "state": "Indiana",
+    "towns": [
+     "Plymouth"
+    ],
+    "county": "Marshall County",
+    "lccn": "sn87056241",
+    "expected": 4924970,
+    "catalogued": [
+     "Plymouth",
+     [
+      "Marshall"
+     ],
+     "Indiana"
+    ],
+    "without_the_record_check": {
+     "found": 4924970,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4924970,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Kimball",
+    "state": "South Dakota",
+    "towns": [
+     "Kimball"
+    ],
+    "county": "Brule County",
+    "lccn": "sn99068075",
+    "expected": 5228984,
+    "catalogued": [
+     "Kimball",
+     [
+      "Brule"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5228984,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5228984,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Baltimore",
+    "state": "Maryland",
+    "towns": [
+     "Baltimore"
+    ],
+    "county": null,
+    "lccn": "sn83009597",
+    "expected": 4347778,
+    "catalogued": [
+     "Baltimore",
+     [],
+     "Maryland"
+    ],
+    "without_the_record_check": {
+     "found": 4347778,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4347778,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Snowflake",
+    "state": "Arizona",
+    "towns": [
+     "Snowflake"
+    ],
+    "county": null,
+    "lccn": "sn86091255",
+    "expected": 5314943,
+    "catalogued": [
+     "Snowflake",
+     [
+      "Navajo"
+     ],
+     "Arizona"
+    ],
+    "without_the_record_check": {
+     "found": 5314943,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5314943,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Tallahassee",
+    "state": "Florida",
+    "towns": [
+     "Tallahassee"
+    ],
+    "county": null,
+    "lccn": "sn82015289",
+    "expected": 4174715,
+    "catalogued": [
+     "Tallahassee",
+     [
+      "Leon"
+     ],
+     "Florida"
+    ],
+    "without_the_record_check": {
+     "found": 4174715,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4174715,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Watertown",
+    "state": "Wisconsin",
+    "towns": [
+     "Watertown"
+    ],
+    "county": null,
+    "lccn": "sn85033295",
+    "expected": 5278005,
+    "catalogued": [
+     "Watertown",
+     [
+      "Jefferson",
+      "Dodge"
+     ],
+     "Wisconsin"
+    ],
+    "without_the_record_check": {
+     "found": 5278005,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5278005,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lancaster",
+    "state": "South Carolina",
+    "towns": [
+     "Lancaster"
+    ],
+    "county": null,
+    "lccn": "sn84026900",
+    "expected": 4584556,
+    "catalogued": [
+     "Lancaster",
+     [
+      "Lancaster"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4584556,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4584556,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Franklinton",
+    "state": "Louisiana",
+    "towns": [
+     "Franklinton"
+    ],
+    "county": null,
+    "lccn": "sn88064305",
+    "expected": 4325165,
+    "catalogued": [
+     "Franklinton",
+     [
+      "Washington"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4325165,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4325165,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Allegheny",
+    "state": "Pennsylvania",
+    "towns": [
+     "Allegheny"
+    ],
+    "county": null,
+    "lccn": "sn84024547",
+    "expected": 5206379,
+    "catalogued": [
+     "Youngstown",
+     [
+      "Allegheny",
+      "Mahoning"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 5206379,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5206379,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Daytona",
+    "state": "Florida",
+    "towns": [
+     "Daytona"
+    ],
+    "county": "Volusia County",
+    "lccn": "sn95047378",
+    "expected": 4152872,
+    "catalogued": [
+     "Daytona",
+     [
+      "Volusia County"
+     ],
+     "Florida"
+    ],
+    "without_the_record_check": {
+     "found": 4152872,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4152872,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ottumwa",
+    "state": "Iowa",
+    "towns": [
+     "Ottumwa"
+    ],
+    "county": "Wapello County",
+    "lccn": "sn92056106",
+    "expected": 4870380,
+    "catalogued": [
+     "Ottumwa",
+     [
+      "Wapello"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4870380,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4870380,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Shasta",
+    "state": "California",
+    "towns": [
+     "Shasta"
+    ],
+    "county": null,
+    "lccn": "sn82015099",
+    "expected": 5571092,
+    "catalogued": [
+     "Shasta",
+     [
+      "Shasta"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5571092,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5571092,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Safford",
+    "state": "Arizona",
+    "towns": [
+     "Safford"
+    ],
+    "county": null,
+    "lccn": "sn95060914",
+    "expected": 5312476,
+    "catalogued": [
+     "Safford",
+     [
+      "Graham"
+     ],
+     "Arizona"
+    ],
+    "without_the_record_check": {
+     "found": 5312476,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5312476,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Bloomington",
+    "state": "Iowa",
+    "towns": [
+     "Bloomington"
+    ],
+    "county": null,
+    "lccn": "sn88059754",
+    "expected": 4868404,
+    "catalogued": [
+     "Muscatine",
+     [
+      "Story",
+      "Muscatine"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4848880,
+     "reason": null,
+     "right": false,
+     "failure": "renamed: its old name is now another town's"
+    },
+    "with_the_record_check": {
+     "found": 4848880,
+     "reason": null,
+     "right": false,
+     "failure": "renamed: its old name is now another town's",
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lincoln",
+    "state": "Nebraska",
+    "towns": [
+     "Lincoln"
+    ],
+    "county": null,
+    "lccn": "sn86063459",
+    "expected": 5072006,
+    "catalogued": [
+     "Lincoln",
+     [
+      "Lancaster"
+     ],
+     "Nebraska"
+    ],
+    "without_the_record_check": {
+     "found": 5072006,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5072006,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Bryan",
+    "state": "Texas",
+    "towns": [
+     "Bryan"
+    ],
+    "county": null,
+    "lccn": "sn86088792",
+    "expected": 4677008,
+    "catalogued": [
+     "Bryan",
+     [
+      "Brazos"
+     ],
+     "Texas"
+    ],
+    "without_the_record_check": {
+     "found": 4677008,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4677008,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Richmond",
+    "state": "Virginia",
+    "towns": [
+     "Richmond"
+    ],
+    "county": null,
+    "lccn": "sn84024657",
+    "expected": 4781708,
+    "catalogued": [
+     "Richmond",
+     [],
+     "Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4781708,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4781708,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Manchester",
+    "state": "Vermont",
+    "towns": [
+     "Manchester"
+    ],
+    "county": null,
+    "lccn": "sn83025668",
+    "expected": 5238267,
+    "catalogued": [
+     "Bennington",
+     [
+      "Bennington"
+     ],
+     "Vermont"
+    ],
+    "without_the_record_check": {
+     "found": 5238267,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5238267,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Chicago",
+    "state": "Illinois",
+    "towns": [
+     "Chicago"
+    ],
+    "county": null,
+    "lccn": "sn83045377",
+    "expected": 4887398,
+    "catalogued": [
+     "Chicago",
+     [
+      "Cook County"
+     ],
+     "Illinois"
+    ],
+    "without_the_record_check": {
+     "found": 4887398,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4887398,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "East Saginaw",
+    "state": "Michigan",
+    "towns": [
+     "East Saginaw"
+    ],
+    "county": null,
+    "lccn": "sn97063063",
+    "expected": 5007989,
+    "catalogued": [
+     "Saginaw",
+     [
+      "Saginaw"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": null,
+     "reason": "no place of that name in Michigan",
+     "right": false,
+     "failure": "merged into a town that doesn't list its name"
+    },
+    "with_the_record_check": {
+     "found": 5007989,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "found what the printed place didn't"
+    }
+   },
+   {
+    "town": "San Francisco",
+    "state": "California",
+    "towns": [
+     "San Francisco"
+    ],
+    "county": null,
+    "lccn": "sn84025838",
+    "expected": 5391959,
+    "catalogued": [
+     "San Francisco",
+     [
+      "San Francisco"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5391959,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5391959,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Edwardsville",
+    "state": "Illinois",
+    "towns": [
+     "Edwardsville"
+    ],
+    "county": null,
+    "lccn": "sn82015374",
+    "expected": 4237717,
+    "catalogued": [
+     "Edwardsville",
+     [
+      "Madison"
+     ],
+     "Illinois"
+    ],
+    "without_the_record_check": {
+     "found": 4237717,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4237717,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Brownsville",
+    "state": "Texas",
+    "towns": [
+     "Brownsville"
+    ],
+    "county": null,
+    "lccn": "sn86063730",
+    "expected": 4676740,
+    "catalogued": [
+     "Brownsville",
+     [
+      "Cameron"
+     ],
+     "Texas"
+    ],
+    "without_the_record_check": {
+     "found": 4676740,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4676740,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ripley",
+    "state": "Mississippi",
+    "towns": [
+     "Ripley"
+    ],
+    "county": null,
+    "lccn": "sn87065590",
+    "expected": 4443338,
+    "catalogued": [
+     "Ripley",
+     [
+      "Tippah"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4443338,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4443338,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Gann Valley",
+    "state": "South Dakota",
+    "towns": [
+     "Gann Valley"
+    ],
+    "county": "Buffalo County",
+    "lccn": "sn99068086",
+    "expected": 5227964,
+    "catalogued": [
+     "Gann Valley",
+     [
+      "Buffalo"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5227964,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5227964,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Coolidge",
+    "state": "Arizona",
+    "towns": [
+     "Coolidge"
+    ],
+    "county": null,
+    "lccn": "sn94050542",
+    "expected": 5290663,
+    "catalogued": [
+     "Coolidge",
+     [
+      "Pinal"
+     ],
+     "Arizona"
+    ],
+    "without_the_record_check": {
+     "found": 5290663,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5290663,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lubbock",
+    "state": "Texas",
+    "towns": [
+     "Lubbock"
+    ],
+    "county": null,
+    "lccn": "sn86088055",
+    "expected": 5525577,
+    "catalogued": [
+     "Lubbock",
+     [
+      "Lubbock"
+     ],
+     "Texas"
+    ],
+    "without_the_record_check": {
+     "found": 5525577,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5525577,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Dover",
+    "state": "Delaware",
+    "towns": [
+     "Dover"
+    ],
+    "county": "Kent",
+    "lccn": "sn84020427",
+    "expected": 4142290,
+    "catalogued": [
+     "Dover",
+     [
+      "Kent"
+     ],
+     "Delaware"
+    ],
+    "without_the_record_check": {
+     "found": 4142290,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4142290,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lexington",
+    "state": "South Carolina",
+    "towns": [
+     "Lexington"
+    ],
+    "county": null,
+    "lccn": "sn84026907",
+    "expected": 4585000,
+    "catalogued": [
+     "Lexington",
+     [
+      "Lexington"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4585000,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4585000,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Alexandria",
+    "state": "Virginia",
+    "towns": [
+     "Alexandria"
+    ],
+    "county": null,
+    "lccn": "sn85025001",
+    "expected": 4744091,
+    "catalogued": [
+     "Alexandria",
+     [],
+     "Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4744091,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4744091,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Lardo",
+    "state": "Idaho",
+    "towns": [
+     "Lardo"
+    ],
+    "county": null,
+    "lccn": "sn89055163",
+    "expected": 5600363,
+    "catalogued": [
+     "Roseberry",
+     [
+      "Idaho"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": null,
+     "reason": "no place of that name in Idaho",
+     "right": false,
+     "failure": "merged into a town that doesn't list its name"
+    },
+    "with_the_record_check": {
+     "found": null,
+     "reason": "outside the record's county, whose own place isn't in GeoNames",
+     "right": false,
+     "failure": "merged into a town that doesn't list its name",
+     "record": "disagrees, and its own place isn't in GeoNames"
+    }
+   },
+   {
+    "town": "Alma",
+    "state": "Michigan",
+    "towns": [
+     "Alma"
+    ],
+    "county": null,
+    "lccn": "sn85038709",
+    "expected": 4984049,
+    "catalogued": [
+     "Alma",
+     [
+      "Gratiot"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": 4984049,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4984049,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Seward",
+    "state": "Alaska",
+    "towns": [
+     "Seward"
+    ],
+    "county": "Seward",
+    "lccn": "sn87062015",
+    "expected": 5873776,
+    "catalogued": [
+     "Seward",
+     [
+      "Seward"
+     ],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5873776,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5873776,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "can't be checked against GeoNames' counties"
+    }
+   },
+   {
+    "town": "Bloomsburg",
+    "state": "Pennsylvania",
+    "towns": [
+     "Bloomsburg"
+    ],
+    "county": null,
+    "lccn": "sn85025182",
+    "expected": 5180934,
+    "catalogued": [
+     "Bloomsburg",
+     [
+      "Columbia"
+     ],
+     "Pennsylvania"
+    ],
+    "without_the_record_check": {
+     "found": 5180934,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5180934,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Mexico",
+    "state": "Missouri",
+    "towns": [
+     "Mexico"
+    ],
+    "county": null,
+    "lccn": "sn89067274",
+    "expected": 4398103,
+    "catalogued": [
+     "Mexico",
+     [
+      "Audrain"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4398103,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4398103,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Kosciusko",
+    "state": "Mississippi",
+    "towns": [
+     "Kosciusko"
+    ],
+    "county": null,
+    "lccn": "sn87065300",
+    "expected": 4432542,
+    "catalogued": [
+     "Kosciusko",
+     [
+      "Attala"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4432542,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4432542,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ozark",
+    "state": "Arkansas",
+    "towns": [
+     "Ozark"
+    ],
+    "county": null,
+    "lccn": "sn88051110",
+    "expected": 4125181,
+    "catalogued": [
+     "Ozark",
+     [
+      "Franklin"
+     ],
+     "Arkansas"
+    ],
+    "without_the_record_check": {
+     "found": 4125181,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4125181,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Yankton",
+    "state": "South Dakota",
+    "towns": [
+     "Yankton"
+    ],
+    "county": null,
+    "lccn": "sn84022144",
+    "expected": 5233053,
+    "catalogued": [
+     "Yankton",
+     [
+      "Yankton"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5233053,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5233053,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Columbia",
+    "state": "California",
+    "towns": [
+     "Columbia"
+    ],
+    "county": "Tuolumne Co.",
+    "lccn": "sn84038768",
+    "expected": 5338800,
+    "catalogued": [
+     "Columbia",
+     [
+      "Tuolumne"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5338800,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5338800,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Trenton",
+    "state": "New Jersey",
+    "towns": [
+     "Trenton"
+    ],
+    "county": null,
+    "lccn": "sn84026314",
+    "expected": 5105496,
+    "catalogued": [
+     "Trenton",
+     [
+      "Mercer"
+     ],
+     "New Jersey"
+    ],
+    "without_the_record_check": {
+     "found": 5105496,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5105496,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Los Angeles",
+    "state": "California",
+    "towns": [
+     "Los Angeles"
+    ],
+    "county": "Los Angeles",
+    "lccn": "sn81004351",
+    "expected": 5368361,
+    "catalogued": [
+     "Los Angeles",
+     [
+      "Los Angeles"
+     ],
+     "California"
+    ],
+    "without_the_record_check": {
+     "found": 5368361,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5368361,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Butte",
+    "state": "Montana",
+    "towns": [
+     "Butte"
+    ],
+    "county": null,
+    "lccn": "sn84036034",
+    "expected": 5642934,
+    "catalogued": [
+     "Butte",
+     [
+      "Silver Bow"
+     ],
+     "Montana"
+    ],
+    "without_the_record_check": {
+     "found": 5642934,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5642934,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Idaho City",
+    "state": "Idaho",
+    "towns": [
+     "Idaho City"
+    ],
+    "county": null,
+    "lccn": "sn82015407",
+    "expected": 5596462,
+    "catalogued": [
+     "Idaho City",
+     [
+      "Boise"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5596462,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5596462,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Neihart",
+    "state": "Montana",
+    "towns": [
+     "Neihart"
+    ],
+    "county": null,
+    "lccn": "sn85053323",
+    "expected": 5668381,
+    "catalogued": [
+     "Neihart",
+     [
+      "Cascade"
+     ],
+     "Montana"
+    ],
+    "without_the_record_check": {
+     "found": 5668381,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5668381,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Benton",
+    "state": "Missouri",
+    "towns": [
+     "Benton"
+    ],
+    "county": "Scott",
+    "lccn": "sn89066234",
+    "expected": 4376569,
+    "catalogued": [
+     "Benton",
+     [
+      "Scott"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4376569,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4376569,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Plaquemine",
+    "state": "Louisiana",
+    "towns": [
+     "Plaquemine"
+    ],
+    "county": "Iberville",
+    "lccn": "sn86053832",
+    "expected": 4337436,
+    "catalogued": [
+     "Plaquemine",
+     [
+      "Iberville"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4337436,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4337436,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Timber Lake",
+    "state": "South Dakota",
+    "towns": [
+     "Timber Lake"
+    ],
+    "county": null,
+    "lccn": "sn95076637",
+    "expected": 5769772,
+    "catalogued": [
+     "Timber Lake",
+     [
+      "Dewey"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5769772,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5769772,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lewistown",
+    "state": "Montana",
+    "towns": [
+     "Lewistown"
+    ],
+    "county": null,
+    "lccn": "sn84024811",
+    "expected": 5662162,
+    "catalogued": [
+     "Lewistown",
+     [
+      "Lewis And Clark",
+      "Fergus"
+     ],
+     "Montana"
+    ],
+    "without_the_record_check": {
+     "found": 5662162,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5662162,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Skagway",
+    "state": "Alaska",
+    "towns": [
+     "Skagway"
+    ],
+    "county": null,
+    "lccn": "sn87062035",
+    "expected": 5557317,
+    "catalogued": [
+     "Skagway",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5557317,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5557317,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Beaufort",
+    "state": "South Carolina",
+    "towns": [
+     "Beaufort"
+    ],
+    "county": null,
+    "lccn": "sn85042623",
+    "expected": 4570284,
+    "catalogued": [
+     "Beaufort",
+     [
+      "Beaufort"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4570284,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4570284,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Woodstown",
+    "state": "New Jersey",
+    "towns": [
+     "Woodstown"
+    ],
+    "county": null,
+    "lccn": "sn85025249",
+    "expected": 4504946,
+    "catalogued": [
+     "Woodstown",
+     [
+      "Salem"
+     ],
+     "New Jersey"
+    ],
+    "without_the_record_check": {
+     "found": 4504946,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4504946,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Douglas",
+    "state": "Alaska",
+    "towns": [
+     "Douglas"
+    ],
+    "county": null,
+    "lccn": "sn93049267",
+    "expected": 5845826,
+    "catalogued": [
+     "Douglas",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5845826,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5845826,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Chase",
+    "state": "Michigan",
+    "towns": [
+     "Chase"
+    ],
+    "county": null,
+    "lccn": "sn85026421",
+    "expected": 4832516,
+    "catalogued": [
+     "Baldwin",
+     [
+      "Lake"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": 4832516,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4832516,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Water Valley",
+    "state": "Mississippi",
+    "towns": [
+     "Water Valley"
+    ],
+    "county": null,
+    "lccn": "sn87065501",
+    "expected": 4450347,
+    "catalogued": [
+     "Water Valley",
+     [
+      "Yalobusha"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4450347,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4450347,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Bel Air",
+    "state": "Maryland",
+    "towns": [
+     "Bel Air"
+    ],
+    "county": null,
+    "lccn": "sn83016107",
+    "expected": 4348240,
+    "catalogued": [
+     "Bel Air",
+     [
+      "Harford"
+     ],
+     "Maryland"
+    ],
+    "without_the_record_check": {
+     "found": 4348240,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4348240,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Seattle",
+    "state": "Washington",
+    "towns": [
+     "Seattle"
+    ],
+    "county": null,
+    "lccn": "sn87093407",
+    "expected": 5809844,
+    "catalogued": [
+     "Seattle",
+     [
+      "King"
+     ],
+     "Washington"
+    ],
+    "without_the_record_check": {
+     "found": 5809844,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5809844,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Phoenix",
+    "state": "Arizona",
+    "towns": [
+     "Phoenix"
+    ],
+    "county": "Maricopa",
+    "lccn": "sn84021917",
+    "expected": 5308655,
+    "catalogued": [
+     "Phoenix",
+     [
+      "Maricopa"
+     ],
+     "Arizona"
+    ],
+    "without_the_record_check": {
+     "found": 5308655,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5308655,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ketchum",
+    "state": "Idaho",
+    "towns": [
+     "Ketchum"
+    ],
+    "county": null,
+    "lccn": "sn89055139",
+    "expected": 5597711,
+    "catalogued": [
+     "Ketchum",
+     [
+      "Alturas",
+      "Blaine"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5597711,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5597711,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Middlebury",
+    "state": "Vermont",
+    "towns": [
+     "Middlebury"
+    ],
+    "county": null,
+    "lccn": "sn93063557",
+    "expected": 5238499,
+    "catalogued": [
+     "Middlebury",
+     [
+      "Addison"
+     ],
+     "Vermont"
+    ],
+    "without_the_record_check": {
+     "found": 5238499,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5238499,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Woodville",
+    "state": "Mississippi",
+    "towns": [
+     "Woodville"
+    ],
+    "county": null,
+    "lccn": "sn84020022",
+    "expected": 4451678,
+    "catalogued": [
+     "Woodville",
+     [
+      "Wilkinson"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4451678,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4451678,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Napoleon",
+    "state": "Ohio",
+    "towns": [
+     "Napoleon"
+    ],
+    "county": null,
+    "lccn": "sn84028296",
+    "expected": 5164057,
+    "catalogued": [
+     "Napoleon",
+     [
+      "Henry"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 5164057,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5164057,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "St. Joseph",
+    "state": "Louisiana",
+    "towns": [
+     "St. Joseph"
+    ],
+    "county": null,
+    "lccn": "sn87090131",
+    "expected": 4339934,
+    "catalogued": [
+     "Saint Joseph",
+     [
+      "Tensas"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4339934,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4339934,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Louisville",
+    "state": "Kentucky",
+    "towns": [
+     "Louisville"
+    ],
+    "county": null,
+    "lccn": "sn86069180",
+    "expected": 4299276,
+    "catalogued": [
+     "Louisville",
+     [
+      "Jefferson"
+     ],
+     "Kentucky"
+    ],
+    "without_the_record_check": {
+     "found": 4299276,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4299276,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Greenbelt",
+    "state": "Maryland",
+    "towns": [
+     "Greenbelt"
+    ],
+    "county": null,
+    "lccn": "sn89061521",
+    "expected": 4356847,
+    "catalogued": [
+     "Greenbelt",
+     [
+      "Prince George'S"
+     ],
+     "Maryland"
+    ],
+    "without_the_record_check": {
+     "found": 4356847,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4356847,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Harlem",
+    "state": "Montana",
+    "towns": [
+     "Harlem"
+    ],
+    "county": null,
+    "lccn": "sn83025323",
+    "expected": 5656197,
+    "catalogued": [
+     "Harlem",
+     [
+      "Phillips",
+      "Blaine"
+     ],
+     "Montana"
+    ],
+    "without_the_record_check": {
+     "found": 5656197,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5656197,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Brunswick",
+    "state": "Georgia",
+    "towns": [
+     "Brunswick"
+    ],
+    "county": null,
+    "lccn": "sn90052410",
+    "expected": 4184845,
+    "catalogued": [
+     "Brunswick",
+     [
+      "Glynn"
+     ],
+     "Georgia"
+    ],
+    "without_the_record_check": {
+     "found": 4184845,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4184845,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Rampart",
+    "state": "Alaska",
+    "towns": [
+     "Rampart"
+    ],
+    "county": null,
+    "lccn": "sn90065065",
+    "expected": 5872441,
+    "catalogued": [
+     "Rampart",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5872441,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5872441,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Elgin",
+    "state": "Oklahoma",
+    "towns": [
+     "Elgin"
+    ],
+    "county": null,
+    "lccn": "sn96087587",
+    "expected": 4535806,
+    "catalogued": [
+     "Fletcher",
+     [
+      "Comanche"
+     ],
+     "Oklahoma"
+    ],
+    "without_the_record_check": {
+     "found": 4535806,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4535806,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Salem",
+    "state": "Oregon",
+    "towns": [
+     "Salem"
+    ],
+    "county": null,
+    "lccn": "sn99063956",
+    "expected": 5750162,
+    "catalogued": [
+     "Salem",
+     [
+      "Marion"
+     ],
+     "Oregon"
+    ],
+    "without_the_record_check": {
+     "found": 5750162,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5750162,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Martinsburg",
+    "state": "West Virginia",
+    "towns": [
+     "Martinsburg"
+    ],
+    "county": null,
+    "lccn": "sn85059542",
+    "expected": 4813878,
+    "catalogued": [
+     "Martinsburg",
+     [
+      "Berkeley"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4813878,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4813878,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Sistersville",
+    "state": "West Virginia",
+    "towns": [
+     "Sistersville"
+    ],
+    "county": null,
+    "lccn": "sn86092351",
+    "expected": 4822313,
+    "catalogued": [
+     "Sistersville",
+     [
+      "Tyler"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4822313,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4822313,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Butler",
+    "state": "Missouri",
+    "towns": [
+     "Butler"
+    ],
+    "county": null,
+    "lccn": "sn89066489",
+    "expected": 4379322,
+    "catalogued": [
+     "Butler",
+     [
+      "Bates"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4379322,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4379322,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Beaumont",
+    "state": "Texas",
+    "towns": [
+     "Beaumont"
+    ],
+    "county": null,
+    "lccn": "sn86071101",
+    "expected": 4672989,
+    "catalogued": [
+     "Beaumont",
+     [
+      "Jefferson"
+     ],
+     "Texas"
+    ],
+    "without_the_record_check": {
+     "found": 4672989,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4672989,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Price",
+    "state": "Utah",
+    "towns": [
+     "Price"
+    ],
+    "county": null,
+    "lccn": "sn86091022",
+    "expected": 5545269,
+    "catalogued": [
+     "Price",
+     [
+      "Carbon"
+     ],
+     "Utah"
+    ],
+    "without_the_record_check": {
+     "found": 5545269,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5545269,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Chapel Hill",
+    "state": "North Carolina",
+    "towns": [
+     "Chapel Hill"
+    ],
+    "county": null,
+    "lccn": "sn92073229",
+    "expected": 4460162,
+    "catalogued": [
+     "Chapel Hill",
+     [
+      "Orange"
+     ],
+     "North Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4460162,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4460162,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Gunnison",
+    "state": "Colorado",
+    "towns": [
+     "Gunnison"
+    ],
+    "county": null,
+    "lccn": "sn86066890",
+    "expected": 5424099,
+    "catalogued": [
+     "Gunnison",
+     [
+      "Gunnison"
+     ],
+     "Colorado"
+    ],
+    "without_the_record_check": {
+     "found": 5424099,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5424099,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Richmond",
+    "state": "Indiana",
+    "towns": [
+     "Richmond"
+    ],
+    "county": null,
+    "lccn": "sn86058213",
+    "expected": 4263681,
+    "catalogued": [
+     "Richmond",
+     [
+      "Wayne"
+     ],
+     "Indiana"
+    ],
+    "without_the_record_check": {
+     "found": 4263681,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4263681,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Olympia",
+    "state": "Washington",
+    "towns": [
+     "Olympia"
+    ],
+    "county": null,
+    "lccn": "sn84022770",
+    "expected": 5805687,
+    "catalogued": [
+     "Olympia",
+     [
+      "Thurston"
+     ],
+     "Washington"
+    ],
+    "without_the_record_check": {
+     "found": 5805687,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5805687,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hot Springs",
+    "state": "South Dakota",
+    "towns": [
+     "Hot Springs",
+     "Hot Spings"
+    ],
+    "county": null,
+    "lccn": "sn96090256",
+    "expected": 5765751,
+    "catalogued": [
+     "Hot Springs",
+     [
+      "Fall River"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5765751,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5765751,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Putnam",
+    "state": "Connecticut",
+    "towns": [
+     "Putnam"
+    ],
+    "county": null,
+    "lccn": "sn84022396",
+    "expected": 4841187,
+    "catalogued": [
+     "Putnam",
+     [
+      "Windham"
+     ],
+     "Connecticut"
+    ],
+    "without_the_record_check": {
+     "found": 4841187,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4841187,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "can't be checked against GeoNames' counties"
+    }
+   },
+   {
+    "town": "Augusta",
+    "state": "Maine",
+    "towns": [
+     "Augusta"
+    ],
+    "county": null,
+    "lccn": "sn82014248",
+    "expected": 4957003,
+    "catalogued": [
+     "Augusta",
+     [
+      "Kennebec"
+     ],
+     "Maine"
+    ],
+    "without_the_record_check": {
+     "found": 4957003,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4957003,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "St. Maries",
+    "state": "Idaho",
+    "towns": [
+     "St. Maries"
+    ],
+    "county": null,
+    "lccn": "sn86091104",
+    "expected": 5606232,
+    "catalogued": [
+     "Saint Maries",
+     [
+      "Kootenai",
+      "Benewah"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5606232,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5606232,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "New Oregon",
+    "state": "Iowa",
+    "towns": [
+     "New Oregon"
+    ],
+    "county": null,
+    "lccn": "sn87058042",
+    "expected": 4853059,
+    "catalogued": [
+     "New Oregon",
+     [
+      "Howard"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": null,
+     "reason": "no place of that name in Iowa",
+     "right": false,
+     "failure": "merged into a town that doesn't list its name"
+    },
+    "with_the_record_check": {
+     "found": null,
+     "reason": "outside the record's county, whose own place isn't in GeoNames",
+     "right": false,
+     "failure": "merged into a town that doesn't list its name",
+     "record": "disagrees, and its own place isn't in GeoNames"
+    }
+   },
+   {
+    "town": "Meridian",
+    "state": "Idaho",
+    "towns": [
+     "Meridian"
+    ],
+    "county": null,
+    "lccn": "sn89055004",
+    "expected": 5600685,
+    "catalogued": [
+     "Meridian",
+     [
+      "Ada"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5600685,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5600685,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Langston City",
+    "state": "Oklahoma",
+    "towns": [
+     "Langston City"
+    ],
+    "county": null,
+    "lccn": "sn83025050",
+    "expected": 4540677,
+    "catalogued": [
+     "Guthrie",
+     [
+      "Logan"
+     ],
+     "Oklahoma"
+    ],
+    "without_the_record_check": {
+     "found": 4540677,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4540677,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hopkinsville",
+    "state": "Kentucky",
+    "towns": [
+     "Hopkinsville"
+    ],
+    "county": null,
+    "lccn": "sn86069392",
+    "expected": 4295251,
+    "catalogued": [
+     "Hopkinsville",
+     [
+      "Christian"
+     ],
+     "Kentucky"
+    ],
+    "without_the_record_check": {
+     "found": 4295251,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4295251,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "High Point",
+    "state": "North Carolina",
+    "towns": [
+     "High Point"
+    ],
+    "county": null,
+    "lccn": "sn91068415",
+    "expected": 4471025,
+    "catalogued": [
+     "High Point",
+     [
+      "Guilford"
+     ],
+     "North Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4471025,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4471025,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lihue",
+    "state": "Hawaii",
+    "towns": [
+     "Lihue"
+    ],
+    "county": "Kauai",
+    "lccn": "sn82015411",
+    "expected": 5850248,
+    "catalogued": [
+     "Lihue",
+     [
+      "Kauai"
+     ],
+     "Hawaii"
+    ],
+    "without_the_record_check": {
+     "found": 5850248,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5850248,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Conway",
+    "state": "Arkansas",
+    "towns": [
+     "Conway"
+    ],
+    "county": null,
+    "lccn": "sn86090230",
+    "expected": 4106458,
+    "catalogued": [
+     "Conway",
+     [
+      "Faulkner"
+     ],
+     "Arkansas"
+    ],
+    "without_the_record_check": {
+     "found": 4106458,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4106458,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Council Bluffs",
+    "state": "Iowa",
+    "towns": [
+     "Council Bluffs"
+    ],
+    "county": null,
+    "lccn": "sn82014129",
+    "expected": 4852832,
+    "catalogued": [
+     "Council Bluffs",
+     [
+      "Pottawattamie"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4852832,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4852832,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Mitchell",
+    "state": "South Dakota",
+    "towns": [
+     "Mitchell"
+    ],
+    "county": null,
+    "lccn": "sn2001063112",
+    "expected": 5229794,
+    "catalogued": [
+     "Mitchell",
+     [
+      "Davison"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5229794,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5229794,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Wiggins",
+    "state": "Mississippi",
+    "towns": [
+     "Wiggins"
+    ],
+    "county": "Stone County",
+    "lccn": "sn87065666",
+    "expected": 4451140,
+    "catalogued": [
+     "Wiggins",
+     [
+      "Stone"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4451140,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4451140,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Roanoke",
+    "state": "Virginia",
+    "towns": [
+     "Roanoke"
+    ],
+    "county": null,
+    "lccn": "sn95079490",
+    "expected": 4782167,
+    "catalogued": [
+     "Roanoke",
+     [],
+     "Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4782167,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4782167,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Cedar Falls",
+    "state": "Iowa",
+    "towns": [
+     "Cedar Falls"
+    ],
+    "county": null,
+    "lccn": "sn83025161",
+    "expected": 4850699,
+    "catalogued": [
+     "Cedar Falls",
+     [
+      "Black Hawk"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4850699,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4850699,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Wetumpka",
+    "state": "Alabama",
+    "towns": [
+     "Wetumpka"
+    ],
+    "county": null,
+    "lccn": "sn86050185",
+    "expected": 4097257,
+    "catalogued": [
+     "Wetumpka",
+     [
+      "Elmore"
+     ],
+     "Alabama"
+    ],
+    "without_the_record_check": {
+     "found": 4097257,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4097257,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Opelousas",
+    "state": "Louisiana",
+    "towns": [
+     "Opelousas"
+    ],
+    "county": null,
+    "lccn": "sn88064250",
+    "expected": 4336153,
+    "catalogued": [
+     "Opelousas",
+     [
+      "Saint Landry"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4336153,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4336153,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ritzville",
+    "state": "Washington",
+    "towns": [
+     "Ritzville"
+    ],
+    "county": null,
+    "lccn": "sn87093057",
+    "expected": 5808453,
+    "catalogued": [
+     "Ritzville",
+     [
+      "Adams"
+     ],
+     "Washington"
+    ],
+    "without_the_record_check": {
+     "found": 5808453,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5808453,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lansing",
+    "state": "Minnesota",
+    "towns": [
+     "Lansing"
+    ],
+    "county": null,
+    "lccn": "sn85025431",
+    "expected": 5034163,
+    "catalogued": [
+     "Lansing",
+     [
+      "Mower"
+     ],
+     "Minnesota"
+    ],
+    "without_the_record_check": {
+     "found": 5034163,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5034163,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Parkersburg",
+    "state": "West Virginia",
+    "towns": [
+     "Parkersburg"
+    ],
+    "county": null,
+    "lccn": "sn86092473",
+    "expected": 4817641,
+    "catalogued": [
+     "Parkersburg",
+     [
+      "Wood"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4817641,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4817641,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Sumterville",
+    "state": "South Carolina",
+    "towns": [
+     "Sumterville"
+    ],
+    "county": null,
+    "lccn": "sn84026917",
+    "expected": 4597948,
+    "catalogued": [
+     "Sumter",
+     [
+      "Sumter"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4597948,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4597948,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Jacksonville",
+    "state": "Florida",
+    "towns": [
+     "Jacksonville"
+    ],
+    "county": null,
+    "lccn": "sn95047216",
+    "expected": 4160021,
+    "catalogued": [
+     "Jacksonville",
+     [
+      "Leon",
+      "Duval"
+     ],
+     "Florida"
+    ],
+    "without_the_record_check": {
+     "found": 4160021,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4160021,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Denver",
+    "state": "Colorado",
+    "towns": [
+     "Denver"
+    ],
+    "county": "Denver",
+    "lccn": "sn91052312",
+    "expected": 5419384,
+    "catalogued": [
+     "Denver",
+     [
+      "Denver"
+     ],
+     "Colorado"
+    ],
+    "without_the_record_check": {
+     "found": 5419384,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5419384,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Millersburg",
+    "state": "Ohio",
+    "towns": [
+     "Millersburg"
+    ],
+    "county": "Holmes Co.",
+    "lccn": "sn84028821",
+    "expected": 5163076,
+    "catalogued": [
+     "Millersburg",
+     [
+      "Holmes"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 5163076,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5163076,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Norfolk and Portsmouth",
+    "state": "Virginia",
+    "towns": [
+     "Norfolk and Portsmouth"
+    ],
+    "county": null,
+    "lccn": "sn85025691",
+    "expected": 4776222,
+    "catalogued": [
+     "Portsmouth",
+     [],
+     "Virginia"
+    ],
+    "without_the_record_check": {
+     "found": null,
+     "reason": "no place of that name in Virginia",
+     "right": false,
+     "failure": "two towns named as one place"
+    },
+    "with_the_record_check": {
+     "found": 4779999,
+     "reason": null,
+     "right": false,
+     "failure": "two towns named as one place",
+     "record": "found what the printed place didn't, unchecked"
+    }
+   },
+   {
+    "town": "Davenport",
+    "state": "Iowa",
+    "towns": [
+     "Davenport"
+    ],
+    "county": null,
+    "lccn": "sn83045646",
+    "expected": 4853423,
+    "catalogued": [
+     "Davenport",
+     [
+      "Scott"
+     ],
+     "Iowa"
+    ],
+    "without_the_record_check": {
+     "found": 4853423,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4853423,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Harpers-Ferry",
+    "state": "West Virginia",
+    "towns": [
+     "Harpers-Ferry"
+    ],
+    "county": null,
+    "lccn": "sn85059803",
+    "expected": 4808234,
+    "catalogued": [
+     "Harpers Ferry",
+     [
+      "Jefferson"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4808234,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4808234,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Charleston",
+    "state": "West Virginia",
+    "towns": [
+     "Charleston"
+    ],
+    "county": null,
+    "lccn": "sn85059812",
+    "expected": 4801859,
+    "catalogued": [
+     "Charleston",
+     [
+      "Kanawha"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4801859,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4801859,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Burlington",
+    "state": "Vermont",
+    "towns": [
+     "Burlington"
+    ],
+    "county": null,
+    "lccn": "sn86072143",
+    "expected": 5234372,
+    "catalogued": [
+     "Burlington",
+     [
+      "Chittenden"
+     ],
+     "Vermont"
+    ],
+    "without_the_record_check": {
+     "found": 5234372,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5234372,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Carrizozo",
+    "state": "New Mexico",
+    "towns": [
+     "Carrizozo"
+    ],
+    "county": null,
+    "lccn": "sn94056939",
+    "expected": 5460567,
+    "catalogued": [
+     "Carrizozo",
+     [
+      "Lincoln"
+     ],
+     "New Mexico"
+    ],
+    "without_the_record_check": {
+     "found": 5460567,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5460567,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hot Springs",
+    "state": "Arkansas",
+    "towns": [
+     "Hot Springs"
+    ],
+    "county": null,
+    "lccn": "sn89051285",
+    "expected": 4115412,
+    "catalogued": [
+     "Hot Springs",
+     [
+      "Garland"
+     ],
+     "Arkansas"
+    ],
+    "without_the_record_check": {
+     "found": 4115412,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4115412,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Caldwell",
+    "state": "Ohio",
+    "towns": [
+     "Caldwell"
+    ],
+    "county": null,
+    "lccn": "sn87075277",
+    "expected": 4507661,
+    "catalogued": [
+     "Caldwell",
+     [
+      "Noble"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 4507661,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4507661,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Lewiston",
+    "state": "Idaho",
+    "towns": [
+     "Lewiston"
+    ],
+    "county": null,
+    "lccn": "sn86091110",
+    "expected": 5598538,
+    "catalogued": [
+     "Lewiston",
+     [
+      "Nez Perce"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5598538,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5598538,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "North Yakima",
+    "state": "Washington",
+    "towns": [
+     "North Yakima"
+    ],
+    "county": null,
+    "lccn": "sn88085523",
+    "expected": 5816605,
+    "catalogued": [
+     "Yakima",
+     [
+      "Yakima"
+     ],
+     "Washington"
+    ],
+    "without_the_record_check": {
+     "found": 5816605,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5816605,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Detroit",
+    "state": "Michigan",
+    "towns": [
+     "Detroit"
+    ],
+    "county": "Wayne",
+    "lccn": "sn83016519",
+    "expected": 4990729,
+    "catalogued": [
+     "Detroit",
+     [
+      "Wayne"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": 4990729,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4990729,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Clarksville",
+    "state": "Tennessee",
+    "towns": [
+     "Clarksville"
+    ],
+    "county": null,
+    "lccn": "sn88061071",
+    "expected": 4613868,
+    "catalogued": [
+     "Clarksville",
+     [
+      "Montgomery"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4613868,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4613868,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Elko",
+    "state": "Nevada",
+    "towns": [
+     "Elko"
+    ],
+    "county": null,
+    "lccn": "sn86076366",
+    "expected": 5703670,
+    "catalogued": [
+     "Elko",
+     [
+      "Elko"
+     ],
+     "Nevada"
+    ],
+    "without_the_record_check": {
+     "found": 5703670,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5703670,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Parma",
+    "state": "Idaho",
+    "towns": [
+     "Parma"
+    ],
+    "county": null,
+    "lccn": "sn89055001",
+    "expected": 5603310,
+    "catalogued": [
+     "Parma",
+     [
+      "Canyon"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5603310,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5603310,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Okolona",
+    "state": "Mississippi",
+    "towns": [
+     "Okolona"
+    ],
+    "county": null,
+    "lccn": "sn87065460",
+    "expected": 4439566,
+    "catalogued": [
+     "Okolona",
+     [
+      "Chickasaw"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4439566,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4439566,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Kalispell",
+    "state": "Montana",
+    "towns": [
+     "Kalispell"
+    ],
+    "county": null,
+    "lccn": "sn85053328",
+    "expected": 5660340,
+    "catalogued": [
+     "Kalispell",
+     [
+      "Flathead"
+     ],
+     "Montana"
+    ],
+    "without_the_record_check": {
+     "found": 5660340,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5660340,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Jefferson City",
+    "state": "Missouri",
+    "towns": [
+     "Jefferson City"
+    ],
+    "county": "Cole",
+    "lccn": "sn87052128",
+    "expected": 4392388,
+    "catalogued": [
+     "Jefferson City",
+     [
+      "Cole"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4392388,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4392388,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Champaign",
+    "state": "Illinois",
+    "towns": [
+     "Champaign"
+    ],
+    "county": null,
+    "lccn": "sn88061252",
+    "expected": 4887158,
+    "catalogued": [
+     "Champaign",
+     [
+      "Champaign County"
+     ],
+     "Illinois"
+    ],
+    "without_the_record_check": {
+     "found": 4887158,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4887158,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Clayton",
+    "state": "New Mexico",
+    "towns": [
+     "Clayton"
+    ],
+    "county": null,
+    "lccn": "sn93061573",
+    "expected": 5462269,
+    "catalogued": [
+     "Clayton",
+     [
+      "Union"
+     ],
+     "New Mexico"
+    ],
+    "without_the_record_check": {
+     "found": 5462269,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5462269,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Savannah",
+    "state": "Georgia",
+    "towns": [
+     "Savannah"
+    ],
+    "county": "Chatham",
+    "lccn": "sn83016195",
+    "expected": 4221552,
+    "catalogued": [
+     "Savannah",
+     [
+      "Chatham"
+     ],
+     "Georgia"
+    ],
+    "without_the_record_check": {
+     "found": 4221552,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4221552,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Waterbury",
+    "state": "Connecticut",
+    "towns": [
+     "Waterbury"
+    ],
+    "county": null,
+    "lccn": "sn93053726",
+    "expected": 4845193,
+    "catalogued": [
+     "Waterbury",
+     [
+      "New Haven"
+     ],
+     "Connecticut"
+    ],
+    "without_the_record_check": {
+     "found": 4845193,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4845193,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "can't be checked against GeoNames' counties"
+    }
+   },
+   {
+    "town": "Clifton",
+    "state": "South Dakota",
+    "towns": [
+     "Clifton"
+    ],
+    "county": null,
+    "lccn": "sn99062858",
+    "expected": 5763634,
+    "catalogued": [
+     "Clifton",
+     [
+      "Sully"
+     ],
+     "South Dakota"
+    ],
+    "without_the_record_check": {
+     "found": null,
+     "reason": "no place of that name in South Dakota",
+     "right": false,
+     "failure": "a ghost town filed outside populated places"
+    },
+    "with_the_record_check": {
+     "found": 5763634,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "a ghost town in the record's county"
+    }
+   },
+   {
+    "town": "Owosso",
+    "state": "Michigan",
+    "towns": [
+     "Owosso"
+    ],
+    "county": null,
+    "lccn": "sn97070614",
+    "expected": 5004792,
+    "catalogued": [
+     "Owosso",
+     [
+      "Shiawassee"
+     ],
+     "Michigan"
+    ],
+    "without_the_record_check": {
+     "found": 5004792,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5004792,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Charlotte",
+    "state": "North Carolina",
+    "towns": [
+     "Charlotte"
+    ],
+    "county": null,
+    "lccn": "sn84020712",
+    "expected": 4460243,
+    "catalogued": [
+     "Charlotte",
+     [
+      "Mecklenburg"
+     ],
+     "North Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4460243,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4460243,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Canton",
+    "state": "Mississippi",
+    "towns": [
+     "Canton"
+    ],
+    "county": null,
+    "lccn": "sn86053970",
+    "expected": 4420617,
+    "catalogued": [
+     "Canton",
+     [
+      "Madison"
+     ],
+     "Mississippi"
+    ],
+    "without_the_record_check": {
+     "found": 4420617,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4420617,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Benton",
+    "state": "Tennessee",
+    "towns": [
+     "Benton"
+    ],
+    "county": null,
+    "lccn": "sn86071278",
+    "expected": 4605577,
+    "catalogued": [
+     "Benton",
+     [
+      "Polk"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4605577,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4605577,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Huntington",
+    "state": "West Virginia",
+    "towns": [
+     "Huntington"
+    ],
+    "county": null,
+    "lccn": "sn85038296",
+    "expected": 4809537,
+    "catalogued": [
+     "Huntington",
+     [
+      "Cabell"
+     ],
+     "West Virginia"
+    ],
+    "without_the_record_check": {
+     "found": 4809537,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4809537,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Skowhegan",
+    "state": "Maine",
+    "towns": [
+     "Skowhegan"
+    ],
+    "county": null,
+    "lccn": "sn96075050",
+    "expected": 4978701,
+    "catalogued": [
+     "Skowhegan",
+     [
+      "Somerset"
+     ],
+     "Maine"
+    ],
+    "without_the_record_check": {
+     "found": 4978701,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4978701,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Enterprise",
+    "state": "Oregon",
+    "towns": [
+     "Enterprise"
+    ],
+    "county": "Wallowa County",
+    "lccn": "sn96088044",
+    "expected": 5725721,
+    "catalogued": [
+     "Enterprise",
+     [
+      "Wallowa"
+     ],
+     "Oregon"
+    ],
+    "without_the_record_check": {
+     "found": 5725721,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5725721,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Taiban",
+    "state": "New Mexico",
+    "towns": [
+     "Taiban"
+    ],
+    "county": "De Baca",
+    "lccn": "sn94057002",
+    "expected": 5493652,
+    "catalogued": [
+     "Taiban",
+     [
+      "De Baca"
+     ],
+     "New Mexico"
+    ],
+    "without_the_record_check": {
+     "found": 5493652,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5493652,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Henderson",
+    "state": "North Carolina",
+    "towns": [
+     "Henderson"
+    ],
+    "county": null,
+    "lccn": "sn91068402",
+    "expected": 4470566,
+    "catalogued": [
+     "Henderson",
+     [
+      "Vance"
+     ],
+     "North Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4470566,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4470566,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Chanute",
+    "state": "Kansas",
+    "towns": [
+     "Chanute"
+    ],
+    "county": null,
+    "lccn": "sn85030529",
+    "expected": 4269392,
+    "catalogued": [
+     "Chanute",
+     [
+      "Neosho"
+     ],
+     "Kansas"
+    ],
+    "without_the_record_check": {
+     "found": 4269392,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4269392,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Marietta",
+    "state": "Georgia",
+    "towns": [
+     "Marietta"
+    ],
+    "county": null,
+    "lccn": "sn89053963",
+    "expected": 4207783,
+    "catalogued": [
+     "Marietta",
+     [
+      "Cobb"
+     ],
+     "Georgia"
+    ],
+    "without_the_record_check": {
+     "found": 4207783,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4207783,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Winnfield",
+    "state": "Louisiana",
+    "towns": [
+     "Winnfield"
+    ],
+    "county": null,
+    "lccn": "sn88064428",
+    "expected": 4346455,
+    "catalogued": [
+     "Winnfield",
+     [
+      "Winn"
+     ],
+     "Louisiana"
+    ],
+    "without_the_record_check": {
+     "found": 4346455,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4346455,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Vinita",
+    "state": "Oklahoma",
+    "towns": [
+     "Vinita"
+    ],
+    "county": null,
+    "lccn": "sn83025020",
+    "expected": 4554496,
+    "catalogued": [
+     "Vinita",
+     [
+      "Craig"
+     ],
+     "Oklahoma"
+    ],
+    "without_the_record_check": {
+     "found": 4554496,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4554496,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Dayton",
+    "state": "Ohio",
+    "towns": [
+     "Dayton"
+    ],
+    "county": "Montgomery",
+    "lccn": "sn84025694",
+    "expected": 4509884,
+    "catalogued": [
+     "Dayton",
+     [
+      "Montgomery"
+     ],
+     "Ohio"
+    ],
+    "without_the_record_check": {
+     "found": 4509884,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4509884,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Ardmore",
+    "state": "Oklahoma",
+    "towns": [
+     "Ardmore"
+    ],
+    "county": null,
+    "lccn": "sn85042303",
+    "expected": 4529469,
+    "catalogued": [
+     "Ardmore",
+     [
+      "Carter"
+     ],
+     "Oklahoma"
+    ],
+    "without_the_record_check": {
+     "found": 4529469,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4529469,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Wallace",
+    "state": "Idaho",
+    "towns": [
+     "Wallace"
+    ],
+    "county": null,
+    "lccn": "sn85007266",
+    "expected": 5611375,
+    "catalogued": [
+     "Kellogg",
+     [
+      "Shoshone"
+     ],
+     "Idaho"
+    ],
+    "without_the_record_check": {
+     "found": 5611375,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5611375,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "St. Joseph",
+    "state": "Missouri",
+    "towns": [
+     "St. Joseph"
+    ],
+    "county": null,
+    "lccn": "sn90061457",
+    "expected": 4407010,
+    "catalogued": [
+     "Saint Joseph",
+     [
+      "Buchanan"
+     ],
+     "Missouri"
+    ],
+    "without_the_record_check": {
+     "found": 4407010,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4407010,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Honolulu",
+    "state": "Hawaii",
+    "towns": [
+     "Honolulu"
+    ],
+    "county": null,
+    "lccn": "sn82016413",
+    "expected": 5856195,
+    "catalogued": [
+     "Honolulu",
+     [
+      "Honolulu"
+     ],
+     "Hawaii"
+    ],
+    "without_the_record_check": {
+     "found": 5856195,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5856195,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Palmer",
+    "state": "Alaska",
+    "towns": [
+     "Palmer"
+    ],
+    "county": null,
+    "lccn": "sn98060266",
+    "expected": 5871146,
+    "catalogued": [
+     "Palmer",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5871146,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5871146,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Cumberland",
+    "state": "Maryland",
+    "towns": [
+     "Cumberland"
+    ],
+    "county": null,
+    "lccn": "sn89060376",
+    "expected": 4352681,
+    "catalogued": [
+     "Cumberland",
+     [
+      "Allegany"
+     ],
+     "Maryland"
+    ],
+    "without_the_record_check": {
+     "found": 4352681,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4352681,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hurley",
+    "state": "Wisconsin",
+    "towns": [
+     "Hurley"
+    ],
+    "county": null,
+    "lccn": "sn85040652",
+    "expected": 5257163,
+    "catalogued": [
+     "Hurley",
+     [
+      "Iron"
+     ],
+     "Wisconsin"
+    ],
+    "without_the_record_check": {
+     "found": 5257163,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5257163,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Hyder",
+    "state": "Alaska",
+    "towns": [
+     "Hyder"
+    ],
+    "county": null,
+    "lccn": "sn94050047",
+    "expected": 5553654,
+    "catalogued": [
+     "Hyder",
+     [],
+     "Alaska"
+    ],
+    "without_the_record_check": {
+     "found": 5553654,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5553654,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "has no county to check"
+    }
+   },
+   {
+    "town": "Columbia",
+    "state": "South Carolina",
+    "towns": [
+     "Columbia"
+    ],
+    "county": null,
+    "lccn": "sn83025797",
+    "expected": 4575352,
+    "catalogued": [
+     "Orangeburg",
+     [
+      "Richland",
+      "Union",
+      "Orangeburg"
+     ],
+     "South Carolina"
+    ],
+    "without_the_record_check": {
+     "found": 4575352,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4575352,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Bolivar",
+    "state": "Tennessee",
+    "towns": [
+     "Bolivar"
+    ],
+    "county": "Hardeman County",
+    "lccn": "sn85033306",
+    "expected": 4607598,
+    "catalogued": [
+     "Bolivar",
+     [
+      "Hardeman"
+     ],
+     "Tennessee"
+    ],
+    "without_the_record_check": {
+     "found": 4607598,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4607598,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Brattleboro",
+    "state": "Vermont",
+    "towns": [
+     "Brattleboro"
+    ],
+    "county": null,
+    "lccn": "sn98069145",
+    "expected": 5234141,
+    "catalogued": [
+     "Brattleboro",
+     [
+      "Windham"
+     ],
+     "Vermont"
+    ],
+    "without_the_record_check": {
+     "found": 5234141,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5234141,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Paducah",
+    "state": "Kentucky",
+    "towns": [
+     "Paducah"
+    ],
+    "county": null,
+    "lccn": "sn85052116",
+    "expected": 4048662,
+    "catalogued": [
+     "Paducah",
+     [
+      "Mccracken"
+     ],
+     "Kentucky"
+    ],
+    "without_the_record_check": {
+     "found": 4048662,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 4048662,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Minot",
+    "state": "North Dakota",
+    "towns": [
+     "Minot"
+    ],
+    "county": "Ward County",
+    "lccn": "sn88076421",
+    "expected": 5690532,
+    "catalogued": [
+     "Minot",
+     [
+      "Ward"
+     ],
+     "North Dakota"
+    ],
+    "without_the_record_check": {
+     "found": 5690532,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5690532,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   },
+   {
+    "town": "Holly",
+    "state": "Colorado",
+    "towns": [
+     "Holly"
+    ],
+    "county": null,
+    "lccn": "sn90051185",
+    "expected": 5425247,
+    "catalogued": [
+     "Holly",
+     [
+      "Prowers"
+     ],
+     "Colorado"
+    ],
+    "without_the_record_check": {
+     "found": 5425247,
+     "reason": null,
+     "right": true,
+     "failure": null
+    },
+    "with_the_record_check": {
+     "found": 5425247,
+     "reason": null,
+     "right": true,
+     "failure": null,
+     "record": "agrees"
+    }
+   }
+  ]
+ },
+ "stories": {
+  "reports": 24,
+  "as_the_text_gives_them": {
+   "no town": 8,
+   "town only": 9,
+   "abroad": 4,
+   "town and state": 3
+  },
+  "right_with_town_and_state": {
+   "right": 3,
+   "n": 3,
+   "share": 1.0,
+   "low": 0.43849391955098227,
+   "high": 1.0
+  },
+  "town_only_with_the_papers_state": {
+   "a wrong place": 2,
+   "nothing": 4,
+   "right": 3
+  },
+  "results": [
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Rhode Island",
+    "report": "21_1854-11-16_p1_sn83021169_00514152792_1854111601_0398.json",
+    "date": "1854-11-16",
+    "given": "no town",
+    "note": "the Empire House, a hotel, named without its town",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Easton",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Indiana",
+    "report": "1_1875-10-08_p1_sn84023963_0020029595A_1875100801_0921.json",
+    "date": "1875-10-08",
+    "given": "town only",
+    "note": "Easton, with no state; which Easton the story means is unknown",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": 4266827
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "New York",
+    "report": "11_1878-10-12_p1_sn83030272_00206533511_1878101201_0896.json",
+    "date": "1878-10-12",
+    "given": "no town",
+    "note": "testimony in the Vanderbilt will case; the text names no town",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Chicago",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 4887398,
+    "paper_state": "Connecticut",
+    "report": "6_1904-05-28_p1_sn84020358_00271744432_1904052801_1153.json",
+    "date": "1904-05-28",
+    "given": "town only",
+    "note": "the dateline, 'Chicago, May 27'",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": null
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Illinois",
+    "report": "1_1911-07-27_pna_sn92053934_00202198326_1911072701_0413.json",
+    "date": "1911-07-27",
+    "given": "abroad",
+    "note": "Blickling, Norfolk, England",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Silver Lake",
+    "state": "Indiana",
+    "county": null,
+    "place_id": 4926434,
+    "true_place_id": 4926434,
+    "paper_state": "Indiana",
+    "report": "6_1911-12-15_pna_sn86058226_00271744924_1911121501_0691.json",
+    "date": "1911-12-15",
+    "given": "town and state",
+    "note": "the dateline, 'SILVER LAKE, Ind'",
+    "found": 4926434,
+    "reason": null,
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Illinois",
+    "report": "14_1916-12-09_p5_sn84024055_00280761072_1916120901_0525.json",
+    "date": "1916-12-09",
+    "given": "abroad",
+    "note": "the American legation in Peking",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Bordentown",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 5095847,
+    "paper_state": "Michigan",
+    "report": "3_1856-10-29_pna_sn85026466_0020219798A_1856102901_1069.json",
+    "date": "1856-10-29",
+    "given": "town only",
+    "note": "'residing in Bordentown', from the Trenton Gazette",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": null
+   },
+   {
+    "town": "Chicago",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 4887398,
+    "paper_state": "Kansas",
+    "report": "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json",
+    "date": "1898-01-20",
+    "given": "town only",
+    "note": "the dateline, 'CHICAGO, Jan.'",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": null
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "New York",
+    "report": "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json",
+    "date": "1919-11-15",
+    "given": "no town",
+    "note": "Mrs. Curran's sitting; the text names no town",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "District of Columbia",
+    "report": "4_1923-02-02_p21_sn83045462_00280657256_1923020201_0533.json",
+    "date": "1923-02-02",
+    "given": "no town",
+    "note": "the National Theater, named without its town: the paper's own Washington",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "North Dakota",
+    "report": "12_1922-04-14_p2_sn85042243_00212478854_1922041401_0708.json",
+    "date": "1922-04-14",
+    "given": "no town",
+    "note": "'arrived here last night', with no dateline",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "District of Columbia",
+    "report": "11_1923-10-20_p26_sn84026749_00222254048_1923102001_0082.json",
+    "date": "1923-10-20",
+    "given": "abroad",
+    "note": "Victor Hugo's seances on Jersey",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Middlebury",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 5238499,
+    "paper_state": "Vermont",
+    "report": "17_1857-07-29_pna_sn83025667_00280777808_1857072901_0724.json",
+    "date": "1857-07-29",
+    "given": "town only",
+    "note": "Union Hall, beside Middlebury College",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": 5238499
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "South Carolina",
+    "report": "1_1857-04-02_p1_sn83025802_00295862026_1857040201_0270.json",
+    "date": "1857-04-02",
+    "given": "abroad",
+    "note": "the Picaud narrative, in France",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Waterloo",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 5554953,
+    "paper_state": "Oregon",
+    "report": "1_1895-05-24_pna_sn97071028_00416152664_1895052401_0955.json",
+    "date": "1895-05-24",
+    "given": "town only",
+    "note": "'We arrived in Waterloo', Yew Park",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": 5554953
+   },
+   {
+    "town": "Chittenden",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 5234855,
+    "paper_state": "Vermont",
+    "report": "4_1875-03-29_pna_sn84022473_00280777559_1875032901_0300.json",
+    "date": "1875-03-29",
+    "given": "town only",
+    "note": "the Eddys at Chittenden",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": 5234855
+   },
+   {
+    "town": "Trenton",
+    "state": "New Jersey",
+    "county": null,
+    "place_id": 5105496,
+    "true_place_id": 5105496,
+    "paper_state": "Virginia",
+    "report": "15_1920-07-19_p1_sn85025007_00415664175_1920071901_0261.json",
+    "date": "1920-07-19",
+    "given": "town and state",
+    "note": "'the First Spiritualist Church, of Trenton, N.J.', OCR 'Trenron y. j.'",
+    "found": 5105496,
+    "reason": null,
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "California",
+    "report": "4_1898-01-12_pna_sn82015104_00280768790_1898011201_0105.json",
+    "date": "1898-01-12",
+    "given": "no town",
+    "note": "Pythian Castle, named without its town: the paper's own Sacramento",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Nevada",
+    "report": "3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json",
+    "date": "1907-02-23",
+    "given": "no town",
+    "note": "Professor Hodgson's claimed communications; no town",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": null,
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": null,
+    "paper_state": "Delaware",
+    "report": "2_1873-09-01_pna_sn87062253_00271765186_1873090101_0288.json",
+    "date": "1873-09-01",
+    "given": "no town",
+    "note": "the excursion's fragment names no place",
+    "found": null,
+    "reason": "no town",
+    "right": true
+   },
+   {
+    "town": "Adamsville",
+    "state": null,
+    "county": "Muskingum county",
+    "place_id": null,
+    "true_place_id": 5145410,
+    "paper_state": "Pennsylvania",
+    "report": "2_1869-10-23_p1_sn84026005_00280776403_1869102301_0548.json",
+    "date": "1869-10-23",
+    "given": "town only",
+    "note": "'near Adamsville, in Muskingum county'; Ohio isn't named",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": 4556230
+   },
+   {
+    "town": "Chicago",
+    "state": null,
+    "county": null,
+    "place_id": null,
+    "true_place_id": 4887398,
+    "paper_state": "Utah",
+    "report": "26_1924-08-30_pna_sn84024055_00332898048_1924083001_0370.json",
+    "date": "1924-08-30",
+    "given": "town only",
+    "note": "'here in Chicago'",
+    "found": null,
+    "reason": "no state",
+    "right": true,
+    "with_the_papers_state": null
+   },
+   {
+    "town": "Plymouth",
+    "state": "Massachusetts",
+    "county": null,
+    "place_id": 4947597,
+    "true_place_id": 4947597,
+    "paper_state": "Massachusetts",
+    "report": "1_1859-08-11_p1_sn82014511_no_reel_1859081101_0001.json",
+    "date": "1859-08-11",
+    "given": "town and state",
+    "note": "'held in Plymouth, Mass.'",
+    "found": 4947597,
+    "reason": null,
+    "right": true
+   }
+  ]
+ }
+}
