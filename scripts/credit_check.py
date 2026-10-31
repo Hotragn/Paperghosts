@@ -69,7 +69,9 @@ def billed(model: str, since: datetime) -> dict:
         if bucket.base_model != model:
             continue
         info = bucket.event_info.model_dump()
-        kind = info["type"] + {True: " cached", False: " uncached"}.get(info.get("cached"), "")
+        kind = info["type"] + {True: " cached", False: " uncached"}.get(
+            info.get("cached"), ""
+        )
         row = found.setdefault(kind, {"usd": 0.0, "tokens": 0, "rates": set()})
         row["usd"] += bucket.estimated_cost_usd or 0
         row["tokens"] += info.get("token_count") or 0

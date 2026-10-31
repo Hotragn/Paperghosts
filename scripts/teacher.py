@@ -336,7 +336,9 @@ def confusion(round_name: str) -> dict:
 
     labels = {r["article_id"]: r["kind"] for r in saved(OUT["dev"])}
     found = {}
-    for line in (ROOT / "data" / "teacher" / f"dev_{round_name}.jsonl").read_text().splitlines():
+    for line in (
+        (ROOT / "data" / "teacher" / f"dev_{round_name}.jsonl").read_text().splitlines()
+    ):
         answer = json.loads(line)
         label = parsed(answer.get("answer") or "")
         row = found.setdefault(labels[answer["article_id"]], {})
@@ -349,7 +351,9 @@ if __name__ == "__main__":
     run, *rest = sys.argv[1:]
     if run == "confusion":
         found = {r: confusion(r) for r in rest}
-        (RESULTS / "teacher_confusion.json").write_text(json.dumps(found, indent=1) + "\n")
+        (RESULTS / "teacher_confusion.json").write_text(
+            json.dumps(found, indent=1) + "\n"
+        )
         for r, m in found.items():
             print(r, "rows: dev label; columns: teacher")
             for label, row in sorted(m.items()):
