@@ -318,6 +318,7 @@ function App() {
         <p className="ear">
           {reports ? `${reports.length} reports on file, ${span(reports)}` : 'The morgue'}
         </p>
+        <img className="mark" src="brand/logo.svg" alt="" width="72" height="72" />
         <h1 className="nameplate">Paper Ghosts</h1>
         <p className="tagline">A morgue of ghost reports from American newspapers, each one filed with the words it rests on.</p>
       </header>

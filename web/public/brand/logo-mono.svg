@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Paper Ghosts</title>
+  <!-- one colour: the page is solid; the fold, eyes, mouth and two column rules are cut out -->
+  <path fill="currentColor" fill-rule="evenodd" d="M11 7 H42 L53 18 V50 Q50.5 57.5 47 52 Q44.5 46.5 41.5 53.5 Q38 59 35 51 Q32.5 46 29 54.5 Q25.5 58.5 23 51.5 Q20 47 17 53 Q14 56.5 11 50 Z M42 9.8 V18 H50.2 Z M19.5 27.5 Q24.5 23.5 29.5 28 Q30 36.5 25 38.5 Q19.5 36.5 19.5 27.5 Z M44.5 27.5 Q39.5 23.5 34.5 28 Q34 36.5 39 38.5 Q44.5 36.5 44.5 27.5 Z M32 38.8 Q35 38.8 35 42.6 Q35 46.4 32 46.4 Q29 46.4 29 42.6 Q29 38.8 32 38.8 Z M15 19.7 H30 V21.3 H15 Z M34 19.7 H49 V21.3 H34 Z"/>
+</svg>

@@ -108,6 +108,13 @@ main,
   border-bottom: 3px double var(--rule);
 }
 
+.mark {
+  display: block;
+  margin: 0.25rem auto 0;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
 .nameplate {
   font-family: 'UnifrakturMaguntia', serif;
   font-weight: 400;
