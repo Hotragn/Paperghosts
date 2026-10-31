@@ -1,7 +1,7 @@
 """The reel-to-batch map's check: each issue hidden in turn, every page of it at once, and its
 batch picked from the rest of its reel; and the candidates the map covers."""
 
-from reel_map import check, coverage, held_out
+from reel_map import check, coverage, frame_rule, held_out
 
 REEL_MAP = {
     "sn1": {
@@ -70,4 +70,22 @@ def test_coverage_counts_candidates_with_no_batch_path_on_a_reel_the_map_holds()
         "not_covered": 2,
         "not_covered_reels": 2,
         "not_covered_with_no_reel_in_their_member": 1,
+    }
+
+
+def test_the_frame_rule_counts_the_candidates_whose_stored_service_changes_by_batch():
+    path = ("a_ver01", "sn1", "r1", "1850011501")
+    found = {
+        "frame differs": page(path, ("sn1", "r1"), "1850011501", candidates=2)
+        | {"changed": True},
+        "a sample only": page(path, ("sn1", "r1"), "1850011501", candidates=0)
+        | {"changed": True},
+        "agrees": page(path, ("sn1", "r1"), "1850011501") | {"changed": False},
+        "no batch path": page(None, ("sn1", "r1"), "1850011501"),
+    }
+
+    assert frame_rule(found) == {
+        "candidates_whose_service_changes": 2,
+        "pages_with_candidates": 1,
+        "by_batch": {"a_ver01": 2},
     }

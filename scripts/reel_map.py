@@ -12,7 +12,12 @@ from pathlib import Path
 import zstandard
 
 from paperghosts.ingest import reels
-from paperghosts.ingest.crops import BATCH_PATH, MEMBER
+from paperghosts.ingest.crops import (
+    BATCH_PATH,
+    MEMBER,
+    batch_path_service,
+    service_id,
+)
 from paperghosts.stats import wilson
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,7 +26,8 @@ REPORT = ROOT / "eval" / "results" / "phase2b" / "reels.json"
 
 def pages(root: Path) -> dict:
     """Each page of the candidates and samples once, by member: its batch path's (batch, lccn,
-    reel, issue), its member's (lccn, reel) and issue, and how many candidates it holds."""
+    reel, issue), its member's (lccn, reel) and issue, how many candidates it holds, and
+    whether decision 35's frame rule changes its stored service."""
     found = {}
     for pool in ("candidates", "samples"):
         for path in sorted((root / "data" / pool).glob("*.jsonl.zst")):
@@ -39,6 +45,9 @@ def pages(root: Path) -> dict:
                             "reel": (member["lccn"], member["reel"]),
                             "issue": member["issue"],
                             "candidates": 0,
+                            "changed": bool(bp)
+                            and batch_path_service(row["member"], bp.string)
+                            != service_id(bp.string),
                         }
                     page["candidates"] += pool == "candidates"
     return found
@@ -161,6 +170,22 @@ def check(found: dict, reel_map: dict) -> dict:
     )
 
 
+def frame_rule(found: dict) -> dict:
+    """The candidates whose stored service decision 35's frame rule changes, by batch: those
+    on a page whose member names another frame of its batch path's reel and issue."""
+    by_batch = Counter()
+    pages_hit = 0
+    for page in found.values():
+        if page.get("changed") and page["candidates"]:
+            by_batch[page["path"][0]] += page["candidates"]
+            pages_hit += 1
+    return {
+        "candidates_whose_service_changes": sum(by_batch.values()),
+        "pages_with_candidates": pages_hit,
+        "by_batch": dict(by_batch.most_common()),
+    }
+
+
 def flagged_reels(found: dict, reel_map: dict) -> list:
     """Every reel with more than one batch, each batch with its date range on the reel, and
     the candidates with no batch path that sit on it."""
@@ -209,6 +234,7 @@ def main(root: Path = ROOT):
         "coverage_from_candidates_only": coverage(found, from_candidates),
         "coverage": coverage(found, reel_map),
         "hidden_issues": check(found, reel_map),
+        "frame_rule": frame_rule(found),
         "flagged": {
             "reels": len(flagged),
             "split": sum(f["kind"] == "split" for f in flagged),
@@ -221,7 +247,19 @@ def main(root: Path = ROOT):
     }
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, indent=1) + "\n")
-    print(json.dumps({k: v for k, v in report.items() if k != "flagged"}, indent=1))
+    shown = {k: v for k, v in report.items() if k not in ("flagged", "frame_rule")}
+    print(json.dumps(shown, indent=1))
+    rule = report["frame_rule"]
+    print(
+        "frame rule:",
+        rule["candidates_whose_service_changes"],
+        "candidates on",
+        rule["pages_with_candidates"],
+        "pages, in",
+        len(rule["by_batch"]),
+        "batches; the most:",
+        list(rule["by_batch"].items())[:5],
+    )
     print({k: v for k, v in report["flagged"].items() if k != "list"})
 
 

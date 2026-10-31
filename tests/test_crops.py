@@ -227,9 +227,47 @@ def test_a_page_that_is_not_an_image_is_never_cached(loc, monkeypatch, tmp_path)
         headers={"content-type": "text/html"},
     )
 
-    with pytest.raises(ValueError):
+    with pytest.raises(crops.Busy):
         crop(url)
     assert list(tmp_path.iterdir()) == []
+
+
+def test_a_captcha_page_is_busy_so_it_is_asked_again_after_a_pause(loc, monkeypatch):
+    # loc.gov: under heavy load, "429 status codes or HTML pages with CAPTCHAs" even below
+    # its rates (Working Within Limits, read 2026-10-30)
+    requests, responses = loc
+    captcha = httpx.Response(
+        200, text="<html>captcha</html>", headers={"content-type": "text/html"}
+    )
+    responses["/item/a/"] = [captcha, httpx.Response(200, json={"item": 1})]
+    waits = []
+    monkeypatch.setattr(crops, "sleep", waits.append)
+
+    assert crops.get("https://www.loc.gov/item/a/", fo="json").json() == {"item": 1}
+    assert len(requests) == 2 and 5 in waits
+
+
+def test_a_captcha_page_is_never_cached(loc):
+    requests, responses = loc
+    responses["/item/a/"] = httpx.Response(
+        200, text="<html>captcha</html>", headers={"content-type": "text/html"}
+    )
+
+    assert crops.cached("https://www.loc.gov/item/a/", fo="json")["status"] == "busy"
+    crops.cached("https://www.loc.gov/item/a/", fo="json")
+
+    assert len(requests) == 6 and crops.COUNTS["errors"] == 2
+
+
+def test_a_404_is_an_answer_whatever_its_body(loc):
+    requests, responses = loc
+    responses["/item/gone/"] = httpx.Response(
+        404, text="<html>not found</html>", headers={"content-type": "text/html"}
+    )
+
+    assert crops.cached("https://www.loc.gov/item/gone/", fo="json")["status"] == 404
+    assert crops.cached("https://www.loc.gov/item/gone/", fo="json")["status"] == 404
+    assert len(requests) == 1
 
 
 def test_a_request_is_asked_once_and_cached_with_its_url_date_and_status(loc):
@@ -470,3 +508,40 @@ def test_where_the_maps_first_batch_doesnt_hold_the_page_its_next_does(
 
     assert service == LEWISTOWN_SERVICE
     assert not any(r.url.host == "www.loc.gov" for r in requests)
+
+
+def test_a_page_whose_member_names_another_frame_takes_the_members_and_is_checked(
+    loc, monkeypatch, tmp_path
+):
+    # its batch path names frame 0264, and the member 0265, the article's page
+    _, responses = loc
+    monkeypatch.setattr(crops, "CROPS", tmp_path)
+    scan = {
+        "height": 1000,
+        "width": 800,
+        "raw_data_loc": "https://chroniclingamerica.loc.gov/data/batches"
+        "/pst_intramural_ver01/data/sn83032276/00296028587/1850072601/0264.jp2",
+    }
+    assert page_service(LEWISTOWN, scan) == LEWISTOWN_SERVICE
+    a_page(responses, words=MARKET)
+
+    with pytest.raises(LookupError, match="words"):
+        crops_for(LEWISTOWN, scan, [BOX], text=ARTICLE)
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_a_page_whose_member_and_batch_path_agree_is_shown_unchecked(
+    loc, monkeypatch, tmp_path
+):
+    requests, responses = loc
+    monkeypatch.setattr(crops, "CROPS", tmp_path)
+    [url] = crop_urls(SERVICE, [BOX])
+    responses[httpx.URL(url).path] = httpx.Response(
+        200, content=b"\xff\xd8jpeg", headers={"content-type": "image/jpeg"}
+    )
+    member = "faro_1850/1850-04-25_p1_sn84020071_00414182975_1850042501_0199.json"
+
+    service, _ = crops_for(member, {"raw_data_loc": RAW_DATA_LOC}, [BOX])
+
+    assert service == SERVICE
+    assert [r.url.path.endswith("default.jpg") for r in requests] == [True]

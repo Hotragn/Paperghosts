@@ -4,15 +4,16 @@
   (the date and a two-digit edition) and the frame. Every v2 candidate's parses.
 - The LCCN comes from the member name too, when the record has none (0.9% of candidates).
 - The page comes from the scan record only, never from the member's page token.
-- The IIIF service comes only from the scan's batch path, which wins over the member name: their
-  frames differ in 2.5% of the candidates that have both. A printing with no batch path gets no
-  service here. 2B's reel-to-batch map gives it one, and its page is checked before its crop
-  is shown.
+- The IIIF service comes only where the scan has a batch path: the batch path's batch, with the
+  member's frame where only the frame differs, as it does in 2.5% of the candidates with both.
+  The member's frame was the page in 18 of 18, and that page is checked before its crop is
+  shown (decision 35, the EM's call). A printing with no batch path gets no service here. The
+  reel-to-batch map gives it one when its crop is fetched, and its page is checked then.
 """
 
 import re
 
-from paperghosts.ingest.crops import BATCH_PATH, MEMBER, service_id
+from paperghosts.ingest.crops import BATCH_PATH, MEMBER, batch_path_service
 from paperghosts.schemas import Printing
 
 
@@ -39,7 +40,7 @@ def printing(row: dict) -> dict:
             "issue": member["issue"],
             "frame": member["seq"],
             "page": scan_number(scan.get("page")),
-            "service": service_id(path.string) if path else None,
+            "service": batch_path_service(row["member"], path.string) if path else None,
             # a box can start a few pixels off the page's edge
             "bbox_list": [
                 {k: max(0, int(box[k])) for k in ("x0", "y0", "x1", "y1")}

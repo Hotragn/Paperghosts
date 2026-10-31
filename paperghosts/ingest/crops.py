@@ -47,9 +47,22 @@ USER_AGENT = (
 CLIENT = httpx.Client(timeout=60, follow_redirects=True)
 last_request = 0.0  # monotonic time of the last request to the Library of Congress
 BUSY = {429, 500, 502, 503, 504, 520, 521, 522, 523, 524}  # 52x: Cloudflare's
-# seconds between requests: loc.gov's JSON API allows 20 a minute and blocks for an hour past
-# that, and its image services allow 150 a minute
+# seconds between requests. loc.gov's JSON API allows 20 a minute, and its image services and
+# /storage-services/ 150 a minute, each blocking for an hour past that ("Working Within Limits",
+# https://www.loc.gov/apis/json-and-yaml/working-within-limits/, read 2026-10-30).
 GAPS = {"www.loc.gov": 3.5}
+
+
+class Busy(httpx.HTTPError):
+    """A server still busy after get's pauses, answering with a CAPTCHA page."""
+
+
+def captcha(response) -> bool:
+    """An HTML page, where every request the project makes expects JSON, XML or an image.
+    Under heavy load loc.gov answers with CAPTCHA pages even below its rates (Working Within
+    Limits). A 404 is an answer, whatever its body."""
+    html = response.headers.get("content-type", "").startswith("text/html")
+    return html and response.status_code != 404
 
 
 def service(batch: str, lccn: str, reel: str, issue: str, seq: str) -> str:
@@ -66,6 +79,34 @@ def service_id(raw_data_loc: str) -> str:
     return service(**path.groupdict())
 
 
+def place(service: str) -> tuple:
+    """A service's LCCN, reel, issue and frame."""
+    return tuple(service.split(":")[-4:])
+
+
+def page_at(page) -> tuple:
+    """A parsed member name's LCCN, reel, issue and frame."""
+    return page["lccn"], page["reel"], page["issue"], page["seq"]
+
+
+def agrees(member: str, raw_data_loc: str) -> bool:
+    """Whether a page's member name and its batch path name the same page."""
+    page, path = MEMBER.search(member), BATCH_PATH.search(raw_data_loc)
+    return bool(page and path) and page_at(page) == page_at(path)
+
+
+def batch_path_service(member: str, raw_data_loc: str) -> str:
+    """The page's IIIF service where its scan has a batch path. It's the batch path's batch
+    with the member's frame where only the frame differs, since the member's frame was the
+    page in 18 of 18 (decision 35). Where the member names another reel too, the batch path's
+    page stands."""
+    named = service_id(raw_data_loc)
+    page, path = MEMBER.search(member), BATCH_PATH.search(raw_data_loc)
+    if page and page_at(page)[:3] == page_at(path)[:3]:
+        return service(path["batch"], *page_at(page))
+    return named
+
+
 def crop_urls(service: str, boxes: list[dict]) -> list[str]:
     """One crop per box, in the scan's own pixels at half size, in bbox_list's order, which
     is the order the article is read in. One crop over every box would take in the columns
@@ -79,8 +120,9 @@ def crop_urls(service: str, boxes: list[dict]) -> list[str]:
 
 def get(url, **params):
     """A GET to the Library of Congress: at most one a second, or one in 3.5 s to loc.gov's
-    JSON API, naming the project, and asked again after a pause while the server is busy.
-    tile.loc.gov can answer a crop it hasn't made yet with a 503."""
+    JSON API, naming the project, and asked again after a pause while the server is busy:
+    a 429, a 5xx or a CAPTCHA page. tile.loc.gov can answer a crop it hasn't made yet with a
+    503. A CAPTCHA page still there after the pauses raises Busy, and is never cached."""
     global last_request
     gap = GAPS.get(httpx.URL(url).host, 1.0)
     for pause in (5, 20, None):
@@ -95,9 +137,13 @@ def get(url, **params):
             if pause is None:
                 raise
         else:
-            if response.status_code not in BUSY or pause is None:
+            if response.status_code not in BUSY and not captcha(response):
                 response.raise_for_status()
                 return response
+            if pause is None:
+                if captcha(response):
+                    raise Busy(f"{url} answered with an HTML page")
+                response.raise_for_status()
         sleep(pause)
 
 
@@ -118,6 +164,14 @@ def cached(
     try:
         response = get(url, **params)
         status, body = response.status_code, keep(response)
+    except Busy:  # a CAPTCHA page: never cached, so a later run asks again
+        counts["errors"] += 1
+        return {
+            "url": asked,
+            "retrieved": datetime.now(UTC).isoformat(timespec="seconds"),
+            "status": "busy",
+            "body": None,
+        }
     except httpx.HTTPStatusError as exc:
         status, body = exc.response.status_code, None
         if status != 404 and status < 500:
@@ -160,12 +214,12 @@ def listed(lccn: str, reel: str, issue: str, seq: str) -> str:
 
 
 def page_service(member: str, scan: dict) -> str:
-    """The page's IIIF service: from its batch path; or else from its reel's batch in the
-    reel-to-batch map (decision 35); or else from the loc.gov item that lists the page. A
-    page with no batch path is unchecked here: crops_for checks it before any crop is
-    fetched."""
+    """The page's IIIF service: from its batch path (batch_path_service); or else from its
+    reel's batch in the reel-to-batch map (decision 35); or else from the loc.gov item that
+    lists the page. It is unchecked here. crops_for checks a page before any crop is fetched,
+    wherever its member and batch path don't agree."""
     if scan.get("raw_data_loc"):
-        return service_id(scan["raw_data_loc"])
+        return batch_path_service(member, scan["raw_data_loc"])
     page = MEMBER.search(member)
     if page is None:
         raise LookupError(f"{member} is not a faro page name")
@@ -293,35 +347,38 @@ def crops_for(
     text: str | None = None,
 ):
     """The page's IIIF service and its crops, one per box.
-    - A page with no batch path is checked against its article's text before any crop is
-      fetched (page_check). Its reel's batches are tried in turn, and where none of them
-      holds the page, loc.gov names its batch, and that page is checked too.
-    - A batch path can name a batch that LoC has since reissued (ver01 where it now serves
-      ver02), so when a crop from it is missing, loc.gov names the page's current service."""
+    - A page whose member and batch path agree is shown unchecked. A batch path can name a
+      batch that LoC has since reissued (ver01 where it now serves ver02), so when a crop
+      from it is missing, loc.gov names the page's current service.
+    - Any other page is checked against its article's text before any crop is fetched
+      (page_check, decision 35): a page with no batch path, and one whose member names another
+      frame or reel. A page with no batch path tries its reel's batches in turn. Where none of
+      them holds the page, loc.gov names its batch, and that page is checked too."""
+    raw = scan.get("raw_data_loc")
+    if raw and agrees(member, raw):
+        service = service or service_id(raw)
+        try:
+            return service, [crop(url) for url in crop_urls(service, boxes)]
+        except httpx.HTTPStatusError as exc:
+            if exc.response.status_code != 404:
+                raise
+        service = listed(*place(service))
+        return service, [crop(url) for url in crop_urls(service, boxes)]
     page = MEMBER.search(member)
-    where = (page["lccn"], page["reel"], page["issue"], page["seq"])
-    if not scan.get("raw_data_loc"):
-        reasons = []
-        for trial in [service] if service else mapped(member):
-            why = page_check(trial, scan, boxes, text)
-            if why is None:
-                service = trial
-                break
-            reasons.append(why)
-        else:
-            held = [why for why in reasons if why != NO_SUCH_PAGE]
-            if held:
-                raise LookupError(f"{member}: {held[0]}")
-            service = listed(*where)
-            why = page_check(service, scan, boxes, text)
-            if why:
-                raise LookupError(f"{member}: {why}")
-        return service, [crop(url) for url in crop_urls(service, boxes)]
-    service = service or page_service(member, scan)
-    try:
-        return service, [crop(url) for url in crop_urls(service, boxes)]
-    except httpx.HTTPStatusError as exc:
-        if exc.response.status_code != 404:
-            raise
-    service = listed(*where)
+    trials = [service] if service else []
+    if not trials:
+        trials = [batch_path_service(member, raw)] if raw else mapped(member)
+    reasons = []
+    for trial in trials:
+        why = page_check(trial, scan, boxes, text)
+        if why is None:
+            return trial, [crop(url) for url in crop_urls(trial, boxes)]
+        reasons.append(why)
+    held = [why for why in reasons if why != NO_SUCH_PAGE]
+    if held:
+        raise LookupError(f"{member}: {held[0]}")
+    service = listed(*(place(trials[0]) if trials else page_at(page)))
+    why = page_check(service, scan, boxes, text)
+    if why:
+        raise LookupError(f"{member}: {why}")
     return service, [crop(url) for url in crop_urls(service, boxes)]

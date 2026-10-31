@@ -1,6 +1,7 @@
 """A printing's reference, built from its candidate row: its place in the archive from its
 member name, its LCCN from there when the record has none, its page from the scan record only,
-and its IIIF service only from the scan's batch path, whose frame wins over the member's."""
+and its IIIF service only where the scan has a batch path: the batch path's batch, with the
+member's frame where only the frame differs (decision 35)."""
 
 from paperghosts.store.printings import printing, scan_number
 
@@ -25,7 +26,7 @@ def row(**changes):
     } | changes
 
 
-def test_a_printing_is_located_by_its_member_and_its_service_by_its_batch_path():
+def test_a_printing_is_located_by_its_member_and_its_service_by_its_batch_paths_batch():
     found = printing(row())
 
     assert (found["edition"], found["reel"], found["issue"], found["frame"]) == (
@@ -35,6 +36,18 @@ def test_a_printing_is_located_by_its_member_and_its_service_by_its_batch_path()
         "0164",
     )
     assert found["page"] == 3
+    # only the frame differs, and the member's frame was the page in 18 of 18
+    assert found["service"] == (
+        "service:ndnp:mnhi:batch_mnhi_example_ver01:data:sn82016187:100493962"
+        ":1910021001:0164"
+    )
+
+
+def test_where_the_members_reel_differs_too_the_batch_paths_page_stands():
+    other_reel = MEMBER.replace("_100493962_", "_00211102299_")
+    found = printing(row(member=other_reel))
+
+    assert found["reel"] == "00211102299"
     assert found["service"].endswith(":sn82016187:100493962:1910021001:0163")
 
 
