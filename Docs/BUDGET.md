@@ -190,3 +190,23 @@ Measured by `scripts/local_throughput.py` (`eval/results/phase2c/local_throughpu
   - Both are unmeasured.
 - **58 days rules out a local-only pass before the site's date.** The free path is a fallback for whatever part of the pass the credits can't cover, or a pass run after launch.
 
+
+## Spend stopped (2026-10-31): no Tinker spend, and 2C runs locally (decision 39)
+
+- **The balance was $0.00.** The owner's console showed a remaining credit balance of $0.00, with $0.80 of unpaid usage due this month. I had taken the account's past usage for evidence of credits left. It wasn't, so today's runs were billed to the owner's card without a yes.
+- **Today's Tinker use,** from each run's recorded tokens (billing hadn't caught up when the spend stopped):
+
+  | Job | Prompt tokens | Generated tokens | Cost, all cached to none |
+  |---|---|---|---|
+  | credit check, teacher, 50 articles | 456,246 | 3,630 | $0.30–1.40 |
+  | credit check, 4B, 50 articles | 47,396 | 3,330 | $0.01–0.02 |
+  | teacher on dev, round 1, 150 | 1,373,823 | 15,087 | $0.94–4.23 |
+  | teacher on dev, round 2, 150 | 1,408,773 | 15,820 | $0.96–4.34 |
+  | teacher on dev, round 3, 150 | 1,449,123 | 14,930 | $0.98–4.46 |
+  | probes | 56 | 12 | under $0.01 |
+  | **all** | **4,735,417** | **52,809** | **$3.19–14.45** |
+
+  - **The thinking round** was refused by Tinker's billing block (HTTP 402) and stopped, and it saved no answer. Any requests served before the block aren't recorded: at most 150 prompts of about 9,400 tokens, or $4.2 more at the uncached rate.
+  - Loading the gpt-oss and Kimi tokenizers cost nothing.
+- **From now on Tinker sampling is off in code:** `teacher.read` refuses unless `TINKER_SPEND_ALLOWED=1` is set, which needs the owner's yes. Reading billing stays free.
+- **Disk:** today's two downloads, Ollama's `qwen3.5:4b` (6.6 GB) and the Qwen3.5-4B weights for mlx-lm (8.7 GB), took free disk from 30 GB to 15 GB. That is the floor, so no further model fits. Deleting either is the owner's call.

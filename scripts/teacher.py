@@ -193,10 +193,17 @@ def read(
     """Each article through the model on Tinker: its answers, its token counts and the time.
     With thinking, the model's own chat template asks it to reason first; without, the prompt
     is the hand-rendered ChatML with an empty think block. Several samples read the prompt once."""
+    import os
+
     import tinker
 
     from paperghosts.config import setting
 
+    # decision 39: no Tinker spend without the owner's yes, so sampling needs this set on purpose
+    if os.environ.get("TINKER_SPEND_ALLOWED") != "1":
+        raise RuntimeError(
+            "Tinker sampling is off (decision 39): set TINKER_SPEND_ALLOWED=1 only with the owner's yes"
+        )
     service = tinker.ServiceClient(api_key=setting("TINKER_API_KEY").get())
     client = service.create_sampling_client(base_model=model)
     tokenizer = client.get_tokenizer()

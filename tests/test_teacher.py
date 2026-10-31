@@ -85,3 +85,12 @@ def test_the_answer_is_what_follows_the_reasoning_and_kind_goes_by_majority():
         voted([b, a, "junk"])["kind_quote"] == "second"
     )  # no majority: the first parsed
     assert voted(["junk"]) is None
+
+
+def test_tinker_sampling_refuses_without_the_owners_yes(monkeypatch):
+    import pytest
+    from teacher import read
+
+    monkeypatch.delenv("TINKER_SPEND_ALLOWED", raising=False)
+    with pytest.raises(RuntimeError, match="decision 39"):
+        read([{"article_id": "a"}], "Qwen/Qwen3.5-397B-A17B", "system")

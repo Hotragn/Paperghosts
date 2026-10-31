@@ -61,7 +61,7 @@ flowchart LR
 |---|---|---|---|
 | Ingest | Stream each year file, parse pages, prefilter articles, write candidates, counts and recall samples | `httpx` streaming, `tarfile` in `r\|gz` mode, `orjson`, `zstandard` | One Temporal activity per year file |
 | Triage | Drop candidates whose every match is a known idiom ("Holy Ghost", "ghost of a chance", "gave up the ghost"), only if the eval shows it loses no reports | Rules, measured on the gold set | Pipeline |
-| Reader | Classify each candidate and extract fields, each with a verbatim quote | Qwen 4B student with a LoRA trained on Tinker from teacher labels | Full pass on Tinker sampling; also runs locally offline |
+| Reader | Classify each candidate and extract fields, each with a verbatim quote | Qwen 4B student with a LoRA trained locally with mlx-lm from a local teacher's labels (decision 39) | Full pass locally in Ollama, offline |
 | Quote verifier | Keep a field only if its quote is found in the OCR text, allowing for OCR noise | `rapidfuzz`, threshold calibrated on the gold set | Pipeline and investigator |
 | Geocoder | Publication place from the LCCN title; article places from the reader | GeoNames `cities1000`, offline, with a manifest | Pipeline |
 | Reprint clustering | Group printings of the same story across papers (syndication was common) | Shingle links as blocking. Each printing joins a story only by matching its first printing directly, so nothing chains (decision 36) | Pipeline |

@@ -119,23 +119,26 @@ How the build runs: five phases, each split into milestones, each milestone with
 3. Label gold and dev before seeing any model output, with a blind second pass on gold to measure agreement. Then freeze them: `HASH` gains the labels' sha256.
    - Done in decision 38. `labels.jsonl` and `dev_labels.jsonl` hold one label per article, the ruling where the passes disagreed. The second pass is in `second_pass.jsonl`, and each dispute's two labels and ruling are in `adjudication.jsonl`. Evals read only the two label files, and `check_leakage.py` checks their hashes.
 4. Teacher labels for the training pool, with the leakage check passing.
+   - **Local, at no cost (decision 39, the owner's call).** The teacher is an open-weight model on this Mac through Ollama, chosen on dev against Tinker's 397B round 3. Training labels come only from that local teacher, never from Claude or the reading agents. Gold and dev are for evaluation only.
+   - The teacher run resumes from where it stopped and logs its progress, since it runs for hours.
    - The training draw comes from `split.json`'s pool, at most one printing per story, and `check_leakage.py` is extended to check that draw.
    - Each drawn item is checked again against gold and dev by a stricter text rule: at least 4 shared runs, and 0.05 of the shorter's (the EM's call). The split's rule, 0.10 and 5 runs, sits just under the lowest one-story pair (0.105, 6 runs), and a false flag on a training draw costs nothing.
 5. Baselines: a keyword rule, and base 4B both zero-shot and few-shot.
-6. LoRA training on Tinker, iterating on the dev split until improvements stop. Each iteration is recorded.
+6. LoRA training with mlx-lm on this Mac (decision 39), iterating on the dev split until improvements stop. Each iteration is recorded, and so is the student's short prompt against the long one.
 7. Eval B, ablations B1 to B10, and edge-case slices E1 to E14.
-   - Eval B also has the reader screen the random reservoirs, for a recall bound that doesn't rest on flag words (decision 30). The Tinker credit check sets how many it reads.
+   - Eval B also has the reader screen the random reservoirs, for a recall bound that doesn't rest on flag words (decision 30). Local throughput sets how many it reads.
    - That screen gives lexicon v2's independent recall. Decision 31's 84% is in-sample.
    - **A pooled recall screen** (the EM's call, decision 37's review). At the judged rates, six in ten of the population's expected reports sit in the low-rate strata. Those are the bulk, about 16,000, and the five rules without a headline term, about 11,000. Gold expects about 4.5 reports there.
      - A seeded draw from those strata is screened by the tuned reader and by the teacher. Every article either calls a report is read by hand under `POLICY.md`.
-     - The credit check sizes it to find about 50 reports.
+     - Local throughput sizes it, aiming for about 50 reports.
      - Recall is reported per stratum and weighted. It's an upper bound, since reports both models miss go uncounted.
 8. The failure log, and `eval/MODEL_CARD.md`.
-9. The local export and the offline proof.
+9. The local export and the offline proof. The adapter is the one the full pass loads in Ollama, and its accuracy on dev is measured against mlx-lm's own before the pass.
 10. The full pass over all triaged candidates.
-   - Lexicon v2 makes the reader's job 1,236,122 candidates, 17.7% more than v1's (decision 31). The Tinker credit check weighs that before the pass starts.
+   - Lexicon v2 makes the reader's job 1,236,122 candidates, 17.7% more than v1's (decision 31).
+   - **The pass runs locally** (decision 39), with the student's short prompt. It resumes from checkpoints by year, never loses finished work, and logs its progress, since it runs for days.
    - **Every triaged candidate is read** (the EM's call, decision 36). A member that reads differently from its story's first printing becomes a report of its own, shown as printed inside its story. It counts as different if it's a report where the first printing isn't one, or if it gives another place, date or person.
-   - If the credit check finds that every candidate doesn't fit, stop. Bring the EM the shortfall, and the skip rule's loss, measured on a seeded draw of skipped members read beside their first printings.
+   - If the local pass can't finish in time, stop. Bring the EM the shortfall, and the skip rule's loss, measured on a seeded draw of skipped members read beside their first printings.
 
 **Gate**
 - The gold hash hasn't changed since the freeze, and the leakage check passes.
