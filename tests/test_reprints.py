@@ -5,7 +5,14 @@ its first printing directly, never through a chain of links (decision 36)."""
 
 import numpy as np
 
-from paperghosts.cluster.reprints import clusters, keys, overlap, shingles, stories
+from paperghosts.cluster.reprints import (
+    clusters,
+    groups,
+    keys,
+    overlap,
+    shingles,
+    stories,
+)
 
 STORY = (
     "A strange story comes from the village of Milford, where the family of Mr. John Hale "
@@ -123,3 +130,13 @@ def test_the_leakage_check_compares_every_run_of_the_whole_text():
     assert len(every) == 700 - 4
     assert len(shingles(long)) < len(every) / 2
     assert set(shingles(long)) <= set(every)
+
+
+def test_the_split_groups_printings_linked_by_the_opening_or_the_body_through_any_chain():
+    # decision 37: eval A's links and the body's, chained, so no reprint crosses the split
+    opening = [{1, 2}, {1, 2}, {9}, {20}]
+    body = [{9}, {5, 6}, {5, 6}, {21}]
+
+    assert groups(opening, body) == [[0, 1, 2]]
+    # a story printed under a new lead: its opening is the other printing's body
+    assert groups([{1, 2}, {7, 8}], [{30}, {1, 2}]) == [[0, 1]]
