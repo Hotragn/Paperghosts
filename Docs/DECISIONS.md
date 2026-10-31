@@ -887,3 +887,104 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Articles come in a seeded shuffle, with no stratum or weight shown.
   - Tried on the first article in that order, it fetched its three crops through `crops_for` in 5 s, and they match its text. No label was saved.
   - `POLICY.md` writes `place_type`'s values with spaces, and the schema with underscores (`inn_or_hotel`). The page shows the first and saves the second.
+
+**38. Gold and dev are labelled by hand under `POLICY.md`, all 450 through the page's `checked()`. A blind second pass relabels all of gold and a seeded fifth of dev. On gold it agrees with the first pass on 271 of 300 kinds (κ 0.88, 0.84–0.92) and on 296 of 300 report-or-not calls (κ 0.95). Every one of the 69 disagreements is ruled on under `POLICY.md`, both labels kept, and the labels are frozen by sha256 before any model output. Gold holds 46 reports, against the 35.3 expected.**
+
+- **The first pass:** I labelled all 300 gold and 150 dev articles in batches of 20. They came in the page's seeded order, with no stratum or weight in view, and each batch was committed as it was done.
+  - Every label passes `checked()`: its kind is `POLICY.md`'s, its fields are a report's only, every value has its quote in the text, and every choice is the schema's.
+  - **Crops:** 443 of the 450 articles have them, cached one article at a time at loc.gov's pace. The other 7 fail the page check, or have too few words to check. I read the crop wherever the OCR was unclear. Eight dev labels were made before their crops arrived, so I read those crops afterwards and mended the labels.
+- **Calls `POLICY.md` left to the labeller,** made the same way in gold and dev:
+  - An apparition of the living is a report when a figure is seen, as with Buller's sight of Wolseley.
+  - An essay or sermon that tells several particular claims takes its fields from the first one told in particulars. Examples: Scott's sight of the dead Byron in the Westminster Review's essay on hallucinations, and Slade's slate-writing in the Boston Pilot's round-up of exposures.
+  - A column of short items under one heading is one article. Rule 16 and E11 are kept for segmentation errors: an item's tail, or an advert, joined to another.
+  - E1 marks the Holy Ghost in religious matter. A joke's catechism or a pioneer tale's blazes are not E1.
+  - E3 marks fiction whose plot holds a ghost, sham or real. A ghost used as a figure in a poem is not E3.
+  - A place's state comes only from the text or the dateline. "Abba. la" is read as Albia, Ia., the dateline its crop shows. New York as a city gives no state.
+- **The blind second pass** (`scripts/second_pass.py`) covers 330 articles: all of gold, and the 30 of dev drawn with the seed "2C.2 second pass dev sample".
+  - **Eleven reading agents** each took a packet of 30, in one seeded shuffle across both splits, so no packet shows an article's split.
+  - Each saw only its packet, the crops it lists, and `POLICY.md`: no first label, stratum, weight or split. Each was barred from the label files, the split, the results, the docs and git history. One reported listing two scratch folders by mistake and seeing only file names.
+  - A usage limit stopped seven of them partway, and each was resumed in its own blind context.
+  - Each agent checked its labels against its packet's texts alone. Then all 330 went through `checked()` into `eval/gold/second_pass.jsonl`, never into the label files the evals read.
+- **Agreement, before any ruling** (`eval/results/phase2c/agreement.json`). Rates come with Wilson intervals, and κ with a bootstrap of 2,000 resamples:
+
+  | | Articles | Kind | κ on kind | Report or not | κ on report |
+  |---|---|---|---|---|---|
+  | gold | 300 | 271 (86.5–93.2%) | 0.88 (0.84–0.92) | 296 (96.6–99.5%) | 0.95 (0.89–0.99) |
+  | dev sample | 30 | 25 (66–93%) | 0.79 (0.61–0.95) | 30 (89–100%) | 1.00 |
+  | both | 330 | 296 (86–93%) | 0.87 (0.83–0.91) | 326 (96.9–99.5%) | 0.95 (0.90–0.99) |
+
+  - **On the 45 gold articles both passes call reports,** each field agrees:
+    - outcome 43 (85–99%)
+    - place_state 42 (82–98%)
+    - precision 40 (77–95%)
+    - place, specific place and place type 39 each (74–94%)
+    - seen 37 (69–91%)
+    - people 26 (43–71%)
+
+    The dev sample has 4 such reports.
+  - **When a field agrees:**
+    - Both passes leave it empty.
+    - Outcome, place_type, precision and place_state: the same value.
+    - Place, seen and the specific place: quotes that overlap in the text, or the same value.
+    - People: each person's quote overlaps one of the other pass's, both ways.
+  - **People is the loosest field.** Most of its disagreements are a person one pass adds who didn't see or claim anything: a reporter, an editor, or a crowd told of it afterwards.
+- **The rulings** (`eval/gold/adjudication.jsonl`): 69 articles disagreed, 61 of them in gold. 34 were on kind, and 35 on fields alone.
+  - Each ruling went through `checked()` and replaced its article's label. The record keeps the first pass's label, the second's, the ruling and its reason.
+  - 58 uphold the first pass, 6 take the second's call, and 5 mend fields.
+  - **16 of the 34 kind disagreements were one question:** spirit or medium in an ordinary sense, "in good spirits" or "an advertising medium". The first pass called these `other`, the second `idiom`. The ruling is `other`, since `POLICY.md`'s idioms are figures about ghosts.
+  - **The second pass's call was taken six times:**
+    - Basingstoke's haunted clock, a report told with a closing quip (rule 8), which makes gold's 46th report
+    - a spiritualist society's display notice, an advert
+    - a puff for the paper's own Sunday story, an advert
+    - a camp meeting's "séance behind the woodshed", a figure for a whipping
+    - spiritualists on cremation in a Catholic note, `other`
+    - a stated house as a place type
+  - **Fields were emptied where a value wasn't stated:** "claimed to be haunted" states nothing seen, and a clerk's workplace isn't where his sittings were.
+  - **`POLICY.md` version 3,** dated, adds the two clarifications the rulings settled, which every label already follows. Spirit or medium in an ordinary sense is `other` (rule 10), and a display notice of meetings and messages is an advert (rule 12).
+- **The freeze** (`1e64421`):
+  - `eval/gold/HASH` lists the sha256 of `labels.jsonl` and `dev_labels.jsonl` beside `split.json`'s, committed before any model output.
+  - The two files hold exactly 300 and 150 labels, one per article. Each is the first pass's label where the passes agreed, and the ruling where they didn't. All pass `checked()` (`second_pass.py frozen`).
+  - `check_leakage.py` now checks every file `HASH` lists.
+  - Gold's final kinds: 46 reports, 89 other, 66 fiction, 60 idiom, 30 adverts, 9 religious. Dev's: 32 reports, 44 other, 31 fiction, 26 idiom, 10 adverts, 7 religious.
+- **Gold's reports by stratum** (`eval/results/phase2c/gold_measures.json`), against the draw's expectation:
+
+  | Stratum | Gold | Reports | Expected |
+  |---|---|---|---|
+  | E8: phantom ships, trains and lights | 8 | 0 | 0.0 (0.0–6.3) |
+  | E6: hoaxes and pranksters | 8 | 3 | not judged |
+  | E12: not in English | 7 | 0 | 0.0 (0.0–3.4) |
+  | before 1850 | 20 | 0 | 0.0 (0.0–4.1) |
+  | ouija, term in the headline | 8 | 2 | 2.5 (1.0–4.6) |
+  | ouija, none in the headline | 12 | 0 | 0.7 (0.4–1.3) |
+  | seance, term in the headline | 10 | 2 | 3.1 (1.3–5.8) |
+  | seance, none in the headline | 12 | 1 | 0.7 (0.4–1.3) |
+  | spirit_phrase, term in the headline | 10 | 7 | 3.1 (1.3–5.8) |
+  | spirit_phrase, none in the headline | 12 | 3 | 0.7 (0.4–1.3) |
+  | spiritualism, term in the headline | 10 | 1 | 3.1 (1.3–5.8) |
+  | spiritualism, none in the headline | 12 | 1 | 0.7 (0.4–1.3) |
+  | spirit+medium, term in the headline | 6 | 4 | 1.8 (0.8–3.5) |
+  | spirit+medium, none in the headline | 14 | 0 | 0.9 (0.5–1.5) |
+  | v1 terms only, term in the headline | 80 | 20 | 17.1 (6.1–38.1) |
+  | v1 terms only, none in the headline | 46 | 2 | 0.8 (0.3–2.3) |
+  | near misses | 25 | 0 | 0.0 (0.0–0.3) |
+  | **all** | **300** | **46** | **35.3 (14.0–86.5)** |
+
+  - The 46 sit inside the expected range, above its centre.
+  - E6, which nothing judged, adds 3.
+  - The rules' headline strata hold 16 against about 13.6 expected, and the low-rate rule strata 5 against about 3.7.
+  - At 46 reports, a field right in 39 of them has a Wilson interval of about 72–92%.
+- **The weighted report rate** (Σ weight × report / Σ weight, over candidates and near misses): 0.97%, with a stratified bootstrap interval of 0.38–1.81%.
+- **The story-place rule, as code** (`gold_measures.story_state`), was written and tested before the freeze and run once after it.
+  - It takes a state named after a comma in the place's quote. Else, a town from the quote named elsewhere with a state after a comma. Else, the dateline's state. It never takes the paper's state.
+  - On gold's 34 reports with a place, it agrees with the labelled `place_state` on 31 (77–97%): 7 the same state, 24 both empty.
+  - It never gives a wrong state. Its 3 misses are states the OCR prints after a period ("Allentown. Pa", "Springfield. Ohio") or apart from the place's quote (Georgia).
+  - **The paper's state**, decision 34's fallback, matches only 2 of the 10 labelled states (6–51%).
+- **Slices on the frozen labels, gold then dev:**
+
+  | E1 | E2 | E3 | E4 | E5 | E6 | E7 | E8 | E9 | E10 | E11 | E12 | E13 | E14 |
+  |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+  | 3, 4 | 35, 15 | 32, 9 | 11, 2 | 30, 26 | 12, 3 | 23, 10 | 8, 5 | 115, 44 | 12, 9 | 9, 3 | 7, 3 | 1, 1 | 21, 9 |
+
+  - E9 comes from the grouping: 159 of the 450 are in a group of two or more.
+  - E1 and E13 are too thin to measure alone.
+- **The grouping missed one reprint within gold:** the comic sketch of a backwoods preacher is printed twice in gold. Two printings within gold don't leak into training, and both are labelled `fiction`.

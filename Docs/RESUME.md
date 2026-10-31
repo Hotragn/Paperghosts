@@ -6,8 +6,9 @@ Hard date: the site must be live on Oct 31.
 
 ## Next step
 
-**Phase 2C: the reader** (`BUILD-PLAN.md` section 4), on `phase-2c-reader`. Step 2C.1 has designed and drawn the gold set (decision 37): `POLICY.md`, then `eval/gold/split.json` and `HASH`, split from the training pool by the most inclusive grouping and a whole-text check, which `scripts/check_leakage.py` runs.
-- Next, 2C.2: label gold and dev by hand in `scripts/label_gold.py`'s page, before any model output, with a blind second pass on gold to measure agreement. Then freeze them. No label is made before the EM's review of 2C.1.
+**Phase 2C: the reader** (`BUILD-PLAN.md` section 4), on `phase-2c-reader`. Step 2C.1 designed and drew the gold set (decision 37). Step 2C.2 labelled all 300 gold and 150 dev articles by hand under `POLICY.md`, checked them with a blind second pass, ruled on every disagreement and froze the labels by sha256 in `HASH` (decision 38). No model has seen gold or dev.
+- Next, the plan's 2C steps 4 and 5: teacher labels for the training pool, drawn from `split.json`'s pool with the stricter leakage recheck, then the baselines.
+- Evals read only `eval/gold/labels.jsonl` and `dev_labels.jsonl`, one label per article. `check_leakage.py` fails if either changes from its hash.
 - Lexicon v2 keeps all five rules (decision 31).
 
 Needs the owner's yes when we get there:

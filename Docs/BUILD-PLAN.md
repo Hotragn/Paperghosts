@@ -117,6 +117,7 @@ How the build runs: five phases, each split into milestones, each milestone with
    - A story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved. It never falls back on the paper's state, which put 2 of decision 34's 9 towns in the wrong place. Measure the rule on the gold set.
 2. Build the labelling page (`scripts/label_gold.py`, local only).
 3. Label gold and dev before seeing any model output, with a blind second pass on gold to measure agreement. Then freeze them: `HASH` gains the labels' sha256.
+   - Done in decision 38. `labels.jsonl` and `dev_labels.jsonl` hold one label per article, the ruling where the passes disagreed. The second pass is in `second_pass.jsonl`, and each dispute's two labels and ruling are in `adjudication.jsonl`. Evals read only the two label files, and `check_leakage.py` checks their hashes.
 4. Teacher labels for the training pool, with the leakage check passing.
    - The training draw comes from `split.json`'s pool, at most one printing per story, and `check_leakage.py` is extended to check that draw.
    - Each drawn item is checked again against gold and dev by a stricter text rule: at least 4 shared runs, and 0.05 of the shorter's (the EM's call). The split's rule, 0.10 and 5 runs, sits just under the lowest one-story pair (0.105, 6 runs), and a false flag on a training draw costs nothing.
