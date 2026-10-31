@@ -1,0 +1,34 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2C.2 accepted, with one fix due before any model output. Below: my checks, the fix, then 2C.3 (plan step 4, teacher labels).
+
+My checks at a8cb601: 379 tests and lint pass. The three sha256s match HASH. `second_pass.py frozen` gives 300/150, each its split exactly, with none failing `checked()`. I recomputed the kind agreement myself from daa3f61's first pass against second_pass.jsonl: 271/300, κ 0.879, matching yours. 46 gold reports against 35.3 expected is good news for eval B's power. The leftover idiom labels without a ghost word in the quote are OCR variants or figurative séances. They're fine.
+
+The fix: the rulings were made by the first labeller. 59 of 69 uphold the first pass exactly, 5 take the second's and 5 are mixed. And v3's "ordinary-sense spirit is other" rule settled the largest block (16 other-vs-idiom) in the first pass's favour, after the disputes were seen. The policy may be right, but gold can't rest on a judge ruling its own case.
+1. Fresh reading agents with no access to any label file rule all 69 disputes blind, one pair at a time.
+   - Each gets POLICY v3, the article text (and the crop where you used one) and the two labels as A and B, in a seeded random order with no labeller names.
+   - Each rules on the kind and each disputed field, quoting the text.
+2. Report how often the independent rulings match yours, with an interval, per kind and per field, and how often each side won.
+3. Wherever they differ, re-read the article with its crop and settle it with a written reason in adjudication.jsonl. Record both rulings.
+4. If any label changes, re-freeze HASH, re-run agreement-independent measures (gold_measures.json), and amend decision 38. Still before any model output.
+5. Also have the independent agents check v3's rule 10 clarification against the 16 other-vs-idiom items. If they'd rule idiom for most of them, tell me rather than ruling it yourself.
+
+Notes kept: 2D gets the story-place misses ("Allentown. Pa" and a state apart from the place's quote). The agent that saw scratch-folder file names is fine; say so in decision 38.
+
+2C.3, plan step 4: teacher labels for the training pool. ML-specialist persona.
+1. Credit check first, before any bulk spend.
+   - Measure real tokens and cost per article for the teacher (Qwen3.5-397B) and for 4B reading, on a seeded 50-article sample of the pool.
+   - Project the training draw, the LoRA iterations, eval B with the pooled screen, and the full pass over 1,236,122 candidates against the remaining Tinker credits. Write it to BUDGET.md.
+   - If the full pass doesn't fit, stop and report the shortfall with the skip rule's measured loss. That decision is the owner's.
+   - Keys through the environment only, never printed.
+2. The teacher's prompt and the quote verifier are developed and tuned on dev only; gold stays untouched until eval B.
+   - Report the teacher's accuracy on dev against the frozen dev labels: kind, report-or-not and each field, with Wilson intervals.
+   - Calibrate the verifier's threshold on dev labels. Report the share of teacher values it rejects. A value whose quote fails is dropped, never kept.
+3. The training draw comes from split.json's pool only, at most one printing per story, seeded.
+   - Stratify it so reports and every hard kind are well represented. Justify its size from the dev learning signal and the credit check, not a round number.
+   - Extend check_leakage.py to the draw. The stricter re-check (at least 4 runs and 0.05 of the shorter) must pass. Commit its JSON.
+4. Every teacher label carries its model id, prompt sha256 and timestamp. Store the labels compressed under data/, out of git if they're large, with their sha256 committed.
+5. Hand-check a seeded 40 of the teacher's training labels against POLICY v3 and report the error rate with an interval. That's the label-noise floor the LoRA trains on.
+6. Commit in batches, run tests and lint, and verify with ls-remote.
+
+Your report's first line is `2C.3: GATE PASSED` or `2C.3: BLOCKED — <reason>`. Put the independent re-ruling's result first.
+</cross-session-message>
