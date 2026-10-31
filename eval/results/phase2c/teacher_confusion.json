@@ -1,0 +1,94 @@
+{
+ "r1": {
+  "other": {
+   "other": 41,
+   "report": 1,
+   "idiom": 1,
+   "advert": 1
+  },
+  "report": {
+   "report": 24,
+   "other": 7,
+   "religious": 1
+  },
+  "idiom": {
+   "idiom": 14,
+   "other": 11,
+   "report": 2
+  },
+  "fiction": {
+   "fiction": 21,
+   "other": 7,
+   "idiom": 2
+  },
+  "religious": {
+   "religious": 6,
+   "other": 1
+  },
+  "advert": {
+   "advert": 8,
+   "other": 2
+  }
+ },
+ "r2": {
+  "other": {
+   "other": 42,
+   "report": 1,
+   "advert": 1
+  },
+  "report": {
+   "report": 24,
+   "other": 7,
+   "religious": 1
+  },
+  "idiom": {
+   "idiom": 11,
+   "other": 14,
+   "report": 2
+  },
+  "fiction": {
+   "fiction": 21,
+   "other": 7,
+   "idiom": 2
+  },
+  "religious": {
+   "religious": 5,
+   "other": 2
+  },
+  "advert": {
+   "advert": 9,
+   "other": 1
+  }
+ },
+ "r3": {
+  "other": {
+   "other": 40,
+   "report": 1,
+   "idiom": 3
+  },
+  "report": {
+   "report": 23,
+   "other": 7,
+   "religious": 1,
+   "idiom": 1
+  },
+  "idiom": {
+   "idiom": 18,
+   "other": 8,
+   "report": 1
+  },
+  "fiction": {
+   "fiction": 20,
+   "other": 7,
+   "idiom": 3
+  },
+  "religious": {
+   "religious": 4,
+   "other": 3
+  },
+  "advert": {
+   "advert": 7,
+   "other": 3
+  }
+ }
+}

@@ -36,7 +36,7 @@ Software requirements, each with an ID and how it is verified. The gates in `BUI
 | RDR-6 | Eval B compares base 4B, tuned 4B and the teacher on the gold set. It reports metrics with bootstrap 95% intervals, cost per 10,000 articles, and p50 and p95 latency. | `eval/results/reader_eval.json`, plus charts |
 | RDR-7 | Every ablation in section 7.2 is run, or its absence is explained. | Ablation JSON and charts |
 | RDR-8 | The edge-case suite in section 7.3 is reported slice by slice. | `eval/results/reader_edge_cases.json` |
-| RDR-9 | The quote verifier's threshold is calibrated on the gold set. A field whose quote doesn't verify becomes "not stated". | Calibration curve, plus unit tests |
+| RDR-9 | The quote verifier's threshold is calibrated on the dev set, never on gold. Gold stays untouched by any model output until eval B, so a threshold tuned on it would make eval B's field scores optimistic (the EM's call, 2C.3). A field whose quote doesn't verify becomes "not stated". | Calibration curve on dev, plus unit tests |
 | RDR-10 | The tuned student runs locally with no network, on at least 200 articles, and its agreement with the Tinker-served outputs is reported. A guard in the runner blocks sockets, so system network settings are never touched. | `scripts/offline_proof.py` output |
 | RDR-11 | The full reader pass covers every triaged candidate, and its outputs are versioned. | Counts in eval A and B |
 | RDR-12 | At least one failure the eval exposed is logged, with what changed because of it. | `DECISIONS.md`, and the README failure log |

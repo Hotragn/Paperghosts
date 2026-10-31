@@ -47,8 +47,20 @@ where each F is an object {"value": "...", "quote": "..."} or null, never a bare
 - A value the text doesn't state is null. Never infer one.
 - outcome is one of explained, hoax, unexplained, unknown. place_type is one of house, church, cemetery, inn_or_hotel, road_or_bridge, public_building, ship, other. precision is one of town, street, building.
 
+How to apply the policy, in its own terms:
+- The kind follows how the article uses its ghost word. If the only ghost, spirit, haunt or spectre in it is a figure of speech, the kind is idiom, whatever the article is about: politics, sport, a profile. other is for names and titles, social events, OCR accidents, ordinary senses of spirit or medium, and essays about ghosts in general.
+- A joke, quip, squib, poem, story, serial or comic sketch is fiction, whatever its subject, even a short one in a column of paragraphs.
+- One particular claim makes a report: a named person, a place or an occasion with a ghost, spirit or manifestation told as having happened. It counts inside an essay, a round-up, a column or an article cut off in the archive. Take the fields from the first claim told in particulars.
+- seen is what was seen, heard or felt: the apparition, the noises or the message, not the house or the occasion.
+- people are those who saw, heard, felt or claimed it, and at a seance the medium and the sitters the text names. Leave out anyone who only reports it, investigates it, is told of it afterwards, or plays the ghost.
+
 THE POLICY
 """
+# Round 3's lines above restate POLICY.md; each was prompted by dev's round 2 confusions, never
+# by one article. The kind line: 14 dev idioms called other, among them a political "Ghost of
+# Major Andre" and "CHOLERA SPECTRE". The fiction line: 7 fictions called other, quips and
+# sketches. The report line: 7 reports called other, claims inside essays and round-ups (rules 6,
+# 16, 17). The seen and people lines: seen right on 7 of 24 reports, people on 6.
 
 
 def system_prompt(policy: str | None = None) -> str:
@@ -318,8 +330,30 @@ def dev_round(round_name: str) -> dict:
     return found
 
 
+def confusion(round_name: str) -> dict:
+    """The dev label's kind against the teacher's, from a round's saved answers."""
+    from label_gold import OUT, saved
+
+    labels = {r["article_id"]: r["kind"] for r in saved(OUT["dev"])}
+    found = {}
+    for line in (ROOT / "data" / "teacher" / f"dev_{round_name}.jsonl").read_text().splitlines():
+        answer = json.loads(line)
+        label = parsed(answer.get("answer") or "")
+        row = found.setdefault(labels[answer["article_id"]], {})
+        kind = label["kind"] if label else "unparsed"
+        row[kind] = row.get(kind, 0) + 1
+    return found
+
+
 if __name__ == "__main__":
     run, *rest = sys.argv[1:]
+    if run == "confusion":
+        found = {r: confusion(r) for r in rest}
+        (RESULTS / "teacher_confusion.json").write_text(json.dumps(found, indent=1) + "\n")
+        for r, m in found.items():
+            print(r, "rows: dev label; columns: teacher")
+            for label, row in sorted(m.items()):
+                print(f"  {label:10}", dict(sorted(row.items(), key=lambda kv: -kv[1])))
     if run == "dev":
         found = dev_round(rest[0] if rest else "r1")
         brief = {
