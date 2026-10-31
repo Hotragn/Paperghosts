@@ -1,5 +1,7 @@
 # Paper Ghosts
 
+<img src="web/public/brand/logo.svg" alt="" width="96" height="96">
+
 A morgue of ghost reports from American newspapers, 1774–1963. Paper Ghosts reads the AmericanStories OCR of the Library of Congress's page scans, picks out the articles that report a ghost, and files each one with the exact words of the scan that state its place, what was seen and how it ended. The site never writes a ghost story: every value on it is a quote, and every report links to its clipping.
 
 ## The demo: the Morgue
@@ -13,6 +15,29 @@ pnpm --dir web preview         # http://localhost:4173
 ```
 
 `uv run python scripts/export_demo.py` rebuilds its data, `web/public/reports.json` and the clippings in `web/public/crops/`, from the frozen labels and the local crop cache, and fetches nothing.
+
+### Its rooms
+- **The drawer:** search by town, state or word, and filter by decade, outcome and the state the paper was printed in.
+  - Each report opens into its clipping beside its transcription, with the verified quotes marked.
+  - An index card lists every field, VERIFIED or "Not stated".
+  - It gives the paper's own place, labelled as the paper's, not the story's.
+  - It lists the five ghosts like it.
+- **Paper samples:** the clearest scan for each outcome, captioned only with its verified quotes.
+- **How we know:** every figure from the numbers sheet, with its interval, including the teacher benchmark.
+
+Deploying is a static site: `render.yaml` builds `web/` and publishes `web/dist`. The bundle holds no keys.
+
+### MongoDB Atlas
+```bash
+uv run python scripts/load_demo_atlas.py               # upserts the 78 into paperghosts.reports; never deletes
+uv run python scripts/query_demo_atlas.py "apparition" # Atlas Search, fuzzy: finds the OCR's "apparilion"
+uv run python scripts/query_demo_atlas.py --like <article_id>   # ghosts like this one (moreLikeThis)
+```
+
+The keys come from `MONGODB_URI` in `.env`.
+- The reports go in as the planned `Report` documents, and Atlas's own validator checks them.
+- The site's "ghosts like this one" is Atlas's answer, saved by `scripts/export_like.py`, so the static build works offline.
+- Sample outputs are in `Docs/demo/`.
 
 ## The numbers
 
@@ -44,6 +69,14 @@ This prints every figure the write-up uses, each beside the committed results fi
 - The archive-wide pass hasn't run, so the demo shows only the 78 evaluation reports, not every ghost the papers printed.
 - The OCR is shown as printed. Some clippings are hard to read, and a quote is only as good as the scan's text.
 - A place is the paper's own words. Nothing is geocoded or mapped yet.
+
+## AI disclosure
+- **Claude** wrote the code, under the owner's direction, and labelled the 450 evaluation articles under the labelling policy, one at a time. The second pass and the blind re-rulings were done by separate Claude judges that couldn't see the first labels.
+- **Open-weight models do the reading:** Qwen3.5-397B through Tinker and gemma4:26b on this Mac were scored as teachers on dev. Training labels never come from Claude.
+- **Entire** recorded every agent session; `Docs/demo/entire_sessions.md` points to two of them.
+
+## Brand
+`Docs/BRAND.md` covers the brand: the hand-drawn mark (`web/public/brand/`), the colour tokens with their WCAG AA check (`scripts/check_contrast.py`), the type and the voice.
 
 ## Data and licences
 

@@ -117,7 +117,7 @@ function Value({ field }: { field: Field | null }) {
   )
 }
 
-function Case({ r, byId }: { r: Report; byId: Map<string, Report> }) {
+function Case({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opened: boolean }) {
   const fields = fieldsOf(r)
   const lines = r.headline.split(/\n+/).map((l) => l.trim()).filter(Boolean)
   return (
@@ -128,7 +128,7 @@ function Case({ r, byId }: { r: Report; byId: Map<string, Report> }) {
             <img
               key={c.src}
               src={c.src}
-              loading="lazy"
+              loading={opened ? 'eager' : 'lazy'}
               alt={`The scanned clipping${r.clippings.length > 1 ? `, part ${i + 1} of ${r.clippings.length}` : ''}. Its transcription is beside it.`}
             />
           ))}
@@ -231,10 +231,8 @@ function Envelope({ r, byId, opened }: { r: Report; byId: Map<string, Report>; o
   const first = titleOf(r)
   const ref = useRef<HTMLDetailsElement>(null)
   useEffect(() => {
-    if (opened && ref.current) {
-      ref.current.open = true
-      ref.current.scrollIntoView({ block: 'start' })
-    }
+    // a linked report is shown alone, just under the slip, so it opens without a scroll
+    if (opened && ref.current) ref.current.open = true
   }, [opened])
   return (
     <li>
@@ -250,7 +248,7 @@ function Envelope({ r, byId, opened }: { r: Report; byId: Map<string, Report>; o
           <span className="where">{where ? `Story place: ${where}` : 'Story place not stated'}</span>
           <Stamp outcome={r.outcome} />
         </summary>
-        <Case r={r} byId={byId} />
+        <Case r={r} byId={byId} opened={opened} />
       </details>
     </li>
   )
@@ -371,7 +369,7 @@ function App() {
   const shown = useMemo(() => {
     const words = query.toLowerCase().split(/\s+/).filter(Boolean)
     return (reports ?? []).filter((r) => {
-      if (openId) return true
+      if (openId) return r.article_id === openId
       if (era && decade(r) !== era) return false
       if (outcome && (r.outcome?.value ?? 'unknown') !== outcome) return false
       if (printed && r.printed_in.state !== printed) return false
@@ -451,7 +449,9 @@ function App() {
           {!reports && !error && <p className="count">Opening the drawer…</p>}
           {reports && (
             <p className="count">
-              {shown.length === 0
+              {openId ? (
+                <a href="#/">Back to all {reports.length} reports</a>
+              ) : shown.length === 0
                 ? 'Nothing filed under that.'
                 : `${shown.length} report${shown.length === 1 ? '' : 's'}, ${span(shown)}. Clearest scans first.`}
             </p>
