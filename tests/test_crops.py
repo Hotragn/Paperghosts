@@ -5,7 +5,7 @@ at most one a second and name the project, and each crop is fetched once and cac
 import httpx
 import pytest
 
-from paperghosts.ingest import crops
+from paperghosts.ingest import crops, reels
 from paperghosts.ingest.crops import (
     crop,
     crop_urls,
@@ -31,9 +31,13 @@ LEWISTOWN_SERVICE = (
 
 
 @pytest.fixture
-def loc(monkeypatch):
-    """Stands in for loc.gov and tile.loc.gov, and records every request."""
+def loc(monkeypatch, tmp_path_factory):
+    """Stands in for loc.gov and tile.loc.gov, and records every request. Its answers are
+    cached in a folder of their own, and the reel-to-batch map starts empty."""
     requests, responses = [], {}
+    monkeypatch.setattr(crops, "CACHE", tmp_path_factory.mktemp("requests"))
+    monkeypatch.setattr(crops, "COUNTS", crops.Counter())
+    monkeypatch.setattr(reels, "load", dict)
 
     def answer(request):
         requests.append(request)
@@ -53,6 +57,15 @@ def loc(monkeypatch):
 
 def test_service_id_comes_from_the_batch_path():
     assert service_id(RAW_DATA_LOC) == SERVICE
+
+
+def test_a_service_is_named_by_its_batch_lccn_reel_issue_and_frame():
+    assert (
+        crops.service(
+            "ct_barnum_ver01", "sn84020071", "00414182975", "1850042501", "0199"
+        )
+        == SERVICE
+    )
 
 
 def test_each_box_gets_its_own_crop_in_reading_order():
@@ -217,3 +230,243 @@ def test_a_page_that_is_not_an_image_is_never_cached(loc, monkeypatch, tmp_path)
     with pytest.raises(ValueError):
         crop(url)
     assert list(tmp_path.iterdir()) == []
+
+
+def test_a_request_is_asked_once_and_cached_with_its_url_date_and_status(loc):
+    requests, responses = loc
+    responses["/item/a/"] = httpx.Response(200, json={"item": 1})
+
+    first = crops.cached("https://www.loc.gov/item/a/", fo="json")
+    again = crops.cached("https://www.loc.gov/item/a/", fo="json")
+
+    assert len(requests) == 1 and first == again
+    assert first["url"] == "https://www.loc.gov/item/a/?fo=json"
+    assert first["status"] == 200 and first["body"] == {"item": 1}
+    assert first["retrieved"].startswith("20")
+    assert crops.COUNTS == {"requests": 1, "cache_hits": 1}
+
+
+def test_a_404_is_cached_and_a_server_error_is_not_so_a_later_run_asks_again(loc):
+    requests, responses = loc
+    responses["/gone"] = httpx.Response(404)
+    responses["/down"] = httpx.Response(503)
+
+    assert crops.cached("https://tile.loc.gov/gone")["status"] == 404
+    assert crops.cached("https://tile.loc.gov/gone")["body"] is None
+    assert crops.cached("https://tile.loc.gov/down")["status"] == 503
+    crops.cached("https://tile.loc.gov/down")
+
+    asked = [r.url.path for r in requests]
+    # get asks a busy server three times before it gives up
+    assert asked.count("/gone") == 1 and asked.count("/down") == 6
+    assert crops.COUNTS == {"requests": 3, "cache_hits": 1, "errors": 2}
+
+
+def test_a_pages_ocr_is_the_alto_loc_keeps_beside_its_image():
+    assert crops.alto_url(SERVICE) == (
+        "https://tile.loc.gov/storage-services/service/ndnp/ct/batch_ct_barnum_ver01"
+        "/data/sn84020071/00414182975/1850042501/0199.xml"
+    )
+
+
+def test_the_alto_kept_is_the_pages_size_and_each_word_with_its_box():
+    # the Litchfield enquirer's ALTO, 1850-04-25, cut to its first three words
+    alto = (
+        '<alto><Layout><Page ID="PAGE1" HEIGHT="29656" WIDTH="20352" PC="0.79">'
+        '<String ID="S1" CONTENT="THE" WC="1" HEIGHT="153" WIDTH="449" HPOS="1160"'
+        ' VPOS="972"/><SP/><String ID="S2" CONTENT="ELECTION." HEIGHT="157" WIDTH="1125"'
+        ' HPOS="1716" VPOS="972"/><String ID="S3" CONTENT="Smith &amp; Co" HEIGHT="133"'
+        ' WIDTH="461" HPOS="1048" VPOS="1352"/></Page></Layout></alto>'
+    )
+
+    assert crops.alto_words(httpx.Response(200, text=alto)) == {
+        "page": [20352, 29656],
+        "words": [
+            [1160, 972, 449, 153, "THE"],
+            [1716, 972, 1125, 157, "ELECTION."],
+            [1048, 1352, 461, 133, "Smith & Co"],
+        ],
+    }
+
+
+def test_a_page_with_no_batch_path_gets_its_service_from_its_reels_batch(
+    loc, monkeypatch
+):
+    requests, _ = loc
+    reel_map = {"sn83032276": {"00296028587": {"pst_intramural_ver01": ["1850071901"]}}}
+    monkeypatch.setattr(reels, "load", lambda: reel_map)
+
+    assert page_service(LEWISTOWN, {"height": 8352, "width": 5867}) == LEWISTOWN_SERVICE
+    assert requests == []
+
+
+def test_an_issue_is_asked_of_loc_gov_once_for_all_its_pages(loc):
+    requests, responses = loc
+    next_frame = LEWISTOWN_SERVICE.replace(":0265", ":0266")
+    responses["/item/sn83032276/1850-07-26/ed-1/"] = httpx.Response(
+        200,
+        text=f'{{"page": [{{"image_url": "{LEWISTOWN_SERVICE}/full"}},'
+        f' {{"image_url": "{next_frame}/full"}}]}}',
+    )
+
+    assert page_service(LEWISTOWN, {}) == LEWISTOWN_SERVICE
+    assert page_service(LEWISTOWN.replace("_0265.", "_0266."), {}) == next_frame
+    assert len(requests) == 1
+
+
+ARTICLE = (
+    "The spectre appeared nightly beside the cemetery gates, frightening travellers,"
+    " horses, watchmen, neighbours and several respectable citizens."
+)
+MARKET = (
+    "Wheat prices advanced sharply yesterday, while cotton, barley, coffee, sugar,"
+    " leather and copper closed steady at the exchange."
+)
+BOX = {"x0": 100, "y0": 100, "x1": 600, "y1": 400}  # in the scan's pixels
+
+
+def a_page(responses, size=(1000, 800), words=ARTICLE):
+    """info.json for LEWISTOWN_SERVICE's page, and its ALTO with these words laid out
+    inside BOX, in ALTO's units: four to a pixel, as at 300 dpi."""
+    height, width = size
+    responses[f"/image-services/iiif/{LEWISTOWN_SERVICE}/info.json"] = httpx.Response(
+        200, json={"height": height, "width": width}
+    )
+    strings = "".join(
+        f'<String CONTENT="{word}" HPOS="{4 * (110 + 40 * (i % 10))}"'
+        f' VPOS="{4 * (110 + 30 * (i // 10))}" WIDTH="120" HEIGHT="80"/>'
+        for i, word in enumerate(words.split())
+    )
+    responses[httpx.URL(crops.alto_url(LEWISTOWN_SERVICE)).path] = httpx.Response(
+        200,
+        text=f'<alto><Page HEIGHT="{4 * height}" WIDTH="{4 * width}">{strings}</Page></alto>',
+    )
+
+
+def test_the_page_check_accepts_a_page_of_the_scans_size_with_the_article_in_its_boxes(
+    loc,
+):
+    _, responses = loc
+    a_page(responses)
+
+    scan = {"height": 1000, "width": 800}
+    assert crops.page_check(LEWISTOWN_SERVICE, scan, [BOX], ARTICLE) is None
+
+
+def test_the_page_check_rejects_a_page_that_isnt_there(loc):
+    assert (
+        crops.page_check(LEWISTOWN_SERVICE, {"height": 1, "width": 1}, [BOX], ARTICLE)
+        == "no such page"
+    )
+
+
+def test_the_page_check_rejects_a_page_of_another_size_without_reading_its_ocr(loc):
+    requests, responses = loc
+    a_page(responses, size=(1000, 812))
+
+    scan = {"height": 1000, "width": 800}
+    assert crops.page_check(LEWISTOWN_SERVICE, scan, [BOX], ARTICLE) == "another size"
+    assert len(requests) == 1
+
+
+def test_the_page_check_rejects_a_page_of_the_same_size_with_other_words_in_the_boxes(
+    loc,
+):
+    # neighbouring frames of one issue can share a size
+    _, responses = loc
+    a_page(responses, words=MARKET)
+
+    scan = {"height": 1000, "width": 800}
+    assert crops.page_check(LEWISTOWN_SERVICE, scan, [BOX], ARTICLE) == (
+        "the article's words aren't in its boxes"
+    )
+
+
+def test_a_page_of_approximate_size_must_hold_the_boxes_and_the_articles_words(loc):
+    # an approximate size is only the extent of the boxes (decision 18)
+    _, responses = loc
+    a_page(responses)
+    approximate = {"height": 400, "width": 600, "dimensions_approx": True}
+
+    assert crops.page_check(LEWISTOWN_SERVICE, approximate, [BOX], ARTICLE) is None
+    off = BOX | {"x1": 900}
+    assert crops.page_check(LEWISTOWN_SERVICE, approximate, [off], ARTICLE) == (
+        "boxes off the page"
+    )
+
+
+def test_an_article_of_few_words_cant_be_checked_by_them(loc):
+    _, responses = loc
+    a_page(responses)
+
+    scan = {"height": 1000, "width": 800}
+    assert crops.page_check(
+        LEWISTOWN_SERVICE, scan, [BOX], "Spectre seen nightly."
+    ) == ("too few words to check")
+
+
+def test_a_page_with_no_batch_path_is_checked_before_any_crop_is_fetched(
+    loc, monkeypatch, tmp_path
+):
+    _, responses = loc
+    monkeypatch.setattr(crops, "CROPS", tmp_path)
+    reel_map = {"sn83032276": {"00296028587": {"pst_intramural_ver01": ["1850071901"]}}}
+    monkeypatch.setattr(reels, "load", lambda: reel_map)
+    a_page(responses, words=MARKET)
+
+    with pytest.raises(LookupError, match="words"):
+        crops_for(LEWISTOWN, {"height": 1000, "width": 800}, [BOX], text=ARTICLE)
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_where_the_maps_batch_doesnt_hold_the_page_loc_gov_names_it(
+    loc, monkeypatch, tmp_path
+):
+    _, responses = loc
+    monkeypatch.setattr(crops, "CROPS", tmp_path)
+    reel_map = {"sn83032276": {"00296028587": {"pst_other_ver01": ["1850071901"]}}}
+    monkeypatch.setattr(reels, "load", lambda: reel_map)
+    responses["/item/sn83032276/1850-07-26/ed-1/"] = httpx.Response(
+        200, text=LEWISTOWN_SERVICE
+    )
+    a_page(responses)
+    [url] = crop_urls(LEWISTOWN_SERVICE, [BOX])
+    responses[httpx.URL(url).path] = httpx.Response(
+        200, content=b"\xff\xd8jpeg", headers={"content-type": "image/jpeg"}
+    )
+
+    service, [path] = crops_for(
+        LEWISTOWN, {"height": 1000, "width": 800}, [BOX], text=ARTICLE
+    )
+
+    assert service == LEWISTOWN_SERVICE and path.read_bytes() == b"\xff\xd8jpeg"
+
+
+def test_where_the_maps_first_batch_doesnt_hold_the_page_its_next_does(
+    loc, monkeypatch, tmp_path
+):
+    # ohi_dearfield and cohi_dearfield alternate along one reel, and only cohi_ serves this
+    # page: the reel's next batch is tried before loc.gov is asked
+    requests, responses = loc
+    monkeypatch.setattr(crops, "CROPS", tmp_path)
+    reel_map = {
+        "sn83032276": {
+            "00296028587": {
+                "pst_other_ver01": ["1850072601"],
+                "pst_intramural_ver01": ["1850080201"],
+            }
+        }
+    }
+    monkeypatch.setattr(reels, "load", lambda: reel_map)
+    a_page(responses)
+    [url] = crop_urls(LEWISTOWN_SERVICE, [BOX])
+    responses[httpx.URL(url).path] = httpx.Response(
+        200, content=b"\xff\xd8jpeg", headers={"content-type": "image/jpeg"}
+    )
+
+    service, _ = crops_for(
+        LEWISTOWN, {"height": 1000, "width": 800}, [BOX], text=ARTICLE
+    )
+
+    assert service == LEWISTOWN_SERVICE
+    assert not any(r.url.host == "www.loc.gov" for r in requests)

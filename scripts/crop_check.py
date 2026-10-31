@@ -84,7 +84,7 @@ def entry(chosen, known):
     if service:
         try:
             service, paths = crops_for(
-                row["member"], row["scan"], row["bbox_list"], service
+                row["member"], row["scan"], row["bbox_list"], service, row["text"]
             )
             files = [path.name for path in paths]
         except (httpx.HTTPError, LookupError, ValueError) as exc:

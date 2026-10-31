@@ -4,6 +4,7 @@ cached too; and the place, state and title a record gives."""
 import httpx
 
 from paperghosts.geo import loc
+from paperghosts.ingest import crops
 
 
 class Answer:
@@ -32,7 +33,7 @@ def test_a_record_is_asked_for_once_and_cached_with_its_url_and_date(
         answer.raise_for_status()
         return answer
 
-    monkeypatch.setattr(loc, "get", get)
+    monkeypatch.setattr(crops, "get", get)
     monkeypatch.setattr(loc, "COUNTS", loc.Counter())
 
     first = loc.title_record("sn78001213", tmp_path)
@@ -51,7 +52,7 @@ def test_a_missing_record_is_cached_as_a_404(tmp_path, monkeypatch):
     def get(url, **params):
         Answer(404).raise_for_status()
 
-    monkeypatch.setattr(loc, "get", get)
+    monkeypatch.setattr(crops, "get", get)
     monkeypatch.setattr(loc, "COUNTS", loc.Counter())
 
     assert loc.title_record("sn00000000", tmp_path)["status"] == 404
@@ -65,7 +66,7 @@ def test_a_server_error_is_counted_and_not_cached_so_a_later_run_asks_again(
     def get(url, **params):
         Answer(520).raise_for_status()
 
-    monkeypatch.setattr(loc, "get", get)
+    monkeypatch.setattr(crops, "get", get)
     monkeypatch.setattr(loc, "COUNTS", loc.Counter())
 
     found = loc.title_record("sn83030273", tmp_path)
