@@ -1,0 +1,29 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M67S24J1SEQVTHSJSBZK6HTY",
+  "strategy": "manual-commit",
+  "branch": "phase-2b-data-layer",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/ARCHITECTURE.md",
+    "Docs/BUILD-PLAN.md",
+    "Docs/DECISIONS.md",
+    "Docs/RESUME.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": ""
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 4,
+    "cache_creation_tokens": 3131,
+    "cache_read_tokens": 903683,
+    "output_tokens": 856,
+    "api_call_count": 2
+  }
+}
