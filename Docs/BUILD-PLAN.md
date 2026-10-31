@@ -119,11 +119,16 @@ How the build runs: five phases, each split into milestones, each milestone with
 3. Label gold and dev before seeing any model output, with a blind second pass on gold to measure agreement. Then freeze them: `HASH` gains the labels' sha256.
 4. Teacher labels for the training pool, with the leakage check passing.
    - The training draw comes from `split.json`'s pool, at most one printing per story, and `check_leakage.py` is extended to check that draw.
+   - Each drawn item is checked again against gold and dev by a stricter text rule: at least 4 shared runs, and 0.05 of the shorter's (the EM's call). The split's rule, 0.10 and 5 runs, sits just under the lowest one-story pair (0.105, 6 runs), and a false flag on a training draw costs nothing.
 5. Baselines: a keyword rule, and base 4B both zero-shot and few-shot.
 6. LoRA training on Tinker, iterating on the dev split until improvements stop. Each iteration is recorded.
 7. Eval B, ablations B1 to B10, and edge-case slices E1 to E14.
    - Eval B also has the reader screen the random reservoirs, for a recall bound that doesn't rest on flag words (decision 30). The Tinker credit check sets how many it reads.
    - That screen gives lexicon v2's independent recall. Decision 31's 84% is in-sample.
+   - **A pooled recall screen** (the EM's call, decision 37's review). At the judged rates, six in ten of the population's expected reports sit in the low-rate strata. Those are the bulk, about 16,000, and the five rules without a headline term, about 11,000. Gold expects about 4.5 reports there.
+     - A seeded draw from those strata is screened by the tuned reader and by the teacher. Every article either calls a report is read by hand under `POLICY.md`.
+     - The credit check sizes it to find about 50 reports.
+     - Recall is reported per stratum and weighted. It's an upper bound, since reports both models miss go uncounted.
 8. The failure log, and `eval/MODEL_CARD.md`.
 9. The local export and the offline proof.
 10. The full pass over all triaged candidates.
@@ -141,10 +146,11 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2D: load, cluster and harvest
 **Persona:** data engineer.
 - Geocode, cluster, embed, and load Atlas.
-  - Cluster with decision 36's stories at its tuned 0.25. Before loading, measure two changes on a fresh draw, never on decision 36's frozen set:
+  - Cluster with decision 36's stories at its tuned 0.25. Before loading, measure these changes on a fresh draw, never on decision 36's frozen set:
     - the body's links added to the blocking. Its probe found 76 of 80 such pairs to be one story, outside eval A's links.
     - a floor on the share of the longer printing. Three large clusters still join two texts that each hold a short first printing.
     - digits in the shingles. `eval-0508`, freight columns a year apart, passes the threshold because the tokens drop their figures.
+    - short texts' weak links. A 50-word advert keeps about five of its seven-word runs, so a few OCR errors leave it unlinked. Decision 37's whole-text check found 1,196 such reprints of gold and dev articles outside their groups, mostly adverts, timetables and columns.
   - Count the members whose reading differs from their first printing's. Each is shown as a report of its own, and is a false-merge candidate.
   - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
