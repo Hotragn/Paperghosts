@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M68E1RQYX3RZBG0H2QNKK28Y",
+  "strategy": "manual-commit",
+  "branch": "phase-2c-reader",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "scripts/label_gold.py",
+    "tests/test_label_gold.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": ""
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 8,
+    "cache_creation_tokens": 11647,
+    "cache_read_tokens": 1773762,
+    "output_tokens": 10191,
+    "api_call_count": 4
+  }
+}
