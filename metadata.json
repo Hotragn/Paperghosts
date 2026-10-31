@@ -1,0 +1,33 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M68J9EEYB7VJBHAY72E09PNC",
+  "strategy": "manual-commit",
+  "branch": "phase-2c-reader",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "scripts/check_leakage.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": ""
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 22,
+    "cache_creation_tokens": 13183,
+    "cache_read_tokens": 5900593,
+    "output_tokens": 7392,
+    "api_call_count": 11,
+    "subagent_tokens": {
+      "input_tokens": 128,
+      "cache_creation_tokens": 183850,
+      "cache_read_tokens": 7888398,
+      "output_tokens": 135277,
+      "api_call_count": 57
+    }
+  }
+}
