@@ -28,7 +28,9 @@ RESULT = ROOT / "eval" / "results" / "phase2c" / "local_teacher.json"
 CANDIDATES = 1_236_122
 
 
-def one(row: dict, model: str, system: str, think: bool = False) -> dict:
+def one(
+    row: dict, model: str, system: str, think: bool = False, num_ctx: int | None = None
+) -> dict:
     body = {
         "model": model,
         "messages": [
@@ -41,7 +43,7 @@ def one(row: dict, model: str, system: str, think: bool = False) -> dict:
         "options": {
             "temperature": 0,
             "num_predict": 4096 if think else 1024,
-            "num_ctx": 16384 if think else 12288,
+            "num_ctx": num_ctx or (16384 if think else 12288),
         },
     }
     answer = httpx.post(URL, json=body, timeout=1800).json()
