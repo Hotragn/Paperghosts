@@ -44,7 +44,9 @@ FEATURES = DATA / "features.pkl"
 BATCHES = DATA / "batches"
 SETS = ROOT / "eval" / "clusters"
 REPORT = ROOT / "eval" / "results" / "phase2b" / "clusters.json"
-THRESHOLD = 0.5  # provisional, set before any labels: tune replaces it from the dev set
+# tuned on the dev set alone (tune, eval/clusters/tuning.json): the lowest cost, with no false
+# merges and 22 false splits of its 160 pairs; 0.5 was the provisional value before labels
+THRESHOLD = 0.25
 LOOSE = 1.25  # a member this much longer than its story's first printing is read too
 GRID = [round(0.2 + 0.05 * i, 2) for i in range(13)]  # 0.2 to 0.8
 LARGE = 50  # printings in a cluster that gets its least similar pair checked by hand
