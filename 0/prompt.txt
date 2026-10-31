@@ -1,0 +1,30 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2B.3 accepted. Below: my calls on your six items, then 2B.4, then closing 2B.
+
+My review of dc3224f: 339 passed and lint exits 0 on my re-run. I recomputed every verdict in page_check.json from its fields with the rule as written in crops.py, and all 180 agree. I also recounted 0 of 59 false accepts and 2 of 85 false rejects, the margin (0.23 against 0.13), and the 18 pairs across 11 batches from three awardees. Changing your design when the "should reject" set turned out to be right pages was the right call.
+
+Your items:
+1. Yes, change the frame rule. Where only the frame differs, the page is the batch path's batch with the member's frame. Where the reel differs too, the batch path's page stands. Either way the page is checked before its crop is shown, just as a page with no batch path is: a page goes unchecked only where its member and batch path agree. Change printings.py's stored service, page_service and crops_for to match. Count the candidates whose service changes, by batch, and test it. Record it in decision 35 as my call; it supersedes decision 33's frame rule.
+2. Accepted.
+3. Accepted, and the fifth is now frozen. In 2D, record each check's score and reason so the numbers sheet can count rejections.
+4. Leave load_skeleton.py as it is. Add to 3B's plan that crops come only through crops_for.
+5. Accepted, and add the disk side to 2D's plan notes. The cache holds about 187 KB of ALTO words per page (the median of the 199 cached), so about 21,000 checks is about 4 GB. Plan it inside the 10 GB data budget, for example by gzipping those entries or keeping only the check's result.
+6. Keep 1 s for tile.loc.gov. I read loc.gov's "Working within limits" page today (https://www.loc.gov/apis/json-and-yaml/working-within-limits/). It gives the JSON API 20 requests a minute, image services 150 and /storage-services/ 150, each with a 1-hour block if exceeded. So 1 s is within the limit and 3.5 s stays for www.loc.gov. The page also warns that under heavy load you may get 429s or HTML CAPTCHA pages even below those rates. Treat a CAPTCHA page (HTML where JSON or XML was expected) as busy: pause, retry, and never cache it. Cite the page and today's date in decision 35.
+
+2B.4, the reprint clustering and its evaluation set. Persona: data architect, with the ML specialist for the evaluation.
+1. Design (decision 36). Say what makes two printings one story: the same text reprinted, through OCR noise, cuts, new headlines, and added or dropped paragraphs. Say what doesn't: shared boilerplate, a quoted passage, a serial's other instalments, standing columns. Start from 2A's clustering (91,301 clusters holding 30.3% of v2's candidates) and say what changes. Cluster ids must stay stable across runs, because 2C splits gold, dev and train by cluster.
+2. Chaining. A member must match its cluster directly, for example its representative printing, not only through a chain of links. Show the method on the largest clusters.
+3. A false merge costs more than a story count. If the reader reads one printing per cluster, a report merged into another story is never read. Weigh that in the design, for example by reading more than one printing where a cluster is loose.
+4. The evaluation set: drawn, labelled and frozen (hashed) before any tuning. Tune on a separate dev draw, never on it; that's 2B.2's lesson.
+   - Per candidate: a seeded uniform draw of candidates, each paired with a random member of its own cluster, so precision is weighted the way the reader's job and the story counts are.
+   - Per cluster: drawn as eval A drew them.
+   - Every cluster of 50 printings or more (157 in v1; recount for v2): its two least similar members, checked by hand.
+   - Recall: pairs just below the threshold, plus any other probe you propose, for the merges the method misses.
+   - Labelling follows the 2A.7 protocol: reading agents, your blind re-check of a seeded 10% of their negatives, and every positive and close call read in full.
+5. Report precision and recall of same-story links with Wilson intervals, per candidate and per cluster. Also report the chaining check, v2's distinct stories, which printing the reader reads per cluster, and the reader's job after clustering (from 1,236,122).
+6. BUDGET.md's third scenario takes the new clusters' stories per printing.
+
+Gate: tests and lint pass; the frozen set's hash; precision and recall measured; every chained large cluster explained and its fix measured; decisions 35 and 36; pushed and checked with `ls-remote`.
+
+Then close 2B: write the STATUS block and open the PR into main. I'll review and merge it once CI, secret scan included, is green.
+</cross-session-message>
