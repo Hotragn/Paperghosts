@@ -1,0 +1,45 @@
+<task-notification>
+<task-id>b4dpu164j</task-id>
+<tool-use-id>toolu_01MqPAXmKjg3SDCbZj9m7DNK</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b4dpu164j.output</output-file>
+<status>completed</status>
+<summary>Background command "Download the Qwen3.5-4B weights for local LoRA timing" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+The owner has decided: no Tinker spend at all, and step 2C runs locally. They want to see what that costs in quality. Finish the spend-stopped report first, with today's Tinker total. Then re-plan 2C.3 onward on this Mac.
+
+Machine constraints, which I checked: Apple M4, 24 GB of unified memory, 30 GB of free disk (94% used).
+- No model download may take free disk below 15 GB.
+- Delete nothing to make room without the owner's yes. The installed gemma4 models are the owner's.
+
+1. **The local teacher.** Candidates are whatever fits in about 18 GB: gemma4:26b-a4b-it-qat (installed, MoE), a Qwen3.5 MoE around 30B-A3B at 4-bit if it fits, and a dense 27B only if it's fast enough.
+   - Run each on dev with round 3's prompt, with thinking on and off.
+   - Score kind, report-or-not, report recall on dev's 32 and each field, with Wilson intervals, after the verifier.
+   - Report the time per article and the projected hours for the training draw. Use Ollama's prefix reuse, since the policy prefix is about 9k tokens.
+2. **The quality cost, shown side by side** in `eval/results/phase2c/teacher_local.json` and a table in BUDGET.md: the best local teacher against Tinker's 397B round 3 (kind 112/150, recall 23/32) and the 397B thinking run's partial results.
+   - Say plainly which differences are inside the intervals.
+   - This is the comparison the owner asked for. The final quality figure is eval B on gold, student against student.
+3. **Training locally:** mlx-lm LoRA on Qwen3.5-4B. Measure the time per epoch on 3,000 examples and the peak memory, and check that the adapter loads in the reader the full pass will use.
+4. **The full pass locally,** with the student's short prompt. Measure throughput on the same 50 and project the days. Plan it to resume from checkpoints, never lose work, and log progress, since it may run for days.
+5. **Free levers for quality,** each measured on dev before it's adopted:
+   - majority vote over local samples
+   - routing only the teacher's uncertain or report-ish articles to a slower thinking pass
+   - the draw's size
+   
+   Gold stays untouched until eval B.
+6. Training labels must come from the local open-weight teacher, never from Claude or from the reading agents. Gold and dev are for evaluation only.
+7. Update BUDGET.md and the plan's 2C steps to the local path, and record the decision as decision 39, the owner's call. The article will disclose it.
+
+Gate for 2C.3 stays as before, with a local teacher. Your report's first line is `2C.3: GATE PASSED` or `2C.3: BLOCKED — <reason>`. Before the long teacher run starts, send me an interim report with the teacher comparison. I'll approve the teacher choice before hours of compute go in.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bnzg5ri3u</task-id>
+<summary>Monitor event: "round 3 and local throughput"</summary>
+<event>[Monitor expired after 30m with 3 events delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
