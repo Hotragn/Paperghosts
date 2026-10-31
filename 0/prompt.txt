@@ -1,0 +1,15 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+The session limit has reset: resume 2C.1 where you stopped.
+
+Where things stand, from the repo:
+- POLICY.md is committed and pushed (6cd57e2), before any draw or label. Good.
+- `scripts/clusters.py` is modified and uncommitted, and `eval/results/phase2b/clusters_unseen.json` is untracked. You were fixing the unseen-tail check: the missing `SHINGLE` import, and the text loop refiltering on every file.
+
+Finish that check, then the rest of 2C.1 as briefed:
+- decision 36's note and decision 37
+- the draw, the split and the leakage check
+- the labelling page
+- the plan and STATUS fixes
+
+Same gate, and stop before any gold label. Commit and push at each natural point, so a limit costs nothing.
+</cross-session-message>
