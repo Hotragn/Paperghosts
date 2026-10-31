@@ -490,6 +490,211 @@ mark {
   letter-spacing: 0.08em;
 }
 
+/* the rooms */
+.rooms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.rooms a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.4rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.rooms a[aria-current='page'] {
+  border-bottom-color: var(--link);
+}
+
+.page-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.lede {
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.method section {
+  max-width: 52rem;
+  margin: 0 auto 2.5rem;
+}
+
+.method h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+.source {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* interval charts: a dot at the rate, a whisker across its interval; series differ in shape too */
+.chart {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.chart table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.chart th,
+.chart td {
+  text-align: left;
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 40%, transparent);
+  vertical-align: middle;
+}
+
+.chart thead th {
+  font-family: 'Courier Prime', monospace;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.chart .scale {
+  display: flex;
+  justify-content: space-between;
+  min-width: 12rem;
+}
+
+.track {
+  position: relative;
+  min-width: 12rem;
+  height: 2.2rem;
+  background: linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat;
+}
+
+.whisker {
+  position: absolute;
+  height: 2px;
+}
+
+.whisker-0 {
+  top: 35%;
+  background: var(--link);
+}
+
+.whisker-1 {
+  top: 65%;
+  background: var(--text);
+}
+
+.dot {
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+}
+
+.dot-0 {
+  border-radius: 50%;
+  background: var(--link);
+}
+
+.dot-1 {
+  background: var(--text);
+}
+
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.key {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+}
+
+.key-0 {
+  border-radius: 50%;
+  background: var(--link);
+}
+
+.key-1 {
+  background: var(--text);
+}
+
+/* paper samples */
+.samples .sample {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+
+.sample img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(0.4% 0.6%, 99.2% 0, 100% 99.3%, 0.8% 100%);
+}
+
+:root[data-lights='on'] .sample img {
+  mix-blend-mode: multiply;
+}
+
+.sample figcaption > * {
+  grid-area: auto;
+}
+
+.sample .stamp {
+  justify-self: start;
+  margin-bottom: 0.4rem;
+}
+
+.sample img + img {
+  margin-top: 0.25rem;
+}
+
+.sample figcaption {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  justify-items: start;
+}
+
+.like {
+  margin-top: 1.25rem;
+}
+
+.like h4 {
+  font-family: 'Bodoni Moda', serif;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.like ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
 /* phone first: the slip and the case stack */
 @media (max-width: 44rem) {
   .slip {

@@ -1096,8 +1096,8 @@
  {
   "name": "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
   "value": [
-   122,
-   123
+   124,
+   125
   ],
   "source": "git log --all trailers; git for-each-ref refs/entire/checkpoints"
  },
@@ -1118,7 +1118,7 @@
  },
  {
   "name": "tests collected",
-  "value": 402,
-  "source": "uv run pytest --collect-only -q, last line: '402 tests collected in 1.38s'"
+  "value": 403,
+  "source": "uv run pytest --collect-only -q, last line: '403 tests collected in 1.73s'"
  }
 ]

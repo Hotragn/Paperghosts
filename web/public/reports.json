@@ -64,7 +64,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_elvis_ver01:data:sn85033699:00200293423:1870120401:0539/3150,4155,668,4758/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85033699/1870-12-04/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85033699/1870-12-04/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 6.71
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 5.71
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.59
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 5.55
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 5.4
+   }
+  ]
  },
  {
   "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
@@ -140,7 +162,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:whi:batch_whi_florence_ver01:data:sn85040344:00271769593:1871030401:0094/526,2079,911,7319/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85040344/1871-03-04/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85040344/1871-03-04/ed-1/",
+  "like": [
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 9.12
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 8.56
+   },
+   {
+    "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
+    "score": 6.59
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 6.03
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.81
+   }
+  ]
  },
  {
   "article_id": "31_1872-02-23_pna_sn82016419_00212472967_1872022301_0373.json",
@@ -244,7 +288,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:khi:batch_khi_brown_ver01:data:sn82016419:00212472967:1872022301:0373/5233,2623,677,1169/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82016419/1872-02-23/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82016419/1872-02-23/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 5.61
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 4.19
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 4.14
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 4.13
+   },
+   {
+    "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
+    "score": 4.12
+   }
+  ]
  },
  {
   "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
@@ -355,7 +421,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:lu:batch_lu_oddish_ver01:data:sn88064616:00295878605:1876051401:0069/1988,682,799,4486/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn88064616/1876-05-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn88064616/1876-05-14/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
+    "score": 7.14
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 5.9
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.59
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 4.89
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 4.69
+   }
+  ]
  },
  {
   "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
@@ -491,7 +579,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:pst:batch_pst_kern_ver01:data:sn83032041:00212477710:1879041101:0201/3290,1591,810,6234/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83032041/1879-04-11/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83032041/1879-04-11/ed-1/",
+  "like": [
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 7.35
+   },
+   {
+    "article_id": "10_1908-09-18_p5_sn85042354_00383343288_1908091801_0829.json",
+    "score": 6.38
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 6.03
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 6.0
+   },
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 5.4
+   }
+  ]
  },
  {
   "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
@@ -592,7 +702,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:njr:batch_njr_asburypark_ver01:data:sn84026089:00514155884:1884010901:0416/4717,5744,637,1341/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84026089/1884-01-09/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84026089/1884-01-09/ed-1/",
+  "like": [
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 4.97
+   },
+   {
+    "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
+    "score": 4.75
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.57
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.53
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 4.5
+   }
+  ]
  },
  {
   "article_id": "14_1884-03-27_pna_sn94056414_00206537747_1884032701_0235.json",
@@ -684,7 +816,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:nbu:batch_nbu_hershey_ver01:data:sn94056414:00206537747:1884032701:0235/3802,7568,830,129/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn94056414/1884-03-27/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn94056414/1884-03-27/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1894-02-21_pna_sn87056600_00202191514_1894022101_0115.json",
+    "score": 3.84
+   },
+   {
+    "article_id": "2_1909-04-08_p1_sn86058226_00271744729_1909040801_0067.json",
+    "score": 3.73
+   },
+   {
+    "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+    "score": 3.22
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 2.77
+   },
+   {
+    "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+    "score": 2.71
+   }
+  ]
  },
  {
   "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
@@ -793,7 +947,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:whi:batch_whi_ada_ver01:data:sn85033078:00271769477:1884070301:0629/1554,4374,1076,4772/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85033078/1884-07-03/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85033078/1884-07-03/ed-1/",
+  "like": [
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 5.63
+   },
+   {
+    "article_id": "7_1903-03-01_p1_sn84020274_00294559589_1903030101_0039.json",
+    "score": 4.97
+   },
+   {
+    "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+    "score": 4.79
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 4.78
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.35
+   }
+  ]
  },
  {
   "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
@@ -902,7 +1078,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_quasar_ver01:data:sn85025431:00212479792:1886111001:0411/1533,437,894,4364/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85025431/1886-11-10/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85025431/1886-11-10/ed-1/",
+  "like": [
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.81
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 4.27
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 4.05
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 3.96
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 3.89
+   }
+  ]
  },
  {
   "article_id": "1_1890-05-14_pna_sn84026409_00280776518_1890051401_0423.json",
@@ -1030,7 +1228,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:pst:batch_pst_grange_ver01:data:sn84026409:00280776518:1890051401:0423/2976,1738,661,965/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84026409/1890-05-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84026409/1890-05-14/ed-1/",
+  "like": [
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 4.9
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 4.61
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.51
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 3.98
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 3.9
+   }
+  ]
  },
  {
   "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
@@ -1143,7 +1363,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mdu:batch_mdu_annapolis_ver02:data:sn85025350:00415627671:1895012601:0459/2338,542,639,4927/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85025350/1895-01-26/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85025350/1895-01-26/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 8.73
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 8.3
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 6.54
+   },
+   {
+    "article_id": "14_1907-12-10_p4_sn84024827_0021110689A_1907121001_0747.json",
+    "score": 6.05
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 5.98
+   }
+  ]
  },
  {
   "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
@@ -1250,7 +1492,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_carlsbad_ver01:data:sn85066387:0017503741A:1896070601:0113/1859,2072,869,3171/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85066387/1896-07-06/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85066387/1896-07-06/ed-1/",
+  "like": [
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 7.18
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 6.72
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 6.07
+   },
+   {
+    "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
+    "score": 5.69
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 5.55
+   }
+  ]
  },
  {
   "article_id": "2_1896-09-16_pna_sn85047084_00202195933_1896091601_0535.json",
@@ -1349,7 +1613,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:hihouml:batch_hihouml_caliban_ver02:data:sn85047084:00202195933:1896091601:0535/4960,4610,1023,1084/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85047084/1896-09-16/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85047084/1896-09-16/ed-1/",
+  "like": [
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.45
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 4.19
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 3.96
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 3.86
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 3.55
+   }
+  ]
  },
  {
   "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
@@ -1425,7 +1711,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_hockey_ver01:data:sn90059182:00393341087:1900081001:0258/4806,4822,854,2773/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn90059182/1900-08-10/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn90059182/1900-08-10/ed-1/",
+  "like": [
+   {
+    "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
+    "score": 9.27
+   },
+   {
+    "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
+    "score": 7.37
+   },
+   {
+    "article_id": "31_1872-02-23_pna_sn82016419_00212472967_1872022301_0373.json",
+    "score": 7.05
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 6.82
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 5.74
+   }
+  ]
  },
  {
   "article_id": "29_1904-02-29_p4_sn84020358_00271744432_1904022901_0448.json",
@@ -1530,7 +1838,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_cedar_ver01:data:sn84020358:00271744432:1904022901:0448/163,3862,643,733/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84020358/1904-02-29/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84020358/1904-02-29/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+    "score": 5.43
+   },
+   {
+    "article_id": "5_1913-05-09_p3_sn89052133_00383341188_1913050901_0148.json",
+    "score": 4.09
+   },
+   {
+    "article_id": "1_1890-05-14_pna_sn84026409_00280776518_1890051401_0423.json",
+    "score": 4.07
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 3.48
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 3.24
+   }
+  ]
  },
  {
   "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
@@ -1649,7 +1979,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_pomo_ver01:data:sn85042462:00175047414:1906111301:0233/779,1269,675,5034/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042462/1906-11-13/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042462/1906-11-13/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 8.14
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 7.6
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 6.64
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 6.5
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 6.12
+   }
+  ]
  },
  {
   "article_id": "13_1907-05-08_p7_sn85042354_00383343252_1907050801_0982.json",
@@ -1767,7 +2119,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:deu:batch_deu_dover_ver01:data:sn85042354:00383343252:1907050801:0982/1504,4669,654,621/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042354/1907-05-08/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042354/1907-05-08/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 4.42
+   },
+   {
+    "article_id": "8_1903-04-09_pna_sn82016014_00295871088_1903040901_0082.json",
+    "score": 3.48
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 3.39
+   },
+   {
+    "article_id": "1_1908-10-17_pna_sn88086023_00202194631_1908101701_1321.json",
+    "score": 3.39
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 3.35
+   }
+  ]
  },
  {
   "article_id": "14_1907-12-10_p4_sn84024827_0021110689A_1907121001_0747.json",
@@ -1838,7 +2212,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:az:batch_az_hummingbird_ver02:data:sn84024827:0021110689A:1907121001:0747/2784,1274,601,505/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024827/1907-12-10/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024827/1907-12-10/ed-1/",
+  "like": [
+   {
+    "article_id": "52_1892-08-14_pna_sn84024546_0023728219A_1892081401_0171.json",
+    "score": 6.34
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 5.71
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.42
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 5.4
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 5.14
+   }
+  ]
  },
  {
   "article_id": "1_1917-01-24_pna_sn86063147_00340585987_1917012401_0900.json",
@@ -1955,7 +2351,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:cohi:batch_cohi_dorchester_ver01:data:sn86063147:00340585987:1917012401:0900/251,2612,475,1280/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86063147/1917-01-24/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86063147/1917-01-24/ed-1/",
+  "like": [
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 6.1
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.91
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 4.18
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 4.08
+   },
+   {
+    "article_id": "2_1923-06-04_pna_sn87093407_00340585410_1923060401_0854.json",
+    "score": 4.06
+   }
+  ]
  },
  {
   "article_id": "1_1920-01-29_p1_sn97071038_00295868442_1920012901_0494.json",
@@ -2031,7 +2449,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_grizzly_ver01:data:sn97071038:00295868442:1920012901:0494/2194,3823,547,1193/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn97071038/1920-01-29/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn97071038/1920-01-29/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 8.25
+   },
+   {
+    "article_id": "5_1913-06-21_p1_sn85066387_00280768601_1913062101_0113.json",
+    "score": 5.93
+   },
+   {
+    "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
+    "score": 5.56
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 4.39
+   },
+   {
+    "article_id": "9_1919-07-09_p1_sn89081128_0028076677A_1919070901_0223.json",
+    "score": 4.2
+   }
+  ]
  },
  {
   "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
@@ -2138,7 +2578,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_doors_ver01:data:sn82014519:00414218945:1921123101:0676/137,882,623,2560/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82014519/1921-12-31/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82014519/1921-12-31/ed-1/",
+  "like": [
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 7.12
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 5.57
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.49
+   },
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 5.34
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 5.3
+   }
+  ]
  },
  {
   "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
@@ -2257,7 +2719,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_kernals_ver02:data:sn84024718:00414183736:1850052201:0083/4772,4574,1100,4456/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024718/1850-05-22/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024718/1850-05-22/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
+    "score": 5.29
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 5.04
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 4.78
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 4.77
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 4.58
+   }
+  ]
  },
  {
   "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
@@ -2362,7 +2846,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_firedrake_ver01:data:sn83045784:00415661605:1853011501:0480/5757,5017,1118,3713/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045784/1853-01-15/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045784/1853-01-15/ed-1/",
+  "like": [
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 7.31
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 5.81
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 4.97
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 4.94
+   },
+   {
+    "article_id": "1_1908-10-17_pna_sn88086023_00202194631_1908101701_1321.json",
+    "score": 4.48
+   }
+  ]
  },
  {
   "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
@@ -2466,7 +2972,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:scu:batch_scu_ettabaker_ver02:data:sn84026922:00237288154:1866033101:0364/989,3645,895,2605/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84026922/1866-03-31/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84026922/1866-03-31/ed-1/",
+  "like": [
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 7.12
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.77
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 6.63
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 6.43
+   },
+   {
+    "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
+    "score": 6.21
+   }
+  ]
  },
  {
   "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
@@ -2554,7 +3082,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_edgecomb_ver02:data:sn83016025:00279525267:1868091201:0167/5190,1646,691,6546/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83016025/1868-09-12/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83016025/1868-09-12/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 6.28
+   },
+   {
+    "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
+    "score": 4.35
+   },
+   {
+    "article_id": "1_1920-01-29_p1_sn97071038_00295868442_1920012901_0494.json",
+    "score": 4.19
+   },
+   {
+    "article_id": "8_1883-04-21_p1_sn86076999_00415627385_1883042101_0867.json",
+    "score": 3.68
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 3.54
+   }
+  ]
  },
  {
   "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
@@ -2662,7 +3212,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:pst:batch_pst_grange_ver01:data:sn83025925:00280776312:1871031001:0476/157,435,889,3894/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83025925/1871-03-10/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83025925/1871-03-10/ed-1/",
+  "like": [
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 6.36
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 6.09
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 5.67
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 5.5
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 5.11
+   }
+  ]
  },
  {
   "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
@@ -2763,7 +3335,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_belgium_ver01:data:sn84026844:0020219087A:1872110501:1059/3507,748,494,1338/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84026844/1872-11-05/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84026844/1872-11-05/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1908-10-17_pna_sn88086023_00202194631_1908101701_1321.json",
+    "score": 6.95
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 6.82
+   },
+   {
+    "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+    "score": 6.04
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 5.54
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.3
+   }
+  ]
  },
  {
   "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
@@ -2858,7 +3452,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:lu:batch_lu_Cypher_ver01:data:sn86086284:00280762027:1876112601:0963/1716,949,784,1807/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86086284/1876-11-26/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86086284/1876-11-26/ed-1/",
+  "like": [
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 7.31
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 7.29
+   },
+   {
+    "article_id": "6_1910-07-02_pna_sn82016014_00295870722_1910070201_0026.json",
+    "score": 6.1
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 5.85
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 5.6
+   }
+  ]
  },
  {
   "article_id": "10_1878-03-07_p4_sn84027691_0023728334A_1878030701_0641.json",
@@ -2957,7 +3573,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:khi:batch_khi_funston_ver01:data:sn84027691:0023728334A:1878030701:0641/1609,7054,652,1102/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84027691/1878-03-07/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84027691/1878-03-07/ed-1/",
+  "like": [
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.04
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 5.59
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.4
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 4.13
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 4.07
+   }
+  ]
  },
  {
   "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
@@ -3100,7 +3738,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ndhi:batch_ndhi_alamo_ver01:data:sn85042331:0021247082A:1879012001:0123/2147,1816,893,3811/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042331/1879-01-20/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042331/1879-01-20/ed-1/",
+  "like": [
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 6.57
+   },
+   {
+    "article_id": "3_1883-03-11_pna_sn83045160_00280779647_1883031101_0237.json",
+    "score": 6.5
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 6.24
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 5.87
+   },
+   {
+    "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
+    "score": 5.81
+   }
+  ]
  },
  {
   "article_id": "3_1883-03-11_pna_sn83045160_00280779647_1883031101_0237.json",
@@ -3209,7 +3869,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_dottie_ver01:data:sn83045160:00280779647:1883031101:0237/4977,1789,641,1158/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045160/1883-03-11/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045160/1883-03-11/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 7.67
+   },
+   {
+    "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+    "score": 6.53
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 6.48
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.68
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 5.67
+   }
+  ]
  },
  {
   "article_id": "8_1883-04-21_p1_sn86076999_00415627385_1883042101_0867.json",
@@ -3314,7 +3996,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:nvln:batch_nvln_dayton_ver01:data:sn86076999:00415627385:1883042101:0867/1017,593,691,4378/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86076999/1883-04-21/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86076999/1883-04-21/ed-1/",
+  "like": [
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 6.46
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 6.37
+   },
+   {
+    "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+    "score": 6.13
+   },
+   {
+    "article_id": "3_1883-03-11_pna_sn83045160_00280779647_1883031101_0237.json",
+    "score": 6.11
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 5.84
+   }
+  ]
  },
  {
   "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
@@ -3405,7 +4109,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_honda_ver01:data:sn85025620:00212479330:1883110801:0175/3251,1290,870,2885/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85025620/1883-11-08/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85025620/1883-11-08/ed-1/",
+  "like": [
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 7.03
+   },
+   {
+    "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
+    "score": 5.98
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 5.68
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 5.67
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 5.61
+   }
+  ]
  },
  {
   "article_id": "1_1887-01-13_p1_sn86092392_00414187304_1887011301_0266.json",
@@ -3541,7 +4267,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:wvu:batch_wvu_moore_ver01:data:sn86092392:00414187304:1887011301:0266/3620,1675,860,1413/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86092392/1887-01-13/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86092392/1887-01-13/ed-1/",
+  "like": [
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 6.33
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 5.2
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 5.09
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 4.77
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.65
+   }
+  ]
  },
  {
   "article_id": "30_1888-01-14_pna_sn83016025_00414210582_1888011401_0216.json",
@@ -3635,7 +4383,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:me:batch_me_graftonnotch_ver01:data:sn83016025:00414210582:1888011401:0216/2429,7888,681,237/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83016025/1888-01-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83016025/1888-01-14/ed-1/",
+  "like": [
+   {
+    "article_id": "8_1903-04-09_pna_sn82016014_00295871088_1903040901_0082.json",
+    "score": 6.51
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 6.22
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 5.14
+   },
+   {
+    "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
+    "score": 4.85
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.29
+   }
+  ]
  },
  {
   "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
@@ -3712,7 +4482,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:tu:batch_tu_dottie_ver01:data:sn84024448:00296020758:1888043001:1024/124,454,699,5301/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024448/1888-04-30/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024448/1888-04-30/ed-1/",
+  "like": [
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 8.49
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 7.06
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 6.67
+   },
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 6.6
+   },
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 6.47
+   }
+  ]
  },
  {
   "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
@@ -3780,7 +4572,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_gary_ver01:data:sn87056600:00202191502:1889073101:0264/1402,848,932,7198/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn87056600/1889-07-31/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn87056600/1889-07-31/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 9.19
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 5.81
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 5.45
+   },
+   {
+    "article_id": "1_1920-01-29_p1_sn97071038_00295868442_1920012901_0494.json",
+    "score": 4.61
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.59
+   }
+  ]
  },
  {
   "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
@@ -3895,7 +4709,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_mojave_ver01:data:sn82014381:00175036623:1890042301:0183/1056,546,709,4959/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82014381/1890-04-23/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82014381/1890-04-23/ed-1/",
+  "like": [
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 6.58
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 6.37
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.11
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 5.86
+   },
+   {
+    "article_id": "8_1883-04-21_p1_sn86076999_00415627385_1883042101_0867.json",
+    "score": 5.65
+   }
+  ]
  },
  {
   "article_id": "52_1892-08-14_pna_sn84024546_0023728219A_1892081401_0171.json",
@@ -3958,7 +4794,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:pst:batch_pst_eisenhower_ver01:data:sn84024546:0023728219A:1892081401:0171/3561,6093,662,888/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024546/1892-08-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024546/1892-08-14/ed-1/",
+  "like": [
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 5.33
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 4.63
+   },
+   {
+    "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
+    "score": 4.35
+   },
+   {
+    "article_id": "6_1910-07-02_pna_sn82016014_00295870722_1910070201_0026.json",
+    "score": 4.08
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 3.83
+   }
+  ]
  },
  {
   "article_id": "10_1894-02-21_pna_sn87056600_00202191514_1894022101_0115.json",
@@ -4061,7 +4919,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_gary_ver01:data:sn87056600:00202191514:1894022101:0115/2415,8662,915,563/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn87056600/1894-02-21/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn87056600/1894-02-21/ed-1/",
+  "like": [
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 7.51
+   },
+   {
+    "article_id": "1_1887-01-13_p1_sn86092392_00414187304_1887011301_0266.json",
+    "score": 7.04
+   },
+   {
+    "article_id": "16_1911-01-05_pna_sn88077573_00237283727_1911010501_0423.json",
+    "score": 4.04
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 3.62
+   },
+   {
+    "article_id": "18_1896-02-05_pna_sn85066387_00175037342_1896020501_0090.json",
+    "score": 3.59
+   }
+  ]
  },
  {
   "article_id": "29_1894-09-24_p4_sn94053256_00271762963_1894092401_0306.json",
@@ -4184,7 +5064,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_gum_ver01:data:sn94053256:00271762963:1894092401:0306/3114,571,679,643/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn94053256/1894-09-24/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn94053256/1894-09-24/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 5.15
+   },
+   {
+    "article_id": "5_1913-06-21_p1_sn85066387_00280768601_1913062101_0113.json",
+    "score": 4.29
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 3.88
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 3.59
+   },
+   {
+    "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+    "score": 3.4
+   }
+  ]
  },
  {
   "article_id": "10_1895-04-28_pna_sn90059522_00206536822_1895042801_0618.json",
@@ -4304,7 +5206,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_onamia_ver01:data:sn90059522:00206536822:1895042801:0618/378,1919,815,927/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn90059522/1895-04-28/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn90059522/1895-04-28/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 5.6
+   },
+   {
+    "article_id": "2_1916-01-08_p1_sn84024055_00280761072_1916010801_0136.json",
+    "score": 3.88
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 3.83
+   },
+   {
+    "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+    "score": 3.77
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 3.41
+   }
+  ]
  },
  {
   "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
@@ -4363,7 +5287,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_betelgeuse_ver01:data:sn90059959:00271742848:1895091401:0568/3937,1833,863,6841/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn90059959/1895-09-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn90059959/1895-09-14/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 7.19
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 7.17
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 6.4
+   },
+   {
+    "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+    "score": 6.07
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 5.94
+   }
+  ]
  },
  {
   "article_id": "10_1897-05-28_p1_sn86076999_00271740918_1897052801_0497.json",
@@ -4444,7 +5390,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:nvln:batch_nvln_goldfield_ver01:data:sn86076999:00271740918:1897052801:0497/302,2772,785,1597/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86076999/1897-05-28/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86076999/1897-05-28/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+    "score": 6.38
+   },
+   {
+    "article_id": "3_1883-03-11_pna_sn83045160_00280779647_1883031101_0237.json",
+    "score": 5.71
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.27
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 4.54
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.48
+   }
+  ]
  },
  {
   "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
@@ -4533,7 +5501,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_japanesechin_ver01:data:sn83045462:00280655430:1901101801:0356/1774,5294,779,2244/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045462/1901-10-18/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045462/1901-10-18/ed-1/",
+  "like": [
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 8.93
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 7.49
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 6.96
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.78
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 6.16
+   }
+  ]
  },
  {
   "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
@@ -4650,7 +5640,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_jasper_ver02:data:sn82015679:00296029750:1903022801:0331/5027,1161,1163,2755/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82015679/1903-02-28/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82015679/1903-02-28/ed-1/",
+  "like": [
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 6.19
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 6.1
+   },
+   {
+    "article_id": "2_1909-04-08_p1_sn86058226_00271744729_1909040801_0067.json",
+    "score": 5.38
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 4.89
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 4.75
+   }
+  ]
  },
  {
   "article_id": "7_1903-03-01_p1_sn84020274_00294559589_1903030101_0039.json",
@@ -4717,7 +5729,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mohi:batch_mohi_james_ver01:data:sn84020274:00294559589:1903030101:0039/4219,4488,650,623/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84020274/1903-03-01/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84020274/1903-03-01/ed-1/",
+  "like": [
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 7.25
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 7.18
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 5.26
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.37
+   },
+   {
+    "article_id": "8_1903-04-09_pna_sn82016014_00295871088_1903040901_0082.json",
+    "score": 4.35
+   }
+  ]
  },
  {
   "article_id": "8_1903-04-09_pna_sn82016014_00295871088_1903040901_0082.json",
@@ -4784,7 +5818,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:khi:batch_khi_higuchi_ver01:data:sn82016014:00295871088:1903040901:0082/3076,4698,693,709/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82016014/1903-04-09/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82016014/1903-04-09/ed-1/",
+  "like": [
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 4.13
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 3.95
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 3.69
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 3.66
+   },
+   {
+    "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
+    "score": 3.59
+   }
+  ]
  },
  {
   "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
@@ -4907,7 +5963,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_dean_ver02:data:sn86058242:00271745734:1906091201:0480/3038,802,884,6320/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86058242/1906-09-12/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86058242/1906-09-12/ed-1/",
+  "like": [
+   {
+    "article_id": "7_1903-03-01_p1_sn84020274_00294559589_1903030101_0039.json",
+    "score": 6.41
+   },
+   {
+    "article_id": "3_1883-11-08_p1_sn85025620_00212479330_1883110801_0175.json",
+    "score": 6.32
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 4.89
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.66
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 4.58
+   }
+  ]
  },
  {
   "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
@@ -5026,7 +6104,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_delta_ver01:data:sn84026749:100492647:1906101401:0653/5490,4920,839,3212/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84026749/1906-10-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84026749/1906-10-14/ed-1/",
+  "like": [
+   {
+    "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
+    "score": 7.68
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 6.21
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 5.5
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.44
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 5.37
+   }
+  ]
  },
  {
   "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
@@ -5134,7 +6234,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:iahi:batch_iahi_landers_ver01:data:sn84038335:00415622788:1907091901:0309/1882,6207,663,302/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84038335/1907-09-19/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84038335/1907-09-19/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+    "score": 5.31
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.31
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 4.16
+   },
+   {
+    "article_id": "10_1894-02-21_pna_sn87056600_00202191514_1894022101_0115.json",
+    "score": 4.07
+   },
+   {
+    "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+    "score": 3.83
+   }
+  ]
  },
  {
   "article_id": "10_1908-09-18_p5_sn85042354_00383343288_1908091801_0829.json",
@@ -5233,7 +6355,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:deu:batch_deu_dover_ver01:data:sn85042354:00383343288:1908091801:0829/871,5595,658,631/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042354/1908-09-18/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042354/1908-09-18/ed-1/",
+  "like": [
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 6.36
+   },
+   {
+    "article_id": "31_1872-02-23_pna_sn82016419_00212472967_1872022301_0373.json",
+    "score": 5.99
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.49
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 5.42
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 5.14
+   }
+  ]
  },
  {
   "article_id": "1_1908-10-17_pna_sn88086023_00202194631_1908101701_1321.json",
@@ -5300,7 +6444,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:oru:batch_oru_longspur_ver01:data:sn88086023:00202194631:1908101701:1321/3315,2922,640,1075/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn88086023/1908-10-17/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn88086023/1908-10-17/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 7.42
+   },
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 5.79
+   },
+   {
+    "article_id": "13_1907-05-08_p7_sn85042354_00383343252_1907050801_0982.json",
+    "score": 4.91
+   },
+   {
+    "article_id": "16_1911-01-05_pna_sn88077573_00237283727_1911010501_0423.json",
+    "score": 4.44
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 4.24
+   }
+  ]
  },
  {
   "article_id": "2_1909-04-08_p1_sn86058226_00271744729_1909040801_0067.json",
@@ -5370,7 +6536,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_georgecrowe_ver01:data:sn86058226:00271744729:1909040801:0067/3409,5470,783,1014/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn86058226/1909-04-08/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn86058226/1909-04-08/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+    "score": 4.73
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 4.72
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.35
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 4.32
+   },
+   {
+    "article_id": "1_1917-01-24_pna_sn86063147_00340585987_1917012401_0900.json",
+    "score": 4.22
+   }
+  ]
  },
  {
   "article_id": "7_1909-08-01_p1_sn83030214_00175039545_1909080101_0057.json",
@@ -5469,7 +6657,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_norway_ver01:data:sn83030214:00175039545:1909080101:0057/2130,7977,1005,689/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83030214/1909-08-01/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83030214/1909-08-01/ed-1/",
+  "like": [
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.49
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.1
+   },
+   {
+    "article_id": "7_1903-03-01_p1_sn84020274_00294559589_1903030101_0039.json",
+    "score": 3.78
+   },
+   {
+    "article_id": "9_1919-07-09_p1_sn89081128_0028076677A_1919070901_0223.json",
+    "score": 3.67
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 3.62
+   }
+  ]
  },
  {
   "article_id": "6_1910-07-02_pna_sn82016014_00295870722_1910070201_0026.json",
@@ -5538,7 +6748,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:khi:batch_khi_edelbrock_ver01:data:sn82016014:00295870722:1910070201:0026/951,1512,686,1028/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82016014/1910-07-02/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82016014/1910-07-02/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 9.09
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 5.24
+   },
+   {
+    "article_id": "9_1919-07-09_p1_sn89081128_0028076677A_1919070901_0223.json",
+    "score": 5.21
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 4.81
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 4.76
+   }
+  ]
  },
  {
   "article_id": "16_1911-01-05_pna_sn88077573_00237283727_1911010501_0423.json",
@@ -5601,7 +6833,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ohi:batch_ohi_kilo_ver01:data:sn88077573:00237283727:1911010501:0423/3719,2167,659,524/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn88077573/1911-01-05/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn88077573/1911-01-05/ed-1/",
+  "like": [
+   {
+    "article_id": "29_1904-02-29_p4_sn84020358_00271744432_1904022901_0448.json",
+    "score": 5.17
+   },
+   {
+    "article_id": "6_1901-10-18_p6_sn83045462_00280655430_1901101801_0356.json",
+    "score": 4.85
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 4.65
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 4.08
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 3.76
+   }
+  ]
  },
  {
   "article_id": "5_1913-05-09_p3_sn89052133_00383341188_1913050901_0148.json",
@@ -5674,7 +6928,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:cohi:batch_cohi_illif_ver01:data:sn89052133:00383341188:1913050901:0148/2261,3241,481,539/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn89052133/1913-05-09/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn89052133/1913-05-09/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 5.07
+   },
+   {
+    "article_id": "3_1922-04-23_p27_sn83045774_00271744262_1922042301_0817.json",
+    "score": 4.87
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 4.38
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 4.15
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 3.59
+   }
+  ]
  },
  {
   "article_id": "5_1913-06-21_p1_sn85066387_00280768601_1913062101_0113.json",
@@ -5815,7 +7091,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_elderwood_ver02:data:sn85066387:00280768601:1913062101:0113/4905,6175,907,2007/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85066387/1913-06-21/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85066387/1913-06-21/ed-1/",
+  "like": [
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 6.14
+   },
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 5.08
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 4.93
+   },
+   {
+    "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
+    "score": 4.59
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 4.45
+   }
+  ]
  },
  {
   "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
@@ -5928,7 +7226,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_andover_ver01:data:sn82014086:00295866081:1916121801:0501/2298,1882,689,1141/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82014086/1916-12-18/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82014086/1916-12-18/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 5.89
+   },
+   {
+    "article_id": "19_1889-07-31_pna_sn87056600_00202191502_1889073101_0264.json",
+    "score": 5.69
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 5.36
+   },
+   {
+    "article_id": "33_1906-09-12_p1_sn86058242_00271745734_1906091201_0480.json",
+    "score": 4.93
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 4.54
+   }
+  ]
  },
  {
   "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
@@ -6005,7 +7325,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mohi:batch_mohi_imogen_ver01:data:sn89066617:00200292315:1917112301:0184/2015,4098,782,3040/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn89066617/1917-11-23/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn89066617/1917-11-23/ed-1/",
+  "like": [
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 9.99
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 6.92
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.64
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 6.13
+   },
+   {
+    "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+    "score": 6.11
+   }
+  ]
  },
  {
   "article_id": "9_1919-07-09_p1_sn89081128_0028076677A_1919070901_0223.json",
@@ -6068,7 +7410,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mnhi:batch_mnhi_cadillac_ver01:data:sn89081128:0028076677A:1919070901:0223/1202,6502,895,1078/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn89081128/1919-07-09/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn89081128/1919-07-09/ed-1/",
+  "like": [
+   {
+    "article_id": "12_1884-07-03_pna_sn85033078_00271769477_1884070301_0629.json",
+    "score": 5.82
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 5.7
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 4.68
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.5
+   },
+   {
+    "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+    "score": 4.35
+   }
+  ]
  },
  {
   "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
@@ -6131,7 +7495,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_davis_ver02:data:sn83030214:00206532452:1919112302:0761/5854,780,814,2211/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83030214/1919-11-23/ed-2/"
+  "issue_page": "https://www.loc.gov/item/sn83030214/1919-11-23/ed-2/",
+  "like": [
+   {
+    "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
+    "score": 9.16
+   },
+   {
+    "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
+    "score": 6.27
+   },
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 5.68
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 5.65
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 5.14
+   }
+  ]
  },
  {
   "article_id": "9_1921-04-12_p12_sn85042354_00383342545_1921041201_0514.json",
@@ -6230,7 +7616,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:deu:batch_deu_ironhill_ver01:data:sn85042354:00383342545:1921041201:0514/140,3186,605,235/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042354/1921-04-12/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042354/1921-04-12/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 7.2
+   },
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 7.01
+   },
+   {
+    "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+    "score": 6.37
+   },
+   {
+    "article_id": "10_1850-05-22_p1_sn84024718_00414183736_1850052201_0083.json",
+    "score": 6.15
+   },
+   {
+    "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+    "score": 5.81
+   }
+  ]
  },
  {
   "article_id": "3_1922-04-23_p27_sn83045774_00271744262_1922042301_0817.json",
@@ -6307,7 +7715,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:dlc:batch_dlc_bindweed_ver02:data:sn83045774:00271744262:1922042301:0817/1641,3050,763,1399/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045774/1922-04-23/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045774/1922-04-23/ed-1/",
+  "like": [
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.35
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 4.98
+   },
+   {
+    "article_id": "52_1892-08-14_pna_sn84024546_0023728219A_1892081401_0171.json",
+    "score": 4.74
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 4.57
+   },
+   {
+    "article_id": "10_1895-04-28_pna_sn90059522_00206536822_1895042801_0618.json",
+    "score": 4.55
+   }
+  ]
  },
  {
   "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
@@ -6420,7 +7850,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:okhi:batch_okhi_idabel_ver01:data:sn85042345:00237281445:1922081401:0238/92,2724,573,1103/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85042345/1922-08-14/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85042345/1922-08-14/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 5.45
+   },
+   {
+    "article_id": "18_1896-02-05_pna_sn85066387_00175037342_1896020501_0090.json",
+    "score": 4.49
+   },
+   {
+    "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+    "score": 4.45
+   },
+   {
+    "article_id": "5_1913-06-21_p1_sn85066387_00280768601_1913062101_0113.json",
+    "score": 4.28
+   },
+   {
+    "article_id": "8_1900-08-10_pna_sn90059182_00393341087_1900081001_0258.json",
+    "score": 4.16
+   }
+  ]
  },
  {
   "article_id": "2_1923-06-04_pna_sn87093407_00340585410_1923060401_0854.json",
@@ -6507,7 +7959,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:wa:batch_wa_kingfisher_ver02:data:sn87093407:00340585410:1923060401:0854/392,3965,640,1178/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn87093407/1923-06-04/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn87093407/1923-06-04/ed-1/",
+  "like": [
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 6.13
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.3
+   },
+   {
+    "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+    "score": 4.85
+   },
+   {
+    "article_id": "8_1883-04-21_p1_sn86076999_00415627385_1883042101_0867.json",
+    "score": 3.29
+   },
+   {
+    "article_id": "1_1917-01-24_pna_sn86063147_00340585987_1917012401_0900.json",
+    "score": 3.14
+   }
+  ]
  },
  {
   "article_id": "3_1926-11-23_p3_sn82014519_00414219731_1926112301_0419.json",
@@ -6621,7 +8095,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ct:batch_ct_genesis_ver01:data:sn82014519:00414219731:1926112301:0419/158,832,543,940/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82014519/1926-11-23/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82014519/1926-11-23/ed-1/",
+  "like": [
+   {
+    "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
+    "score": 8.66
+   },
+   {
+    "article_id": "30_1906-11-13_p8_sn85042462_00175047414_1906111301_0233.json",
+    "score": 7.17
+   },
+   {
+    "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
+    "score": 6.36
+   },
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 5.94
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.15
+   }
+  ]
  },
  {
   "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
@@ -6733,7 +8229,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:in:batch_in_goldman_ver01:data:sn82015313:00383349199:1929081901:0244/294,1081,724,1474/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn82015313/1929-08-19/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn82015313/1929-08-19/ed-1/",
+  "like": [
+   {
+    "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+    "score": 5.79
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 5.48
+   },
+   {
+    "article_id": "10_1912-11-22_p10_sn85053089_00294554683_1912112201_0821.json",
+    "score": 4.79
+   },
+   {
+    "article_id": "9_1921-04-12_p12_sn85042354_00383342545_1921041201_0514.json",
+    "score": 4.66
+   },
+   {
+    "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+    "score": 4.63
+   }
+  ]
  },
  {
   "article_id": "2_1930-03-08_p1_sn83045499_00514159567_1930030801_0461.json",
@@ -6810,7 +8328,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:ak:batch_ak_bowheadwhale_ver01:data:sn83045499:00514159567:1930030801:0461/3254,3749,599,1110/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045499/1930-03-08/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045499/1930-03-08/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1926-11-23_p3_sn82014519_00414219731_1926112301_0419.json",
+    "score": 7.21
+   },
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 6.38
+   },
+   {
+    "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+    "score": 6.36
+   },
+   {
+    "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+    "score": 5.7
+   },
+   {
+    "article_id": "1_1917-01-24_pna_sn86063147_00340585987_1917012401_0900.json",
+    "score": 5.3
+   }
+  ]
  },
  {
   "article_id": "74_1933-03-31_p1_sn83016244_00271760796_1933033101_0297.json",
@@ -6896,7 +8436,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:fu:batch_fu_bathouse_ver01:data:sn83016244:00271760796:1933033101:0297/4016,4644,745,576/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83016244/1933-03-31/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83016244/1933-03-31/ed-1/",
+  "like": [
+   {
+    "article_id": "3_1876-11-26_p6_sn86086284_00280762027_1876112601_0963.json",
+    "score": 5.58
+   },
+   {
+    "article_id": "3_1926-11-23_p3_sn82014519_00414219731_1926112301_0419.json",
+    "score": 5.28
+   },
+   {
+    "article_id": "18_1871-03-04_pna_sn85040344_00271769593_1871030401_0094.json",
+    "score": 4.87
+   },
+   {
+    "article_id": "9_1866-03-31_p1_sn84026922_00237288154_1866033101_0364.json",
+    "score": 4.76
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 4.69
+   }
+  ]
  },
  {
   "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
@@ -6991,7 +8553,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:vi:batch_vi_appaloosa_ver01:data:sn84024656:00414184637:1846120301:1106/3906,6953,895,375/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024656/1846-12-03/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024656/1846-12-03/ed-1/",
+  "like": [
+   {
+    "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+    "score": 5.65
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 5.48
+   },
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 3.86
+   },
+   {
+    "article_id": "1_1890-05-14_pna_sn84026409_00280776518_1890051401_0423.json",
+    "score": 3.63
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 3.47
+   }
+  ]
  },
  {
   "article_id": "18_1896-02-05_pna_sn85066387_00175037342_1896020501_0090.json",
@@ -7079,7 +8663,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_dogtown_ver01:data:sn85066387:00175037342:1896020501:0090/2788,4959,874,502/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85066387/1896-02-05/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85066387/1896-02-05/ed-1/",
+  "like": [
+   {
+    "article_id": "16_1911-01-05_pna_sn88077573_00237283727_1911010501_0423.json",
+    "score": 4.71
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 4.12
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 4.07
+   },
+   {
+    "article_id": "10_1894-02-21_pna_sn87056600_00202191514_1894022101_0115.json",
+    "score": 3.74
+   },
+   {
+    "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+    "score": 3.52
+   }
+  ]
  },
  {
   "article_id": "32_1897-10-13_p12_sn85066387_00175037615_1897101301_0203.json",
@@ -7160,7 +8766,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:curiv:batch_curiv_fredsplace_ver01:data:sn85066387:00175037615:1897101301:0203/980,2467,878,116/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85066387/1897-10-13/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85066387/1897-10-13/ed-1/",
+  "like": [
+   {
+    "article_id": "32_1879-01-20_p1_sn85042331_0021247082A_1879012001_0123.json",
+    "score": 6.05
+   },
+   {
+    "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+    "score": 5.24
+   },
+   {
+    "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
+    "score": 4.91
+   },
+   {
+    "article_id": "1_1920-01-29_p1_sn97071038_00295868442_1920012901_0494.json",
+    "score": 4.66
+   },
+   {
+    "article_id": "2_1853-01-15_pNone_sn83045784_00415661605_1853011501_0480.json",
+    "score": 3.81
+   }
+  ]
  },
  {
   "article_id": "21_1900-10-25_pna_sn83045604_00202199720_1900102501_0398.json",
@@ -7227,7 +8855,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:wa:batch_wa_index_ver01:data:sn83045604:00202199720:1900102501:0398/295,2306,672,4009/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn83045604/1900-10-25/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn83045604/1900-10-25/ed-1/",
+  "like": [
+   {
+    "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+    "score": 6.76
+   },
+   {
+    "article_id": "1_1887-01-13_p1_sn86092392_00414187304_1887011301_0266.json",
+    "score": 6.7
+   },
+   {
+    "article_id": "21_1895-09-14_p1_sn90059959_00271742848_1895091401_0568.json",
+    "score": 6.25
+   },
+   {
+    "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+    "score": 6.23
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.8
+   }
+  ]
  },
  {
   "article_id": "10_1912-11-22_p10_sn85053089_00294554683_1912112201_0821.json",
@@ -7339,7 +8989,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:mthi:batch_mthi_flyingsquirrel_ver02:data:sn85053089:00294554683:1912112201:0821/4208,5384,653,462/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn85053089/1912-11-22/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn85053089/1912-11-22/ed-1/",
+  "like": [
+   {
+    "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+    "score": 6.23
+   },
+   {
+    "article_id": "20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json",
+    "score": 5.03
+   },
+   {
+    "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+    "score": 5.01
+   },
+   {
+    "article_id": "6_1921-12-31_pna_sn82014519_00414218945_1921123101_0676.json",
+    "score": 4.08
+   },
+   {
+    "article_id": "10_1897-05-28_p1_sn86076999_00271740918_1897052801_0497.json",
+    "score": 3.97
+   }
+  ]
  },
  {
   "article_id": "2_1916-01-08_p1_sn84024055_00280761072_1916010801_0136.json",
@@ -7412,7 +9084,29 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:iune:batch_iune_charlie_ver01:data:sn84024055:00280761072:1916010801:0136/2748,2122,816,1113/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn84024055/1916-01-08/ed-1/"
+  "issue_page": "https://www.loc.gov/item/sn84024055/1916-01-08/ed-1/",
+  "like": [
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 5.74
+   },
+   {
+    "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+    "score": 3.86
+   },
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 3.56
+   },
+   {
+    "article_id": "10_1895-04-28_pna_sn90059522_00206536822_1895042801_0618.json",
+    "score": 3.04
+   },
+   {
+    "article_id": "2_1917-11-23_pna_sn89066617_00200292315_1917112301_0184.json",
+    "score": 2.99
+   }
+  ]
  },
  {
   "article_id": "17_1883-11-17_p1_sn88064005_00200299048_1883111702_0299.json",
@@ -7507,6 +9201,28 @@
     "loc": "https://tile.loc.gov/image-services/iiif/service:ndnp:lu:batch_lu_emmet_ver01:data:sn88064005:00200299048:1883111702:0299/210,4865,687,936/pct:50/0/default.jpg"
    }
   ],
-  "issue_page": "https://www.loc.gov/item/sn88064005/1883-11-17/ed-2/"
+  "issue_page": "https://www.loc.gov/item/sn88064005/1883-11-17/ed-2/",
+  "like": [
+   {
+    "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+    "score": 5.69
+   },
+   {
+    "article_id": "21_1888-04-30_pna_sn84024448_00296020758_1888043001_1024.json",
+    "score": 4.2
+   },
+   {
+    "article_id": "5_1913-06-21_p1_sn85066387_00280768601_1913062101_0113.json",
+    "score": 3.65
+   },
+   {
+    "article_id": "1_1896-07-06_p14_sn85066387_0017503741A_1896070601_0113.json",
+    "score": 3.57
+   },
+   {
+    "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+    "score": 3.44
+   }
+  ]
  }
 ]

@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
+import Method from './Method.tsx'
 
 type Field = {
   value: string
@@ -25,6 +26,8 @@ type Report = {
   people: Field[]
   printed_in: { lccn: string; place: string | null; state: string | null; from: string }
   headline_legible: number
+  text_legible: number
+  like?: { article_id: string; score: number }[]
   clippings: { src: string; loc: string | null }[]
   issue_page: string | null
 }
@@ -114,7 +117,7 @@ function Value({ field }: { field: Field | null }) {
   )
 }
 
-function Case({ r }: { r: Report }) {
+function Case({ r, byId }: { r: Report; byId: Map<string, Report> }) {
   const fields = fieldsOf(r)
   const lines = r.headline.split(/\n+/).map((l) => l.trim()).filter(Boolean)
   return (
@@ -191,6 +194,23 @@ function Case({ r }: { r: Report }) {
           ))}
         <span className="filing">Filed as {r.article_id.replace(/\.json$/, '')}</span>
       </p>
+      {r.like && r.like.length > 0 && (
+        <nav className="like" aria-label="Ghosts like this one">
+          <h4>Ghosts like this one</h4>
+          <ul>
+            {r.like.map((l) => {
+              const o = byId.get(l.article_id)
+              return o ? (
+                <li key={l.article_id}>
+                  <a href={`#/report/${encodeURIComponent(l.article_id)}`}>{titleOf(o)}</a>
+                  <span className="label"> {o.date}</span>
+                </li>
+              ) : null
+            })}
+          </ul>
+          <p className="note">Ranked by Atlas Search’s moreLikeThis on the headline and text.</p>
+        </nav>
+      )}
       <p className="thirty" aria-label="End of the report">
         -30-
       </p>
@@ -198,14 +218,27 @@ function Case({ r }: { r: Report }) {
   )
 }
 
-function Envelope({ r }: { r: Report }) {
-  const where = [r.place?.value, r.place_state?.value].filter(Boolean).join(', ')
-  const first = garbled(r)
+function titleOf(r: Report) {
+  return garbled(r)
     ? `${r.place?.value || printedIn(r) || 'A paper'}: a ghost report`
     : r.headline.split(/\n+/).map((l) => l.trim())[0]
+}
+
+function Envelope({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opened: boolean }) {
+  const state = r.place_state?.value
+  // a place the paper wrote with its state ("Davenport, Iowa") doesn't take the state again
+  const where = [r.place?.value, state && !r.place?.value.includes(state) ? state : null].filter(Boolean).join(', ')
+  const first = titleOf(r)
+  const ref = useRef<HTMLDetailsElement>(null)
+  useEffect(() => {
+    if (opened && ref.current) {
+      ref.current.open = true
+      ref.current.scrollIntoView({ block: 'start' })
+    }
+  }, [opened])
   return (
     <li>
-      <details className="envelope">
+      <details className="envelope" ref={ref} id={`report-${r.article_id}`}>
         <summary>
           <span className="label">
             <span className="date">{r.date}</span>
@@ -217,9 +250,43 @@ function Envelope({ r }: { r: Report }) {
           <span className="where">{where ? `Story place: ${where}` : 'Story place not stated'}</span>
           <Stamp outcome={r.outcome} />
         </summary>
-        <Case r={r} />
+        <Case r={r} byId={byId} />
       </details>
     </li>
+  )
+}
+
+// one clipping for each outcome: the most legible report whose sight and outcome both have verified
+// quotes, captioned with those quotes and nothing else
+function Samples({ reports }: { reports: Report[] }) {
+  const picked = OUTCOMES.flatMap((o) => {
+    const best = reports
+      .filter((r) => r.outcome?.value === o && r.seen?.verified && r.outcome?.verified && r.clippings.length)
+      .sort((a, b) => b.text_legible - a.text_legible)[0]
+    return best ? [best] : []
+  })
+  return (
+    <article className="samples">
+      <h2 className="page-title">Paper samples</h2>
+      <p className="lede">One clipping for each way a report can end, chosen as the clearest scan of its kind. Each caption is the paper’s own words.</p>
+      {picked.map((r) => (
+        <figure key={r.article_id} className="sample">
+          {r.clippings.slice(0, 3).map((c, i) => (
+            <img key={c.src} src={c.src} alt={i === 0 ? `The scanned clipping. ${r.seen?.quote ?? ''}` : ''} loading="lazy" />
+          ))}
+          <figcaption>
+            <Stamp outcome={r.outcome} />
+            <q className="quote">{r.seen?.quote}</q>
+            <q className="quote">{r.outcome?.quote}</q>
+            <span className="label">
+              {r.date} · {paperName(r.paper)}
+            </span>
+            <a href={`#/report/${encodeURIComponent(r.article_id)}`}>Read the report</a>
+          </figcaption>
+        </figure>
+      ))}
+      <p className="thirty">-30-</p>
+    </article>
   )
 }
 
@@ -279,6 +346,15 @@ function App() {
   const [outcome, setOutcome] = useState('')
   const [printed, setPrinted] = useState('')
   const [lights, toggle] = useLights()
+  const [hash, setHash] = useState(() => window.location.hash)
+  useEffect(() => {
+    const onHash = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+  const page = hash.startsWith('#/how') ? 'how' : hash.startsWith('#/samples') ? 'samples' : 'drawer'
+  const openId = hash.startsWith('#/report/') ? decodeURIComponent(hash.slice(9)) : ''
+  const byId = useMemo(() => new Map((reports ?? []).map((r) => [r.article_id, r])), [reports])
   useLamp()
 
   useEffect(() => {
@@ -295,6 +371,7 @@ function App() {
   const shown = useMemo(() => {
     const words = query.toLowerCase().split(/\s+/).filter(Boolean)
     return (reports ?? []).filter((r) => {
+      if (openId) return true
       if (era && decade(r) !== era) return false
       if (outcome && (r.outcome?.value ?? 'unknown') !== outcome) return false
       if (printed && r.printed_in.state !== printed) return false
@@ -303,12 +380,12 @@ function App() {
         .toLowerCase()
       return words.every((w) => hay.includes(w))
     })
-  }, [reports, query, era, outcome, printed])
+  }, [reports, query, era, outcome, printed, openId])
 
   return (
     <>
-      <a className="skip" href="#drawer">
-        Skip to the reports
+      <a className="skip" href="#main">
+        Skip to the content
       </a>
       <header className="masthead">
         <button type="button" className="chain" onClick={toggle} aria-pressed={lights === 'on'}>
@@ -320,10 +397,18 @@ function App() {
         </p>
         <img className="mark" src="brand/logo.svg" alt="" width="72" height="72" />
         <h1 className="nameplate">Paper Ghosts</h1>
+        <nav className="rooms" aria-label="The Morgue’s rooms">
+          <a href="#/" aria-current={page === 'drawer' ? 'page' : undefined}>The drawer</a>
+          <a href="#/samples" aria-current={page === 'samples' ? 'page' : undefined}>Paper samples</a>
+          <a href="#/how" aria-current={page === 'how' ? 'page' : undefined}>How we know</a>
+        </nav>
         <p className="tagline">A morgue of ghost reports from American newspapers, each one filed with the words it rests on.</p>
       </header>
 
-      <main>
+      <main id="main">
+        {page === 'how' && <Method />}
+        {page === 'samples' && reports && <Samples reports={reports} />}
+        {page === 'drawer' && (<>
         <form className="slip" role="search" onSubmit={(e) => e.preventDefault()}>
           <p className="slip-head">Request slip</p>
           <label>
@@ -373,10 +458,11 @@ function App() {
           )}
           <ol className="envelopes">
             {shown.map((r) => (
-              <Envelope key={r.article_id} r={r} />
+              <Envelope key={r.article_id} r={r} byId={byId} opened={r.article_id === openId} />
             ))}
           </ol>
         </section>
+        </>)}
       </main>
 
       <footer className="colophon">

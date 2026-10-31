@@ -165,6 +165,16 @@ def main() -> None:
     ]
     # legible reports lead, in tenths of their text's legibility, then by date
     found.sort(key=lambda e: (-round(e["text_legible"], 1), e["date"] or ""))
+    # keep Atlas's ghosts-like-this-one (scripts/export_like.py) across a rebuild
+    kept = WEB / "reports.json"
+    liked = (
+        {r["article_id"]: r.get("like") for r in json.loads(kept.read_text())}
+        if kept.exists()
+        else {}
+    )
+    for e in found:
+        if liked.get(e["article_id"]):
+            e["like"] = liked[e["article_id"]]
     WEB.mkdir(parents=True, exist_ok=True)
     (WEB / "reports.json").write_text(json.dumps(found, indent=1) + "\n")
     print(

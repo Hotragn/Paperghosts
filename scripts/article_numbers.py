@@ -559,6 +559,8 @@ def main() -> None:
         }
     )
     RESULT.write_text(json.dumps(found, indent=1, ensure_ascii=False) + "\n")
+    # the Morgue's "How we know" page reads the same sheet
+    (ROOT / "web" / "public" / "numbers.json").write_text(RESULT.read_text())
     for e in found:
         note = f"  ({e['note']})" if "note" in e else ""
         print(
