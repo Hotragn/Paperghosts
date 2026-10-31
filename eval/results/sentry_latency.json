@@ -1,0 +1,28 @@
+{
+ "c0a248f3311f54908514d2ccefc46f0dffb029f0": {
+  "release": "c0a248f3311f54908514d2ccefc46f0dffb029f0",
+  "project": "paperghosts-api",
+  "since": "2h",
+  "pulled_at": "2026-10-31T22:56:24+00:00",
+  "spans": [
+   {
+    "query": "reports find",
+    "p50_ms": 41.0,
+    "p95_ms": 47.6,
+    "count": 40.0
+   },
+   {
+    "query": "reports fuzzy",
+    "p50_ms": 74.8,
+    "p95_ms": 96.8,
+    "count": 40.0
+   },
+   {
+    "query": "reports more_like_this",
+    "p50_ms": 66.4,
+    "p95_ms": 75.5,
+    "count": 40.0
+   }
+  ]
+ }
+}

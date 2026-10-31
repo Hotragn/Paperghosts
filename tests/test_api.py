@@ -44,7 +44,7 @@ class FakeReports:
     """Stands in for paperghosts.reports: one stored report, and an Atlas Search answer."""
 
     def __init__(self):
-        self.reports, self.pipelines = self, []
+        self.reports, self.pipelines, self.finds = self, [], 0
 
     async def aggregate(self, pipeline):
         self.pipelines.append(pipeline)
@@ -54,6 +54,7 @@ class FakeReports:
         return [{"_id": "r_b2", "date": "1850-05-22", "score": 2.5}]
 
     async def find_one(self, query, fields):
+        self.finds += 1
         return (
             {"_id": "r_a1", "headline": "A GHOST.", "text": "Knockings."}
             if query == {"_id": "r_a1"}
@@ -63,7 +64,7 @@ class FakeReports:
 
 def test_search_and_ghosts_like_this_one():
     client = TestClient(app)
-    app.state.db = fake = FakeReports()
+    app.state.db, app.state.liked = (fake := FakeReports()), {}
 
     found = client.get("/api/search", params={"q": "apparition"}).json()["results"]
     assert found == [{"article_id": "b2", "date": "1850-05-22", "score": 2.5}]
@@ -71,5 +72,7 @@ def test_search_and_ghosts_like_this_one():
 
     assert client.get("/api/like/a1").json()["results"][0]["article_id"] == "b2"
     assert "moreLikeThis" in fake.pipelines[1][0]["$search"]
+    assert client.get("/api/like/a1").status_code == 200
+    assert fake.finds == 1  # the report is read from Atlas once, then kept
     assert client.get("/api/like/nope").status_code == 404
     assert client.get("/api/search", params={"q": "a"}).status_code == 422

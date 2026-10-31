@@ -23,6 +23,7 @@ async def lifespan(app):
         setting("MONGODB_URI").get(), serverSelectionTimeoutMS=5_000
     )
     app.state.db = client["paperghosts"]
+    app.state.liked = {}
     yield
     await client.close()
 
@@ -74,14 +75,28 @@ async def search(q: str = Query(min_length=2, max_length=100)):
     return {"results": [listed(r) for r in found]}
 
 
+LIKED = 1024  # reports kept for ghosts like this one; the Morgue holds 78
+
+
+async def liked(article_id: str) -> dict | None:
+    """A report's headline and text, read from Atlas once and then kept: they don't change within
+    a release, and Sentry showed the re-read was a third of every ghosts-like-this-one request."""
+    kept = app.state.liked
+    if article_id not in kept:
+        with sentry_sdk.start_span(op="db.atlas.query", name="reports find") as span:
+            span.set_data("query.kind", "find")
+            kept[article_id] = await app.state.db.reports.find_one(
+                {"_id": f"r_{article_id}"}, {"headline": 1, "text": 1}
+            )
+        if len(kept) > LIKED:
+            kept.pop(next(iter(kept)))
+    return kept[article_id]
+
+
 @app.get("/api/like/{article_id}")
 async def ghosts_like(article_id: str):
     """The five reports Atlas Search's moreLikeThis ranks closest to this one."""
-    with sentry_sdk.start_span(op="db.atlas.query", name="reports find") as span:
-        span.set_data("query.kind", "find")
-        doc = await app.state.db.reports.find_one(
-            {"_id": f"r_{article_id}"}, {"headline": 1, "text": 1}
-        )
+    doc = await liked(article_id)
     if doc is None:
         error = {"code": "not_found", "message": "No report has that id."}
         return JSONResponse({"error": error}, status_code=404)
