@@ -1048,8 +1048,77 @@
   "note": "hard-coded: no results file"
  },
  {
+  "name": "1850 probe: articles in 1850's file",
+  "value": 733880,
+  "source": "eval/results/phase1_env.json: faro_1850.articles"
+ },
+ {
+  "name": "1850 probe: the Stratford knockings",
+  "value": {
+   "matching_articles": 20,
+   "naming_phelps": 2,
+   "first": {
+    "paper": "Lewistown gazette. [volume] (Lewistown, Pa.) 1843-1944",
+    "date": "1850-07-26",
+    "article_id": "9_1850-07-26_p1_sn83032276_00296028587_1850072601_0265.json"
+   }
+  },
+  "source": "eval/results/phase1_env.json: faro_1850.stratford_knockings {matching_articles, naming_phelps, first}"
+ },
+ {
+  "name": "the Morgue: reports, clippings, with the paper's place, with a story state",
+  "value": [
+   78,
+   205,
+   55,
+   14
+  ],
+  "source": "web/public/reports.json: counted"
+ },
+ {
+  "name": "Atlas: the Morgue's reports loaded",
+  "value": {
+   "documents": 78,
+   "storage_kb": 140.0,
+   "load_seconds": 7.0,
+   "with_location": 0
+  },
+  "source": "eval/results/atlas_demo.json: (top) {documents, storage_kb, load_seconds, with_location}"
+ },
+ {
+  "name": "Tinker: the 397B teacher's price per 10,000 articles, all cached to none ($)",
+  "value": [
+   65.43,
+   297.29
+  ],
+  "source": "eval/results/phase2c/teacher_dev_r3.json: prompt_tokens, output_tokens, articles; rates Docs/BUDGET.md:142"
+ },
+ {
+  "name": "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
+  "value": [
+   122,
+   123
+  ],
+  "source": "git log --all trailers; git for-each-ref refs/entire/checkpoints"
+ },
+ {
+  "name": "candidates: in the archive but not in the training pool, and the articles held out",
+  "value": [
+   6342,
+   6567
+  ],
+  "source": "eval/results/eval_a_v2.json: totals.candidates, less Docs/BUDGET.md's candidates in the pool; eval/results/phase2c/leakage.json: out_of_pool",
+  "note": "the difference fits the articles held out as gold, dev and their reprints, but it was not checked article by article"
+ },
+ {
+  "name": "decision 39: the disclosure",
+  "value": "No Tinker spend at all, and step 2C runs on this Mac",
+  "source": "Docs/DECISIONS.md:1021",
+  "note": "the reader is untrained; the Morgue shows labelled reports, not the reader's output"
+ },
+ {
   "name": "tests collected",
-  "value": 400,
-  "source": "uv run pytest --collect-only -q, last line: '400 tests collected in 1.39s'"
+  "value": 402,
+  "source": "uv run pytest --collect-only -q, last line: '402 tests collected in 1.38s'"
  }
 ]

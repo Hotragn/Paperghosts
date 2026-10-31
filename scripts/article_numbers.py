@@ -422,6 +422,122 @@ def entries() -> list:
             "source": "Ollama server log, 2026-10-31 17:00–17:30 (not committed)",
             "note": "hard-coded: no results file",
         },
+        *submission(),
+    ]
+
+
+def git(*args: str) -> str:
+    return subprocess.run(
+        ["git", *args], check=True, cwd=ROOT, capture_output=True, text=True
+    ).stdout
+
+
+def per_ten_thousand(prompt: int, generated: int, articles: int, rates: list) -> list:
+    """Round 3's measured tokens per article, priced per 10,000 articles, all cached to none."""
+    cached, uncached, out = rates
+    return [
+        round((prompt * rate + generated * out) / 1e6 / articles * 10_000, 2)
+        for rate in (cached, uncached)
+    ]
+
+
+def submission() -> list:
+    """The submission's figures: the 1850 probe, the Morgue, Atlas, Tinker's price per 10,000
+    articles, Entire's checkpoints and decision 39's disclosure."""
+    env, demo, r3 = (
+        "eval/results/phase1_env.json",
+        "web/public/reports.json",
+        f"{P2C}/teacher_dev_r3.json",
+    )
+    reports = json.loads((ROOT / demo).read_text())
+    tokens = at(r3, "", "prompt_tokens", "output_tokens", "articles")[0]
+    rates = doc(
+        "Docs/BUDGET.md",
+        r"Qwen3\.5-397B-A17B, the teacher \| \$([\d.]+), \$([\d.]+) \| \$([\d.]+)",
+    )
+    trailers = git(
+        "log", "--all", "--format=%(trailers:key=Entire-Checkpoint,valueonly)"
+    ).split()
+    refs = git("for-each-ref", "--format=%(refname)", "refs/entire/checkpoints").split()
+    archive = at("eval/results/eval_a_v2.json", "totals.candidates")[0]
+    in_pool = doc(
+        "Docs/BUDGET.md", r"a seeded \d+ of the ([\d,]+) candidates in the pool"
+    )[0]
+    held_out = at(f"{P2C}/leakage.json", "out_of_pool")[0]
+    return [
+        row("1850 probe: articles in 1850's file", at(env, "faro_1850.articles")),
+        row(
+            "1850 probe: the Stratford knockings",
+            at(
+                env,
+                "faro_1850.stratford_knockings",
+                "matching_articles",
+                "naming_phelps",
+                "first",
+            ),
+        ),
+        row(
+            "the Morgue: reports, clippings, with the paper's place, with a story state",
+            (
+                [
+                    len(reports),
+                    sum(len(r["clippings"]) for r in reports),
+                    sum(bool(r["printed_in"]["place"]) for r in reports),
+                    sum(bool(r["place_state"]) for r in reports),
+                ],
+                f"{demo}: counted",
+            ),
+        ),
+        row(
+            "Atlas: the Morgue's reports loaded",
+            at(
+                "eval/results/atlas_demo.json",
+                "",
+                "documents",
+                "storage_kb",
+                "load_seconds",
+                "with_location",
+            ),
+        ),
+        row(
+            "Tinker: the 397B teacher's price per 10,000 articles, all cached to none ($)",
+            (
+                per_ten_thousand(
+                    tokens["prompt_tokens"],
+                    tokens["output_tokens"],
+                    tokens["articles"],
+                    rates[0],
+                ),
+                f"{r3}: prompt_tokens, output_tokens, articles; rates {rates[1]}",
+            ),
+        ),
+        row(
+            "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
+            (
+                [len(trailers), len(refs)],
+                "git log --all trailers; git for-each-ref refs/entire/checkpoints",
+            ),
+        ),
+        row(
+            "candidates: in the archive but not in the training pool, and the articles held out",
+            (
+                [archive - in_pool, held_out],
+                (
+                    "eval/results/eval_a_v2.json: totals.candidates, less Docs/BUDGET.md's "
+                    f"candidates in the pool; {P2C}/leakage.json: out_of_pool"
+                ),
+            ),
+            "the difference fits the articles held out as gold, dev and their reprints, but it was "
+            "not checked article by article",
+        ),
+        row(
+            "decision 39: the disclosure",
+            doc(
+                "Docs/DECISIONS.md",
+                r"^\*\*39\. (No Tinker spend at all, and step 2C runs on this Mac)",
+            ),
+            "the reader is untrained; the Morgue shows labelled reports, not the reader's output",
+        ),
     ]
 
 
