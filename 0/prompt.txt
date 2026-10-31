@@ -1,0 +1,70 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2C.1 accepted. Below: my checks, my calls on your five items, POLICY.md's amendments, notes for later steps, then 2C.2.
+
+**My checks at fc26372**
+- Tests and lint: 365 passed, and lint is clean.
+- The split: `HASH` is split.json's sha256, and the split records POLICY.md's current sha256.
+- Weights: every stratum's weights sum to its size, and `pi`×`weight`=1 throughout.
+- Disjointness: gold and dev share no id and no group, and none of POLICY's 63 examples is drawn.
+- `clusters_unseen.json` reproduces 184 of 318.
+- The labelling page binds 127.0.0.1 only and validates its quotes.
+- One number to reconcile: decision 37 and your report say 1,196 quarantined, but split.json's `quarantine` lists 1,201. Say which is right and fix the other.
+
+**Your five items**
+1. **Keep the draw, with no redraw.** At these rates, about ±12 points on fields is what 300 articles buy. Moving 70 articles narrows that to about ±10, and costs triage, the bulk and the early decades. POLICY's broader rules, E6 and E8 should add reports beyond the 35.
+   - The bigger gap is recall. At the judged rates, six in ten of the population's expected reports sit in the low-rate strata: the bulk (about 16,000) and the five rules without a headline term (about 11,000). Gold expects about 4.5 reports there.
+   - So eval B (step 7) adds a pooled recall screen, written into the plan's 2C notes now.
+   - The design: a seeded draw from those strata, screened by the tuned reader and by the teacher. Every article either calls a report is read by hand under POLICY.
+   - Size it with the credit check, to find about 50 reports.
+   - Report recall per stratum and weighted. Say it's an upper bound, since reports both models miss go uncounted.
+2. **Dev labelled by you, by hand, under POLICY:** yes.
+3. Fine.
+4. Fix `place_type`'s spelling in the amendment below: use the schema's values.
+5. Put short texts' weak links in the plan's 2D notes, if they aren't there already.
+
+**POLICY.md amendments, as one dated commit before any label.** The split keeps recording v1's hash. Git order is POLICY v1, then the draw, then v2, then labels, so RDR-3 still holds.
+1. **Rule 19, spirit-adjacent claims:**
+   - **Dreams and visions** in which a dead or dying person is claimed to appear or communicate, on a particular occasion, are a report. An ordinary or prophetic dream with no spirit claimed is `other`.
+   - **Omens and death warnings** told as having happened and tied to a particular death or place are a report: knocks, a banshee, a phantom funeral, a death light. A list of superstitions in general is `other`.
+   - **Poltergeist doings** are a report: stones thrown, things moved, knockings, put down to a ghost or spirit or told as a haunting.
+   - **Clairvoyance, second sight, premonition or telepathy** with no spirit claimed is `other`, as in rule 3.
+   - **A spirit photograph** of a particular sitting or person is a report. Debate about spirit photography in general is `other`, as in rule 6.
+   - Give examples by article id where judged items have them, and say so where none exists, as rule 7 does. Any new example from the pool must stay out of gold and dev.
+2. **Where rules 6 and 9 meet,** list the signals:
+   - Printed as fact: a dateline, an attributed source, or a named witness.
+   - A tale: a literary title, a narrator's framing, extended dialogue, or a moral.
+   - Where they conflict, the text's own framing decides, and the note says so.
+3. **Rule 16:** where several merged items are reports, the fields come from the item that holds the lexicon's match, else the first.
+4. **`place_type`:** the schema's values, `inn_or_hotel` and the rest.
+
+**Notes for later steps** (put them in the plan's 2C section now):
+- **2C.4:** when you draw the training data, re-check each drawn item against gold and dev with a stricter text rule, 0.05 of the shorter's runs and at least 4 runs. The 0.10/5 rule sits just under the lowest one-story pair (0.105, 6 runs), and a false flag on a training draw costs nothing.
+- **Step 7:** the pooled recall screen above.
+
+**2C.2: the labels.** Persona: ML specialist, as labeller. No model output of any kind may touch gold or dev until the labels are frozen: not the teacher, not base 4B, not Backboard.
+1. Commit POLICY v2 first.
+2. **Label all 300 gold and 150 dev yourself.**
+   - Read the crop wherever the OCR is unclear.
+   - Every label passes the page's `checked()`, quotes and choices included.
+   - Record each article's E-slices.
+3. **A blind second pass:** reading agents label every gold article again, and a seeded 20% of dev.
+   - They see only the text, its crop on request, and POLICY: no first labels, strata or weights.
+   - Report agreement before adjudication, each with an interval: raw agreement and Cohen's kappa on kind, agreement on report or not, and agreement per field on articles both call reports.
+   - Adjudicate every disagreement under POLICY, and keep both labels and the ruling.
+4. **Freeze:** commit labels.jsonl and dev_labels.jsonl with their sha256s, before any model output exists.
+5. **Measure on gold:**
+   - reports found per stratum and in all, against the 35.3 expected
+   - the weighted report rate
+   - the story-place rule, scored against the labelled `place_state`
+- Commit labels in batches as you go, so a usage limit costs nothing.
+
+**Gate**
+- 450 labels, all passing `checked()`.
+- The second pass's agreement, with intervals.
+- Every disagreement adjudicated.
+- The label hashes committed before any model output.
+- The story-place rule measured.
+- Decision 38 written.
+- Tests and lint pass, and the push is checked with `ls-remote`.
+- Report as before. The first line is `2C.2: GATE PASSED` or `2C.2: BLOCKED — <reason>`.
+</cross-session-message>
