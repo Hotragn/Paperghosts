@@ -1,13 +1,20 @@
 """The blind second pass over the gold and dev labels (2C.2).
 
 Every gold article and a seeded fifth of dev are labelled again by readers who see only the
-text, its crops and POLICY.md: no first label, stratum or weight. Their labels are saved as
-labeller "second pass", and the two passes' agreement is measured before any ruling.
+text, its crops and POLICY.md: no first label, stratum or weight. Their labels go to
+eval/gold/second_pass.jsonl as labeller "second pass", never into the label files the evals
+read, and the two passes' agreement is measured before any ruling. Each ruling replaces its
+article's label in labels.jsonl or dev_labels.jsonl, and eval/gold/adjudication.jsonl keeps
+the first label, the second, the ruling and its reason. So the label files hold one label per
+article: the first pass's where the passes agreed, the ruling where they didn't.
 
   packets K DIR      the pass's articles in K packets of text, each with its texts for check
   check FILE TEXTS   a packet's labels through checked(), against its texts alone
+  save FILE          a packet's labels through checked(), into second_pass.jsonl
   agreement          the agreement, with 95% intervals, into eval/results/phase2c/agreement.json
   disputes           every article the passes disagree on, as JSON lines, for a ruling
+  rule FILE          rulings ({"label": ..., "reason": ...} per line) on disputed articles
+  frozen             each label file's count, labellers, checked() and sha256
 
 A field agrees when both passes leave it empty, or:
   outcome, place_type, precision, place_state   they give the same value
@@ -17,9 +24,11 @@ A field agrees when both passes leave it empty, or:
                                                 other pass's, both ways
 """
 
+import hashlib
 import json
 import random
 import sys
+from collections import Counter
 from pathlib import Path
 
 from label_gold import (
@@ -29,6 +38,8 @@ from label_gold import (
     SEEN,
     articles,
     checked,
+    save,
+    save_file,
     saved,
     shown,
     squeezed,
@@ -37,7 +48,9 @@ from label_gold import (
 from paperghosts.stats import wilson
 
 DEV_SHARE = 0.2
-FIRST, SECOND = "Claude", "second pass"
+FIRST, SECOND, RULING = "Claude", "second pass", "ruling"
+SECOND_PASS = ROOT / "eval" / "gold" / "second_pass.jsonl"
+ADJUDICATION = ROOT / "eval" / "gold" / "adjudication.jsonl"
 RESULT = ROOT / "eval" / "results" / "phase2c" / "agreement.json"
 VALUES = {"outcome", "place_type", "precision", "place_state"}
 
@@ -186,16 +199,55 @@ def disputes(pairs: list, texts: dict) -> list:
     return found
 
 
-def paired(split: str) -> list:
-    """The first and second passes' labels of each article both labelled, in article order."""
-    by = {}
-    for record in saved(OUT[split]):
-        by.setdefault(record["article_id"], {})[record["labeller"]] = record
-    return [
-        (two[FIRST], two[SECOND])
-        for _, two in sorted(by.items())
-        if FIRST in two and SECOND in two
-    ]
+def paired(
+    split: str, out=OUT, second_pass=SECOND_PASS, adjudication=ADJUDICATION
+) -> list:
+    """The first and second passes' labels of each article both labelled, in article order.
+    A ruled article's first label is the one adjudication.jsonl kept."""
+    first = {r["article_id"]: r for r in saved(out[split])}
+    first |= {
+        a["article_id"]: a["first"]
+        for a in saved(adjudication)
+        if a["article_id"] in first
+    }
+    second = {
+        r["article_id"]: r for r in saved(second_pass) if r["article_id"] in first
+    }
+    return [(first[aid], second[aid]) for aid in sorted(second)]
+
+
+def rule(
+    rulings: list,
+    rows: dict,
+    texts: dict,
+    out=OUT,
+    second_pass=SECOND_PASS,
+    adjudication=ADJUDICATION,
+) -> list:
+    """Each ruling, through checked(), replacing its disputed article's label; returns what
+    adjudication.jsonl keeps for it: both passes' labels, the ruling and its reason."""
+    both = [p for name in out for p in paired(name, out, second_pass, adjudication)]
+    disputed = {d["article_id"]: d for d in disputes(both, texts)}
+    pairs = {a["article_id"]: (a, b) for a, b in both}
+    kept = []
+    for given in rulings:
+        aid = given["label"]["article_id"]
+        if aid not in disputed:
+            raise ValueError(f"{aid}: not a disputed article")
+        record = checked(given["label"], rows[aid], RULING)
+        record["note"] = f"ruling: {given['reason']}"
+        first, second = pairs[aid]
+        kept.append(
+            {
+                **disputed[aid],
+                "first": first,
+                "second": second,
+                "ruling": record,
+                "reason": given["reason"],
+            }
+        )
+        save(out[rows[aid]["split"]], record, replace=True)
+    return kept
 
 
 def main() -> None:
@@ -216,6 +268,35 @@ def main() -> None:
         print("\n".join(errors) or "every label passes checked()")
         sys.exit(1 if errors else 0)
     rows = articles()
+    if run == "save":
+        errors = save_file(
+            Path(rest[0]), rows, SECOND, out={"gold": SECOND_PASS, "dev": SECOND_PASS}
+        )
+        print("\n".join(errors) or "every label passes checked()")
+        sys.exit(1 if errors else 0)
+    if run == "frozen":
+        for name, path in OUT.items():
+            records = saved(path)
+            ids = {r["article_id"] for r in records}
+            wanted = {aid for aid, row in rows.items() if row["split"] == name}
+            failed = [
+                r["article_id"] for r in records if not passes(r, rows[r["article_id"]])
+            ]
+            print(
+                json.dumps(
+                    {
+                        "file": path.name,
+                        "labels": len(records),
+                        "articles": len(ids),
+                        "the_split_exactly": ids == wanted
+                        and len(records) == len(wanted),
+                        "labellers": dict(Counter(r["labeller"] for r in records)),
+                        "failing_checked": failed,
+                        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    }
+                )
+            )
+        return
     if run == "packets":
         k, out = int(rest[0]), Path(rest[1])
         cropped = json.loads(SEEN.read_text())
@@ -245,8 +326,29 @@ def main() -> None:
             )
         )
     elif run == "disputes":
+        ruled = {a["article_id"] for a in saved(ADJUDICATION)}
         for item in disputes(gold + dev, texts):
-            print(json.dumps(item))
+            print(json.dumps(item | {"ruled": item["article_id"] in ruled}))
+    elif run == "rule":
+        given = [
+            json.loads(line)
+            for line in Path(rest[0]).read_text().splitlines()
+            if line.strip()
+        ]
+        kept = {a["article_id"]: a for a in saved(ADJUDICATION)}
+        kept |= {a["article_id"]: a for a in rule(given, rows, texts)}
+        ADJUDICATION.write_text(
+            "".join(json.dumps(kept[aid]) + "\n" for aid in sorted(kept))
+        )
+        print(len(given), "rulings;", len(kept), "in adjudication.jsonl")
+
+
+def passes(record: dict, row: dict) -> bool:
+    """Whether a saved label still passes checked() as its labeller saved it."""
+    try:
+        return checked(record, row, record["labeller"])["kind"] == record["kind"]
+    except ValueError:
+        return False
 
 
 if __name__ == "__main__":

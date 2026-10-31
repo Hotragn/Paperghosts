@@ -138,3 +138,60 @@ def test_agreement_counts_kind_report_and_fields_with_their_intervals():
         {"article_id": "a", "kinds": ["report", "report"], "fields": ["place"]},
         {"article_id": "b", "kinds": ["report", "fiction"], "fields": []},
     ]
+
+
+def test_a_ruling_replaces_the_label_and_adjudication_keeps_both_passes(tmp_path):
+    import json
+
+    from label_gold import checked, save
+    from second_pass import paired, rule
+
+    row = dict(ROW, article_id="a", split="gold")
+    out = {"gold": tmp_path / "labels.jsonl", "dev": tmp_path / "dev_labels.jsonl"}
+    second_pass, adjudication = (
+        tmp_path / "second_pass.jsonl",
+        tmp_path / "adjudication.jsonl",
+    )
+    first = {"article_id": "a", **report(), "kind_quote": "knockings upon the walls"}
+    save(out["gold"], checked(first, row, "Claude"))
+    save(
+        second_pass,
+        checked(
+            {"article_id": "a", "kind": "fiction", "kind_quote": "A HAUNTED FARMHOUSE"},
+            row,
+            "second pass",
+        ),
+    )
+    texts = {"a": " ".join(f"{ROW['headline']}\n{TEXT}".split())}
+
+    kept = rule(
+        [{"label": first, "reason": "told as having happened"}],
+        {"a": row},
+        texts,
+        out,
+        second_pass,
+        adjudication,
+    )
+    (ruled,) = [json.loads(line) for line in out["gold"].read_text().splitlines()]
+    assert (
+        ruled["labeller"] == "ruling"
+        and ruled["note"] == "ruling: told as having happened"
+    )
+    assert (
+        kept[0]["first"]["labeller"] == "Claude"
+        and kept[0]["second"]["kind"] == "fiction"
+    )
+    adjudication.write_text(json.dumps(kept[0]) + "\n")
+    # the agreement is still measured on the first pass's label, not the ruling
+    ((a, b),) = paired("gold", out, second_pass, adjudication)
+    assert (a["labeller"], b["labeller"]) == ("Claude", "second pass")
+
+    with pytest.raises(ValueError, match="not a disputed article"):
+        rule(
+            [{"label": {**first, "article_id": "b"}, "reason": "no dispute"}],
+            {"a": row, "b": dict(row, article_id="b")},
+            texts,
+            out,
+            second_pass,
+            adjudication,
+        )

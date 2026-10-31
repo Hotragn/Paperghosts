@@ -224,13 +224,14 @@ def saved(path: Path) -> list:
     )
 
 
-def save(path: Path, record: dict) -> None:
-    """One label per article and labeller: a new one replaces the old."""
+def save(path: Path, record: dict, replace: bool = False) -> None:
+    """One label per article and labeller: a new one replaces the old. With replace, the
+    article's labels by anyone, as a ruling replaces the label it rules on."""
     kept = [
         r
         for r in saved(path)
-        if (r["article_id"], r["labeller"])
-        != (record["article_id"], record["labeller"])
+        if r["article_id"] != record["article_id"]
+        or (not replace and r["labeller"] != record["labeller"])
     ]
     partial_path = path.with_name(f"{path.name}.partial")
     partial_path.write_text("".join(json.dumps(r) + "\n" for r in [*kept, record]))
