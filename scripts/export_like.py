@@ -10,10 +10,10 @@ import time
 
 from export_demo import WEB
 from pymongo import MongoClient
-from query_demo_atlas import like
 
 from paperghosts.config import setting
 from paperghosts.store.db_init import DATABASE
+from paperghosts.store.search import like
 
 
 def main() -> None:

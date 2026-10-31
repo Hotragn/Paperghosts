@@ -1,7 +1,9 @@
 """Sentry for the API and the pipeline: off without a DSN, and nothing personal or secret
 leaves this machine."""
 
+import os
 import re
+import subprocess
 
 import sentry_sdk
 
@@ -34,6 +36,19 @@ def scrub(value):
     return value
 
 
+def release() -> str | None:
+    """The commit this code is: SENTRY_RELEASE when the host sets it, else the checkout's git SHA."""
+    if os.environ.get("SENTRY_RELEASE"):
+        return os.environ["SENTRY_RELEASE"]
+    try:
+        found = subprocess.run(
+            ["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return found.stdout.strip() or None
+
+
 def init_sentry(component: str) -> bool:
     """Starts Sentry for "api" or "pipeline". Without SENTRY_DSN it does nothing."""
     dsn = setting("SENTRY_DSN")
@@ -42,6 +57,7 @@ def init_sentry(component: str) -> bool:
     sentry_sdk.init(
         dsn=dsn.get(),
         environment=component,  # the API and the pipeline share one project
+        release=release(),
         server_name=component,  # the default is the host name, which can name its owner
         traces_sample_rate=1.0,
         # replaces the deprecated send_default_pii=False; fields left out default to on
