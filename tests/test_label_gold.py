@@ -38,6 +38,7 @@ REPORT = {
         {"value": "the family of Mr. John Hale", "quote": "The family of Mr. John Hale"}
     ],
     "rules": [1],
+    "slices": ["E5"],
 }
 
 
@@ -64,6 +65,7 @@ def test_it_serves_the_text_beside_its_crops_with_the_fields_and_the_rules(tmp_p
     )
     assert asked == [("m", 1, TEXT)]  # through crops_for, which checks the page first
     assert 'data-name="outcome"' in page.text and "inn or hotel" in page.text
+    assert 'name="slice" value="E12"' in page.text and 'value="E9"' not in page.text
     # POLICY.md's rule 14, at hand
     assert "Phantom ships, trains and lights" in page.text
     assert web.get(f"/crop/{CROP}").content == b"\xff\xd8 a jpeg"
@@ -94,6 +96,7 @@ def test_it_saves_a_label_whose_quotes_are_in_the_text_and_refuses_one_that_isnt
         saved["outcome"]["value"] == "unexplained" and saved["note"] == "checked twice"
     )
     assert saved["people"] == REPORT["people"] and saved["specific_place"] is None
+    assert saved["slices"] == ["E5"]
     assert list(saved)[:3] == ["article_id", "kind", "kind_quote"]
 
 
@@ -106,3 +109,6 @@ def test_fields_are_for_reports_only_and_choices_come_from_the_schema(tmp_path):
     )
     odd = {**REPORT, "outcome": {"value": "spooky", "quote": "the old farmhouse"}}
     assert "not one of" in web.post("/label", json=odd).json()["detail"]
+    # E9 comes from the grouping, so a label can't claim it
+    reprinted = {**REPORT, "slices": ["E9"]}
+    assert "slices" in web.post("/label", json=reprinted).json()["detail"]

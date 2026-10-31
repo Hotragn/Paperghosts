@@ -52,6 +52,8 @@ FIELDS = (
     "precision",
 )
 RULE = re.compile(r"^(\d+)\. \*\*(.+?)\*\*", re.MULTILINE)
+# the edge-case slices a label records (SRS 7.3), as POLICY.md's label record lists them
+SLICES = dict(re.findall(r"^  - (E\d+): (.+)$", POLICY.read_text(), re.MULTILINE))
 CROP = re.compile(r"[0-9a-f]{24}\.jpg")
 
 
@@ -106,6 +108,10 @@ def checked(label: dict, row: dict, labeller: str) -> dict:
     if squeezed(label["kind_quote"]) not in text:
         raise ValueError(f"kind: the quote isn't in the text: {label['kind_quote']!r}")
     fields = {name: quoted(name, label.get(name)) for name in FIELDS}
+    slices = label.get("slices") or []
+    unknown = [name for name in slices if name not in SLICES]
+    if unknown:
+        raise ValueError(f"slices: {', '.join(unknown)} isn't one of POLICY.md's")
     people = [quoted("people", person) for person in label.get("people") or []]
     if kind != "report" and (any(fields.values()) or people):
         raise ValueError("fields are for reports only")
@@ -116,6 +122,7 @@ def checked(label: dict, row: dict, labeller: str) -> dict:
         **fields,
         "people": people,
         "rules": sorted({int(rule) for rule in label.get("rules") or []}),
+        "slices": sorted(set(slices), key=list(SLICES).index),
         "crop_used": bool(label.get("crop_used")),
         "note": (label.get("note") or "").strip(),
         "labeller": labeller,
@@ -192,6 +199,7 @@ document.getElementById("save").onclick = async () => {
     kind_quote: form.querySelector("[name=kind_quote]").value,
     people: [...form.querySelectorAll(".person")].map(stated).filter(Boolean),
     rules: [...form.querySelectorAll("[name=rule]:checked")].map(b => +b.value),
+    slices: [...form.querySelectorAll("[name=slice]:checked")].map(b => b.value),
     crop_used: form.querySelector("[name=crop_used]").checked,
     note: form.querySelector("[name=note]").value,
   };
@@ -297,6 +305,12 @@ def app(
             f"{escape(title)}</label><br>"
             for n, title in rules
         )
+        slices = "".join(
+            f'<label><input type="checkbox" name="slice" value="{name}"'
+            f"{' checked' if name in (label.get('slices') or []) else ''}> {name}: "
+            f"{escape(title)}</label><br>"
+            for name, title in SLICES.items()
+        )
         kind_quote = escape(label.get("kind_quote") or "", quote=True)
         return f"""<!doctype html><meta charset=utf-8><title>{escape(article_id)}</title>
 <style>{STYLE}</style><main>
@@ -310,6 +324,7 @@ def app(
 <h4>For a report</h4>{fields}<div id="people">{persons}</div>
 <button type="button" id="add">Add a person</button>
 <h4>Rules applied</h4><p>{checks}</p>
+<h4>Edge-case slices</h4><p>{slices}</p>
 <p><label><input type="checkbox" name="crop_used"{" checked" if label.get("crop_used") else ""}>
 the crop was needed</label></p>
 <p><textarea name="note" rows="2" cols="50">{escape(label.get("note") or "")}</textarea></p>
