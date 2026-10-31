@@ -60,3 +60,28 @@ def test_a_malformed_field_is_dropped_at_the_parse():
     )
     assert found["seen"] is None and found["place"]["value"] == "the farm"
     assert found["people"] == [{"value": "Mr. Hale", "quote": "Mr. John Hale"}]
+
+
+def test_the_answer_is_what_follows_the_reasoning_and_kind_goes_by_majority():
+    from teacher import final, voted
+
+    assert (
+        final('<think>maybe idiom {x}</think>\n\n{"kind": "report"}<|im_end|>')
+        == '\n\n{"kind": "report"}'
+    )
+    assert (
+        final(
+            '<|channel|>analysis<|message|>{"no"}<|end|><|start|>assistant<|channel|>final<|message|>{"kind": "other"}<|return|>'
+        )
+        == '{"kind": "other"}'
+    )
+    a = '{"kind": "report", "kind_quote": "first"}'
+    b = '{"kind": "other", "kind_quote": "second"}'
+    c = '{"kind": "report", "kind_quote": "third"}'
+    assert (
+        voted([b, a, c])["kind_quote"] == "first"
+    )  # the first that agrees with the majority
+    assert (
+        voted([b, a, "junk"])["kind_quote"] == "second"
+    )  # no majority: the first parsed
+    assert voted(["junk"]) is None

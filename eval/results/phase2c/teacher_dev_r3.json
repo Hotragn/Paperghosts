@@ -1,6 +1,20 @@
 {
  "round": "r3",
  "model": "Qwen/Qwen3.5-397B-A17B",
+ "thinking": false,
+ "samples": 1,
+ "temperature": 0.0,
+ "max_tokens": 700,
+ "hit_limit": 0,
+ "errors": 0,
+ "report_recall": {
+  "found": 23,
+  "reports": 32,
+  "interval": [
+   0.546251630618882,
+   0.8443559315435214
+  ]
+ },
  "prompt_sha256": "f4afaeb4f7a3aa51d369abd53bc7216d54d8be2721bfdec4e5f4ac8abad59732",
  "articles": 150,
  "unparsed": [],

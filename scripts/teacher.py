@@ -169,10 +169,30 @@ def verified(label: dict, text: str, threshold: float) -> tuple[dict, list]:
     return kept, dropped
 
 
+def final(answer: str) -> str:
+    """The answer after the model's reasoning: what follows Qwen's </think> or gpt-oss's final
+    channel. Thinking traces are never training targets."""
+    for mark in ("<|channel|>final<|message|>", "</think>"):
+        if mark in answer:
+            answer = answer.rsplit(mark, 1)[1]
+    for end in ("<|im_end|>", "<|return|>", "<|end|>"):
+        answer = answer.replace(end, "")
+    return answer
+
+
 def read(
-    rows: list, model: str, system: str, max_tokens: int = 700, workers: int = 16
+    rows: list,
+    model: str,
+    system: str,
+    max_tokens: int = 700,
+    workers: int = 16,
+    thinking: bool = False,
+    samples: int = 1,
+    temperature: float = 0.0,
 ) -> list:
-    """Each article through the model on Tinker: its answer, its token counts and the time."""
+    """Each article through the model on Tinker: its answers, its token counts and the time.
+    With thinking, the model's own chat template asks it to reason first; without, the prompt
+    is the hand-rendered ChatML with an empty think block. Several samples read the prompt once."""
     import tinker
 
     from paperghosts.config import setting
@@ -180,26 +200,48 @@ def read(
     service = tinker.ServiceClient(api_key=setting("TINKER_API_KEY").get())
     client = service.create_sampling_client(base_model=model)
     tokenizer = client.get_tokenizer()
+    stops = ["<|return|>"] if model.startswith("openai/") else ["<|im_end|>"]
     params = tinker.SamplingParams(
-        max_tokens=max_tokens, temperature=0.0, stop=["<|im_end|>"]
+        max_tokens=max_tokens, temperature=temperature, stop=stops
     )
 
-    def one(row):
-        ids = tokenizer.encode(
-            rendered(system, article_text(row)), add_special_tokens=False
+    def prompt(row):
+        if not thinking:
+            return rendered(system, article_text(row))
+        messages = [
+            {"role": "system", "content": system},
+            {"role": "user", "content": article_text(row)},
+        ]
+        extra = (
+            {"reasoning_effort": "medium"}
+            if model.startswith("openai/")
+            else {"enable_thinking": True}
         )
+        return tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, **extra
+        )
+
+    def one(row):
+        ids = tokenizer.encode(prompt(row), add_special_tokens=False)
         for attempt in range(4):
             try:
                 out = client.sample(
-                    tinker.ModelInput.from_ints(ids), 1, params
+                    tinker.ModelInput.from_ints(ids), samples, params
                 ).result()
-                tokens = out.sequences[0].tokens
+                answers = [tokenizer.decode(s.tokens) for s in out.sequences]
                 return {
                     "article_id": row["article_id"],
-                    "answer": tokenizer.decode(tokens).replace("<|im_end|>", ""),
+                    "answer": final(answers[0]),
+                    "answers": [final(a) for a in answers],
                     "prompt_tokens": len(ids),
-                    "output_tokens": len(tokens),
+                    "output_tokens": sum(len(s.tokens) for s in out.sequences),
+                    "hit_limit": sum(
+                        len(s.tokens) >= max_tokens for s in out.sequences
+                    ),
                     "model": model,
+                    "thinking": thinking,
+                    "samples": samples,
+                    "temperature": temperature,
                     "prompt_sha256": prompt_sha256(system),
                     "at": datetime.now(UTC).isoformat(timespec="seconds"),
                 }
@@ -207,7 +249,7 @@ def read(
                 tinker.TinkerError,
                 TimeoutError,
                 ConnectionError,
-            ) as error:  # a rate limit or a dropped connection: wait, then retry
+            ) as error:  # wait, then retry
                 if attempt == 3:
                     return {
                         "article_id": row["article_id"],
@@ -218,6 +260,19 @@ def read(
 
     with ThreadPoolExecutor(workers) as pool:
         return list(pool.map(one, rows))
+
+
+def voted(answers: list) -> dict | None:
+    """The majority kind of several parsed answers, and the first answer that has it: fields come
+    from a sample that agrees with the majority. With no majority, the first parsed answer."""
+    found = [a for a in map(parsed, answers) if a]
+    if not found:
+        return None
+    kinds = [a["kind"] for a in found]
+    top = max(set(kinds), key=kinds.count)
+    return (
+        next(a for a in found if a["kind"] == top) if kinds.count(top) > 1 else found[0]
+    )
 
 
 def quotes(label: dict) -> list:
@@ -271,7 +326,27 @@ def calibrated(answers: dict, labels: dict, texts: dict, step: float = 0.05) -> 
     }
 
 
-def dev_round(round_name: str) -> dict:
+def recall(labels: dict, kept: dict) -> dict:
+    """Of dev's reports, how many the teacher calls reports, with a Wilson interval."""
+    from paperghosts.stats import wilson
+
+    reports = [aid for aid, label in labels.items() if label["kind"] == "report"]
+    hits = sum(kept[aid]["kind"] == "report" for aid in reports)
+    return {
+        "found": hits,
+        "reports": len(reports),
+        "interval": wilson(hits, len(reports)),
+    }
+
+
+def dev_round(
+    round_name: str,
+    model: str = TEACHER,
+    thinking: bool = False,
+    samples: int = 1,
+    temperature: float = 0.0,
+    max_tokens: int = 700,
+) -> dict:
     from label_gold import OUT, articles, saved, squeezed
     from second_pass import agreed
 
@@ -288,12 +363,24 @@ def dev_round(round_name: str) -> dict:
     ):  # score a round's saved answers again, without asking the model twice
         out = [json.loads(line) for line in raw.read_text().splitlines()]
     else:
-        out = read([rows[a] for a in sorted(rows)], TEACHER, system)
+        out = read(
+            [rows[a] for a in sorted(rows)],
+            model,
+            system,
+            max_tokens,
+            thinking=thinking,
+            samples=samples,
+            temperature=temperature,
+        )
         raw.parent.mkdir(parents=True, exist_ok=True)
         raw.write_text("".join(json.dumps(o) + "\n" for o in out))
     answers, unparsed = {}, []
     for o in out:
-        label = parsed(o.get("answer") or "") if o else None
+        label = (
+            (voted(o["answers"]) if samples > 1 else parsed(o.get("answer") or ""))
+            if o and "error" not in o
+            else None
+        )
         if label is None:
             unparsed.append(o["article_id"] if o else None)
             label = {
@@ -314,7 +401,14 @@ def dev_round(round_name: str) -> dict:
     raw_pairs = [(labels[aid], answers[aid]) for aid in sorted(answers)]
     found = {
         "round": round_name,
-        "model": TEACHER,
+        "model": model,
+        "thinking": thinking,
+        "samples": samples,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "hit_limit": sum(o.get("hit_limit", 0) for o in out if o),
+        "errors": sum(1 for o in out if not o or "error" in o),
+        "report_recall": recall(labels, kept),
         "prompt_sha256": prompt_sha256(system),
         "articles": len(out),
         "unparsed": unparsed,
@@ -359,7 +453,19 @@ if __name__ == "__main__":
             for label, row in sorted(m.items()):
                 print(f"  {label:10}", dict(sorted(row.items(), key=lambda kv: -kv[1])))
     if run == "dev":
-        found = dev_round(rest[0] if rest else "r1")
+        import argparse
+
+        given = argparse.ArgumentParser()
+        given.add_argument("round")
+        given.add_argument("--model", default=TEACHER)
+        given.add_argument("--thinking", action="store_true")
+        given.add_argument("--samples", type=int, default=1)
+        given.add_argument("--temperature", type=float, default=0.0)
+        given.add_argument("--max-tokens", type=int, default=700)
+        a = given.parse_args(rest)
+        found = dev_round(
+            a.round, a.model, a.thinking, a.samples, a.temperature, a.max_tokens
+        )
         brief = {
             k: v
             for k, v in found.items()
