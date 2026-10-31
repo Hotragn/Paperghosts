@@ -6,7 +6,8 @@ and POLICY.md).
                        eval/results/phase2c/local_teacher.json
   dev MODEL ROUND [think]   all 150 dev articles, one at a time so the server can reuse the
                        policy prefix, saved as data/teacher/dev_ROUND.jsonl in the dev round's
-                       own format, then scored by teacher.dev_round from that file, so no Tinker
+                       own format as each answer lands (a rerun resumes), then scored by
+                       teacher.dev_round from that file, so no Tinker
                        call is made
 """
 
@@ -55,6 +56,19 @@ def one(row: dict, model: str, system: str, think: bool = False) -> dict:
     }
 
 
+def patient(row: dict, model: str, system: str, think: bool, tries: int = 3) -> dict:
+    """One answer, asked again after a minute if the server drops the request while Ollama
+    reloads a killed runner."""
+    for attempt in range(tries):
+        try:
+            return one(row, model, system, think)
+        except httpx.HTTPError:
+            if attempt == tries - 1:
+                raise
+            time.sleep(60)
+    raise AssertionError("unreachable")
+
+
 def timed(
     rows: list, model: str, system: str, workers: int, think: bool = False
 ) -> tuple[dict, list]:
@@ -94,16 +108,35 @@ def main() -> None:
 
         round_name, think = rest[0], "think" in rest[1:]
         rows = {aid: r for aid, r in articles().items() if r["split"] == "dev"}
-        timing, out = timed([rows[a] for a in sorted(rows)], model, system, 1, think)
+        raw = ROOT / "data" / "teacher" / f"dev_{round_name}.jsonl"
+        raw.parent.mkdir(parents=True, exist_ok=True)
+        # each answer is saved as it lands, so a killed server costs one article and a rerun resumes
+        done = (
+            {json.loads(line)["article_id"] for line in raw.read_text().splitlines()}
+            if raw.exists()
+            else set()
+        )
+        with raw.open("a") as saved:
+            for aid in sorted(set(rows) - done):
+                saved.write(json.dumps(patient(rows[aid], model, system, think)) + "\n")
+                saved.flush()
+        out = [json.loads(line) for line in raw.read_text().splitlines()]
+        seconds = sum(o["seconds"] for o in out)
         found = json.loads(RESULT.read_text()) if RESULT.exists() else {}
-        found[round_name] = timing | {
+        found[round_name] = {
             "model": model,
             "thinking": think,
             "articles": len(out),
+            "articles_per_hour": round(len(out) / seconds * 3600),
+            "draw_of_3000_hours": round(3000 * seconds / len(out) / 3600, 1),
+            "prompt_seconds_per_article": round(
+                sum(o["prompt_seconds"] for o in out) / len(out), 2
+            ),
+            "prompt_tokens": sum(o["prompt_tokens"] for o in out),
+            "output_tokens": sum(o["output_tokens"] for o in out),
+            "hit_limit": sum(o["hit_limit"] for o in out),
         }
         RESULT.write_text(json.dumps(found, indent=1) + "\n")
-        raw = ROOT / "data" / "teacher" / f"dev_{round_name}.jsonl"
-        raw.write_text("".join(json.dumps(o) + "\n" for o in out))
         found = dev_round(
             round_name, model=model
         )  # scored from the saved file: no Tinker call
