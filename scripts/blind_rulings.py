@@ -7,6 +7,8 @@ rulings are then compared with adjudication.jsonl's.
 
   packets K DIR      the disputes in K packets of text, with the A/B key kept apart in DIR/key.json
   check FILE TEXTS   a judge's rulings: every case once, and every quote in its case's text
+  settle FILE KEY KEPT  where a blind ruling differs from the first labeller's, take it, but for
+                     the cases KEPT names with a reason; adjudication.jsonl keeps both rulings
   compare FILE KEY   the independent rulings against adjudication.jsonl's, with Wilson intervals,
                      into eval/results/phase2c/blind_rulings.json
 """
@@ -16,8 +18,19 @@ import random
 import sys
 from pathlib import Path
 
-from label_gold import FIELDS, ROOT, SEEN, articles, saved, shown, squeezed
-from second_pass import ADJUDICATION, same
+from label_gold import (
+    FIELDS,
+    OUT,
+    ROOT,
+    SEEN,
+    articles,
+    checked,
+    save,
+    saved,
+    shown,
+    squeezed,
+)
+from second_pass import ADJUDICATION, RULING, same
 
 from paperghosts.stats import wilson
 
@@ -108,6 +121,31 @@ def compared(rulings: list, key: dict, disputed: dict, texts: dict) -> dict:
     }
 
 
+def settled(given: dict, d: dict, text: str) -> dict | None:
+    """The first labeller's ruling with the blind ruling's kind and disputed fields put in, or
+    None where they already agree."""
+    ruling = {
+        k: v for k, v in d["ruling"].items() if k not in ("labeller", "labelled_at")
+    }
+    changed = False
+    if d["kinds"][0] != d["kinds"][1] and given["kind"] != ruling["kind"]:
+        ruling |= {
+            "kind": given["kind"],
+            "kind_quote": given["kind_quote"],
+            "slices": [],
+        }
+        if given["kind"] != "report":
+            ruling |= {name: None for name in FIELDS} | {"people": []}
+        changed = True
+    for name, value in (given.get("fields") or {}).items():
+        if name in d["fields"] and not same(
+            name, {name: ruling.get(name)}, {name: stated(value)}, text
+        ):
+            ruling[name] = stated(value)
+            changed = True
+    return ruling if changed else None
+
+
 def problems(rulings: list, texts: dict) -> list:
     """What's wrong with a judge's rulings: a case missing or repeated, or a quote not in the text."""
     found = [
@@ -175,6 +213,41 @@ def main() -> None:
                 for c in part
             }
             (out / f"texts{i + 1:02}.json").write_text(json.dumps(texts) + "\n")
+    elif run == "settle":
+        rulings = [
+            json.loads(line)
+            for line in Path(rest[0]).read_text().splitlines()
+            if line.strip()
+        ]
+        key, kept = (
+            json.loads(Path(rest[1]).read_text()),
+            json.loads(Path(rest[2]).read_text()),
+        )
+        rows = articles()
+        for given in rulings:
+            aid = key[given["case"]]["article_id"]
+            d, row = disputed[aid], rows[aid]
+            text = squeezed(f"{row.get('headline') or ''}\n{row.get('text') or ''}")
+            d["blind"] = given
+            new = settled(given, d, text)
+            if new is None:
+                d["settled"] = "the blind ruling agrees"
+            elif given["case"] in kept:
+                d["settled"] = f"own ruling kept: {kept[given['case']]}"
+            else:
+                d["own_ruling"] = d["ruling"]
+                record = checked(new, row, RULING)
+                record["note"] = (
+                    f"ruling: settled with the blind judge: {given['reason']}"
+                )
+                d["ruling"], d["settled"] = record, "blind ruling taken"
+                save(OUT[row["split"]], record, replace=True)
+        ADJUDICATION.write_text(
+            "".join(json.dumps(disputed[a]) + "\n" for a in sorted(disputed))
+        )
+        from collections import Counter
+
+        print(Counter(d.get("settled", "")[:26] for d in disputed.values()))
     elif run == "compare":
         rulings = [
             json.loads(line)

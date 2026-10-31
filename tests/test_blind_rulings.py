@@ -104,3 +104,26 @@ def test_rulings_are_compared_by_kind_and_field_and_by_which_side_won():
             "c02": {"headline": "", "text": ""},
         },
     )
+
+
+def test_a_blind_ruling_that_differs_replaces_the_kind_or_the_field():
+    from blind_rulings import settled
+
+    first = label(
+        "report",
+        "Claude",
+        seen={"value": "knockings", "quote": "knockings upon the walls"},
+    )
+    d = {"kinds": ["report", "report"], "fields": ["seen"], "ruling": first}
+    blind = {
+        "case": "c01",
+        "fields": {"seen": {"value": "the farmhouse", "quote": "the old farmhouse"}},
+    }
+    assert settled(blind, d, TEXT)["seen"]["value"] == "the farmhouse"
+    assert settled({"case": "c01", "fields": {"seen": first["seen"]}}, d, TEXT) is None
+
+    kinds = {"kinds": ["report", "idiom"], "fields": [], "ruling": first}
+    idiom = settled(
+        {"case": "c02", "kind": "idiom", "kind_quote": "knockings"}, kinds, TEXT
+    )
+    assert idiom["kind"] == "idiom" and idiom["seen"] is None and idiom["people"] == []

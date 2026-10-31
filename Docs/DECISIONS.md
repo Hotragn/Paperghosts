@@ -888,7 +888,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - Tried on the first article in that order, it fetched its three crops through `crops_for` in 5 s, and they match its text. No label was saved.
   - `POLICY.md` writes `place_type`'s values with spaces, and the schema with underscores (`inn_or_hotel`). The page shows the first and saves the second.
 
-**38. Gold and dev are labelled by hand under `POLICY.md`, all 450 through the page's `checked()`. A blind second pass relabels all of gold and a seeded fifth of dev. On gold it agrees with the first pass on 271 of 300 kinds (κ 0.88, 0.84–0.92) and on 296 of 300 report-or-not calls (κ 0.95). Every one of the 69 disagreements is ruled on under `POLICY.md`, both labels kept, and the labels are frozen by sha256 before any model output. Gold holds 46 reports, against the 35.3 expected.**
+**38. Gold and dev are labelled by hand under `POLICY.md`, all 450 through the page's `checked()`. A blind second pass relabels all of gold and a seeded fifth of dev. On gold it agrees with the first pass on 271 of 300 kinds (κ 0.88, 0.84–0.92) and on 296 of 300 report-or-not calls (κ 0.95). Every one of the 69 disagreements is ruled on under `POLICY.md`, and then ruled again blind by fresh judges, since the first rulings were the first labeller's. Every difference is settled with a written reason, all the labels and rulings are kept, and the labels are frozen by sha256 before any model output. Gold holds 46 reports, against the 35.3 expected.**
 
 - **The first pass:** I labelled all 300 gold and 150 dev articles in batches of 20. They came in the page's seeded order, with no stratum or weight in view, and each batch was committed as it was done.
   - Every label passes `checked()`: its kind is `POLICY.md`'s, its fields are a report's only, every value has its quote in the text, and every choice is the schema's.
@@ -902,7 +902,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - A place's state comes only from the text or the dateline. "Abba. la" is read as Albia, Ia., the dateline its crop shows. New York as a city gives no state.
 - **The blind second pass** (`scripts/second_pass.py`) covers 330 articles: all of gold, and the 30 of dev drawn with the seed "2C.2 second pass dev sample".
   - **Eleven reading agents** each took a packet of 30, in one seeded shuffle across both splits, so no packet shows an article's split.
-  - Each saw only its packet, the crops it lists, and `POLICY.md`: no first label, stratum, weight or split. Each was barred from the label files, the split, the results, the docs and git history. One reported listing two scratch folders by mistake and seeing only file names.
+  - Each saw only its packet, the crops it lists, and `POLICY.md`: no first label, stratum, weight or split. Each was barred from the label files, the split, the results, the docs and git history. One reported listing two scratch folders by mistake and seeing only file names. That is fine (the EM's review): no label was in view.
   - A usage limit stopped seven of them partway, and each was resumed in its own blind context.
   - Each agent checked its labels against its packet's texts alone. Then all 330 went through `checked()` into `eval/gold/second_pass.jsonl`, never into the label files the evals read.
 - **Agreement, before any ruling** (`eval/results/phase2c/agreement.json`). Rates come with Wilson intervals, and κ with a bootstrap of 2,000 resamples:
@@ -928,7 +928,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - Place, seen and the specific place: quotes that overlap in the text, or the same value.
     - People: each person's quote overlaps one of the other pass's, both ways.
   - **People is the loosest field.** Most of its disagreements are a person one pass adds who didn't see or claim anything: a reporter, an editor, or a crowd told of it afterwards.
-- **The rulings** (`eval/gold/adjudication.jsonl`): 69 articles disagreed, 61 of them in gold. 34 were on kind, and 35 on fields alone.
+- **The first rulings** (`eval/gold/adjudication.jsonl`), the first labeller's: 69 articles disagreed, 61 of them in gold. 34 were on kind, and 35 on fields alone.
   - Each ruling went through `checked()` and replaced its article's label. The record keeps the first pass's label, the second's, the ruling and its reason.
   - 58 uphold the first pass, 6 take the second's call, and 5 mend fields.
   - **16 of the 34 kind disagreements were one question:** spirit or medium in an ordinary sense, "in good spirits" or "an advertising medium". The first pass called these `other`, the second `idiom`. The ruling is `other`, since `POLICY.md`'s idioms are figures about ghosts.
@@ -941,11 +941,40 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - a stated house as a place type
   - **Fields were emptied where a value wasn't stated:** "claimed to be haunted" states nothing seen, and a clerk's workplace isn't where his sittings were.
   - **`POLICY.md` version 3,** dated, adds the two clarifications the rulings settled, which every label already follows. Spirit or medium in an ordinary sense is `other` (rule 10), and a display notice of meetings and messages is an advert (rule 12).
-- **The freeze** (`1e64421`):
+- **The blind re-ruling** (the EM's review: gold can't rest on a judge ruling its own case). Four fresh judges ruled all 69 disputes again, one pair at a time (`scripts/blind_rulings.py`).
+  - **What each judge saw:** `POLICY.md` v3, the article and its crops, and the two labels as A and B, by a seeded coin with no labeller, note or ruling. The judges were barred from every label file and from the A/B key.
+  - **Against the first labeller's rulings** (`eval/results/phase2c/blind_rulings.json`), with Wilson intervals:
+
+    | | Same ruling | Interval | The blind ruling sides with: first, second, neither |
+    |---|---|---|---|
+    | kind | 28 of 34 | 66–92% | 25, 9, 0 |
+    | seen | 5 of 10 | 24–76% | 3, 7, 0 |
+    | people | 4 of 19 | 9–43% | 3, 12, 4 |
+    | place | 4 of 7 | 25–84% | 3, 4, 0 |
+    | specific place | 2 of 6 | 10–70% | 1, 5, 0 |
+    | place type | 4 of 6 | 30–90% | 2, 4, 0 |
+    | precision | 2 of 5 | 12–77% | 1, 4, 0 |
+    | place state | 2 of 3 | 21–94% | 2, 1, 0 |
+    | outcome | 1 of 2 | 9–91% | 1, 1, 0 |
+
+  - **The first labeller's field rulings leaned toward its own labels.** On kinds the blind judges mostly agree with the first rulings. On fields they side with the second pass two to one, and on people four to one.
+  - **Settling:** 30 articles' blind rulings differ. I re-read each with its crop, and took the blind ruling unless the text or another label gave a written reason against it. That took the blind ruling in 28 and kept mine in 2, each for consistency with labels no one disputed:
+    - an obituary's "spirit land" stays `other`, as two other gold obituaries are in both passes
+    - the second printing of the backwoods-preacher sketch stays `fiction`, as the judge ruled its other printing
+  - `adjudication.jsonl` keeps, for each dispute, the first label, the second, the first labeller's ruling (`own_ruling` where it changed), the blind ruling, and how it was settled.
+  - **Four kinds changed:**
+    - the camp meeting is `religious`: the whipping figure doesn't set the article's kind
+    - the mumps "knocking" is `other`, since it isn't a ghost figure
+    - the Russian-news ouija simile is an `idiom`
+    - an amusements column with seats on sale is an advert
+  - The other 24 changes are to fields, mostly people: the blind rulings drop a person told of it afterwards and add a stated claimant, such as an editor who claims spirit control.
+  - **Rule 10's clarification, checked:** on the 17 other-versus-idiom disputes, the judges would rule `other` on 15 even without v3's bullet, and they call the bullet right in all 17. The two exceptions: "bold spirits", which they rule `other` under the bullet, and the obituary's "spirit land", kept as above.
+  - **Final, all 69:** kinds side with the first pass in 27 and the second in 7. Gold still holds 46 reports.
+- **The freeze** (`1e64421`, re-frozen after the blind re-ruling):
   - `eval/gold/HASH` lists the sha256 of `labels.jsonl` and `dev_labels.jsonl` beside `split.json`'s, committed before any model output.
   - The two files hold exactly 300 and 150 labels, one per article. Each is the first pass's label where the passes agreed, and the ruling where they didn't. All pass `checked()` (`second_pass.py frozen`).
   - `check_leakage.py` now checks every file `HASH` lists.
-  - Gold's final kinds: 46 reports, 89 other, 66 fiction, 60 idiom, 30 adverts, 9 religious. Dev's: 32 reports, 44 other, 31 fiction, 26 idiom, 10 adverts, 7 religious.
+  - Gold's final kinds: 46 reports, 89 other, 66 fiction, 58 idiom, 31 adverts, 10 religious. Dev's: 32 reports, 44 other, 30 fiction, 27 idiom, 10 adverts, 7 religious.
 - **Gold's reports by stratum** (`eval/results/phase2c/gold_measures.json`), against the draw's expectation:
 
   | Stratum | Gold | Reports | Expected |
@@ -976,14 +1005,14 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 - **The weighted report rate** (Σ weight × report / Σ weight, over candidates and near misses): 0.97%, with a stratified bootstrap interval of 0.38–1.81%.
 - **The story-place rule, as code** (`gold_measures.story_state`), was written and tested before the freeze and run once after it.
   - It takes a state named after a comma in the place's quote. Else, a town from the quote named elsewhere with a state after a comma. Else, the dateline's state. It never takes the paper's state.
-  - On gold's 34 reports with a place, it agrees with the labelled `place_state` on 31 (77–97%): 7 the same state, 24 both empty.
+  - On gold's 32 reports with a place, it agrees with the labelled `place_state` on 29 (76–97%): 6 the same state, 23 both empty.
   - It never gives a wrong state. Its 3 misses are states the OCR prints after a period ("Allentown. Pa", "Springfield. Ohio") or apart from the place's quote (Georgia).
-  - **The paper's state**, decision 34's fallback, matches only 2 of the 10 labelled states (6–51%).
+  - **The paper's state**, decision 34's fallback, matches only 2 of the 9 labelled states (6–55%).
 - **Slices on the frozen labels, gold then dev:**
 
   | E1 | E2 | E3 | E4 | E5 | E6 | E7 | E8 | E9 | E10 | E11 | E12 | E13 | E14 |
   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-  | 3, 4 | 35, 15 | 32, 9 | 11, 2 | 30, 26 | 12, 3 | 23, 10 | 8, 5 | 115, 44 | 12, 9 | 9, 3 | 7, 3 | 1, 1 | 21, 9 |
+  | 3, 4 | 34, 15 | 32, 9 | 11, 2 | 30, 26 | 12, 3 | 23, 9 | 8, 5 | 115, 44 | 12, 9 | 9, 3 | 7, 3 | 1, 1 | 21, 9 |
 
   - E9 comes from the grouping: 159 of the 450 are in a group of two or more.
   - E1 and E13 are too thin to measure alone.
