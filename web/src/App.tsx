@@ -23,6 +23,8 @@ type Report = {
   place_type: Field | null
   precision: Field | null
   people: Field[]
+  printed_in: { lccn: string; place: string | null; state: string | null; from: string }
+  headline_legible: number
   clippings: { src: string; loc: string | null }[]
   issue_page: string | null
 }
@@ -47,6 +49,13 @@ const STAMPS: Record<string, string> = {
 
 const year = (r: Report) => r.date.slice(0, 4)
 const decade = (r: Report) => `${r.date.slice(0, 3)}0s`
+const printedIn = (r: Report) => [r.printed_in.place, r.printed_in.state].filter(Boolean).join(', ')
+// a headline the OCR garbled gets a plain title; its raw text still shows beneath
+const garbled = (r: Report) => r.headline_legible < 0.5
+const span = (rs: Report[]) => {
+  const years = rs.map(year).sort()
+  return `${years[0]}–${years[years.length - 1]}`
+}
 const paperName = (paper: string) => paper.replace(/\s*\[volume\]/i, '').replace(/\s+\d{4}-(\d{4})?$/, '')
 
 function fieldsOf(r: Report): [string, Field][] {
@@ -107,7 +116,7 @@ function Value({ field }: { field: Field | null }) {
 
 function Case({ r }: { r: Report }) {
   const fields = fieldsOf(r)
-  const lines = r.headline.split(/(?<=[.!?])\s+/).filter(Boolean)
+  const lines = r.headline.split(/\n+/).map((l) => l.trim()).filter(Boolean)
   return (
     <div className="case">
       <div className="case-grid">
@@ -143,6 +152,13 @@ function Case({ r }: { r: Report }) {
             </dd>
           </div>
         ))}
+        <div className="row">
+          <dt>Printed in</dt>
+          <dd>
+            <span className="value">{printedIn(r) || 'Not recorded'}</span>
+            <span className="check">The paper’s place, from its {r.printed_in.from} (LCCN {r.printed_in.lccn}), not the story’s</span>
+          </dd>
+        </div>
         <div className="row">
           <dt>People</dt>
           <dd>
@@ -183,8 +199,10 @@ function Case({ r }: { r: Report }) {
 }
 
 function Envelope({ r }: { r: Report }) {
-  const first = r.headline.split(/(?<=[.!?])\s+/)[0] || `${r.text.split(/\s+/).slice(0, 8).join(' ')}…`
   const where = [r.place?.value, r.place_state?.value].filter(Boolean).join(', ')
+  const first = garbled(r)
+    ? `${r.place?.value || printedIn(r) || 'A paper'}: a ghost report`
+    : r.headline.split(/\n+/).map((l) => l.trim())[0]
   return (
     <li>
       <details className="envelope">
@@ -192,9 +210,11 @@ function Envelope({ r }: { r: Report }) {
           <span className="label">
             <span className="date">{r.date}</span>
             <span className="paper">{paperName(r.paper)}</span>
+            <span className="printed">Printed in {printedIn(r) || `LCCN ${r.printed_in.lccn}`}</span>
           </span>
           <span className="headline">{first}</span>
-          <span className="where">{where || 'Place not stated'}</span>
+          {garbled(r) && r.headline && <span className="raw-headline">Headline as scanned: {r.headline.slice(0, 80)}</span>}
+          <span className="where">{where ? `Story place: ${where}` : 'Story place not stated'}</span>
           <Stamp outcome={r.outcome} />
         </summary>
         <Case r={r} />
@@ -257,6 +277,7 @@ function App() {
   const [query, setQuery] = useState('')
   const [era, setEra] = useState('')
   const [outcome, setOutcome] = useState('')
+  const [printed, setPrinted] = useState('')
   const [lights, toggle] = useLights()
   useLamp()
 
@@ -266,18 +287,23 @@ function App() {
       .then(setReports, (failure: Error) => setError(failure.message))
   }, [])
 
+  const printedStates = useMemo(
+    () => [...new Set((reports ?? []).map((r) => r.printed_in.state).filter((s): s is string => !!s))].sort(),
+    [reports],
+  )
   const decades = useMemo(() => [...new Set((reports ?? []).map(decade))].sort(), [reports])
   const shown = useMemo(() => {
     const words = query.toLowerCase().split(/\s+/).filter(Boolean)
     return (reports ?? []).filter((r) => {
       if (era && decade(r) !== era) return false
       if (outcome && (r.outcome?.value ?? 'unknown') !== outcome) return false
-      const hay = [r.place?.value, r.place_state?.value, r.specific_place?.value, r.headline, r.text, r.paper]
+      if (printed && r.printed_in.state !== printed) return false
+      const hay = [r.place?.value, r.place_state?.value, r.specific_place?.value, printedIn(r), r.headline, r.text, r.paper]
         .join(' ')
         .toLowerCase()
       return words.every((w) => hay.includes(w))
     })
-  }, [reports, query, era, outcome])
+  }, [reports, query, era, outcome, printed])
 
   return (
     <>
@@ -290,7 +316,7 @@ function App() {
           {lights === 'on' ? 'Lights off' : 'Lights on'}
         </button>
         <p className="ear">
-          {reports ? `${reports.length} reports on file, ${year(reports[0])}–${year(reports[reports.length - 1])}` : 'The morgue'}
+          {reports ? `${reports.length} reports on file, ${span(reports)}` : 'The morgue'}
         </p>
         <h1 className="nameplate">Paper Ghosts</h1>
         <p className="tagline">A morgue of ghost reports from American newspapers, each one filed with the words it rests on.</p>
@@ -323,6 +349,15 @@ function App() {
               ))}
             </select>
           </label>
+          <label>
+            Printed in
+            <select value={printed} onChange={(e) => setPrinted(e.target.value)}>
+              <option value="">Any state</option>
+              {printedStates.map((st) => (
+                <option key={st}>{st}</option>
+              ))}
+            </select>
+          </label>
         </form>
 
         <section id="drawer" aria-live="polite" aria-busy={!reports && !error}>
@@ -332,7 +367,7 @@ function App() {
             <p className="count">
               {shown.length === 0
                 ? 'Nothing filed under that.'
-                : `${shown.length} report${shown.length === 1 ? '' : 's'}, ${year(shown[0])}–${year(shown[shown.length - 1])}.`}
+                : `${shown.length} report${shown.length === 1 ? '' : 's'}, ${span(shown)}. Clearest scans first.`}
             </p>
           )}
           <ol className="envelopes">

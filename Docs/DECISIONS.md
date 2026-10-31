@@ -1017,3 +1017,29 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - E9 comes from the grouping: 159 of the 450 are in a group of two or more.
   - E1 and E13 are too thin to measure alone.
 - **The grouping missed one reprint within gold:** the comic sketch of a backwoods preacher is printed twice in gold. Two printings within gold don't leak into training, and both are labelled `fiction`.
+
+**39. No Tinker spend at all, and step 2C runs on this Mac (the owner's call, 2026-10-31). Tinker's balance was $0.00, so the day's runs, $3.19–14.45 by their recorded tokens, went to the owner's card; Tinker sampling is now off in code. On dev the local teacher, gemma4:26b-a4b-it-qat through Ollama, is close to the 397B on finding reports (24 of 32 against 23 of 32) and behind it on kind (100 of 150 against 112 of 150). The week was then submitted with the reader untrained, because local runs froze the Mac.**
+
+- **The spend:** the table and the token counts are in `Docs/BUDGET.md`'s spend-stopped section. `teacher.read` refuses unless `TINKER_SPEND_ALLOWED=1` is set, which needs the owner's yes. Reading billing stays free.
+- **The rules from here:**
+  - Training labels come only from the local open-weight teacher, never from Claude or from the reading agents. Gold and dev are for evaluation only.
+  - No model download may take free disk below 15 GB, and it is at that floor.
+- **The teacher comparison so far,** on dev after the verifier (`eval/results/phase2c/teacher_dev_r3.json`, `teacher_dev_g26.json`, `format_check.json`):
+
+  | | Qwen3.5-397B, round 3, Tinker | gemma4:26b, thinking off, local |
+  |---|---|---|
+  | kind | 112/150 (67–81%) | 100/150 (59–74%) |
+  | report or not | 139/150 | 134/150 |
+  | report recall | 23/32 (55–84%) | 24/32 (58–87%) |
+  | outcome, as scored | 16/23 | 5/24 |
+  | outcome, format normalised (scoring only) | 16/23 | 20/24 |
+  | place_state | 13/23 | 22/24 |
+
+  - gemma4's outcome misses are format, not judgment: 18 of 19 give the outcome as a bare string with no quote. The prompt now says the choice fields carry a quote, and that run hasn't been made.
+  - The 397B's place_state misses are judgment: 7 of 10 fill a state the story-place rule leaves empty.
+  - **gemma4 with thinking on** took 2.4–8.1 minutes an article for the 6 it finished (Ollama's log), so it is a routing lever at most, never the whole draw.
+- **Local runs:**
+  - gemma4 and an mlx-lm job side by side on 24 GB froze the Mac. macOS killed Ollama's runner, and the owner stopped all local model work.
+  - The runs now save each answer as it lands and resume.
+  - From here, one model process at a time.
+- **Submission:** the owner moved the week to tonight's submission, so 2C.3 is parked as committed on `phase-2c-reader`. The Morgue shows the 78 labelled reports, not the reader's output.

@@ -172,7 +172,7 @@ figcaption,
 /* the request slip */
 .slip {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 0.75rem 1rem;
   margin: 1.5rem auto;
   padding: 1rem 1.25rem 1.25rem;
@@ -243,6 +243,7 @@ figcaption,
   grid-template-areas:
     'label stamp'
     'headline stamp'
+    'raw stamp'
     'where stamp';
   gap: 0.15rem 1rem;
   padding: 0.85rem 1rem;
@@ -268,6 +269,14 @@ figcaption,
   font-size: 1.2rem;
   line-height: 1.25;
   text-transform: uppercase;
+}
+
+.raw-headline {
+  grid-area: raw;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
 }
 
 .where {
@@ -491,7 +500,7 @@ mark {
   }
   .envelope > summary {
     grid-template-columns: 1fr;
-    grid-template-areas: 'label' 'headline' 'where' 'stamp';
+    grid-template-areas: 'label' 'headline' 'raw' 'where' 'stamp';
   }
   .stamp {
     justify-self: start;

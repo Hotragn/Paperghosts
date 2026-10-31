@@ -1,0 +1,12 @@
+# The Morgue as a Render static site: the build is web/, which needs no keys and calls no API.
+# Deploying is the owner's step.
+services:
+  - type: web
+    name: paper-ghosts
+    runtime: static
+    buildCommand: pnpm --dir web install --frozen-lockfile && pnpm --dir web build
+    staticPublishPath: web/dist
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
