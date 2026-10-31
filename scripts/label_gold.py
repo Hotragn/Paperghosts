@@ -125,11 +125,16 @@ def show(rows: dict, labeller: str, split: str, count: int, out=OUT, seen=SEEN) 
     done = {r["article_id"] for r in saved(out[split]) if r["labeller"] == labeller}
     cropped = json.loads(seen.read_text()) if seen.exists() else {}
     picked = [a for a in order_of(rows) if rows[a]["split"] == split and a not in done]
-    return "\n\n".join(
-        f"=== {aid}\n{rows[aid].get('paper')} · {rows[aid].get('date')}\n"
-        f"crops: {cropped.get(aid, {}).get('crops') or cropped.get(aid, {}).get('none')}\n"
-        f"headline: {rows[aid].get('headline') or ''}\n---\n{rows[aid].get('text') or ''}"
-        for aid in picked[:count]
+    return "\n\n".join(shown(aid, rows[aid], cropped) for aid in picked[:count])
+
+
+def shown(aid: str, row: dict, cropped: dict) -> str:
+    """One article as text to read: its paper, date, crops, headline and OCR text."""
+    crop = cropped.get(aid, {})
+    return (
+        f"=== {aid}\n{row.get('paper')} · {row.get('date')}\n"
+        f"crops: {crop.get('crops') or crop.get('none')}\n"
+        f"headline: {row.get('headline') or ''}\n---\n{row.get('text') or ''}"
     )
 
 
