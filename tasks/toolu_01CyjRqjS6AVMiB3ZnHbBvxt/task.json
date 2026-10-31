@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01CyjRqjS6AVMiB3ZnHbBvxt",
+  "agent_id": "a5a797c4884fbe9e5",
+  "subagent_type": "general-purpose",
+  "task_description": "Label reprint pairs, batch 17",
+  "token_usage": {
+    "input_tokens": 8,
+    "cache_creation_tokens": 85997,
+    "cache_read_tokens": 250573,
+    "output_tokens": 32801,
+    "api_call_count": 4
+  },
+  "started_at": "2026-10-30T21:59:19.433556-04:00",
+  "completed_at": "2026-10-30T22:02:58.916551-04:00"
+}
