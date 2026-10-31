@@ -64,7 +64,7 @@ flowchart LR
 | Reader | Classify each candidate and extract fields, each with a verbatim quote | Qwen 4B student with a LoRA trained on Tinker from teacher labels | Full pass on Tinker sampling; also runs locally offline |
 | Quote verifier | Keep a field only if its quote is found in the OCR text, allowing for OCR noise | `rapidfuzz`, threshold calibrated on the gold set | Pipeline and investigator |
 | Geocoder | Publication place from the LCCN title; article places from the reader | GeoNames `cities1000`, offline, with a manifest | Pipeline |
-| Reprint clustering | Group printings of the same story across papers (syndication was common) | Shingles + MinHash, plus a date window | Pipeline |
+| Reprint clustering | Group printings of the same story across papers (syndication was common) | Shingle links as blocking. Each printing joins a story only by matching its first printing directly, so nothing chains (decision 36) | Pipeline |
 | Embedder | Vectors for "ghosts like this one" | An open embedding model through Ollama; dimensions chosen to fit the Atlas budget | Pipeline only; the site reuses stored vectors |
 | Atlas loader | Upsert reports, places, cases and stats; create indexes | PyMongo | Pipeline |
 | Follow-up harvest | Second streaming pass over only the years the top cases need: follow-ups, death notices, inquests, debunkings | The ingest code with per-case patterns | Temporal workflow |

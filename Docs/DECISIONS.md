@@ -679,3 +679,110 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - So tile.loc.gov stays at one request a second, and www.loc.gov at one in 3.5 s.
     - The page warns that under heavy load you may meet "429 status codes or HTML pages with CAPTCHAs" even below those rates.
     - So an HTML answer that isn't a 404 is busy, since every request the project makes expects JSON, XML or an image (`crops.captcha`). `get` pauses and asks again. A CAPTCHA page still there after the pauses raises `crops.Busy`, and `cached` never caches it.
+
+**36. Reprint clusters become stories. Eval A's links stay, but a printing joins a story only by matching the story's first printing directly. That ends the chaining that joined different stories in 54 of the 207 largest clusters. Precision per candidate is 100% (97.7–100%), against eval A's 98.0%, and recall is 84.7%.**
+- **What makes two printings one story:** one is the other's text printed again.
+  - That allows OCR errors, cuts, a new or missing headline, a credit line, and paragraphs added or dropped at either end.
+  - An advertisement or notice printed again word for word is one story too.
+  - A printing held whole in a longer one is one story with it, so a notice and the column that holds it are one story.
+- **What doesn't:**
+  - shared boilerplate: stock phrases, an advertisement's standard wording, a legal form, a masthead
+  - a quoted passage: a verse, a poem or a quotation inside otherwise different articles
+  - a serial's other instalments
+  - a standing column or department with other content
+  - a template with other particulars, such as testimonials quoting different people
+  - the same event told in different words
+  - two fragments of one long text that hardly overlap, since neither printing holds the other. Merging them would leave the reader one fragment.
+  - `eval/clusters/LABELLING.md` is the reading agents' version.
+- **Eval A's clusters (decision 27), and what changes:**
+  - Eval A joins two candidates that share a pair among their six smallest sampled seven-word runs, from their first 120 words. A pair held by more than 1,000 candidates is boilerplate.
+  - It joins every linked pair, so a chain of links joins stories that share nothing. That gave v2's 91,301 clusters holding 30.3% of candidates, and 952,591 distinct stories.
+  - The links stay as they are, as the blocking. The new method never joins candidates the links leave apart, so every story sits inside one of eval A's clusters. That's why an evaluation set drawn from eval A's clusters before any tuning covers every link the method can make.
+- **The stories** (`paperghosts/cluster/reprints.py`, `stories`; `scripts/clusters.py`):
+  1. The printings are taken earliest first, ties by article id.
+  2. Each looks at the stories of the printings it is linked to.
+  3. It joins the one whose first printing it matches best, where at least the threshold of the shorter's shingles are the other's. Otherwise it starts a story of its own.
+  - Every member matches its story's first printing directly, so nothing chains.
+  - **Shingles** (`shingles`) are five-word runs of 3+ letters in the first 600 words, one in four kept by its own hash. They are shorter than the links' seven-word runs, so they weather OCR errors better, and they cover five times as much of the text. The share is taken of the shorter printing, so a cut reprint is held whole in its original.
+  - **The threshold is 0.25**, tuned on the dev set alone (`tune`, `eval/clusters/tuning.json`), with a false merge costing five false splits:
+
+    | Threshold | 0.2 | 0.25 | 0.3 | 0.4 | 0.5 | 0.6 | 0.8 |
+    |---|---|---|---|---|---|---|---|
+    | False merges | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+    | False splits | 21 | 22 | 28 | 42 | 59 | 86 | 137 |
+    | Cost | 31 | **22** | 28 | 42 | 59 | 86 | 137 |
+
+    0.5 was the provisional value before any labels.
+- **Stable ids:** a story's id is its first printing's article id. The same candidates give the same stories and the same ids on every run, which 2C's split by cluster needs.
+- **The reader reads** each story's first printing, and also every member at least 25% longer than it, since the extra text might hold another story. That's the answer to a false merge's cost: a report merged into another story would never be read.
+  - A first version read every member with less than 80% of its shingles in the first printing. That flagged OCR noise, not added text: 166,717 members, against 27,806 by length.
+- **The evaluation set** (`eval/clusters/eval.json`, 667 pairs) was drawn from eval A's clusters before any label or tuning (seed "2B.4 eval"). It was then labelled and frozen, with its sha256 in `frozen.json` (`094d4070…754c`), and pushed at `f86021f` before tuning began.
+  - **Per candidate, 200:** a uniform draw of clustered candidates, each paired with a random other member of its cluster. That weights precision as the reader's job and the story counts are weighted.
+  - **Per cluster, 100:** a uniform draw of clusters with a random pair from each, as eval A drew them.
+  - **Large clusters, 207:** every cluster of 50 printings or more (v1 had 157), with its two least similar members.
+  - **Near the threshold, 80:** per-candidate pairs whose shorter printing has 20% to 60% of its shingles in the other.
+  - **The body probe, 80:** pairs that share a pair of runs among their body's, from word 120, but sit in different clusters of eval A's, or in none.
+  - No candidate is in two pairs, apart from the large clusters' fixed pairs.
+- **The dev set** (`eval/clusters/dev.json`, 160 pairs, seed "2B.4 dev"): 40 per-candidate pairs, and 120 from 10% to 80%. None shares a candidate with the evaluation set.
+- **Labelling**, by decision 30's protocol:
+  - 17 reading agents read 50 pairs each, with both sets shuffled together (seed "2B.4 batches"). A batch names no set, stratum or score, and shows each printing's paper, date, headline and first 400 words.
+  - **My blind re-check:** a seeded 10% of each stratum's commoner label ("same" in every stratum), judged before seeing the agents' labels. I agreed on all 61 (94.1–100%).
+  - **Read in full:** every rarer label and close call, 77 in the evaluation set and dev's 4 close calls, against both printings' full texts.
+    - All 43 of the agents' "different" labels stand.
+    - Their 38 close calls went 15 to "same" and 23 to "different".
+  - This maps decision 30's protocol onto pairs. There, the rare label, a report, was read in full. Here the rare label in every stratum is "different", so those were read in full.
+- **Results, at 0.25** (`eval/results/phase2b/clusters.json`):
+
+  | Stratum | Precision | Recall | Eval A on the same pairs |
+  |---|---|---|---|
+  | per candidate | 166 of 166: 100% (97.7–100%) | 166 of 196: 84.7% (79.0–89.1%) | 196 of 200 one story: 98.0% (95.0–99.2%) |
+  | per cluster | 87 of 87: 100% (95.8–100%) | 87 of 100: 87.0% (79.0–92.2%) | 100 of 100 (96.3–100%) |
+  | near the threshold | 65 of 65: 100% (94.4–100%) | 65 of 79: 82.3% (72.4–89.1%) | 79 of 80 |
+  | large clusters' least similar pairs | 26 of 29: 89.7% (73.6–96.4%) | 26 of 153: 17.0% (11.9–23.7%) | 153 of 207: 73.9% (67.5–79.4%) |
+  | body probe | none joined | 0 of 76 | none joined |
+
+  - Eval A's recall within its own clusters is 100% by construction, since it joins every pair it links.
+  - **The trade:** the method removes eval A's false merges, 4 of the 200 per-candidate pairs and 54 of the 207 large clusters' pairs. In return it splits 15% of the true reprints, mostly where OCR noise leaves too few shared runs.
+  - At five to one, eval A costs 20 on the per-candidate pairs and the method 30. On the dev set, eval A costs 40 and the method 22.
+    - So per candidate the two are close, and the method's gain sits in the large clusters, where the chaining is.
+    - On the dev set, a hybrid that kept eval A's clusters below 20 printings would cost 24, so the method stands as it is. The eval set's numbers changed nothing.
+- **Chaining in the large clusters:** 54 of the 207 least similar pairs are different stories (26.1%, 20.6–32.5%). The method splits 51 of them (94.4%, 84.9–98.1%). The 54, by kind, from the reading notes:
+
+  | Kind | Clusters |
+  |---|---|
+  | a standing column or report of another day or week: markets, freight, prices, river news, church notices and directories | 15 |
+  | advertisements and notices on one template with other particulars, including two ad columns that share one ad | 14 |
+  | a quoted stanza, verse, epigraph or scripture inside another article | 12 |
+  | a serial's other instalments, or their synopses | 5 |
+  | fragments of one long text that hardly overlap | 4 |
+  | unrelated texts, joined only through the chain | 3 |
+  | two variants of one piece: the curse on the man who won't pay the printer | 1 |
+
+  - They chain because eval A needs only two shared runs from the opening, and templates, standing columns and quotations share their opening wording. The links' tokens drop digits, so market reports of different days look alike.
+  - **The 3 left joined** (`eval-0432`, `eval-0466`, `eval-0506`) are one pattern. Two different texts each hold a short first printing whole, such as a poem's lines, stock clairvoyant wording or a sermon's opening, so both match it. A floor on the share of the longer printing would catch them. That's for a fresh draw.
+  - The ten largest clusters, before and after:
+
+    | Printings | Stories now | Largest story | Its least similar pair | Split |
+    |---|---|---|---|---|
+    | 732 | 39 | 210 | different: a cotton freight table of different days | yes |
+    | 684 | 9 | 515 | one story | yes, a false split |
+    | 487 | 28 | 295 | one story | yes, a false split |
+    | 427 | 56 | 340 | one story | yes, a false split |
+    | 402 | 3 | 400 | one story | yes, a false split |
+    | 379 | 15 | 332 | one story | yes, a false split |
+    | 342 | 43 | 91 | different | yes |
+    | 308 | 39 | 188 | one story | yes, a false split |
+    | 271 | 13 | 141 | different: a steamboat's timetables of other seasons | yes |
+    | 264 | 15 | 86 | one story | yes, a false split |
+
+    The least similar pair is the hardest by construction. It shares no sampled shingles, so the method can't keep it together.
+- **v2's stories:** 974,399 distinct stories, against eval A's 952,591 (+21,808, 2.3%).
+  - 96,105 have more than one printing, holding 357,828 printings (28.9% of candidates), and 82,854 of those span more than one paper.
+  - By size: 52,483 of 2 printings, 16,823 of 3, 8,530 of 4, 13,414 of 5 to 9, 3,915 of 10 to 19, 832 of 20 to 49, and 108 of 50 or more.
+- **The reader's job** is 974,399 first printings and 27,806 longer members: 1,002,205 of 1,236,122 candidates (81.1%). Eval A, with one printing per cluster, gave 952,591.
+- **The body probe: eval A's links miss many reprints.** 76 of its 80 pairs are one story: 95.0% (87.8–98.0%), all of them outside the method's reach.
+  - Its frame holds 55,711 links across eval A's clusters, touching 77,641 candidates. 42,733 of those are in no cluster at all.
+  - These are reprints whose openings differ, such as a new first paragraph or a cut start, or whose opening runs fell outside each other's six smallest.
+  - **Proposed for the EM, not done:** add the body's links to the blocking, with the direct-match rule keeping them from chaining, and measure it on a fresh draw. Adopting it now would mean tuning on the frozen set.
+- **BUDGET.md's third scenario** now takes the stories' sizes (`scripts/budget_stories.py`): 0.609 stories per printing in v1's candidates and 0.820 in those v2 added. That gives 62,402 stories at the top of the range, against 61,960, needing 461.8 MB as stored and 372.5 MB with every lever. The conclusions stand: nothing fits beside `sample_mflix`, and everything fits without it.
+- **For 2C:** split gold, dev and train by story id. The reader reads each story's first printing and its longer members.

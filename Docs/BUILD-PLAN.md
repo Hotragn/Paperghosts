@@ -86,6 +86,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 - The reprint-clustering design, and its evaluation set:
   - Sample per candidate as well as per cluster. Eval A's check drew clusters uniformly, so 11 of its 20 pairs came from clusters of 2 printings, and none of the 157 clusters of 50 or more was checked.
   - Hand-check the largest clusters for chaining, where shared runs join stories that aren't the same.
+  - Decision 36 builds the stories: eval A's links, but each printing must match its story's first printing directly. It's measured on a frozen set of 667 pairs.
 - The reel-to-batch map (decision 29):
   - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31), and 370,949 with the samples' batch paths (decision 35).
   - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
@@ -107,6 +108,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2C: the reader
 **Persona:** ML specialist.
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
+   - Gold, dev and train split by story id, a story's first printing's article id (decision 36). The reader reads each story's first printing, and its members at least 25% longer.
    - The gold set's term strata include each of lexicon v2's five rules. That's how ouija, kept with 0 reports in its 6 sampled candidates, gets measured (decision 31).
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
@@ -135,6 +137,9 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2D: load, cluster and harvest
 **Persona:** data engineer.
 - Geocode, cluster, embed, and load Atlas.
+  - Cluster with decision 36's stories at its tuned 0.25. Before loading, measure two changes on a fresh draw, never on decision 36's frozen set:
+    - the body's links added to the blocking. Its probe found 76 of 80 such pairs to be one story, outside eval A's links.
+    - a floor on the share of the longer printing. Three large clusters still join two texts that each hold a short first printing.
   - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
   - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.

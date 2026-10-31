@@ -6,20 +6,78 @@ Hard date: the site must be live on Oct 31.
 
 ## Next step
 
-**Phase 2B: schemas and data layer** (`BUILD-PLAN.md` section 4), on branch `phase-2b-data-layer`.
-- **Step 2B.1 passed the EM's review** (decisions 32 and 33): the models and validators, the BinData check, `make db-init` and `BUDGET.md`.
-  - **Pending:** `places_search`. `sample_mflix` holds M0's third Search slot, and freeing it is the owner's call.
-  - **The owner's call:** what to do if the reader's real count needs more storage than M0 has (`BUDGET.md`). The EM takes both to the owner.
-- **Step 2B.2 passed the EM's review** (decision 34): the title parser and lookup, the GeoNames geocoder and the record check. Norfolk and Portsmouth's rule stays.
-- **Step 2B.3 passed the EM's review** (decision 35): the reel-to-batch map, the page check and `page_service`'s cache.
-  - The EM's call: where only the frame differs, the stored service takes the member's frame. That changes 20,247 candidates' service.
-- **Step 2B.4,** the reprint clustering and its evaluation set (decision 36), is under way.
-- Phase 2B's PR comes when 2B closes.
+**Phase 2C: the reader** (`BUILD-PLAN.md` section 4), once Phase 2B's PR is merged. It starts with `POLICY.md` and the gold set, split by story id (decision 36).
 - Lexicon v2 keeps all five rules (decision 31).
 
 Needs the owner's yes when we get there:
 - the Render deploy
 - domain DNS
+
+## STATUS: Phase 2B, schemas and data layer (2026-10-30)
+
+Branch `phase-2b-data-layer`, in four steps, each reviewed by the EM; one PR into `main` at the end.
+
+Built:
+- **2B.1** (decisions 32 and 33):
+  - Pydantic models for every collection, and Atlas validators generated from them
+  - BinData embeddings
+  - `make db-init`, which creates every collection and index and can run twice
+  - `BUDGET.md`, a storage budget from real document sizes
+- **2B.2** (decision 34):
+  - the LCCN title parser, tested on 200 titles checked by hand
+  - loc.gov title records, cached
+  - the title lookup by LCCN
+  - the GeoNames geocoder over the US, Puerto Rico and Virgin Islands dumps, with its manifest
+  - the record check, which checks each paper's place against its title record's county
+- **2B.3** (decision 35):
+  - the reel-to-batch map
+  - the page check, which looks at a page's size and its OCR before its crop is shown
+  - `page_service`'s cache of every Library of Congress answer
+  - CAPTCHA pages treated as busy
+  - the EM's frame rule: where only the frame differs, the member's frame
+- **2B.4** (decision 36):
+  - reprint stories, in which a printing joins a story only by matching its first printing directly
+  - their evaluation set, labelled and frozen before tuning, and a dev set to tune on
+
+Measured:
+- **Geocoder:** 98.0% (95.0–99.2%) of 200 papers' places are right with the record check, and 97.0% without it.
+- **Reel-to-batch map:**
+  - It names a batch for 370,949 of the 395,068 candidates with no batch path (93.9%).
+  - With each issue hidden in turn, it gets 99.78% of issues right, and 85.3% on the 257 flagged reels.
+- **Page check:** 0 false accepts of 90 frames beside the page (0–4.1%), and 2 false rejects of 85 own frames (0.6–8.2%).
+- **Frames:** where only the frame differs, the member's frame was the page in 18 of 18. That changes 20,247 candidates' stored service.
+- **Stories:**
+  - Precision per candidate is 100% (97.7–100%), against eval A's 98.0%, and recall is 84.7% (79.0–89.1%).
+  - The chaining in 54 of the 207 largest clusters is split in 51.
+  - v2 has 974,399 distinct stories, and the reader's job is 1,002,205 printings.
+- **Storage:** the top of the range, 62,402 stories, needs 461.8 MB as stored, so it fits on M0 only without `sample_mflix`.
+- **Requests to the Library of Congress:**
+  - 2B.2's title records: 327 in the final build and 177 for the 200 pairs.
+  - 2B.3's measurements: 549, against the 600 planned.
+
+Gate:
+- Tests and lint pass. `make db-init` runs twice.
+- The budget is written down (`BUDGET.md`).
+- Geocoder accuracy is measured on a sample of 200, with and without the record check.
+- The map's hit rate on hidden issues is reported, and all 257 reels with more than one batch are flagged in `reels.json`.
+- The page check's error rates are measured, with intervals.
+- The clustering evaluation set's sha256 is in `eval/clusters/frozen.json`, pushed before tuning. Its precision and recall are measured, and every chained large cluster is explained and its fix measured.
+- Every claim of a push was checked with `git ls-remote`.
+
+Risks and open questions:
+- **`places_search` waits on the owner:** `sample_mflix` holds M0's third Search slot (decision 33).
+- **Storage:** if the reader's real count needs more than M0 has, it's the owner's call (`BUDGET.md`).
+- **The stories miss reprints:**
+  - Eval A's links miss reprints whose openings differ. The body probe found 76 of 80 such pairs to be one story. 2D measures adding the body's links on a fresh draw.
+  - The stories split 15% of true reprints, mostly through OCR noise.
+  - Three large clusters still join two texts that each hold a short first printing.
+- **loc.gov lookups and the page check:**
+  - 24,119 candidates with no batch path sit on reels the map doesn't know. They need loc.gov, and only for reports.
+  - The page check costs 2 requests and about 1 MB of ALTO a page. About 21,000 checks would cache about 4 GB, inside the 10 GB data budget only if gzipped or reduced to each result (2D).
+- **In-sample choices:**
+  - The page check's threshold, a fifth, came from 38 calibration pages. The 90 measured pairs were fresh.
+  - The geocoder's two in-sample rules: 2D measures them on a fresh draw (decision 34).
+- **The reader** reads 974,399 first printings and 27,806 longer members. The Tinker credit check weighs that before 2C's full pass.
 
 ## STATUS: Phase 2A, archive read, EDA and lexicon v2 (2026-10-30)
 
