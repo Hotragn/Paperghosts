@@ -93,7 +93,7 @@ How the build runs: five phases, each split into milestones, each milestone with
   - Check a page located without a batch path before its crop is shown, and measure the check's error in the validation. One way is the scan's height and width against the IIIF `info.json`, and another is its OCR.
     - The check is needed because a member name can point at the wrong page. Where a candidate has both, its member's frame differs from its batch path's in 2.5% of them, and its reel in 396 (decision 33).
     - The batch path wins wherever it exists.
-    - Decision 35 found the opposite for the frame: where the two differ, the member's frame was the page in 18 of 18. Whether the stored service takes its frame from the member is the EM's call.
+    - Decision 35 found the opposite for the frame. Where only the frame differs, the member's frame was the page in 18 of 18, and the stored service now takes it (the EM's call). Any page whose member and batch path disagree is checked before its crop is shown.
 - No loc.gov lookups yet for the 24,119 candidates on the 1,000 reels the map doesn't cover (decision 35). At 20 a minute they would take most of a day, and most won't be reports.
   - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
   - `page_service` caches each answer, one per issue, so no page is looked up twice (decision 35).
@@ -139,7 +139,9 @@ How the build runs: five phases, each split into milestones, each milestone with
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
   - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.
   - Story places follow 2C's rule: a county or state the text gives, or the dateline, and never the paper's state.
-  - A crop is fetched through `crops_for`, which checks a page with no batch path before its crop is shown, by its size and its OCR (decision 35).
+  - A crop is fetched through `crops_for`, which checks a page by its size and its OCR before its crop is shown, wherever its member and batch path don't agree (decision 35).
+    - Record each check's score and reason, so the numbers sheet can count rejections.
+    - The cache keeps about 187 KiB of ALTO words a page, so about 21,000 checks would take about 4 GB. Fit it inside the 10 GB data budget: gzip those entries (about 1.3 GB), or keep only each check's result.
   - Measure the record check, and any further geocoder fix, on a fresh draw of papers, never on decision 34's 200. The first of two towns joined by "and" is one such fix.
   - The title lookup by LCCN (decision 34) holds each paper's place and state once. Whether it replaces every printing's copy is `BUDGET.md`'s lever.
 - `make db-verify` runs geo, fuzzy and vector queries and checks their expected results and latencies.
@@ -170,6 +172,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 **Persona:** software engineer.
 - FastAPI endpoints from `SRS.md` section 6, with contract tests, Sentry, the privacy tests and latency measurements.
 - `export_static`, plus the cached crops for the front page and the top cases.
+- Crops come only through `crops_for`, which checks a page before its crop is shown (decision 35).
 
 **Gate**
 - Tests are green, and the OpenAPI document is generated.

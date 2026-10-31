@@ -11,11 +11,9 @@ Hard date: the site must be live on Oct 31.
   - **Pending:** `places_search`. `sample_mflix` holds M0's third Search slot, and freeing it is the owner's call.
   - **The owner's call:** what to do if the reader's real count needs more storage than M0 has (`BUDGET.md`). The EM takes both to the owner.
 - **Step 2B.2 passed the EM's review** (decision 34): the title parser and lookup, the GeoNames geocoder and the record check. Norfolk and Portsmouth's rule stays.
-- **Step 2B.3 is built and waits on the gate review** (decision 35):
-  - the reel-to-batch map, its hidden-issue check, and the 257 flagged reels
-  - the page check, for a page with no batch path, before its crop is shown
-  - `page_service`'s cache
-  - **The EM's call:** where the member and the batch path name different frames, the member's was the page in 18 of 18. Whether the stored service takes its frame from the member.
+- **Step 2B.3 passed the EM's review** (decision 35): the reel-to-batch map, the page check and `page_service`'s cache.
+  - The EM's call: where only the frame differs, the stored service takes the member's frame. That changes 20,247 candidates' service.
+- **Step 2B.4,** the reprint clustering and its evaluation set (decision 36), is under way.
 - Phase 2B's PR comes when 2B closes.
 - Lexicon v2 keeps all five rules (decision 31).
 

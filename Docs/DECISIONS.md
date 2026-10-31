@@ -408,7 +408,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - In 1910, the article ID and the member name differ only in that token, for 18,082 of 25,346 candidates (71.3%). Their date, LCCN, reel, issue and frame always agree.
     - In those candidates the member gives a page number that the scan record doesn't confirm: the scan says "na" or nothing.
     - Where the scan's page is a number, the two always agree.
-  - **Service:** the IIIF service comes only from the scan's batch path, which 68.0% of candidates have. Where a candidate has both, the batch path's frame differs from its member's in 20,643 (2.5%), and the reel in 396.
+  - **Service:** the IIIF service comes only from the scan's batch path, which 68.0% of candidates have. Where a candidate has both, the batch path's frame differs from its member's in 20,643 (2.5%), and the reel in 396. For the frame, decision 35 supersedes this.
     - Example: the member `…_1910021001_0164` and the jp2 `sn82016187/100493962/1910021001/0163.jp2`.
     - So a page located without a batch path can be the wrong one. Its crop waits for a check, whose error 2B's reel-map validation measures (`BUILD-PLAN.md`).
 - **Validators** (`paperghosts/store/validators.py`): generated from the models.
@@ -562,7 +562,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - nothing for 4: Chicago in Connecticut, Kansas and Utah papers, and Bordentown in a Michigan one
   - **So a story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved, and it never falls back on the paper's state** (the EM's review). 2C measures the rule on its gold set, and 2D applies it (`BUILD-PLAN.md`).
 
-**35. The reel-to-batch map gives 93.9% of the candidates with no batch path a batch from local data, and it's right for 99.8% of hidden issues. A page it locates is checked by its size and its OCR before its crop is shown, and the check rejected all 90 wrong frames tried. Where a member and its batch path name different frames, the member's was the page.**
+**35. The reel-to-batch map gives 93.9% of the candidates with no batch path a batch from local data, and it's right for 99.8% of hidden issues. A page it locates is checked by its size and its OCR before its crop is shown, and the check rejected all 90 wrong frames tried. Where a member and its batch path name different frames, the member's was the page, and the stored service now takes it.**
 - **The map** (`paperghosts/ingest/reels.py`, built by `scripts/reel_map.py` into `data/reels/map.json`, 10.6 MB): for each LCCN and reel, the batches its pages' batch paths name, and the issues each batch holds there.
   - Its source is the 1,101,110 pages with a batch path, of the 1,586,714 distinct pages among the candidates and samples. They cover 24,620 reels and 742,015 issues.
   - A reel is keyed by its LCCN and reel number, as decision 29 counted. A page is filed under its batch path's reel and issue, never its member's.
@@ -600,15 +600,18 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - 11 pages are served by two batches. Where the recorded size is exact, both have it.
     - `vi_kernals`' two versions differ by about 10 pixels, on pages of approximate size, so which one AmericanStories read can't be told.
   - Where one batch serves a page of exact size, that batch has the recorded size: 23 of 23.
-- **Where a page's member and its batch path name different frames, the member's frame was the page: 18 of 18 (82.4–100%).** This goes against decision 33's rule for the frame. Changing it is the EM's call.
+- **Where a page's member and its batch path name different frames, the member's frame was the page: 18 of 18 (82.4–100%).** So the EM changed decision 33's rule for the frame.
   - Calibration drew 20 candidate pages whose member names another frame or reel than their batch path does (seed "2B.3 calibrate"). 18 differ only in the frame, and 2 in the reel. Each was checked on the page its member names, in its batch path's batch.
   - All 18 member frames have the scan's recorded size exactly. The article's words lie inside its boxes on them: 0.31 to 1.00 of its distinct words of five letters or more, and 0.78 at the median.
   - The `frames` run then checked each batch path's own frame. None of the 18 has the recorded size, and the article's words aren't in its boxes: 0 to 0.11.
   - The size match isn't chance. In the 15 batches that hold half of such pages, a page's neighbouring frame never has its size (0 of about 115 pairs of agreeing pages).
   - The offset is systematic, batch by batch, and mostly in `dlc_` batches. In `dlc_earl_ver02`, 1,120 of its 1,147 pages have a member frame one above the batch path's. 202 batches hold such pages, and 10 of them hold 39%.
-  - **So where the two differ, the stored `service`, which `printings.py` takes from the batch path, names the frame before the article's page.** That's up to 20,643 candidates (2.5% of those with both, decision 33).
-  - **Proposed, not done:** take the batch from the batch path and the frame from the member.
-    - Where the member's reel differs too (396 candidates), the evidence is thin. The map has the member's issue on the member's reel for only 12 of the 411 such pages, and for both sampled ones the batch path's batch holds no page at the member's place. So the batch path's page would stand there, checked before its crop is shown.
+  - **So where the two differed, the stored `service`, which `printings.py` took from the batch path, named a frame beside the article's page.** That was up to 20,643 candidates (2.5% of those with both, decision 33).
+  - **The EM's call (2026-10-30), which supersedes decision 33's frame rule** (`crops.batch_path_service`, used by `printings.py`, `page_service` and `crops_for`):
+    - Where only the frame differs, the page is the batch path's batch with the member's frame.
+    - Where the member's reel differs too (396 candidates), the batch path's page stands. The evidence for the member is thin there: the map has the member's issue on the member's reel for only 12 of the 411 such pages, and for both sampled ones the batch path's batch holds no page at the member's place.
+    - Either way, the page is checked before its crop is shown, as a page with no batch path is. A page goes unchecked only where its member and batch path agree.
+  - **It changes the stored service of 20,247 candidates, on 17,545 pages in 187 batches** (`reels.json`, `frame_rule`). That's decision 33's 20,643 with another frame, less the 396 with another reel. The most are in `dlc_earl_ver02` (1,163), `dlc_dutch_ver02` (1,032), `dlc_abe_ver01` (964), `dlc_chester_ver02` (929) and `dlc_braniff_ver01` (872).
 - **The page check** (`crops.page_check`), for a page located without a batch path, before its crop is shown. `crops_for` runs it, and fetches no crop for a page it rejects.
   1. The page has to exist: `info.json` answers.
   2. It has to be the scan's recorded size.
@@ -636,12 +639,12 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - All 41 own frames of exact size have the recorded size.
   - The rule's margin: own frames' words in their boxes are 0.87 at the median, and the lowest after the two garbled ones is 0.23. The frames beside reach 0.13.
 - **`page_service`** now finds a page's IIIF service in three ways:
-  1. from its batch path, as before;
+  1. from its batch path: its batch, with the member's frame where only the frame differs;
   2. or else from its reel's first batch in the map, which asks nothing;
   3. or else from loc.gov's item for its issue.
   - The item is asked for once per issue and cached, so the issue's other pages are found without asking.
   - A page it locates without a batch path is unchecked, so crops come through `crops_for`, which checks the page.
-  - A reissued batch's fallback in `crops_for` looks up the member's frame, as before.
+  - A page whose member and batch path agree is shown unchecked. Where its batch has been reissued, loc.gov names its current service, at the same place.
 - **The cache** (`crops.cached`): every answer from the Library of Congress is cached under `data/loc/requests/`, keyed by its URL, with its URL, retrieval date and status.
   - A 404 is cached. A server error that outlasts `get`'s retries isn't, so a later run asks again.
   - `loc.title_record` uses it too. Title records keep their own folder, and their copy of the caching code is gone.
@@ -658,4 +661,21 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   | reels | 104 | 7.0 |
 
   - The script spaces tile.loc.gov 3.5 s apart, as this step asked. `crops.get`'s default for image services stays 1 s (decision 29).
-- **For 2D:** the check costs 2 requests and about 1 MB of ALTO for each page with no batch path whose crop is shown. At 5% reports, that's about 20,000 pages: 11 hours at 1 s a request, and about 20 GB.
+- **For 2D:** the check costs 2 requests and about 1 MB of ALTO download for each page it checks. At 5% reports, that's about 20,000 pages with no batch path, and about 1,000 more whose member and batch path disagree: 12 hours at 1 s a request.
+  - **On disk,** the cache keeps a page's ALTO words at 187 KiB, the median of the 197 cached, so about 21,000 checks take about 4.0 GB. Gzipped, they'd take 1.3 GB (61 KB at the median). Keeping only the check's result would take almost nothing. The plan keeps it inside the 10 GB data budget.
+- **The EM's calls on this step (2026-10-30):**
+  - The frame rule changes, as above.
+  - The page check's design change stands, and its text rule's fifth is frozen. 2D records each check's score and reason, so the numbers sheet can count rejections.
+  - `scripts/load_skeleton.py` stays as it is. 3B's crops come only through `crops_for`.
+  - **Request rates:** loc.gov's "Working Within Limits" page (https://www.loc.gov/apis/json-and-yaml/working-within-limits/, read 2026-10-30) gives these limits, each blocking for an hour past them:
+
+    | Service | Requests a minute |
+    |---|---|
+    | the JSON/YAML API | 20 |
+    | image services | 150 |
+    | text services | 150 |
+    | `/storage-services/` | 150 |
+
+    - So tile.loc.gov stays at one request a second, and www.loc.gov at one in 3.5 s.
+    - The page warns that under heavy load you may meet "429 status codes or HTML pages with CAPTCHAs" even below those rates.
+    - So an HTML answer that isn't a 404 is busy, since every request the project makes expects JSON, XML or an image (`crops.captcha`). `get` pauses and asks again. A CAPTCHA page still there after the pauses raises `crops.Busy`, and `cached` never caches it.
