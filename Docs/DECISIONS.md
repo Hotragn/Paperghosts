@@ -803,3 +803,87 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
     - 2D's fresh draw shows its readers the full texts.
   - **For 2D: digits in the shingles,** measured on the fresh draw. `eval-0508`, ocean-freight columns a year apart, has 0.267 of the shorter's shingles in the other, above the threshold, because the tokens drop the figures that tell the two apart.
   - My calls on the hard cases stand, and so does the mapping of decision 30's protocol.
+
+## Phase 2C (2026-10-31)
+
+**37. The gold set is designed and drawn after `POLICY.md` and before any label: 300 gold and 150 dev articles in 17 strata, each with its inclusion weight. The most inclusive grouping and a whole-text check keep their reprints out of the training pool, and `check_leakage.py` passes. At the judged rates gold holds about 35 reports, before those of phantom sightings and hoaxes, which nothing judged measures.**
+
+- **The order (RDR-3):** `POLICY.md` was committed at `6cd57e2`, before the draw script existed. `eval/gold/split.json` and `HASH` come after it in git history, and the split records `POLICY.md`'s sha256.
+- **The grouping (the EM's call B):** `reprints.groups`.
+  - It joins eval A's links, through the opening's runs, with links through the body's runs, the 120 words from word 120. Links chain through any number of printings.
+  - One printing's opening and another's body share a key space, so a story printed under a new lead joins its original.
+  - It covers every article gold and dev are drawn from: 1,236,122 candidates and the 310,263 articles of the near-miss reservoir.
+  - 108,967 groups of two or more hold 474,805 of them, and the largest holds 1,098. 28,324 near misses join a group.
+- **The whole-text check** (`scripts/check_leakage.py`, RDR-4) catches the reprints the grouping didn't link.
+  - **The rule:** a pool article reprints a gold or dev article when their whole texts share at least 5 five-word runs, unsampled, and those are at least 10% of the shorter's runs.
+  - **Justified on decision 36's labelled pairs** (`check_leakage.py justify`, `eval/results/phase2c/leakage_threshold.json`):
+
+    | Set and stratum | One story, flagged | Two stories, flagged |
+    |---|---|---|
+    | eval, per candidate | 196 of 196 | 2 of 4 |
+    | eval, per cluster | 100 of 100 | none drawn |
+    | eval, near the threshold | 79 of 79 | 1 of 1 |
+    | eval, body probe | 76 of 76 | 3 of 4 |
+    | dev, near the threshold | 115 of 115 | 4 of 5 |
+    | dev, per candidate | 37 of 37 | 2 of 3 |
+    | eval, large clusters' least similar pairs | 88 of 153 | 8 of 54 |
+
+  - The rule flags all 603 one-story pairs of the randomly drawn strata. The lowest share is 0.105 (`dev-0088`) and the fewest shared runs is 6, so the rule sits just under both.
+  - The large clusters' least similar pairs are the hardest by construction, and eval A's links group them anyway.
+  - It flags 12 of the 17 randomly drawn pairs of two stories, since those pairs share passages. A false flag only keeps an article out of training.
+  - **It earned its place.** Outside their groups, 1,196 pool articles reprint 142 of the 450 gold and dev articles. Most are short repeated texts: mediums' cards and patent-medicine adverts re-run in later issues, steamer timetables, market columns, and wire passages two papers share. An advert of 50 words has about 40 seven-word runs, of which one in eight is kept, so a few OCR errors leave it without the two shared runs a link needs.
+- **The strata** (`scripts/gold_draw.py`, `eval/results/phase2c/gold_draw.json`). A candidate falls in the first that fits:
+  1. **Three edge-case slices** the archive holds too few of to meet by chance (SRS 7.3), found by pattern: phantom ships, trains and lights (E8), hoaxes and pranksters (E6), and text not in English (E12). The other eleven slices are common among candidates, and 2C.2 counts each slice on the labels.
+  2. **Before 1850:** 2.2% of candidates. A proportional share would be about 7 of 300, too few for B8's decade slices.
+  3. **Lexicon v2's five rules, rarest first,** so each rule is measured, ouija included. Then v1's terms alone. Each is split by whether a ghost term is in the headline, since that is where reports gather: 7 of the 27 judged items with one were reports, against 14 of the 373 without. The headline strata are oversampled for the reports field-level intervals need.
+  - **Near misses** come from the near-miss reservoir, each year in proportion to its pool, through eval A's `draw`. Triage can then be measured on gold. Triage's idiom rule is measured on the candidates in gold it would drop.
+  - Within each candidate stratum the draw is systematic in date order, so each decade gets its share, give or take one.
+
+- **The allocation**, with the reports expected at the judged rates (the Wilson ends in brackets):
+
+  | Stratum | Articles | Gold | Dev | Judged reports | Expected in gold |
+  |---|---|---|---|---|---|
+  | E8: phantom ships, trains and lights | 6,392 | 8 | 4 | 0 of 1 | 0.0 (0.0–6.3) |
+  | E6: hoaxes and pranksters | 3,181 | 8 | 4 | none | not judged |
+  | E12: not in English | 5,915 | 7 | 3 | 0 of 4 | 0.0 (0.0–3.4) |
+  | before 1850 | 26,826 | 20 | 10 | 0 of 15 | 0.0 (0.0–4.1) |
+  | ouija, term in the headline | 773 | 8 | 4 | 4 of 13 | 2.5 (1.0–4.6) |
+  | ouija, none in the headline | 5,554 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | seance, term in the headline | 3,508 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | seance, none in the headline | 28,606 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spirit_phrase, term in the headline | 3,130 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | spirit_phrase, none in the headline | 35,434 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spiritualism, term in the headline | 7,910 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | spiritualism, none in the headline | 54,211 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spirit+medium, term in the headline | 569 | 6 | 3 | 4 of 13 | 1.8 (0.8–3.5) |
+  | spirit+medium, none in the headline | 56,126 | 14 | 7 | 11 of 180 | 0.9 (0.5–1.5) |
+  | v1 terms only, term in the headline | 59,176 | 80 | 40 | 3 of 14 | 17.1 (6.1–38.1) |
+  | v1 terms only, none in the headline | 937,871 | 46 | 23 | 3 of 173 | 0.8 (0.3–2.3) |
+  | near misses | 6,695,792 | 25 | 13 | 0 of 300 | 0.0 (0.0–0.3) |
+
+  Articles are each stratum's size outside `POLICY.md`'s example groups. For near misses it's the near-miss pool the reservoir stands for. The five rules' rows share the rate their judged items pool.
+
+- **Expected reports: 35.3.** That's each stratum's draw times the report rate eval A and lexicon v2 judged in it (decisions 27, 30 and 31), summed. The rules' strata pool their judged items, which are too few apart. Adding each stratum's Wilson ends gives 14.0 to 86.5, which is wider than the total's own interval.
+  - E6 holds no judged item and E8 one, so the 35 counts none of their reports. Under `POLICY.md` a sighting of a phantom ship (rule 14) and an exposed hoax (rule 7) are reports.
+  - The judged labels predate `POLICY.md`, and rule 2 turns one of eval A's `other` into a report.
+  - **For field-level intervals:** at 35 reports, a field right in 30 of them has a Wilson interval of 71–94%. About 50 reports would take about 70 more articles in v1's headline stratum, out of the near misses, the bulk and the early decades. I kept those, since they measure triage, the bulk's kinds, and B8's early decades.
+- **Decades in gold:** 22 before 1850, then 12, 15, 17, 29, 52, 50, 46 and 39 for the 1850s to the 1920s, then 9, 6, 1 and 2 for the 1930s to the 1960s.
+- **Inclusion weights:** each article's `pi`, its stratum's draw over its size, and its `weight`, 1/`pi`, are in `split.json`. Gold's candidate weights sum to 1,235,182, every candidate less the 940 in `POLICY.md`'s example groups. A near miss stands for 267,832 of the near-miss pool's 6,695,792.
+- **Dev:** 150 articles, gold's design at half the size, drawn from outside gold's groups. No dev article reprints a gold one by whole text, so none was redrawn.
+  - **I label dev by hand under `POLICY.md`, in 2C.2, alongside gold and before any model output.** Model selection then aims at the same truth as gold, not at the teacher's labels the student learns from.
+- **`POLICY.md`'s examples:** 63 articles. 60 are candidates, and they and their groups, 944 articles, are left out of gold and dev.
+  - The other 3 are lexicon v1's random samples from eval A's screen, in no file the draw reads.
+  - `check_leakage.py` compares all 63 with gold and dev by whole text, and none is reprinted there.
+- **The pool:** 1,539,818 articles: every candidate and near-miss reservoir article outside the 6,567 held out. Those are gold, dev, their groups, the quarantine and its groups.
+  - 2C.4 draws the teacher-labelled training data from the pool, at most one printing per story.
+  - The random reservoir stays out of training, since eval B screens it for recall.
+- **`check_leakage.py` exits 0** (`eval/results/phase2c/leakage.json`): no group crosses the split, no pool article reprints a gold or dev one, no dev article reprints a gold one, no example is drawn or reprinted, and `HASH` matches.
+- **The labelling page** (`scripts/label_gold.py`) runs on 127.0.0.1 only.
+  - It shows each article's OCR text beside its crops, which come through `crops_for`. A page whose member and batch path disagree is checked before its crop is shown, and a rejected page shows why.
+  - `POLICY.md` is open beside the form, and its 18 rules are tick boxes.
+  - Every RDR-2 field, and the kind, takes its quote from a selection in the text.
+  - A label is saved only if every quote is in the text (give or take whitespace) and every choice is the schema's. Fields stay empty unless the kind is a report.
+  - Each labeller keeps one label per article, so the owner's re-check sits beside mine without replacing it.
+  - Articles come in a seeded shuffle, with no stratum or weight shown.
+  - Tried on the first article in that order, it fetched its three crops through `crops_for` in 5 s, and they match its text. No label was saved.
+  - `POLICY.md` writes `place_type`'s values with spaces, and the schema with underscores (`inn_or_hotel`). The page shows the first and saves the second.

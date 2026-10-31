@@ -6,7 +6,8 @@ Hard date: the site must be live on Oct 31.
 
 ## Next step
 
-**Phase 2C: the reader** (`BUILD-PLAN.md` section 4), once Phase 2B's PR is merged. It starts with `POLICY.md` and the gold set, split by story id (decision 36).
+**Phase 2C: the reader** (`BUILD-PLAN.md` section 4), on `phase-2c-reader`. Step 2C.1 has designed and drawn the gold set (decision 37): `POLICY.md`, then `eval/gold/split.json` and `HASH`, split from the training pool by the most inclusive grouping and a whole-text check, which `scripts/check_leakage.py` runs.
+- Next, 2C.2: label gold and dev by hand in `scripts/label_gold.py`'s page, before any model output, with a blind second pass on gold to measure agreement. Then freeze them. No label is made before the EM's review of 2C.1.
 - Lexicon v2 keeps all five rules (decision 31).
 
 Needs the owner's yes when we get there:

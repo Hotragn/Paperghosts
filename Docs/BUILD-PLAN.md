@@ -109,14 +109,16 @@ How the build runs: five phases, each split into milestones, each milestone with
 **Persona:** ML specialist.
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
    - Gold, dev and train split by the most inclusive grouping: connected components over eval A's links and the body probe's links (decisions 36 and 37). `scripts/check_leakage.py` compares whole texts too, and the training pool takes at most one printing per story.
+   - The draw (`scripts/gold_draw.py`, decision 37): 300 gold and 150 dev articles in 17 strata, each with its inclusion weight, in `eval/gold/split.json` and `HASH`. Dev has gold's design and is labelled by hand under `POLICY.md` too, so model selection aims at gold's truth.
    - The gold set's term strata include each of lexicon v2's five rules. That's how ouija, kept with 0 reports in its 6 sampled candidates, gets measured (decision 31).
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
    - And decision 31's two borderline kinds: a claim inside a narrative whose truth is doubtful, and a particular claim told inside a general essay. It confirms or overrules counting a first-person claim of communication with a named dead person, made in a lecture or an interview.
    - A story place that is only a town resolves from a county or state the text gives, or from its dateline. Otherwise it stays unresolved. It never falls back on the paper's state, which put 2 of decision 34's 9 towns in the wrong place. Measure the rule on the gold set.
-2. Build the labelling page.
-3. Label the gold set before seeing any model output.
+2. Build the labelling page (`scripts/label_gold.py`, local only).
+3. Label gold and dev before seeing any model output, with a blind second pass on gold to measure agreement. Then freeze them: `HASH` gains the labels' sha256.
 4. Teacher labels for the training pool, with the leakage check passing.
+   - The training draw comes from `split.json`'s pool, at most one printing per story, and `check_leakage.py` is extended to check that draw.
 5. Baselines: a keyword rule, and base 4B both zero-shot and few-shot.
 6. LoRA training on Tinker, iterating on the dev split until improvements stop. Each iteration is recorded.
 7. Eval B, ablations B1 to B10, and edge-case slices E1 to E14.
