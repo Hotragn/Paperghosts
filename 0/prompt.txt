@@ -1,0 +1,114 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2B.2 accepted; next is 2B.3, the reel-to-batch map and the page check.
+
+My review of 5b606c7: 311 passed and lint exits 0 on my re-run. I recounted geocoder.json from its 200 rows (194 → 196 right, 1 → 2 wrong pins, the same intervals), the dump hashes match the manifest, and the failure cases' GeoNames IDs check out in US.txt. Decision 34's in-sample flag and the 2D fresh draw are right.
+
+Norfolk and Portsmouth: keep the rule. The pin is loc.gov's catalogued place and the display keeps the printed name. Leave the answer key as it is. The "and" fix stays a 2D item, measured on the fresh draw.
+
+2B.3. Persona: data architect. Same branch, small commits.
+1. The map (decision 29, BUILD-PLAN 2B): reel → batch, from the batch paths in the candidates and samples. Report your own counts and reconcile them with decision 31's (about 367,000 covered; 27,817 candidates on 1,258 reels not).
+2. Validate by hiding whole issues. Hide every page of a held-out issue at once, so no prediction rests on a page of the same issue, and predict from the rest of its reel. Report the hit rate with a Wilson interval, overall and for flagged reels, and how many reels can't be tested.
+3. Flag every reel with more than one batch, with each batch's date range. For a sample, say which batch actually serves the image (info.json on each), and write the rule that picks one. The batch path wins wherever it exists.
+4. The page check, for a page located without a batch path, before its crop is shown. Measure it where the truth is known: a seeded sample of pages whose member frame or reel differs from the batch path's (it should reject them), and an equal sample where they agree (it should accept them). Try the scan's height and width against info.json first. Neighbouring frames can share a size, so if it falsely accepts more than a few percent, add a text check: the page's loc.gov OCR against the article's text, or one you propose. Report false accepts and false rejects, with intervals.
+5. loc.gov: one request at a time, at least 3.5 s apart, and each response cached with its URL, date and status. `page_service` gets its cache here. Plan the samples to about 600 requests, ask me before going over, and report what they took. No lookups for the 27,817 yet.
+
+Gate: tests and lint pass; the hidden-issue hit rate; every multi-batch reel flagged; the page check's error rates; decision 35; pushed and checked with `ls-remote`. The PR comes when 2B closes.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>byujlbmfz</task-id>
+<tool-use-id>toolu_01GQnU9TAnay3y4o2UgeuR2K</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/byujlbmfz.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the page check's calibration in the background" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bnw24hspu</task-id>
+<tool-use-id>toolu_01BZr6ZbjKYTtJXCtTDHj2Pp</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bnw24hspu.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the page check's calibration in the background" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b56mhdtin</task-id>
+<tool-use-id>toolu_01FmFuCAmz5JQ2BgmRngMyUV</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b56mhdtin.output</output-file>
+<status>completed</status>
+<summary>Monitor "the page check's calibration run finishing" stream ended</summary>
+<event>calibrate {'run': 'calibrate', 'sent': 77, 'by_host': {'tile.loc.gov': 77}, 'cache_hits': 0, 'errors_not_cached': 0} in all, with the probes: 81
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>ba8r0qqw7</task-id>
+<tool-use-id>toolu_016fHPvfZgjy96EJhvuMgLPQ</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/ba8r0qqw7.output</output-file>
+<status>completed</status>
+<summary>Monitor "the batch path's own frames run finishing" stream ended</summary>
+<event>frames {'run': 'frames', 'sent': 36, 'by_host': {'tile.loc.gov': 36}, 'cache_hits': 0, 'errors_not_cached': 0} in all, with the probes: 117
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bov0u0hj7</task-id>
+<summary>Monitor event: "the page check's measured run finishing"</summary>
+<event>[Monitor expired after 5m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bmbxvwpr1</task-id>
+<summary>Monitor event: "the page check's measured run finishing"</summary>
+<event>[Monitor expired after 5m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bncxejk3c</task-id>
+<summary>Monitor event: "the page check's measured run finishing"</summary>
+<event>[Monitor expired after 5m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b0c1b3fd9</task-id>
+<tool-use-id>toolu_0184d2r5aw8Fko4QsG72an2H</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b0c1b3fd9.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the page check's measurement in the background" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>by8qlaujd</task-id>
+<tool-use-id>toolu_016msWB2BbknqyFuUzDg8XbT</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/by8qlaujd.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait for the measured run to end and show its log" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bw92uthwo</task-id>
+<tool-use-id>toolu_01DRqL8Pq8ocDooVZTtWKoQ3</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bw92uthwo.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the flagged reels' info.json check in the background" completed (exit code 0)</summary>
+</task-notification>
