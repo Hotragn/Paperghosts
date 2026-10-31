@@ -1,0 +1,64 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2B accepted: PR #4 is merged into main as e350721 (a merge commit; the branch is kept). Start 2C on `phase-2c-reader`, branched from that main. Below: my review, my calls on your five items, three more calls, then 2C.1.
+
+**My review of 2B.4**
+- Tests and lint: 355 passed and lint is clean at 42c96c2.
+- The recount: I rebuilt the stories at 0.25 from `features.pkl` with `reprints.stories`, and scored the frozen set with my own counting. Every figure in decision 36's table reproduces, as do 974,399 stories and the 1,002,205-printing job.
+- The frozen set: its hash matches, and the file times show eval.json frozen at 22:21, before tuning ran at 22:32. Dev's labels never changed.
+- The frame rule and the CAPTCHA handling are right. A busy answer can't become "no such page".
+
+**Your five items**
+1. Stories, as you recommend.
+2. The body's links for the stories: in 2D, on a fresh draw, as planned. 2C's split can't wait, though: see B.
+3. Your mapping of decision 30's protocol is right, so no 600 extra full reads. Record one limitation in decision 36.
+   - The agents saw 400 words. By my count, 184 of the 318 joined pairs in the per-candidate, per-cluster and near-threshold strata have a printing longer than that (whitespace words, as `texts` cuts them).
+   - My check: I compared each pair's overlap past word 400 with its opening's, on unsampled five-word runs. I read the five lowest (eval-0040, 0052, 0217, 0261, 0576). All are one text, with OCR noise and shifted article boundaries; 0040 is two overlapping windows of one instalment.
+   - Reproduce the 184 and the comparison with a committed script, and record it as the EM's check. 2D's fresh draw shows full texts.
+4. Your three hard-case calls stand.
+5. Moot, since #4 is merged.
+
+**My calls from the review**
+A. **The reader reads every triaged candidate.** RDR-11 and ARCHITECTURE 3.2 require it.
+   - Why: decision 36's job (first printings, plus members at least 25% longer) skips 233,917 printings. 38,127 of them run past the 600 words the shingles see. "One story" allows paragraphs added at either end, so a local paragraph or another ending in a skipped member would never be read.
+   - Stories stay the unit for display and counts.
+   - A member whose reading differs from its first printing's becomes a report of its own, shown as printed inside its story. "Differs" means a report where the first printing has none, or another place, date or person. 2D counts these, and they double as false-merge candidates.
+   - Record this as the EM's call superseding decision 36's reader job, and fix the plan's 2C notes and the STATUS line on the reader.
+   - If step 10's Tinker credit check finds that every candidate doesn't fit, stop. Bring me the shortfall and the skip rule's loss, measured on a seeded draw of skipped members read beside their first printings. That trade-off is the owner's.
+B. **Split gold, dev and train by the most inclusive grouping, not by story id.** Use connected components over eval A's links plus the body probe frame's 55,711 links.
+   - Chaining only makes a split safer, and 76 of 80 body-probe pairs are one story sitting in different stories.
+   - `scripts/check_leakage.py` (RDR-4) compares whole texts directly, so it catches reprints no grouping linked. Justify its threshold on decision 36's labelled pairs.
+   - The training pool takes at most one printing per story, so a syndicated story can't outweigh the rest.
+C. **Add to the 2D notes: digits in the shingles,** measured on the fresh draw. eval-0508 (ocean-freight columns a year apart) has 0.267 of the shorter's shingles in the other, above the threshold. The tokens drop the figures that tell the two apart.
+
+**2C.1: the gold set's design.** Persona: ML specialist. Stop for my review before you label anything for gold.
+1. **`eval/gold/POLICY.md`**, committed before the draw and before any label (RDR-3).
+   - It settles the plan's cases:
+     - delusions and hallucinations, under one rule
+     - spirit control, and a felt presence of the dead
+     - decision 31's two borderline kinds
+     - a first-person claim of communication with a named dead person, made in a lecture or interview
+     - séance reports, reprinted fiction, hoax exposures and humour columns
+     - story places: a county or state the text gives, or the dateline, and never the paper's state
+   - The label schema is RDR-2's, and every value carries a verbatim quote.
+   - Each rule gets an example by article id, from eval A's and 2A's judged items. The draw excludes those articles and their groups.
+2. **The draw:** 150 to 300 candidates (RDR-1), seeded.
+   - Stratify by decade and by each of lexicon v2's five rules, so ouija is measured. Include near misses, so triage can be measured on gold.
+   - Size the strata so gold holds enough reports for field-level intervals. Say how many you expect, from eval A's rates. Record each item's inclusion weight, so population rates can be re-weighted.
+   - Gold, dev and the train pool are disjoint by B's grouping, and `check_leakage.py` passes on the split now.
+   - Say how big dev is and who labels it. Model selection should aim at the same truth gold does.
+   - Commit the draw's `split.json` and `HASH`.
+3. **The labelling page:**
+   - It runs locally only. It shows the OCR text beside its crops, fetched through `crops_for`, with POLICY's rules at hand.
+   - It has RDR-2's fields, with quote capture. The owner may re-check a sample in it later.
+   - Add a test that it serves a page and saves a label.
+
+**Gate**
+- Tests and lint pass.
+- Git order shows POLICY.md before the draw.
+- The draw's hash is committed, and the leakage check passes.
+- The calls above are recorded: a note in decision 36, and decision 37.
+- Pushed, and checked with `ls-remote`. No PR until 2C closes.
+- Report as before. The first line is `2C.1: GATE PASSED` or `2C.1: BLOCKED — <reason>`.
+
+Next, in 2C.2, you label gold yourself before any model output, with a blind second pass to measure agreement, then freeze it.
+</cross-session-message>
