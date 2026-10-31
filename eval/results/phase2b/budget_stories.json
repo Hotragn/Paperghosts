@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T18:24:29+00:00",
+ "generated_at": "2026-10-31T02:38:00+00:00",
  "pools": {
   "v1's candidates": {
    "reports": [
@@ -21,7 +21,7 @@
     {
      "article_id": "6_1904-05-28_p1_sn84020358_00271744432_1904052801_1153.json",
      "from": "eval A",
-     "printings": 13
+     "printings": 12
     },
     {
      "article_id": "1_1911-07-27_pna_sn92053934_00202198326_1911072701_0413.json",
@@ -39,10 +39,10 @@
      "printings": 7
     }
    ],
-   "stories_per_printing": 0.6076,
+   "stories_per_printing": 0.6085,
    "stories": {
-    "top": 44978,
-    "point": 22339
+    "top": 45046,
+    "point": 22372
    }
   },
   "the candidates v2 added": {
@@ -90,7 +90,7 @@
     {
      "article_id": "3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json",
      "from": "2A.8",
-     "printings": 3
+     "printings": 2
     },
     {
      "article_id": "15_1920-07-19_p1_sn85025007_00415664175_1920071901_0261.json",
@@ -125,7 +125,7 @@
     {
      "article_id": "8_1898-01-20_pNone_sn84029386_00295871477_1898012001_0669.json",
      "from": "screen",
-     "printings": 5
+     "printings": 3
     },
     {
      "article_id": "11_1919-11-15_p22_sn83030214_00206532452_1919111501_0468.json",
@@ -133,19 +133,19 @@
      "printings": 1
     }
    ],
-   "stories_per_printing": 0.802,
+   "stories_per_printing": 0.8196,
    "stories": {
-    "top": 16982,
-    "point": 10422
+    "top": 17356,
+    "point": 10652
    }
   }
  },
  "top_of_the_range": {
   "printings": 95203,
-  "stories": 61960,
+  "stories": 62402,
   "stories_at_v1s_ratio": 57744
  },
  "point": {
-  "stories": 32761
+  "stories": 33024
  }
 }

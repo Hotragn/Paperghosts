@@ -1,14 +1,15 @@
 """Stories per report printing, from the judged reports (BUDGET.md's third scenario).
 
 Each judged report is a printing drawn at random from its pool, so it counts as 1/k of a story
-when its v2 reprint cluster holds k printings. The ratio is the mean of 1/k, taken by pool:
+when its story holds k printings (decision 36's stories, at the tuned threshold; eval A's
+clusters before). The ratio is the mean of 1/k, taken by pool:
 - v1's candidates: eval A's 7
 - the candidates v2 added: 2A.8's 14, and the 3 of the screen's 4 that v2 makes candidates
 
 Writes eval/results/phase2b/budget_stories.json."""
 
 import json
-from concurrent.futures import ProcessPoolExecutor
+from collections import Counter
 from datetime import UTC, datetime
 
 from budget_probe import (
@@ -17,10 +18,8 @@ from budget_probe import (
     RESULTS,
     STORIES_PER_PRINTING,
     judged_reports,
-    year_keys,
 )
-
-from paperghosts.cluster.reprints import clusters
+from clusters import THRESHOLD, features, stories_at
 
 OUT = RESULTS / "phase2b" / "budget_stories.json"
 # the tops and the points of decision 27's and decision 31's estimates, in printings
@@ -35,30 +34,19 @@ POOLS = {
 
 
 def main():
-    counts = {
-        c["year"]: c["candidates"]
-        for c in (json.loads(p.read_text()) for p in (DATA / "counts").glob("*.json"))
-    }
-    years = sorted(y for y in counts if counts[y])
-    doc_keys, ids = [], []
-    with ProcessPoolExecutor(max_workers=6) as pool:
-        for _, found, named, _ in pool.map(year_keys, years):
-            doc_keys += found
-            ids += named
-    size_of = {}
-    for group in clusters(doc_keys, least=2):
-        for doc in group:
-            size_of[doc] = len(group)
-    index_of = {article: i for i, article in enumerate(ids)}
+    found = features()
+    story, _ = stories_at(found, THRESHOLD)
+    held = Counter(story)
+    size_of = {article: held[story[d]] for d, article in enumerate(found["ids"])}
     judged = judged_reports()
 
     pools = {}
     for name, pool in POOLS.items():
         reports = [
-            {"article_id": a, "from": source, "printings": size_of.get(index_of[a], 1)}
+            {"article_id": a, "from": source, "printings": size_of[a]}
             for source in pool["from"]
             for a in judged[source]
-            if a in index_of  # the screen's 1918 scout isn't a v2 candidate
+            if a in size_of  # the screen's 1918 scout isn't a v2 candidate
         ]
         ratio = sum(1 / r["printings"] for r in reports) / len(reports)
         pools[name] = {
