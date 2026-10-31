@@ -1,6 +1,6 @@
 # Gold labelling policy (RDR-3)
 
-These are the rules the gold set and the dev set are labelled by. This file was written and committed before the draw and before any label (decision 37). Every check of the reader rests on it. Version 2, dated below, was committed after the draw and before any label.
+These are the rules the gold set and the dev set are labelled by. This file was written and committed before the draw and before any label (decision 37). Every check of the reader rests on it. Version 2, dated below, was committed after the draw and before any label, and version 3 after the second pass and before the freeze.
 
 Each rule names an example by article id, from items eval A and lexicon v2 judged (decisions 27, 30 and 31). The draw leaves out version 1's examples and their groups. Version 2's new examples were checked to be outside gold and dev, their groups and their reprints. An example's label here is this policy's, which can differ from the earlier judgment: rule 2 changes one.
 
@@ -95,6 +95,7 @@ Each article gets exactly one kind:
     - 1849: give up the ghost (`10_1849-01-24_p1_sn83030313_0027174299A_1849012401_0108.json`)
     - 1813: haunt as a place frequented (`4_1813-03-18_pna_sn84024710_00414184261_1813031801_0085.json`)
     - 1849: a mirage's phantom island (`23_1849-08-20_pna_sn83030213_00206530297_1849082001_0531.json`)
+    - *spirit*, *spirits* or *medium* in an ordinary sense (a mood, a character, a means) is no figure of speech about ghosts, so `other`: "in good spirits", "the spirit of the law", "an advertising medium".
 11. **Religious** matter is `religious`:
     - 1876: the Holy Ghost at a Moody revival (`11_1876-04-12_pna_sn83030214_00206531253_1876041201_0089.json`)
     - 1882: the Holy Ghost in a Mormon sermon (`1_1882-06-20_pna_sn85058130_00206534357_1882062001_0628.json`)
@@ -108,6 +109,7 @@ Each article gets exactly one kind:
     - 1854: a book advertisement's illustration titled Paul's Ghost (`14_1854-06-12_p1_sn86053546_00415660984_1854061201_0572.json`)
     - 1904: Ibsen's Ghosts announced at the theater (`2_1904-12-16_p1_sn2001063112_00415624694_1904121601_0669.json`)
     - A medium's or clairvoyant's card is `advert` too, though it promises messages from the dead.
+    - So is a society's or a medium's display notice of its meetings and messages. News of a sitting to come stays rule 4's `other`.
 13. **Names, titles, social events and accidents** are `other`:
     - a play, book, ship, horse or person named Ghost or Phantom:
       - 1863: the rebel steamer Phantom (`7_1863-08-31_p1_sn86059058_00296022019_1863083101_0699.json`)
@@ -209,4 +211,7 @@ Labels are saved one JSON object per article, in `eval/gold/labels.jsonl` and `e
   - which item gives a merged article's fields (rule 16)
   - `place_type` in the schema's values
   - the label record's `slices`
+- **Version 3, 2026-10-31,** after the blind second pass and before the freeze (decision 38): two clarifications its rulings settled, which every label already follows:
+  - rule 10: *spirit* or *medium* in an ordinary sense is `other`, not `idiom`
+  - rule 12: a display notice of meetings and messages is `advert`
 - The split records version 1's sha256, `5bb4d07…27de`, the policy it was drawn under.
