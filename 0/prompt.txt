@@ -1,0 +1,174 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2C.3: the re-ruling is accepted. The label sha256s match HASH at 35e8a53, and taking the blind rulings in 28 of 30 was the right call. I'm asking the owner for the Tinker balance. Until then, work only on items that spend under $10 in all.
+
+1. RDR-9: amend the SRS to calibrate the verifier on dev, with the reason. Approved.
+2. Teacher round 3 on dev. Kind at 112/150 (75%) is too weak to train on; seen at 7 and people at 6 are weaker still.
+   - Commit the kind confusion matrix for rounds 1 and 2 and target its biggest cells, along with seen and people.
+   - Watch for overfitting to dev's 150: write each prompt change as a general rule from POLICY, never an article-specific hint, and note which articles motivated it.
+   - Report every round with Wilson intervals.
+   - Stop when a round gains less than its interval's width.
+3. Caching: once billing catches up, confirm from the billing records whether the shared policy prefix was actually cached. The 4× range in every projection rests on it.
+4. Price a free path for the full pass. Plan step 9 already exports the reader for offline use.
+   - Measure base Qwen3.5-4B's local throughput on this Mac (MLX or llama.cpp, whichever step 9 will use): articles an hour with batching, on the same seeded 50 the credit check used, with the 948-token instructions.
+   - Project the 1,236,122 candidates in days of machine time. That uses no credits, so the full pass could run locally after the LoRA is trained on Tinker.
+   - If accuracy differs between Tinker and local inference (quantization), it gets measured on dev in step 9. For now, just note it.
+5. Don't start the 3,000-article teacher run or the skip-rule measure until I send the owner's answer.
+
+Commit, push and verify with ls-remote. Your report's first line is `2C.3 interim: <summary>`.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>buivcb7wh</task-id>
+<tool-use-id>toolu_01HyjMt9UnaTk5dmKheGuEmr</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/buivcb7wh.output</output-file>
+<status>completed</status>
+<summary>Monitor "round 3 finish" stream ended</summary>
+<event>r3 done</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bnzg5ri3u</task-id>
+<summary>Monitor event: "round 3 and local throughput"</summary>
+<event>exit 0
+{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bl61xmlz9</task-id>
+<summary>Monitor event: "local throughput results"</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>br9kc1ugc</task-id>
+<summary>Monitor event: "local throughput lines"</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bpaygbf98</task-id>
+<tool-use-id>toolu_01GhDysCitw66KXXjh4GRPQh</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bpaygbf98.output</output-file>
+<status>completed</status>
+<summary>Monitor "both runs (r3 and local)" stream ended</summary>
+<event>ready</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>byp2pewx8</task-id>
+<tool-use-id>toolu_018DTLpfWkZJ6nsPdABHhUJR</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/byp2pewx8.output</output-file>
+<status>completed</status>
+<summary>Monitor "local throughput first result" stream ended</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bc4p1b3j4</task-id>
+<tool-use-id>toolu_01SybADMDskh6zT8fmW7mmDu</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bc4p1b3j4.output</output-file>
+<status>completed</status>
+<summary>Monitor "local throughput first line" stream ended</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>br9kc1ugc</task-id>
+<summary>Monitor event: "local throughput lines"</summary>
+<event>{'concurrent': 4, 'wall_seconds': 201.1, 'articles_per_hour': 895, 'prompt_tokens': 59046, 'output_tokens': 3639, 'full_pass_days': 57.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bl61xmlz9</task-id>
+<summary>Monitor event: "local throughput results"</summary>
+<event>{'concurrent': 4, 'wall_seconds': 201.1, 'articles_per_hour': 895, 'prompt_tokens': 59046, 'output_tokens': 3639, 'full_pass_days': 57.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bnzg5ri3u</task-id>
+<summary>Monitor event: "round 3 and local throughput"</summary>
+<event>{'concurrent': 4, 'wall_seconds': 201.1, 'articles_per_hour': 895, 'prompt_tokens': 59046, 'output_tokens': 3639, 'full_pass_days': 57.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bbl6hl02f</task-id>
+<tool-use-id>toolu_01XEZQftorfBdgEK4BDFHDCY</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bbl6hl02f.output</output-file>
+<status>completed</status>
+<summary>Monitor "local concurrent runs" stream ended</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}
+{'concurrent': 4, 'wall_seconds': 201.1, 'articles_per_hour': 895, 'prompt_tokens': 59046, 'output_tokens': 3639, 'full_pass_days': 57.6}</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bpkhb1z3e</task-id>
+<tool-use-id>toolu_01CtLJDYyBHBRqTWLrbCJmoM</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bpkhb1z3e.output</output-file>
+<status>completed</status>
+<summary>Background command "Measure local 4B throughput at one, four and eight requests at once" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>br9kc1ugc</task-id>
+<summary>Monitor event: "local throughput lines"</summary>
+<event>{'concurrent': 8, 'wall_seconds': 206.1, 'articles_per_hour': 873, 'prompt_tokens': 59046, 'output_tokens': 3762, 'full_pass_days': 59.0}
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bl61xmlz9</task-id>
+<summary>Monitor event: "local throughput results"</summary>
+<event>{'concurrent': 8, 'wall_seconds': 206.1, 'articles_per_hour': 873, 'prompt_tokens': 59046, 'output_tokens': 3762, 'full_pass_days': 59.0}
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bnzg5ri3u</task-id>
+<summary>Monitor event: "round 3 and local throughput"</summary>
+<event>{'concurrent': 8, 'wall_seconds': 206.1, 'articles_per_hour': 873, 'prompt_tokens': 59046, 'output_tokens': 3762, 'full_pass_days': 59.0}
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b6l3bsz0x</task-id>
+<tool-use-id>toolu_01H7e55yy4yyPfq2Gqhuo4Ub</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b6l3bsz0x.output</output-file>
+<status>completed</status>
+<summary>Monitor "local run at 8 at once" stream ended</summary>
+<event>{'concurrent': 1, 'wall_seconds': 421.4, 'articles_per_hour': 427, 'prompt_tokens': 59046, 'output_tokens': 3795, 'full_pass_days': 120.6}
+{'concurrent': 4, 'wall_seconds': 201.1, 'articles_per_hour': 895, 'prompt_tokens': 59046, 'output_tokens': 3639, 'full_pass_days': 57.6}
+{'concurrent': 8, 'wall_seconds': 206.1, 'articles_per_hour': 873, 'prompt_tokens': 59046, 'output_tokens': 3762, 'full_pass_days': 59.0}
+exit 0</event>
+</task-notification>
