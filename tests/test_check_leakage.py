@@ -2,11 +2,12 @@
 texts; a shared stock phrase or a quoted paragraph doesn't. A group of the inclusive grouping
 that spans the split fails it."""
 
+import hashlib
 import json
 
 import check_leakage
 import zstandard
-from check_leakage import between, crossings, flagged, leaks, runs
+from check_leakage import between, crossings, flagged, hashes_hold, leaks, runs
 
 STORY = " ".join(
     f"word{chr(97 + i % 26)}{chr(97 + i // 26 % 26)}{chr(97 + i // 676)}"
@@ -82,3 +83,22 @@ def test_a_group_that_holds_gold_and_the_pool_or_gold_and_dev_crosses_the_split(
         )
         == []
     )
+
+
+def test_hash_lists_its_files_by_name_and_each_must_match(tmp_path):
+    def sha(path):
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
+    (tmp_path / "split.json").write_text("{}")
+    (tmp_path / "labels.jsonl").write_text("a\n")
+    listed = tmp_path / "HASH"
+    listed.write_text(
+        f"{sha(tmp_path / 'split.json')}  split.json\n"
+        f"{sha(tmp_path / 'labels.jsonl')}  labels.jsonl\n"
+    )
+    assert hashes_hold(listed)
+
+    (tmp_path / "labels.jsonl").write_text("b\n")
+    assert not hashes_hold(listed)
+    listed.write_text(f"{sha(tmp_path / 'labels.jsonl')}  labels.jsonl\n")
+    assert not hashes_hold(listed)  # split.json must be among them

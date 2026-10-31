@@ -8,7 +8,7 @@ random reservoir stays out of training, since eval B screens it for recall.
             article shares at least FEWEST of its whole text's five-word runs, and LEAK of the
             shorter's, with a gold or dev article, and gold shares none so with dev. No gold or
             dev article is a POLICY.md example, in an example's group or a reprint of one, and
-            HASH matches.
+            each file HASH lists, the split and from 2C.2 the frozen labels, matches it.
             Written to eval/results/phase2c/leakage.json.
   justify   the threshold, on decision 36's labelled pairs, in
             eval/results/phase2c/leakage_threshold.json
@@ -89,6 +89,20 @@ def frame(root: Path = ROOT) -> dict:
         for doc in members:
             group[doc] = first
     return {"ids": ids, "dates": dates, "group": group, "candidates": len(found["ids"])}
+
+
+def hashes_hold(listed: Path = HASH) -> bool:
+    """Whether each file HASH lists by name, split.json among them, has the sha256 it lists."""
+    found = {
+        name: sha
+        for sha, name in (
+            line.split() for line in listed.read_text().splitlines() if line.strip()
+        )
+    }
+    return "split.json" in found and all(
+        hashlib.sha256((listed.parent / name).read_bytes()).hexdigest() == sha
+        for name, sha in found.items()
+    )
 
 
 def examples(root: Path = ROOT) -> set:
@@ -225,9 +239,7 @@ def check(root: Path = ROOT) -> dict:
     shown |= whole_texts(
         root, named - shown.keys(), sorted((root / ARCHIVE).glob("*.jsonl.zst"))
     )
-    hashed = (
-        HASH.read_text().split()[0] == hashlib.sha256(SPLIT.read_bytes()).hexdigest()
-    )
+    hashed = hashes_hold()
     result = {
         "gold": len(gold),
         "dev": len(dev),
