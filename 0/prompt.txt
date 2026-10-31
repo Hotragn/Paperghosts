@@ -1,0 +1,287 @@
+<task-notification>
+<task-id>b4dpu164j</task-id>
+<tool-use-id>toolu_01MqPAXmKjg3SDCbZj9m7DNK</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b4dpu164j.output</output-file>
+<status>completed</status>
+<summary>Background command "Download the Qwen3.5-4B weights for local LoRA timing" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+The owner has decided: no Tinker spend at all, and step 2C runs locally. They want to see what that costs in quality. Finish the spend-stopped report first, with today's Tinker total. Then re-plan 2C.3 onward on this Mac.
+
+Machine constraints, which I checked: Apple M4, 24 GB of unified memory, 30 GB of free disk (94% used).
+- No model download may take free disk below 15 GB.
+- Delete nothing to make room without the owner's yes. The installed gemma4 models are the owner's.
+
+1. **The local teacher.** Candidates are whatever fits in about 18 GB: gemma4:26b-a4b-it-qat (installed, MoE), a Qwen3.5 MoE around 30B-A3B at 4-bit if it fits, and a dense 27B only if it's fast enough.
+   - Run each on dev with round 3's prompt, with thinking on and off.
+   - Score kind, report-or-not, report recall on dev's 32 and each field, with Wilson intervals, after the verifier.
+   - Report the time per article and the projected hours for the training draw. Use Ollama's prefix reuse, since the policy prefix is about 9k tokens.
+2. **The quality cost, shown side by side** in `eval/results/phase2c/teacher_local.json` and a table in BUDGET.md: the best local teacher against Tinker's 397B round 3 (kind 112/150, recall 23/32) and the 397B thinking run's partial results.
+   - Say plainly which differences are inside the intervals.
+   - This is the comparison the owner asked for. The final quality figure is eval B on gold, student against student.
+3. **Training locally:** mlx-lm LoRA on Qwen3.5-4B. Measure the time per epoch on 3,000 examples and the peak memory, and check that the adapter loads in the reader the full pass will use.
+4. **The full pass locally,** with the student's short prompt. Measure throughput on the same 50 and project the days. Plan it to resume from checkpoints, never lose work, and log progress, since it may run for days.
+5. **Free levers for quality,** each measured on dev before it's adopted:
+   - majority vote over local samples
+   - routing only the teacher's uncertain or report-ish articles to a slower thinking pass
+   - the draw's size
+   
+   Gold stays untouched until eval B.
+6. Training labels must come from the local open-weight teacher, never from Claude or from the reading agents. Gold and dev are for evaluation only.
+7. Update BUDGET.md and the plan's 2C steps to the local path, and record the decision as decision 39, the owner's call. The article will disclose it.
+
+Gate for 2C.3 stays as before, with a local teacher. Your report's first line is `2C.3: GATE PASSED` or `2C.3: BLOCKED — <reason>`. Before the long teacher run starts, send me an interim report with the teacher comparison. I'll approve the teacher choice before hours of compute go in.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bnzg5ri3u</task-id>
+<summary>Monitor event: "round 3 and local throughput"</summary>
+<event>[Monitor expired after 30m with 3 events delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bl61xmlz9</task-id>
+<summary>Monitor event: "local throughput results"</summary>
+<event>[Monitor expired after 30m with 3 events delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>br9kc1ugc</task-id>
+<summary>Monitor event: "local throughput lines"</summary>
+<event>[Monitor expired after 30m with 3 events delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bk5639oh1</task-id>
+<tool-use-id>toolu_01SMoEyEbwup5MbQYkdCfixA</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bk5639oh1.output</output-file>
+<status>completed</status>
+<summary>Background command "Time the short prompt locally, then test Ollama's prefix reuse" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b24l83ajx</task-id>
+<tool-use-id>toolu_01KBJTJD8pscdu5ZKFEpivM2</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b24l83ajx.output</output-file>
+<status>completed</status>
+<summary>Monitor "prefix run done" stream ended</summary>
+<event>},
+"prefix": {
+"long_prompt_tokens_evaluated": 1449.92,
+"long_prompt_seconds": 5.4522545542600005,
+"short_prompt_tokens_evaluated": 687.92,
+"short_prompt_seconds": 4.11145909174
+}
+}
+exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bfjeijo0q</task-id>
+<summary>Monitor event: "local chain steps"</summary>
+<event>16:16:11 prefix done</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>b9nx7abjn</task-id>
+<tool-use-id>toolu_01QTKdzzbKGtw4UcyHCUguVQ</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b9nx7abjn.output</output-file>
+<status>completed</status>
+<summary>Monitor "Ollama prefix run" stream ended</summary>
+<event>"output_tokens": 3991,
+"full_pass_days": 136.1,
+"instruction": "Label this newspaper article for the ghost-report archive. Answer with the label's JSON."
+},
+"prefix": {
+"long_prompt_tokens_evaluated": 1449.92,
+"long_prompt_seconds": 5.4522545542600005,
+"short_prompt_tokens_evaluated": 687.92,
+"short_prompt_seconds": 4.11145909174
+}
+}
+exit 0</event>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+About the prefix test, for when the chain finishes (don't interrupt it): 688 tokens in 4.11 s is about 170 tokens a second of prefill for a 4B at 4-bit on an M4. That's several times below what the chip should manage, and the fixed cost per request you spotted points to overhead, not compute. Before any full-pass projection goes into BUDGET.md or decision 39, find the cause:
+1. In Ollama: check whether the model reloads between requests (keep_alive, `ollama ps`), whether num_ctx allocates a huge context each time, and whether parallel slots are splitting it. Read prompt_eval_duration against load_duration in the API's response.
+2. In mlx-lm directly, with the 4B weights already downloaded: measure prefill tokens per second on the same 50 with the short prompt, then batched generation, and its prompt cache for the shared instruction prefix.
+3. Project the full pass from the fastest path that gives the same answers. Check agreement between the two runtimes on the 50 (kind and JSON). Record each figure with its settings.
+
+Same for gemma4 as the teacher: if its per-request overhead is the same, the teacher run's hours estimate is wrong too.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bfjeijo0q</task-id>
+<summary>Monitor event: "local chain steps"</summary>
+<event>16:20:04 short rerun exit 0</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>byc267vys</task-id>
+<summary>Monitor event: "thinking round and local runs"</summary>
+<event>[Monitor expired after 30m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bfjeijo0q</task-id>
+<summary>Monitor event: "local chain steps"</summary>
+<event>[Monitor expired after 30m with 2 events delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bffcy1yv3</task-id>
+<summary>Monitor event: "local chain steps"</summary>
+<event>16:57:18 gemma think off exit 0</event>
+</task-notification>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+About gemma4 with thinking off: before anyone concludes from outcome at 5/24, read its 19 misses. A drop that steep, next to place state at 22/24, usually means a format fault: an outcome value outside the schema's four (case, a synonym, "unknown" against null), or the verifier dropping a quote. Report how many misses are format and how many are judgment, and score it again with the format normalised to the schema, keeping both numbers. Do the same check for the 397B's place state at 13/23. Then carry on with thinking on.
+</cross-session-message>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Interim 3 reviewed, and the format finding is good. One condition: reading bare strings as schema values is fine for scoring. But a training label still needs each value's verbatim quote, and a bare string has none. So the fix belongs in gemma4's prompt, as in the 397B's round 2: one worked example of the value-plus-quote shape, as a general rule.
+- Run gemma4 again with it, after thinking on. Report the quote-bearing scores, which are the ones that count for choosing the teacher.
+- Training labels never use the scorer's normalisation; a value without a verified quote is dropped.
+Then send the comparison and the timings, and I'll pick the teacher.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bffcy1yv3</task-id>
+<summary>Monitor event: "local chain steps"</summary>
+<event>[Monitor expired after 30m with 1 event delivered. Re-arm it if you still need the watch.]</event>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bp62shk57</task-id>
+<tool-use-id>toolu_01AWukw35JDxuJqkxrCXFnXx</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bp62shk57.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait for the gemma thinking-on run to finish" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bh1gvki0j</task-id>
+<tool-use-id>toolu_01GHaj2249Z3rcNRxPRyP4h6</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bh1gvki0j.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the local measurement chain in the background" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>blicmuuvu</task-id>
+<tool-use-id>toolu_017CUoiqsSdWGXLZWwqoAPn1</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/blicmuuvu.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait for the LoRA timing to finish" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>bb79eqzmi</task-id>
+<tool-use-id>toolu_01S4WAd6wGyAvYQ8j8KJpRPF</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bb79eqzmi.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the second measurement chain after the first finishes" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+<cross-session-message from="local_cbd6aed2-f42a-4724-8982-8a86e51899ae" from-name="btw: My mac is stucking, can I stop ollama">
+PAUSE all local model work: the owner's Mac was freezing. I've stopped Ollama (and its llama-server) and killed `runtime_check.py mlx agree`. Don't restart Ollama, mlx or any GPU job until the owner says to resume. When you do resume, run one model at a time with lower memory use (a smaller num_ctx and fewer parallel requests), and keep the chain resumable so nothing finished is lost.
+</cross-session-message>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Yes, restart `ollama serve` in the background on 127.0.0.1, with the same defaults plus OLLAMA_MAX_LOADED_MODELS=1. I'm telling the owner. If they say they quit it on purpose, stop everything at once.
+
+Rules from here, because the crash came from running gemma4 (about 15 GB) and an mlx job side by side on 24 GB:
+1. Exactly one model process at a time, Ollama or mlx, never both. Before you start a job, check that the other's memory is released: `ollama stop <model>` and `ollama ps` empty. Run it from one script that does that.
+2. Thinking on, at 2.4–8.1 minutes an article, can't label 3,000 articles in reasonable time. Don't finish the full thinking run on dev.
+   - Keep the 6 articles it did, and use thinking only as the routing lever: the articles gemma4 is unsure about, or calls report-ish, read again with thinking.
+   - Measure that on dev later, on the routed subset only.
+3. Order:
+   - a. the quote-rule rerun of gemma4 with thinking off, saving and resuming
+   - b. the runtime check: mlx-lm prefill and batching on the 4B, with Ollama's model unloaded
+   - c. the LoRA timing
+4. Commit 11c054f's tests once memory is free. Report when a–c are in.
+</cross-session-message>
+
+---
+
+<cross-session-message from="local_cbd6aed2-f42a-4724-8982-8a86e51899ae" from-name="btw: My mac is stucking, can I stop ollama">
+PIVOT, from the owner: Week 4 is submitted TONIGHT. The deadline is 11:59 PM PDT, which is 02:59 EDT; it is now about 17:45 EDT. Park 2C.3 where it is, committed. The new goal is a working demo and a numbers sheet by 01:00 EDT. I'm writing the article myself. The Mac froze earlier, so there's one rule: no Ollama or mlx runs except step 3, run once, alone, with num_ctx 4096 and 1 request at a time. Lowest priority (nice) for anything heavier than a script.
+
+Build this on a new branch `submission`, cut from phase-2c-reader. Commit in small steps and push.
+
+1. **The Morgue, a static demo (top priority, done by 22:30).**
+   - `scripts/export_demo.py` writes `web/public/reports.json` from the frozen gold and dev labels whose kind is `report`, about 78.
+   - Each entry: article id, paper, date, the place and its state, seen, outcome, people, each with its verified quote, the headline, the full OCR text, and the loc.gov page and crop URL from `crops_for`'s cache. Don't fetch anything new.
+   - `web/` renders it as a static Vite build, with no API and no DB:
+     - search by town, state or word, and filter by decade and outcome
+     - each report as a card: the clipping image beside its transcription, quotes highlighted in the text, and "not stated" where a field has no quote
+     - a footer on how it was made: hand-labelled under POLICY.md with a blind second pass, and the reader is still being trained
+   - Accessible, works at phone width, with a newspaper-morgue look per UI-IDEAS.md. Take it as far as time allows.
+   - `pnpm --dir web build` must pass, and `make lint` and the tests too.
+   - Add a launch.json-ready `pnpm --dir web preview` command. Nothing deploys: going public waits for the owner's yes.
+2. **The numbers sheet: `scripts/numbers.py`** prints every number the article may use, each with its source file, and writes `eval/results/numbers.json`:
+   - the corpus and candidates (1,236,122), lexicon v1 against v2, eval A's results
+   - stories and reprints (decision 36's figures), the reservoir
+   - gold and dev (300/150, 17 strata, 46 gold reports, the weighted rate with its interval), agreement (271/300, κ 0.88), and the blind re-ruling (28 of 30)
+   - the teachers on dev: 397B round 3 against gemma4, before and after the format fix
+   - the Tinker spend, local throughput, and the test count
+   
+   One command reproduces it all. I will quote only from this file.
+3. **The live reading demo (after 1 is done, about 22:30).** `scripts/read_one.py <article_id>`: gemma4:26b, local, the round-3 prompt plus the value-and-quote example. It prints each field, its quote, and VERIFIED or NOT STATED from the verifier.
+   - Run it on 3 dev reports, using dev only.
+   - Save the outputs to `docs/demo/` as text, and take terminal screenshots if you can.
+   - Then `ollama stop` the model.
+4. **The README** for judges: what it is, how to run the demo (`pnpm --dir web preview`), how to reproduce the numbers, the data source and licence (AmericanStories and loc.gov), and the open-weight models used.
+5. **Release hygiene:**
+   - Run the secret scan over the whole history and the recorded Entire sessions, as the 5A item says.
+   - Redact the other local account's process list from step 1.7's Entire logs.
+   - Report anything that blocks making the repo public. Don't make it public: that's the owner's call.
+
+Send me a short report when 1 and 2 are pushed, with the first line `SUBMISSION: DEMO READY at <sha>`, then another after 3–5.
+</cross-session-message>
