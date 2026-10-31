@@ -1,0 +1,12 @@
+{
+ "kind": "printed in: where the papers were printed, not where the stories happened",
+ "printed_in_towns": 46,
+ "geocoded": 46,
+ "missed": [],
+ "reports_covered": 55,
+ "inserted": 46,
+ "places_in_collection": 46,
+ "storage_kb": 4.0,
+ "gazetteer_load_seconds": 3.4,
+ "source": "geonames dumps of 2026-10-30"
+}
