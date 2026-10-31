@@ -1,0 +1,41 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M69PCNVRXPX8DD1EWAHB57JF",
+  "strategy": "manual-commit",
+  "branch": "phase-2c-reader",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "Docs/DECISIONS.md",
+    "eval/gold/HASH",
+    "eval/gold/adjudication.jsonl",
+    "eval/gold/dev_labels.jsonl",
+    "eval/gold/labels.jsonl",
+    "eval/results/phase2c/blind_rulings.json",
+    "eval/results/phase2c/gold_measures.json",
+    "scripts/blind_rulings.py",
+    "tests/test_blind_rulings.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 68,
+    "cache_creation_tokens": 47409,
+    "cache_read_tokens": 24916651,
+    "output_tokens": 20603,
+    "api_call_count": 34,
+    "subagent_tokens": {
+      "input_tokens": 36,
+      "cache_creation_tokens": 154003,
+      "cache_read_tokens": 1507661,
+      "output_tokens": 42081,
+      "api_call_count": 17
+    }
+  }
+}

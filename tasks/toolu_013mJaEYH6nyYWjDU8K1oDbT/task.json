@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_013mJaEYH6nyYWjDU8K1oDbT",
+  "agent_id": "a7fccbbfe7dd2ef9a",
+  "subagent_type": "general-purpose",
+  "task_description": "Blind rulings, case packet 04",
+  "token_usage": {
+    "input_tokens": 14,
+    "cache_creation_tokens": 110395,
+    "cache_read_tokens": 553322,
+    "output_tokens": 11551,
+    "api_call_count": 7
+  },
+  "started_at": "2026-10-31T15:12:31.110168-04:00",
+  "completed_at": "2026-10-31T15:14:29.073426-04:00"
+}
