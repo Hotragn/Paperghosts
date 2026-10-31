@@ -37,7 +37,12 @@ def one(row: dict, model: str, system: str, think: bool = False) -> dict:
         ],
         "stream": False,
         "think": think,
-        "options": {"temperature": 0, "num_predict": 4096, "num_ctx": 16384},
+        # thinking off fits in 12,288: dev's longest prompt is 11,294 tokens and its longest answer 334
+        "options": {
+            "temperature": 0,
+            "num_predict": 4096 if think else 1024,
+            "num_ctx": 16384 if think else 12288,
+        },
     }
     answer = httpx.post(URL, json=body, timeout=1800).json()
     return {
@@ -45,7 +50,7 @@ def one(row: dict, model: str, system: str, think: bool = False) -> dict:
         "answer": final(answer.get("message", {}).get("content", "")),
         "prompt_tokens": answer.get("prompt_eval_count", 0),
         "output_tokens": answer.get("eval_count", 0),
-        "hit_limit": int(answer.get("eval_count", 0) >= 4096),
+        "hit_limit": int(answer.get("eval_count", 0) >= (4096 if think else 1024)),
         "model": model,
         "thinking": think,
         "thinking_chars": len(answer.get("message", {}).get("thinking") or ""),
