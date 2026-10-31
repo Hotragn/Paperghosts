@@ -1,0 +1,33 @@
+search: 'apparition', fuzzy up to 2 edits
+  1887-01-13  HEADLESS HORSEMAN.
+    Ceredo advance. [volume] (Ceredo, W. Va.) 1885-1939
+    story place: a lumber camp on Cheat River, Tucker County   score 2.55
+    matched: Apparition, apparition
+  1850-05-22  THE COCK LAIN GHOST.
+    Staunton spectator. [volume] (Staunton, Va.) 1849-1896
+    story place: Mr. Parsons's house in Cock Lane, London   score 2.54
+    matched: apparilion
+  1871-03-10  A GHOST AT COLLEGE.
+    The evening telegraph. [volume] (Philadelphia [Pa.]) 1864-1918
+    story place: the Brinkley Female College, South Memphis   score 2.23
+    matched: APPARITIoN, Appar'tIon, apparition
+  1879-04-11  "THE HAUNTED HOUSE,
+    The Cambria freeman. [volume] (Ebensburg, Pa.) 1867-1938
+    story place: the Foos mansion, Springfield, Ohio   score 2.19
+    matched: apparitiOn, apparitiOns, apparition
+  1883-11-17  II parait que Pesplit de Ouiteau
+    The Meridional. (Abbeville, La.) 1856-1906
+    story place: la prison de Washington   score 1.71
+    matched: apparitions
+5 found in 837 ms
+
+search: 'Philadelphia', fuzzy up to 2 edits
+  1846-12-03  ErfItrs o. RtgpRsE.-d WDTdcfsd WDs.-M1sef,
+    Richmond daily Whig. [volume] (Richmond, Va.) 1842-1861
+    story place: his cell, Philadelphia   score 4.28
+    matched: Philadelphia
+  1906-10-14  Ghost Taxes Visible Form.
+    The Washington times.
+    story place: the Taft sisters' rooms, 2025 South Broad street, Philadelphia   score 1.02
+2 found in 594 ms
+
