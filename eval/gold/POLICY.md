@@ -1,8 +1,8 @@
 # Gold labelling policy (RDR-3)
 
-These are the rules the gold set and the dev set are labelled by. This file was written and committed before the draw and before any label (decision 37). Every check of the reader rests on it.
+These are the rules the gold set and the dev set are labelled by. This file was written and committed before the draw and before any label (decision 37). Every check of the reader rests on it. Version 2, dated below, was committed after the draw and before any label.
 
-Each rule names an example by article id, from items eval A and lexicon v2 judged (decisions 27, 30 and 31). The draw leaves out those articles and their groups. An example's label here is this policy's, which can differ from the earlier judgment: rule 2 changes one.
+Each rule names an example by article id, from items eval A and lexicon v2 judged (decisions 27, 30 and 31). The draw leaves out version 1's examples and their groups. Version 2's new examples were checked to be outside gold and dev, their groups and their reprints. An example's label here is this policy's, which can differ from the earlier judgment: rule 2 changes one.
 
 ## What is labelled
 
@@ -62,6 +62,10 @@ Each article gets exactly one kind:
    - **A narrative printed as fact** is a report when it tells a particular claim, even if its truth is doubtful. The outcome is `unknown` unless the text says more.
      - 1857: in the Picaud ("real Monte Cristo") narrative, printed as true, the dying Allut says he has seen and spoken with a soul separated from its body (`1_1857-04-02_p1_sn83025802_00295862026_1857040201_0270.json`): report.
      - Told as a tale, with a title, a narrator and literary framing, the same matter is `fiction` (rule 9).
+   - **Where rules 6 and 9 meet,** these are the signals:
+     - Printed as fact: a dateline, an attributed source, or a named witness.
+     - A tale: a literary title, a narrator's framing, extended dialogue, or a moral.
+     - Where they conflict, the text's own framing decides, and the note says so.
    - **An essay, letter, sermon or editorial** is a report when it tells a particular claim: a named person, an occasion.
      - 1907, Winnemucca: an editorial reports the claim that the dead Professor Hodgson has communicated, as he promised (`3_1907-02-23_p1_sn86076224_00332890414_1907022301_0155.json`): report.
    - **One about ghosts or spiritualism in general, with no particular claim,** is `other`:
@@ -126,7 +130,7 @@ Each article gets exactly one kind:
     - 1880: a fugitive whose wife is a medium (`7_1880-09-18_p2_sn88064592_00280761862_1880091801_0568.json`)
     - 1884: a sorceress's failed love charm in a fraud suit (`20_1884-04-22_p1_sn82014424_00211102858_1884042201_0394.json`)
 16. **Merged articles** (segmentation errors): when the article holds several items, it is labelled by its items.
-    - If any item is a report, the kind is `report`, and the fields come from that item.
+    - If any item is a report, the kind is `report`, and the fields come from that item. Where several items are reports, they come from the one that holds the lexicon's match, else the first.
     - Otherwise the kind is the one of the item that holds the lexicon's match.
     - The note says `merged`.
 17. **Garbled OCR:** label what can be read, using the crop where the OCR is unclear.
@@ -134,6 +138,17 @@ Each article gets exactly one kind:
     - 1863: a German text too garbled to read (`24_1863-06-11_p1_sn87058145_00295875616_1863061101_0188.json`).
 18. **Non-English text** follows the same rules, and its quotes stay in its own language.
     - 1889: a French text whose match is figurative (`9_1889-08-01_p1_sn83045239_0029587661A_1889080101_0339.json`): `idiom`.
+19. **Spirit-adjacent claims.**
+    - **Dreams and visions** in which a dead or dying person is claimed to appear or communicate, on a particular occasion, are a report. An ordinary or prophetic dream with no spirit claimed is `other`.
+    - **Omens and death warnings** told as having happened, and tied to a particular death or place, are a report: knocks, a banshee, a phantom funeral, a death light.
+      - A list of superstitions in general is `other`. 1853: a Greek burial custom for the spirit that lingers, with no manifestation (`2_1853-08-24_pna_sn85038115_00296027509_1853082401_0232.json`).
+      - So is an omen read into a natural event. 1913, Chester: a whale in Delaware Bay is taken for a precursor of war (`7_1913-07-29_p1_sn86069163_00202195854_1913072901_0312.json`).
+    - **Poltergeist doings** are a report: stones thrown, things moved, knockings, put down to a ghost or spirit or told as a haunting.
+    - **Clairvoyance, second sight, premonition or telepathy** with no spirit claimed is `other`, as in rule 3:
+      - 1900: Professor Barrett takes a dowser's success for clairvoyance (`17_1900-12-04_pna_sn89053684_00414182318_1900120401_1089.json`)
+      - 1902: a craze for crystal gazing in London (`5_1902-02-06_p1_sn84020751_00415667875_1902020601_0207.json`)
+    - **A spirit photograph** of a particular sitting or person is a report. Debate about spirit photography in general is `other`, as in rule 6: Dr. Seashore's 1922 rebuttal (rule 7's example).
+    - No judged item yet tells a dream of the dead, a death warning, a poltergeist or a spirit photograph, so those examples come from the other side of the line. Any example added later from the pool stays out of gold and dev.
 
 ## Fields, for reports only
 
@@ -148,7 +163,7 @@ Each article gets exactly one kind:
 | `seen` | What was seen, heard or felt, as the text says it: "knockings upon the walls". |
 | `outcome` | One of four values, set out below. |
 | `specific_place` | For walks: the building, house, road or spot, if the text names one. |
-| `place_type` | For walks: `house`, `church`, `cemetery`, `inn or hotel`, `road or bridge`, `public building`, `ship` or `other`. |
+| `place_type` | For walks: `house`, `church`, `cemetery`, `inn_or_hotel`, `road_or_bridge`, `public_building`, `ship` or `other`, the schema's values. |
 | `precision` | For walks: `town` if only a town is given, `street` for a street or road, `building` for a particular building or spot. |
 
 **The four outcomes:**
@@ -169,5 +184,29 @@ Labels are saved one JSON object per article, in `eval/gold/labels.jsonl` and `e
 - `place`, `place_state`, `seen`, `outcome`, `specific_place`, `place_type` and `precision`, each `{"value": …, "quote": …}` or `null`
 - `people`, a list of `{"value": …, "quote": …}`
 - `rules`: the numbers of the rules above that were applied
+- `slices`: the edge-case slices of SRS 7.3 the article belongs to, from E1 to E14 but E9. E9, one story reprinted under different datelines, comes from the grouping rather than the label. The slices:
+  - E1: sermons and hymns about the Holy Ghost
+  - E2: idioms
+  - E3: ghost stories as fiction, serials and Christmas stories
+  - E4: theatre and illusion adverts, patent medicine and real estate
+  - E5: spiritualist séances and rappings
+  - E6: hoax exposures and pranksters caught
+  - E7: humour and joke columns
+  - E8: phantom ships, trains and lights
+  - E10: badly garbled OCR
+  - E11: several items merged into one article
+  - E12: non-English text
+  - E13: "Ghost" as a surname or a place name
+  - E14: political figures of speech
 - `crop_used`: whether the crop was needed
 - `note`, `labeller` and `labelled_at`
+
+## Changes
+
+- **Version 2, 2026-10-31,** committed after the draw (`984ae90`) and before any label, at the EM's call:
+  - rule 19, spirit-adjacent claims
+  - the signals where rules 6 and 9 meet
+  - which item gives a merged article's fields (rule 16)
+  - `place_type` in the schema's values
+  - the label record's `slices`
+- The split records version 1's sha256, `5bb4d07…27de`, the policy it was drawn under.
