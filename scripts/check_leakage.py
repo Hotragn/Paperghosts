@@ -7,7 +7,8 @@ random reservoir stays out of training, since eval B screens it for recall.
             inclusive grouping spans gold and dev, or a held article and the pool. No pool
             article shares at least FEWEST of its whole text's five-word runs, and LEAK of the
             shorter's, with a gold or dev article, and gold shares none so with dev. No gold or
-            dev article is a POLICY.md example or in an example's group, and HASH matches.
+            dev article is a POLICY.md example, in an example's group or a reprint of one, and
+            HASH matches.
             Written to eval/results/phase2c/leakage.json.
   justify   the threshold, on decision 36's labelled pairs, in
             eval/results/phase2c/leakage_threshold.json
@@ -32,6 +33,9 @@ ROOT = Path(__file__).resolve().parents[1]
 GOLD = ROOT / "eval" / "gold"
 SPLIT = GOLD / "split.json"
 HASH = GOLD / "HASH"
+ARCHIVE = Path(
+    "data", "archive", "lexicon-v1", "samples"
+)  # lexicon v1's samples (decision 31)
 RESULTS = ROOT / "eval" / "results" / "phase2c"
 # a pool article reprints a held one when they share at least FEWEST whole-text runs, and those
 # are at least LEAK of the shorter's. Every one-story pair of decision 36's randomly drawn strata
@@ -107,10 +111,10 @@ def texts_in(path: Path, wanted: set) -> dict:
         }
 
 
-def whole_texts(root: Path, wanted: set) -> dict:
+def whole_texts(root: Path, wanted: set, paths: list | None = None) -> dict:
     """The whole text of each wanted article, from the candidates or the samples."""
     with ProcessPoolExecutor(max_workers=8) as pool:
-        parts = pool.map(partial(texts_in, wanted=wanted), paths_of(root))
+        parts = pool.map(partial(texts_in, wanted=wanted), paths or paths_of(root))
         return {aid: text for part in parts for aid, text in part.items()}
 
 
@@ -131,7 +135,9 @@ def leaks_in(path: Path) -> list:
             if row.get("sample") == "random" or row["article_id"] in HELD["excluded"]:
                 continue
             mine = runs(row["text"])
-            common = np.intersect1d(mine, every, assume_unique=True)
+            # every is sorted, so a binary search finds the shared runs without re-sorting it
+            at = np.minimum(np.searchsorted(every, mine), len(every) - 1)
+            common = mine[every[at] == mine]
             if len(common) < FEWEST:
                 continue
             shared = Counter(held for run in common.tolist() for held in owners[run])
@@ -146,6 +152,8 @@ def leaks(root: Path, held: dict, excluded: set, workers: int = 8) -> list:
     """Every article of the candidates and the near-miss reservoir, outside `excluded`, that
     reprints one of the held texts (article id to text)."""
     held_runs = {aid: runs(text) for aid, text in held.items()}
+    if not any(len(mine) for mine in held_runs.values()):
+        return []
     owners = defaultdict(list)
     for aid, mine in held_runs.items():
         for run in mine.tolist():
@@ -212,6 +220,11 @@ def check(root: Path = ROOT) -> dict:
     named = examples(root)
     example_groups = {group_of[aid] for aid in named if aid in group_of}
     texts = whole_texts(root, gold | dev)
+    shown = whole_texts(root, named)
+    # three examples are lexicon v1's random samples from eval A's screen, in no file drawn from
+    shown |= whole_texts(
+        root, named - shown.keys(), sorted((root / ARCHIVE).glob("*.jsonl.zst"))
+    )
     hashed = (
         HASH.read_text().split()[0] == hashlib.sha256(SPLIT.read_bytes()).hexdigest()
     )
@@ -232,6 +245,8 @@ def check(root: Path = ROOT) -> dict:
             for aid in gold | dev
             if aid in named or group_of.get(aid) in example_groups
         ),
+        "examples_unread": sorted(named - shown.keys()),
+        "examples_reprinted": between(shown, texts),
         "hash_matches": hashed,
         "rule": {"leak": LEAK, "fewest": FEWEST},
     }
@@ -246,6 +261,8 @@ def check(root: Path = ROOT) -> dict:
                 "pool_reprints",
                 "gold_reprinting_dev",
                 "examples_drawn",
+                "examples_unread",
+                "examples_reprinted",
             )
         )
     )

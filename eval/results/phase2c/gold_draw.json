@@ -1,0 +1,255 @@
+{
+ "population": {
+  "E12: not in English": 5917,
+  "E6: hoaxes and pranksters": 3181,
+  "E8: phantom ships, trains and lights": 6392,
+  "before 1850": 26832,
+  "ouija, none in the headline": 5557,
+  "ouija, term in the headline": 773,
+  "seance, none in the headline": 28610,
+  "seance, term in the headline": 3510,
+  "spirit+medium, none in the headline": 56190,
+  "spirit+medium, term in the headline": 569,
+  "spirit_phrase, none in the headline": 35439,
+  "spirit_phrase, term in the headline": 3134,
+  "spiritualism, none in the headline": 54241,
+  "spiritualism, term in the headline": 7917,
+  "v1 terms only, none in the headline": 937984,
+  "v1 terms only, term in the headline": 59876
+ },
+ "judged_rates": {
+  "E12: not in English": "0 of 4",
+  "E8: phantom ships, trains and lights": "0 of 1",
+  "a v2 rule, none in the headline": "11 of 180",
+  "a v2 rule, term in the headline": "4 of 13",
+  "before 1850": "0 of 15",
+  "near misses": "0 of 300",
+  "v1 terms only, none in the headline": "3 of 173",
+  "v1 terms only, term in the headline": "3 of 14"
+ },
+ "expected_reports": {
+  "strata": {
+   "E8: phantom ships, trains and lights": {
+    "gold": 8,
+    "drawn_from": 6392,
+    "judged": "0 of 1",
+    "reports": [
+     0.0,
+     0.0,
+     6.3
+    ]
+   },
+   "E6: hoaxes and pranksters": {
+    "gold": 8,
+    "judged": "none",
+    "reports": null
+   },
+   "E12: not in English": {
+    "gold": 7,
+    "drawn_from": 5915,
+    "judged": "0 of 4",
+    "reports": [
+     0.0,
+     0.0,
+     3.4
+    ]
+   },
+   "before 1850": {
+    "gold": 20,
+    "drawn_from": 26826,
+    "judged": "0 of 15",
+    "reports": [
+     0.0,
+     0.0,
+     4.1
+    ]
+   },
+   "ouija, term in the headline": {
+    "gold": 8,
+    "drawn_from": 773,
+    "judged": "4 of 13",
+    "reports": [
+     2.5,
+     1.0,
+     4.6
+    ]
+   },
+   "ouija, none in the headline": {
+    "gold": 12,
+    "drawn_from": 5554,
+    "judged": "11 of 180",
+    "reports": [
+     0.7,
+     0.4,
+     1.3
+    ]
+   },
+   "seance, term in the headline": {
+    "gold": 10,
+    "drawn_from": 3508,
+    "judged": "4 of 13",
+    "reports": [
+     3.1,
+     1.3,
+     5.8
+    ]
+   },
+   "seance, none in the headline": {
+    "gold": 12,
+    "drawn_from": 28606,
+    "judged": "11 of 180",
+    "reports": [
+     0.7,
+     0.4,
+     1.3
+    ]
+   },
+   "spirit_phrase, term in the headline": {
+    "gold": 10,
+    "drawn_from": 3130,
+    "judged": "4 of 13",
+    "reports": [
+     3.1,
+     1.3,
+     5.8
+    ]
+   },
+   "spirit_phrase, none in the headline": {
+    "gold": 12,
+    "drawn_from": 35434,
+    "judged": "11 of 180",
+    "reports": [
+     0.7,
+     0.4,
+     1.3
+    ]
+   },
+   "spiritualism, term in the headline": {
+    "gold": 10,
+    "drawn_from": 7910,
+    "judged": "4 of 13",
+    "reports": [
+     3.1,
+     1.3,
+     5.8
+    ]
+   },
+   "spiritualism, none in the headline": {
+    "gold": 12,
+    "drawn_from": 54211,
+    "judged": "11 of 180",
+    "reports": [
+     0.7,
+     0.4,
+     1.3
+    ]
+   },
+   "spirit+medium, term in the headline": {
+    "gold": 6,
+    "drawn_from": 569,
+    "judged": "4 of 13",
+    "reports": [
+     1.8,
+     0.8,
+     3.5
+    ]
+   },
+   "spirit+medium, none in the headline": {
+    "gold": 14,
+    "drawn_from": 56126,
+    "judged": "11 of 180",
+    "reports": [
+     0.9,
+     0.5,
+     1.5
+    ]
+   },
+   "v1 terms only, term in the headline": {
+    "gold": 80,
+    "drawn_from": 59176,
+    "judged": "3 of 14",
+    "reports": [
+     17.1,
+     6.1,
+     38.1
+    ]
+   },
+   "v1 terms only, none in the headline": {
+    "gold": 46,
+    "drawn_from": 937871,
+    "judged": "3 of 173",
+    "reports": [
+     0.8,
+     0.3,
+     2.3
+    ]
+   },
+   "near misses": {
+    "gold": 25,
+    "drawn_from": 6695792,
+    "judged": "0 of 300",
+    "reports": [
+     0.0,
+     0.0,
+     0.3
+    ]
+   }
+  },
+  "total": [
+   35.3,
+   14.0,
+   86.5
+  ]
+ },
+ "decades": {
+  "gold": {
+   "1810s": 1,
+   "1820s": 3,
+   "1830s": 4,
+   "1840s": 14,
+   "1850s": 12,
+   "1860s": 15,
+   "1870s": 17,
+   "1880s": 29,
+   "1890s": 52,
+   "1900s": 50,
+   "1910s": 46,
+   "1920s": 39,
+   "1930s": 9,
+   "1940s": 6,
+   "1950s": 1,
+   "1960s": 2
+  },
+  "dev": {
+   "1770s": 1,
+   "1820s": 1,
+   "1830s": 3,
+   "1840s": 6,
+   "1850s": 6,
+   "1860s": 7,
+   "1870s": 12,
+   "1880s": 13,
+   "1890s": 26,
+   "1900s": 26,
+   "1910s": 22,
+   "1920s": 19,
+   "1930s": 4,
+   "1940s": 3,
+   "1950s": 1
+  }
+ },
+ "grouping": {
+  "articles": 1546385,
+  "groups_of_two_or_more": 108967,
+  "articles_in_them": 474805,
+  "largest": 1098
+ },
+ "split": {
+  "gold": 300,
+  "dev": 150,
+  "left_out_for_policy_examples": 944,
+  "quarantine": 1196,
+  "out_of_pool": 6567,
+  "pool": 1539818
+ }
+}
