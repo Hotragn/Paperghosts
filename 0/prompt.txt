@@ -1,0 +1,47 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+2C.3 interim reviewed at 7505a00: pushed, and the confusion matrices match your table. Stopping prompt rounds at the plateau was right. But a teacher that finds 23 of 32 reports isn't one to distill from, and one big lever is still untried. Spend cap for this round: $30.
+
+1. **The teacher runs with thinking off.** `teacher.py:78` sends an empty `<think>` block. The misses are judgment calls (claims inside essays and round-ups), which is what reasoning is for. On dev, compare:
+   - a. round 3's prompt with thinking on: max_tokens large enough that no answer is cut, and report how many hit the limit. Parse only the JSON after `</think>`.
+   - b. the same, with a majority of 3 samples at temperature 0.6 on kind. Fields come from a sample that agrees with the majority, and the verifier still applies.
+   - c. one other large model Tinker serves, if one fits, with thinking.
+
+   Report kind, report-or-not, report recall on dev's 32, and each field, with Wilson intervals. Also report the real tokens and cost per article from the run's usage, then re-project the 3,000 draw.
+
+   Pick the teacher by report recall first, then kind and fields. Thinking traces are not training targets: the student learns the JSON only.
+2. **The student's prompt.** After LoRA the reader doesn't need the 948-token instructions; that's what the training teaches. Prompt tokens are about 80% of the full pass's cost and of the local run's time. Re-project both with a short instruction plus the article.
+   - Measure local throughput again on the same 50 with the short prompt, using base 4B for timing.
+   - Also measure Ollama's prefix reuse with the long prompt, so we know what each choice buys.
+   - Put both figures in BUDGET.md. The student's accuracy with the short prompt gets settled in plan step 6's iterations on dev.
+3. **Caching:** confirm it with `credit_check.billed` once billing catches up, and update BUDGET.md.
+4. **On the slip:** chain the gate as `make lint && make test && <secret scan> && git push`, never with `;`. Your post-push scan was the right recovery.
+
+Still on hold: the 3,000 teacher run and the skip-rule measure. Your report's first line is `2C.3 interim 2: <summary>`.
+</cross-session-message>
+
+---
+
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+STOP all Tinker requests now. The owner's console shows a remaining credit balance of $0.00, with $0.80 of unpaid usage due this month. Every Tinker call from here is billed to the owner's card, which is spending beyond existing credits and needs the owner's yes. My $30 cap is withdrawn.
+
+1. Cancel the thinking round and any other running Tinker job immediately, and kill the processes. Keep whatever results already came back, uncommitted if partial.
+2. Report:
+   - exactly what ran today on Tinker: jobs, tokens and costs from the run usage, since billing lags about 3 hours
+   - what the thinking round had shown on the articles it finished, with the count it finished
+3. Make no further Tinker calls of any kind, including `credit_check.billed` if it costs anything. Reading billing is fine if it's free.
+4. Local work that costs nothing can continue: Ollama timing with the short prompt and prefix reuse, and the docs. Also price these local options, measured on this Mac and not guessed:
+   - a. LoRA training of Qwen3.5-4B locally with mlx-lm on a 3,000-example set: time per epoch, and peak memory
+   - b. the largest teacher that runs locally at usable speed, with its throughput, and its dev accuracy only if measuring it is free
+
+Commit, push, verify with ls-remote. Your report's first line is `2C.3: SPEND STOPPED — <today's Tinker total>`.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>bmn8wiv79</task-id>
+<tool-use-id>toolu_01YNZf4BXTP5h7LbaVshJNUG</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/bmn8wiv79.output</output-file>
+<status>failed</status>
+<summary>Background command "Run the teacher on dev with thinking on" failed with exit code 144</summary>
+</task-notification>
