@@ -1,0 +1,380 @@
+{
+ "round": "r2",
+ "model": "Qwen/Qwen3.5-397B-A17B",
+ "prompt_sha256": "3873901d617df4144a9879e828c5318875cae3f5bca7888ae4338a6ec6931eab",
+ "articles": 150,
+ "unparsed": [],
+ "prompt_tokens": 1408773,
+ "output_tokens": 15820,
+ "accuracy_verified": {
+  "n": 150,
+  "kind": {
+   "agree": 112,
+   "n": 150,
+   "rate": 0.7466666666666667,
+   "interval": [
+    0.6715044398939715,
+    0.809509798127474
+   ],
+   "kappa": 0.6705392751864054,
+   "kappa_interval": [
+    0.5776590243061541,
+    0.7573833343317558
+   ]
+  },
+  "report": {
+   "agree": 139,
+   "n": 150,
+   "rate": 0.9266666666666666,
+   "interval": [
+    0.873463014734016,
+    0.9585616131949707
+   ],
+   "kappa": 0.7683235046335299,
+   "kappa_interval": [
+    0.6218487394957984,
+    0.8854961832061069
+   ]
+  },
+  "fields": {
+   "place": {
+    "agree": 17,
+    "n": 24,
+    "rate": 0.7083333333333334,
+    "interval": [
+     0.508319363412903,
+     0.8508553966583573
+    ]
+   },
+   "place_state": {
+    "agree": 14,
+    "n": 24,
+    "rate": 0.5833333333333334,
+    "interval": [
+     0.3883433764938864,
+     0.7553265275346177
+    ]
+   },
+   "seen": {
+    "agree": 7,
+    "n": 24,
+    "rate": 0.2916666666666667,
+    "interval": [
+     0.14914460334164278,
+     0.49168063658709704
+    ]
+   },
+   "outcome": {
+    "agree": 14,
+    "n": 24,
+    "rate": 0.5833333333333334,
+    "interval": [
+     0.3883433764938864,
+     0.7553265275346177
+    ]
+   },
+   "specific_place": {
+    "agree": 16,
+    "n": 24,
+    "rate": 0.6666666666666666,
+    "interval": [
+     0.4670595949408046,
+     0.8202802131162036
+    ]
+   },
+   "place_type": {
+    "agree": 18,
+    "n": 24,
+    "rate": 0.75,
+    "interval": [
+     0.5510017468789357,
+     0.8800079652065766
+    ]
+   },
+   "precision": {
+    "agree": 18,
+    "n": 24,
+    "rate": 0.75,
+    "interval": [
+     0.5510017468789357,
+     0.8800079652065766
+    ]
+   },
+   "people": {
+    "agree": 6,
+    "n": 24,
+    "rate": 0.25,
+    "interval": [
+     0.1199920347934233,
+     0.4489982531210644
+    ]
+   }
+  }
+ },
+ "accuracy_unverified": {
+  "n": 150,
+  "kind": {
+   "agree": 112,
+   "n": 150,
+   "rate": 0.7466666666666667,
+   "interval": [
+    0.6715044398939715,
+    0.809509798127474
+   ],
+   "kappa": 0.6705392751864054,
+   "kappa_interval": [
+    0.5776590243061541,
+    0.7573833343317558
+   ]
+  },
+  "report": {
+   "agree": 139,
+   "n": 150,
+   "rate": 0.9266666666666666,
+   "interval": [
+    0.873463014734016,
+    0.9585616131949707
+   ],
+   "kappa": 0.7683235046335299,
+   "kappa_interval": [
+    0.6218487394957984,
+    0.8854961832061069
+   ]
+  },
+  "fields": {
+   "place": {
+    "agree": 17,
+    "n": 24,
+    "rate": 0.7083333333333334,
+    "interval": [
+     0.508319363412903,
+     0.8508553966583573
+    ]
+   },
+   "place_state": {
+    "agree": 11,
+    "n": 24,
+    "rate": 0.4583333333333333,
+    "interval": [
+     0.2789105835168143,
+     0.6492544644689336
+    ]
+   },
+   "seen": {
+    "agree": 7,
+    "n": 24,
+    "rate": 0.2916666666666667,
+    "interval": [
+     0.14914460334164278,
+     0.49168063658709704
+    ]
+   },
+   "outcome": {
+    "agree": 14,
+    "n": 24,
+    "rate": 0.5833333333333334,
+    "interval": [
+     0.3883433764938864,
+     0.7553265275346177
+    ]
+   },
+   "specific_place": {
+    "agree": 16,
+    "n": 24,
+    "rate": 0.6666666666666666,
+    "interval": [
+     0.4670595949408046,
+     0.8202802131162036
+    ]
+   },
+   "place_type": {
+    "agree": 18,
+    "n": 24,
+    "rate": 0.75,
+    "interval": [
+     0.5510017468789357,
+     0.8800079652065766
+    ]
+   },
+   "precision": {
+    "agree": 17,
+    "n": 24,
+    "rate": 0.7083333333333334,
+    "interval": [
+     0.508319363412903,
+     0.8508553966583573
+    ]
+   },
+   "people": {
+    "agree": 6,
+    "n": 24,
+    "rate": 0.25,
+    "interval": [
+     0.1199920347934233,
+     0.4489982531210644
+    ]
+   }
+  }
+ },
+ "verifier": {
+  "values": 225,
+  "negatives": 207,
+  "threshold": 0.7,
+  "at_threshold": {
+   "threshold": 0.7,
+   "rejected": 0.022222222222222223,
+   "rejected_agreeing": 0.0,
+   "rejected_disagreeing": 0.03787878787878788,
+   "negatives_passing": 0.0
+  },
+  "curve": [
+   {
+    "threshold": 0.0,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 1.0
+   },
+   {
+    "threshold": 0.05,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 1.0
+   },
+   {
+    "threshold": 0.1,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 1.0
+   },
+   {
+    "threshold": 0.15,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 1.0
+   },
+   {
+    "threshold": 0.2,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 1.0
+   },
+   {
+    "threshold": 0.25,
+    "rejected": 0.0,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.0,
+    "negatives_passing": 0.9903381642512077
+   },
+   {
+    "threshold": 0.3,
+    "rejected": 0.0044444444444444444,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.007575757575757576,
+    "negatives_passing": 0.9323671497584541
+   },
+   {
+    "threshold": 0.35,
+    "rejected": 0.0044444444444444444,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.007575757575757576,
+    "negatives_passing": 0.7874396135265701
+   },
+   {
+    "threshold": 0.4,
+    "rejected": 0.008888888888888889,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.015151515151515152,
+    "negatives_passing": 0.5893719806763285
+   },
+   {
+    "threshold": 0.45,
+    "rejected": 0.008888888888888889,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.015151515151515152,
+    "negatives_passing": 0.3188405797101449
+   },
+   {
+    "threshold": 0.5,
+    "rejected": 0.008888888888888889,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.015151515151515152,
+    "negatives_passing": 0.18840579710144928
+   },
+   {
+    "threshold": 0.55,
+    "rejected": 0.008888888888888889,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.015151515151515152,
+    "negatives_passing": 0.0821256038647343
+   },
+   {
+    "threshold": 0.6,
+    "rejected": 0.017777777777777778,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.030303030303030304,
+    "negatives_passing": 0.03864734299516908
+   },
+   {
+    "threshold": 0.65,
+    "rejected": 0.022222222222222223,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.03787878787878788,
+    "negatives_passing": 0.014492753623188406
+   },
+   {
+    "threshold": 0.7,
+    "rejected": 0.022222222222222223,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.03787878787878788,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 0.75,
+    "rejected": 0.03111111111111111,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.05303030303030303,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 0.8,
+    "rejected": 0.035555555555555556,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.06060606060606061,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 0.85,
+    "rejected": 0.04,
+    "rejected_agreeing": 0.0,
+    "rejected_disagreeing": 0.06818181818181818,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 0.9,
+    "rejected": 0.04888888888888889,
+    "rejected_agreeing": 0.010752688172043012,
+    "rejected_disagreeing": 0.07575757575757576,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 0.95,
+    "rejected": 0.04888888888888889,
+    "rejected_agreeing": 0.010752688172043012,
+    "rejected_disagreeing": 0.07575757575757576,
+    "negatives_passing": 0.0
+   },
+   {
+    "threshold": 1.0,
+    "rejected": 0.08444444444444445,
+    "rejected_agreeing": 0.03225806451612903,
+    "rejected_disagreeing": 0.12121212121212122,
+    "negatives_passing": 0.0
+   }
+  ]
+ }
+}

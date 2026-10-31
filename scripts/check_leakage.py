@@ -50,9 +50,11 @@ def runs(text) -> np.ndarray:
     return shingles(text, window=None, sample=1)
 
 
-def flagged(shared: int, a: int, b: int) -> bool:
+def flagged(
+    shared: int, a: int, b: int, leak: float = LEAK, fewest: int = FEWEST
+) -> bool:
     """Whether two texts with a and b runs, sharing `shared`, are taken for one story."""
-    return shared >= FEWEST and shared >= LEAK * min(a, b)
+    return shared >= fewest and shared >= leak * min(a, b)
 
 
 def near_misses(path: Path) -> list:
@@ -182,7 +184,7 @@ def leaks(root: Path, held: dict, excluded: set, workers: int = 8) -> list:
         return [leak for year in pool.map(leaks_in, paths_of(root)) for leak in year]
 
 
-def between(a: dict, b: dict) -> list:
+def between(a: dict, b: dict, leak: float = LEAK, fewest: int = FEWEST) -> list:
     """The pairs of an article of a and one of b (each article id to text) that are taken for
     one story."""
     a_runs = {aid: runs(text) for aid, text in a.items()}
@@ -195,6 +197,8 @@ def between(a: dict, b: dict) -> list:
             len(np.intersect1d(mine, theirs, assume_unique=True)),
             len(mine),
             len(theirs),
+            leak,
+            fewest,
         )
     )
 

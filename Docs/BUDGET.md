@@ -126,3 +126,43 @@ At the top of the range, the full text fits on M0 only without `sample_mflix`. A
 2. **Take the three lossless levers:** int16 boxes, the title lookup, and the derived headline. They save 17 MB at the top of the range. int8 saves 66.5 MB more, but only after 2D's check of its neighbours on real embeddings.
 3. **Size from the reader's real count.** The reader's full pass (2C) comes before the load (2D), and it gives the real number of reports and stories. At the point estimates, everything fits even with `sample_mflix`, so options 1 and 4 can wait for that count.
 4. **A paid tier**, such as Flex or a dedicated M10, if the real count needs more than M0 can hold. It costs money, so it needs the owner's yes.
+
+# Tinker credit budget (2C.3)
+
+Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/phase2c/credit_check.json`, and by the teacher's two dev rounds (`eval/results/phase2c/teacher_dev_r1.json` and `_r2.json`). Rates come from Tinker's billing records for this account. Every other number follows by arithmetic.
+
+## What Tinker reports
+
+- **No balance.** The API reports usage and an estimated cost per hourly bucket (`AdminClient.get_billing_usage`), but not the credit left, which only the console shows. **The owner has to read the balance there.**
+- **Spent before 2C.3:** $5.89 over the last 52 days, mostly 4B training ($3.92) and 397B sampling ($1.23).
+- **Rates per million tokens:**
+
+  | Model | Prompt (cached, uncached) | Generated | Training |
+  |---|---|---|---|
+  | Qwen3.5-397B-A17B, the teacher | $0.60, $3.00 | $7.50 | — |
+  | Qwen3.5-4B, the student | $0.066, $0.33 | $1.005 | $0.737 |
+
+- Billing lags the requests by more than an hour, so the 50-article run's own cost isn't billed yet. Its cost here is its tokens times these rates.
+
+## Per article, measured
+
+- **The sample:** a seeded 50 of the 1,229,780 candidates in the pool.
+- **The teacher** reads the instructions and `POLICY.md` in full, then the article. On dev's 150 articles that's 9,392 prompt and 105 generated tokens an article. **Cost:** $0.0290 uncached, or about $0.0076 if Tinker caches the policy prefix the articles share.
+- **4B reading,** with the instructions alone and no policy: 948 prompt and 67 generated tokens an article. **Cost:** $0.00038, or about $0.00026 cached.
+- 50 articles took 13 s on the teacher and 9 s on 4B, at 16 requests at once.
+
+## The projection
+
+| Job | Size | Cost (cached to uncached) |
+|---|---|---|
+| Teacher on dev, per prompt round | 150 articles | $1.1–4.4 |
+| Teacher on the training draw | 3,000 articles | $23–87 |
+| LoRA training | 3,000 examples × 1,050 tokens × 18 epochs (6 iterations of 3) | $42 |
+| Dev scoring, per iteration | 150 articles | under $0.10 |
+| Eval B, ablations and the pooled screen | about 3,000 gold reads + 38,900 random-reservoir articles | $11–16 |
+| **The full pass** | **1,236,122 candidates** | **$323–470** |
+| **All of it** | | **about $400–620** |
+
+- A draw of 6,000 would add $23–87 more teacher time and $42 more training.
+- **Whether the full pass fits** turns on the balance. At $323–470 it is three quarters of the total.
+- **If it doesn't fit,** the plan's fallback is decision 36's skip rule: read only each story's first printing, about 1,002,205 articles, saving about 19%. Its loss has to be measured on a seeded draw of skipped printings read beside their first ones, which is itself a small spend. I haven't measured it, since that is only needed if the pass doesn't fit.
