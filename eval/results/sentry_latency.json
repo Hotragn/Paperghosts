@@ -24,5 +24,31 @@
     "count": 40.0
    }
   ]
+ },
+ "19a6a4bcb1a532c9b1b5b499f488f0d7ffb8da7f": {
+  "release": "19a6a4bcb1a532c9b1b5b499f488f0d7ffb8da7f",
+  "project": "paperghosts-api",
+  "since": "2h",
+  "pulled_at": "2026-10-31T22:59:03+00:00",
+  "spans": [
+   {
+    "query": "reports more_like_this",
+    "p50_ms": 62.7,
+    "p95_ms": 71.4,
+    "count": 80.0
+   },
+   {
+    "query": "reports find",
+    "p50_ms": 39.8,
+    "p95_ms": 47.3,
+    "count": 40.0
+   },
+   {
+    "query": "reports fuzzy",
+    "p50_ms": 67.3,
+    "p95_ms": 83.5,
+    "count": 40.0
+   }
+  ]
  }
 }
