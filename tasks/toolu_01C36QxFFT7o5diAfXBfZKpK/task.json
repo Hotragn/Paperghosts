@@ -1,0 +1,15 @@
+{
+  "tool_use_id": "toolu_01C36QxFFT7o5diAfXBfZKpK",
+  "agent_id": "a8f5e6ba5efe760ce",
+  "subagent_type": "general-purpose",
+  "task_description": "Blind second-pass labels, packet 02",
+  "token_usage": {
+    "input_tokens": 50,
+    "cache_creation_tokens": 165020,
+    "cache_read_tokens": 2668012,
+    "output_tokens": 58378,
+    "api_call_count": 22
+  },
+  "started_at": "2026-10-31T04:41:02.389041-04:00",
+  "completed_at": "2026-10-31T04:50:10.980163-04:00"
+}
