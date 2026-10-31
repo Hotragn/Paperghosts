@@ -92,16 +92,18 @@ def clusters(doc_keys, boilerplate=BOILERPLATE, least=1):
     return [group for group in groups.values() if len(group) > 1]
 
 
-def shingles(text):
+def shingles(text, window=WINDOW, sample=SAMPLE):
     """What two printings are compared on: hashes of the five-word runs in the article's first
     600 words of 3+ letters, one in four kept by its own hash as keys does, as a sorted array.
-    Shorter runs than keys' seven weather OCR errors better."""
-    words = WORD.findall((text or "")[:40000].replace("-\n", "").lower())[:WINDOW]
+    Shorter runs than keys' seven weather OCR errors better. The leakage check reads every run
+    of the whole text: window=None, sample=1."""
+    text = (text or "") if window is None else (text or "")[:40000]
+    words = WORD.findall(text.replace("-\n", "").lower())[:window]
     found = set()
     for i in range(len(words) - SHINGLE + 1):
         run = " ".join(words[i : i + SHINGLE]).encode()
         low = zlib.crc32(run)
-        if low % SAMPLE == 0:
+        if low % sample == 0:
             found.add(zlib.crc32(run, 0x5BD1E995) << 32 | low)
     return np.array(sorted(found), dtype=np.uint64)
 

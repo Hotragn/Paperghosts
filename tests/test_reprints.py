@@ -110,3 +110,16 @@ def test_runs_can_come_from_the_body_as_well_as_the_opening():
     assert keys(body, start=120) and keys(body, start=120) == keys(body, start=120)
     assert keys(body) != keys(body, start=120)
     assert not keys(rewritten) & keys(body)
+
+
+def test_the_leakage_check_compares_every_run_of_the_whole_text():
+    # check_leakage (RDR-4) reads all of each text, past the stories' 600 words, unsampled
+    long = " ".join(
+        f"word{chr(97 + i % 26)}{chr(97 + i // 26 % 26)}{chr(97 + i // 676)}"
+        for i in range(700)
+    )
+    every = shingles(long, window=None, sample=1)
+
+    assert len(every) == 700 - 4
+    assert len(shingles(long)) < len(every) / 2
+    assert set(shingles(long)) <= set(every)
