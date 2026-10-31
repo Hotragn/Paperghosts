@@ -2,6 +2,9 @@
 db.atlas.query, by its name (reports fuzzy, reports more_like_this, reports find), over the last
 SINCE of traffic, from Sentry's spans dataset with SENTRY_AUTH_TOKEN, which is never printed.
 
+  uv run python scripts/sentry_latency.py web [SINCE]          the Morgue's page loads instead:
+                                                              p50 and p95 by span op, from
+                                                              paperghosts-web
   uv run python scripts/sentry_latency.py [SINCE [RELEASE]]   SINCE defaults to 24h; RELEASE, a
                                                               commit SHA, keeps one release's spans
 Writes eval/results/sentry_latency.json, keyed by release.
@@ -21,7 +24,20 @@ ORG, PROJECT = "hotragn", "paperghosts-api"
 FIELDS = ["span.description", "p50(span.duration)", "p95(span.duration)", "count()"]
 
 
+WEB_OPS = "pageload browser.dom_content_loaded_event browser.load_event browser.request resource.img resource.script"
+
+
 def main(since: str = "24h", release: str = "") -> None:
+    web = since == "web"
+    if web:
+        since, release = release or "24h", ""
+    project = "paperghosts-web" if web else PROJECT
+    group = "span.op" if web else "span.description"
+    query = (
+        " OR ".join(f"span.op:{op}" for op in WEB_OPS.split())
+        if web
+        else "span.op:db.atlas.query" + (f" release:{release}" if release else "")
+    )
     headers = {"Authorization": f"Bearer {setting('SENTRY_AUTH_TOKEN').get()}"}
     with httpx.Client(
         base_url="https://sentry.io/api/0", headers=headers, timeout=30
@@ -34,10 +50,9 @@ def main(since: str = "24h", release: str = "") -> None:
             f"/organizations/{ORG}/events/",
             params={
                 "dataset": "spans",
-                "field": FIELDS,
-                "query": "span.op:db.atlas.query"
-                + (f" release:{release}" if release else ""),
-                "project": projects[PROJECT],
+                "field": [group, *FIELDS[1:]],
+                "query": query,
+                "project": projects[project],
                 "statsPeriod": since,
                 "sort": "-count()",
             },
@@ -45,13 +60,13 @@ def main(since: str = "24h", release: str = "") -> None:
         answer.raise_for_status()
     rows = answer.json()["data"]
     found = {
-        "release": release or "all",
-        "project": PROJECT,
+        "release": "web" if web else release or "all",
+        "project": project,
         "since": since,
         "pulled_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "spans": [
             {
-                "query": r["span.description"],
+                "query": r[group],
                 "p50_ms": round(r["p50(span.duration)"], 1),
                 "p95_ms": round(r["p95(span.duration)"], 1),
                 "count": r["count()"],

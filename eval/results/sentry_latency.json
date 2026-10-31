@@ -50,5 +50,49 @@
     "count": 40.0
    }
   ]
+ },
+ "web": {
+  "release": "web",
+  "project": "paperghosts-web",
+  "since": "2h",
+  "pulled_at": "2026-10-31T23:53:53+00:00",
+  "spans": [
+   {
+    "query": "resource.img",
+    "p50_ms": 10.0,
+    "p95_ms": 10.0,
+    "count": 436.0
+   },
+   {
+    "query": "pageload",
+    "p50_ms": 101.6,
+    "p95_ms": 1228.9,
+    "count": 14.0
+   },
+   {
+    "query": "browser.request",
+    "p50_ms": 2.0,
+    "p95_ms": 3.0,
+    "count": 14.0
+   },
+   {
+    "query": "resource.script",
+    "p50_ms": 6.0,
+    "p95_ms": 31.8,
+    "count": 14.0
+   },
+   {
+    "query": "browser.load_event",
+    "p50_ms": 0.0,
+    "p95_ms": 0.1,
+    "count": 14.0
+   },
+   {
+    "query": "browser.dom_content_loaded_event",
+    "p50_ms": 0.0,
+    "p95_ms": 0.1,
+    "count": 14.0
+   }
+  ]
  }
 }
