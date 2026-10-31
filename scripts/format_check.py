@@ -8,7 +8,8 @@ the verifier is put in one class:
   judgment   a well-formed, verified value that differs from dev's
 Each field is then scored again with the format normalised: a bare string that is a schema value is
 read as that value, unverified because it has no quote, and a place_state that isn't a state is left
-empty. Both scores are kept. Reads the saved rounds only: no model is asked anything.
+empty. Both scores are kept. The normalisation is for scoring only: a training label goes through
+teacher.verified, which drops any value without a verified quote. Reads the saved rounds only.
 
   uv run python scripts/format_check.py ROUND...
 Writes eval/results/phase2c/format_check.json.

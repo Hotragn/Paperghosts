@@ -45,7 +45,7 @@ where each F is an object {"value": "...", "quote": "..."} or null, never a bare
 - Fields are for reports only; for any other kind every field is null and people is [].
 - Every quote is an exact span of the headline or OCR text, copied as printed, OCR errors and all. Use the shortest span that states the value.
 - A value the text doesn't state is null. Never infer one.
-- outcome is one of explained, hoax, unexplained, unknown. place_type is one of house, church, cemetery, inn_or_hotel, road_or_bridge, public_building, ship, other. precision is one of town, street, building.
+- outcome, place_type and precision are F objects like every other field, never bare strings: the value is one of the choices below and the quote is the span that shows it, as in "outcome": {"value": "unknown", "quote": "<the sentence the account ends on>"}. outcome is one of explained, hoax, unexplained, unknown. place_type is one of house, church, cemetery, inn_or_hotel, road_or_bridge, public_building, ship, other. precision is one of town, street, building.
 
 How to apply the policy, in its own terms:
 - The kind follows how the article uses its ghost word. If the only ghost, spirit, haunt or spectre in it is a figure of speech, the kind is idiom, whatever the article is about: politics, sport, a profile. other is for names and titles, social events, OCR accidents, ordinary senses of spirit or medium, and essays about ghosts in general.
