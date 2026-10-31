@@ -49,7 +49,7 @@ Measured:
 - **Stories:**
   - Precision per candidate is 100% (97.7–100%), against eval A's 98.0%, and recall is 84.7% (79.0–89.1%).
   - The chaining in 54 of the 207 largest clusters is split in 51.
-  - v2 has 974,399 distinct stories, and the reader's job is 1,002,205 printings.
+  - v2 has 974,399 distinct stories. Decision 36's skip rule would have made the reader's job 1,002,205 printings, but the EM's call keeps the reader on every triaged candidate.
 - **Storage:** the top of the range, 62,402 stories, needs 461.8 MB as stored, so it fits on M0 only without `sample_mflix`.
 - **Requests to the Library of Congress:**
   - 2B.2's title records: 327 in the final build and 177 for the 200 pairs.
@@ -77,7 +77,7 @@ Risks and open questions:
 - **In-sample choices:**
   - The page check's threshold, a fifth, came from 38 calibration pages. The 90 measured pairs were fresh.
   - The geocoder's two in-sample rules: 2D measures them on a fresh draw (decision 34).
-- **The reader** reads 974,399 first printings and 27,806 longer members. The Tinker credit check weighs that before 2C's full pass.
+- **The reader reads every triaged candidate, 1,236,122** (the EM's call on decision 36). Stories stay the unit for display and counts. The Tinker credit check weighs the job before 2C's full pass, and a shortfall goes to the EM and the owner.
 
 ## STATUS: Phase 2A, archive read, EDA and lexicon v2 (2026-10-30)
 

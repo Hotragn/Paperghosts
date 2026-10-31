@@ -786,3 +786,20 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - **Proposed for the EM, not done:** add the body's links to the blocking, with the direct-match rule keeping them from chaining, and measure it on a fresh draw. Adopting it now would mean tuning on the frozen set.
 - **BUDGET.md's third scenario** now takes the stories' sizes (`scripts/budget_stories.py`): 0.609 stories per printing in v1's candidates and 0.820 in those v2 added. That gives 62,402 stories at the top of the range, against 61,960, needing 461.8 MB as stored and 372.5 MB with every lever. The conclusions stand: nothing fits beside `sample_mflix`, and everything fits without it.
 - **For 2C:** split gold, dev and train by story id. The reader reads each story's first printing and its longer members.
+- **The EM's calls on this step (2026-10-31):**
+  - **The stories stand**, as recommended. Adding the body's links to them is measured in 2D, on a fresh draw.
+  - **The reader reads every triaged candidate, not the job above** (RDR-11, ARCHITECTURE 3.2). This supersedes this decision's reader rule and its "for 2C" note.
+    - The skip rule would leave 233,917 printings unread, and 38,127 of them run past the 600 words the shingles see.
+    - "One story" allows paragraphs added at either end, so a local paragraph or a different ending in a skipped member would never be read.
+    - Stories stay the unit for display and for counts.
+    - A member whose reading differs from its first printing's becomes a report of its own, shown as printed inside its story. It differs if it's a report where the first printing isn't one, or if it gives another place, date or person. 2D counts these members, and they double as false-merge candidates.
+    - If 2C's Tinker credit check finds that every candidate doesn't fit, the step stops. The EM gets the shortfall, and the skip rule's loss measured on a seeded draw of skipped members read beside their first printings. That trade-off is the owner's.
+  - **2C splits gold, dev and train by the most inclusive grouping, not by story id.** That's connected components over eval A's links and the body probe's 55,711 links (decision 37). Chaining only makes a split safer.
+  - **A limitation, and the EM's check:** the reading agents saw 400 words of each printing.
+    - 184 of the 318 pairs the stories join, in the per-candidate, per-cluster and near-threshold strata, have a printing longer than that (`scripts/clusters.py unseen`, `eval/results/phase2b/clusters_unseen.json`).
+    - Where both printings run at least 50 words past it (127 pairs), the check compares the two tails' unsampled five-word runs with the openings'.
+    - The EM read five low pairs: `eval-0040`, `0052`, `0217`, `0261` and `0576`. I read the four others among this ranking's lowest eight: `eval-0100`, `0251`, `0255` and `0509`.
+    - All nine are one text. What lowers their tails is cuts, OCR noise, shifted article boundaries, and items glued on by segmentation. `eval-0040` is two overlapping windows of one instalment.
+    - 2D's fresh draw shows its readers the full texts.
+  - **For 2D: digits in the shingles,** measured on the fresh draw. `eval-0508`, ocean-freight columns a year apart, has 0.267 of the shorter's shingles in the other, above the threshold, because the tokens drop the figures that tell the two apart.
+  - My calls on the hard cases stand, and so does the mapping of decision 30's protocol.

@@ -108,7 +108,7 @@ How the build runs: five phases, each split into milestones, each milestone with
 ### 2C: the reader
 **Persona:** ML specialist.
 1. Write `POLICY.md`, build the gold set, freeze it and hash it.
-   - Gold, dev and train split by story id, a story's first printing's article id (decision 36). The reader reads each story's first printing, and its members at least 25% longer.
+   - Gold, dev and train split by the most inclusive grouping: connected components over eval A's links and the body probe's links (decisions 36 and 37). `scripts/check_leakage.py` compares whole texts too, and the training pool takes at most one printing per story.
    - The gold set's term strata include each of lexicon v2's five rules. That's how ouija, kept with 0 reports in its 6 sampled candidates, gets measured (decision 31).
    - `POLICY.md` settles delusions and hallucinations with one rule. Eval A counts a 1904 defendant pointing at an "imaginary" spectre in court as a report, and a 1909 lunacy hearing's spooks as other. Its interval barely moves either way.
    - It also settles claims of spirit control and of a felt presence of the dead. Decision 30 counts two such articles as borderline reports, and they are half of the reports it found.
@@ -126,6 +126,8 @@ How the build runs: five phases, each split into milestones, each milestone with
 9. The local export and the offline proof.
 10. The full pass over all triaged candidates.
    - Lexicon v2 makes the reader's job 1,236,122 candidates, 17.7% more than v1's (decision 31). The Tinker credit check weighs that before the pass starts.
+   - **Every triaged candidate is read** (the EM's call, decision 36). A member that reads differently from its story's first printing becomes a report of its own, shown as printed inside its story. It counts as different if it's a report where the first printing isn't one, or if it gives another place, date or person.
+   - If the credit check finds that every candidate doesn't fit, stop. Bring the EM the shortfall, and the skip rule's loss, measured on a seeded draw of skipped members read beside their first printings.
 
 **Gate**
 - The gold hash hasn't changed since the freeze, and the leakage check passes.
@@ -140,6 +142,8 @@ How the build runs: five phases, each split into milestones, each milestone with
   - Cluster with decision 36's stories at its tuned 0.25. Before loading, measure two changes on a fresh draw, never on decision 36's frozen set:
     - the body's links added to the blocking. Its probe found 76 of 80 such pairs to be one story, outside eval A's links.
     - a floor on the share of the longer printing. Three large clusters still join two texts that each hold a short first printing.
+    - digits in the shingles. `eval-0508`, freight columns a year apart, passes the threshold because the tokens drop their figures.
+  - Count the members whose reading differs from their first printing's. Each is shown as a report of its own, and is a false-merge candidate.
   - Before choosing int8 embeddings over float32, measure their neighbours against float32's on real embeddings. Decision 33's check used synthetic vectors.
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
   - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.
