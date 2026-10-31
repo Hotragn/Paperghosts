@@ -8,6 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/bodoni-moda':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/courier-prime':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/newsreader':
+        specifier: ^5.3.0
+        version: 5.3.0
+      '@fontsource/unifrakturmaguntia':
+        specifier: ^5.3.0
+        version: 5.3.0
       react:
         specifier: ^19.3.1
         version: 19.3.1
@@ -38,6 +50,18 @@ importers:
         version: 8.3.5(@types/node@24.19.2)
 
 packages:
+
+  '@fontsource/bodoni-moda@5.3.0':
+    resolution: {integrity: sha512-Wt2XBCHivYxkTP3ydq/Ax+7VshwsOh/6ayA5om2t+yClCkGwLPj2Mi6OnyMANjyLcqDUWs4rlOHnc8SBLf6/pA==}
+
+  '@fontsource/courier-prime@5.3.0':
+    resolution: {integrity: sha512-KIi1k4VG1Wv+/CGpb1AUpLkUuOAQA6zmvthqxOZGN0AV8BEgQgbK7qAtquv14zsBJAY1bb5BHIEbWVFLgENh0w==}
+
+  '@fontsource/newsreader@5.3.0':
+    resolution: {integrity: sha512-AFR6ZKY89GNL+9qBI2P2+66NhD5bhOj/v6fsLnFYLM4E0JnMB1yKb+Ro8cA64i1hwAWoBfTq5CHJGWH1toLDkw==}
+
+  '@fontsource/unifrakturmaguntia@5.3.0':
+    resolution: {integrity: sha512-z8NGOUeAu0T534Z8tEyuNbuUZsUiRoQKzg3gRB5sb2o2DipxEqmYQqHdlwxsbN0gpwhgcClKrCuB/AhVeY2UOQ==}
 
   '@oxc-project/types@0.155.0':
     resolution: {integrity: sha512-SeE8JPwW1xs1tHeNycjUtUBdhorRa8o4jlvjwk49R7/Z291i+4DQa7JJIgOm/TaYQZx+QrPQbVJ/9c8dMIZN8Q==}
@@ -611,6 +635,14 @@ packages:
         optional: true
 
 snapshots:
+
+  '@fontsource/bodoni-moda@5.3.0': {}
+
+  '@fontsource/courier-prime@5.3.0': {}
+
+  '@fontsource/newsreader@5.3.0': {}
+
+  '@fontsource/unifrakturmaguntia@5.3.0': {}
 
   '@oxc-project/types@0.155.0': {}
 

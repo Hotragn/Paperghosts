@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "morgue",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--dir", "web", "preview", "--port", "4173", "--strictPort"],
+      "port": 4173
+    }
+  ]
+}
