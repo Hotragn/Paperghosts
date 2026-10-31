@@ -129,7 +129,7 @@ At the top of the range, the full text fits on M0 only without `sample_mflix`. A
 
 # Tinker credit budget (2C.3)
 
-Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/phase2c/credit_check.json`, and by the teacher's two dev rounds (`eval/results/phase2c/teacher_dev_r1.json` and `_r2.json`). Rates come from Tinker's billing records for this account. Every other number follows by arithmetic.
+Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/phase2c/credit_check.json`, and by the teacher's three dev rounds (`eval/results/phase2c/teacher_dev_r1.json` to `_r3.json`). Rates come from Tinker's billing records for this account. Every other number follows by arithmetic.
 
 ## What Tinker reports
 
@@ -142,7 +142,11 @@ Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/
   | Qwen3.5-397B-A17B, the teacher | $0.60, $3.00 | $7.50 | — |
   | Qwen3.5-4B, the student | $0.066, $0.33 | $1.005 | $0.737 |
 
-- Billing lags the requests by more than an hour, so the 50-article run's own cost isn't billed yet. Its cost here is its tokens times these rates.
+- Billing lags the requests by about three hours, so the 50-article run's own cost isn't billed yet. Its cost here is its tokens times these rates.
+- **Caching:** billing marks every prefill bucket `cached` or not, and bills cached tokens at a fifth of the rate. On this account's earlier teacher runs (2026-10-05 and -06), 88% of prefill tokens were billed as cached: 658,432 of 746,348.
+  - That is the mechanism the low end of every range here assumes: the policy prefix, the same in every teacher prompt, billed cached.
+  - Today's runs aren't billed yet, so they don't yet confirm it for this prompt. `credit_check.billed` now splits cached from uncached prefill, so the check is one call once billing catches up.
+  - Until then, plan on the high end.
 
 ## Per article, measured
 
@@ -166,3 +170,23 @@ Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/
 - A draw of 6,000 would add $23–87 more teacher time and $42 more training.
 - **Whether the full pass fits** turns on the balance. At $323–470 it is three quarters of the total.
 - **If it doesn't fit,** the plan's fallback is decision 36's skip rule: read only each story's first printing, about 1,002,205 articles, saving about 19%. Its loss has to be measured on a seeded draw of skipped printings read beside their first ones, which is itself a small spend. I haven't measured it, since that is only needed if the pass doesn't fit.
+
+## The free path: the full pass on this Mac
+
+Measured by `scripts/local_throughput.py` (`eval/results/phase2c/local_throughput.json`). Base Qwen3.5-4B runs in the local Ollama server, which serves it on its MLX runner with nvfp4 weights. It reads the credit check's seeded 50 candidates, with the same 948-token instructions and ChatML as on Tinker.
+
+  | Requests at once | 50 articles took | Articles an hour | Tokens generated an article | Days for 1,236,122 |
+  |---|---|---|---|---|
+  | 1 | 421 s | 427 | 76 | 120.6 |
+  | 4 | 201 s | 895 | 73 | 57.6 |
+  | 8 | 206 s | 873 | 75 | 59.0 |
+
+- **At the best setting,** 4 at once, the full pass takes about **57.6 days of machine time and no credits.**
+- So the LoRA can be trained on Tinker and the pass run here, with the adapter loaded in Ollama: the plan's step 9 export.
+- **Not measured yet:** whether the nvfp4 weights read as Tinker's do. Step 9 measures that on dev before the pass, as RDR-10 requires.
+- **Reading the prompt dominates, not the answer:** about 1,180 prompt tokens an article against about 75 generated.
+  - A trained adapter's answers will be longer, since it fills the fields.
+  - It may also need little of the instructions, which would cut the prompt toward the article's own 550 or so tokens.
+  - Both are unmeasured.
+- **58 days rules out a local-only pass before the site's date.** The free path is a fallback for whatever part of the pass the credits can't cover, or a pass run after launch.
+
