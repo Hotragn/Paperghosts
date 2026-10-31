@@ -178,7 +178,8 @@ The Pydantic models in `paperghosts/schemas` are the single source of truth.
   - article ID, LCCN, paper title, publication place, state and date
   - edition, reel, issue and frame, from its member name. The issue is the date and a two-digit edition.
   - page, from the scan record only, when it has one
-  - the page's IIIF `service`. It comes from the scan's batch path, or else only once a check confirms the page, because a member name can point one frame off (decision 33).
+  - the page's IIIF `service`. It comes from the scan's batch path (decision 33). A page with none gets its batch from the reel-to-batch map or loc.gov, and is shown only once the page check confirms it (decision 35).
+    - Where the member name and the batch path name different frames, the member's was the page in 18 of 18 checked (decision 35). Which one the stored service follows is the EM's call.
   - `bbox_list`
 
   Crop URLs are derived from `service` and `bbox_list` when a printing is read, never stored, and a printing keeps no text of its own.

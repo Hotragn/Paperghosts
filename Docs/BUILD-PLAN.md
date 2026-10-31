@@ -87,15 +87,16 @@ How the build runs: five phases, each split into milestones, each milestone with
   - Sample per candidate as well as per cluster. Eval A's check drew clusters uniformly, so 11 of its 20 pairs came from clusters of 2 printings, and none of the 157 clusters of 50 or more was checked.
   - Hand-check the largest clusters for chaining, where shared runs join stories that aren't the same.
 - The reel-to-batch map (decision 29):
-  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31).
+  - Build it from the batch paths in the candidates and samples, so a page with no batch path gets its IIIF service from local data. That's about 367,000 of lexicon v2's candidates (decision 31), and 370,949 with the samples' batch paths (decision 35).
   - Validate it: hide the batch on pages that have one, and count how often the map gets it back.
   - Flag every reel that maps to more than one batch, such as a reissued ver01 and ver02.
   - Check a page located without a batch path before its crop is shown, and measure the check's error in the validation. One way is the scan's height and width against the IIIF `info.json`, and another is its OCR.
     - The check is needed because a member name can point at the wrong page. Where a candidate has both, its member's frame differs from its batch path's in 2.5% of them, and its reel in 396 (decision 33).
     - The batch path wins wherever it exists.
-- No loc.gov lookups yet for the 27,817 candidates whose reels the map doesn't cover. At 20 a minute they would take about a day, and most won't be reports.
+    - Decision 35 found the opposite for the frame: where the two differ, the member's frame was the page in 18 of 18. Whether the stored service takes its frame from the member is the EM's call.
+- No loc.gov lookups yet for the 24,119 candidates on the 1,000 reels the map doesn't cover (decision 35). At 20 a minute they would take most of a day, and most won't be reports.
   - Resolve only the ones the reader makes reports, through `crops.get` at one request every 3.5 s.
-  - Cache each answer, which `page_service` doesn't do yet, so no page is looked up twice.
+  - `page_service` caches each answer, one per issue, so no page is looked up twice (decision 35).
 
 **Gate**
 - Schema tests pass, and `make db-init` can run twice.
@@ -138,6 +139,7 @@ How the build runs: five phases, each split into milestones, each milestone with
   - The places autocomplete index, `places_search`, needs a free Search slot (decision 33). `make db-init` creates it once there is one.
   - Fetch the loc.gov title records only for the LCCNs among stored printings, as decision 29 does for pages, cached (`paperghosts/geo/loc.py`). A paper's place is checked against its record (decision 34), and without one it stands unchecked.
   - Story places follow 2C's rule: a county or state the text gives, or the dateline, and never the paper's state.
+  - A crop is fetched through `crops_for`, which checks a page with no batch path before its crop is shown, by its size and its OCR (decision 35).
   - Measure the record check, and any further geocoder fix, on a fresh draw of papers, never on decision 34's 200. The first of two towns joined by "and" is one such fix.
   - The title lookup by LCCN (decision 34) holds each paper's place and state once. Whether it replaces every printing's copy is `BUDGET.md`'s lever.
 - `make db-verify` runs geo, fuzzy and vector queries and checks their expected results and latencies.
