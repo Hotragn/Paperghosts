@@ -4,7 +4,7 @@ a label only when every quote is in the text, one per article and labeller."""
 import json
 
 from fastapi.testclient import TestClient
-from label_gold import app
+from label_gold import app, checked, save, save_file, show
 
 TEXT = (
     "MILFORD, Conn., June 3.-The family of Mr. John Hale have been disturbed every night\n"
@@ -112,3 +112,34 @@ def test_fields_are_for_reports_only_and_choices_come_from_the_schema(tmp_path):
     # E9 comes from the grouping, so a label can't claim it
     reprinted = {**REPORT, "slices": ["E9"]}
     assert "slices" in web.post("/label", json=reprinted).json()["detail"]
+
+
+def test_a_file_of_labels_is_saved_label_by_label_through_checked(tmp_path):
+    out = {"gold": tmp_path / "labels.jsonl", "dev": tmp_path / "dev_labels.jsonl"}
+    drafts = tmp_path / "drafts.jsonl"
+    wrong = {**REPORT, "seen": {"value": "a light", "quote": "a light"}}
+    drafts.write_text(json.dumps(REPORT) + "\n" + json.dumps(wrong) + "\n")
+
+    errors = save_file(drafts, {"a1": ROW}, "tester", out, dry=True)
+    assert len(errors) == 1 and "isn't in the text" in errors[0]
+    assert not out["gold"].exists()
+
+    save_file(drafts, {"a1": ROW}, "tester", out)
+    (saved,) = [json.loads(line) for line in out["gold"].read_text().splitlines()]
+    assert (
+        saved["labeller"] == "tester"
+        and saved["seen"]["value"] == REPORT["seen"]["value"]
+    )
+
+
+def test_show_gives_the_next_unlabelled_articles_text_and_no_stratum(tmp_path):
+    out = {"gold": tmp_path / "labels.jsonl", "dev": tmp_path / "dev_labels.jsonl"}
+    rows = {"a1": {**ROW, "stratum": "a stratum"}}
+    none = tmp_path / "no crops.json"
+
+    listed = show(rows, "tester", "gold", 5, out, none)
+    assert "knockings upon the walls" in listed and "a stratum" not in listed
+
+    save(out["gold"], checked(REPORT, ROW, "tester"))
+    assert show(rows, "tester", "gold", 5, out, none) == ""
+    assert "a1" in show(rows, "a second labeller", "gold", 5, out, none)

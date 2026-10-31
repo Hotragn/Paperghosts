@@ -7,7 +7,12 @@ the text. A label is saved only if every quote is in the text. Each labeller get
 per article, saved to eval/gold/labels.jsonl or dev_labels.jsonl. Articles come in a seeded
 shuffle, with no stratum or weight shown.
 
-  uv run python scripts/label_gold.py [labeller]    then open http://127.0.0.1:8765
+  serve [labeller]          the page; then open http://127.0.0.1:8765
+  crops                     every article's crops through crops_for, one article at a time,
+                            into the cache, listed in data/gold/crops.json
+  show SPLIT N [labeller]   the split's next N articles the labeller hasn't labelled, as text
+  check FILE                every label in a JSON-lines file through checked(), saving none
+  save FILE [labeller]      the same, saving each label that passes
 """
 
 import json
@@ -35,6 +40,9 @@ ROOT = Path(__file__).resolve().parents[1]
 GOLD = ROOT / "eval" / "gold"
 POLICY = GOLD / "POLICY.md"
 OUT = {"gold": GOLD / "labels.jsonl", "dev": GOLD / "dev_labels.jsonl"}
+SEEN = (
+    ROOT / "data" / "gold" / "crops.json"
+)  # each article's crop files, or why it has none
 KINDS = ("report", "fiction", "idiom", "religious", "advert", "other")
 # the schema's values, which POLICY.md writes with spaces: inn_or_hotel is "inn or hotel"
 CHOICES = {
@@ -74,6 +82,79 @@ def articles(root: Path = ROOT) -> dict:
             for part in parts
             for row in part
         }
+
+
+def order_of(rows: dict) -> list:
+    """Gold, then dev, each in its seeded shuffle."""
+    order = []
+    for name in OUT:
+        ids = sorted(aid for aid, row in rows.items() if row["split"] == name)
+        random.Random(f"2C.1 labelling order {name}").shuffle(ids)
+        order += ids
+    return order
+
+
+def warm(rows: dict, crops_for=crops.crops_for, seen: Path = SEEN) -> dict:
+    """Each article's crops through crops_for, one article at a time, as crops.get paces the
+    Library of Congress: its crop files, or why it has none. Saved after each article, so a
+    stop loses nothing. A busy answer is left out, so the next run asks again."""
+    found = json.loads(seen.read_text()) if seen.exists() else {}
+    for aid in order_of(rows):
+        row = rows[aid]
+        if aid in found:
+            continue
+        try:
+            if not (row.get("scan") and row.get("bbox_list")):
+                raise LookupError("the article has no scan or no boxes")
+            _, paths = crops_for(
+                row["member"], row["scan"], row["bbox_list"], text=row.get("text")
+            )
+            found[aid] = {"crops": [str(path) for path in paths]}
+        except crops.Busy:
+            continue
+        except (LookupError, ValueError, httpx.HTTPError) as error:
+            found[aid] = {"none": str(error)}
+        seen.parent.mkdir(parents=True, exist_ok=True)
+        seen.write_text(json.dumps(found, indent=1) + "\n")
+    return found
+
+
+def show(rows: dict, labeller: str, split: str, count: int, out=OUT, seen=SEEN) -> str:
+    """The split's next `count` articles this labeller hasn't labelled, in the labelling
+    order, as text to read: no stratum and no weight."""
+    done = {r["article_id"] for r in saved(out[split]) if r["labeller"] == labeller}
+    cropped = json.loads(seen.read_text()) if seen.exists() else {}
+    picked = [a for a in order_of(rows) if rows[a]["split"] == split and a not in done]
+    return "\n\n".join(
+        f"=== {aid}\n{rows[aid].get('paper')} · {rows[aid].get('date')}\n"
+        f"crops: {cropped.get(aid, {}).get('crops') or cropped.get(aid, {}).get('none')}\n"
+        f"headline: {rows[aid].get('headline') or ''}\n---\n{rows[aid].get('text') or ''}"
+        for aid in picked[:count]
+    )
+
+
+def save_file(
+    path: Path, rows: dict, labeller: str, out=OUT, dry: bool = False
+) -> list:
+    """Each label in a JSON-lines file, through checked(), saved unless dry. Returns what's
+    wrong with the others, article by article."""
+    errors = []
+    for line in path.read_text().splitlines():
+        if not line.strip():
+            continue
+        label = json.loads(line)
+        row = rows.get(label.get("article_id"))
+        if row is None:
+            errors.append(f"{label.get('article_id')}: not a gold or dev article")
+            continue
+        try:
+            record = checked(label, row, labeller)
+        except ValueError as error:
+            errors.append(f"{row['article_id']}: {error}")
+            continue
+        if not dry:
+            save(out[row["split"]], record)
+    return errors
 
 
 def squeezed(text: str) -> str:
@@ -228,11 +309,7 @@ def app(
     rows: dict, labeller: str, crops_for=crops.crops_for, out=OUT, crop_dir=crops.CROPS
 ):
     api = FastAPI(title="Gold labelling")
-    order = []
-    for name in OUT:
-        ids = sorted(aid for aid, row in rows.items() if row["split"] == name)
-        random.Random(f"2C.1 labelling order {name}").shuffle(ids)
-        order += ids
+    order = order_of(rows)
     policy = POLICY.read_text()
     rules = RULE.findall(policy)
 
@@ -355,5 +432,27 @@ the crop was needed</label></p>
 
 
 if __name__ == "__main__":
-    labeller = sys.argv[1] if len(sys.argv) > 1 else "Claude"
-    uvicorn.run(app(articles(), labeller), host="127.0.0.1", port=8765)
+    run, *rest = sys.argv[1:] or ["serve"]
+    rows = articles()
+    if run == "serve":
+        uvicorn.run(
+            app(rows, rest[0] if rest else "Claude"), host="127.0.0.1", port=8765
+        )
+    elif run == "crops":
+        found = warm(rows)
+        print(
+            len(found),
+            "articles,",
+            sum("crops" in v for v in found.values()),
+            "cropped",
+        )
+    elif run == "show":
+        split, count, *who = rest
+        print(show(rows, who[0] if who else "Claude", split, int(count)))
+    elif run in ("check", "save"):
+        path, *who = rest
+        errors = save_file(
+            Path(path), rows, who[0] if who else "Claude", dry=run == "check"
+        )
+        print("\n".join(errors) or "every label passes checked()")
+        sys.exit(1 if errors else 0)
