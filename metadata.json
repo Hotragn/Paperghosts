@@ -1,0 +1,24 @@
+{
+  "cli_version": "0.0.0-20261009205945-1f44a6f9620d",
+  "checkpoint_id": "01M6AY9CFDSAZN8MYHPYBXR3PT",
+  "strategy": "manual-commit",
+  "branch": "onboarding-motion",
+  "checkpoints_count": 1,
+  "files_touched": null,
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 5380,
+    "cache_creation_tokens": 8650824,
+    "cache_read_tokens": 1206653620,
+    "output_tokens": 4183378,
+    "api_call_count": 2591
+  }
+}
