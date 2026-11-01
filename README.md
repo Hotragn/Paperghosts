@@ -34,7 +34,22 @@ uv run python scripts/query_demo_atlas.py "apparition" # Atlas Search, fuzzy: fi
 uv run python scripts/query_demo_atlas.py --like <article_id>   # ghosts like this one (moreLikeThis)
 ```
 
+```bash
+uv run python scripts/load_demo_places.py load                       # the papers' 46 towns, geocoded from GeoNames
+uv run python scripts/load_demo_places.py near Philadelphia Pennsylvania 250   # $geoNear: papers printed nearby
+```
+
 The keys come from `MONGODB_URI` in `.env`.
+- "Near this town" is about where the papers were printed, never where the stories happened.
+- Atlas Vector Search isn't built yet. The index is there for 384-dimension vectors, but embedding the reports with an open model on Hugging Face needs a token with the Inference Providers permission. Until then, "ghosts like this one" is Atlas Search's moreLikeThis.
+
+### Sentry
+- **API:** `/api/search` and `/api/like/{id}` run each Atlas query in a span of op `db.atlas.query`, with its kind and latency, never the words searched for. The scripts' queries run the same way.
+- **Releases** are commits.
+- **Figures:** `uv run python scripts/sentry_latency.py [SINCE [RELEASE]]` pulls p50 and p95 per query kind with `SENTRY_AUTH_TOKEN`. One real finding is fixed: decision 40.
+- **The web app** sends tracing and errors only when built with `VITE_SENTRY_DSN`.
+  - With `SENTRY_AUTH_TOKEN` at build time, it uploads hidden source maps for the commit and deletes them from `dist`.
+  - On Render, set both in the service's environment.
 - The reports go in as the planned `Report` documents, and Atlas's own validator checks them.
 - The site's "ghosts like this one" is Atlas's answer, saved by `scripts/export_like.py`, so the static build works offline.
 - Sample outputs are in `Docs/demo/`.

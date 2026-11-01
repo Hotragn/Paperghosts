@@ -1096,8 +1096,8 @@
  {
   "name": "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
   "value": [
-   124,
-   125
+   134,
+   135
   ],
   "source": "git log --all trailers; git for-each-ref refs/entire/checkpoints"
  },
@@ -1111,6 +1111,121 @@
   "note": "the difference fits the articles held out as gold, dev and their reprints, but it was not checked article by article"
  },
  {
+  "name": "Sentry: Atlas query latency (ms), release c0a248f",
+  "value": {
+   "reports find": [
+    41.0,
+    47.6,
+    40.0
+   ],
+   "reports fuzzy": [
+    74.8,
+    96.8,
+    40.0
+   ],
+   "reports more_like_this": [
+    66.4,
+    75.5,
+    40.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: c0a248f3311f54908514d2ccefc46f0dffb029f0.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: Atlas query latency (ms), release 19a6a4b",
+  "value": {
+   "reports more_like_this": [
+    62.7,
+    71.4,
+    80.0
+   ],
+   "reports find": [
+    39.8,
+    47.3,
+    40.0
+   ],
+   "reports fuzzy": [
+    67.3,
+    83.5,
+    40.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: 19a6a4bcb1a532c9b1b5b499f488f0d7ffb8da7f.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: the Morgue's page loads by span op (ms), scripted loads, not visitors",
+  "value": {
+   "resource.img": [
+    10.0,
+    10.0,
+    436.0
+   ],
+   "pageload": [
+    101.6,
+    1228.9,
+    14.0
+   ],
+   "browser.request": [
+    2.0,
+    3.0,
+    14.0
+   ],
+   "resource.script": [
+    6.0,
+    31.8,
+    14.0
+   ],
+   "browser.load_event": [
+    0.0,
+    0.1,
+    14.0
+   ],
+   "browser.dom_content_loaded_event": [
+    0.0,
+    0.1,
+    14.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: web.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: Atlas query latency (ms), release b560aa2",
+  "value": {
+   "places near": [
+    524.6,
+    600.2,
+    5.0
+   ],
+   "reports fuzzy": [
+    560.8,
+    674.8,
+    5.0
+   ],
+   "reports more_like_this": [
+    68.1,
+    75.7,
+    5.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: b560aa24af194d42b1303f5989af5367a06e3a8b.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Atlas: the papers' towns geocoded and loaded",
+  "value": {
+   "printed_in_towns": 46,
+   "geocoded": 46,
+   "reports_covered": 55,
+   "storage_kb": 4.0
+  },
+  "source": "eval/results/atlas_places.json: (top) {printed_in_towns, geocoded, reports_covered, storage_kb}"
+ },
+ {
+  "name": "Atlas Vector Search: not built",
+  "value": "the Hugging Face token lacks the Inference Providers permission (HTTP 403), so no open-model embeddings; ghosts like this one uses Atlas Search's moreLikeThis",
+  "source": "Hugging Face router, feature-extraction for sentence-transformers/all-MiniLM-L6-v2, HTTP 403, 2026-10-31 (not committed)",
+  "note": "hard-coded: a refusal leaves no results file"
+ },
+ {
   "name": "decision 39: the disclosure",
   "value": "No Tinker spend at all, and step 2C runs on this Mac",
   "source": "Docs/DECISIONS.md:1021",
@@ -1118,7 +1233,7 @@
  },
  {
   "name": "tests collected",
-  "value": 403,
-  "source": "uv run pytest --collect-only -q, last line: '403 tests collected in 1.73s'"
+  "value": 404,
+  "source": "uv run pytest --collect-only -q, last line: '404 tests collected in 1.30s'"
  }
 ]

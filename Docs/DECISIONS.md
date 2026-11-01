@@ -1043,3 +1043,16 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - The runs now save each answer as it lands and resume.
   - From here, one model process at a time.
 - **Submission:** the owner moved the week to tonight's submission, so 2C.3 is parked as committed on `phase-2c-reader`. The Morgue shows the 78 labelled reports, not the reader's output.
+
+**40. Sentry traces each Atlas query, and what it showed was fixed: "ghosts like this one" now reads its report from Atlas once. Every Atlas query runs in a span of op `db.atlas.query` that carries its kind and latency, never the words searched for. `scripts/sentry_latency.py` pulls p50 and p95 per kind and release from Sentry into `eval/results/sentry_latency.json`.**
+
+- **The finding (release c0a248f, 40 requests of each kind):**
+  - Each "ghosts like this one" request made two Atlas round trips: a `find` for the report's headline and text (p50 41 ms, p95 48), then the `moreLikeThis` (p50 66, p95 76).
+  - A whole fuzzy search was 75 ms.
+- **The fix (release 19a6a4b):** a report doesn't change within a release, so the API keeps what it read, bounded at 1,024 reports.
+  - Over two passes of the same 40 reports, Sentry counts 80 `moreLikeThis` queries but only 40 `find`s. A repeat request is one round trip: p50 63 ms of Atlas time, against 107.
+  - Measured at the client, a repeat request's p50 went from 110 ms to 61, and its p95 from 123 to 68.
+- **The scripts (release b560aa2):** a script's first query pays to open its connection. A fuzzy search or a `$geoNear` takes p50 525–561 ms cold. A `moreLikeThis` that follows the script's own `find` takes 68 ms. The API's one long-lived client avoids that cost, and its searches run at p50 67–75 ms.
+- **The web app** (paperghosts-web) sends browser tracing and errors only when built with a DSN, and collects nothing about the reader.
+  - Its release is the commit, with hidden source maps uploaded, then deleted from the build.
+  - So far its page loads come from scripted loads in the browser pane and headless Chrome. LCP, CLS and INP need real visits that hide or use the page.

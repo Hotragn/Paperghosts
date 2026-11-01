@@ -441,6 +441,27 @@ def per_ten_thousand(prompt: int, generated: int, articles: int, rates: list) ->
     ]
 
 
+def sentry() -> list:
+    """Sentry's p50 and p95 per Atlas query kind, for each release pulled (decision 40)."""
+    rel = "eval/results/sentry_latency.json"
+    found = json.loads((ROOT / rel).read_text())
+    return [
+        row(
+            "Sentry: the Morgue's page loads by span op (ms), scripted loads, not visitors"
+            if key == "web"
+            else f"Sentry: Atlas query latency (ms), release {key[:7]}",
+            (
+                {
+                    q["query"]: [q["p50_ms"], q["p95_ms"], q["count"]]
+                    for q in v["spans"]
+                },
+                f"{rel}: {key}.spans, as [p50, p95, count]",
+            ),
+        )
+        for key, v in found.items()
+    ]
+
+
 def submission() -> list:
     """The submission's figures: the 1850 probe, the Morgue, Atlas, Tinker's price per 10,000
     articles, Entire's checkpoints and decision 39's disclosure."""
@@ -530,6 +551,24 @@ def submission() -> list:
             "the difference fits the articles held out as gold, dev and their reprints, but it was "
             "not checked article by article",
         ),
+        *sentry(),
+        row(
+            "Atlas: the papers' towns geocoded and loaded",
+            at(
+                "eval/results/atlas_places.json",
+                "",
+                "printed_in_towns",
+                "geocoded",
+                "reports_covered",
+                "storage_kb",
+            ),
+        ),
+        {
+            "name": "Atlas Vector Search: not built",
+            "value": "the Hugging Face token lacks the Inference Providers permission (HTTP 403), so no open-model embeddings; ghosts like this one uses Atlas Search's moreLikeThis",
+            "source": "Hugging Face router, feature-extraction for sentence-transformers/all-MiniLM-L6-v2, HTTP 403, 2026-10-31 (not committed)",
+            "note": "hard-coded: a refusal leaves no results file",
+        },
         row(
             "decision 39: the disclosure",
             doc(
