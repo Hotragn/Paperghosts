@@ -41,7 +41,7 @@ uv run python scripts/load_demo_places.py near Philadelphia Pennsylvania 250   #
 
 The keys come from `MONGODB_URI` in `.env`.
 - "Near this town" is about where the papers were printed, never where the stories happened.
-- Atlas Vector Search isn't built yet. The index is there for 384-dimension vectors, but embedding the reports with an open model on Hugging Face needs a token with the Inference Providers permission. Until then, "ghosts like this one" is Atlas Search's moreLikeThis.
+- Atlas Vector Search isn't built yet. The index is there for 384-dimension vectors, but Hugging Face's Inference Providers credits for an open embedding model ran out (HTTP 402), and the owner chose to spend nothing. Until then, "ghosts like this one" is Atlas Search's moreLikeThis.
 
 ### Sentry
 - **API:** `/api/search` and `/api/like/{id}` run each Atlas query in a span of op `db.atlas.query`, with its kind and latency, never the words searched for. The scripts' queries run the same way.

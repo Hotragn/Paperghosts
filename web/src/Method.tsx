@@ -22,7 +22,8 @@ const count = (x: number) => x.toLocaleString('en-US')
 // one row per measure: each series a dot at its rate and a whisker across its Wilson interval
 function Intervals({ rows, series }: { rows: { label: string; rates: (Rate | null)[] }[]; series: string[] }) {
   return (
-    <figure className="chart">
+    // scrolls sideways on a phone, so it takes keyboard focus to scroll
+    <figure className="chart" tabIndex={0} role="region" aria-label={`Chart: ${series.join(' against ')}`}>
       <div className="legend" aria-hidden="true">
         {series.map((s, i) => (
           <span key={s}>

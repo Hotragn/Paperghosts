@@ -565,8 +565,8 @@ def submission() -> list:
         ),
         {
             "name": "Atlas Vector Search: not built",
-            "value": "the Hugging Face token lacks the Inference Providers permission (HTTP 403), so no open-model embeddings; ghosts like this one uses Atlas Search's moreLikeThis",
-            "source": "Hugging Face router, feature-extraction for sentence-transformers/all-MiniLM-L6-v2, HTTP 403, 2026-10-31 (not committed)",
+            "value": "first the Hugging Face token lacked the Inference Providers permission (HTTP 403), then with it the account had no credits left (HTTP 402), and buying credits is spending the owner ruled out; ghosts like this one uses Atlas Search's moreLikeThis",
+            "source": "Hugging Face router, feature-extraction for all-MiniLM-L6-v2 and bge-small-en-v1.5, HTTP 403 then 402, 2026-10-31 (not committed)",
             "note": "hard-coded: a refusal leaves no results file",
         },
         row(

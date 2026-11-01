@@ -135,13 +135,13 @@ function Case({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opene
           <figcaption>Scanned by the Library of Congress, Chronicling America</figcaption>
         </figure>
         <div className="transcription">
-          <h3 className="deck">
+          <h2 className="deck">
             {lines.map((line, i) => (
               <span key={i} className={i === 0 ? 'deck-top' : 'deck-line'}>
                 {line}
               </span>
             ))}
-          </h3>
+          </h2>
           <p className="ocr">{marked(r.text, fields, 'in_text')}</p>
           <p className="note">The text is the scan’s OCR as printed, errors and all. Marked words are the quotes the label rests on.</p>
         </div>
@@ -196,7 +196,7 @@ function Case({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opene
       </p>
       {r.like && r.like.length > 0 && (
         <nav className="like" aria-label="Ghosts like this one">
-          <h4>Ghosts like this one</h4>
+          <h3>Ghosts like this one</h3>
           <ul>
             {r.like.map((l) => {
               const o = byId.get(l.article_id)
