@@ -1059,7 +1059,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 
 ## The Morgue's first visit (2026-11-01)
 
-**41. A first visitor gets a note, one real report and the three rooms, and the site gets a little motion: Lenis for the wheel, and three React Bits pieces. With reduced motion none of the motion starts. GSAP loads in its own chunk, so the main bundle grows by 9.1 kB gzipped, not 60.**
+**41. A first visitor gets a note, one real report and the three rooms, and the site gets a little motion: Lenis for the wheel, and three React Bits pieces. With reduced motion none of the motion starts. GSAP loads in its own chunk, so the main bundle grows by 12.3 kB gzipped, not 60.**
 
 - **The note** sits above the request slip on a first visit:
   - It says what a morgue is and what an envelope holds, with the count and span read from `reports.json`.
@@ -1070,8 +1070,13 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 - **The motion,** copied from React Bits (commit 4dc7b5b, TypeScript and CSS) into `web/src/bits/` with its MIT + Commons Clause notice, unchanged below a header:
   - **SplitText** brings the tagline's words up out of a blur once the fonts are in.
   - **FadeContent** develops the featured envelope and the four paper samples like a print in a tray.
-  - **Noise** lays a still paper grain behind the page. It runs at 0 fps: one tile is painted, and nothing redraws.
-  - **Lenis** smooths wheel scrolling only.
+  - **ShapeGrid** (Backgrounds) lays a halftone dot screen behind the page, like a newspaper's.
+    - It holds still: there's no drift, no click ripple and no intro.
+    - It draws only while the pointer moves, lighting the dots under it like the reading lamp, and stops once things settle. 7–11 s after load it drew 0 frames, and 5 search keystrokes drew 0.
+    - It's memoised on the lights, because it redraws after every render it gets. It paints at 1× pixel ratio.
+    - Of React Bits' 64 backgrounds it is one of two with no WebGL, three.js or ogl. The other, GridMotion, is a moving image grid.
+    - It replaced an earlier still grain (Noise), so there's one background layer.
+  - **Lenis** smooths wheel scrolling only, with `stopInertiaOnNavigate`, so following a link ends any glide. That is lenis.dev's recommended setup: `autoRaf`, its CSS, and `data-lenis-prevent` where a box scrolls itself.
   - **Not the drawer's envelopes:** they would mount new animations on every keystroke of a search, so filtering stays as it was.
   - **Not WebGL,** and nothing that redraws every frame.
 - **Reduced motion:**
@@ -1079,7 +1084,7 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - The tagline is a plain `<p>`.
   - FadeContent shows its content at once.
   - The GSAP chunk is never fetched.
-  - The still grain stays, because it doesn't move.
+  - The halftone is paused: drawn once, with no lamp following the pointer.
 - **What the browser keeps:**
   - Lenis takes the wheel only, not anchors, so the skip link, `#drawer`, the rooms' hash routes, focus scrolling and the keyboard are the browser's own.
   - The How we know charts carry `data-lenis-prevent`, so their sideways scroll is native.
@@ -1088,9 +1093,9 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 
   | | Before | After |
   |---|---|---|
-  | Main JS | 241.35 kB (75.76 kB gzip) | 270.32 kB (84.84 kB gzip) |
+  | Main JS | 241.35 kB (75.76 kB gzip) | 278.22 kB (88.06 kB gzip) |
   | GSAP chunk, motion visitors only, fetched after first paint | none | 132.92 kB (52.38 kB gzip) |
-  | CSS | 21.62 kB (4.92 kB gzip) | 24.21 kB (5.57 kB gzip) |
+  | CSS | 21.62 kB (4.92 kB gzip) | 24.07 kB (5.54 kB gzip) |
 
   - Bundled straight into the main chunk, GSAP made it 135.98 kB gzip, so it was split out.
   - While the chunk loads, the tagline waits unseen. If the chunk takes more than 1.2 s, CSS shows it anyway, and a failed fetch leaves the plain page.

@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { memo, useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
-import Noise from './bits/Noise.tsx'
+import ShapeGrid from './bits/ShapeGrid.tsx'
 import Method from './Method.tsx'
 import { Develop, Tagline } from './Reveal.tsx'
+import { still } from './motion.ts'
 
 type Field = {
   value: string
@@ -373,6 +374,28 @@ function Intro({ reports, featured, hide }: { reports: Report[]; featured?: Repo
   )
 }
 
+// behind the page, a halftone screen like a newspaper's, still until the pointer brings the lamp over it.
+// memo: ShapeGrid redraws after every render it gets, so a search keystroke must not reach it
+const Halftone = memo(function Halftone({ lights }: { lights: 'on' | 'off' }) {
+  return (
+    <div className="halftone" aria-hidden="true">
+      <ShapeGrid
+        shape="dot"
+        cellSize={18}
+        direction="none"
+        lineColor={lights === 'on' ? 'rgba(27, 25, 22, 0.13)' : 'rgba(233, 226, 208, 0.13)'}
+        hoverColor={lights === 'on' ? '#8c6a43' : '#f0c987'}
+        radius={3}
+        glow={0.2}
+        clickCascade={false}
+        intro={false}
+        paused={still}
+        dpr={1}
+      />
+    </div>
+  )
+})
+
 function useLights(): ['on' | 'off', () => void] {
   const [lights, setLights] = useState<'on' | 'off'>(() => {
     try {
@@ -479,7 +502,7 @@ function App() {
 
   return (
     <>
-      <Noise fixed opacity={0.05} fps={0} zIndex={-1} />
+      <Halftone lights={lights} />
       <a className="skip" href="#main">
         Skip to the content
       </a>

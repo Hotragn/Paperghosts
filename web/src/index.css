@@ -314,6 +314,14 @@ figcaption,
   padding: 0.5rem 0.15rem;
 }
 
+/* the halftone screen behind everything; it never takes a click */
+.halftone {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* the request slip */
 .slip {
   display: grid;
