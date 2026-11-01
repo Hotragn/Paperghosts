@@ -1,0 +1,104 @@
+{
+ "rule": {
+  "leak": 0.1,
+  "fewest": 5
+ },
+ "flagged_of": {
+  "dev, near the threshold": {
+   "same": "115 of 115",
+   "different": "4 of 5"
+  },
+  "dev, per candidate": {
+   "same": "37 of 37",
+   "different": "2 of 3"
+  },
+  "eval, body probe": {
+   "same": "76 of 76",
+   "different": "3 of 4"
+  },
+  "eval, large cluster, least similar pair": {
+   "same": "88 of 153",
+   "different": "8 of 54"
+  },
+  "eval, near the threshold": {
+   "same": "79 of 79",
+   "different": "1 of 1"
+  },
+  "eval, per candidate": {
+   "same": "196 of 196",
+   "different": "2 of 4"
+  },
+  "eval, per cluster": {
+   "same": "100 of 100",
+   "different": "0 of 0"
+  }
+ },
+ "one_story_drawn_at_random": {
+  "pairs": 603,
+  "flagged": 603,
+  "lowest_shares": [
+   [
+    0.1053,
+    6,
+    "dev-0088",
+    true
+   ],
+   [
+    0.1099,
+    20,
+    "dev-0098",
+    true
+   ],
+   [
+    0.1273,
+    28,
+    "eval-0139",
+    true
+   ],
+   [
+    0.1375,
+    22,
+    "eval-0598",
+    true
+   ],
+   [
+    0.1461,
+    13,
+    "eval-0528",
+    true
+   ]
+  ],
+  "fewest_runs": [
+   [
+    0.1053,
+    6,
+    "dev-0088",
+    true
+   ],
+   [
+    0.1522,
+    7,
+    "eval-0067",
+    true
+   ],
+   [
+    0.3333,
+    8,
+    "eval-0245",
+    true
+   ],
+   [
+    1.0,
+    8,
+    "dev-0030",
+    true
+   ],
+   [
+    0.2941,
+    10,
+    "eval-0224",
+    true
+   ]
+  ]
+ }
+}

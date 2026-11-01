@@ -126,3 +126,87 @@ At the top of the range, the full text fits on M0 only without `sample_mflix`. A
 2. **Take the three lossless levers:** int16 boxes, the title lookup, and the derived headline. They save 17 MB at the top of the range. int8 saves 66.5 MB more, but only after 2D's check of its neighbours on real embeddings.
 3. **Size from the reader's real count.** The reader's full pass (2C) comes before the load (2D), and it gives the real number of reports and stories. At the point estimates, everything fits even with `sample_mflix`, so options 1 and 4 can wait for that count.
 4. **A paid tier**, such as Flex or a dedicated M10, if the real count needs more than M0 can hold. It costs money, so it needs the owner's yes.
+
+# Tinker credit budget (2C.3)
+
+Measured on 2026-10-31 by `scripts/credit_check.py`, which writes `eval/results/phase2c/credit_check.json`, and by the teacher's three dev rounds (`eval/results/phase2c/teacher_dev_r1.json` to `_r3.json`). Rates come from Tinker's billing records for this account. Every other number follows by arithmetic.
+
+## What Tinker reports
+
+- **No balance.** The API reports usage and an estimated cost per hourly bucket (`AdminClient.get_billing_usage`), but not the credit left, which only the console shows. **The owner has to read the balance there.**
+- **Spent before 2C.3:** $5.89 over the last 52 days, mostly 4B training ($3.92) and 397B sampling ($1.23).
+- **Rates per million tokens:**
+
+  | Model | Prompt (cached, uncached) | Generated | Training |
+  |---|---|---|---|
+  | Qwen3.5-397B-A17B, the teacher | $0.60, $3.00 | $7.50 | — |
+  | Qwen3.5-4B, the student | $0.066, $0.33 | $1.005 | $0.737 |
+
+- Billing lags the requests by about three hours, so the 50-article run's own cost isn't billed yet. Its cost here is its tokens times these rates.
+- **Caching:** billing marks every prefill bucket `cached` or not, and bills cached tokens at a fifth of the rate. On this account's earlier teacher runs (2026-10-05 and -06), 88% of prefill tokens were billed as cached: 658,432 of 746,348.
+  - That is the mechanism the low end of every range here assumes: the policy prefix, the same in every teacher prompt, billed cached.
+  - Today's runs aren't billed yet, so they don't yet confirm it for this prompt. `credit_check.billed` now splits cached from uncached prefill, so the check is one call once billing catches up.
+  - Until then, plan on the high end.
+
+## Per article, measured
+
+- **The sample:** a seeded 50 of the 1,229,780 candidates in the pool.
+- **The teacher** reads the instructions and `POLICY.md` in full, then the article. On dev's 150 articles that's 9,392 prompt and 105 generated tokens an article. **Cost:** $0.0290 uncached, or about $0.0076 if Tinker caches the policy prefix the articles share.
+- **4B reading,** with the instructions alone and no policy: 948 prompt and 67 generated tokens an article. **Cost:** $0.00038, or about $0.00026 cached.
+- 50 articles took 13 s on the teacher and 9 s on 4B, at 16 requests at once.
+
+## The projection
+
+| Job | Size | Cost (cached to uncached) |
+|---|---|---|
+| Teacher on dev, per prompt round | 150 articles | $1.1–4.4 |
+| Teacher on the training draw | 3,000 articles | $23–87 |
+| LoRA training | 3,000 examples × 1,050 tokens × 18 epochs (6 iterations of 3) | $42 |
+| Dev scoring, per iteration | 150 articles | under $0.10 |
+| Eval B, ablations and the pooled screen | about 3,000 gold reads + 38,900 random-reservoir articles | $11–16 |
+| **The full pass** | **1,236,122 candidates** | **$323–470** |
+| **All of it** | | **about $400–620** |
+
+- A draw of 6,000 would add $23–87 more teacher time and $42 more training.
+- **Whether the full pass fits** turns on the balance. At $323–470 it is three quarters of the total.
+- **If it doesn't fit,** the plan's fallback is decision 36's skip rule: read only each story's first printing, about 1,002,205 articles, saving about 19%. Its loss has to be measured on a seeded draw of skipped printings read beside their first ones, which is itself a small spend. I haven't measured it, since that is only needed if the pass doesn't fit.
+
+## The free path: the full pass on this Mac
+
+Measured by `scripts/local_throughput.py` (`eval/results/phase2c/local_throughput.json`). Base Qwen3.5-4B runs in the local Ollama server, which serves it on its MLX runner with nvfp4 weights. It reads the credit check's seeded 50 candidates, with the same 948-token instructions and ChatML as on Tinker.
+
+  | Requests at once | 50 articles took | Articles an hour | Tokens generated an article | Days for 1,236,122 |
+  |---|---|---|---|---|
+  | 1 | 421 s | 427 | 76 | 120.6 |
+  | 4 | 201 s | 895 | 73 | 57.6 |
+  | 8 | 206 s | 873 | 75 | 59.0 |
+
+- **At the best setting,** 4 at once, the full pass takes about **57.6 days of machine time and no credits.**
+- So the LoRA can be trained on Tinker and the pass run here, with the adapter loaded in Ollama: the plan's step 9 export.
+- **Not measured yet:** whether the nvfp4 weights read as Tinker's do. Step 9 measures that on dev before the pass, as RDR-10 requires.
+- **Reading the prompt dominates, not the answer:** about 1,180 prompt tokens an article against about 75 generated.
+  - A trained adapter's answers will be longer, since it fills the fields.
+  - It may also need little of the instructions, which would cut the prompt toward the article's own 550 or so tokens.
+  - Both are unmeasured.
+- **58 days rules out a local-only pass before the site's date.** The free path is a fallback for whatever part of the pass the credits can't cover, or a pass run after launch.
+
+
+## Spend stopped (2026-10-31): no Tinker spend, and 2C runs locally (decision 39)
+
+- **The balance was $0.00.** The owner's console showed a remaining credit balance of $0.00, with $0.80 of unpaid usage due this month. I had taken the account's past usage for evidence of credits left. It wasn't, so today's runs were billed to the owner's card without a yes.
+- **Today's Tinker use,** from each run's recorded tokens (billing hadn't caught up when the spend stopped):
+
+  | Job | Prompt tokens | Generated tokens | Cost, all cached to none |
+  |---|---|---|---|
+  | credit check, teacher, 50 articles | 456,246 | 3,630 | $0.30–1.40 |
+  | credit check, 4B, 50 articles | 47,396 | 3,330 | $0.01–0.02 |
+  | teacher on dev, round 1, 150 | 1,373,823 | 15,087 | $0.94–4.23 |
+  | teacher on dev, round 2, 150 | 1,408,773 | 15,820 | $0.96–4.34 |
+  | teacher on dev, round 3, 150 | 1,449,123 | 14,930 | $0.98–4.46 |
+  | probes | 56 | 12 | under $0.01 |
+  | **all** | **4,735,417** | **52,809** | **$3.19–14.45** |
+
+  - **The thinking round** was refused by Tinker's billing block (HTTP 402) and stopped, and it saved no answer. Any requests served before the block aren't recorded: at most 150 prompts of about 9,400 tokens, or $4.2 more at the uncached rate.
+  - Loading the gpt-oss and Kimi tokenizers cost nothing.
+- **From now on Tinker sampling is off in code:** `teacher.read` refuses unless `TINKER_SPEND_ALLOWED=1` is set, which needs the owner's yes. Reading billing stays free.
+- **Disk:** today's two downloads, Ollama's `qwen3.5:4b` (6.6 GB) and the Qwen3.5-4B weights for mlx-lm (8.7 GB), took free disk from 30 GB to 15 GB. That is the floor, so no further model fits. Deleting either is the owner's call.

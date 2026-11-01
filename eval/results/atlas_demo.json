@@ -1,0 +1,24 @@
+{
+ "documents": 78,
+ "demo_reports": 78,
+ "inserted": 78,
+ "replaced": 0,
+ "load_seconds": 7.0,
+ "storage_kb": 140.0,
+ "data_kb": 297.3,
+ "index_kb": 184.0,
+ "search_indexes": [
+  {
+   "name": "reports_search",
+   "status": "READY",
+   "queryable": true
+  },
+  {
+   "name": "reports_vector",
+   "status": "READY",
+   "queryable": true
+  }
+ ],
+ "with_location": 0,
+ "code": "f4365ae672028c18377bccd9962f45e245fa8a04"
+}

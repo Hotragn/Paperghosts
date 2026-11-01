@@ -1,0 +1,14 @@
+{
+ "g26": {
+  "concurrent": 1,
+  "wall_seconds": 2215.3,
+  "articles_per_hour": 244,
+  "prompt_tokens": 1479248,
+  "output_tokens": 14543,
+  "draw_of_3000_hours": 12.3,
+  "prompt_seconds_per_article": 9.1,
+  "model": "gemma4:26b-a4b-it-qat",
+  "thinking": false,
+  "articles": 150
+ }
+}

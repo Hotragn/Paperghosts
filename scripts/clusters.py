@@ -28,6 +28,7 @@ import zstandard
 
 from paperghosts.cluster.reprints import (
     BOILERPLATE,
+    SHINGLE,
     WORD,
     clusters,
     keys,
@@ -51,6 +52,8 @@ LOOSE = 1.25  # a member this much longer than its story's first printing is rea
 GRID = [round(0.2 + 0.05 * i, 2) for i in range(13)]  # 0.2 to 0.8
 LARGE = 50  # printings in a cluster that gets its least similar pair checked by hand
 WORDS_SHOWN = 400  # of each printing, for the reading agents
+# words past WORDS_SHOWN that both printings need before the unseen check compares their tails
+TAIL = 50
 EMPTY = np.array([], dtype=np.uint64)
 
 
@@ -389,6 +392,68 @@ def score(found: dict, threshold: float) -> None:
     print(json.dumps(out["evaluation"], indent=1)[:3000])
 
 
+def runs_of(text: str) -> set:
+    """Every five-word run of 3+ letters in the text, none sampled."""
+    words = WORD.findall(text.lower())
+    return {" ".join(words[i : i + SHINGLE]) for i in range(len(words) - SHINGLE + 1)}
+
+
+def overlap_of(a: set, b: set):
+    """The share of the smaller set of runs the other holds."""
+    return round(len(a & b) / min(len(a), len(b)), 4) if a and b else None
+
+
+def unseen(found: dict, root: Path = ROOT) -> dict:
+    """The EM's check of the reading agents' 400 words (decision 36). For the joined pairs of
+    the per-candidate, per-cluster and near-threshold strata: how many have a printing longer
+    than the 400 whitespace words the agents saw. Where both printings run on at least TAIL
+    words past them, it gives how much the two tails share beside how much the openings share.
+    A cut reprint has no tail to compare, so it's counted but not ranked. The lowest were read
+    in full."""
+    index = {i: d for d, i in enumerate(found["ids"])}
+    story, _ = stories_at(found, THRESHOLD)
+    strata = ("per candidate", "per cluster", "near the threshold")
+    labelled = json.loads((SETS / "eval.json").read_text())
+    joined = [
+        p for p in labelled if p["stratum"] in strata and together(index, story, p)
+    ]
+    wanted = {x for p in joined for x in (p["a"], p["b"])}
+    full = {}
+    for path in sorted((root / "data" / "candidates").glob("*.jsonl.zst")):
+        with zstandard.open(path, "rt") as rows:
+            for row in map(json.loads, rows):
+                if row["article_id"] in wanted:
+                    full[row["article_id"]] = (row["text"] or "").split()
+    rows_out = []
+    for p in joined:
+        a, b = full[p["a"]], full[p["b"]]
+        if max(len(a), len(b)) <= WORDS_SHOWN:
+            continue
+        row = {
+            "pair": p["pair"],
+            "words": [len(a), len(b)],
+            "first_400": overlap_of(
+                runs_of(" ".join(a[:WORDS_SHOWN])), runs_of(" ".join(b[:WORDS_SHOWN]))
+            ),
+        }
+        if min(len(a), len(b)) >= WORDS_SHOWN + TAIL:
+            row["past_400"] = overlap_of(
+                runs_of(" ".join(a[WORDS_SHOWN:])), runs_of(" ".join(b[WORDS_SHOWN:]))
+            )
+        rows_out.append(row)
+    ranked = sorted(
+        (r for r in rows_out if r.get("past_400") is not None),
+        key=lambda r: r["past_400"],
+    )
+    return {
+        "joined_pairs": len(joined),
+        "with_a_printing_past_400_words": len(rows_out),
+        "with_both_tails_compared": len(ranked),
+        "lowest": ranked[:10],
+        "pairs": rows_out,
+    }
+
+
 def main(run: str, root: Path = ROOT):
     found = features(root)
     if run == "build":
@@ -418,6 +483,12 @@ def main(run: str, root: Path = ROOT):
         print(frozen)
     elif run == "tune":
         tune(found)
+    elif run == "unseen":
+        out = unseen(found, root)
+        (REPORT.parent / "clusters_unseen.json").write_text(
+            json.dumps(out, indent=1) + "\n"
+        )
+        print({k: v for k, v in out.items() if k != "pairs"})
     elif run == "score":
         score(found, float(sys.argv[2]))
 

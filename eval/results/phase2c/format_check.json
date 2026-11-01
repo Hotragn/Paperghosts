@@ -1,0 +1,762 @@
+{
+ "g26": {
+  "outcome": {
+   "n": 24,
+   "agree": 5,
+   "normalised_agree": 20,
+   "misses": [
+    {
+     "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "10_1908-09-18_p5_sn85042354_00383343288_1908091801_0829.json",
+     "class": "format",
+     "dev": "unexplained",
+     "teacher": "unexplained",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+     "class": "format",
+     "dev": "unexplained",
+     "teacher": "unexplained",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+     "class": "format",
+     "dev": "hoax",
+     "teacher": "hoax",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "17_1883-11-17_p1_sn88064005_00200299048_1883111702_0299.json",
+     "class": "format",
+     "dev": "explained",
+     "teacher": "explained",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "1_1903-02-28_pna_sn82015679_00296029750_1903022801_0331.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "explained",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+     "class": "format",
+     "dev": "hoax",
+     "teacher": "hoax",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "2_1896-09-16_pna_sn85047084_00202195933_1896091601_0535.json",
+     "class": "judgment",
+     "dev": "unexplained",
+     "teacher": {
+      "value": "unknown",
+      "quote": "no one seems to know"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "explained",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "3_1922-04-23_p27_sn83045774_00271744262_1922042301_0817.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "explained",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "3_1929-08-19_pna_sn82015313_00383349199_1929081901_0244.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "52_1892-08-14_pna_sn84024546_0023728219A_1892081401_0171.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "5_1913-05-09_p3_sn89052133_00383341188_1913050901_0148.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "6_1910-07-02_pna_sn82016014_00295870722_1910070201_0026.json",
+     "class": "format",
+     "dev": "unknown",
+     "teacher": "unknown",
+     "right_once_normalised": true
+    }
+   ],
+   "interval": [
+    0.0924468910478809,
+    0.40470844485235474
+   ],
+   "normalised_interval": [
+    0.6414652961213058,
+    0.9332143199927109
+   ],
+   "by_class": {
+    "format": 18,
+    "verifier": 0,
+    "judgment": 1
+   }
+  },
+  "place_state": {
+   "n": 24,
+   "agree": 22,
+   "normalised_agree": 22,
+   "misses": [
+    {
+     "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "California",
+      "quote": "Calif."
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "verifier",
+     "dev": "Iowa",
+     "teacher": {
+      "value": "Iowa",
+      "quote": "Iowa"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.741507847985494,
+    0.9768416721570266
+   ],
+   "normalised_interval": [
+    0.741507847985494,
+    0.9768416721570266
+   ],
+   "by_class": {
+    "format": 0,
+    "verifier": 1,
+    "judgment": 1
+   }
+  },
+  "place_type": {
+   "n": 24,
+   "agree": 14,
+   "normalised_agree": 15,
+   "misses": [
+    {
+     "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+     "class": "judgment",
+     "dev": "road_or_bridge",
+     "teacher": {
+      "value": "house",
+      "quote": "the country residence"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+     "class": "format",
+     "dev": "house",
+     "teacher": "house",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "17_1883-11-17_p1_sn88064005_00200299048_1883111702_0299.json",
+     "class": "format",
+     "dev": "public_building",
+     "teacher": "public_building",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+     "class": "format",
+     "dev": "ship",
+     "teacher": "ship",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+     "class": "judgment",
+     "dev": "other",
+     "teacher": {
+      "value": "house",
+      "quote": "farm"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
+     "class": "judgment",
+     "dev": "public_building",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "format",
+     "dev": "church",
+     "teacher": "other",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "format",
+     "dev": "public_building",
+     "teacher": "other",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "5_1871-03-10_pna_sn83025925_00280776312_1871031001_0476.json",
+     "class": "judgment",
+     "dev": "public_building",
+     "teacher": {
+      "value": "house",
+      "quote": "frame structure"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "5_1913-05-09_p3_sn89052133_00383341188_1913050901_0148.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "house",
+      "quote": "old house"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.3883433764938864,
+    0.7553265275346177
+   ],
+   "normalised_interval": [
+    0.42709619037907065,
+    0.7884086656636855
+   ],
+   "by_class": {
+    "format": 5,
+    "verifier": 0,
+    "judgment": 5
+   }
+  },
+  "precision": {
+   "n": 24,
+   "agree": 13,
+   "normalised_agree": 15,
+   "misses": [
+    {
+     "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+     "class": "format",
+     "dev": "street",
+     "teacher": "road_or_bridge",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+     "class": "judgment",
+     "dev": "street",
+     "teacher": {
+      "value": "building",
+      "quote": "the country residence"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+     "class": "format",
+     "dev": "building",
+     "teacher": "town",
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "17_1883-11-17_p1_sn88064005_00200299048_1883111702_0299.json",
+     "class": "format",
+     "dev": "building",
+     "teacher": "building",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+     "class": "format",
+     "dev": "building",
+     "teacher": "building",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
+     "class": "judgment",
+     "dev": "building",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "25_1890-04-23_p1_sn82014381_00175036623_1890042301_0183.json",
+     "class": "judgment",
+     "dev": "town",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+     "class": "judgment",
+     "dev": "town",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "format",
+     "dev": "building",
+     "teacher": "building",
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "judgment",
+     "dev": "building",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "5_1913-05-09_p3_sn89052133_00383341188_1913050901_0148.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "building",
+      "quote": "a shed"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.35074553553106635,
+    0.7210894164831857
+   ],
+   "normalised_interval": [
+    0.42709619037907065,
+    0.7884086656636855
+   ],
+   "by_class": {
+    "format": 5,
+    "verifier": 0,
+    "judgment": 6
+   }
+  }
+ },
+ "r3": {
+  "outcome": {
+   "n": 23,
+   "agree": 16,
+   "normalised_agree": 16,
+   "misses": [
+    {
+     "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": {
+      "value": "explained",
+      "quote": "now the \"ehost\" is gone"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1896-09-16_pna_sn85047084_00202195933_1896091601_0535.json",
+     "class": "judgment",
+     "dev": "unexplained",
+     "teacher": {
+      "value": "unknown",
+      "quote": "no one seems to know"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1919-11-23_p1_sn83030214_00206532452_1919112302_0761.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": {
+      "value": "explained",
+      "quote": "supposing he was striking the ghost"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": {
+      "value": "unexplained",
+      "quote": "the monkeys ghost still followed and prosecuted him"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+     "class": "judgment",
+     "dev": "unknown",
+     "teacher": {
+      "value": "unexplained",
+      "quote": "but saw no ghost"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ],
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ],
+   "by_class": {
+    "format": 0,
+    "verifier": 0,
+    "judgment": 7
+   }
+  },
+  "place_state": {
+   "n": 23,
+   "agree": 13,
+   "normalised_agree": 16,
+   "misses": [
+    {
+     "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "New York",
+      "quote": "Albany"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "Maryland",
+      "quote": "Baltimore American"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "10_1908-09-18_p5_sn85042354_00383343288_1908091801_0829.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "Delaware",
+      "quote": "GEORGETOWN"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "New York",
+      "quote": "NEW YORK, Nov. 30"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "1_1922-08-14_pna_sn85042345_00237281445_1922081401_0238.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "Florida",
+      "quote": "GAINESVILLE"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "23_1846-12-03_pna_sn84024656_00414184637_1846120301_1106.json",
+     "class": "format",
+     "dev": null,
+     "teacher": {
+      "value": "Philadelphia",
+      "quote": "Philadelphia"
+     },
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "New York",
+      "quote": "New York letter"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1896-09-16_pna_sn85047084_00202195933_1896091601_0535.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "Hawaiian Islands",
+      "quote": "Hilo"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "6_1876-05-14_p1_sn88064616_00295878605_1876051401_0069.json",
+     "class": "format",
+     "dev": null,
+     "teacher": {
+      "value": "China",
+      "quote": "Canton"
+     },
+     "right_once_normalised": true
+    },
+    {
+     "article_id": "7_1906-10-14_p46_sn84026749_100492647_1906101401_0653.json",
+     "class": "format",
+     "dev": null,
+     "teacher": {
+      "value": "Philadelphia",
+      "quote": "PhnadeIphia"
+     },
+     "right_once_normalised": true
+    }
+   ],
+   "interval": [
+    0.3681104930501695,
+    0.7436563166780135
+   ],
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ],
+   "by_class": {
+    "format": 3,
+    "verifier": 0,
+    "judgment": 7
+   }
+  },
+  "place_type": {
+   "n": 23,
+   "agree": 18,
+   "normalised_agree": 18,
+   "misses": [
+    {
+     "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "other",
+      "quote": "the New York Central Railroad"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+     "class": "judgment",
+     "dev": "road_or_bridge",
+     "teacher": {
+      "value": "other",
+      "quote": "country residence"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "16_1870-12-04_pna_sn85033699_00200293423_1870120401_0539.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "other",
+      "quote": "the Hudson River"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "judgment",
+     "dev": "church",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "36_1907-09-19_p1_sn84038335_00415622788_1907091901_0309.json",
+     "class": "judgment",
+     "dev": "public_building",
+     "teacher": {
+      "value": "other",
+      "quote": "in Jail"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.5809611981726508,
+    0.9033616439828094
+   ],
+   "normalised_interval": [
+    0.5809611981726508,
+    0.9033616439828094
+   ],
+   "by_class": {
+    "format": 0,
+    "verifier": 0,
+    "judgment": 5
+   }
+  },
+  "precision": {
+   "n": 23,
+   "agree": 16,
+   "normalised_agree": 16,
+   "misses": [
+    {
+     "article_id": "10_1872-11-05_pna_sn84026844_0020219087A_1872110501_1059.json",
+     "class": "format",
+     "dev": "street",
+     "teacher": {
+      "value": "other",
+      "quote": "the New York Central Railroad"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "10_1886-11-10_pna_sn85025431_00212479792_1886111001_0411.json",
+     "class": "judgment",
+     "dev": "street",
+     "teacher": {
+      "value": "building",
+      "quote": "Judge SIS gate"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "12_1868-09-12_p1_sn83016025_00279525267_1868091201_0167.json",
+     "class": "judgment",
+     "dev": "building",
+     "teacher": {
+      "value": "town",
+      "quote": "Liverpool"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "19_1895-01-26_p1_sn85025350_00415627671_1895012601_0459.json",
+     "class": "format",
+     "dev": "building",
+     "teacher": {
+      "value": "other",
+      "quote": "off the coast of Newfoundland"
+     },
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1884-01-09_pna_sn84026089_00514155884_1884010901_0416.json",
+     "class": "judgment",
+     "dev": "town",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "2_1916-12-18_p5_sn82014086_00295866081_1916121801_0501.json",
+     "class": "judgment",
+     "dev": "building",
+     "teacher": null,
+     "right_once_normalised": false
+    },
+    {
+     "article_id": "3_1922-04-23_p27_sn83045774_00271744262_1922042301_0817.json",
+     "class": "judgment",
+     "dev": null,
+     "teacher": {
+      "value": "town",
+      "quote": "Budapest"
+     },
+     "right_once_normalised": false
+    }
+   ],
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ],
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ],
+   "by_class": {
+    "format": 2,
+    "verifier": 0,
+    "judgment": 5
+   }
+  }
+ }
+}

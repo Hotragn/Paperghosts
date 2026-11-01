@@ -1,0 +1,19 @@
+# The Morgue as a Render static site: the build is web/, which needs no keys and calls no API.
+# Deploying is the owner's step.
+services:
+  - type: web
+    name: paper-ghosts
+    runtime: static
+    buildCommand: pnpm --dir web install --frozen-lockfile && pnpm --dir web build
+    staticPublishPath: web/dist
+    # set in Render's dashboard, never committed: the web DSN turns Sentry on, the token uploads
+    # source maps for the commit Render builds
+    envVars:
+      - key: VITE_SENTRY_DSN
+        sync: false
+      - key: SENTRY_AUTH_TOKEN
+        sync: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff

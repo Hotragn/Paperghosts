@@ -1,0 +1,45 @@
+{
+ "model": "qwen3.5:4b",
+ "articles": 50,
+ "runs": [
+  {
+   "concurrent": 1,
+   "wall_seconds": 421.4,
+   "articles_per_hour": 427,
+   "prompt_tokens": 59046,
+   "output_tokens": 3795,
+   "full_pass_days": 120.6
+  },
+  {
+   "concurrent": 4,
+   "wall_seconds": 201.1,
+   "articles_per_hour": 895,
+   "prompt_tokens": 59046,
+   "output_tokens": 3639,
+   "full_pass_days": 57.6
+  },
+  {
+   "concurrent": 8,
+   "wall_seconds": 206.1,
+   "articles_per_hour": 873,
+   "prompt_tokens": 59046,
+   "output_tokens": 3762,
+   "full_pass_days": 59.0
+  }
+ ],
+ "short": {
+  "concurrent": 4,
+  "wall_seconds": 221.8,
+  "articles_per_hour": 812,
+  "prompt_tokens": 34396,
+  "output_tokens": 3762,
+  "full_pass_days": 63.5,
+  "instruction": "Label this newspaper article for the ghost-report archive. Answer with the label's JSON."
+ },
+ "prefix": {
+  "long_prompt_tokens_evaluated": 1449.92,
+  "long_prompt_seconds": 5.4522545542600005,
+  "short_prompt_tokens_evaluated": 687.92,
+  "short_prompt_seconds": 4.11145909174
+ }
+}

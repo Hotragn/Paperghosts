@@ -1,0 +1,1239 @@
+[
+ {
+  "name": "archive: pages and articles",
+  "value": {
+   "pages": 16887460,
+   "articles": 370313913
+  },
+  "source": "eval/results/eval_a_v2.json: totals {pages, articles}"
+ },
+ {
+  "name": "candidates, lexicon v2 (the reader's full pass)",
+  "value": 1236122,
+  "source": "eval/results/eval_a_v2.json: totals.candidates",
+  "note": "every lexicon v2 candidate in the archive"
+ },
+ {
+  "name": "CANDIDATES constant",
+  "value": 1236122,
+  "source": "scripts/local_teacher.py:28"
+ },
+ {
+  "name": "near-miss articles, lexicon v2",
+  "value": 6695792,
+  "source": "eval/results/eval_a_v2.json: totals.near_miss"
+ },
+ {
+  "name": "training pool, articles",
+  "value": 1539818,
+  "source": "eval/results/phase2c/leakage.json: pool",
+  "note": "every candidate and near-miss reservoir article outside the 6,567 held out"
+ },
+ {
+  "name": "held out of the pool",
+  "value": 6567,
+  "source": "eval/results/phase2c/leakage.json: out_of_pool"
+ },
+ {
+  "name": "credit check: sample, and candidates in the pool",
+  "value": [
+   50,
+   1229780
+  ],
+  "source": "Docs/BUDGET.md:153",
+  "note": "the pool's articles that are candidates (credit_check.py pool); not reconciled with 1,236,122"
+ },
+ {
+  "name": "lexicon v1 against v2",
+  "value": {
+   "v1_candidates": 1050459,
+   "v2_candidates": 1236122,
+   "v1_candidates_lost": 0,
+   "added": 185663
+  },
+  "source": "eval/results/eval_a_v2/lexicon_v2.json: checks {v1_candidates, v2_candidates, v1_candidates_lost, added}"
+ },
+ {
+  "name": "lexicon v2: added and its share",
+  "value": [
+   185663,
+   17.7
+  ],
+  "source": "Docs/DECISIONS.md:272"
+ },
+ {
+  "name": "candidates per million, v1",
+  "value": 2836.6717077681064,
+  "source": "eval/results/eval_a.json: totals.candidates_per_million"
+ },
+ {
+  "name": "candidates per million, v2",
+  "value": 3338.0382335243235,
+  "source": "eval/results/eval_a_v2.json: totals.candidates_per_million"
+ },
+ {
+  "name": "lexicon v2's added: reports in the judged 200",
+  "value": {
+   "count": 14,
+   "n": 200,
+   "share": 0.07,
+   "low": 0.04215178292291873,
+   "high": 0.11405578216683726,
+   "implied": 12996,
+   "implied_low": 7826,
+   "implied_high": 21176
+  },
+  "source": "eval/results/eval_a_v2/lexicon_v2.json: added {count, n, share, low, high, implied, implied_low, implied_high}"
+ },
+ {
+  "name": "lexicon v2 recall, in-sample",
+  "value": 0.8398082829851149,
+  "source": "eval/results/eval_a_v2/lexicon_v2.json: recall_in_sample.recall.point"
+ },
+ {
+  "name": "lexicon v1 recall, from the flag-word screen",
+  "value": 0.4919383973132451,
+  "source": "eval/results/eval_a.json: recall.screen.recall"
+ },
+ {
+  "name": "eval A: ghost reports among candidates",
+  "value": {
+   "count": 7,
+   "n": 200,
+   "share": 0.035,
+   "low": 0.017055324637357105,
+   "high": 0.07047146086668134,
+   "implied": 36766,
+   "implied_low": 17916,
+   "implied_high": 74027
+  },
+  "source": "eval/results/eval_a.json: composition.categories.ghost_report {count, n, share, low, high, implied, implied_low, implied_high}"
+ },
+ {
+  "name": "eval A: reports in the near-miss sample",
+  "value": {
+   "count": 0,
+   "n": 300,
+   "high": 0.012643429997735661,
+   "implied_high": 86892
+  },
+  "source": "eval/results/eval_a.json: recall.near_miss {count, n, high, implied_high}"
+ },
+ {
+  "name": "eval A: reports in the random sample",
+  "value": {
+   "count": 0,
+   "n": 300,
+   "high": 0.012643429997735661,
+   "implied_high": 4668757
+  },
+  "source": "eval/results/eval_a.json: recall.random {count, n, high, implied_high}"
+ },
+ {
+  "name": "eval A: flag-word screen of non-candidates",
+  "value": {
+   "count": 4,
+   "n": 38900,
+   "share": 0.00010282776349614396,
+   "low": 3.998776606115435e-05,
+   "high": 0.00026439348558367036,
+   "implied": 37971
+  },
+  "source": "eval/results/eval_a.json: recall.screen.random {count, n, share, low, high, implied}"
+ },
+ {
+  "name": "eval A reprints, v1",
+  "value": {
+   "clusters": 80770,
+   "share_clustered": 0.3142987970020724,
+   "distinct_stories": 801071
+  },
+  "source": "eval/results/eval_a.json: reprints {clusters, share_clustered, distinct_stories}"
+ },
+ {
+  "name": "eval A reprints, v2",
+  "value": {
+   "clusters": 91301,
+   "share_clustered": 0.30323220523540556,
+   "distinct_stories": 952591
+  },
+  "source": "eval/results/eval_a_v2.json: reprints {clusters, share_clustered, distinct_stories}"
+ },
+ {
+  "name": "stories: threshold",
+  "value": 0.25,
+  "source": "eval/results/phase2b/clusters.json: threshold"
+ },
+ {
+  "name": "stories: precision per candidate",
+  "value": {
+   "hits": 166,
+   "n": 166,
+   "share": 1.0,
+   "low": 0.9773812776139649,
+   "high": 0.9999999999999999
+  },
+  "source": "eval/results/phase2b/clusters.json: evaluation.per candidate.precision"
+ },
+ {
+  "name": "stories: recall per candidate",
+  "value": {
+   "hits": 166,
+   "n": 196,
+   "share": 0.8469,
+   "low": 0.789906282992355,
+   "high": 0.8906327038852521
+  },
+  "source": "eval/results/phase2b/clusters.json: evaluation.per candidate.recall"
+ },
+ {
+  "name": "stories: chained large clusters, and eval A's precision per candidate (%)",
+  "value": [
+   54,
+   207,
+   98.0
+  ],
+  "source": "Docs/DECISIONS.md:683"
+ },
+ {
+  "name": "stories: distinct, v2",
+  "value": {
+   "distinct_stories": 974399,
+   "with_more_than_one_printing": 96105,
+   "printings_in_them": 357828,
+   "cross_paper": 82854
+  },
+  "source": "eval/results/phase2b/clusters.json: stories {distinct_stories, with_more_than_one_printing, printings_in_them, cross_paper}"
+ },
+ {
+  "name": "stories: eval A's distinct stories on v2",
+  "value": 952591,
+  "source": "eval/results/phase2b/clusters.json: frame.distinct_stories"
+ },
+ {
+  "name": "stories: the reader's job by stories",
+  "value": {
+   "first_printings": 974399,
+   "loose_members_read_too": 27806,
+   "job": 1002205,
+   "of_candidates": 1236122
+  },
+  "source": "eval/results/phase2b/clusters.json: reader {first_printings, loose_members_read_too, job, of_candidates}"
+ },
+ {
+  "name": "reservoir: sample per pool per year",
+  "value": 2000,
+  "source": "Docs/DECISIONS.md:98"
+ },
+ {
+  "name": "reservoir: near-miss reservoir articles",
+  "value": 310263,
+  "source": "Docs/DECISIONS.md:815"
+ },
+ {
+  "name": "grouping: articles, groups, largest",
+  "value": {
+   "articles": 1546385,
+   "groups_of_two_or_more": 108967,
+   "articles_in_them": 474805,
+   "largest": 1098
+  },
+  "source": "eval/results/phase2c/gold_draw.json: grouping"
+ },
+ {
+  "name": "gold and dev articles",
+  "value": {
+   "gold": 300,
+   "dev": 150
+  },
+  "source": "eval/results/phase2c/gold_draw.json: split {gold, dev}"
+ },
+ {
+  "name": "strata",
+  "value": 17,
+  "source": "eval/results/phase2c/gold_draw.json: expected_reports.strata (count of keys)"
+ },
+ {
+  "name": "expected gold reports, with its range",
+  "value": [
+   35.3,
+   14.0,
+   86.5
+  ],
+  "source": "eval/results/phase2c/gold_draw.json: expected_reports.total"
+ },
+ {
+  "name": "gold kinds",
+  "value": {
+   "other": 89,
+   "fiction": 66,
+   "idiom": 58,
+   "report": 46,
+   "advert": 31,
+   "religious": 10
+  },
+  "source": "eval/gold/labels.jsonl: count of each kind"
+ },
+ {
+  "name": "dev kinds",
+  "value": {
+   "other": 44,
+   "report": 32,
+   "fiction": 30,
+   "idiom": 27,
+   "advert": 10,
+   "religious": 7
+  },
+  "source": "eval/gold/dev_labels.jsonl: count of each kind"
+ },
+ {
+  "name": "weighted report rate",
+  "value": {
+   "rate": 0.009681027197920458,
+   "interval": [
+    0.0037851309309550126,
+    0.01806436699956399
+   ]
+  },
+  "source": "eval/results/phase2c/gold_measures.json: weighted_report_rate"
+ },
+ {
+  "name": "story-place rule",
+  "value": {
+   "places": 32,
+   "agree": 29,
+   "rate": 0.90625,
+   "interval": [
+    0.7578150066422116,
+    0.9675990373736805
+   ],
+   "cases": {
+    "both empty": 23,
+    "missed": 3,
+    "same": 6
+   }
+  },
+  "source": "eval/results/phase2c/gold_measures.json: story_place_rule {places, agree, rate, interval, cases}"
+ },
+ {
+  "name": "paper's state against labelled states",
+  "value": {
+   "labelled_states": 9,
+   "paper_same": 2,
+   "interval": [
+    0.06322376231222723,
+    0.5474166563271946
+   ]
+  },
+  "source": "eval/results/phase2c/gold_measures.json: story_place_rule.paper_state"
+ },
+ {
+  "name": "first vs second pass on gold: kind",
+  "value": {
+   "agree": 271,
+   "n": 300,
+   "interval": [
+    0.8646174890590971,
+    0.9318501440760628
+   ],
+   "kappa": 0.8786627801564831,
+   "kappa_interval": [
+    0.8362353731593976,
+    0.9202272822694638
+   ]
+  },
+  "source": "eval/results/phase2c/agreement.json: gold.kind {agree, n, interval, kappa, kappa_interval}"
+ },
+ {
+  "name": "first vs second pass on gold: report or not",
+  "value": {
+   "agree": 296,
+   "n": 300,
+   "interval": [
+    0.9662239391535502,
+    0.9948031223153205
+   ],
+   "kappa": 0.9495586380832284,
+   "kappa_interval": [
+    0.8913043478260869,
+    0.989097252507632
+   ]
+  },
+  "source": "eval/results/phase2c/agreement.json: gold.report {agree, n, interval, kappa, kappa_interval}"
+ },
+ {
+  "name": "blind re-ruling: kind, same as the first rulings",
+  "value": {
+   "agree": 28,
+   "n": 34,
+   "rate": 0.8235294117647058,
+   "interval": [
+    0.6648593225994784,
+    0.9165114439643031
+   ],
+   "won": {
+    "first": 25,
+    "second": 9,
+    "neither": 0
+   }
+  },
+  "source": "eval/results/phase2c/blind_rulings.json: kind"
+ },
+ {
+  "name": "blind re-ruling: rulings that differed, blind taken, first kept",
+  "value": [
+   30,
+   28,
+   2
+  ],
+  "source": "Docs/DECISIONS.md:961"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: model",
+  "value": "Qwen/Qwen3.5-397B-A17B",
+  "source": "eval/results/phase2c/teacher_dev_r3.json: model"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: thinking",
+  "value": false,
+  "source": "eval/results/phase2c/teacher_dev_r3.json: thinking"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: report recall",
+  "value": {
+   "found": 23,
+   "reports": 32,
+   "interval": [
+    0.546251630618882,
+    0.8443559315435214
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: report_recall"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: kind, after the verifier",
+  "value": {
+   "agree": 112,
+   "n": 150,
+   "interval": [
+    0.6715044398939715,
+    0.809509798127474
+   ],
+   "kappa": 0.6710526315789475
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.kind {agree, n, interval, kappa}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: report or not, after the verifier",
+  "value": {
+   "agree": 139,
+   "n": 150,
+   "interval": [
+    0.873463014734016,
+    0.9585616131949707
+   ],
+   "kappa": 0.7625899280575539
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.report {agree, n, interval, kappa}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: place, after the verifier",
+  "value": {
+   "agree": 14,
+   "n": 23,
+   "interval": [
+    0.4078517960374599,
+    0.7784262201761787
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.place {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: place_state, after the verifier",
+  "value": {
+   "agree": 13,
+   "n": 23,
+   "interval": [
+    0.3681104930501695,
+    0.7436563166780135
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.place_state {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: seen, after the verifier",
+  "value": {
+   "agree": 10,
+   "n": 23,
+   "interval": [
+    0.25634368332198654,
+    0.6318895069498304
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.seen {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: outcome, after the verifier",
+  "value": {
+   "agree": 16,
+   "n": 23,
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.outcome {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: specific_place, after the verifier",
+  "value": {
+   "agree": 16,
+   "n": 23,
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.specific_place {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: place_type, after the verifier",
+  "value": {
+   "agree": 18,
+   "n": 23,
+   "interval": [
+    0.5809611981726508,
+    0.9033616439828094
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.place_type {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: precision, after the verifier",
+  "value": {
+   "agree": 16,
+   "n": 23,
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.precision {agree, n, interval}"
+ },
+ {
+  "name": "Qwen3.5-397B round 3: people, after the verifier",
+  "value": {
+   "agree": 7,
+   "n": 23,
+   "interval": [
+    0.15603828020972454,
+    0.5086612906057261
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_r3.json: accuracy_verified.fields.people {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: model",
+  "value": "gemma4:26b-a4b-it-qat",
+  "source": "eval/results/phase2c/teacher_dev_g26.json: model"
+ },
+ {
+  "name": "gemma4:26b thinking off: thinking",
+  "value": false,
+  "source": "eval/results/phase2c/teacher_dev_g26.json: thinking"
+ },
+ {
+  "name": "gemma4:26b thinking off: report recall",
+  "value": {
+   "found": 24,
+   "reports": 32,
+   "interval": [
+    0.5789310822975338,
+    0.8674775601737845
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: report_recall"
+ },
+ {
+  "name": "gemma4:26b thinking off: kind, after the verifier",
+  "value": {
+   "agree": 100,
+   "n": 150,
+   "interval": [
+    0.5878960768592673,
+    0.7371135434254931
+   ],
+   "kappa": 0.560684161199625
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.kind {agree, n, interval, kappa}"
+ },
+ {
+  "name": "gemma4:26b thinking off: report or not, after the verifier",
+  "value": {
+   "agree": 134,
+   "n": 150,
+   "interval": [
+    0.8337524992356726,
+    0.9332702046363619
+   ],
+   "kappa": 0.6822033898305084
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.report {agree, n, interval, kappa}"
+ },
+ {
+  "name": "gemma4:26b thinking off: place, after the verifier",
+  "value": {
+   "agree": 14,
+   "n": 24,
+   "interval": [
+    0.3883433764938864,
+    0.7553265275346177
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.place {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: place_state, after the verifier",
+  "value": {
+   "agree": 22,
+   "n": 24,
+   "interval": [
+    0.741507847985494,
+    0.9768416721570266
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.place_state {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: seen, after the verifier",
+  "value": {
+   "agree": 11,
+   "n": 24,
+   "interval": [
+    0.2789105835168143,
+    0.6492544644689336
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.seen {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: outcome, after the verifier",
+  "value": {
+   "agree": 5,
+   "n": 24,
+   "interval": [
+    0.0924468910478809,
+    0.40470844485235474
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.outcome {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: specific_place, after the verifier",
+  "value": {
+   "agree": 11,
+   "n": 24,
+   "interval": [
+    0.2789105835168143,
+    0.6492544644689336
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.specific_place {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: place_type, after the verifier",
+  "value": {
+   "agree": 14,
+   "n": 24,
+   "interval": [
+    0.3883433764938864,
+    0.7553265275346177
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.place_type {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: precision, after the verifier",
+  "value": {
+   "agree": 13,
+   "n": 24,
+   "interval": [
+    0.35074553553106635,
+    0.7210894164831857
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.precision {agree, n, interval}"
+ },
+ {
+  "name": "gemma4:26b thinking off: people, after the verifier",
+  "value": {
+   "agree": 5,
+   "n": 24,
+   "interval": [
+    0.0924468910478809,
+    0.40470844485235474
+   ]
+  },
+  "source": "eval/results/phase2c/teacher_dev_g26.json: accuracy_verified.fields.people {agree, n, interval}"
+ },
+ {
+  "name": "format check g26: outcome, strict",
+  "value": {
+   "agree": 5,
+   "n": 24,
+   "interval": [
+    0.0924468910478809,
+    0.40470844485235474
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.outcome {agree, n, interval}"
+ },
+ {
+  "name": "format check g26: outcome, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 20,
+   "n": 24,
+   "normalised_interval": [
+    0.6414652961213058,
+    0.9332143199927109
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.outcome {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check g26: place_state, strict",
+  "value": {
+   "agree": 22,
+   "n": 24,
+   "interval": [
+    0.741507847985494,
+    0.9768416721570266
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.place_state {agree, n, interval}"
+ },
+ {
+  "name": "format check g26: place_state, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 22,
+   "n": 24,
+   "normalised_interval": [
+    0.741507847985494,
+    0.9768416721570266
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.place_state {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check g26: place_type, strict",
+  "value": {
+   "agree": 14,
+   "n": 24,
+   "interval": [
+    0.3883433764938864,
+    0.7553265275346177
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.place_type {agree, n, interval}"
+ },
+ {
+  "name": "format check g26: place_type, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 15,
+   "n": 24,
+   "normalised_interval": [
+    0.42709619037907065,
+    0.7884086656636855
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.place_type {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check g26: precision, strict",
+  "value": {
+   "agree": 13,
+   "n": 24,
+   "interval": [
+    0.35074553553106635,
+    0.7210894164831857
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.precision {agree, n, interval}"
+ },
+ {
+  "name": "format check g26: precision, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 15,
+   "n": 24,
+   "normalised_interval": [
+    0.42709619037907065,
+    0.7884086656636855
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: g26.precision {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check r3: outcome, strict",
+  "value": {
+   "agree": 16,
+   "n": 23,
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.outcome {agree, n, interval}"
+ },
+ {
+  "name": "format check r3: outcome, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 16,
+   "n": 23,
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.outcome {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check r3: place_state, strict",
+  "value": {
+   "agree": 13,
+   "n": 23,
+   "interval": [
+    0.3681104930501695,
+    0.7436563166780135
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.place_state {agree, n, interval}"
+ },
+ {
+  "name": "format check r3: place_state, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 16,
+   "n": 23,
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.place_state {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check r3: place_type, strict",
+  "value": {
+   "agree": 18,
+   "n": 23,
+   "interval": [
+    0.5809611981726508,
+    0.9033616439828094
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.place_type {agree, n, interval}"
+ },
+ {
+  "name": "format check r3: place_type, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 18,
+   "n": 23,
+   "normalised_interval": [
+    0.5809611981726508,
+    0.9033616439828094
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.place_type {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "format check r3: precision, strict",
+  "value": {
+   "agree": 16,
+   "n": 23,
+   "interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.precision {agree, n, interval}"
+ },
+ {
+  "name": "format check r3: precision, normalised (scoring only)",
+  "value": {
+   "normalised_agree": 16,
+   "n": 23,
+   "normalised_interval": [
+    0.49133870939427393,
+    0.8439617197902755
+   ]
+  },
+  "source": "eval/results/phase2c/format_check.json: r3.precision {normalised_agree, n, normalised_interval}",
+  "note": "normalisation is for scoring only; training labels go through teacher.verified"
+ },
+ {
+  "name": "tinker: balance and unpaid usage ($)",
+  "value": [
+   0.0,
+   0.8
+  ],
+  "source": "Docs/BUDGET.md:196"
+ },
+ {
+  "name": "tinker spend: credit check, teacher, 50 articles",
+  "value": {
+   "prompt_tokens": 456246,
+   "generated_tokens": 3630,
+   "cost_all_cached_to_none": "$0.30–1.40"
+  },
+  "source": "Docs/BUDGET.md:201"
+ },
+ {
+  "name": "tinker spend: credit check, 4B, 50 articles",
+  "value": {
+   "prompt_tokens": 47396,
+   "generated_tokens": 3330,
+   "cost_all_cached_to_none": "$0.01–0.02"
+  },
+  "source": "Docs/BUDGET.md:202"
+ },
+ {
+  "name": "tinker spend: teacher on dev, round 1, 150",
+  "value": {
+   "prompt_tokens": 1373823,
+   "generated_tokens": 15087,
+   "cost_all_cached_to_none": "$0.94–4.23"
+  },
+  "source": "Docs/BUDGET.md:203"
+ },
+ {
+  "name": "tinker spend: teacher on dev, round 2, 150",
+  "value": {
+   "prompt_tokens": 1408773,
+   "generated_tokens": 15820,
+   "cost_all_cached_to_none": "$0.96–4.34"
+  },
+  "source": "Docs/BUDGET.md:204"
+ },
+ {
+  "name": "tinker spend: teacher on dev, round 3, 150",
+  "value": {
+   "prompt_tokens": 1449123,
+   "generated_tokens": 14930,
+   "cost_all_cached_to_none": "$0.98–4.46"
+  },
+  "source": "Docs/BUDGET.md:205"
+ },
+ {
+  "name": "tinker spend: probes",
+  "value": {
+   "prompt_tokens": 56,
+   "generated_tokens": 12,
+   "cost_all_cached_to_none": "under $0.01"
+  },
+  "source": "Docs/BUDGET.md:206"
+ },
+ {
+  "name": "tinker spend: all",
+  "value": {
+   "prompt_tokens": 4735417,
+   "generated_tokens": 52809,
+   "cost_all_cached_to_none": "$3.19–14.45"
+  },
+  "source": "Docs/BUDGET.md:207"
+ },
+ {
+  "name": "tinker: thinking round, unrecorded at most ($)",
+  "value": 4.2,
+  "source": "Docs/BUDGET.md:209"
+ },
+ {
+  "name": "credit check: teacher billed",
+  "value": {},
+  "source": "eval/results/phase2c/credit_check.json: teacher.billed",
+  "note": "empty: billing hadn't caught up"
+ },
+ {
+  "name": "credit check: student billed",
+  "value": {},
+  "source": "eval/results/phase2c/credit_check.json: student.billed",
+  "note": "empty: billing hadn't caught up"
+ },
+ {
+  "name": "local qwen3.5:4b model",
+  "value": "qwen3.5:4b",
+  "source": "eval/results/phase2c/local_throughput.json: model"
+ },
+ {
+  "name": "local qwen3.5:4b, long prompt, 1 at once",
+  "value": {
+   "concurrent": 1,
+   "wall_seconds": 421.4,
+   "articles_per_hour": 427,
+   "prompt_tokens": 59046,
+   "output_tokens": 3795,
+   "full_pass_days": 120.6
+  },
+  "source": "eval/results/phase2c/local_throughput.json: runs[0]"
+ },
+ {
+  "name": "local qwen3.5:4b, long prompt, 4 at once",
+  "value": {
+   "concurrent": 4,
+   "wall_seconds": 201.1,
+   "articles_per_hour": 895,
+   "prompt_tokens": 59046,
+   "output_tokens": 3639,
+   "full_pass_days": 57.6
+  },
+  "source": "eval/results/phase2c/local_throughput.json: runs[1]"
+ },
+ {
+  "name": "local qwen3.5:4b, long prompt, 8 at once",
+  "value": {
+   "concurrent": 8,
+   "wall_seconds": 206.1,
+   "articles_per_hour": 873,
+   "prompt_tokens": 59046,
+   "output_tokens": 3762,
+   "full_pass_days": 59.0
+  },
+  "source": "eval/results/phase2c/local_throughput.json: runs[2]"
+ },
+ {
+  "name": "local qwen3.5:4b, short prompt",
+  "value": {
+   "concurrent": 4,
+   "articles_per_hour": 812,
+   "prompt_tokens": 34396,
+   "full_pass_days": 63.5
+  },
+  "source": "eval/results/phase2c/local_throughput.json: short {concurrent, articles_per_hour, prompt_tokens, full_pass_days}"
+ },
+ {
+  "name": "local qwen3.5:4b, prefix",
+  "value": {
+   "long_prompt_tokens_evaluated": 1449.92,
+   "long_prompt_seconds": 5.4522545542600005,
+   "short_prompt_tokens_evaluated": 687.92,
+   "short_prompt_seconds": 4.11145909174
+  },
+  "source": "eval/results/phase2c/local_throughput.json: prefix"
+ },
+ {
+  "name": "gemma4 thinking off, local",
+  "value": {
+   "articles_per_hour": 244,
+   "draw_of_3000_hours": 12.3,
+   "wall_seconds": 2215.3,
+   "articles": 150
+  },
+  "source": "eval/results/phase2c/local_teacher.json: g26 {articles_per_hour, draw_of_3000_hours, wall_seconds, articles}"
+ },
+ {
+  "name": "gemma4 thinking on, local",
+  "value": {
+   "articles": 6,
+   "minutes_each": [
+    2.4,
+    8.1
+   ]
+  },
+  "source": "Ollama server log, 2026-10-31 17:00–17:30 (not committed)",
+  "note": "hard-coded: no results file"
+ },
+ {
+  "name": "1850 probe: articles in 1850's file",
+  "value": 733880,
+  "source": "eval/results/phase1_env.json: faro_1850.articles"
+ },
+ {
+  "name": "1850 probe: the Stratford knockings",
+  "value": {
+   "matching_articles": 20,
+   "naming_phelps": 2,
+   "first": {
+    "paper": "Lewistown gazette. [volume] (Lewistown, Pa.) 1843-1944",
+    "date": "1850-07-26",
+    "article_id": "9_1850-07-26_p1_sn83032276_00296028587_1850072601_0265.json"
+   }
+  },
+  "source": "eval/results/phase1_env.json: faro_1850.stratford_knockings {matching_articles, naming_phelps, first}"
+ },
+ {
+  "name": "the Morgue: reports, clippings, with the paper's place, with a story state",
+  "value": [
+   78,
+   205,
+   55,
+   14
+  ],
+  "source": "web/public/reports.json: counted"
+ },
+ {
+  "name": "Atlas: the Morgue's reports loaded",
+  "value": {
+   "documents": 78,
+   "storage_kb": 140.0,
+   "load_seconds": 7.0,
+   "with_location": 0
+  },
+  "source": "eval/results/atlas_demo.json: (top) {documents, storage_kb, load_seconds, with_location}"
+ },
+ {
+  "name": "Tinker: the 397B teacher's price per 10,000 articles, all cached to none ($)",
+  "value": [
+   65.43,
+   297.29
+  ],
+  "source": "eval/results/phase2c/teacher_dev_r3.json: prompt_tokens, output_tokens, articles; rates Docs/BUDGET.md:142"
+ },
+ {
+  "name": "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
+  "value": [
+   135,
+   136
+  ],
+  "source": "git log --all trailers; git for-each-ref refs/entire/checkpoints"
+ },
+ {
+  "name": "candidates: in the archive but not in the training pool, and the articles held out",
+  "value": [
+   6342,
+   6567
+  ],
+  "source": "eval/results/eval_a_v2.json: totals.candidates, less Docs/BUDGET.md's candidates in the pool; eval/results/phase2c/leakage.json: out_of_pool",
+  "note": "the difference fits the articles held out as gold, dev and their reprints, but it was not checked article by article"
+ },
+ {
+  "name": "Sentry: Atlas query latency (ms), release c0a248f",
+  "value": {
+   "reports find": [
+    41.0,
+    47.6,
+    40.0
+   ],
+   "reports fuzzy": [
+    74.8,
+    96.8,
+    40.0
+   ],
+   "reports more_like_this": [
+    66.4,
+    75.5,
+    40.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: c0a248f3311f54908514d2ccefc46f0dffb029f0.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: Atlas query latency (ms), release 19a6a4b",
+  "value": {
+   "reports more_like_this": [
+    62.7,
+    71.4,
+    80.0
+   ],
+   "reports find": [
+    39.8,
+    47.3,
+    40.0
+   ],
+   "reports fuzzy": [
+    67.3,
+    83.5,
+    40.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: 19a6a4bcb1a532c9b1b5b499f488f0d7ffb8da7f.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: the Morgue's page loads by span op (ms), scripted loads, not visitors",
+  "value": {
+   "resource.img": [
+    10.0,
+    10.0,
+    436.0
+   ],
+   "pageload": [
+    101.6,
+    1228.9,
+    14.0
+   ],
+   "browser.request": [
+    2.0,
+    3.0,
+    14.0
+   ],
+   "resource.script": [
+    6.0,
+    31.8,
+    14.0
+   ],
+   "browser.load_event": [
+    0.0,
+    0.1,
+    14.0
+   ],
+   "browser.dom_content_loaded_event": [
+    0.0,
+    0.1,
+    14.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: web.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Sentry: Atlas query latency (ms), release b560aa2",
+  "value": {
+   "places near": [
+    524.6,
+    600.2,
+    5.0
+   ],
+   "reports fuzzy": [
+    560.8,
+    674.8,
+    5.0
+   ],
+   "reports more_like_this": [
+    68.1,
+    75.7,
+    5.0
+   ]
+  },
+  "source": "eval/results/sentry_latency.json: b560aa24af194d42b1303f5989af5367a06e3a8b.spans, as [p50, p95, count]"
+ },
+ {
+  "name": "Atlas: the papers' towns geocoded and loaded",
+  "value": {
+   "printed_in_towns": 46,
+   "geocoded": 46,
+   "reports_covered": 55,
+   "storage_kb": 4.0
+  },
+  "source": "eval/results/atlas_places.json: (top) {printed_in_towns, geocoded, reports_covered, storage_kb}"
+ },
+ {
+  "name": "Atlas Vector Search: not built",
+  "value": "first the Hugging Face token lacked the Inference Providers permission (HTTP 403), then with it the account had no credits left (HTTP 402), and buying credits is spending the owner ruled out; ghosts like this one uses Atlas Search's moreLikeThis",
+  "source": "Hugging Face router, feature-extraction for all-MiniLM-L6-v2 and bge-small-en-v1.5, HTTP 403 then 402, 2026-10-31 (not committed)",
+  "note": "hard-coded: a refusal leaves no results file"
+ },
+ {
+  "name": "decision 39: the disclosure",
+  "value": "No Tinker spend at all, and step 2C runs on this Mac",
+  "source": "Docs/DECISIONS.md:1021",
+  "note": "the reader is untrained; the Morgue shows labelled reports, not the reader's output"
+ },
+ {
+  "name": "tests collected",
+  "value": 404,
+  "source": "uv run pytest --collect-only -q, last line: '404 tests collected in 1.47s'"
+ }
+]

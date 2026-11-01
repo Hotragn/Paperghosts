@@ -786,3 +786,273 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
   - **Proposed for the EM, not done:** add the body's links to the blocking, with the direct-match rule keeping them from chaining, and measure it on a fresh draw. Adopting it now would mean tuning on the frozen set.
 - **BUDGET.md's third scenario** now takes the stories' sizes (`scripts/budget_stories.py`): 0.609 stories per printing in v1's candidates and 0.820 in those v2 added. That gives 62,402 stories at the top of the range, against 61,960, needing 461.8 MB as stored and 372.5 MB with every lever. The conclusions stand: nothing fits beside `sample_mflix`, and everything fits without it.
 - **For 2C:** split gold, dev and train by story id. The reader reads each story's first printing and its longer members.
+- **The EM's calls on this step (2026-10-31):**
+  - **The stories stand**, as recommended. Adding the body's links to them is measured in 2D, on a fresh draw.
+  - **The reader reads every triaged candidate, not the job above** (RDR-11, ARCHITECTURE 3.2). This supersedes this decision's reader rule and its "for 2C" note.
+    - The skip rule would leave 233,917 printings unread, and 38,127 of them run past the 600 words the shingles see.
+    - "One story" allows paragraphs added at either end, so a local paragraph or a different ending in a skipped member would never be read.
+    - Stories stay the unit for display and for counts.
+    - A member whose reading differs from its first printing's becomes a report of its own, shown as printed inside its story. It differs if it's a report where the first printing isn't one, or if it gives another place, date or person. 2D counts these members, and they double as false-merge candidates.
+    - If 2C's Tinker credit check finds that every candidate doesn't fit, the step stops. The EM gets the shortfall, and the skip rule's loss measured on a seeded draw of skipped members read beside their first printings. That trade-off is the owner's.
+  - **2C splits gold, dev and train by the most inclusive grouping, not by story id.** That's connected components over eval A's links and the body probe's 55,711 links (decision 37). Chaining only makes a split safer.
+  - **A limitation, and the EM's check:** the reading agents saw 400 words of each printing.
+    - 184 of the 318 pairs the stories join, in the per-candidate, per-cluster and near-threshold strata, have a printing longer than that (`scripts/clusters.py unseen`, `eval/results/phase2b/clusters_unseen.json`).
+    - Where both printings run at least 50 words past it (127 pairs), the check compares the two tails' unsampled five-word runs with the openings'.
+    - The EM read five low pairs: `eval-0040`, `0052`, `0217`, `0261` and `0576`. I read the four others among this ranking's lowest eight: `eval-0100`, `0251`, `0255` and `0509`.
+    - All nine are one text. What lowers their tails is cuts, OCR noise, shifted article boundaries, and items glued on by segmentation. `eval-0040` is two overlapping windows of one instalment.
+    - 2D's fresh draw shows its readers the full texts.
+  - **For 2D: digits in the shingles,** measured on the fresh draw. `eval-0508`, ocean-freight columns a year apart, has 0.267 of the shorter's shingles in the other, above the threshold, because the tokens drop the figures that tell the two apart.
+  - My calls on the hard cases stand, and so does the mapping of decision 30's protocol.
+
+## Phase 2C (2026-10-31)
+
+**37. The gold set is designed and drawn after `POLICY.md` and before any label: 300 gold and 150 dev articles in 17 strata, each with its inclusion weight. The most inclusive grouping and a whole-text check keep their reprints out of the training pool, and `check_leakage.py` passes. At the judged rates gold holds about 35 reports, before those of phantom sightings and hoaxes, which nothing judged measures.**
+
+- **The order (RDR-3):** `POLICY.md` was committed at `6cd57e2`, before the draw script existed. `eval/gold/split.json` and `HASH` come after it in git history, and the split records `POLICY.md`'s sha256.
+- **The grouping (the EM's call B):** `reprints.groups`.
+  - It joins eval A's links, through the opening's runs, with links through the body's runs, the 120 words from word 120. Links chain through any number of printings.
+  - One printing's opening and another's body share a key space, so a story printed under a new lead joins its original.
+  - It covers every article gold and dev are drawn from: 1,236,122 candidates and the 310,263 articles of the near-miss reservoir.
+  - 108,967 groups of two or more hold 474,805 of them, and the largest holds 1,098. 28,324 near misses join a group.
+- **The whole-text check** (`scripts/check_leakage.py`, RDR-4) catches the reprints the grouping didn't link.
+  - **The rule:** a pool article reprints a gold or dev article when their whole texts share at least 5 five-word runs, unsampled, and those are at least 10% of the shorter's runs.
+  - **Justified on decision 36's labelled pairs** (`check_leakage.py justify`, `eval/results/phase2c/leakage_threshold.json`):
+
+    | Set and stratum | One story, flagged | Two stories, flagged |
+    |---|---|---|
+    | eval, per candidate | 196 of 196 | 2 of 4 |
+    | eval, per cluster | 100 of 100 | none drawn |
+    | eval, near the threshold | 79 of 79 | 1 of 1 |
+    | eval, body probe | 76 of 76 | 3 of 4 |
+    | dev, near the threshold | 115 of 115 | 4 of 5 |
+    | dev, per candidate | 37 of 37 | 2 of 3 |
+    | eval, large clusters' least similar pairs | 88 of 153 | 8 of 54 |
+
+  - The rule flags all 603 one-story pairs of the randomly drawn strata. The lowest share is 0.105 (`dev-0088`) and the fewest shared runs is 6, so the rule sits just under both.
+  - The large clusters' least similar pairs are the hardest by construction, and eval A's links group them anyway.
+  - It flags 12 of the 17 randomly drawn pairs of two stories, since those pairs share passages. A false flag only keeps an article out of training.
+  - **It earned its place.** Outside their groups, 1,196 pool articles reprint 142 of the 450 gold and dev articles. `split.json`'s quarantine lists 1,201 flags, one per pool and held article, since 5 pool articles each reprint two held ones. Most are short repeated texts: mediums' cards and patent-medicine adverts re-run in later issues, steamer timetables, market columns, and wire passages two papers share. An advert of 50 words has about 40 seven-word runs, of which one in eight is kept, so a few OCR errors leave it without the two shared runs a link needs.
+- **The strata** (`scripts/gold_draw.py`, `eval/results/phase2c/gold_draw.json`). A candidate falls in the first that fits:
+  1. **Three edge-case slices** the archive holds too few of to meet by chance (SRS 7.3), found by pattern: phantom ships, trains and lights (E8), hoaxes and pranksters (E6), and text not in English (E12). The other eleven slices are common among candidates, and 2C.2 counts each slice on the labels.
+  2. **Before 1850:** 2.2% of candidates. A proportional share would be about 7 of 300, too few for B8's decade slices.
+  3. **Lexicon v2's five rules, rarest first,** so each rule is measured, ouija included. Then v1's terms alone. Each is split by whether a ghost term is in the headline, since that is where reports gather: 7 of the 27 judged items with one were reports, against 14 of the 373 without. The headline strata are oversampled for the reports field-level intervals need.
+  - **Near misses** come from the near-miss reservoir, each year in proportion to its pool, through eval A's `draw`. Triage can then be measured on gold. Triage's idiom rule is measured on the candidates in gold it would drop.
+  - Within each candidate stratum the draw is systematic in date order, so each decade gets its share, give or take one.
+
+- **The allocation**, with the reports expected at the judged rates (the Wilson ends in brackets):
+
+  | Stratum | Articles | Gold | Dev | Judged reports | Expected in gold |
+  |---|---|---|---|---|---|
+  | E8: phantom ships, trains and lights | 6,392 | 8 | 4 | 0 of 1 | 0.0 (0.0–6.3) |
+  | E6: hoaxes and pranksters | 3,181 | 8 | 4 | none | not judged |
+  | E12: not in English | 5,915 | 7 | 3 | 0 of 4 | 0.0 (0.0–3.4) |
+  | before 1850 | 26,826 | 20 | 10 | 0 of 15 | 0.0 (0.0–4.1) |
+  | ouija, term in the headline | 773 | 8 | 4 | 4 of 13 | 2.5 (1.0–4.6) |
+  | ouija, none in the headline | 5,554 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | seance, term in the headline | 3,508 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | seance, none in the headline | 28,606 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spirit_phrase, term in the headline | 3,130 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | spirit_phrase, none in the headline | 35,434 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spiritualism, term in the headline | 7,910 | 10 | 5 | 4 of 13 | 3.1 (1.3–5.8) |
+  | spiritualism, none in the headline | 54,211 | 12 | 6 | 11 of 180 | 0.7 (0.4–1.3) |
+  | spirit+medium, term in the headline | 569 | 6 | 3 | 4 of 13 | 1.8 (0.8–3.5) |
+  | spirit+medium, none in the headline | 56,126 | 14 | 7 | 11 of 180 | 0.9 (0.5–1.5) |
+  | v1 terms only, term in the headline | 59,176 | 80 | 40 | 3 of 14 | 17.1 (6.1–38.1) |
+  | v1 terms only, none in the headline | 937,871 | 46 | 23 | 3 of 173 | 0.8 (0.3–2.3) |
+  | near misses | 6,695,792 | 25 | 13 | 0 of 300 | 0.0 (0.0–0.3) |
+
+  Articles are each stratum's size outside `POLICY.md`'s example groups. For near misses it's the near-miss pool the reservoir stands for. The five rules' rows share the rate their judged items pool.
+
+- **Expected reports: 35.3.** That's each stratum's draw times the report rate eval A and lexicon v2 judged in it (decisions 27, 30 and 31), summed. The rules' strata pool their judged items, which are too few apart. Adding each stratum's Wilson ends gives 14.0 to 86.5, which is wider than the total's own interval.
+  - E6 holds no judged item and E8 one, so the 35 counts none of their reports. Under `POLICY.md` a sighting of a phantom ship (rule 14) and an exposed hoax (rule 7) are reports.
+  - The judged labels predate `POLICY.md`, and rule 2 turns one of eval A's `other` into a report.
+  - **For field-level intervals:** at 35 reports, a field right in 30 of them has a Wilson interval of 71–94%. About 50 reports would take about 70 more articles in v1's headline stratum, out of the near misses, the bulk and the early decades. I kept those, since they measure triage, the bulk's kinds, and B8's early decades.
+- **Decades in gold:** 22 before 1850, then 12, 15, 17, 29, 52, 50, 46 and 39 for the 1850s to the 1920s, then 9, 6, 1 and 2 for the 1930s to the 1960s.
+- **Inclusion weights:** each article's `pi`, its stratum's draw over its size, and its `weight`, 1/`pi`, are in `split.json`. Gold's candidate weights sum to 1,235,182, every candidate less the 940 in `POLICY.md`'s example groups. A near miss stands for 267,832 of the near-miss pool's 6,695,792.
+- **Dev:** 150 articles, gold's design at half the size, drawn from outside gold's groups. No dev article reprints a gold one by whole text, so none was redrawn.
+  - **I label dev by hand under `POLICY.md`, in 2C.2, alongside gold and before any model output.** Model selection then aims at the same truth as gold, not at the teacher's labels the student learns from.
+- **`POLICY.md`'s examples:** 63 articles. 60 are candidates, and they and their groups, 944 articles, are left out of gold and dev.
+  - The other 3 are lexicon v1's random samples from eval A's screen, in no file the draw reads.
+  - `check_leakage.py` compares all 63 with gold and dev by whole text, and none is reprinted there.
+- **The pool:** 1,539,818 articles: every candidate and near-miss reservoir article outside the 6,567 held out. Those are gold, dev, their groups, the quarantine and its groups.
+  - 2C.4 draws the teacher-labelled training data from the pool, at most one printing per story.
+  - The random reservoir stays out of training, since eval B screens it for recall.
+- **`check_leakage.py` exits 0** (`eval/results/phase2c/leakage.json`): no group crosses the split, no pool article reprints a gold or dev one, no dev article reprints a gold one, no example is drawn or reprinted, and `HASH` matches.
+- **The labelling page** (`scripts/label_gold.py`) runs on 127.0.0.1 only.
+  - It shows each article's OCR text beside its crops, which come through `crops_for`. A page whose member and batch path disagree is checked before its crop is shown, and a rejected page shows why.
+  - `POLICY.md` is open beside the form, and its 18 rules are tick boxes.
+  - Every RDR-2 field, and the kind, takes its quote from a selection in the text.
+  - A label is saved only if every quote is in the text (give or take whitespace) and every choice is the schema's. Fields stay empty unless the kind is a report.
+  - Each labeller keeps one label per article, so the owner's re-check sits beside mine without replacing it.
+  - Articles come in a seeded shuffle, with no stratum or weight shown.
+  - Tried on the first article in that order, it fetched its three crops through `crops_for` in 5 s, and they match its text. No label was saved.
+  - `POLICY.md` writes `place_type`'s values with spaces, and the schema with underscores (`inn_or_hotel`). The page shows the first and saves the second.
+
+**38. Gold and dev are labelled by hand under `POLICY.md`, all 450 through the page's `checked()`. A blind second pass relabels all of gold and a seeded fifth of dev. On gold it agrees with the first pass on 271 of 300 kinds (κ 0.88, 0.84–0.92) and on 296 of 300 report-or-not calls (κ 0.95). Every one of the 69 disagreements is ruled on under `POLICY.md`, and then ruled again blind by fresh judges, since the first rulings were the first labeller's. Every difference is settled with a written reason, all the labels and rulings are kept, and the labels are frozen by sha256 before any model output. Gold holds 46 reports, against the 35.3 expected.**
+
+- **The first pass:** I labelled all 300 gold and 150 dev articles in batches of 20. They came in the page's seeded order, with no stratum or weight in view, and each batch was committed as it was done.
+  - Every label passes `checked()`: its kind is `POLICY.md`'s, its fields are a report's only, every value has its quote in the text, and every choice is the schema's.
+  - **Crops:** 443 of the 450 articles have them, cached one article at a time at loc.gov's pace. The other 7 fail the page check, or have too few words to check. I read the crop wherever the OCR was unclear. Eight dev labels were made before their crops arrived, so I read those crops afterwards and mended the labels.
+- **Calls `POLICY.md` left to the labeller,** made the same way in gold and dev:
+  - An apparition of the living is a report when a figure is seen, as with Buller's sight of Wolseley.
+  - An essay or sermon that tells several particular claims takes its fields from the first one told in particulars. Examples: Scott's sight of the dead Byron in the Westminster Review's essay on hallucinations, and Slade's slate-writing in the Boston Pilot's round-up of exposures.
+  - A column of short items under one heading is one article. Rule 16 and E11 are kept for segmentation errors: an item's tail, or an advert, joined to another.
+  - E1 marks the Holy Ghost in religious matter. A joke's catechism or a pioneer tale's blazes are not E1.
+  - E3 marks fiction whose plot holds a ghost, sham or real. A ghost used as a figure in a poem is not E3.
+  - A place's state comes only from the text or the dateline. "Abba. la" is read as Albia, Ia., the dateline its crop shows. New York as a city gives no state.
+- **The blind second pass** (`scripts/second_pass.py`) covers 330 articles: all of gold, and the 30 of dev drawn with the seed "2C.2 second pass dev sample".
+  - **Eleven reading agents** each took a packet of 30, in one seeded shuffle across both splits, so no packet shows an article's split.
+  - Each saw only its packet, the crops it lists, and `POLICY.md`: no first label, stratum, weight or split. Each was barred from the label files, the split, the results, the docs and git history. One reported listing two scratch folders by mistake and seeing only file names. That is fine (the EM's review): no label was in view.
+  - A usage limit stopped seven of them partway, and each was resumed in its own blind context.
+  - Each agent checked its labels against its packet's texts alone. Then all 330 went through `checked()` into `eval/gold/second_pass.jsonl`, never into the label files the evals read.
+- **Agreement, before any ruling** (`eval/results/phase2c/agreement.json`). Rates come with Wilson intervals, and κ with a bootstrap of 2,000 resamples:
+
+  | | Articles | Kind | κ on kind | Report or not | κ on report |
+  |---|---|---|---|---|---|
+  | gold | 300 | 271 (86.5–93.2%) | 0.88 (0.84–0.92) | 296 (96.6–99.5%) | 0.95 (0.89–0.99) |
+  | dev sample | 30 | 25 (66–93%) | 0.79 (0.61–0.95) | 30 (89–100%) | 1.00 |
+  | both | 330 | 296 (86–93%) | 0.87 (0.83–0.91) | 326 (96.9–99.5%) | 0.95 (0.90–0.99) |
+
+  - **On the 45 gold articles both passes call reports,** each field agrees:
+    - outcome 43 (85–99%)
+    - place_state 42 (82–98%)
+    - precision 40 (77–95%)
+    - place, specific place and place type 39 each (74–94%)
+    - seen 37 (69–91%)
+    - people 26 (43–71%)
+
+    The dev sample has 4 such reports.
+  - **When a field agrees:**
+    - Both passes leave it empty.
+    - Outcome, place_type, precision and place_state: the same value.
+    - Place, seen and the specific place: quotes that overlap in the text, or the same value.
+    - People: each person's quote overlaps one of the other pass's, both ways.
+  - **People is the loosest field.** Most of its disagreements are a person one pass adds who didn't see or claim anything: a reporter, an editor, or a crowd told of it afterwards.
+- **The first rulings** (`eval/gold/adjudication.jsonl`), the first labeller's: 69 articles disagreed, 61 of them in gold. 34 were on kind, and 35 on fields alone.
+  - Each ruling went through `checked()` and replaced its article's label. The record keeps the first pass's label, the second's, the ruling and its reason.
+  - 58 uphold the first pass, 6 take the second's call, and 5 mend fields.
+  - **16 of the 34 kind disagreements were one question:** spirit or medium in an ordinary sense, "in good spirits" or "an advertising medium". The first pass called these `other`, the second `idiom`. The ruling is `other`, since `POLICY.md`'s idioms are figures about ghosts.
+  - **The second pass's call was taken six times:**
+    - Basingstoke's haunted clock, a report told with a closing quip (rule 8), which makes gold's 46th report
+    - a spiritualist society's display notice, an advert
+    - a puff for the paper's own Sunday story, an advert
+    - a camp meeting's "séance behind the woodshed", a figure for a whipping
+    - spiritualists on cremation in a Catholic note, `other`
+    - a stated house as a place type
+  - **Fields were emptied where a value wasn't stated:** "claimed to be haunted" states nothing seen, and a clerk's workplace isn't where his sittings were.
+  - **`POLICY.md` version 3,** dated, adds the two clarifications the rulings settled, which every label already follows. Spirit or medium in an ordinary sense is `other` (rule 10), and a display notice of meetings and messages is an advert (rule 12).
+- **The blind re-ruling** (the EM's review: gold can't rest on a judge ruling its own case). Four fresh judges ruled all 69 disputes again, one pair at a time (`scripts/blind_rulings.py`).
+  - **What each judge saw:** `POLICY.md` v3, the article and its crops, and the two labels as A and B, by a seeded coin with no labeller, note or ruling. The judges were barred from every label file and from the A/B key.
+  - **Against the first labeller's rulings** (`eval/results/phase2c/blind_rulings.json`), with Wilson intervals:
+
+    | | Same ruling | Interval | The blind ruling sides with: first, second, neither |
+    |---|---|---|---|
+    | kind | 28 of 34 | 66–92% | 25, 9, 0 |
+    | seen | 5 of 10 | 24–76% | 3, 7, 0 |
+    | people | 4 of 19 | 9–43% | 3, 12, 4 |
+    | place | 4 of 7 | 25–84% | 3, 4, 0 |
+    | specific place | 2 of 6 | 10–70% | 1, 5, 0 |
+    | place type | 4 of 6 | 30–90% | 2, 4, 0 |
+    | precision | 2 of 5 | 12–77% | 1, 4, 0 |
+    | place state | 2 of 3 | 21–94% | 2, 1, 0 |
+    | outcome | 1 of 2 | 9–91% | 1, 1, 0 |
+
+  - **The first labeller's field rulings leaned toward its own labels.** On kinds the blind judges mostly agree with the first rulings. On fields they side with the second pass two to one, and on people four to one.
+  - **Settling:** 30 articles' blind rulings differ. I re-read each with its crop, and took the blind ruling unless the text or another label gave a written reason against it. That took the blind ruling in 28 and kept mine in 2, each for consistency with labels no one disputed:
+    - an obituary's "spirit land" stays `other`, as two other gold obituaries are in both passes
+    - the second printing of the backwoods-preacher sketch stays `fiction`, as the judge ruled its other printing
+  - `adjudication.jsonl` keeps, for each dispute, the first label, the second, the first labeller's ruling (`own_ruling` where it changed), the blind ruling, and how it was settled.
+  - **Four kinds changed:**
+    - the camp meeting is `religious`: the whipping figure doesn't set the article's kind
+    - the mumps "knocking" is `other`, since it isn't a ghost figure
+    - the Russian-news ouija simile is an `idiom`
+    - an amusements column with seats on sale is an advert
+  - The other 24 changes are to fields, mostly people: the blind rulings drop a person told of it afterwards and add a stated claimant, such as an editor who claims spirit control.
+  - **Rule 10's clarification, checked:** on the 17 other-versus-idiom disputes, the judges would rule `other` on 15 even without v3's bullet, and they call the bullet right in all 17. The two exceptions: "bold spirits", which they rule `other` under the bullet, and the obituary's "spirit land", kept as above.
+  - **Final, all 69:** kinds side with the first pass in 27 and the second in 7. Gold still holds 46 reports.
+- **The freeze** (`1e64421`, re-frozen after the blind re-ruling):
+  - `eval/gold/HASH` lists the sha256 of `labels.jsonl` and `dev_labels.jsonl` beside `split.json`'s, committed before any model output.
+  - The two files hold exactly 300 and 150 labels, one per article. Each is the first pass's label where the passes agreed, and the ruling where they didn't. All pass `checked()` (`second_pass.py frozen`).
+  - `check_leakage.py` now checks every file `HASH` lists.
+  - Gold's final kinds: 46 reports, 89 other, 66 fiction, 58 idiom, 31 adverts, 10 religious. Dev's: 32 reports, 44 other, 30 fiction, 27 idiom, 10 adverts, 7 religious.
+- **Gold's reports by stratum** (`eval/results/phase2c/gold_measures.json`), against the draw's expectation:
+
+  | Stratum | Gold | Reports | Expected |
+  |---|---|---|---|
+  | E8: phantom ships, trains and lights | 8 | 0 | 0.0 (0.0–6.3) |
+  | E6: hoaxes and pranksters | 8 | 3 | not judged |
+  | E12: not in English | 7 | 0 | 0.0 (0.0–3.4) |
+  | before 1850 | 20 | 0 | 0.0 (0.0–4.1) |
+  | ouija, term in the headline | 8 | 2 | 2.5 (1.0–4.6) |
+  | ouija, none in the headline | 12 | 0 | 0.7 (0.4–1.3) |
+  | seance, term in the headline | 10 | 2 | 3.1 (1.3–5.8) |
+  | seance, none in the headline | 12 | 1 | 0.7 (0.4–1.3) |
+  | spirit_phrase, term in the headline | 10 | 7 | 3.1 (1.3–5.8) |
+  | spirit_phrase, none in the headline | 12 | 3 | 0.7 (0.4–1.3) |
+  | spiritualism, term in the headline | 10 | 1 | 3.1 (1.3–5.8) |
+  | spiritualism, none in the headline | 12 | 1 | 0.7 (0.4–1.3) |
+  | spirit+medium, term in the headline | 6 | 4 | 1.8 (0.8–3.5) |
+  | spirit+medium, none in the headline | 14 | 0 | 0.9 (0.5–1.5) |
+  | v1 terms only, term in the headline | 80 | 20 | 17.1 (6.1–38.1) |
+  | v1 terms only, none in the headline | 46 | 2 | 0.8 (0.3–2.3) |
+  | near misses | 25 | 0 | 0.0 (0.0–0.3) |
+  | **all** | **300** | **46** | **35.3 (14.0–86.5)** |
+
+  - The 46 sit inside the expected range, above its centre.
+  - E6, which nothing judged, adds 3.
+  - The rules' headline strata hold 16 against about 13.6 expected, and the low-rate rule strata 5 against about 3.7.
+  - At 46 reports, a field right in 39 of them has a Wilson interval of about 72–92%.
+- **The weighted report rate** (Σ weight × report / Σ weight, over candidates and near misses): 0.97%, with a stratified bootstrap interval of 0.38–1.81%.
+- **The story-place rule, as code** (`gold_measures.story_state`), was written and tested before the freeze and run once after it.
+  - It takes a state named after a comma in the place's quote. Else, a town from the quote named elsewhere with a state after a comma. Else, the dateline's state. It never takes the paper's state.
+  - On gold's 32 reports with a place, it agrees with the labelled `place_state` on 29 (76–97%): 6 the same state, 23 both empty.
+  - It never gives a wrong state. Its 3 misses are states the OCR prints after a period ("Allentown. Pa", "Springfield. Ohio") or apart from the place's quote (Georgia).
+  - **The paper's state**, decision 34's fallback, matches only 2 of the 9 labelled states (6–55%).
+- **Slices on the frozen labels, gold then dev:**
+
+  | E1 | E2 | E3 | E4 | E5 | E6 | E7 | E8 | E9 | E10 | E11 | E12 | E13 | E14 |
+  |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+  | 3, 4 | 34, 15 | 32, 9 | 11, 2 | 30, 26 | 12, 3 | 23, 9 | 8, 5 | 115, 44 | 12, 9 | 9, 3 | 7, 3 | 1, 1 | 21, 9 |
+
+  - E9 comes from the grouping: 159 of the 450 are in a group of two or more.
+  - E1 and E13 are too thin to measure alone.
+- **The grouping missed one reprint within gold:** the comic sketch of a backwoods preacher is printed twice in gold. Two printings within gold don't leak into training, and both are labelled `fiction`.
+
+**39. No Tinker spend at all, and step 2C runs on this Mac (the owner's call, 2026-10-31). Tinker's balance was $0.00, so the day's runs, $3.19–14.45 by their recorded tokens, went to the owner's card; Tinker sampling is now off in code. On dev the local teacher, gemma4:26b-a4b-it-qat through Ollama, is close to the 397B on finding reports (24 of 32 against 23 of 32) and behind it on kind (100 of 150 against 112 of 150). The week was then submitted with the reader untrained, because local runs froze the Mac.**
+
+- **The spend:** the table and the token counts are in `Docs/BUDGET.md`'s spend-stopped section. `teacher.read` refuses unless `TINKER_SPEND_ALLOWED=1` is set, which needs the owner's yes. Reading billing stays free.
+- **The rules from here:**
+  - Training labels come only from the local open-weight teacher, never from Claude or from the reading agents. Gold and dev are for evaluation only.
+  - No model download may take free disk below 15 GB, and it is at that floor.
+- **The teacher comparison so far,** on dev after the verifier (`eval/results/phase2c/teacher_dev_r3.json`, `teacher_dev_g26.json`, `format_check.json`):
+
+  | | Qwen3.5-397B, round 3, Tinker | gemma4:26b, thinking off, local |
+  |---|---|---|
+  | kind | 112/150 (67–81%) | 100/150 (59–74%) |
+  | report or not | 139/150 | 134/150 |
+  | report recall | 23/32 (55–84%) | 24/32 (58–87%) |
+  | outcome, as scored | 16/23 | 5/24 |
+  | outcome, format normalised (scoring only) | 16/23 | 20/24 |
+  | place_state | 13/23 | 22/24 |
+
+  - gemma4's outcome misses are format, not judgment: 18 of 19 give the outcome as a bare string with no quote. The prompt now says the choice fields carry a quote, and that run hasn't been made.
+  - The 397B's place_state misses are judgment: 7 of 10 fill a state the story-place rule leaves empty.
+  - **gemma4 with thinking on** took 2.4–8.1 minutes an article for the 6 it finished (Ollama's log), so it is a routing lever at most, never the whole draw.
+- **Local runs:**
+  - gemma4 and an mlx-lm job side by side on 24 GB froze the Mac. macOS killed Ollama's runner, and the owner stopped all local model work.
+  - The runs now save each answer as it lands and resume.
+  - From here, one model process at a time.
+- **Submission:** the owner moved the week to tonight's submission, so 2C.3 is parked as committed on `phase-2c-reader`. The Morgue shows the 78 labelled reports, not the reader's output.
+
+**40. Sentry traces each Atlas query, and what it showed was fixed: "ghosts like this one" now reads its report from Atlas once. Every Atlas query runs in a span of op `db.atlas.query` that carries its kind and latency, never the words searched for. `scripts/sentry_latency.py` pulls p50 and p95 per kind and release from Sentry into `eval/results/sentry_latency.json`.**
+
+- **The finding (release c0a248f, 40 requests of each kind):**
+  - Each "ghosts like this one" request made two Atlas round trips: a `find` for the report's headline and text (p50 41 ms, p95 48), then the `moreLikeThis` (p50 66, p95 76).
+  - A whole fuzzy search was 75 ms.
+- **The fix (release 19a6a4b):** a report doesn't change within a release, so the API keeps what it read, bounded at 1,024 reports.
+  - Over two passes of the same 40 reports, Sentry counts 80 `moreLikeThis` queries but only 40 `find`s. A repeat request is one round trip: p50 63 ms of Atlas time, against 107.
+  - Measured at the client, a repeat request's p50 went from 110 ms to 61, and its p95 from 123 to 68.
+- **The scripts (release b560aa2):** a script's first query pays to open its connection. A fuzzy search or a `$geoNear` takes p50 525–561 ms cold. A `moreLikeThis` that follows the script's own `find` takes 68 ms. The API's one long-lived client avoids that cost, and its searches run at p50 67–75 ms.
+- **The web app** (paperghosts-web) sends browser tracing and errors only when built with a DSN, and collects nothing about the reader.
+  - Its release is the commit, with hidden source maps uploaded, then deleted from the build.
+  - So far its page loads come from scripted loads in the browser pane and headless Chrome. LCP, CLS and INP need real visits that hide or use the page.

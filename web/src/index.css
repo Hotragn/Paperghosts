@@ -1,0 +1,730 @@
+/* The reading room (Docs/UI-IDEAS.md): lights off is the reading room at night, lights on the
+   archive by day. Every color is a material from that room. */
+:root {
+  --dark: #111214;
+  --newsprint: #e9e2d0;
+  --ink: #1b1916;
+  --lamp: #f0c987;
+  --stamp: #a3352b;
+  --pencil: #2f5c9e;
+  --foxing: #8c6a43;
+  --bg: var(--newsprint);
+  --text: var(--ink);
+  --muted: #4a4339;
+  --card: #f4eedf;
+  --envelope: #d9c79f;
+  --rule: var(--foxing);
+  --mark: rgba(240, 201, 135, 0.75);
+  --stamp-ink: #8a2920; /* stamp red darkened to 4.5:1 on the envelope */
+  --link: var(--pencil);
+  --lamp-x: 50vw;
+  --lamp-y: 12rem;
+  color-scheme: light;
+}
+
+:root[data-lights='off'] {
+  --bg: var(--dark);
+  --text: var(--newsprint);
+  --muted: #b9b09c;
+  --card: #1a1b1e;
+  --envelope: #1d1c1a;
+  --rule: #6e5537;
+  --mark: rgba(240, 201, 135, 0.28);
+  --stamp-ink: #e0796d;
+  --link: #8daee3;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+/* the lamp: a warm pool behind the content, so it never dims the reading text */
+:root[data-lights='off'] body {
+  background:
+    radial-gradient(circle 30rem at var(--lamp-x) var(--lamp-y), rgba(240, 201, 135, 0.1), transparent 70%) fixed,
+    var(--dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-lights='off'] body {
+    background: radial-gradient(ellipse at 50% 0%, rgba(240, 201, 135, 0.08), transparent 60%) fixed, var(--dark);
+  }
+}
+
+a {
+  color: var(--link);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lamp);
+  outline-offset: 3px;
+  text-decoration: underline 2px var(--link);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--card);
+  padding: 0.5rem 1rem;
+  z-index: 2;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.masthead,
+main,
+.colophon {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.masthead {
+  position: relative;
+  text-align: center;
+  padding-top: 2.5rem;
+  border-bottom: 3px double var(--rule);
+}
+
+.mark {
+  display: block;
+  margin: 0.25rem auto 0;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.nameplate {
+  font-family: 'UnifrakturMaguntia', serif;
+  font-weight: 400;
+  font-size: clamp(2.75rem, 10vw, 5.5rem);
+  line-height: 1;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.ear,
+.tagline,
+.label,
+.slip-head,
+.count,
+.filing,
+.chain,
+figcaption,
+.check,
+.note {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+.ear {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  margin: 0 auto 1rem;
+  max-width: 40rem;
+}
+
+.chain {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: none;
+  border: 1px solid var(--rule);
+  border-top: none;
+  padding: 2.25rem 0.75rem 0.4rem;
+  cursor: pointer;
+}
+
+.chain-pull {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 1.9rem;
+  background: repeating-linear-gradient(var(--foxing) 0 4px, transparent 4px 6px);
+  transform-origin: top;
+  transition: transform 0.3s ease-out;
+}
+
+.chain:active .chain-pull {
+  transform: scaleY(1.15);
+}
+
+/* the request slip */
+.slip {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0.75rem 1rem;
+  margin: 1.5rem auto;
+  padding: 1rem 1.25rem 1.25rem;
+  max-width: 52rem;
+  background: var(--card);
+  border: 1px dashed var(--rule);
+}
+
+.slip-head {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.slip label {
+  display: grid;
+  gap: 0.25rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.85rem;
+}
+
+.slip input,
+.slip select {
+  font: inherit;
+  font-family: 'Newsreader', serif;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 0.3rem 0.1rem;
+  min-height: 2.5rem;
+}
+
+.slip select option {
+  background: var(--card);
+  color: var(--text);
+}
+
+.count {
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* the drawer of envelopes */
+.envelopes {
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.envelope {
+  background: var(--envelope);
+  border: 1px solid var(--rule);
+}
+
+.envelope > summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'label stamp'
+    'headline stamp'
+    'raw stamp'
+    'where stamp';
+  gap: 0.15rem 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.envelope > summary::-webkit-details-marker {
+  display: none;
+}
+
+.label {
+  grid-area: label;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.headline {
+  grid-area: headline;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.raw-headline {
+  grid-area: raw;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.where {
+  grid-area: where;
+  font-style: italic;
+}
+
+.stamp {
+  grid-area: stamp;
+  align-self: center;
+  justify-self: end;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stamp-ink);
+  border: 2px solid var(--stamp-ink);
+  padding: 0.2rem 0.5rem;
+  transform: rotate(-6deg);
+  max-width: 9rem;
+  text-align: center;
+}
+
+.envelope[open] .stamp {
+  animation: press 0.35s ease-out;
+}
+
+@keyframes press {
+  from {
+    transform: rotate(-6deg) scale(1.35);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .envelope[open] .stamp {
+    animation: none;
+  }
+}
+
+/* a case: the clipping under the lamp, its transcription, and the index card */
+.case {
+  background: var(--card);
+  border-top: 1px solid var(--rule);
+  padding: 1.25rem 1rem 0.5rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.clipping {
+  margin: 0;
+}
+
+.clipping img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--newsprint);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(0.4% 0.6%, 99.2% 0, 100% 99.3%, 0.8% 100%);
+  margin-bottom: 0.5rem;
+}
+
+:root[data-lights='on'] .clipping img {
+  mix-blend-mode: multiply;
+}
+
+figcaption,
+.note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.deck {
+  margin: 0 0 0.75rem;
+  font-family: 'Bodoni Moda', serif;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.deck span {
+  display: block;
+}
+
+.deck-top {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.deck-line {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.ocr {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0 0 0.5rem;
+}
+
+mark {
+  background: var(--mark);
+  color: inherit;
+  padding: 0 0.1em;
+  border-bottom: 1px solid var(--lamp);
+}
+
+.index-card {
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  background-image: repeating-linear-gradient(transparent 0 1.9rem, rgba(47, 92, 158, 0.15) 1.9rem 1.95rem);
+}
+
+.index-card .row {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+
+.index-card dt {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 0.15rem;
+}
+
+.index-card dd {
+  margin: 0;
+}
+
+.index-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.value {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.check {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--link);
+}
+
+.unverified {
+  color: var(--stamp-ink);
+}
+
+.not-stated {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.filing {
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.thirty {
+  text-align: center;
+  font-family: 'Courier Prime', monospace;
+  letter-spacing: 0.3em;
+  margin: 1rem 0;
+}
+
+.colophon {
+  border-top: 3px double var(--rule);
+  padding-bottom: 3rem;
+  font-size: 0.95rem;
+}
+
+.colophon h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* the rooms */
+.rooms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.rooms a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.4rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.rooms a[aria-current='page'] {
+  border-bottom-color: var(--link);
+}
+
+.page-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.lede {
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.method section {
+  max-width: 52rem;
+  margin: 0 auto 2.5rem;
+}
+
+.method h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+}
+
+.source {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* interval charts: a dot at the rate, a whisker across its interval; series differ in shape too */
+.chart {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.chart table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.chart th,
+.chart td {
+  text-align: left;
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--rule) 40%, transparent);
+  vertical-align: middle;
+}
+
+.chart thead th {
+  font-family: 'Courier Prime', monospace;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.chart .scale {
+  display: flex;
+  justify-content: space-between;
+  min-width: 12rem;
+}
+
+.track {
+  position: relative;
+  min-width: 12rem;
+  height: 2.2rem;
+  background: linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat;
+}
+
+.whisker {
+  position: absolute;
+  height: 2px;
+}
+
+.whisker-0 {
+  top: 35%;
+  background: var(--link);
+}
+
+.whisker-1 {
+  top: 65%;
+  background: var(--text);
+}
+
+.dot {
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+}
+
+.dot-0 {
+  border-radius: 50%;
+  background: var(--link);
+}
+
+.dot-1 {
+  background: var(--text);
+}
+
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.key {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+}
+
+.key-0 {
+  border-radius: 50%;
+  background: var(--link);
+}
+
+.key-1 {
+  background: var(--text);
+}
+
+/* paper samples */
+.samples .sample {
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+
+.sample img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(0.4% 0.6%, 99.2% 0, 100% 99.3%, 0.8% 100%);
+}
+
+:root[data-lights='on'] .sample img {
+  mix-blend-mode: multiply;
+}
+
+.sample figcaption > * {
+  grid-area: auto;
+}
+
+.sample .stamp {
+  justify-self: start;
+  margin-bottom: 0.4rem;
+}
+
+.sample img + img {
+  margin-top: 0.25rem;
+}
+
+.sample figcaption {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  justify-items: start;
+}
+
+.like {
+  margin-top: 1.25rem;
+}
+
+.like h3 {
+  font-family: 'Bodoni Moda', serif;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.like ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+/* phone first: the slip and the case stack */
+@media (max-width: 44rem) {
+  .rooms {
+    flex-wrap: nowrap;
+    gap: 0 0.9rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .slip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .slip label:first-of-type {
+    grid-column: 1 / -1;
+  }
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+  .index-card .row {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .envelope > summary {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'label' 'headline' 'raw' 'where' 'stamp';
+  }
+  .stamp {
+    justify-self: start;
+    margin-top: 0.4rem;
+  }
+  .chain {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+}

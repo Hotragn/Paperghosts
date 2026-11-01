@@ -1,0 +1,977 @@
+{
+ "sample": [
+  "11_1897-01-29_p5_sn85066387_00175037494_1897012901_0463.json",
+  "12_1909-05-04_pna_sn83025182_00295877273_1909050401_0219.json",
+  "12_1913-06-27_pna_sn89053729_00393344015_1913062707_1234.json",
+  "13_1854-04-19_p1_sn83045450_00296022731_1854041901_0126.json",
+  "13_1879-11-28_pna_sn85033781_00296023760_1879112801_0317.json",
+  "13_1916-06-02_pna_sn88077067_00415665775_1916060201_0639.json",
+  "13_1925-11-08_p48_sn83045462_00280659320_1925110801_0455.json",
+  "14_1891-10-31_pna_sn88056018_00415666706_1891103101_0638.json",
+  "14_1901-09-07_p1_sn89053684_00414182343_1901090701_0435.json",
+  "14_1921-09-30_p1_sn00065154_00279523271_1921093001_1044.json",
+  "15_1924-12-29_pna_sn83045462_00280657694_1924122901_0612.json",
+  "16_1896-09-26_pna_sn84022991_00513688192_1896092601_0183.json",
+  "16_1906-11-19_p4_sn85038485_00340583449_1906111901_0273.json",
+  "16_1941-10-24_p1_sn97063232_00414188278_1941102401_0701.json",
+  "18_1888-01-03_p1_sn90059522_00175033300_1888010301_0037.json",
+  "18_1918-11-27_pna_sn85040451_00414214617_1918112701_1228.json",
+  "18_1948-04-03_p12_sn83045462_00280604434_1948040301_0128.json",
+  "1_1867-10-23_pna_sn84024738_00271741935_1867102301_0411.json",
+  "20_1892-09-02_pna_sn86063034_00414182082_1892090201_0016.json",
+  "22_1861-01-02_p1_sn85025569_0021247258A_1861010201_0546.json",
+  "23_1888-04-14_pna_sn84038582_00212471574_1888041401_0498.json",
+  "23_1907-03-01_pna_sn92064044_00514153097_1907030101_0483.json",
+  "23_1961-09-03_p63_sn83045462_00280609006_1961090301_0161.json",
+  "26_1880-03-05_p1_sn87082573_00211101143_1880030501_0922.json",
+  "26_1894-01-27_pna_sn90059522_00206536780_1894012701_0237.json",
+  "30_1921-09-25_p55_sn83045462_00280657001_1921092501_0183.json",
+  "32_1913-10-24_p1_sn92053934_00202198843_1913102401_0653.json",
+  "39_1871-08-31_pna_sn85033153_00271769726_1871083101_0131.json",
+  "3_1896-12-10_p1_sn89058250_00296021210_1896121001_0315.json",
+  "3_1905-11-22_p1_sn86079068_00200299279_1905112201_0882.json",
+  "43_1902-11-25_p4_sn85038485_00340583516_1902112501_0577.json",
+  "45_1915-02-17_p2_sn83045462_00280658613_1915021701_0430.json",
+  "5_1886-08-29_pna_sn82015679_0041421017A_1886082901_0517.json",
+  "67_1916-01-05_pna_sn90052005_00393349815_1916010501_0050.json",
+  "6_1896-03-01_pna_sn85058130_2065344540_1896030101_0546.json",
+  "6_1903-04-24_pna_sn85038615_00175045740_1903042401_1244.json",
+  "6_1915-07-16_p4_sn85038485_00340582809_1915071601_0228.json",
+  "6_1915-10-07_pna_sn93060090_00294556254_1915100701_0123.json",
+  "7_1846-03-10_pna_sn86071753_00414184376_1846031001_0658.json",
+  "7_1926-12-17_p41_sn83045462_00280659198_1926121701_0428.json",
+  "8_1865-07-21_p1_sn83025161_00279529327_1865072101_1114.json",
+  "8_1872-03-26_pna_sn83009653_00279524020_1872032601_0267.json",
+  "8_1894-03-27_pna_sn94053256_00271762951_1894032701_0304.json",
+  "8_1919-08-28_pna_sn90052005_00514157212_1919082801_1152.json",
+  "99_1876-03-27_p3_sn86053573_00294558354_1876032701_0306.json",
+  "9_1875-12-18_p1_sn85033673_0028077943A_1875121801_1185.json",
+  "9_1889-01-04_pna_sn99063952_00280760201_1889010401_0955.json",
+  "9_1901-11-30_p2_sn90051267_00383340925_1901113001_0749.json",
+  "9_1916-02-12_pNone_sn83030214_00206531988_1916021201_0219.json",
+  "9_1922-05-10_p1_sn88056159_00295868107_1922051001_0832.json"
+ ],
+ "measured_at": "2026-10-31T19:00:00+00:00",
+ "teacher": {
+  "model": "Qwen/Qwen3.5-397B-A17B",
+  "articles": 50,
+  "errors": 0,
+  "seconds": 13.0,
+  "prompt_tokens": 456246,
+  "output_tokens": 3630,
+  "answers": [
+   {
+    "article_id": "11_1897-01-29_p5_sn85066387_00175037494_1897012901_0463.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"The ghosts of many q Chinese victim have stalked through the dark Railways\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8939,
+    "output_tokens": 84,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "12_1909-05-04_pna_sn83025182_00295877273_1909050401_0219.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"\\\"Spooks.\\\"\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8648,
+    "output_tokens": 71,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "12_1913-06-27_pna_sn89053729_00393344015_1913062707_1234.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"whale headed heron\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8947,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "13_1854-04-19_p1_sn83045450_00296022731_1854041901_0126.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"the ghost of Hamlct-no, of Holden-rose up before his vision\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 10272,
+    "output_tokens": 73,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "13_1879-11-28_pna_sn85033781_00296023760_1879112801_0317.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"NEW AND TRUE GHOST STORY.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9739,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "13_1916-06-02_pna_sn88077067_00415665775_1916060201_0639.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Would you feel creepy if you were Tom Rooney and was to drive the car built for and partially by the late Bob Burman?\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8701,
+    "output_tokens": 81,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "13_1925-11-08_p48_sn83045462_00280659320_1925110801_0455.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"New Books at tt\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 10182,
+    "output_tokens": 60,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "14_1891-10-31_pna_sn88056018_00415666706_1891103101_0638.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"ghostly watchers\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8631,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "14_1901-09-07_p1_sn89053684_00414182343_1901090701_0435.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"the dastardly attempt\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9299,
+    "output_tokens": 74,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "14_1921-09-30_p1_sn00065154_00279523271_1921093001_1044.json",
+    "answer": "{\n\"kind\": \"fiction\",\n\"kind_quote\": \"CHAPTER XIII.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9559,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "15_1924-12-29_pna_sn83045462_00280657694_1924122901_0612.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"haunting click\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8732,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "16_1896-09-26_pna_sn84022991_00513688192_1896092601_0183.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"Squire Steve Phantom\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9530,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "16_1906-11-19_p4_sn85038485_00340583449_1906111901_0273.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"crucifixion of Mrs Jean Mitchell\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8997,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "16_1941-10-24_p1_sn97063232_00414188278_1941102401_0701.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"The two youths carried a memory of that look for many a year afterward.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9480,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "18_1888-01-03_p1_sn90059522_00175033300_1888010301_0037.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The Mania for Adding Hlustra- tons to VOlumes\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9183,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "18_1918-11-27_pna_sn85040451_00414214617_1918112701_1228.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"like a phantom\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8651,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:16+00:00"
+   },
+   {
+    "article_id": "18_1948-04-03_p12_sn83045462_00280604434_1948040301_0128.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"spiritualist, was charged yesterday by Alexandria police with augmenting her revenues by $4,000 in advising one disciple.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8718,
+    "output_tokens": 94,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "1_1867-10-23_pna_sn84024738_00271741935_1867102301_0411.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"NEw YoRx, October %. = FIonr. loG9oc.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9184,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "20_1892-09-02_pna_sn86063034_00414182082_1892090201_0016.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"Then she began to haunt the firms office\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9774,
+    "output_tokens": 77,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "22_1861-01-02_p1_sn85025569_0021247258A_1861010201_0546.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"home made carpet and Hetty's wor\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9852,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "23_1888-04-14_pna_sn84038582_00212471574_1888041401_0498.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"It seemed us is no was at a sensational | play\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 10033,
+    "output_tokens": 67,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "23_1907-03-01_pna_sn92064044_00514153097_1907030101_0483.json",
+    "answer": "{\n\"kind\": \"fiction\",\n\"kind_quote\": \"Travelling all day, the party arrived\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9695,
+    "output_tokens": 77,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "23_1961-09-03_p63_sn83045462_00280609006_1961090301_0161.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"haunt\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8549,
+    "output_tokens": 71,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "26_1880-03-05_p1_sn87082573_00211101143_1880030501_0922.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"PHANTOM PARTY\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8576,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "26_1894-01-27_pna_sn90059522_00206536780_1894012701_0237.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"believer in ghosts. holy or otherwise\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8591,
+    "output_tokens": 77,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "30_1921-09-25_p55_sn83045462_00280657001_1921092501_0183.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"While he makes no claim to powers as medium. he does produce the popular manifestations of spirit phe- nomena familiar with psychics,\\\" and it constitutes one of his most baf- fling and amusing features.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8566,
+    "output_tokens": 99,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "32_1913-10-24_p1_sn92053934_00202198843_1913102401_0653.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"UNIQUE HALLOWEEN PARTY\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8849,
+    "output_tokens": 75,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "39_1871-08-31_pna_sn85033153_00271769726_1871083101_0131.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"possessing not ghost OF a chance\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 10110,
+    "output_tokens": 65,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "3_1896-12-10_p1_sn89058250_00296021210_1896121001_0315.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Hamlet's address to his fathers ghost\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9148,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "3_1905-11-22_p1_sn86079068_00200299279_1905112201_0882.json",
+    "answer": "{\n\"kind\": \"fiction\",\n\"kind_quote\": \"A phantom host in silver mail.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8745,
+    "output_tokens": 74,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "43_1902-11-25_p4_sn85038485_00340583516_1902112501_0577.json",
+    "answer": "{\n\"kind\": \"report\",\n\"kind_quote\": \"Mrs. Lena Dexheimer's anarchistic ghosts refused to materialize\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": \"unknown\",\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": [\n{\n\"value\": \"Mrs. Lena Dexheimer\",\n\"quote\": \"Mrs. Lena Dexheimer\"\n}\n]\n}",
+    "prompt_tokens": 8514,
+    "output_tokens": 109,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "45_1915-02-17_p2_sn83045462_00280658613_1915021701_0430.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"To show the spirit of family CO. operation that is pervading the work.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9912,
+    "output_tokens": 71,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:18+00:00"
+   },
+   {
+    "article_id": "5_1886-08-29_pna_sn82015679_0041421017A_1886082901_0517.json",
+    "answer": "{\n\"kind\": \"fiction\",\n\"kind_quote\": \"Not Heaven.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8694,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:22+00:00"
+   },
+   {
+    "article_id": "67_1916-01-05_pna_sn90052005_00393349815_1916010501_0050.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"vice la Haunted open\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8733,
+    "output_tokens": 73,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "6_1896-03-01_pna_sn85058130_2065344540_1896030101_0546.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"o Holy Ghost, one God, one Lord\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8803,
+    "output_tokens": 65,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "6_1903-04-24_pna_sn85038615_00175045740_1903042401_1244.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"Holy Ghost\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8855,
+    "output_tokens": 58,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "6_1915-07-16_p4_sn85038485_00340582809_1915071601_0228.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"seemed to be phantom craft\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8721,
+    "output_tokens": 75,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "6_1915-10-07_pna_sn93060090_00294556254_1915100701_0123.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"gift of the Holy Ghost\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9020,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "7_1846-03-10_pna_sn86071753_00414184376_1846031001_0658.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"CHILDREN.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9667,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "7_1926-12-17_p41_sn83045462_00280659198_1926121701_0428.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"The inventor declared that with his apparatus built on larger seals he will be able to fade\\\" a whole audi.ence out of it's seats in a theater while that audience perceives the seats In which It sits apparently empty.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8638,
+    "output_tokens": 112,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "8_1865-07-21_p1_sn83025161_00279529327_1865072101_1114.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"the ghost of the defunct party has arisen\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9245,
+    "output_tokens": 66,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:22+00:00"
+   },
+   {
+    "article_id": "8_1872-03-26_pna_sn83009653_00279524020_1872032601_0267.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"It was rs il he had seen ghost\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9689,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "8_1894-03-27_pna_sn94053256_00271762951_1894032701_0304.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"DOTS AND DASHES.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8791,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "8_1919-08-28_pna_sn90052005_00514157212_1919082801_1152.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"butterfly; wordless song:\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9384,
+    "output_tokens": 63,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "99_1876-03-27_p3_sn86053573_00294558354_1876032701_0306.json",
+    "answer": "{\n\"kind\": \"religious\",\n\"kind_quote\": \"Holy Ghost\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8575,
+    "output_tokens": 70,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "9_1875-12-18_p1_sn85033673_0028077943A_1875121801_1185.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"The Spiritnal Estpts. Methods Of Spirit Control, LII n the HplrIt World\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9091,
+    "output_tokens": 87,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "9_1889-01-04_pna_sn99063952_00280760201_1889010401_0955.json",
+    "answer": "{\n\"kind\": \"other\",\n\"kind_quote\": \"flowers IN FOLK LORE.\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 9817,
+    "output_tokens": 75,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:21+00:00"
+   },
+   {
+    "article_id": "9_1901-11-30_p2_sn90051267_00383340925_1901113001_0749.json",
+    "answer": "{\n\"kind\": \"idiom\",\n\"kind_quote\": \"like Banquo's ghost\",\n\"place\": null,\n\"place_state\": null,\n\"seen\": null,\n\"outcome\": null,\n\"specific_place\": null,\n\"place_type\": null,\n\"precision\": null,\n\"people\": []\n}",
+    "prompt_tokens": 8601,
+    "output_tokens": 74,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:22+00:00"
+   },
+   {
+    "article_id": "9_1916-02-12_pNone_sn83030214_00206531988_1916021201_0219.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"forests haunted by lovely women\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 9027,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:23+00:00"
+   },
+   {
+    "article_id": "9_1922-05-10_p1_sn88056159_00295868107_1922051001_0832.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"haunted\\\" the sen. ate finance committee room\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 8589,
+    "output_tokens": 67,
+    "model": "Qwen/Qwen3.5-397B-A17B",
+    "prompt_sha256": "bacc3942d2ee3565f9ee33ad448e327779d35af133c705d137941122a002ca53",
+    "at": "2026-10-31T19:24:23+00:00"
+   }
+  ],
+  "billed": {}
+ },
+ "student": {
+  "model": "Qwen/Qwen3.5-4B",
+  "articles": 50,
+  "errors": 0,
+  "seconds": 9.1,
+  "prompt_tokens": 47396,
+  "output_tokens": 3330,
+  "answers": [
+   {
+    "article_id": "11_1897-01-29_p5_sn85066387_00175037494_1897012901_0463.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The San Francisco call. \u00b7 1897-01-29\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 762,
+    "output_tokens": 73,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "12_1909-05-04_pna_sn83025182_00295877273_1909050401_0219.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"\\\"Nobody's bizness but mine\\\"\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 471,
+    "output_tokens": 63,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "12_1913-06-27_pna_sn89053729_00393344015_1913062707_1234.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Atlanta Georgian.\"}",
+    "prompt_tokens": 770,
+    "output_tokens": 16,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "13_1854-04-19_p1_sn83045450_00296022731_1854041901_0126.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Semi-weekly standard.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 2095,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "13_1879-11-28_pna_sn85033781_00296023760_1879112801_0317.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"NEW AND TRUE GHOST STORY.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1562,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "13_1916-06-02_pna_sn88077067_00415665775_1916060201_0639.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"Would you feel creepy if you were\\nTom Rooney and was to drive the\\ncar built for and partially by the late\\nBob Burman?\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 524,
+    "output_tokens": 85,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "13_1925-11-08_p48_sn83045462_00280659320_1925110801_0455.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"New Books at tt\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 2005,
+    "output_tokens": 60,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:27+00:00"
+   },
+   {
+    "article_id": "14_1891-10-31_pna_sn88056018_00415666706_1891103101_0638.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"assurance OF ghostly watchers\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 454,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "14_1901-09-07_p1_sn89053684_00414182343_1901090701_0435.json",
+    "answer": "{\"kind\": \"report\", \"kind_quote\": \"The daily organ recital in the splendid Temple of Music witnessed the dastardly attempt.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": [{\"value\": \"President\", \"quote\": \"The President, though well guarded\"}, {\"value\": \"John G. Milburn\", \"quote\": \"Upon his right stood John G. Milburn\"}, {\"value\": \"Mr. Cortelyou\", \"quote\": \"Upon the Presidents left stood Mr.. Cortelyou.\"}]}",
+    "prompt_tokens": 1122,
+    "output_tokens": 140,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:27+00:00"
+   },
+   {
+    "article_id": "14_1921-09-30_p1_sn00065154_00279523271_1921093001_1044.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"CHAPTER XIII.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1382,
+    "output_tokens": 58,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "15_1924-12-29_pna_sn83045462_00280657694_1924122901_0612.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Evening star.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 555,
+    "output_tokens": 59,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "16_1896-09-26_pna_sn84022991_00513688192_1896092601_0183.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"Fan zad @Confu.ionmeat- to spare.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1353,
+    "output_tokens": 68,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "16_1906-11-19_p4_sn85038485_00340583449_1906111901_0273.json",
+    "answer": "{\"kind\": \"report\", \"kind_quote\": \"H01 1T1ZENS are arming for self-pro- lection\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": [{\"value\": \"Mrs Jean Mitchell\", \"quote\": \"Mrs Jean Mitchell\"}, {\"value\": \"William Mitchell\", \"quote\": \"William Mitchell\"}, {\"value\": \"William Thaw\", \"quote\": \"William Thaw\"}, {\"value\": \"Harry K. Thaw\", \"quote\": \"Harry K. Tha'w\"}, {\"value\": \"Thomas A. McQuade\", \"quote\": \"Superintendent of Police Thomas A. McQuade\"}]}",
+    "prompt_tokens": 820,
+    "output_tokens": 166,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "16_1941-10-24_p1_sn97063232_00414188278_1941102401_0701.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"Rufus eyes began to burn with a strange light.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1303,
+    "output_tokens": 67,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "18_1888-01-03_p1_sn90059522_00175033300_1888010301_0037.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"CURIOUS EXTENDED BOOKS\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1006,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "18_1918-11-27_pna_sn85040451_00414214617_1918112701_1228.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"Avoid Improbable Moods.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 474,
+    "output_tokens": 63,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:26+00:00"
+   },
+   {
+    "article_id": "18_1948-04-03_p12_sn83045462_00280604434_1948040301_0128.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Evening star. \u00b7 1948-04-03\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 541,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "1_1867-10-23_pna_sn84024738_00271741935_1867102301_0411.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The daily dispatch.\"}",
+    "prompt_tokens": 1007,
+    "output_tokens": 17,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "20_1892-09-02_pna_sn86063034_00414182082_1892090201_0016.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The morning news.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1597,
+    "output_tokens": 59,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "22_1861-01-02_p1_sn85025569_0021247258A_1861010201_0546.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"fiction\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1675,
+    "output_tokens": 57,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "23_1888-04-14_pna_sn84038582_00212471574_1888041401_0498.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"FEELING Of pity for TINT unhappy man-for nc\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1856,
+    "output_tokens": 68,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "23_1907-03-01_pna_sn92064044_00514153097_1907030101_0483.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"headline: \\n---\\nSlLlOu was agony 10 MIN, anu, yleIulD\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1518,
+    "output_tokens": 81,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "23_1961-09-03_p63_sn83045462_00280609006_1961090301_0161.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"You won't find bargains Ike\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 372,
+    "output_tokens": 63,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "26_1880-03-05_p1_sn87082573_00211101143_1880030501_0922.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"THE DAILY BULLETIN\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 399,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "26_1894-01-27_pna_sn90059522_00206536780_1894012701_0237.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"recognize both God and Christ\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 414,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "30_1921-09-25_p55_sn83045462_00280657001_1921092501_0183.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Evening star. \u00b7 1921-09-25\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 389,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "32_1913-10-24_p1_sn92053934_00202198843_1913102401_0653.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"UNIQUE HALLOWEEN PARTY.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 672,
+    "output_tokens": 63,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "39_1871-08-31_pna_sn85033153_00271769726_1871083101_0131.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"That 1t Will be enthusiastic 1Or DOOilttie,\"}",
+    "prompt_tokens": 1933,
+    "output_tokens": 28,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "3_1896-12-10_p1_sn89058250_00296021210_1896121001_0315.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Mr.. Aliens Recital.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 971,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "3_1905-11-22_p1_sn86079068_00200299279_1905112201_0882.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"an scentless lie the fields Of SNOW.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 568,
+    "output_tokens": 65,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "43_1902-11-25_p4_sn85038485_00340583516_1902112501_0577.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"anarchistic ghosts\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 337,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:28+00:00"
+   },
+   {
+    "article_id": "45_1915-02-17_p2_sn83045462_00280658613_1915021701_0430.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"MARSHALS WOMEN\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1735,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "5_1886-08-29_pna_sn82015679_0041421017A_1886082901_0517.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"Not Heaven.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 517,
+    "output_tokens": 58,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "67_1916-01-05_pna_sn90052005_00393349815_1916010501_0050.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Deciine to Comment on ser~ssa.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 556,
+    "output_tokens": 65,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "6_1896-03-01_pna_sn85058130_2065344540_1896030101_0546.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"Lord Jesus, form that mind in US\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 626,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "6_1903-04-24_pna_sn85038615_00175045740_1903042401_1244.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"CONCLUSl ON.-The key to this pas sage Is found fl the words Of Paul (chap- ter xx:22) ~ go bou.id In spirit into Jeru- saiem.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 678,
+    "output_tokens": 95,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "6_1915-07-16_p4_sn85038485_00340582809_1915071601_0228.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The Birmingham age-herald. \u00b7 1915-07-16\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 544,
+    "output_tokens": 75,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "6_1915-10-07_pna_sn93060090_00294556254_1915100701_0123.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"tes had to be baptized with water first and then they Was to re. cieve the gift of the Holy Ghost\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 843,
+    "output_tokens": 79,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "7_1846-03-10_pna_sn86071753_00414184376_1846031001_0658.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"BY MRS. HARRIET BEEcHEn STOWE.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1490,
+    "output_tokens": 72,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "7_1926-12-17_p41_sn83045462_00280659198_1926121701_0428.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"The inventor declared that with his apparatus built on larger seals he will be able to fade\\\" a whole audi.ence out of it's seats in a theater\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 461,
+    "output_tokens": 87,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "8_1865-07-21_p1_sn83025161_00279529327_1865072101_1114.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"LAUREL suMME.s. Chairman.\"}",
+    "prompt_tokens": 1068,
+    "output_tokens": 23,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "8_1872-03-26_pna_sn83009653_00279524020_1872032601_0267.json",
+    "answer": "{\"kind\": \"fiction\", \"kind_quote\": \"Ion approached Gay, and said:\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1512,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:29+00:00"
+   },
+   {
+    "article_id": "8_1894-03-27_pna_sn94053256_00271762951_1894032701_0304.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"DOTS AND DASHES.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 614,
+    "output_tokens": 62,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "8_1919-08-28_pna_sn90052005_00514157212_1919082801_1152.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"advert\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1207,
+    "output_tokens": 57,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "99_1876-03-27_p3_sn86053573_00294558354_1876032701_0306.json",
+    "answer": "{\"kind\": \"religious\", \"kind_quote\": \"Rev. Mr. Leech- the newly. appointed pastor OF Union chapel\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 398,
+    "output_tokens": 71,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "9_1875-12-18_p1_sn85033673_0028077943A_1875121801_1185.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"Public ledger.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 914,
+    "output_tokens": 58,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "9_1889-01-04_pna_sn99063952_00280760201_1889010401_0955.json",
+    "answer": "{\"kind\": \"idiom\", \"kind_quote\": \"flowers IN FOLK LORE.\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 1640,
+    "output_tokens": 64,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:30+00:00"
+   },
+   {
+    "article_id": "9_1901-11-30_p2_sn90051267_00383340925_1901113001_0749.json",
+    "answer": "{\"kind\": \"advert\", \"kind_quote\": \"La Junta's hotel proposition\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 424,
+    "output_tokens": 61,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:32+00:00"
+   },
+   {
+    "article_id": "9_1916-02-12_pNone_sn83030214_00206531988_1916021201_0219.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"New-York tribune. \u00b7 1916-02-12\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 850,
+    "output_tokens": 74,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:32+00:00"
+   },
+   {
+    "article_id": "9_1922-05-10_p1_sn88056159_00295868107_1922051001_0832.json",
+    "answer": "{\"kind\": \"other\", \"kind_quote\": \"The Challis messenger. (Challis, Idaho) 1912-current \u00b7 1922-05-10\", \"place\": null, \"place_state\": null, \"seen\": null, \"outcome\": null, \"specific_place\": null, \"place_type\": null, \"precision\": null, \"people\": []}",
+    "prompt_tokens": 412,
+    "output_tokens": 85,
+    "model": "Qwen/Qwen3.5-4B",
+    "prompt_sha256": "ce5e5a66ae6e3710ba86126708f1b82f5c614b505c164aa371e23751532ee1f9",
+    "at": "2026-10-31T19:24:32+00:00"
+   }
+  ],
+  "billed": {}
+ }
+}
