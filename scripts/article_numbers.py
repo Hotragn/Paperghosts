@@ -553,6 +553,20 @@ def submission() -> list:
         ),
         *sentry(),
         row(
+            "Entire: the reprint chaining fix session, tokens and API calls",
+            doc(
+                "Docs/demo/entire_sessions.md",
+                r"`01M67W8SMF2WGS6DNG76TSEAXP`\): ([\d,]+) tokens over (\d+) API calls",
+            ),
+        ),
+        row(
+            "Entire: the blind re-ruling session, tokens and API calls",
+            doc(
+                "Docs/demo/entire_sessions.md",
+                r"`01M69PCNVRXPX8DD1EWAHB57JF`\): ([\d,]+) tokens over (\d+) calls",
+            ),
+        ),
+        row(
             "Atlas: the papers' towns geocoded and loaded",
             at(
                 "eval/results/atlas_places.json",

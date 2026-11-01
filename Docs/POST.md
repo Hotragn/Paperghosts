@@ -15,6 +15,8 @@ In 1870 an empty mansion stood in the middle of Springfield, Ohio. People who pa
 
 That's a ghost in the machine, in 1879: a projector making a haunting. It's also report number one in **the Morgue**, a small archive of ghost reports from American newspapers. Each report is filed with the exact words of the scan it rests on, and with a link to the page at the Library of Congress.
 
+Halloween is half of this week's theme. Día de los Muertos is the other half, and it suits the Morgue better, because these reports are about real people, named by their own papers. They include Detective John Burnside, who caught the Springfield gang, and Miss Parsons, the parish clerk's daughter at Cock Lane, twelve years old, who heard the knocking. The Morgue remembers them in the words that were printed about them, and adds nothing.
+
 ## What I Built
 
 **Paper Ghosts** reads the American newspaper archive for ghost reports and files each one with the scan's own words, never a retelling.
@@ -80,7 +82,7 @@ The teacher rounds ran on **Tinker**, with the 397B. Then the account's credit b
 
 Because the weights are open, the reading didn't stop. It moved to the laptop:
 - **gemma4 on a 24 GB Mac** found as many of dev's reports as the 397B (24 against 23 of 32, with overlapping intervals). It got the story's state right far more often.
-- **It works with the lights and the internet off.** The Morgue is a static build. The teacher's dev answers were produced by a local model through Ollama, and nothing about the archive left the machine to make them.
+- **It works with the lights and the internet off.** The Morgue is a static build. gemma4's dev answers were produced on this laptop through Ollama, and nothing about the archive left the machine to make them.
 - **Nothing is locked in.** The labels, the prompt, the policy and the scores are files in the repo, and the next reader can be any open model that fits.
 
 The cost of local is time and memory. With thinking off, gemma4 reads 244 articles an hour, or 12.3 hours for a 3,000-article training draw. With thinking on, its six measured articles took 2.4–8.1 minutes each. Running gemma4 and a training job side by side once froze the laptop. That's why training the reader is future work: it comes next, one model at a time.
