@@ -1056,3 +1056,47 @@ The SDK's default identity is `pid@hostname`, and Temporal keeps it in every wor
 - **The web app** (paperghosts-web) sends browser tracing and errors only when built with a DSN, and collects nothing about the reader.
   - Its release is the commit, with hidden source maps uploaded, then deleted from the build.
   - So far its page loads come from scripted loads in the browser pane and headless Chrome. LCP, CLS and INP need real visits that hide or use the page.
+
+## The Morgue's first visit (2026-11-01)
+
+**41. A first visitor gets a note, one real report and the three rooms, and the site gets a little motion: Lenis for the wheel, and three React Bits pieces. With reduced motion none of the motion starts. GSAP loads in its own chunk, so the main bundle grows by 9.1 kB gzipped, not 60.**
+
+- **The note** sits above the request slip on a first visit:
+  - It says what a morgue is and what an envelope holds, with the count and span read from `reports.json`.
+  - It shows the 1879 Springfield haunting from the Cambria Freeman, a hoax laid "by means of a magic lantern", as one real envelope with its two verified quotes. Its button is "Read this report".
+  - It gives each room one line: the drawer, Paper samples and How we know.
+  - "Put this note away" hides it and moves focus to the search box. An opened report shows a "How to read a report" hint once, for the marked quotes and "Not stated". Both stay put away, kept in `localStorage` inside try/catch.
+  - A search that finds nothing offers apparition, haunted or knocking (8, 14 and 2 reports) or clearing the slip.
+- **The motion,** copied from React Bits (commit 4dc7b5b, TypeScript and CSS) into `web/src/bits/` with its MIT + Commons Clause notice, unchanged below a header:
+  - **SplitText** brings the tagline's words up out of a blur once the fonts are in.
+  - **FadeContent** develops the featured envelope and the four paper samples like a print in a tray.
+  - **Noise** lays a still paper grain behind the page. It runs at 0 fps: one tile is painted, and nothing redraws.
+  - **Lenis** smooths wheel scrolling only.
+  - **Not the drawer's envelopes:** they would mount new animations on every keystroke of a search, so filtering stays as it was.
+  - **Not WebGL,** and nothing that redraws every frame.
+- **Reduced motion:**
+  - Lenis isn't started.
+  - The tagline is a plain `<p>`.
+  - FadeContent shows its content at once.
+  - The GSAP chunk is never fetched.
+  - The still grain stays, because it doesn't move.
+- **What the browser keeps:**
+  - Lenis takes the wheel only, not anchors, so the skip link, `#drawer`, the rooms' hash routes, focus scrolling and the keyboard are the browser's own.
+  - The How we know charts carry `data-lenis-prevent`, so their sideways scroll is native.
+  - SplitText labels its element with `aria-label`, which a `<p>` may not carry, so screen readers get a plain copy and the animated one is `aria-hidden`.
+- **The bundle** (`pnpm --dir web build`):
+
+  | | Before | After |
+  |---|---|---|
+  | Main JS | 241.35 kB (75.76 kB gzip) | 270.32 kB (84.84 kB gzip) |
+  | GSAP chunk, motion visitors only, fetched after first paint | none | 132.92 kB (52.38 kB gzip) |
+  | CSS | 21.62 kB (4.92 kB gzip) | 24.21 kB (5.57 kB gzip) |
+
+  - Bundled straight into the main chunk, GSAP made it 135.98 kB gzip, so it was split out.
+  - While the chunk loads, the tagline waits unseen. If the chunk takes more than 1.2 s, CSS shows it anyway, and a failed fetch leaves the plain page.
+- **Checked** in headless Chrome over CDP, with motion and with reduced motion:
+  - axe: 0 violations on the drawer with its note, an opened report with its hint, the empty search, Paper samples and How we know, in both lights, at 1440 and 390 px.
+  - The skip link is the first Tab stop and lands on `main`.
+  - A wheel tick scrolls under Lenis.
+  - `#drawer` lands the drawer at the top. The rooms nav, the button, the hint, the suggested words and the put-away all work, and they survive a reload.
+  - The before and after screenshots are `Docs/demo/screenshots/first-*`.

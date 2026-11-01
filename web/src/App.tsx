@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
+import Noise from './bits/Noise.tsx'
 import Method from './Method.tsx'
+import { Develop, Tagline } from './Reveal.tsx'
 
 type Field = {
   value: string
@@ -59,6 +61,11 @@ const span = (rs: Report[]) => {
   const years = rs.map(year).sort()
   return `${years[0]}–${years[years.length - 1]}`
 }
+// the intro's example: the 1879 Springfield haunting, laid by a magic lantern
+const FEATURED = '20_1879-04-11_pna_sn83032041_00212477710_1879041101_0201.json'
+// words that each find reports, offered when a search finds none
+const TRY = ['apparition', 'haunted', 'knocking']
+const TAGLINE = 'A morgue of ghost reports from American newspapers, each one filed with the words it rests on.'
 const paperName = (paper: string) => paper.replace(/\s*\[volume\]/i, '').replace(/\s+\d{4}-(\d{4})?$/, '')
 
 function fieldsOf(r: Report): [string, Field][] {
@@ -117,7 +124,9 @@ function Value({ field }: { field: Field | null }) {
   )
 }
 
-function Case({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opened: boolean }) {
+type Hint = { shown: boolean; hide: () => void }
+
+function Case({ r, byId, opened, hint }: { r: Report; byId: Map<string, Report>; opened: boolean; hint: Hint }) {
   const fields = fieldsOf(r)
   const lines = r.headline.split(/\n+/).map((l) => l.trim()).filter(Boolean)
   return (
@@ -146,6 +155,17 @@ function Case({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opene
           <p className="note">The text is the scan’s OCR as printed, errors and all. Marked words are the quotes the label rests on.</p>
         </div>
       </div>
+      {hint.shown && (
+        <aside className="hint" aria-label="How to read a report">
+          <p>
+            <strong>How to read a report.</strong> A <mark>marked</mark> word in the text is a quote an entry on the card rests
+            on. <span className="not-stated">Not stated</span> means the paper didn’t say, and the archive doesn’t guess.
+          </p>
+          <button type="button" onClick={hint.hide}>
+            Understood
+          </button>
+        </aside>
+      )}
       <dl className="index-card">
         {ROWS.map(([key, label]) => (
           <div key={key} className="row">
@@ -224,7 +244,7 @@ function titleOf(r: Report) {
     : r.headline.split(/\n+/).map((l) => l.trim())[0]
 }
 
-function Envelope({ r, byId, opened }: { r: Report; byId: Map<string, Report>; opened: boolean }) {
+function Envelope({ r, byId, opened, hint }: { r: Report; byId: Map<string, Report>; opened: boolean; hint: Hint }) {
   const state = r.place_state?.value
   // a place the paper wrote with its state ("Davenport, Iowa") doesn't take the state again
   const where = [r.place?.value, state && !r.place?.value.includes(state) ? state : null].filter(Boolean).join(', ')
@@ -248,7 +268,7 @@ function Envelope({ r, byId, opened }: { r: Report; byId: Map<string, Report>; o
           <span className="where">{where ? `Story place: ${where}` : 'Story place not stated'}</span>
           <Stamp outcome={r.outcome} />
         </summary>
-        <Case r={r} byId={byId} opened={opened} />
+        <Case r={r} byId={byId} opened={opened} hint={hint} />
       </details>
     </li>
   )
@@ -267,6 +287,7 @@ function Samples({ reports }: { reports: Report[] }) {
     <article className="samples">
       <h2 className="page-title">Paper samples</h2>
       <p className="lede">One clipping for each way a report can end, chosen as the clearest scan of its kind. Each caption is the paper’s own words.</p>
+      <Develop stagger={0.15}>
       {picked.map((r) => (
         <figure key={r.article_id} className="sample">
           {r.clippings.slice(0, 3).map((c, i) => (
@@ -283,8 +304,72 @@ function Samples({ reports }: { reports: Report[] }) {
           </figcaption>
         </figure>
       ))}
+      </Develop>
       <p className="thirty">-30-</p>
     </article>
+  )
+}
+
+// a note the visitor put away stays away on their next visit
+function useKept(key: string): Hint {
+  const [shown, setShown] = useState(() => {
+    try {
+      return localStorage.getItem(key) !== 'put away'
+    } catch {
+      return true
+    }
+  })
+  const hide = () => {
+    setShown(false)
+    try {
+      localStorage.setItem(key, 'put away')
+    } catch {
+      // storage can be blocked; it stays away for this visit
+    }
+  }
+  return { shown, hide }
+}
+
+// a first visitor's note: what the Morgue is, one real report, and the three rooms
+function Intro({ reports, featured, hide }: { reports: Report[]; featured?: Report; hide: () => void }) {
+  return (
+    <section className="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">What this is</h2>
+      <p>
+        A newspaper keeps its old clippings in a room called the morgue. This one files {reports.length} ghost reports printed
+        in American papers, {span(reports)}. Each envelope holds the scan, its transcription, and an index card that quotes
+        the paper for every entry.
+      </p>
+      {featured && (
+        <Develop className="featured">
+          <p className="label">
+            {featured.date} · {paperName(featured.paper)}
+          </p>
+          <p className="headline">{titleOf(featured)}</p>
+          <p className="quotes">
+            <q className="quote">{featured.seen?.quote}</q> <q className="quote">{featured.outcome?.quote}</q>
+          </p>
+          <Stamp outcome={featured.outcome} />
+          <a className="cta" href={`#/report/${encodeURIComponent(featured.article_id)}`}>
+            Read this report
+          </a>
+        </Develop>
+      )}
+      <ul className="room-lines">
+        <li>
+          <a href="#drawer">The drawer</a>: every report, below. Ask the request slip for a town, a state or a word.
+        </li>
+        <li>
+          <a href="#/samples">Paper samples</a>: one clipping for each way a report ends.
+        </li>
+        <li>
+          <a href="#/how">How we know</a>: every figure, with the file it comes from.
+        </li>
+      </ul>
+      <button type="button" className="put-away" onClick={hide}>
+        Put this note away
+      </button>
+    </section>
   )
 }
 
@@ -344,6 +429,9 @@ function App() {
   const [outcome, setOutcome] = useState('')
   const [printed, setPrinted] = useState('')
   const [lights, toggle] = useLights()
+  const intro = useKept('intro')
+  const hint = useKept('hint')
+  const search = useRef<HTMLInputElement>(null)
   const [hash, setHash] = useState(() => window.location.hash)
   useEffect(() => {
     const onHash = () => setHash(window.location.hash)
@@ -380,8 +468,18 @@ function App() {
     })
   }, [reports, query, era, outcome, printed, openId])
 
+  // a suggested word clears the other filters, so the word alone decides what shows
+  const ask = (word: string) => {
+    setQuery(word)
+    setEra('')
+    setOutcome('')
+    setPrinted('')
+    search.current?.focus()
+  }
+
   return (
     <>
+      <Noise fixed opacity={0.05} fps={0} zIndex={-1} />
       <a className="skip" href="#main">
         Skip to the content
       </a>
@@ -400,18 +498,28 @@ function App() {
           <a href="#/samples" aria-current={page === 'samples' ? 'page' : undefined}>Paper samples</a>
           <a href="#/how" aria-current={page === 'how' ? 'page' : undefined}>How we know</a>
         </nav>
-        <p className="tagline">A morgue of ghost reports from American newspapers, each one filed with the words it rests on.</p>
+        <Tagline text={TAGLINE} />
       </header>
 
       <main id="main">
         {page === 'how' && <Method />}
         {page === 'samples' && reports && <Samples reports={reports} />}
         {page === 'drawer' && (<>
+        {intro.shown && !openId && reports && (
+          <Intro
+            reports={reports}
+            featured={byId.get(FEATURED)}
+            hide={() => {
+              intro.hide()
+              search.current?.focus()
+            }}
+          />
+        )}
         <form className="slip" role="search" onSubmit={(e) => e.preventDefault()}>
           <p className="slip-head">Request slip</p>
           <label>
             Town, state or word
-            <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Georgetown, Ohio, knocking…" />
+            <input ref={search} type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Georgetown, Ohio, knocking…" />
           </label>
           <label>
             Decade
@@ -456,9 +564,27 @@ function App() {
                 : `${shown.length} report${shown.length === 1 ? '' : 's'}, ${span(shown)}. Clearest scans first.`}
             </p>
           )}
+          {reports && !openId && shown.length === 0 && (
+            <p className="empty">
+              Try{' '}
+              {TRY.map((w, i) => (
+                <span key={w}>
+                  <button type="button" onClick={() => ask(w)}>
+                    {w}
+                  </button>
+                  {i < TRY.length - 2 ? ', ' : i === TRY.length - 2 ? ' or ' : ''}
+                </span>
+              ))}
+              , or{' '}
+              <button type="button" onClick={() => ask('')}>
+                clear the slip
+              </button>
+              .
+            </p>
+          )}
           <ol className="envelopes">
             {shown.map((r) => (
-              <Envelope key={r.article_id} r={r} byId={byId} opened={r.article_id === openId} />
+              <Envelope key={r.article_id} r={r} byId={byId} opened={r.article_id === openId} hint={hint} />
             ))}
           </ol>
         </section>
