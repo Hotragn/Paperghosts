@@ -148,6 +148,17 @@ figcaption,
   max-width: 40rem;
 }
 
+/* waiting for the motion chunk; shown anyway after a moment, so a slow or failed fetch never hides it */
+.tagline.waiting {
+  animation: appear 0.3s 1.2s both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
 .chain {
   position: absolute;
   top: 0;
@@ -174,6 +185,133 @@ figcaption,
 
 .chain:active .chain-pull {
   transform: scaleY(1.15);
+}
+
+/* the first visit: a note left in the drawer, one real report, and the three rooms */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'title featured'
+    'text featured'
+    'rooms featured'
+    'away featured';
+  align-content: start;
+  gap: 0.5rem 2rem;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.5rem;
+  max-width: 52rem;
+  background: var(--card);
+  border-left: 3px solid var(--rule);
+}
+
+.intro h2 {
+  grid-area: title;
+  margin: 0;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.intro > p {
+  grid-area: text;
+  margin: 0;
+}
+
+.room-lines {
+  grid-area: rooms;
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 1rem;
+}
+
+.featured {
+  grid-area: featured;
+  align-self: start;
+  display: grid;
+  gap: 0.3rem;
+  justify-items: start;
+  padding: 0.85rem 1rem 1rem;
+  background: var(--envelope);
+  border: 1px solid var(--rule);
+}
+
+/* the envelope's .label, .headline and .stamp take grid areas of their own; here they simply stack */
+.intro .featured > * {
+  grid-area: auto;
+  margin: 0;
+}
+
+.featured .quote {
+  display: block;
+}
+
+.intro .featured .stamp {
+  justify-self: start;
+  margin: 0.3rem 0;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.6rem 1rem;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--text);
+  text-decoration: none;
+}
+
+.cta:hover {
+  text-decoration: underline;
+}
+
+.put-away,
+.hint button,
+.empty button {
+  font: inherit;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.85rem;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0.5rem 0.1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.put-away {
+  grid-area: away;
+  justify-self: start;
+}
+
+.hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 1rem;
+  margin: 0 1rem;
+  padding: 0.5rem 0.85rem;
+  font-size: 1rem;
+  border: 1px dashed var(--rule);
+}
+
+.hint p {
+  flex: 1 1 20rem;
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.empty button {
+  font-size: 1rem;
+  padding: 0.5rem 0.15rem;
 }
 
 /* the request slip */
@@ -722,6 +860,11 @@ mark {
   .stamp {
     justify-self: start;
     margin-top: 0.4rem;
+  }
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'title' 'text' 'featured' 'rooms' 'away';
+    padding: 1rem;
   }
   .chain {
     position: static;

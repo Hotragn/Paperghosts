@@ -10,9 +10,11 @@ import '@fontsource/courier-prime/400.css'
 import '@fontsource/courier-prime/700.css'
 import './index.css'
 import App from './App.tsx'
+import { startScroll } from './motion.ts'
 import { startSentry } from './sentry.ts'
 
 startSentry()
+startScroll()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
