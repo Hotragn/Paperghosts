@@ -1,0 +1,41 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+New milestone from the EM: a smoother first visit to the Morgue, plus motion from React Bits and Lenis. The owner asked for this.
+
+State: main is at af7f6a3. The site is live at https://paper-ghosts.onrender.com (Render static site srv-dbjddm8ae00c73dtetcg). The repo is now PUBLIC. Render has no GitHub app on this repo, so it won't auto-deploy; I deploy after merging.
+
+Goal 1, onboarding:
+- A first-time visitor should understand in about 10 seconds what the Morgue is, what one report looks like, and where to go next.
+- Ideas, which are yours to judge as UI/UX:
+  - a short hero intro with one clear call to action ("Open the drawer" or "Read a report"), plus a featured report such as the 1879 Springfield magic-lantern case;
+  - a one-line explainer for each of the three rooms;
+  - first-visit hints for the index card's "Not stated" and the marked quotes;
+  - empty and no-results states that suggest a search ("try apparition").
+- Keep it dismissable and remembered: localStorage with try/catch.
+- Keep it fast and quiet. No tour library or modal walls.
+
+Goal 2, motion, tasteful and Halloween-archival, never cartoonish ("respect the dead"):
+- Add `lenis` for smooth scrolling, and a few React Bits components (https://reactbits.dev). Good fits:
+  - a text reveal for the nameplate or tagline: SplitText, BlurText or DecryptedText;
+  - FadeContent or AnimatedContent for cards entering;
+  - a subtle Noise or grain overlay, or a candle-flicker background.
+- Copy components the way React Bits documents (jsrepo or shadcn CLI, or paste the source), with their licence notice kept. Only add the dependencies they actually need.
+- Hard requirements:
+  - With prefers-reduced-motion, all of it is off: Lenis is not started and text renders plain.
+  - It must not break keyboard focus or skip links.
+  - Nothing new on the hot path for search or filter.
+  - The bundle stays reasonable; report the size before and after.
+  - No WebGL-heavy backgrounds. The owner wants minimal CPU and GPU load, and visitors' laptops matter too.
+  - Anchor links and the rooms nav must still work under Lenis.
+
+Gates:
+- `pnpm --dir web build`, lint and typecheck are clean, and CI is green.
+- Screenshots of the desktop and phone first view, light and dark, before and after, in Docs/demo/screenshots.
+- A note in Docs/DECISIONS.md (decision 41) covering the libraries, the reduced-motion behaviour, and the bundle delta.
+- Open a PR. Don't merge or deploy; I review, merge and deploy.
+
+Rules still in force:
+- No Ollama or mlx.
+- Keys only through the environment.
+- Everything public waits on the EM or owner.
+- No fake numbers or content: any copy you add uses only real reports and real figures from numbers.json.
+</cross-session-message>
