@@ -1,0 +1,63 @@
+<cross-session-message from="local_98906164-c8d6-46c4-b1d0-192cf333434e" from-name="Paperghosts Hacktoberfest week 4 kickoff">
+Final pass to make the entry competition-ready. Two owner updates:
+1. The owner ran the Entire push. I checked it: all 121 refs on GitHub now equal the redacted SHAs in moved.txt.
+2. The owner has given HF_TOKEN the "Inference Providers" permission.
+
+Laptop rule unchanged: no Ollama, no mlx, nothing heavy.
+
+The challenge rules (DEV challenge 82, HF26 Week 4, "Ghost in the Machine"):
+- A post on DEV using the challenge's submission template, with the #hf26challenge tag. It tells what we built and how we read the theme, shows a demo, and explains why open innovation matters: lights and internet off, privacy, not being locked into a service, and where open beat closed.
+- Writing is weighted most, then relevance, creativity, technical execution, and partner tech per category.
+- Our categories, where real: Gemma (featured), MongoDB Atlas, Sentry Agent Tracing, Entire, Tinker, and Render once deployed.
+
+Work, in order:
+1. **Entire:** fetch `+refs/entire/*:refs/entire/*`, run the name scan over every ref, and report 0 hits.
+2. **Vector Search:** embed the 78 through HF Inference Providers with an open model, such as bge-small or all-MiniLM-L6-v2, at 384 dimensions.
+   - Load the vectors into the reports_vector index.
+   - Compare its neighbours with moreLikeThis on 5 reports, and use whichever reads better for "ghosts like this one", saying why.
+   - Trace each query in Sentry.
+   - Write it into the numbers sheet and README.
+3. **Sentry Agent Tracing, honestly:** the category is about AI agent and LLM spans.
+   - If a Sentry gen_ai span can wrap a real model call we make now (the HF embedding calls are real), add it with model, tokens and latency.
+   - Don't invent spans for runs that already happened. If it stays thin, the post's Sentry section says what it really traces.
+4. **The post:** write it as `Docs/POST.md`, a draft only; the owner publishes. Follow the challenge template's sections. Start from my draft in the EM handoff, ARTICLE-DRAFT.md, which I'll paste into your context next if you can't read it. Rules:
+   - Use the honest title you proposed, or better, with no "every ghost".
+   - Open on a real report verified from the data. The 1850 Stratford probe found only 2 of its 20 articles naming the Phelps family, so open with the strongest verified case in the 78 instead.
+   - **"Why open matters":** the story of the Tinker credits hitting $0 is the argument.
+     - The weights are portable, so the reading moved to a laptop.
+     - gemma4 on the laptop matched the 397B on report recall (24 against 23 of 32), with the intervals.
+     - It works offline: the static Morgue and the local reader.
+     - Nothing about the archive leaves the machine.
+   - **One section per partner, each with proof:**
+     - Gemma: the dev table, the format-against-judgment finding, the recorded outputs.
+     - Atlas: fuzzy "apparilion", $geoNear, vector or moreLikeThis, with latencies.
+     - Sentry: decision 40's 110-to-61 ms fix.
+     - Entire: token counts for two sessions, the redaction story, the rule pack.
+     - Tinker: the benchmark and the spend stop.
+     - Render: deploy notes.
+   - Every number comes from the numbers sheet and keeps its interval.
+   - Disclosures: Claude agents labelled gold and dev; open models do the reading; the trained reader is future work.
+   - Screenshots from Docs/demo, and the logo.
+   - Tags: hf26challenge, devchallenge, opensource, ai.
+5. **Release QA:**
+   - The secret scan over the full history and the Entire refs.
+   - `.env`, IDEAS.md and data/entire-backup stay out of git.
+   - LICENSE and the data licences: LoC public domain, AmericanStories' licence.
+   - The README covers running the static demo offline, reproducing the numbers, and the disclosure.
+   - Check every link in the site and the post.
+   - Run Lighthouse or axe once on the built site: accessibility and performance.
+   - Tests, lint and build pass.
+6. **Main:** open a PR from `submission` to `main`. Describe it, and end the description with the Claude Code attribution line. Don't merge; I'll review and merge.
+
+Report with first line `SUBMISSION: READY FOR OWNER` or `SUBMISSION: BLOCKED — <reason>`. Include the PR link, the POST.md path, and the owner's remaining actions: make the repo public, deploy on Render, publish the post, and optionally a DevRelay session embed.
+</cross-session-message>
+
+---
+
+<task-notification>
+<task-id>b1i9v6tfo</task-id>
+<tool-use-id>toolu_018y5KDUzwYxwtHghYBgUD3e</tool-use-id>
+<output-file>/private/tmp/claude-502/-Users-hotragn-Documents-Claude-Code-HacktoberFest-week4-Paperghosts/1f5be3b0-ab69-4299-a8b5-d7494c65687b/tasks/b1i9v6tfo.output</output-file>
+<status>completed</status>
+<summary>Background command "Scan the full history and Entire refs for secrets at low priority" completed (exit code 0)</summary>
+</task-notification>
