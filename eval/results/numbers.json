@@ -1096,8 +1096,8 @@
  {
   "name": "Entire: commits with an Entire-Checkpoint trailer, and checkpoint refs",
   "value": [
-   135,
-   136
+   136,
+   137
   ],
   "source": "git log --all trailers; git for-each-ref refs/entire/checkpoints"
  },
@@ -1210,6 +1210,22 @@
   "source": "eval/results/sentry_latency.json: b560aa24af194d42b1303f5989af5367a06e3a8b.spans, as [p50, p95, count]"
  },
  {
+  "name": "Entire: the reprint chaining fix session, tokens and API calls",
+  "value": [
+   59983120,
+   73
+  ],
+  "source": "Docs/demo/entire_sessions.md:17"
+ },
+ {
+  "name": "Entire: the blind re-ruling session, tokens and API calls",
+  "value": [
+   26688512,
+   34
+  ],
+  "source": "Docs/demo/entire_sessions.md:18"
+ },
+ {
   "name": "Atlas: the papers' towns geocoded and loaded",
   "value": {
    "printed_in_towns": 46,
@@ -1234,6 +1250,6 @@
  {
   "name": "tests collected",
   "value": 404,
-  "source": "uv run pytest --collect-only -q, last line: '404 tests collected in 1.47s'"
+  "source": "uv run pytest --collect-only -q, last line: '404 tests collected in 1.44s'"
  }
 ]
