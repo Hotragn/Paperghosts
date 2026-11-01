@@ -1,5 +1,4 @@
 # The Morgue as a Render static site: the build is web/, which needs no keys and calls no API.
-# Deploying is the owner's step.
 services:
   - type: web
     name: paper-ghosts
