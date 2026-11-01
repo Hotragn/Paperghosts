@@ -4,6 +4,7 @@ leaves this machine."""
 import os
 import re
 import subprocess
+from contextlib import contextmanager
 
 import sentry_sdk
 
@@ -75,3 +76,14 @@ def init_sentry(component: str) -> bool:
         before_send_transaction=lambda event, hint: scrub(event),
     )
     return True
+
+
+@contextmanager
+def atlas_query(kind: str, script: str):
+    """A script's Atlas query as a Sentry transaction holding one db.atlas.query span, the API's
+    op, with the query kind; its latency is the span's duration. Inert without SENTRY_DSN."""
+    with sentry_sdk.start_transaction(op="script", name=script) as transaction:
+        transaction.set_tag("query.kind", kind)
+        with sentry_sdk.start_span(op="db.atlas.query", name=kind) as span:
+            span.set_data("query.kind", kind)
+            yield span

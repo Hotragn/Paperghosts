@@ -15,11 +15,13 @@ import sys
 import time
 from collections import defaultdict
 
+import sentry_sdk
 from label_gold import ROOT
 from pymongo import MongoClient
 
 from paperghosts.config import setting
 from paperghosts.geo.geonames import Gazetteer
+from paperghosts.observability.sentry import atlas_query, init_sentry
 from paperghosts.schemas import Place
 from paperghosts.store.db_init import DATABASE
 
@@ -94,6 +96,7 @@ def load() -> None:
 
 
 def near(town: str, state: str, km: float = 300) -> None:
+    init_sentry("pipeline")
     gazetteer = Gazetteer()
     hit = gazetteer.geocode(town, state)
     if hit["place_id"] is None:
@@ -123,9 +126,10 @@ def near(town: str, state: str, km: float = 300) -> None:
                 }
             },
         ]
-        started = time.perf_counter()
-        found = list(collection.aggregate(pipeline))
-        ms = (time.perf_counter() - started) * 1000
+        with atlas_query("places near", "load_demo_places"):
+            started = time.perf_counter()
+            found = list(collection.aggregate(pipeline))
+            ms = (time.perf_counter() - started) * 1000
     print(
         f"papers printed within {km:g} km of {hit['name']}, {hit['state']} (the papers' towns, not the stories'):"
     )
@@ -140,6 +144,7 @@ def near(town: str, state: str, km: float = 300) -> None:
         for r in by_place[p["_id"]]:
             print(f"      {r['date']}  {(r['headline'].splitlines() or [''])[0][:60]}")
     print(f"{len(found)} towns in {ms:.0f} ms")
+    sentry_sdk.flush()
 
 
 if __name__ == "__main__":

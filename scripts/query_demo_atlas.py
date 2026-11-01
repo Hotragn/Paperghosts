@@ -11,9 +11,11 @@ trip in milliseconds.
 import sys
 import time
 
+import sentry_sdk
 from pymongo import MongoClient
 
 from paperghosts.config import setting
+from paperghosts.observability.sentry import atlas_query, init_sentry
 from paperghosts.store.db_init import DATABASE
 from paperghosts.store.search import fuzzy, like
 
@@ -29,6 +31,7 @@ def matched(found: dict) -> str:
 
 
 def main(args: list) -> None:
+    init_sentry("pipeline")
     with MongoClient(
         setting("MONGODB_URI").get(), serverSelectionTimeoutMS=10_000
     ) as client:
@@ -44,9 +47,11 @@ def main(args: list) -> None:
         else:
             print(f"search: {args[0]!r}, fuzzy up to 2 edits")
             pipeline = fuzzy(args[0])
-        started = time.perf_counter()
-        results = list(reports.aggregate(pipeline))
-        ms = (time.perf_counter() - started) * 1000
+        kind = "reports more_like_this" if args[0] == "--like" else "reports fuzzy"
+        with atlas_query(kind, "query_demo_atlas"):
+            started = time.perf_counter()
+            results = list(reports.aggregate(pipeline))
+            ms = (time.perf_counter() - started) * 1000
     for r in results:
         title = (r.get("display_headline") or "").splitlines()[0][:70]
         print(f"  {r['date']}  {title}\n    {r.get('paper') or ''}")
@@ -56,6 +61,7 @@ def main(args: list) -> None:
         if r.get("highlights"):
             print(f"    matched: {matched(r)}")
     print(f"{len(results)} found in {ms:.0f} ms")
+    sentry_sdk.flush()
 
 
 if __name__ == "__main__":
