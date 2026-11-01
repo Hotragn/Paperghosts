@@ -697,6 +697,12 @@ mark {
 
 /* phone first: the slip and the case stack */
 @media (max-width: 44rem) {
+  .rooms {
+    flex-wrap: nowrap;
+    gap: 0 0.9rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
   .slip {
     grid-template-columns: 1fr 1fr;
   }

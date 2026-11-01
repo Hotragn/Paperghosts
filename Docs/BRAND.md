@@ -3,17 +3,18 @@
 **Name:** Paper Ghosts. The site is **The Morgue**: the room where a newspaper keeps its clippings. The look comes from `Docs/UI-IDEAS.md`: a newspaper morgue after hours.
 
 ## The mark
-- **What it is:** a newspaper page that is itself the ghost.
-  - The bottom edge is torn into a ghost's hem.
-  - Two hollow, drooping eyes and an open mouth sit in its columns.
-  - It has a nameplate bar, column rules and a dog-eared corner in oxblood.
+- **What it is:** a newspaper page torn into a ghost.
+  - The bottom edge is ripped into a ragged hem.
+  - Two narrow, slanted eye slits and a jagged open mouth are cut through its columns.
+  - It has a nameplate bar, column rules, a dog-eared corner in oxblood, and a dark shadow behind it.
+  - It's menacing for Halloween but plain enough to read at 16 px. The first, friendlier mark is kept as `logo-v1.svg`, and `Docs/demo/logo-before-after.jpg` shows both at 16, 64 and 512 px.
 - **Files,** in `web/public/brand/`, all drawn by hand as SVG:
   - `logo.svg`, the full-colour mark
   - `logo-mono.svg`, one colour (`currentColor`), with the fold, eyes, mouth and rules cut out of the page
   - `logo-16.png` to `logo-512.png`, rendered from `logo.svg`
   - `social-card.svg` and `social-card.jpg`, 1200×630
 - **At 16 px** the eyes and mouth still read; the hem blurs into an edge.
-- **Never** add a glow, a gradient or a drop shadow to the mark.
+- **Never** add a glow, a gradient or any further shadow. Its one shadow is part of the drawing.
 
 ## Colour
 The tokens are in `web/src/index.css`, for two lights: lights on, the archive by day, and lights off, the reading room.
