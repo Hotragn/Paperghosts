@@ -25,7 +25,7 @@ pnpm --dir web preview         # http://localhost:4173
 - **Paper samples:** the clearest scan for each outcome, captioned only with its verified quotes.
 - **How we know:** every figure from the numbers sheet, with its interval, including the teacher benchmark.
 
-Deploying is a static site: `render.yaml` builds `web/` and publishes `web/dist`. The bundle holds no keys.
+It runs live at [paper-ghosts.onrender.com](https://paper-ghosts.onrender.com), a static site: `render.yaml` builds `web/` and publishes `web/dist`. The bundle holds no keys.
 
 ### MongoDB Atlas
 ```bash

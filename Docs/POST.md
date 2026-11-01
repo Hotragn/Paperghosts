@@ -5,7 +5,7 @@ tags: hf26challenge, devchallenge, opensource, ai
 cover_image: https://raw.githubusercontent.com/Hotragn/Paperghosts/main/web/public/brand/social-card.jpg
 ---
 
-<!-- DRAFT for the owner to publish. Images use the repo's raw URLs on main, which work once the repo is public and the PR is merged; or upload them to DEV. Every number here comes from `uv run python scripts/article_numbers.py` (eval/results/numbers.json). -->
+<!-- Every number here comes from `uv run python scripts/article_numbers.py` (eval/results/numbers.json). -->
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge: Week 4](https://dev.to/challenges/hf26), "Ghost in the Machine".*
 
@@ -35,11 +35,13 @@ Halloween is half of this week's theme. Día de los Muertos is the other half, a
 
 ## Demo
 
+**Open the Morgue: [paper-ghosts.onrender.com](https://paper-ghosts.onrender.com)**
+
 ![The drawer, at desktop width](https://raw.githubusercontent.com/Hotragn/Paperghosts/main/Docs/demo/screenshots/drawer-desktop-light.jpg)
 ![A report: the clipping beside its marked transcription, and the index card](https://raw.githubusercontent.com/Hotragn/Paperghosts/main/Docs/demo/screenshots/report-desktop-dark.jpg)
 ![The Morgue on a phone, lights off](https://raw.githubusercontent.com/Hotragn/Paperghosts/main/Docs/demo/screenshots/drawer-phone-dark.jpg)
 
-The Morgue is a static site with no server, so it runs with the internet off:
+The Morgue is a static site with no server, so it also runs on your own machine with the internet off:
 
 ```bash
 git clone https://github.com/Hotragn/Paperghosts && cd Paperghosts
@@ -50,8 +52,6 @@ It has three rooms:
 - **The drawer:** search by town, state or word, and filter by decade, outcome, and the state the paper was printed in.
 - **Paper samples:** the clearest scan for each way a report can end, captioned only with its own quoted words.
 - **How we know:** every figure in this post, with its interval, read from the numbers sheet.
-
-<!-- Render: add the live URL here once the owner deploys render.yaml. -->
 
 ## How I Built It
 
@@ -116,7 +116,7 @@ Entire also redacts secrets on its own. Our scan of all history and every checkp
 
 `render.yaml` deploys the Morgue as a static site: it builds `web/` and publishes `web/dist`, with no keys in the bundle. The two Sentry keys are set in Render's dashboard, never committed.
 
-<!-- Render: replace with the live URL and a line on the deploy once the owner has deployed. -->
+It's live at [paper-ghosts.onrender.com](https://paper-ghosts.onrender.com), and Render rebuilds it on every push to `main`. Each build uploads its source maps to Sentry under the commit's release, then deletes them, so the site never serves them.
 
 ## Disclosures
 
@@ -132,7 +132,7 @@ Entire also redacts secrets on its own. Our scan of all history and every checkp
 - **Sentry Agent Tracing:** spans on every Atlas query, the fix they found, and the web app's tracing. No agent spans, as stated above.
 - **Entire:** the session trail, the token figures, and the redaction.
 - **Tinker:** the 397B teacher benchmark, its measured cost, and the spend stop.
-- **Render:** the static-site blueprint, once deployed.
+- **Render:** the Morgue, live at [paper-ghosts.onrender.com](https://paper-ghosts.onrender.com) from the static-site blueprint.
 
 The code is MIT licensed: [github.com/Hotragn/Paperghosts](https://github.com/Hotragn/Paperghosts).
 
